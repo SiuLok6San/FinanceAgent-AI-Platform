@@ -1,0 +1,18 @@
+streamlit>=1.29
+pandas>=2.2.0
+numpy>=1.26
+requests>=2.31
+python-dotenv>=1.0.1
+
+# Finance APIs
+finnhub-python>=2.4.0
+
+# TAVILY Web Search
+tavily-python>=0.3.3
+
+# For charts / dataframe display
+matplotlib>=3.8
+altair>=5.0
+
+# OPTIONAL: OpenAI compatibility (future-proof)
+openai>=1.40.0
