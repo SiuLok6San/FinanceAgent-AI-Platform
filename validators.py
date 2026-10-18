@@ -277,8 +277,10 @@ def check_numeric_grounding(
                 err = abs(x - abs(fact.value))
                 if err <= tol:
                     topical = _topic_match(sentence, fact, sentence_topics, series_keywords)
-                    # prefer facts about what the sentence discusses, then exact values, then closeness
-                    rank = (0 if topical else 1, 0 if fact.kind == "observed" else 1, err / max(tol, 1e-12))
+                    # prefer facts about what the sentence discusses, then exact values, then closeness,
+                    # then the most recent observation
+                    recency = -int((fact.date or "0").replace("-", "")[:8] or 0)
+                    rank = (0 if topical else 1, 0 if fact.kind == "observed" else 1, err / max(tol, 1e-12), recency)
                     if best is None or rank < best[0]:
                         best = (rank, fact)
         if best:

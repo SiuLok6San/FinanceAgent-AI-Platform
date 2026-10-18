@@ -242,3 +242,9 @@ def test_snippet_match_allows_missing_unit_and_is_summarised():
     res = v.validate_report("Core CPI is running at 2.39 [S5].", "q", TABLES, sources, ["macro"], today=date(2026, 10, 17))
     assert res["figures"][0]["in_source_text"] == "S5"
     assert "1 flagged (1 of them appear in a fetched web/news snippet)" in res["summary"]
+
+
+def test_ties_prefer_the_latest_observation():
+    t = fred_table("BAMLC0A0CM", [0.84, 0.90, 0.84], ["2026-10-13", "2026-10-14", "2026-10-15"], frequency="daily", topics=("credit",))
+    fig = v.check_numeric_grounding("IG OAS is 0.84% [S1].", "q", [t], [source(1, "BAMLC0A0CM")])[0]
+    assert fig.matched == "BAMLC0A0CM on 2026-10-15"
