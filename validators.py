@@ -30,6 +30,7 @@ from typing import Any, Dict, Iterable, List, Optional, Set, Tuple
 import pandas as pd
 
 from answer_builder import find_dangling_citations, parse_citation_markers
+from fact_store import build_fact_store
 from facts import Fact, all_facts, observation_dates, table_frequency, topics_with_data
 from router import matches_any, topics_in
 from settings import load_config
@@ -574,6 +575,128 @@ def check_comparisons(report: str, refs: Optional[List[Any]]) -> List[Dict[str, 
 
 
 # ---------------------------------------------------------------------------
+# 7) Wording: where a series sits in its history, and which way it is moving
+# ---------------------------------------------------------------------------
+
+def _phrase_pattern(phrases: List[str]) -> re.Pattern:
+    """Whole-word match for phrases, with any whitespace or hyphen between words."""
+    def one(p: str) -> str:
+        return r"[\s\-\u2010\u2011]+".join(re.escape(w) for w in re.split(r"[\s\-]+", p.strip()))
+    alts = sorted(phrases, key=len, reverse=True)
+    return re.compile(r"(?<![\w])(" + "|".join(one(p) for p in alts) + r")(?![\w])", re.I)
+
+
+def _norm_phrase(text: str) -> str:
+    return re.sub(r"[\s\-\u2010\u2011]+", " ", text.strip().lower())
+
+
+def _sentences(report: str) -> List[Tuple[int, int]]:
+    cuts = [0] + [m.end() for m in _SENTENCE_END.finditer(report)] + [len(report)]
+    return [(a, b) for a, b in zip(cuts, cuts[1:]) if report[a:b].strip()]
+
+
+def _series_mentions(report: str, a: int, b: int, refs, store, names) -> List[Tuple[int, str]]:
+    """(position, series alias) for every series the sentence points to: a fact it quotes or a name."""
+    aliases = {k.split(".")[0] for k, e in store.items() if e.series_id}
+    found = [(r.start, r.fact_id.split(".")[0]) for r in refs or []
+             if r.kind == "fact" and a <= r.start < b and r.fact.series_id]
+    for alias, pattern in names.items():
+        if alias in aliases:
+            found += [(m.start(), alias) for m in pattern.finditer(report, a, b)]
+    return found
+
+
+def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
+    cfg = _cfg()["wording"]
+    skip = _phrase_pattern(cfg["skip_words"])
+    negation = _phrase_pattern(cfg["negations"])
+    names = {alias: _phrase_pattern(n) for alias, n in cfg["series_names"].items()}
+    hist = cfg["history"]
+    history_pat = {c: _phrase_pattern(hist[c]) for c in ("low", "high", "middle")}
+    trend = cfg["trend"]
+    trend_words = ({_norm_phrase(w): 1 for w in trend["up"]} | {_norm_phrase(w): -1 for w in trend["down"]}
+                   | {"tightening": 0})
+    trend_pat = _phrase_pattern(list(trend_words))
+    horizon_pat = _phrase_pattern(list(trend["horizons"]))
+    horizons = {_norm_phrase(k): v for k, v in trend["horizons"].items()}
+    groups = {s["alias"]: s.get("spread_group") for s in load_config("data_sources")["fred"]["series"]}
+    history_issues, trend_issues = [], []
+
+    for a, b in _sentences(report):
+        sentence = report[a:b]
+        if skip.search(sentence):
+            continue  # hedged or conditional: a scenario, not a claim about the data
+        mentions = _series_mentions(report, a, b, refs, store, names)
+        if not mentions:
+            continue
+
+        def nearest(pos: int) -> str:
+            return min(mentions, key=lambda m: abs(m[0] - pos))[1]
+
+        def negated(m) -> bool:
+            return bool(negation.search(report, max(a, m.start() - 25), m.start()))
+
+        for cls, pattern in history_pat.items():
+            for m in pattern.finditer(report, a, b):
+                if negated(m):
+                    continue
+                alias = nearest(m.start())
+                key = next((k for k in store if k.startswith(f"{alias}.pctile_")), None)
+                if not key:
+                    continue
+                pct = store[key].value
+                lo, hi = hist["middle_range"]
+                wrong = ((cls == "low" and pct > hist["low_max_pctile"])
+                         or (cls == "high" and pct < hist["high_min_pctile"])
+                         or (cls == "middle" and not lo <= pct <= hi))
+                if wrong:
+                    history_issues.append({"phrase": m.group(1), "says": cls, "series": alias, "pctile": pct,
+                                           "fact": key, "context": sentence.strip()[:200]})
+
+        h = horizon_pat.search(sentence)
+        horizon = horizons.get(_norm_phrase(h.group(1))) if h else None
+        for m in trend_pat.finditer(report, a, b):
+            if negated(m):
+                continue
+            word = _norm_phrase(m.group(1))
+            alias = nearest(m.start())
+            if alias in trend["skip_series"]:
+                continue
+            says = trend_words.get(word, 0)
+            if word == "tightening":
+                says = {"up": 1, "down": -1}.get(trend["tightening"].get(groups.get(alias) or "", ""), 0)
+            if not says:
+                continue
+            # a sentence that quotes a change of this series is covered by the direction check
+            if any(r.kind == "fact" and a <= r.start < b and r.fact_id.startswith(f"{alias}.")
+                   and r.fact.is_change for r in refs or []):
+                continue
+            suffixes = [horizon] if horizon else ["1m", "1q", "1w"]
+            key = next((f"{alias}.{kind}_{sfx}" for sfx in suffixes for kind in ("chg", "pct")
+                        if f"{alias}.{kind}_{sfx}" in store), None)
+            if not key or not store[key].value:
+                continue
+            if (store[key].value > 0) != (says > 0):
+                trend_issues.append({"word": word, "says": "up" if says > 0 else "down", "series": alias,
+                                     "fact": key, "change": store[key].display, "context": sentence.strip()[:200]})
+    return {"history": history_issues, "trend": trend_issues}
+
+
+def classify_lines(report: str, figures: List[Figure]) -> List[Dict[str, Any]]:
+    """Each bullet / paragraph: "data" if it states a figure from the data or a quoted source, else
+    "interpretation" (headings and very short lines are left out)."""
+    out = []
+    for a, b in _units(report):
+        text = report[a:b].strip()
+        if len(text.split()) < 4 or set(text) <= set("|-: "):
+            continue
+        backed = any(a <= f.start < b and (f.status in ("verified", "derived") or f.origin in ("fact", "quote"))
+                     for f in figures)
+        out.append({"start": a, "end": b, "kind": "data" if backed else "interpretation"})
+    return out
+
+
+# ---------------------------------------------------------------------------
 # Orchestration
 # ---------------------------------------------------------------------------
 
@@ -605,6 +728,8 @@ def validate_report(
         "valid_source_ids": [s["id"] for s in sources],
         "directions": check_directions(report, figures),
         "comparisons": check_comparisons(report, refs),
+        "wording": check_wording(report, refs, build_fact_store(tables)),
+        "lines": classify_lines(report, figures),
         "placeholders": refs is not None,
         "unknown_facts": [r.fact_id for r in (refs or []) if r.kind == "unknown"],
     }
@@ -638,7 +763,8 @@ def open_issues(v: Dict[str, Any]) -> int:
     return (sum(_needs_attention(f, ph) for f in v["figures"])
             + len(cit["uncited_paragraphs"]) + len(cit["source_mismatches"]) + len(cit["dangling"])
             + sum(not t["disclosed"] for t in v["no_data"]["topics_without_data"])
-            + len(v.get("directions", [])) + len(v.get("unknown_facts", [])) + len(v.get("comparisons", [])))
+            + len(v.get("directions", [])) + len(v.get("unknown_facts", [])) + len(v.get("comparisons", []))
+            + len((v.get("wording") or {}).get("history", [])) + len((v.get("wording") or {}).get("trend", [])))
 
 
 def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
@@ -647,6 +773,13 @@ def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
     ph = v.get("placeholders", False)
     for fid in v.get("unknown_facts", []):
         items.append(f"{{{{{fid}}}}} is not in the FACT TABLE; use an ID from the table or rewrite without it.")
+    wording = v.get("wording") or {}
+    for w in wording.get("history", []):
+        items.append(f'"{w["context"][:160]}" says "{w["phrase"]}", but {w["series"]} sits at the '
+                     f'{w["pctile"]}th percentile of its history ({{{{{w["fact"]}}}}}); fix the wording.')
+    for w in wording.get("trend", []):
+        items.append(f'"{w["context"][:160]}" says "{w["word"]}", but {w["series"]} moved {w["change"]} '
+                     f'({{{{{w["fact"]}}}}}); fix the wording or name the period you mean.')
     for c in v.get("comparisons", []):
         items.append(f'"{c["context"][:160]}" compares with "{c["word"]}", but {c["detail"]}; '
                      "fix or drop the comparison.")
@@ -713,6 +846,10 @@ def summary_line(v: Dict[str, Any]) -> str:
         parts.append(f"{len(v['directions'])} change figure(s) described in the wrong direction.")
     if v.get("comparisons"):
         parts.append(f"{len(v['comparisons'])} comparison(s) between facts that do not hold.")
+    wording = v.get("wording") or {}
+    n_wording = len(wording.get("history", [])) + len(wording.get("trend", []))
+    if n_wording:
+        parts.append(f"{n_wording} statement(s) about history or trend that the data contradicts.")
     if v.get("unknown_facts"):
         parts.append(f"{len(v['unknown_facts'])} unknown fact reference(s).")
     cit = v["citations"]

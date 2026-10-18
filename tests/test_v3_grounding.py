@@ -174,3 +174,42 @@ def test_comparison_check_ignores_time_phrases_and_other_clauses():
     res = _validate("- IG widened {{IG_OAS.chg_1y}} over the past year and HY by {{HY_OAS.chg_1y}}.\n"
                     "- Cut risk if P/E exceeds {{JPM.pe_ttm}} or HY OAS rises above {{HY_OAS.latest}}.\n")
     assert res["comparisons"] == []
+
+
+# --- wording: history position and current trend ---------------------------------------
+
+def test_history_wording_is_checked_against_the_percentile():
+    pct = STORE["HY_OAS.pctile_5y"].value            # 87th in this fixture
+    assert pct > 67
+    bad = _validate("- HY spreads at {{HY_OAS.latest}} are near their five-year lows.\n")
+    assert [(w["says"], w["series"]) for w in bad["wording"]["history"]] == [("low", "HY_OAS")]
+    assert "sits at the" in v.feedback_for_writer(bad) and bad["open_issues"] == 1
+    ok = _validate("- High-yield spreads are elevated relative to their history.\n")
+    assert ok["wording"]["history"] == []
+
+
+def test_history_wording_skips_negations_and_scenarios():
+    res = _validate("- HY spreads are not historically tight.\n"
+                    "- If HY spreads return to five-year lows, cut risk.\n")
+    assert res["wording"]["history"] == []
+
+
+def test_trend_wording_without_a_number_is_checked():
+    # the check that catches "tightening" in a dev draft where IG had widened
+    assert STORE["IG_OAS.chg_1m"].value < 0                # fixture: IG fell to 0.84 on the last day
+    up = _validate("- Investment-grade spreads are widening.\n")
+    assert [(w["word"], w["series"]) for w in up["wording"]["trend"]] == [("widening", "IG_OAS")]
+    tight = _validate("- Investment-grade spreads are tightening.\n")
+    assert tight["wording"]["trend"] == []                  # tightening = down for spreads, matches the data
+    year = _validate("- Over the past year high-yield spreads are rising.\n")
+    assert year["wording"]["trend"] == []                   # the year-ago comparison is up
+
+
+def test_trend_wording_defers_to_the_direction_check_when_a_change_is_quoted():
+    res = _validate("- HY spreads are falling, {{HY_OAS.chg_1y}} this year.\n")
+    assert res["wording"]["trend"] == []
+
+
+def test_lines_are_labelled_data_or_interpretation():
+    res = _validate("- HY OAS is {{HY_OAS.latest}} today.\n- Spreads reflect investor appetite for risk.\n# Heading\n")
+    assert [l["kind"] for l in res["lines"]] == ["data", "interpretation"]

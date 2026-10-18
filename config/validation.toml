@@ -111,3 +111,76 @@ bn_usd = "money"
 count = "count"
 ratio = "ratio"
 percentile = "percentile"
+
+# ---------------------------------------------------------------------------
+# Wording checks: statements about where a series sits in its history
+# ("near five-year lows", "elevated") and about its current direction
+# ("spreads are tightening") are compared with the data, whether or not the
+# sentence quotes a number. Sentences with hedges or conditions ("if",
+# "could", "likely", ...) and negated phrases are skipped: scenarios and
+# forecasts are not claims about the data.
+# ---------------------------------------------------------------------------
+[wording]
+skip_words = ["if", "could", "may", "might", "would", "should", "unless", "scenario", "assume", "assuming",
+              "expect", "expected", "expects", "forecast", "likely", "will", "potential", "risk", "outlook",
+              "monitor", "watch"]
+negations = ["not", "no longer", "isn't", "aren't", "never", "hardly"]
+
+[wording.history]
+# percentile of the latest value in its fetched history (fact_store *.pctile_*)
+low_max_pctile = 33
+high_min_pctile = 67
+middle_range = [20, 80]
+low = ["historically low", "historically tight", "near its lows", "near their lows", "near lows", "near the lows",
+       "five-year low", "five-year lows", "5-year low", "5-year lows", "multi-year low", "record low", "near the bottom",
+       "tight relative to history", "tight by historical standards", "compressed", "near historic lows"]
+high = ["historically high", "historically wide", "near its highs", "near their highs", "near highs", "near the highs",
+        "five-year high", "five-year highs", "5-year high", "5-year highs", "multi-year high", "record high",
+        "elevated", "wide relative to history", "wide by historical standards", "near historic highs"]
+middle = ["near the median", "near its median", "near the average", "near its average", "near their average",
+          "around its average", "in line with history", "near the long-term average", "near the long-term median",
+          "near historical norms"]
+
+[wording.trend]
+# Progressive trend words with one clear direction for the series they name. Words whose meaning
+# depends on the subject are left out: a "cooling" labour market means unemployment is rising, and
+# "easing"/"slowing"/"accelerating" usually describe a growth rate. "tightening" depends on the group.
+up = ["rising", "widening", "increasing", "climbing", "steepening", "moving higher", "trending higher", "trending up"]
+down = ["falling", "narrowing", "decreasing", "declining", "flattening", "compressing", "moving lower",
+        "trending lower", "trending down"]
+tightening = { credit_spread = "down", yield = "up" }
+# For price indexes and GDP, trend words describe the growth rate ("inflation is falling"), but the
+# fact store has the level's changes, which are almost always positive; these series are not checked.
+skip_series = ["CPI", "PCE", "GDP"]
+
+# a horizon named in the sentence picks which change to compare with (default: the latest month)
+[wording.trend.horizons]
+"year" = "1y"
+"12-month" = "1y"
+"twelve months" = "1y"
+"annual" = "1y"
+"six months" = "6m"
+"6-month" = "6m"
+"quarter" = "3m"
+"three months" = "3m"
+"3-month" = "3m"
+"week" = "1w"
+
+# names a sentence may use for a series (matched as whole words); a sentence is checked only if it
+# clearly points to one series (by a fact it quotes or by one of these names)
+[wording.series_names]
+HY_OAS = ["high yield", "high-yield spread", "high-yield spreads", "hy spread", "hy spreads", "hy oas", "junk bond spreads"]
+IG_OAS = ["investment grade", "investment-grade spread", "investment-grade spreads", "ig spread", "ig spreads", "ig oas"]
+UST10Y = ["10-year yield", "10-year treasury", "10y yield", "ten-year yield"]
+UST2Y = ["2-year yield", "2-year treasury", "2y yield", "two-year yield"]
+CURVE_10Y2Y = ["yield curve", "curve", "2s10s", "10s2s"]
+FEDFUNDS = ["fed funds", "federal funds", "policy rate"]
+MORTGAGE30 = ["mortgage rate", "mortgage rates"]
+CPI = ["cpi", "inflation", "consumer prices"]
+PCE = ["pce"]
+UNRATE = ["unemployment", "jobless rate"]
+SAHM = ["sahm"]
+GDP = ["gdp", "real gdp"]
+SP500 = ["s&p 500", "equity market", "stock market"]
+VIX = ["vix", "volatility"]
+WTI = ["oil", "wti", "crude"]
