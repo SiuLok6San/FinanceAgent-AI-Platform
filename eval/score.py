@@ -420,6 +420,9 @@ def write_results_md(routing, scores, infos, records, determinism) -> str:
         "writer's assumption. They are the closest measure here of numbers the model made up.",
         "- *Wrong direction* compares words such as \"rose\" or \"narrowed\" next to a change figure with the sign of "
         "the change it matches. For free text the match is by value, so some flags can be coincidences.",
+        "- An *assumption label on a number in a cited source's text* is a figure from that source passed off as the "
+        "writer's own estimate (\"New York Fed: 25.2% (assumption) [S4]\" with 25.2% in S4). It counts as an open "
+        "issue, so a revision cannot clear a typed number by relabelling it.",
         "- In v3, a number typed by the model instead of a placeholder counts as an open issue even when it is right, "
         "so open-issue totals are not comparable across versions and are left out of the comparison tables.",
         "- 10 questions per held-out set are a small sample; live data and model output change from day to day.",
