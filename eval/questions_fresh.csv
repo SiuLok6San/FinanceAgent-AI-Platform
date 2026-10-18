@@ -1,0 +1,11 @@
+id,category,question,ticker,expected_tags
+F01,macro,Is real GDP growth slowing compared with a year ago?,,macro
+F02,macro,Does the Sahm rule indicator point to a recession right now?,,macro
+F03,rates,Has the Fed's policy rate come down over the past year?,,rates
+F04,rates,Are 2-year Treasury yields higher or lower than three months ago?,,rates
+F05,credit,How much have high-yield spreads moved over the last three months?,,credit
+F06,credit,Are investment-grade spreads near their five-year lows?,,credit
+F07,equity,Is Coca-Cola's dividend yield attractive compared with Treasury yields?,KO,equity;rates
+F08,equity,How has Tesla's stock performed over the past 52 weeks?,TSLA,equity
+F09,portfolio,Should a portfolio reduce equity risk when the VIX is low?,,portfolio;equity
+F10,portfolio,"How should a retiree split money between cash, Treasuries and corporate bonds today?",,portfolio;rates;credit
