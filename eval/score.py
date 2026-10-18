@@ -223,12 +223,21 @@ def _setup_rows(infos: Dict[str, Any], records: Dict[str, List[Dict[str, Any]]])
         return "; ".join(f"validator feedback → {n} Writer revision(s), kept only if it has fewer open issues"
                          if on else "off" for on, n in sorted(seen))
 
+    def producing_sessions(info, recs):
+        """For each saved record, the latest session that started before it ran and included its id."""
+        used = []
+        for rec in recs:
+            cands = [s for s in info["sessions"] if rec["id"] in s["ids"] and s["started_utc"] <= rec["run_utc"]]
+            if cands:
+                used.append(max(cands, key=lambda s: s["started_utc"]))
+        return used
+
     rows = [
-        ("Code", lambda i, r: "; ".join(sorted({s["code"] for s in i["sessions"]}))),
+        ("Code", lambda i, r: "; ".join(sorted({s["code"] for s in producing_sessions(i, r)}))),
         ("Run date (UTC)", dates),
-        ("Model", lambda i, r: ", ".join(sorted({s["llm"]["model"] for s in i["sessions"]}))),
-        ("Endpoint", lambda i, r: ", ".join(sorted({f"{s['llm']['api_base']} ({s['llm'].get('provider', '')})" for s in i["sessions"]}))),
-        ("Seed / context", lambda i, r: ", ".join(sorted({f"seed {s['llm']['seed']}, num_ctx {s['llm'].get('num_ctx', 'default')}" for s in i["sessions"]}))),
+        ("Model", lambda i, r: ", ".join(sorted({s["llm"]["model"] for s in producing_sessions(i, r)}))),
+        ("Endpoint", lambda i, r: ", ".join(sorted({f"{s['llm']['api_base']} ({s['llm'].get('provider', '')})" for s in producing_sessions(i, r)}))),
+        ("Seed / context", lambda i, r: ", ".join(sorted({f"seed {s['llm']['seed']}, num_ctx {s['llm'].get('num_ctx', 'default')}" for s in producing_sessions(i, r)}))),
         ("Questions run", lambda i, r: str(len(r))),
     ]
     out = ["| | Original pipeline (before) | Revised pipeline (after) |", "|---|---|---|"]
