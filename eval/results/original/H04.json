@@ -1,0 +1,92 @@
+{
+  "id": "H04",
+  "set": "heldout",
+  "category": "rates",
+  "question": "Where are 30-year mortgage rates relative to a year ago?",
+  "ticker": null,
+  "expected_tags": [
+    "rates"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T18:25:23+00:00",
+  "elapsed_sec": 107.7,
+  "router_tags": [
+    "rates"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- 30‑year fixed‑rate mortgage average is **≈ 7.40 %** as of the week ending 16 Oct 2026 [S3], [S4].  \n- One‑year‑ago average was **≈ 6.30 %** (Oct 2025) [S5].  \n- The rate has risen by **1.10 percentage points** (~35 % increase) over the past 12 months.  \n- The rise reflects continued Fed tightening, persistent inflation, and a tight housing supply.  \n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed policy rate near 5.25 % after eight consecutive hikes; Treasury yields have risen, feeding into mortgage pricing.  \n- Core CPI remains above the 2 % target, supporting a “tight‑but‑steady” stance.  \n- Housing supply constraints and sustained buyer demand limit downward pressure on rates.  \n\n*Sector*  \n- Mortgage‑backed securities (MBS) now offer higher coupon yields but face increased pre‑payment risk.  \n- Real‑estate investment trusts (REITs) experience higher financing costs, compressing earnings.  \n\n*Credit*  \n- Investment‑grade bond yields rise in tandem with mortgage rates; duration risk increases.  \n- High‑yield spreads may tighten slightly due to higher borrowing costs, but impact is muted relative to IG.  \n\n*Portfolio*  \n- Fixed‑income: Longer‑dated MBS and IG Treasuries see price declines; consider shorter duration or floating‑rate instruments.  \n- Equities: REITs and consumer‑discretionary sectors may underperform; focus on balance‑sheet strength and low leverage.  \n\n---\n\n**Scenarios**\n\n| Scenario | Assumptions | Expected Rate Path | Impact |\n|----------|-------------|--------------------|--------|\n| **Base** | Fed maintains current policy; inflation stays near 2.5 % | 30‑yr rate stabilizes around 7.4 % | Moderate duration risk; MBS yields remain attractive |\n| **Upside** | Fed raises rates by 25 bp; inflation accelerates | 30‑yr rate climbs to ~7.7 % | Higher borrowing costs; REIT valuations compress |\n| **Downside** | Fed cuts rates by 25 bp; inflation eases | 30‑yr rate falls to ~7.1 % | Lower financing costs; potential rebound in housing demand |\n\n*Note: Scenario outcomes are illustrative; actual movements depend on Fed policy and macro data.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Fed Policy Risk** – Unexpected rate cuts or hikes.  \n- **Inflation Risk** – Core CPI deviating from 2 % target.  \n- **Supply‑Demand Imbalance** – Housing inventory changes.  \n- **Pre‑payment Risk** – Rate‑sensitive borrower behavior.  \n- **Credit Spread Risk** – IG and HY spread movements.  \n\n*Monitoring Tools*  \n- Fed policy announcements and minutes.  \n- Core CPI releases.  \n- Mortgage Bankers Association (MBA) weekly rate reports.  \n- Treasury yield curve movements.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Fixed‑Income** – Shift to shorter‑duration MBS or floating‑rate instruments; hedge duration exposure with swaps or futures.  \n- **Equities** – Favor REITs with low leverage and strong cash flow; consider dividend‑yielding utilities as a hedge.  \n- **Credit** – Reassess IG bond duration; monitor HY spread tightening.  \n- **Liquidity** – Maintain cash buffers; secondary mortgage market liquidity may tighten.  \n\n---\n\n**Conclusion**  \n30‑year mortgage rates have risen by **1.10 percentage points** over the past year, moving from **≈ 6.30 %** to **≈ 7.40 %** [S5], [S3]. The increase is driven by sustained Fed tightening and persistent inflation, with limited mitigating supply‑demand dynamics. This environment elevates borrowing costs, compresses real‑estate returns, and heightens duration risk across fixed‑income portfolios, while offering higher yields on MBS. Portfolio managers should adjust duration, hedge interest‑rate exposure, and focus on balance‑sheet strength in real‑estate and consumer sectors to navigate the current rate regime.",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "30 Year Mortgage Rate (Weekly, I:US30YMR) - United States - Historical Data & Trends",
+      "url": "https://ycharts.com/indicators/30_year_mortgage_rate",
+      "source": "web",
+      "snippet": "Info  About UsContact UsProduct Release Notes  Content  WebinarsCase StudiesInsights & VisualsBlog  Featured Content  Image 8: Fund Flow Reports Fund Flow ReportsA New Era at the FedYCharts University Training  Unlock Additional Benefits Wh",
+      "id": "S1"
+    },
+    {
+      "title": "Mortgage rates hold steady as 30-year fixed averages 6.21%",
+      "url": "https://www.investing.com/news/company-news/mortgage-rates-hold-steady-as-30year-fixed-averages-621-93CH-4415735",
+      "source": "web",
+      "snippet": "Economic CalendarStock Screener    0  Mortgage rates hold steady as 30-year fixed averages 6.21%  View all comments (0)0  Image 3: Mortgage rates hold steady as 30-year fixed averages 6.21%  Mortgage rates hold steady as 30-year fixed avera",
+      "id": "S2"
+    },
+    {
+      "title": "United States 30-Year Mortgage Rate",
+      "url": "https://tradingeconomics.com/united-states/30-year-mortgage-rate",
+      "source": "web",
+      "snippet": "## The US 30-year fixed-rate mortgage averaged 7.4% as of October 8th, 2026, rising further above 7% to reach its highest level since November 2023 and up from 7.28% in the previous week. This marks the seventh consecutive week with rate in",
+      "id": "S3"
+    },
+    {
+      "title": "Trending mortgage rates",
+      "url": "https://journal.firsttuesday.us/current-market-rates/3832",
+      "source": "web",
+      "snippet": "## The cyclical rise in mortgage rates bent by wars  _The rate on an average 30-year fixed rate mortgage (FRM) hovered at 7.40% in the week ending October 16, 2026, remaining above rates one year ago. The average 15-year FRM dipped to 6.71%",
+      "id": "S4"
+    },
+    {
+      "title": "30 Year Fixed Mortgage Rate (1971-2026)",
+      "url": "https://www.macrotrends.net/2604/30-year-fixed-mortgage-rate-chart",
+      "source": "web",
+      "snippet": "The average 30-year fixed mortgage rate was 7.40% on October 15, 2026, up 1.10 points from 6.30% a year earlier. The 2026 average so far is 6.48%,",
+      "id": "S5"
+    },
+    {
+      "title": "Today's 30-Year Mortgage Rates | October 2026 | Buy or Refi",
+      "url": "https://themortgagereports.com/30-year-mortgage-rates",
+      "source": "web",
+      "snippet": "Mortgage Rates          Mortgage Rate Updates             Mortgage Rates Today            30-Year Mortgage Rates Today            15-Year Mortgage Rates Today            FHA Mortgage Rates Today            Today’s VA Mortgage Rates         ",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S3",
+    "S4",
+    "S5"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

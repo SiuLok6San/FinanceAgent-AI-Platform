@@ -1,0 +1,1083 @@
+{
+  "id": "H08",
+  "set": "heldout",
+  "category": "equity",
+  "question": "What is the analyst consensus on Bank of America shares?",
+  "ticker": "BAC",
+  "expected_tags": [
+    "equity"
+  ],
+  "pipeline": "v2",
+  "run_utc": "2026-10-18T18:05:26+00:00",
+  "elapsed_sec": 127.5,
+  "router_tags": [
+    "macro"
+  ],
+  "tags": [
+    "macro"
+  ],
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Bank of America Corp. – Analyst Consensus & Investment Outlook**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- **Consensus rating:** Buy, based on 6 Strong Buy, 17 Buy, 6 Hold recommendations【S3】.  \n- **Target‑price outlook:** Average 12‑month target of **$63.19** (17 analysts)【S11】; current price **$51.23**【S2】 → upside potential of **23.35 %** (assumption).  \n- **Valuation multiples:** P/E TTM = 11.04, P/B = 1.283, P/S = 2.329【S4】 – modest relative to earnings.  \n- **Dividend yield:** 3.23 %【S4】 – above sector average.  \n- **Risk profile:** No credit‑rating data fetched; macro‑data unavailable – qualitative assessment of regulatory and interest‑rate exposure.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **No macro data fetched** – qualitative view: higher rates benefit net interest margin, but regulatory and credit‑risk headwinds persist【S5‑S10】.  \n\n#### Sector (Banking)  \n- **Peer comparison:** BAC’s P/E and P/B lower than sector median, suggesting relative undervaluation.  \n- **Revenue growth:** 99.37 % YoY (TTM)【S4】 – strong expansion.  \n- **Profitability:** ROE 10.69 %【S4】 – solid but below top peers.  \n\n#### Credit  \n- **No credit‑rating data fetched** – BAC remains investment‑grade; specific IG/HY spread data unavailable.  \n\n#### Portfolio  \n- **Liquidity:** Shares outstanding 7.02 bn, market cap $354.65 bn【S1】.  \n- **Dividend:** 3.23 % yield, beta 1.208【S4】 – moderate risk‑adjusted return.  \n\n---\n\n### 3. Scenarios  \n\n- **Base:** Current price **$51.23**【S2】.  \n- **Upside:** Target price **$63.19**【S11】 → upside of **23.35 %** (assumption).  \n- **Downside:** Price falls to **$45.00** (assumption).  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Regulatory risk:** CEO comments on compliance issues【S7】.  \n- **Loan‑loss provisioning:** Potential impact on earnings if credit quality deteriorates.  \n- **Interest‑rate sensitivity:** Higher rates boost net interest margin but increase funding costs.  \n- **Market sentiment:** Sector volatility noted in recent news【S5‑S10】.  \n\n*Monitoring actions:*  \n- Track quarterly earnings for loan‑loss reserves and net interest margin.  \n- Watch regulatory announcements and compliance updates.  \n- Observe Fed policy statements for rate trajectory.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Allocation:** BAC offers high‑grade banking exposure with upside potential; suitable for core banking allocation.  \n- **Diversification:** Pair with other large‑cap banks or a banking ETF to spread sector risk.  \n- **Risk‑adjusted return:** Dividend yield + moderate beta suggests attractive risk‑return profile.  \n- **Timing:** Current price below consensus target; consider incremental buying if valuation remains attractive.  \n\n---\n\n### 6. Conclusion  \n\nBank of America’s consensus rating of Buy, coupled with a target‑price upside of **23.35 %** (assumption), positions the stock as a compelling long‑term holding within the banking sector. Valuation multiples are modest, and the dividend yield is above sector peers. Key risks revolve around regulatory developments and credit quality, which should be monitored closely. Overall, BAC aligns with a core banking allocation strategy, offering diversification benefits and a favorable risk‑return profile.",
+  "report_template": null,
+  "draft_report_text": "**Bank of America Corp. – Analyst Consensus & Investment Outlook**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- **Consensus rating:** Buy, driven by 6 Strong Buy, 17 Buy, 6 Hold out of 29 analysts【S3】.  \n- **Target‑price range:** Average 12‑month target of **$63.19** (17 analysts)【S11】; current price **$51.23**【S2】 → ~19 % upside.  \n- **Valuation:** P/E TTM = 11.04, P/B = 1.28, P/S = 2.33【S4】 – modest multiples relative to earnings.  \n- **Dividend yield:** 3.23 %【S4】 – above sector average.  \n- **Risk profile:** No credit‑rating data fetched; macro‑data unavailable – qualitative assessment of regulatory and interest‑rate exposure.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **No macro data fetched** – qualitative view: banking sector benefits from higher rates but faces regulatory and credit‑risk headwinds【S5‑S10】.  \n\n#### Sector (Banking)  \n- **Peer comparison:** BAC’s P/E and P/B are lower than the sector median, suggesting relative undervaluation.  \n- **Revenue growth:** 99.4 % YoY (TTM)【S4】 – strong expansion.  \n- **Profitability:** ROE 10.7 %【S4】 – solid but below top peers.  \n\n#### Credit  \n- **No credit‑rating data fetched** – BAC remains investment‑grade; specific IG/HY spread data unavailable.  \n\n#### Portfolio  \n- **Liquidity:** Shares outstanding 7.02 bn, market cap $354.65 bn【S1】.  \n- **Dividend:** 3.23 % yield, 1.208 beta【S4】 – moderate risk‑adjusted return.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Assumptions | Outcome |\n|----------|-------------|---------|\n| **Base** | Current price $51.23【S2】 | 0 % change |\n| **Upside** | Target price $63.19 (average)【S11】 | +19 % upside |\n| **Downside** | Price falls to $45.00 (assumption) | –12 % from current |\n\n*See Table 1 for company profile, Table 2 for quote, Table 3 for recommendation trends, Table 4 for key financial metrics.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Regulatory risk:** Recent CEO comments on compliance issues【S7】.  \n- **Loan‑loss provisioning:** Potential impact on earnings if credit quality deteriorates.  \n- **Interest‑rate sensitivity:** Higher rates boost net interest margin but increase funding costs.  \n- **Market sentiment:** Sector volatility noted in recent news【S5‑S10】.  \n\n*Monitoring actions:*  \n- Track quarterly earnings for loan‑loss reserves and net interest margin.  \n- Watch regulatory announcements and compliance updates.  \n- Observe Fed policy statements for rate trajectory.\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Allocation:** BAC offers high‑grade banking exposure with ~19 % upside potential; suitable for core banking allocation.  \n- **Diversification:** Pair with other large‑cap banks or a banking ETF to spread sector risk.  \n- **Risk‑adjusted return:** Dividend yield + moderate beta suggests attractive risk‑return profile.  \n- **Timing:** Current price below consensus target; consider incremental buying if valuation remains attractive.\n\n---\n\n### 6. Conclusion  \n\nBank of America’s consensus rating of Buy, coupled with a 19 % upside to the average target price, positions the stock as a compelling long‑term holding within the banking sector. Valuation multiples are modest, and the dividend yield is above sector peers. Key risks revolve around regulatory developments and credit quality, which should be monitored closely. Overall, BAC aligns with a core banking allocation strategy, offering diversification benefits and a favorable risk‑return profile.",
+  "draft_report_template": null,
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"29\" in: \"- **Consensus rating:** Buy, driven by 6 Strong Buy, 17 Buy, 6 Hold out of 29 analysts【S3】.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n2. \"19 %\" in: \"- **Target‑price range:** Average 12‑month target of **$63.19** (17 analysts)【S11】; current price **$51.23**【S2】 → ~19 % upside.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n3. \"+19 %\" in: \"| **Upside** | Target price $63.19 (average)【S11】 | +19 % upside |\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n4. \"19 %\" in: \"- **Allocation:** BAC offers high‑grade banking exposure with ~19 % upside potential; suitable for core banking allocation.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n5. \"19 %\" in: \"Bank of America’s consensus rating of Buy, coupled with a 19 % upside to the average target price, positions the stock as a compelling long‑term holding within \" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n6. \"| Scenario | Assumptions | Outcome |\n|----------|-------------|---------|\n| **Base** | Current price $51.23【S2】 | 0 % change |\n| **Upside** | Target price $63.1\" cites S11, S2, but figures 0 % come from [S2], [S3].",
+        "open_issues_before": 6,
+        "summary_before": "18 of 27 figures verified against source data (18 exact, 0 derived); 9 flagged (2 of them appear in a fetched web/news snippet; 2 labelled as assumptions). 1 paragraph(s) cite a different source than the data.",
+        "accepted": true,
+        "open_issues_after": 0,
+        "summary_after": "17 of 23 figures verified against source data (17 exact, 0 derived); 6 flagged (2 of them appear in a fetched web/news snippet; 6 labelled as assumptions).",
+        "revised_report_text": "**Bank of America Corp. – Analyst Consensus & Investment Outlook**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- **Consensus rating:** Buy, based on 6 Strong Buy, 17 Buy, 6 Hold recommendations【S3】.  \n- **Target‑price outlook:** Average 12‑month target of **$63.19** (17 analysts)【S11】; current price **$51.23**【S2】 → upside potential of **23.35 %** (assumption).  \n- **Valuation multiples:** P/E TTM = 11.04, P/B = 1.283, P/S = 2.329【S4】 – modest relative to earnings.  \n- **Dividend yield:** 3.23 %【S4】 – above sector average.  \n- **Risk profile:** No credit‑rating data fetched; macro‑data unavailable – qualitative assessment of regulatory and interest‑rate exposure.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **No macro data fetched** – qualitative view: higher rates benefit net interest margin, but regulatory and credit‑risk headwinds persist【S5‑S10】.  \n\n#### Sector (Banking)  \n- **Peer comparison:** BAC’s P/E and P/B lower than sector median, suggesting relative undervaluation.  \n- **Revenue growth:** 99.37 % YoY (TTM)【S4】 – strong expansion.  \n- **Profitability:** ROE 10.69 %【S4】 – solid but below top peers.  \n\n#### Credit  \n- **No credit‑rating data fetched** – BAC remains investment‑grade; specific IG/HY spread data unavailable.  \n\n#### Portfolio  \n- **Liquidity:** Shares outstanding 7.02 bn, market cap $354.65 bn【S1】.  \n- **Dividend:** 3.23 % yield, beta 1.208【S4】 – moderate risk‑adjusted return.  \n\n---\n\n### 3. Scenarios  \n\n- **Base:** Current price **$51.23**【S2】.  \n- **Upside:** Target price **$63.19**【S11】 → upside of **23.35 %** (assumption).  \n- **Downside:** Price falls to **$45.00** (assumption).  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Regulatory risk:** CEO comments on compliance issues【S7】.  \n- **Loan‑loss provisioning:** Potential impact on earnings if credit quality deteriorates.  \n- **Interest‑rate sensitivity:** Higher rates boost net interest margin but increase funding costs.  \n- **Market sentiment:** Sector volatility noted in recent news【S5‑S10】.  \n\n*Monitoring actions:*  \n- Track quarterly earnings for loan‑loss reserves and net interest margin.  \n- Watch regulatory announcements and compliance updates.  \n- Observe Fed policy statements for rate trajectory.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Allocation:** BAC offers high‑grade banking exposure with upside potential; suitable for core banking allocation.  \n- **Diversification:** Pair with other large‑cap banks or a banking ETF to spread sector risk.  \n- **Risk‑adjusted return:** Dividend yield + moderate beta suggests attractive risk‑return profile.  \n- **Timing:** Current price below consensus target; consider incremental buying if valuation remains attractive.  \n\n---\n\n### 6. Conclusion  \n\nBank of America’s consensus rating of Buy, coupled with a target‑price upside of **23.35 %** (assumption), positions the stock as a compelling long‑term holding within the banking sector. Valuation multiples are modest, and the dividend yield is above sector peers. Key risks revolve around regulatory developments and credit quality, which should be monitored closely. Overall, BAC aligns with a core banking allocation strategy, offering diversification benefits and a favorable risk‑return profile."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "Finnhub company profile: BAC",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub quote: BAC",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "Quote as of 2026-10-16.",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub recommendation trends: BAC",
+      "url": "https://finnhub.io/docs/api/recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub basic financials: BAC",
+      "url": "https://finnhub.io/docs/api/company-basic-financials",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Big Banks Outperform Sector, But Risks Shine Bright",
+      "url": "https://finnhub.io/api/news?id=055f3ee9597222a62dc95d2323f1bb5c5ed39a2c73dcca30af18abc700b7ba1f",
+      "source": "Finnhub news (SeekingAlpha)",
+      "snippet": "2026-10-18: Big banks like Citigroup, JPMorgan Chase, Wells Fargo, and Bank of America posted mixed Q3 earnings. Read more on the big banks here.",
+      "id": "S5"
+    },
+    {
+      "title": "Wall Street Week Ahead",
+      "url": "https://finnhub.io/api/news?id=b003098e70a6cdd7a3ab60fb61978bd51c28cff1b3b3250070bf025dbecfc5c3",
+      "source": "Finnhub news (SeekingAlpha)",
+      "snippet": "2026-10-18: ",
+      "id": "S6"
+    },
+    {
+      "title": "Bank of America CEO addresses a troubling banking problem",
+      "url": "https://finnhub.io/api/news?id=ab5f43966dc3d81f925a8a76fdbab7b3d05f41273022efddc0327a94a573332b",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-17: Brian Moynihan explains how the bank is tackling a major compliance problem.",
+      "id": "S7"
+    },
+    {
+      "title": "3 Undervalued Stocks Trading Up To 40% Below Fair Value",
+      "url": "https://finnhub.io/api/news?id=966fb687ad15eaa2c9fd474d4e014ee2ce25bf320a15f692d2b40d0bd7c5a110",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-17: Rising fuel costs are feeding into broader inflation, and central banks are preparing tighter policy in 2027. Cash is getting more expensive. That tends to punish companies that depend heavily on borrowing and rewards businesses that alread",
+      "id": "S8"
+    },
+    {
+      "title": "Bank of America: 3 Key Takeaways for Long-Term Investors",
+      "url": "https://finnhub.io/api/news?id=ea7a85c62e7fb01277fd61328a512bd91b562e57ec90d528e41849893e2de6b1",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-17: A $1.2 billion settlement won't derail earnings growth, thanks to a fortress balance sheet that lets management compete on service, not rates.",
+      "id": "S9"
+    },
+    {
+      "title": "Bank of America sees 40% upside in AI’s next bottleneck",
+      "url": "https://finnhub.io/api/news?id=f43409aa61fe9dd0115f3f6a37a90f6e32fb52790d4294703977edcc6ac1397b",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-17: BofA’s $100 call on this stock reflects a change in demand.",
+      "id": "S10"
+    },
+    {
+      "title": "Bank of America (BAC) Stock Forecast, Price Targets and Analysts Predictions - TipRanks.com",
+      "url": "https://www.tipranks.com/stocks/bac/forecast",
+      "source": "web (Tavily)",
+      "snippet": "The average price target for Bank of America is 63.19. This is based on 17 Wall Streets Analysts 12-month price targets, issued in the past 3 months.     The highest analyst price target is $75.00 ,the lowest forecast is $56.00. The average price target represents 1.21% Increase from the current price of $62.43.  What ",
+      "id": "S11"
+    },
+    {
+      "title": "BAC Stock Forecast: Analyst Ratings, Predictions & Price Target 2026",
+      "url": "https://public.com/stocks/bac/forecast-price-target",
+      "source": "web (Tavily)",
+      "snippet": "BAC has been analyzed by 18 analysts, with a consensus rating of Buy. 33% of analysts recommend a Strong Buy, 56% recommend Buy, 11% suggest Holding, 0% advise Selling, and 0% predict a Strong Sell.      This aggregate rating is based on analysts' research of Bank of America and is not a guaranteed prediction by Public",
+      "id": "S12"
+    },
+    {
+      "title": "Why The Narrative Around Bank of America Is Shifting After New Analyst Developments",
+      "url": "https://finance.yahoo.com/news/why-narrative-around-bank-america-131203108.html",
+      "source": "web (Tavily)",
+      "snippet": "Consensus Analyst Price Target has risen slightly from $53.69 to $55.23, reflecting a modest increase in projected fair value for Bank of America shares.  Discount Rate has decreased marginally from 8.26% to 8.21%, suggesting a modestly lower risk premium applied in valuation models.  Revenue Growth projection remains ",
+      "id": "S13"
+    },
+    {
+      "title": "Why Bank of America (BAC) Shares Are Trading Lower Today",
+      "url": "https://finance.yahoo.com/news/why-bank-america-bac-shares-191549697.html",
+      "source": "web (Tavily)",
+      "snippet": "Bank of America posted earnings per share of $0.98, which edged past the consensus estimate of $0.96. Revenue for the quarter was $28.37 billion, up 7% from the previous year and also ahead of forecasts. [...] The bank announced earnings per share of $1.06, comfortably beating analysts' estimates of $0.95 and increasin",
+      "id": "S14"
+    },
+    {
+      "title": "The Zacks Analyst Blog Bank of America and Wells Fargo",
+      "url": "https://finance.yahoo.com/news/zacks-analyst-blog-bank-america-065600034.html",
+      "source": "web (Tavily)",
+      "snippet": "Bank of America's return on equity (ROE) of 10.76% is below WFC's 12.51%. Further, the industry's ROE is 15.87%. This reflects that WFC is more efficiently using shareholder funds to generate profits.  ## Bank of America & Wells Fargo's Prospects  The Zacks Consensus Estimate for BAC's 2025 and 2026 revenue implies yea",
+      "id": "S15"
+    },
+    {
+      "title": "Bank of America Corporation (BAC) Analyst Insights, Price Targets & Recommendations - Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BAC/analyst-insights",
+      "source": "web (Tavily)",
+      "snippet": "| Analyst | Overall Score | Direction Score | Price Score | Latest Rating | Price Target | Date |  ---  ---  ---  | Truist Securities | 65 | 71 | 100 | Buy | 62 | 2026-10-02 | | Oppenheimer | 64 | 68 | 97 | Perform  2026-07-01 | | Evercore ISI Group | 64 | 73 | 100 | Outperform | 62 | 2026-10-02 | | Wells Fargo | 63 | ",
+      "id": "S16"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S7",
+    "S11"
+  ],
+  "tables": [
+    {
+      "title": "BAC Company Profile",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": null,
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/company-profile2",
+      "ticker": "BAC",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "Company",
+          "Bank of America Corp"
+        ],
+        [
+          "Exchange",
+          "NEW YORK STOCK EXCHANGE, INC."
+        ],
+        [
+          "Industry",
+          "Banking"
+        ],
+        [
+          "Country",
+          "US"
+        ],
+        [
+          "Currency",
+          "USD"
+        ],
+        [
+          "IPO date",
+          "1979-06-05"
+        ],
+        [
+          "Market capitalization (USD)",
+          354649686093.109
+        ],
+        [
+          "Shares outstanding",
+          7017970000.0
+        ]
+      ]
+    },
+    {
+      "title": "BAC Quote",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": "daily",
+      "units": null,
+      "last_date": "2026-10-16",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/quote",
+      "ticker": "BAC",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "Current price",
+          51.23
+        ],
+        [
+          "Change",
+          -0.47
+        ],
+        [
+          "Percent change (%)",
+          -0.9091
+        ],
+        [
+          "Open",
+          52.14
+        ],
+        [
+          "Day high",
+          52.64
+        ],
+        [
+          "Day low",
+          51.21
+        ],
+        [
+          "Previous close",
+          51.7
+        ]
+      ]
+    },
+    {
+      "title": "BAC Analyst Recommendation Trends",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": "monthly",
+      "units": null,
+      "last_date": "2026-09-01",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/recommendation-trends",
+      "ticker": "BAC",
+      "columns": [
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "2026-09-01",
+          6,
+          17,
+          6,
+          0,
+          0
+        ],
+        [
+          "2026-08-01",
+          6,
+          17,
+          6,
+          0,
+          0
+        ],
+        [
+          "2026-07-01",
+          6,
+          17,
+          6,
+          0,
+          0
+        ],
+        [
+          "2026-06-01",
+          7,
+          17,
+          5,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "BAC Key Financial Metrics",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": null,
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/company-basic-financials",
+      "ticker": "BAC",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "P/E (TTM)",
+          11.0417
+        ],
+        [
+          "P/B (quarterly)",
+          1.2826
+        ],
+        [
+          "P/S (TTM)",
+          2.32875
+        ],
+        [
+          "EPS (TTM)",
+          4.3585
+        ],
+        [
+          "EPS growth TTM YoY (%)",
+          14.53
+        ],
+        [
+          "Revenue growth TTM YoY (%)",
+          99.36713
+        ],
+        [
+          "ROE TTM (%)",
+          10.69
+        ],
+        [
+          "Net profit margin TTM (%)",
+          30.15501
+        ],
+        [
+          "Dividend yield, indicated annual (%)",
+          3.22906
+        ],
+        [
+          "Beta",
+          1.2077264
+        ],
+        [
+          "52-week high",
+          65.225
+        ],
+        [
+          "52-week low",
+          46.12
+        ],
+        [
+          "52-week price return (%)",
+          1.5662
+        ]
+      ]
+    },
+    {
+      "title": "BAC Recent News",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": "2026-10-18",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "",
+      "ticker": "BAC",
+      "columns": [
+        "date",
+        "headline",
+        "publisher",
+        "url"
+      ],
+      "rows": [
+        [
+          "2026-10-18",
+          "Big Banks Outperform Sector, But Risks Shine Bright",
+          "SeekingAlpha",
+          "https://finnhub.io/api/news?id=055f3ee9597222a62dc95d2323f1bb5c5ed39a2c73dcca30af18abc700b7ba1f"
+        ],
+        [
+          "2026-10-18",
+          "Wall Street Week Ahead",
+          "SeekingAlpha",
+          "https://finnhub.io/api/news?id=b003098e70a6cdd7a3ab60fb61978bd51c28cff1b3b3250070bf025dbecfc5c3"
+        ],
+        [
+          "2026-10-17",
+          "Bank of America CEO addresses a troubling banking problem",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=ab5f43966dc3d81f925a8a76fdbab7b3d05f41273022efddc0327a94a573332b"
+        ],
+        [
+          "2026-10-17",
+          "3 Undervalued Stocks Trading Up To 40% Below Fair Value",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=966fb687ad15eaa2c9fd474d4e014ee2ce25bf320a15f692d2b40d0bd7c5a110"
+        ],
+        [
+          "2026-10-17",
+          "Bank of America: 3 Key Takeaways for Long-Term Investors",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=ea7a85c62e7fb01277fd61328a512bd91b562e57ec90d528e41849893e2de6b1"
+        ],
+        [
+          "2026-10-17",
+          "Bank of America sees 40% upside in AI’s next bottleneck",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=f43409aa61fe9dd0115f3f6a37a90f6e32fb52790d4294703977edcc6ac1397b"
+        ]
+      ]
+    }
+  ],
+  "charts": [],
+  "data_status": [
+    {
+      "provider": "Finnhub",
+      "item": "profile BAC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "quote BAC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "recommendations BAC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "financials BAC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "news BAC",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": null,
+  "validation": {
+    "counts": {
+      "figures": 23,
+      "verified": 17,
+      "derived": 0,
+      "unverified": 6
+    },
+    "figures": [
+      {
+        "text": "18 Oct 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 112,
+        "end": 123,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "*Prepared for B17 Institutional Research – 18 Oct 2026*"
+      },
+      {
+        "text": "6",
+        "value": 6.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 198,
+        "end": 199,
+        "status": "verified",
+        "matched": "BAC Analyst Recommendation Trends: hold (2026-09-01)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Consensus rating:** Buy, based on 6 Strong Buy, 17 Buy, 6 Hold recommendations【S3】."
+      },
+      {
+        "text": "17",
+        "value": 17.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 212,
+        "end": 214,
+        "status": "verified",
+        "matched": "BAC Analyst Recommendation Trends: buy (2026-09-01)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Consensus rating:** Buy, based on 6 Strong Buy, 17 Buy, 6 Hold recommendations【S3】."
+      },
+      {
+        "text": "6",
+        "value": 6.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 220,
+        "end": 221,
+        "status": "verified",
+        "matched": "BAC Analyst Recommendation Trends: hold (2026-09-01)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Consensus rating:** Buy, based on 6 Strong Buy, 17 Buy, 6 Hold recommendations【S3】."
+      },
+      {
+        "text": "$63.19",
+        "value": 63.19,
+        "unit": "$",
+        "tolerance": 0.0050000010000000004,
+        "start": 307,
+        "end": 313,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S11",
+        "snippet_ids": [
+          "S11",
+          "S16"
+        ],
+        "assumption": true,
+        "cited": [
+          "S2",
+          "S11"
+        ],
+        "context": "- **Target‑price outlook:** Average 12‑month target of **$63.19** (17 analysts)【S11】; current price **$51.23**【S2】 → upside potential of **23.35 %** (assumption)."
+      },
+      {
+        "text": "17",
+        "value": 17.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 317,
+        "end": 319,
+        "status": "verified",
+        "matched": "BAC Analyst Recommendation Trends: buy (2026-09-01)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S11"
+        ],
+        "context": "- **Target‑price outlook:** Average 12‑month target of **$63.19** (17 analysts)【S11】; current price **$51.23**【S2】 → upside potential of **23.35 %** (assumption)."
+      },
+      {
+        "text": "$51.23",
+        "value": 51.23,
+        "unit": "$",
+        "tolerance": 0.0050000010000000004,
+        "start": 352,
+        "end": 358,
+        "status": "verified",
+        "matched": "BAC Quote: Current price",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S11"
+        ],
+        "context": "- **Target‑price outlook:** Average 12‑month target of **$63.19** (17 analysts)【S11】; current price **$51.23**【S2】 → upside potential of **23.35 %** (assumption)."
+      },
+      {
+        "text": "23.35 %",
+        "value": 23.35,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 389,
+        "end": 396,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S2",
+          "S11"
+        ],
+        "context": "- **Target‑price outlook:** Average 12‑month target of **$63.19** (17 analysts)【S11】; current price **$51.23**【S2】 → upside potential of **23.35 %** (assumption)."
+      },
+      {
+        "text": "11.04",
+        "value": 11.04,
+        "unit": "",
+        "tolerance": 0.0050000010000000004,
+        "start": 452,
+        "end": 457,
+        "status": "verified",
+        "matched": "BAC Key Financial Metrics: P/E (TTM)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Valuation multiples:** P/E TTM = 11.04, P/B = 1.283, P/S = 2.329【S4】 – modest relative to earnings."
+      },
+      {
+        "text": "1.283",
+        "value": 1.283,
+        "unit": "",
+        "tolerance": 0.000500001,
+        "start": 465,
+        "end": 470,
+        "status": "verified",
+        "matched": "BAC Key Financial Metrics: P/B (quarterly)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Valuation multiples:** P/E TTM = 11.04, P/B = 1.283, P/S = 2.329【S4】 – modest relative to earnings."
+      },
+      {
+        "text": "2.329",
+        "value": 2.329,
+        "unit": "",
+        "tolerance": 0.000500001,
+        "start": 478,
+        "end": 483,
+        "status": "verified",
+        "matched": "BAC Key Financial Metrics: P/S (TTM)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Valuation multiples:** P/E TTM = 11.04, P/B = 1.283, P/S = 2.329【S4】 – modest relative to earnings."
+      },
+      {
+        "text": "3.23 %",
+        "value": 3.23,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 543,
+        "end": 549,
+        "status": "verified",
+        "matched": "BAC Key Financial Metrics: Dividend yield, indicated annual (%)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Dividend yield:** 3.23 %【S4】 – above sector average."
+      },
+      {
+        "text": "99.37 %",
+        "value": 99.37,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1066,
+        "end": 1073,
+        "status": "verified",
+        "matched": "BAC Key Financial Metrics: Revenue growth TTM YoY (%)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Revenue growth:** 99.37 % YoY (TTM)【S4】 – strong expansion."
+      },
+      {
+        "text": "10.69 %",
+        "value": 10.69,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1135,
+        "end": 1142,
+        "status": "verified",
+        "matched": "BAC Key Financial Metrics: ROE TTM (%)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Profitability:** ROE 10.69 %【S4】 – solid but below top peers."
+      },
+      {
+        "text": "7.02 bn",
+        "value": 7020000000.0,
+        "unit": "",
+        "tolerance": 5000000.000000001,
+        "start": 1357,
+        "end": 1364,
+        "status": "verified",
+        "matched": "BAC Company Profile: Shares outstanding",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Liquidity:** Shares outstanding 7.02 bn, market cap $354.65 bn【S1】."
+      },
+      {
+        "text": "$354.65 bn",
+        "value": 354650000000.0,
+        "unit": "$",
+        "tolerance": 5000000.000000001,
+        "start": 1377,
+        "end": 1387,
+        "status": "verified",
+        "matched": "BAC Company Profile: Market capitalization (USD)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Liquidity:** Shares outstanding 7.02 bn, market cap $354.65 bn【S1】."
+      },
+      {
+        "text": "3.23 %",
+        "value": 3.23,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1411,
+        "end": 1417,
+        "status": "verified",
+        "matched": "BAC Key Financial Metrics: Dividend yield, indicated annual (%)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Dividend:** 3.23 % yield, beta 1.208【S4】 – moderate risk‑adjusted return."
+      },
+      {
+        "text": "1.208",
+        "value": 1.208,
+        "unit": "",
+        "tolerance": 0.000500001,
+        "start": 1430,
+        "end": 1435,
+        "status": "verified",
+        "matched": "BAC Key Financial Metrics: Beta",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Dividend:** 3.23 % yield, beta 1.208【S4】 – moderate risk‑adjusted return."
+      },
+      {
+        "text": "$51.23",
+        "value": 51.23,
+        "unit": "$",
+        "tolerance": 0.0050000010000000004,
+        "start": 1529,
+        "end": 1535,
+        "status": "verified",
+        "matched": "BAC Quote: Current price",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Base:** Current price **$51.23**【S2】."
+      },
+      {
+        "text": "$63.19",
+        "value": 63.19,
+        "unit": "$",
+        "tolerance": 0.0050000010000000004,
+        "start": 1574,
+        "end": 1580,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S11",
+        "snippet_ids": [
+          "S11",
+          "S16"
+        ],
+        "assumption": true,
+        "cited": [
+          "S11"
+        ],
+        "context": "- **Upside:** Target price **$63.19**【S11】 → upside of **23.35 %** (assumption)."
+      },
+      {
+        "text": "23.35 %",
+        "value": 23.35,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1602,
+        "end": 1609,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S11"
+        ],
+        "context": "- **Upside:** Target price **$63.19**【S11】 → upside of **23.35 %** (assumption)."
+      },
+      {
+        "text": "$45.00",
+        "value": 45.0,
+        "unit": "$",
+        "tolerance": 0.0050000010000000004,
+        "start": 1661,
+        "end": 1667,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Downside:** Price falls to **$45.00** (assumption)."
+      },
+      {
+        "text": "23.35 %",
+        "value": 23.35,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 2868,
+        "end": 2875,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "Bank of America’s consensus rating of Buy, coupled with a target‑price upside of **23.35 %** (assumption), positions the stock as a compelling long‑term holding within the banking sector."
+      }
+    ],
+    "citations": {
+      "markers": 12,
+      "dangling": [],
+      "uncited_paragraphs": [],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "BAC Quote",
+        "last_date": "2026-10-16",
+        "frequency": "daily",
+        "age_days": 2,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "BAC Analyst Recommendation Trends",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "BAC Recent News",
+        "last_date": "2026-10-18",
+        "frequency": null,
+        "age_days": null,
+        "max_age_days": null,
+        "status": "n/a"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [
+        {
+          "topic": "macro",
+          "disclosed": true,
+          "unverified_figures": []
+        }
+      ],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16"
+    ],
+    "open_issues": 0,
+    "summary": "17 of 23 figures verified against source data (17 exact, 0 derived); 6 flagged (2 of them appear in a fetched web/news snippet; 6 labelled as assumptions)."
+  },
+  "run_meta": {
+    "run_id": "20261018-140318-f6a23f",
+    "timestamp": "2026-10-18T18:03:18+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}

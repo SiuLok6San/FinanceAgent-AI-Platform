@@ -7,8 +7,10 @@ Shared helpers for the evaluation scripts.
     v3        the working tree     (fact placeholders)
 - extract_code(): checks a commit's files out into eval/.versions/<commit>/
   (gitignored) with `git archive`, so old versions really run their old code
-- question sets: dev (questions.csv, also used while developing) and
-  heldout (questions_heldout.csv, frozen before v3 was built)
+- question sets: dev (questions.csv, also used while developing), heldout
+  (questions_heldout.csv, frozen before v3 was built; H05 and H10 were once
+  used in a manual Planner test) and fresh (questions_fresh.csv, frozen
+  later and never shown to any pipeline during development)
 - table (de)serialization for saving pipeline outputs as JSON
 """
 
@@ -37,7 +39,7 @@ PIPELINES = {
     "v2": (V2_COMMIT, False),
     "v3": (None, False),
 }
-QUESTION_FILES = {"dev": "questions.csv", "heldout": "questions_heldout.csv"}
+QUESTION_FILES = {"dev": "questions.csv", "heldout": "questions_heldout.csv", "fresh": "questions_fresh.csv"}
 
 
 def load_questions(which: str = "dev") -> List[Dict[str, str]]:

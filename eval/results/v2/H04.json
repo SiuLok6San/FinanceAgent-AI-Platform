@@ -1,0 +1,1020 @@
+{
+  "id": "H04",
+  "set": "heldout",
+  "category": "rates",
+  "question": "Where are 30-year mortgage rates relative to a year ago?",
+  "ticker": null,
+  "expected_tags": [
+    "rates"
+  ],
+  "pipeline": "v2",
+  "run_utc": "2026-10-18T17:40:29+00:00",
+  "elapsed_sec": 169.8,
+  "router_tags": [
+    "rates"
+  ],
+  "tags": [
+    "rates"
+  ],
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Current 30‑year fixed‑rate average: **7.40 %** (latest week) [S1]  \n- One‑year‑ago average (same calendar week): **6.27 %** [S1]  \n- Absolute increase: **+1.13 pp** [S1]  \n- Year‑over‑year change: **+18 %** [S1]  \n- Bankrate reports **7.38 %** [S3]; Freddie Mac reports **7.40 %** [S4]  \n\n---\n\n**Core Analysis**\n\n*Macro Context*  \n- Fed policy rate remains high (assumption).  \n- Core CPI data not available (no data fetched).  \n\n*30‑Year Mortgage Rate Trend*  \n- FRED weekly average: **7.40 %** (2026‑10‑15) vs. **6.27 %** (2025‑10‑16) [S1].  \n- Bankrate (Sept 30 2026) reports **7.38 %** [S3].  \n- Freddie Mac (Oct 15 2026) reports **7.40 %** [S4].  \n\n*Credit & Portfolio Implications*  \n- Rising rates increase duration risk for mortgage‑backed securities.  \n- Pre‑payment risk falls, potentially compressing yields on fixed‑rate MBS.  \n- Floating‑rate instruments gain relative attractiveness.  \n\n---\n\n**Scenarios**\n\n- **Base** – 30‑Year Rate: **7.40 %** (current) [S1].  \n  - Impact: Moderate duration exposure; spread compression.  \n  - Key Actions: Maintain current allocation; monitor pre‑payment models.  \n\n- **Upside** (assumption) – 30‑Year Rate: **7.70 %**.  \n  - Impact: Higher duration risk; further yield compression.  \n  - Key Actions: Shorten duration; increase floating‑rate exposure.  \n\n- **Downside** (assumption) – 30‑Year Rate: **7.10 %**.  \n  - Impact: Lower duration risk; potential spread widening.  \n  - Key Actions: Consider adding fixed‑rate MBS; monitor liquidity.  \n\n---\n\n**Key Risks & Monitoring**\n\n- Fed policy shifts – any change could move mortgage rates quickly.  \n- Inflation volatility – persistent inflation may prolong tightening (assumption).  \n- Housing supply/demand – inventory changes can alter rate dynamics (assumption).  \n- Pre‑payment behavior – higher rates reduce pre‑payments, affecting cash‑flow timing.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Duration Management** – shorten duration of mortgage‑backed holdings or shift to floating‑rate securities.  \n- **Spread Capture** – evaluate high‑yield MBS where spreads may widen with rate hikes.  \n- **Liquidity** – monitor liquidity of long‑dated mortgage securities; consider liquidity‑weighted allocation.  \n- **Risk‑Adjusted Returns** – adjust expected returns for reduced pre‑payment risk.  \n\n---\n\n**Conclusion**  \n30‑year fixed‑rate mortgage rates have risen by **1.13 percentage points** (≈18 %) over the past year, from **6.27 %** to **7.40 %** [S1]. This upward trajectory, driven by sustained Fed tightening and persistent inflation (assumption), pressures mortgage‑backed securities and warrants active duration and spread management in fixed‑income portfolios.",
+  "report_template": null,
+  "draft_report_text": "**Executive Summary**  \n- Current 30‑year fixed‑rate average: **7.40 %** (latest week) [S1]  \n- One‑year‑ago average (same calendar week): **6.27 %** [S1]  \n- Absolute increase: **+1.13 pp**  \n- Year‑over‑year change: **+18 %**  \n- Bankrate and Freddie Mac confirm the current level at 7.38 % [S3] and 7.40 % [S4] respectively.  \n\n**Core Analysis**  \n\n*Macro Context*  \n- The Fed’s policy rate has remained at a 5‑year‑plus level, supporting higher mortgage rates (likely).  \n- Core CPI remains above 2 %, keeping monetary tightening probable (likely).  \n- Tight housing inventory sustains demand, supporting rates (likely).  \n\n*30‑Year Mortgage Rate Trend*  \n- Weekly average from FRED: 7.40 % (2026‑10‑15) vs. 6.27 % (2025‑10‑16) [S1].  \n- Bankrate (Sept 30 2026) reports 7.38 % [S3]; Freddie Mac (Oct 15 2026) reports 7.40 % [S4].  \n\n*Credit & Portfolio Implications*  \n- Rising rates increase duration risk for mortgage‑backed securities.  \n- Pre‑payment risk falls, potentially compressing yields on fixed‑rate MBS.  \n- Floating‑rate instruments gain relative attractiveness.  \n\n**Scenarios**  \n\n| Scenario | 30‑Year Rate | Impact on Portfolio | Key Actions |\n|----------|--------------|---------------------|-------------|\n| **Base** | 7.40 % (current) | Moderate duration exposure; spread compression | Maintain current allocation; monitor pre‑payment models |\n| **Upside** | 7.70 % (+0.30 pp) | Higher duration risk; further yield compression | Shorten duration; increase floating‑rate exposure |\n| **Downside** | 7.10 % (‑0.30 pp) | Lower duration risk; potential spread widening | Consider adding fixed‑rate MBS; monitor liquidity |\n\n**Key Risks & Monitoring**  \n- **Fed policy shifts** – any change in the policy rate could move mortgage rates quickly.  \n- **Inflation volatility** – persistent inflation may prolong tightening.  \n- **Housing supply/demand** – inventory changes can alter rate dynamics.  \n- **Pre‑payment behavior** – higher rates reduce pre‑payments, affecting cash‑flow timing.  \n\n**Portfolio / Decision Implications**  \n- **Duration Management** – shorten duration of mortgage‑backed holdings or shift to floating‑rate securities.  \n- **Spread Capture** – evaluate high‑yield MBS where spreads may widen with rate hikes.  \n- **Liquidity** – monitor liquidity of long‑dated mortgage securities; consider liquidity‑weighted allocation.  \n- **Risk‑Adjusted Returns** – adjust expected returns for reduced pre‑payment risk.  \n\n**Conclusion**  \n30‑year fixed‑rate mortgage rates have risen by **1.13 percentage points** (≈18 %) over the past year, from 6.27 % to 7.40 % [S1]. This upward trajectory, driven by sustained Fed tightening and persistent inflation, pressures mortgage‑backed securities and warrants active duration and spread management in fixed‑income portfolios.",
+  "draft_report_template": null,
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"2 %\" in: \"- Core CPI remains above 2 %, keeping monetary tightening probable (likely).\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n2. \"Sept 30 2026\" in: \"- Bankrate (Sept 30 2026) reports 7.38 % [S3]; Freddie Mac (Oct 15 2026) reports 7.40 % [S4].\" — this date is not in the fetched data; use a date from KEY DATA or remove it.\n3. \"7.70 %\" in: \"| **Upside** | 7.70 % (+0.30 pp) | Higher duration risk; further yield compression | Shorten duration; increase floating‑rate exposure |\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n4. \"+0.30 pp\" in: \"| **Upside** | 7.70 % (+0.30 pp) | Higher duration risk; further yield compression | Shorten duration; increase floating‑rate exposure |\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n5. \"7.10 %\" in: \"| **Downside** | 7.10 % (‑0.30 pp) | Lower duration risk; potential spread widening | Consider adding fixed‑rate MBS; monitor liquidity |\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n6. \"0.30 pp\" in: \"| **Downside** | 7.10 % (‑0.30 pp) | Lower duration risk; potential spread widening | Consider adding fixed‑rate MBS; monitor liquidity |\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n7. Add a citation to: \"- Absolute increase: **+1.13 pp**\" — its figures +1.13 pp come from [S1].\n8. Add a citation to: \"- Year‑over‑year change: **+18 %**\" — its figures +18 % come from [S1].\n9. Add a citation to: \"| Scenario | 30‑Year Rate | Impact on Portfolio | Key Actions |\n|----------|--------------|---------------------|-------------|\n| **Base** | 7.40 % (current) | \" — its figures 7.40 % come from [S1].",
+        "open_issues_before": 9,
+        "summary_before": "16 of 24 figures verified against source data (12 exact, 4 derived); 8 flagged (2 of them appear in a fetched web/news snippet). 3 paragraph(s) state figures without a citation.",
+        "accepted": true,
+        "open_issues_after": 1,
+        "summary_after": "16 of 21 figures verified against source data (12 exact, 4 derived); 5 flagged (2 of them appear in a fetched web/news snippet; 2 labelled as assumptions).",
+        "revised_report_text": "**Executive Summary**  \n- Current 30‑year fixed‑rate average: **7.40 %** (latest week) [S1]  \n- One‑year‑ago average (same calendar week): **6.27 %** [S1]  \n- Absolute increase: **+1.13 pp** [S1]  \n- Year‑over‑year change: **+18 %** [S1]  \n- Bankrate reports **7.38 %** [S3]; Freddie Mac reports **7.40 %** [S4]  \n\n---\n\n**Core Analysis**\n\n*Macro Context*  \n- Fed policy rate remains high (assumption).  \n- Core CPI data not available (no data fetched).  \n\n*30‑Year Mortgage Rate Trend*  \n- FRED weekly average: **7.40 %** (2026‑10‑15) vs. **6.27 %** (2025‑10‑16) [S1].  \n- Bankrate (Sept 30 2026) reports **7.38 %** [S3].  \n- Freddie Mac (Oct 15 2026) reports **7.40 %** [S4].  \n\n*Credit & Portfolio Implications*  \n- Rising rates increase duration risk for mortgage‑backed securities.  \n- Pre‑payment risk falls, potentially compressing yields on fixed‑rate MBS.  \n- Floating‑rate instruments gain relative attractiveness.  \n\n---\n\n**Scenarios**\n\n- **Base** – 30‑Year Rate: **7.40 %** (current) [S1].  \n  - Impact: Moderate duration exposure; spread compression.  \n  - Key Actions: Maintain current allocation; monitor pre‑payment models.  \n\n- **Upside** (assumption) – 30‑Year Rate: **7.70 %**.  \n  - Impact: Higher duration risk; further yield compression.  \n  - Key Actions: Shorten duration; increase floating‑rate exposure.  \n\n- **Downside** (assumption) – 30‑Year Rate: **7.10 %**.  \n  - Impact: Lower duration risk; potential spread widening.  \n  - Key Actions: Consider adding fixed‑rate MBS; monitor liquidity.  \n\n---\n\n**Key Risks & Monitoring**\n\n- Fed policy shifts – any change could move mortgage rates quickly.  \n- Inflation volatility – persistent inflation may prolong tightening (assumption).  \n- Housing supply/demand – inventory changes can alter rate dynamics (assumption).  \n- Pre‑payment behavior – higher rates reduce pre‑payments, affecting cash‑flow timing.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Duration Management** – shorten duration of mortgage‑backed holdings or shift to floating‑rate securities.  \n- **Spread Capture** – evaluate high‑yield MBS where spreads may widen with rate hikes.  \n- **Liquidity** – monitor liquidity of long‑dated mortgage securities; consider liquidity‑weighted allocation.  \n- **Risk‑Adjusted Returns** – adjust expected returns for reduced pre‑payment risk.  \n\n---\n\n**Conclusion**  \n30‑year fixed‑rate mortgage rates have risen by **1.13 percentage points** (≈18 %) over the past year, from **6.27 %** to **7.40 %** [S1]. This upward trajectory, driven by sustained Fed tightening and persistent inflation (assumption), pressures mortgage‑backed securities and warrants active duration and spread management in fixed‑income portfolios."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FRED series MORTGAGE30US: 30-Year Fixed Rate Mortgage Average",
+      "url": "https://fred.stlouisfed.org/series/MORTGAGE30US",
+      "source": "FRED",
+      "snippet": "Weekly series in Percent; latest observation 7.4 on 2026-10-15.",
+      "id": "S1"
+    },
+    {
+      "title": "Mortgage rates hold steady as 30-year fixed averages 6.21%",
+      "url": "https://www.investing.com/news/company-news/mortgage-rates-hold-steady-as-30year-fixed-averages-621-93CH-4415735",
+      "source": "web (Tavily)",
+      "snippet": "The figure represents a slight decrease from last week’s average of 6.22%. Mortgage rates have remained within a narrow 10-basis point range over the past two months, indicating a period of relative stability in the housing finance market.  The 15-year fixed-rate mortgage also declined, averaging 5.47% this week compar",
+      "id": "S2"
+    },
+    {
+      "title": "Mortgage rate history: 1972 to 2026",
+      "url": "https://www.bankrate.com/mortgages/historical-mortgage-rates",
+      "source": "web (Tavily)",
+      "snippet": "### Current mortgage rates  As of September 30, 2026, the average 30-year fixed mortgage rate is 7.38%, per Bankrate’s lender survey. Freddie Mac’s Primary Mortgage Market Survey, a separate weekly benchmark based on conforming purchase loans with 20% down and strong credit, put the 30-year fixed average at 7.03% as of",
+      "id": "S3"
+    },
+    {
+      "title": "Mortgage Rates - Freddie Mac",
+      "url": "https://www.freddiemac.com/pmms",
+      "source": "web (Tavily)",
+      "snippet": "### Mortgage Rates Average 7.40%  The average 30-year fixed-rate mortgage remained unchanged this week.     The 30-year fixed-rate mortgageaveraged 7.40% as of October 15, 2026, unchanged from last week. A year ago at this time, the 30-year FRM averaged 6.27%.    The 15-year fixed-rate mortgageaveraged 6.71%, down from",
+      "id": "S4"
+    },
+    {
+      "title": "Refinance demand is 81% higher than it was a year ago, thanks to falling mortgage rates",
+      "url": "https://www.cnbc.com/2025/10/22/refinance-demand-is-81percent-higher-than-it-was-a-year-ago-thanks-to-falling-mortgage-rates.html",
+      "source": "web (Tavily)",
+      "snippet": "As a result, applications to refinance a home loan, which are most sensitive to weekly changes in interest rates, rose 4% for the week and were 81% higher than the same week one year ago, according to the Mortgage Bankers Association's seasonally adjusted index. The rate on the 30-year fixed was 15 basis points higher ",
+      "id": "S5"
+    },
+    {
+      "title": "Current 30-Year Mortgage Rates: Trends, Tips, and FAQs",
+      "url": "https://www.businessinsider.com/personal-finance/30-year-mortgage-rates",
+      "source": "web (Tavily)",
+      "snippet": "Your mortgage rate has a direct impact on how much you'll pay each month for your home. Average rates change from day to day and even hour to hour based on larger economic trends. The rate you pay depends on both those larger economic factors as well as your individual financial circumstances.  In April, 30-year mortga",
+      "id": "S6"
+    },
+    {
+      "title": "Current 30-Year Mortgage Rates: Trends, Tips, and FAQs",
+      "url": "https://www.businessinsider.com/personal-finance/mortgages/30-year-mortgage-rates",
+      "source": "web (Tavily)",
+      "snippet": "Your mortgage rate has a direct impact on how much you'll pay each month for your home. Average rates change from day to day and even hour to hour based on larger economic trends. The rate you pay depends on both those larger economic factors as well as your individual financial circumstances.  In April, 30-year mortga",
+      "id": "S7"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S3",
+    "S4"
+  ],
+  "tables": [
+    {
+      "title": "FRED: 30-Year Fixed Rate Mortgage Average (MORTGAGE30US)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "MORTGAGE30US",
+      "frequency": "weekly",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "rates",
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/MORTGAGE30US",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-08-28",
+          6.56
+        ],
+        [
+          "2025-09-04",
+          6.5
+        ],
+        [
+          "2025-09-11",
+          6.35
+        ],
+        [
+          "2025-09-18",
+          6.26
+        ],
+        [
+          "2025-09-25",
+          6.3
+        ],
+        [
+          "2025-10-02",
+          6.34
+        ],
+        [
+          "2025-10-09",
+          6.3
+        ],
+        [
+          "2025-10-16",
+          6.27
+        ],
+        [
+          "2025-10-23",
+          6.19
+        ],
+        [
+          "2025-10-30",
+          6.17
+        ],
+        [
+          "2025-11-06",
+          6.22
+        ],
+        [
+          "2025-11-13",
+          6.24
+        ],
+        [
+          "2025-11-20",
+          6.26
+        ],
+        [
+          "2025-11-26",
+          6.23
+        ],
+        [
+          "2025-12-04",
+          6.19
+        ],
+        [
+          "2025-12-11",
+          6.22
+        ],
+        [
+          "2025-12-18",
+          6.21
+        ],
+        [
+          "2025-12-24",
+          6.18
+        ],
+        [
+          "2025-12-31",
+          6.15
+        ],
+        [
+          "2026-01-08",
+          6.16
+        ],
+        [
+          "2026-01-15",
+          6.06
+        ],
+        [
+          "2026-01-22",
+          6.09
+        ],
+        [
+          "2026-01-29",
+          6.1
+        ],
+        [
+          "2026-02-05",
+          6.11
+        ],
+        [
+          "2026-02-12",
+          6.09
+        ],
+        [
+          "2026-02-19",
+          6.01
+        ],
+        [
+          "2026-02-26",
+          5.98
+        ],
+        [
+          "2026-03-05",
+          6.0
+        ],
+        [
+          "2026-03-12",
+          6.11
+        ],
+        [
+          "2026-03-19",
+          6.22
+        ],
+        [
+          "2026-03-26",
+          6.38
+        ],
+        [
+          "2026-04-02",
+          6.46
+        ],
+        [
+          "2026-04-09",
+          6.37
+        ],
+        [
+          "2026-04-16",
+          6.3
+        ],
+        [
+          "2026-04-23",
+          6.23
+        ],
+        [
+          "2026-04-30",
+          6.3
+        ],
+        [
+          "2026-05-07",
+          6.37
+        ],
+        [
+          "2026-05-14",
+          6.36
+        ],
+        [
+          "2026-05-21",
+          6.51
+        ],
+        [
+          "2026-05-28",
+          6.53
+        ],
+        [
+          "2026-06-04",
+          6.48
+        ],
+        [
+          "2026-06-11",
+          6.52
+        ],
+        [
+          "2026-06-18",
+          6.47
+        ],
+        [
+          "2026-06-25",
+          6.49
+        ],
+        [
+          "2026-07-02",
+          6.43
+        ],
+        [
+          "2026-07-09",
+          6.49
+        ],
+        [
+          "2026-07-16",
+          6.55
+        ],
+        [
+          "2026-07-23",
+          6.58
+        ],
+        [
+          "2026-07-30",
+          6.66
+        ],
+        [
+          "2026-08-06",
+          6.69
+        ],
+        [
+          "2026-08-13",
+          6.67
+        ],
+        [
+          "2026-08-20",
+          6.65
+        ],
+        [
+          "2026-08-27",
+          6.66
+        ],
+        [
+          "2026-09-03",
+          6.71
+        ],
+        [
+          "2026-09-10",
+          6.76
+        ],
+        [
+          "2026-09-17",
+          6.95
+        ],
+        [
+          "2026-09-24",
+          7.03
+        ],
+        [
+          "2026-10-01",
+          7.28
+        ],
+        [
+          "2026-10-08",
+          7.4
+        ],
+        [
+          "2026-10-15",
+          7.4
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "30-Year Fixed Rate Mortgage Average (MORTGAGE30US)",
+      "type": "line",
+      "x": [
+        "2025-08-28",
+        "2025-09-04",
+        "2025-09-11",
+        "2025-09-18",
+        "2025-09-25",
+        "2025-10-02",
+        "2025-10-09",
+        "2025-10-16",
+        "2025-10-23",
+        "2025-10-30",
+        "2025-11-06",
+        "2025-11-13",
+        "2025-11-20",
+        "2025-11-26",
+        "2025-12-04",
+        "2025-12-11",
+        "2025-12-18",
+        "2025-12-24",
+        "2025-12-31",
+        "2026-01-08",
+        "2026-01-15",
+        "2026-01-22",
+        "2026-01-29",
+        "2026-02-05",
+        "2026-02-12",
+        "2026-02-19",
+        "2026-02-26",
+        "2026-03-05",
+        "2026-03-12",
+        "2026-03-19",
+        "2026-03-26",
+        "2026-04-02",
+        "2026-04-09",
+        "2026-04-16",
+        "2026-04-23",
+        "2026-04-30",
+        "2026-05-07",
+        "2026-05-14",
+        "2026-05-21",
+        "2026-05-28",
+        "2026-06-04",
+        "2026-06-11",
+        "2026-06-18",
+        "2026-06-25",
+        "2026-07-02",
+        "2026-07-09",
+        "2026-07-16",
+        "2026-07-23",
+        "2026-07-30",
+        "2026-08-06",
+        "2026-08-13",
+        "2026-08-20",
+        "2026-08-27",
+        "2026-09-03",
+        "2026-09-10",
+        "2026-09-17",
+        "2026-09-24",
+        "2026-10-01",
+        "2026-10-08",
+        "2026-10-15"
+      ],
+      "y": [
+        6.56,
+        6.5,
+        6.35,
+        6.26,
+        6.3,
+        6.34,
+        6.3,
+        6.27,
+        6.19,
+        6.17,
+        6.22,
+        6.24,
+        6.26,
+        6.23,
+        6.19,
+        6.22,
+        6.21,
+        6.18,
+        6.15,
+        6.16,
+        6.06,
+        6.09,
+        6.1,
+        6.11,
+        6.09,
+        6.01,
+        5.98,
+        6.0,
+        6.11,
+        6.22,
+        6.38,
+        6.46,
+        6.37,
+        6.3,
+        6.23,
+        6.3,
+        6.37,
+        6.36,
+        6.51,
+        6.53,
+        6.48,
+        6.52,
+        6.47,
+        6.49,
+        6.43,
+        6.49,
+        6.55,
+        6.58,
+        6.66,
+        6.69,
+        6.67,
+        6.65,
+        6.66,
+        6.71,
+        6.76,
+        6.95,
+        7.03,
+        7.28,
+        7.4,
+        7.4
+      ],
+      "y_label": "Percent"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "MORTGAGE30US",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": null,
+  "validation": {
+    "counts": {
+      "figures": 21,
+      "verified": 12,
+      "derived": 4,
+      "unverified": 5
+    },
+    "figures": [
+      {
+        "text": "7.40 %",
+        "value": 7.4,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 64,
+        "end": 70,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Current 30‑year fixed‑rate average: **7.40 %** (latest week) [S1]"
+      },
+      {
+        "text": "6.27 %",
+        "value": 6.27,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 141,
+        "end": 147,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2025-10-16",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- One‑year‑ago average (same calendar week): **6.27 %** [S1]"
+      },
+      {
+        "text": "+1.13 pp",
+        "value": 1.13,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 180,
+        "end": 188,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2025-10-16 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Absolute increase: **+1.13 pp** [S1]"
+      },
+      {
+        "text": "+18 %",
+        "value": 18.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 225,
+        "end": 230,
+        "status": "derived",
+        "matched": "MORTGAGE30US % change 2025-10-16 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Year‑over‑year change: **+18 %** [S1]"
+      },
+      {
+        "text": "7.38 %",
+        "value": 7.38,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 261,
+        "end": 267,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S1",
+        "snippet_ids": [
+          "S1",
+          "S3"
+        ],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- Bankrate reports **7.38 %** [S3]; Freddie Mac reports **7.40 %** [S4]"
+      },
+      {
+        "text": "7.40 %",
+        "value": 7.4,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 298,
+        "end": 304,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- Bankrate reports **7.38 %** [S3]; Freddie Mac reports **7.40 %** [S4]"
+      },
+      {
+        "text": "7.40 %",
+        "value": 7.4,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 513,
+        "end": 519,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- FRED weekly average: **7.40 %** (2026‑10‑15) vs."
+      },
+      {
+        "text": "2026‑10‑15",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 523,
+        "end": 533,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- FRED weekly average: **7.40 %** (2026‑10‑15) vs."
+      },
+      {
+        "text": "6.27 %",
+        "value": 6.27,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 541,
+        "end": 547,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2025-10-16",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "**6.27 %** (2025‑10‑16) [S1]."
+      },
+      {
+        "text": "2025‑10‑16",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 551,
+        "end": 561,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "**6.27 %** (2025‑10‑16) [S1]."
+      },
+      {
+        "text": "Sept 30 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 583,
+        "end": 595,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- Bankrate (Sept 30 2026) reports **7.38 %** [S3]."
+      },
+      {
+        "text": "7.38 %",
+        "value": 7.38,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 607,
+        "end": 613,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S1",
+        "snippet_ids": [
+          "S1",
+          "S3"
+        ],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- Bankrate (Sept 30 2026) reports **7.38 %** [S3]."
+      },
+      {
+        "text": "Oct 15 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 639,
+        "end": 650,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- Freddie Mac (Oct 15 2026) reports **7.40 %** [S4]."
+      },
+      {
+        "text": "7.40 %",
+        "value": 7.4,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 662,
+        "end": 668,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- Freddie Mac (Oct 15 2026) reports **7.40 %** [S4]."
+      },
+      {
+        "text": "7.40 %",
+        "value": 7.4,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 976,
+        "end": 982,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Base** – 30‑Year Rate: **7.40 %** (current) [S1]."
+      },
+      {
+        "text": "7.70 %",
+        "value": 7.7,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1186,
+        "end": 1192,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Upside** (assumption) – 30‑Year Rate: **7.70 %**."
+      },
+      {
+        "text": "7.10 %",
+        "value": 7.1,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1378,
+        "end": 1384,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Downside** (assumption) – 30‑Year Rate: **7.10 %**."
+      },
+      {
+        "text": "1.13 percentage points",
+        "value": 1.13,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 2404,
+        "end": 2426,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2025-10-16 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "30‑year fixed‑rate mortgage rates have risen by **1.13 percentage points** (≈18 %) over the past year, from **6.27 %** to **7.40 %** [S1]."
+      },
+      {
+        "text": "18 %",
+        "value": 18.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2431,
+        "end": 2435,
+        "status": "derived",
+        "matched": "MORTGAGE30US % change 2025-10-16 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "30‑year fixed‑rate mortgage rates have risen by **1.13 percentage points** (≈18 %) over the past year, from **6.27 %** to **7.40 %** [S1]."
+      },
+      {
+        "text": "6.27 %",
+        "value": 6.27,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 2464,
+        "end": 2470,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2025-10-16",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "30‑year fixed‑rate mortgage rates have risen by **1.13 percentage points** (≈18 %) over the past year, from **6.27 %** to **7.40 %** [S1]."
+      },
+      {
+        "text": "7.40 %",
+        "value": 7.4,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 2478,
+        "end": 2484,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "30‑year fixed‑rate mortgage rates have risen by **1.13 percentage points** (≈18 %) over the past year, from **6.27 %** to **7.40 %** [S1]."
+      }
+    ],
+    "citations": {
+      "markers": 11,
+      "dangling": [],
+      "uncited_paragraphs": [],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: 30-Year Fixed Rate Mortgage Average (MORTGAGE30US)",
+        "last_date": "2026-10-15",
+        "frequency": "weekly",
+        "age_days": 3,
+        "max_age_days": 14,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7"
+    ],
+    "open_issues": 1,
+    "summary": "16 of 21 figures verified against source data (12 exact, 4 derived); 5 flagged (2 of them appear in a fetched web/news snippet; 2 labelled as assumptions)."
+  },
+  "run_meta": {
+    "run_id": "20261018-133739-419b36",
+    "timestamp": "2026-10-18T17:37:39+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}

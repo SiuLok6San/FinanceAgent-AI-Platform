@@ -1,5 +1,25 @@
 # Changelog
 
+## Oct 2026 — v3: grounded by construction (`v3-grounded` branch)
+
+Changed
+- The LLM agents no longer type numbers. Every fetched or derived value gets a fact ID (`HY_OAS.latest`,
+  `HY_OAS.chg_1m`, `HY_OAS.pctile_5y`, `HY_OAS_minus_IG_OAS`, `JPM.pe_ttm`, ...); the Analyst, Reasoner and
+  Writer write `{{ID}}`, `{{S#: quoted number}}` or `{{assume: ...}}`, and `render.py` inserts the exact value
+  and its citation. The free-text Writer and the KEY DATA prompt block are gone.
+- The Planner returns JSON (topics + FRED series from a catalog), checked in code, with the rule-based router as
+  fallback.
+- 5–10 years of history per series, so reports can say where today's value sits in its range.
+
+Added
+- Direction check: a change described with the wrong word ("narrowed" next to a widening) is flagged and sent
+  back to the Writer. It also runs on free-text reports, so all versions can be compared.
+- Quoted web numbers must appear in the text of the source they name.
+- UI: hover any number to see the fact it came from; colours mark data, quotes, assumptions and typed numbers;
+  the Planner's choices and the full fact table are shown.
+- Evaluation of original, v2 and v3 on 20 development and 10 held-out questions (frozen before v3 was built).
+- Tags `v1.0-course` and `v2.0-validation` mark the earlier versions.
+
 ## Oct 2026 — public demo
 
 - Public site on Streamlit Community Cloud: <https://financeagent-ai-platform.streamlit.app>. It opens on the 20

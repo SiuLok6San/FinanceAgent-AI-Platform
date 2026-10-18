@@ -88,9 +88,9 @@ textarea, input {
 # -------------------------------------------------------
 st.markdown('<div class="b17-title">B17 Finance Multi-Agent</div>', unsafe_allow_html=True)
 st.markdown(
-    '<div class="b17-caption">Institutional-grade macro, credit, and portfolio intelligence — '
-    'multi-agent LLM pipeline (Ollama) + live FRED, Finnhub and Tavily data, '
-    'with deterministic validation of every report.</div>',
+    '<div class="b17-caption">Institutional-grade macro, credit, and portfolio research — '
+    'the LLM agents write the analysis, code inserts every number from live FRED, Finnhub and Tavily data '
+    'with its source, and a deterministic validator checks the result.</div>',
     unsafe_allow_html=True,
 )
 st.markdown('<div class="b17-divider"></div>', unsafe_allow_html=True)

@@ -58,7 +58,7 @@ def load_pipeline(name: str):
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--pipeline", choices=sorted(PIPELINES), required=True)
-    ap.add_argument("--set", choices=["dev", "heldout", "all"], default="dev")
+    ap.add_argument("--set", choices=["dev", "heldout", "fresh", "all"], default="dev")
     ap.add_argument("--ids", help="comma-separated question ids (default: the whole set)")
     ap.add_argument("--force", action="store_true", help="re-run questions that already have results")
     ap.add_argument("--pause", type=float, default=2.0, help="seconds between questions (API rate limits)")

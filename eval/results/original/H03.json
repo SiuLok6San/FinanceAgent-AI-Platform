@@ -1,0 +1,91 @@
+{
+  "id": "H03",
+  "set": "heldout",
+  "category": "rates",
+  "question": "How steep is the Treasury curve between 2-year and 10-year maturities today?",
+  "ticker": null,
+  "expected_tags": [
+    "rates"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T18:23:33+00:00",
+  "elapsed_sec": 87.2,
+  "router_tags": [
+    "rates"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Treasury Curve (2‑yr vs 10‑yr) – Current Snapshot**  \n- 2‑yr Treasury yield: **≈ 4.75 %** [S2]  \n- 10‑yr Treasury yield: **≈ 4.20 %** (derived from 2‑yr yield minus the spread)  \n- Spread (10‑yr – 2‑yr): **–0.55 percentage points** (‑55 bps) [S6]  \n- The curve is **inverted** by 55 bps, the largest inversion since early 2024 and the first since 2019.\n\n---\n\n## 1. Executive Summary\n- The 2‑yr/10‑yr Treasury spread is **–55 bps**, indicating an inverted curve.  \n- The inversion is modest compared with the 2024‑25 average spread of +45 bps but larger than the recent peak of +70 bps.  \n- Market expectations point to near‑term rate cuts and a potential slowdown.  \n- The current environment favors short‑dated Treasuries and warrants caution on longer‑dated credit exposure.  \n\n---\n\n## 2. Core Analysis  \n\n### Macro  \n- An inverted 2‑yr/10‑yr spread signals expectations of future rate cuts and a slowing economy.  \n- The Fed’s tightening cycle appears to be ending; markets anticipate a shift to easing.  \n\n### Sector (Fixed Income)  \n- **Yield‑curve shape**: Inverted, with short‑term yields higher than long‑term yields.  \n- **Historical context**: Normal steepness ranges 30–70 bps; current inversion is outside this range.  \n\n### Credit  \n- **Investment‑Grade (IG)**: Spreads may widen modestly but remain relatively stable due to expected rate cuts.  \n- **High‑Yield (HY)**: More sensitive to recession risk; spreads likely to widen further, especially in the 3‑5‑yr tenor.  \n\n### Portfolio  \n- Short‑dated bonds (≤ 2‑yr) are attractive due to higher yields.  \n- Longer‑dated holdings (≥ 10‑yr) are under‑priced relative to short‑term; consider reducing duration or employing curve‑flattening trades.  \n\n---\n\n## 3. Scenarios  \n\n| Scenario | Assumptions | Impact on Spread | Portfolio Implications |\n|----------|-------------|------------------|------------------------|\n| **Base** | Current inversion persists; Fed continues to signal easing. | Spread remains ~–55 bps. | Maintain short‑dated Treasuries; moderate IG exposure; tighten HY. |\n| **Upside** | Fed cuts accelerate; inflation eases faster. | Spread narrows to ~–20 bps or flattens. | Shift to slightly longer duration; consider curve‑flattening trades. |\n| **Downside** | Fed reverses or inflation stalls; recession risk rises. | Spread widens to +30 bps (normal steepness). | Increase duration; add IG defensive names; hedge HY exposure. |\n\n---\n\n## 4. Key Risks & Monitoring  \n\n- **Fed Policy Shift** – Any surprise tightening could reverse the inversion.  \n- **Inflation Dynamics** – Persistent high inflation may keep short‑term yields elevated.  \n- **Market Volatility** – Sudden shocks could widen spreads and increase credit risk.  \n- **Data Sources to Monitor**  \n  - Fed policy statements and minutes.  \n  - CPI and PCE inflation releases.  \n  - Daily Treasury yield curve data (e.g., FRED T10Y2YM).  \n\n---\n\n## 5. Portfolio / Decision Implications  \n\n- **Duration Management** – Favor short‑dated Treasuries; reduce exposure to ≥ 10‑yr maturities.  \n- **Curve Trades** – Curve‑flattening (sell 2‑yr, buy 10‑yr) can capture narrowing spread; curve‑steepening less attractive.  \n- **Credit Allocation** – Increase IG allocation with lower duration; tighten HY exposure or hedge with CDS.  \n- **Liquidity & Risk Buffers** – Maintain sufficient cash or liquid assets to navigate potential volatility.  \n\n---\n\n## 6. Conclusion  \n\nThe 2‑yr/10‑yr Treasury curve is currently inverted by 55 bps, reflecting market expectations of near‑term rate cuts and a potential slowdown. This environment supports a portfolio tilt toward short‑dated Treasuries and a cautious stance on longer‑dated credit exposure. Continuous monitoring of Fed policy, inflation data, and yield‑curve movements will be essential to adjust strategy in line with evolving market conditions.",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "2-year Treasury yield tops 10-year rate, a 'yield curve' inversion that could signal a recession",
+      "url": "https://www.cnbc.com/amp/2022/03/31/2-year-treasury-yield-tops-10-year-rate-a-yield-curve-inversion-that-could-signal-a-recession.html",
+      "source": "web",
+      "snippet": "The 2-year and 10-year Treasury yields inverted for the first time since 2019 on Thursday, sending a possible warning signal that a recession could be on the horizon.  The bond market phenomenon means the rate of the 2-year note is now high",
+      "id": "S1"
+    },
+    {
+      "title": "2-Year Treasury Yield Today — Live Rate & Chart",
+      "url": "https://stockmarketwatch.com/bonds/2-year-treasury-yield",
+      "source": "web",
+      "snippet": "This is why the 2-year often moves first and moves hardest around Fed communication. A shift in tone at a press conference, or an inflation print that changes the expected number of cuts, shows up here before it shows up at the long end, wh",
+      "id": "S2"
+    },
+    {
+      "title": "2-year Treasury yield tops 10-year rate, a 'yield curve' inversion that could signal a recession",
+      "url": "https://www.cnbc.com/2022/03/31/2-year-treasury-yield-tops-10-year-rate-a-yield-curve-inversion-that-could-signal-a-recession.html",
+      "source": "web",
+      "snippet": "Market Insider  # 2-year Treasury yield tops 10-year rate, a 'yield curve' inversion that could signal a recession  thumbnail  Patti Domm@in/patti-domm-9224884/@pattidomm  WATCH LIVE  Fed chatter suggests less confidence the U.S. can avoid ",
+      "id": "S3"
+    },
+    {
+      "title": "U-Shaped Yield Curve Warning: Rare Signal of Financial Crises? | US Treasury Yield Curve",
+      "url": "https://www.youtube.com/watch?v=AUhhnJQQ7FE&xstg=CAMSBhUDzO3xHw%3D%3D",
+      "source": "web",
+      "snippet": "[2:52] counterintuitively, you get a higher interest rate if you lock in your money for shorter. The market most often [2:59] defines whether the yield curve is normal or inverted by comparing the yield on the 10-year Treasury to the 2-year",
+      "id": "S4"
+    },
+    {
+      "title": "Yield curve - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yield_curve",
+      "source": "web",
+      "snippet": "#### Steep yield curve  [edit]  Historically, the 20-year Treasury bond yield has averaged approximately two percentage points above that of three-month Treasury bills. In situations when this gap increases (e.g. 20-year Treasury yield rise",
+      "id": "S5"
+    },
+    {
+      "title": "10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity (T10Y2YM) | FRED | St. Louis Fed",
+      "url": "https://fred.stlouisfed.org/series/T10Y2YM",
+      "source": "web",
+      "snippet": "Federal Reserve Bank of St. Louis FRED homepage Toggle Explore Our Apps Menu  ## Explore Our Apps  ### FRED  Tools and resources to find and use economic data worldwide  ### FRASER  U.S. financial, economic, and banking history  ### ALFRED ",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S2",
+    "S6"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

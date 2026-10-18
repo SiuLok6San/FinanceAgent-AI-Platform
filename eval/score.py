@@ -40,10 +40,11 @@ from router import route_question as route_current  # noqa: E402
 from settings import load_config  # noqa: E402
 from validators import validate_report  # noqa: E402
 
-SETS = ["heldout", "dev"]
-SET_TITLES = {"heldout": "Held-out questions (10, frozen before v3 was built)",
+SETS = ["fresh", "heldout", "dev"]
+SET_TITLES = {"fresh": "Fresh held-out questions (10, never used during development)",
+              "heldout": "Held-out questions (10, frozen before v3 was built; H05, H10 once used in a Planner smoke test)",
               "dev": "Development questions (20, also used while building v2 and v3)"}
-SET_SHORT = {"heldout": "Held-out", "dev": "Dev"}
+SET_SHORT = {"fresh": "Fresh", "heldout": "Held-out", "dev": "Dev"}
 # report columns: v3 is shown twice, first draft and final (after the feedback loop)
 COLUMNS = [("original", "report"), ("v2", "report"), ("v3", "draft"), ("v3", "report")]
 COLUMN_LABELS = {("original", "report"): "Original (Dec 2025)", ("v2", "report"): "v2 (validation + feedback)",
@@ -139,7 +140,7 @@ def _run_date(rec: Dict[str, Any]) -> date:
 
 
 def record_set(rec: Dict[str, Any]) -> str:
-    return rec.get("set") or ("heldout" if rec["id"].startswith("H") else "dev")
+    return rec.get("set") or {"H": "heldout", "F": "fresh"}.get(rec["id"][0], "dev")
 
 
 def validate_record(rec: Dict[str, Any], pipeline: str, which: str = "report") -> Optional[Dict[str, Any]]:
@@ -406,7 +407,7 @@ def write_results_md(routing, scores, infos, records, determinism) -> str:
         "the change it matches. For free text the match is by value, so some flags can be coincidences.",
         "- In v3, a number typed by the model instead of a placeholder counts as an open issue even when it is right, "
         "so open-issue totals are not comparable across versions and are left out of the comparison tables.",
-        "- 10 held-out questions are a small sample; live data and model output change from day to day.",
+        "- 10 questions per held-out set are a small sample; live data and model output change from day to day.",
     ]
     text = "\n".join(lines) + "\n"
     (EVAL_DIR / "RESULTS.md").write_text(text)
@@ -417,7 +418,7 @@ def main() -> None:
     questions = load_questions("all")
     records, scores, infos = {}, {}, {}
     for p in PIPELINES:
-        files = sorted((RESULTS_DIR / p).glob("[QH]*.json"))
+        files = sorted((RESULTS_DIR / p).glob("[QHF][0-9]*.json"))
         if files:
             records[p] = [read_json(f) for f in files]
             scores[p] = score_pipeline(p, records[p])

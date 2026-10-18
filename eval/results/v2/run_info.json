@@ -173,6 +173,51 @@
         "Q07"
       ],
       "finished_utc": "2026-10-18T15:21:15+00:00"
+    },
+    {
+      "code": "git faf19bc (v2)",
+      "started_utc": "2026-10-18T16:48:14+00:00",
+      "llm": {
+        "model": "gpt-oss:20b",
+        "api_base": "https://ollama.com",
+        "provider": "ollama-api",
+        "seed": 42,
+        "num_ctx": 16384,
+        "timeout_sec": 180.0
+      },
+      "python": "3.12.15",
+      "ids": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H06",
+        "H07",
+        "H08",
+        "H09",
+        "H10"
+      ],
+      "finished_utc": "2026-10-18T18:18:25+00:00"
+    },
+    {
+      "code": "git faf19bc (v2)",
+      "started_utc": "2026-10-18T21:40:50+00:00",
+      "llm": {
+        "model": "gpt-oss:20b",
+        "api_base": "https://ollama.com",
+        "provider": "ollama-api",
+        "seed": 42,
+        "num_ctx": 16384,
+        "timeout_sec": 180.0
+      },
+      "python": "3.12.15",
+      "ids": [
+        "H01",
+        "H05",
+        "H10"
+      ],
+      "finished_utc": "2026-10-18T21:48:14+00:00"
     }
   ]
 }

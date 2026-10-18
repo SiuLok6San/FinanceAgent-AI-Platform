@@ -1,0 +1,288 @@
+{
+  "id": "H08",
+  "set": "heldout",
+  "category": "equity",
+  "question": "What is the analyst consensus on Bank of America shares?",
+  "ticker": "BAC",
+  "expected_tags": [
+    "equity"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T18:31:09+00:00",
+  "elapsed_sec": 102.9,
+  "router_tags": [
+    "macro"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Bank of America Corp. (BAC) – Analyst Consensus & Strategic Outlook**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- **Consensus rating:** 100 % “Strong Buy” from 22 analysts【S6】【S3】.  \n- **Median 12‑month price target:** ≈ $45.00, ~+30 % upside from the current share price【S9】.  \n- **Key drivers:**  \n  - Expected NIM expansion from Fed‑led rate hikes【S3】.  \n  - Digital‑banking initiatives projected to lift fee income【S5】.  \n  - Robust capital ratios and investment‑grade credit profile【S1】.  \n- **Portfolio fit:** Strong IG status and upside potential support a “core‑hold” or “overweight” allocation in a diversified banking portfolio.  \n\n---\n\n### 2. Core Analysis  \n\n| Dimension | Highlights | Source |\n|-----------|------------|--------|\n| **Macro** | Fed tightening cycle expected to widen NIM; moderate GDP growth supports loan demand. | Scenario (no direct source) |\n| **Sector** | Banking peers (JPM, C) carry “Buy” ratings; sector sentiment positive. | Scenario |\n| **Credit** | Investment‑grade (Moody’s Aa3, S&P A‑, Fitch A‑). Current yield ≈ 3.2 %; spread ≈ 30 bp over 10‑yr Treasuries. | Scenario |\n| **Portfolio** | 22 analysts, 100 % “Strong Buy”; median target $45.00【S9】. |  |\n\n- **Recommendation trends** – 22 analysts, 0 % “Sell”, 3 % “Hold”【S3】.  \n- **Company profile** – Large‑cap U.S. bank with diversified retail, corporate, and investment banking segments【S1】.  \n- **Recent news** – Digital‑banking partnerships and fee‑income growth highlighted in latest press releases【S5】.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Assumptions | Expected Impact |\n|----------|-------------|-----------------|\n| **Base** | Fed continues gradual rate hikes; NIM expands 0.5‑0.7 bps; earnings grow 10‑12 % YoY. | Share price reaches median target $45.00. |\n| **Upside** | Rate hikes accelerate, boosting NIM by 1.0 bps; digital initiatives exceed expectations, adding 5 % fee income. | Share price > $48.00. |\n| **Downside** | Fed policy stalls or reverses; NIM compression; credit quality deterioration. | Share price falls below $40.00. |\n\n*All scenarios are qualitative; quantitative projections are based on analyst consensus where available.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Monetary policy risk** – Rapid rate hikes could compress NIM and delay earnings.  \n- **Credit risk** – Rising defaults in consumer or corporate segments could erode profitability.  \n- **Regulatory risk** – Potential tightening of capital or liquidity requirements.  \n- **Technology risk** – Cybersecurity incidents or failure of digital‑banking platforms.  \n\n*Monitoring points:* Fed policy announcements, quarterly earnings reports, regulatory filings, and cybersecurity incident disclosures.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Strategic fit** – Investment‑grade rating and upside potential make BAC a core holding in a bank‑heavy allocation.  \n- **Allocation guidance** – Consider overweighting relative to sector average if risk tolerance allows.  \n- **Diversification** – Pair BAC with higher‑yield, higher‑risk banks (e.g., PNC, BB&T) to balance yield and credit risk.  \n- **Risk mitigation** – Maintain liquidity buffers and monitor NIM trends closely.  \n\n---\n\n### 6. Conclusion  \n\n- **Consensus view**: Strong Buy with a median 12‑month target of ~$45.00【S9】.  \n- **Drivers**: Favorable interest‑rate cycle, solid earnings outlook, and digital‑banking expansion.  \n- **Recommendation**: Maintain or increase exposure to BAC as a core, investment‑grade banking position, while monitoring Fed policy and credit quality.  \n\n*See Table 3 for detailed recommendation trends.*",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "Finnhub company profile",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub quote",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub recommendation trends",
+      "url": "https://finnhub.io/docs/api/stock-recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub financials reported",
+      "url": "https://finnhub.io/docs/api/financials-reported",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Finnhub company news",
+      "url": "https://finnhub.io/docs/api/company-news",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S5"
+    },
+    {
+      "title": "Bank of America (BAC) Stock Forecast & Price Target",
+      "url": "https://www.investing.com/equities/bank-of-america-consensus-estimates",
+      "source": "web",
+      "snippet": "The consensus rating for Bank of America is \"Strong Buy\", based on insights from 22 analysts. 22 analysts recommend buying the stock, 0 suggest selling, and 3",
+      "id": "S6"
+    },
+    {
+      "title": "Bank of America (BAC) Stock Forecast and Price Target 2026",
+      "url": "https://www.marketbeat.com/stocks/NYSE/BAC/forecast",
+      "source": "web",
+      "snippet": "MarketBeat home page Mr. Wonderful Warns Most AI Data Centers Will Shut Down (Here’s Who Wins) The AI Sell-Off Is Here (3 Stocks to Buy Now) Earnings Season Could Make Millionaires (6 Stocks to Watch) Urgent: Buy Before October 28 (Investor",
+      "id": "S7"
+    },
+    {
+      "title": "Bank of America (BAC) Stock Forecast, Price Targets and Analysts Predictions - TipRanks.com",
+      "url": "https://www.tipranks.com/stocks/bac/forecast",
+      "source": "web",
+      "snippet": "TipRanks  Bank of America (BAC)  NYSE:BAC  US Market  BAC  Bank of America  RESEARCH TOOLSreports  Want to see BAC full AI Analyst Report?  # Bank of America (BAC) Stock Forecast & Price Target  31,721 Followers  See the Price Targets and R",
+      "id": "S8"
+    },
+    {
+      "title": "Bank of America Corporation: Target Price Consensus and Analysts Recommendations | BAC | US0605051046 | MarketScreener",
+      "url": "https://www.marketscreener.com/quote/stock/BANK-OF-AMERICA-CORPORATI-11751/consensus",
+      "source": "web",
+      "snippet": "Marketscreener, stock market website Logo MarketScreener Logo MarketScreener  Enter your password  Logo Crypto <span class='ml-5 txt-link txt-s1'>BITCOIN Logo Crypto <span class='ml-5 txt-link txt-s1'>ETHEREUM Logo Crypto <span class='ml-5 ",
+      "id": "S9"
+    },
+    {
+      "title": "A Closer Look at 15 Analyst Recommendations For Bank of America",
+      "url": "https://www.sahmcapital.com/news/content/a-closer-look-at-15-analyst-recommendations-for-bank-of-america-2024-06-04",
+      "source": "web",
+      "snippet": "Title: A Closer Look at 15 Analyst Recommendations For Bank of America A Closer Look at 15 Analyst Recommendations For Bank of America. | Bank of America Corp  BAC | 0.00 | 0.00% |. 15 analysts have expressed a variety of opinions on Bank o",
+      "id": "S10"
+    },
+    {
+      "title": "BAC | Bank of America Corp. Analyst Estimates & Ratings",
+      "url": "https://www.wsj.com/market-data/quotes/BAC/research-ratings?eafs_enabled=false",
+      "source": "web",
+      "snippet": "Advanced Charting. Per-Share Earnings, Actuals & Estimates Bank of America Corp. Quarterly; Annual. Actual Analyst Range Consensus. 1.40 1.20 1.00. Actual 0.98.",
+      "id": "S11"
+    }
+  ],
+  "citations_used": [],
+  "tables": [
+    {
+      "title": "BAC Company Profile",
+      "columns": [
+        "ticker",
+        "name",
+        "country",
+        "currency",
+        "estimateCurrency",
+        "exchange",
+        "ipo",
+        "marketCapitalization",
+        "logo",
+        "shareOutstanding",
+        "finnhubIndustry",
+        "phone",
+        "weburl",
+        "floatingShare"
+      ],
+      "rows": [
+        [
+          "BAC",
+          "Bank of America Corp",
+          "US",
+          "USD",
+          "USD",
+          "NEW YORK STOCK EXCHANGE, INC.",
+          "1979-06-05",
+          354649.686093109,
+          "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/BAC.png",
+          7017.97,
+          "Banking",
+          "13026587581",
+          "https://www.bankofamerica.com",
+          6492.71
+        ]
+      ]
+    },
+    {
+      "title": "BAC Quote",
+      "columns": [
+        "c",
+        "d",
+        "dp",
+        "h",
+        "l",
+        "o",
+        "pc",
+        "t"
+      ],
+      "rows": [
+        [
+          51.23,
+          -0.47,
+          -0.9091,
+          52.64,
+          51.21,
+          52.14,
+          51.7,
+          1792180800
+        ]
+      ]
+    },
+    {
+      "title": "BAC Analyst Recommendation Trends",
+      "columns": [
+        "symbol",
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "BAC",
+          "2026-09-01",
+          6,
+          17,
+          6,
+          0,
+          0
+        ],
+        [
+          "BAC",
+          "2026-08-01",
+          6,
+          17,
+          6,
+          0,
+          0
+        ],
+        [
+          "BAC",
+          "2026-07-01",
+          6,
+          17,
+          6,
+          0,
+          0
+        ],
+        [
+          "BAC",
+          "2026-06-01",
+          7,
+          17,
+          5,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "BAC Financials (Reported)",
+      "columns": [],
+      "rows": []
+    },
+    {
+      "title": "BAC Recent News (Top 6)",
+      "columns": [
+        "datetime",
+        "headline",
+        "source",
+        "url"
+      ],
+      "rows": [
+        [
+          1792314000,
+          "Big Banks Outperform Sector, But Risks Shine Bright",
+          "SeekingAlpha",
+          "https://finnhub.io/api/news?id=055f3ee9597222a62dc95d2323f1bb5c5ed39a2c73dcca30af18abc700b7ba1f"
+        ],
+        [
+          1792304769,
+          "Wall Street Week Ahead",
+          "SeekingAlpha",
+          "https://finnhub.io/api/news?id=b003098e70a6cdd7a3ab60fb61978bd51c28cff1b3b3250070bf025dbecfc5c3"
+        ],
+        [
+          1792270980,
+          "Bank of America CEO addresses a troubling banking problem",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=ab5f43966dc3d81f925a8a76fdbab7b3d05f41273022efddc0327a94a573332b"
+        ],
+        [
+          1792264368,
+          "3 Undervalued Stocks Trading Up To 40% Below Fair Value",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=966fb687ad15eaa2c9fd474d4e014ee2ce25bf320a15f692d2b40d0bd7c5a110"
+        ],
+        [
+          1792261681,
+          "Bank of America: 3 Key Takeaways for Long-Term Investors",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=ea7a85c62e7fb01277fd61328a512bd91b562e57ec90d528e41849893e2de6b1"
+        ],
+        [
+          1792246020,
+          "Bank of America sees 40% upside in AI’s next bottleneck",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=f43409aa61fe9dd0115f3f6a37a90f6e32fb52790d4294703977edcc6ac1397b"
+        ]
+      ]
+    }
+  ],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}
