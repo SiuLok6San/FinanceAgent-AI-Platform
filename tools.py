@@ -2,174 +2,125 @@
 """
 tools.py
 --------
-Lowest-level external data utilities for B17.
+Lowest-level external data clients for B17 (FRED, Finnhub, Tavily).
 
-Guarantees:
-- NEVER raises errors to upper layers.
-- If API key missing or network fails → return None / [] safely.
-- Standard return format for web sources:
-    {"title":..., "url":..., "snippet":..., "source":...}
-
-Adds:
-- FRED macro/credit data helpers (requests only, no extra deps)
+Each function makes one HTTP call and returns parsed JSON. Failures raise
+DataSourceError (MissingKeyError when the API key is not configured), so
+data_providers.py can record *why* data is missing instead of guessing.
 """
 
 from __future__ import annotations
-import os
+
+from datetime import date, timedelta
+from typing import Any, Dict, List, Optional
+
 import requests
-from typing import Dict, Any, List, Optional
-from datetime import datetime, timedelta
+
+from settings import env, load_config
 
 FINNHUB_BASE = "https://finnhub.io/api/v1"
 FRED_BASE = "https://api.stlouisfed.org/fred"
+TAVILY_URL = "https://api.tavily.com/search"
+
+HTTP_TIMEOUT = float(env("HTTP_TIMEOUT", str(load_config("data_sources")["http_timeout_sec"])))
 
 
-# ============================================================
-# Finnhub Helpers
-# ============================================================
+class DataSourceError(RuntimeError):
+    pass
 
-def _get_finnhub_key() -> str:
-    return os.getenv("FINNHUB_API_KEY", "").strip()
 
-def _finnhub_get(endpoint: str, params: Dict[str, Any]) -> Optional[Any]:
-    key = _get_finnhub_key()
+class MissingKeyError(DataSourceError):
+    pass
+
+
+def _key(name: str) -> str:
+    key = env(name)
     if not key:
-        return None
+        raise MissingKeyError(f"{name} is not set")
+    return key
+
+
+def _get_json(url: str, params: Dict[str, Any], headers: Optional[Dict[str, str]] = None) -> Any:
     try:
-        params = dict(params or {})
-        params["token"] = key
-        r = requests.get(f"{FINNHUB_BASE}/{endpoint}", params=params, timeout=15)
-        if r.status_code != 200:
-            return None
-        return r.json()
-    except Exception:
-        return None
-
-def finnhub_profile(ticker: str) -> Optional[Dict[str, Any]]:
-    if not ticker:
-        return None
-    return _finnhub_get("stock/profile2", {"symbol": ticker})
-
-def finnhub_quote(ticker: str) -> Optional[Dict[str, Any]]:
-    if not ticker:
-        return None
-    return _finnhub_get("quote", {"symbol": ticker})
-
-def finnhub_recommendation_trends(ticker: str) -> Optional[List[Dict[str, Any]]]:
-    if not ticker:
-        return None
-    return _finnhub_get("stock/recommendation", {"symbol": ticker})
-
-def finnhub_company_financials(ticker: str) -> Optional[Dict[str, Any]]:
-    if not ticker:
-        return None
-    return _finnhub_get("stock/metric", {"symbol": ticker, "metric": "all"})
-
-def finnhub_company_news(ticker: str, days_back: int = 30) -> Optional[List[Dict[str, Any]]]:
-    if not ticker:
-        return None
-    try:
-        end = datetime.utcnow().date()
-        start = end - timedelta(days=days_back)
-        return _finnhub_get("company-news", {
-            "symbol": ticker,
-            "from": start.isoformat(),
-            "to": end.isoformat(),
-        })
-    except Exception:
-        return None
+        r = requests.get(url, params=params, headers=headers, timeout=HTTP_TIMEOUT)
+    except requests.RequestException as e:
+        # "from None": the original message can contain the full URL incl. api_key
+        raise DataSourceError(f"{type(e).__name__} calling {url}") from None
+    if r.status_code != 200:
+        raise DataSourceError(f"HTTP {r.status_code} from {url}")
+    return r.json()
 
 
 # ============================================================
-# Tavily Finance Web Search
+# FRED
 # ============================================================
 
-def _get_tavily_key() -> str:
-    return os.getenv("TAVILY_API_KEY", "").strip()
+def fred_series_observations(series_id: str, limit: int) -> List[Dict[str, str]]:
+    """Most recent `limit` observations, newest first: [{"date": "YYYY-MM-DD", "value": "4.3"}, ...]."""
+    js = _get_json(f"{FRED_BASE}/series/observations", {
+        "series_id": series_id,
+        "api_key": _key("FRED_API_KEY"),
+        "file_type": "json",
+        "sort_order": "desc",
+        "limit": int(limit),
+    })
+    return js.get("observations") or []
 
-def search_finance_web(query: str, max_results: int = 6) -> List[Dict[str, Any]]:
-    key = _get_tavily_key()
-    if not key or not query or not query.strip():
-        return []
 
+# ============================================================
+# Finnhub
+# ============================================================
+
+def _finnhub(endpoint: str, params: Dict[str, Any]) -> Any:
+    # Finnhub accepts the key as a header, which keeps it out of URLs and logs.
+    return _get_json(f"{FINNHUB_BASE}/{endpoint}", params, headers={"X-Finnhub-Token": _key("FINNHUB_API_KEY")})
+
+
+def finnhub_profile(ticker: str) -> Dict[str, Any]:
+    return _finnhub("stock/profile2", {"symbol": ticker}) or {}
+
+
+def finnhub_quote(ticker: str) -> Dict[str, Any]:
+    return _finnhub("quote", {"symbol": ticker}) or {}
+
+
+def finnhub_recommendation_trends(ticker: str) -> List[Dict[str, Any]]:
+    return _finnhub("stock/recommendation", {"symbol": ticker}) or []
+
+
+def finnhub_basic_financials(ticker: str) -> Dict[str, Any]:
+    """Key metrics (P/E, EPS, margins, 52-week range, ...) from /stock/metric."""
+    return _finnhub("stock/metric", {"symbol": ticker, "metric": "all"}) or {}
+
+
+def finnhub_company_news(ticker: str, days_back: int) -> List[Dict[str, Any]]:
+    end = date.today()
+    start = end - timedelta(days=days_back)
+    return _finnhub("company-news", {"symbol": ticker, "from": start.isoformat(), "to": end.isoformat()}) or []
+
+
+# ============================================================
+# Tavily web search
+# ============================================================
+
+def tavily_search(query: str, max_results: int, search_depth: str) -> List[Dict[str, Any]]:
+    """Raw Tavily results: [{"title", "url", "content", "published_date"?}, ...]."""
+    key = _key("TAVILY_API_KEY")
     try:
         r = requests.post(
-            "https://api.tavily.com/search",
+            TAVILY_URL,
             json={
-                "api_key": key,
                 "query": query.strip(),
-                "search_depth": "advanced",
+                "search_depth": search_depth,
                 "max_results": int(max_results),
+                "include_answer": False,
+                "include_raw_content": False,
             },
-            timeout=20
+            headers={"Authorization": f"Bearer {key}"},
+            timeout=HTTP_TIMEOUT,
         )
-        if r.status_code != 200:
-            return []
-
-        data = r.json() or {}
-        results = data.get("results", []) or []
-
-        cleaned = []
-        for x in results:
-            if not isinstance(x, dict):
-                continue
-            cleaned.append({
-                "title": x.get("title") or "Web Source",
-                "url": x.get("url") or "",
-                "snippet": (x.get("content") or "")[:320].replace("\n", " "),
-                "source": "web",
-            })
-        return cleaned
-
-    except Exception:
-        return []
-
-
-# ============================================================
-# FRED Helpers (Macro + Credit Real Data)
-# ============================================================
-
-def _get_fred_key() -> str:
-    return os.getenv("FRED_API_KEY", "").strip()
-
-def fred_series_observations(series_id: str, start_date: Optional[str] = None) -> Optional[List[Dict[str, Any]]]:
-    """
-    Returns list of observations:
-      [{"date":"YYYY-MM-DD","value":"x.x"}, ...]
-
-    If fails → None
-    """
-    key = _get_fred_key()
-    if not key or not series_id:
-        return None
-
-    params = {
-        "series_id": series_id,
-        "api_key": key,
-        "file_type": "json",
-    }
-    if start_date:
-        params["observation_start"] = start_date
-
-    try:
-        r = requests.get(f"{FRED_BASE}/series/observations", params=params, timeout=20)
-        if r.status_code != 200:
-            return None
-        data = r.json() or {}
-        return data.get("observations", None)
-    except Exception:
-        return None
-
-def fred_latest_value(series_id: str) -> Optional[float]:
-    obs = fred_series_observations(series_id)
-    if not obs:
-        return None
-    # find latest numeric value
-    for x in reversed(obs):
-        v = x.get("value")
-        try:
-            if v not in (".", None):
-                return float(v)
-        except Exception:
-            continue
-    return None
+    except requests.RequestException as e:
+        raise DataSourceError(f"{type(e).__name__} calling Tavily") from None
+    if r.status_code != 200:
+        raise DataSourceError(f"HTTP {r.status_code} from Tavily")
+    return (r.json() or {}).get("results") or []
