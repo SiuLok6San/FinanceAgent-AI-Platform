@@ -6,7 +6,7 @@ import pandas as pd
 import pytest
 
 import validators as v
-from fact_store import build_fact_store, fact_table_block, fmt_change
+from fact_store import build_fact_store, fact_table_block, fmt_change, history_window
 from render import placeholder_ids, render
 
 
@@ -17,7 +17,8 @@ def fred(sid, values, dates, units="Percent", frequency="daily", topics=("credit
 
 
 DAYS = pd.bdate_range("2025-10-01", "2026-10-15").strftime("%Y-%m-%d").tolist()
-HY = fred("BAMLH0A0HYM2", [round(3.0 + 0.001 * i, 2) for i in range(len(DAYS) - 1)] + [3.23], DAYS)
+# HY gets one older point so its history spans the full 5-year window; IG covers one year only
+HY = fred("BAMLH0A0HYM2", [3.1] + [round(3.0 + 0.001 * i, 2) for i in range(len(DAYS) - 1)] + [3.23], ["2021-10-15"] + DAYS)
 IG = fred("BAMLC0A0CM", [0.9] * (len(DAYS) - 1) + [0.84], DAYS)
 MONTHS = [f"2025-{m:02d}-01" for m in range(9, 13)] + [f"2026-{m:02d}-01" for m in range(1, 10)]
 CPI = fred("CPIAUCSL", [310.0] + [312.0] * 11 + [319.3], MONTHS, units="Index 1982-1984=100", frequency="monthly", topics=("macro",))
@@ -203,6 +204,14 @@ def test_history_wording_is_checked_against_the_percentile():
     assert "sits at the" in v.feedback_for_writer(bad) and bad["open_issues"] == 1
     ok = _validate("- High-yield spreads are elevated relative to their history.\n")
     assert ok["wording"]["history"] == []
+
+
+def test_short_history_is_labelled_by_its_span_and_not_judged():
+    assert "IG_OAS.pctile_1y" in STORE and not any(k.startswith("IG_OAS.pctile_5y") for k in STORE)
+    assert "IG_OAS.min_1y" in STORE and history_window(pd.Series(pd.to_datetime(["2024-04-01", "2026-10-01"])), "monthly") == "30m"
+    # IG sits at the bottom of its one-year range, but one year cannot settle "historically wide"
+    res = _validate("- IG spreads at {{IG_OAS.latest}} are historically wide.\n")
+    assert res["wording"]["history"] == []
 
 
 def test_history_wording_skips_negations_and_scenarios():

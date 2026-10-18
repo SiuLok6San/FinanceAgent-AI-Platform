@@ -320,9 +320,10 @@ def _metrics_table(scores: Dict[str, Any], which_set: str) -> List[str]:
         lambda x: f"{x['from_facts']} / {x['typed']}" if x["placeholder_mode"] else "— / all")
     row("Change figures described in the wrong direction (reports)",
         lambda x: f"{x['direction_errors']} ({x['reports_with_direction_errors']})")
-    row("Comparisons contradicted by the two facts' values or units", lambda x: str(x["comparison_errors"]))
-    row("History wording contradicted by the percentile (\"near lows\", \"tight\")",
-        lambda x: str(x["history_wording_errors"]))
+    row("Comparisons contradicted by the two facts' values or units ²",
+        lambda x: str(x["comparison_errors"]) if x["placeholder_mode"] else "—")
+    row("History wording contradicted by the percentile (\"near lows\", \"tight\") ²",
+        lambda x: str(x["history_wording_errors"]) if x["placeholder_mode"] else "—")
     row("Trend wording contradicted by the recent change (\"widening\")", lambda x: str(x["trend_wording_errors"]))
     row("Paragraphs with grounded figures but no citation", lambda x: str(x["uncited_paragraphs"]))
     row("Paragraphs citing a different source than the data", lambda x: str(x["source_mismatches"]))
@@ -331,6 +332,10 @@ def _metrics_table(scores: Dict[str, Any], which_set: str) -> List[str]:
     row("Reports with a no-data honesty issue", lambda x: _pct(x["reports_with_no_data_issue"], x["reports"]))
     row("Stale data series", lambda x: str(x["stale_series"]))
     row("Mean time per question (s)", lambda x: str(x["mean_elapsed_sec"]))
+    lines += ["", "² Only for v3. The comparison check needs to know which fact each side of the comparison is "
+              "(a placeholder). History wording is judged against 5 years of daily or 10 years of monthly data; "
+              "original and v2 fetched 1–2.5 years, too short to judge \"five-year lows\". Trend wording "
+              "(\"widening\" against the recent change) is checked for every version."]
     return lines
 
 

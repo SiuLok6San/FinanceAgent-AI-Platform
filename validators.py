@@ -640,6 +640,9 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
     horizon_pat = _phrase_pattern(list(trend["horizons"]))
     horizons = {_norm_phrase(k): v for k, v in trend["horizons"].items()}
     groups = {s["alias"]: s.get("spread_group") for s in load_config("data_sources")["fred"]["series"]}
+    # history words are judged only against a full window ("5y", "10y"): a report built on one year
+    # of data cannot be told it is wrong about "five-year lows"
+    full_windows = {f"pctile_{w}" for w in load_config("data_sources")["fred"]["history_label"].values()}
     history_issues, trend_issues = [], []
 
     for a, b in _sentences(report):
@@ -661,7 +664,7 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
                 if negated(m):
                     continue
                 alias = nearest(m.start())
-                key = next((k for k in store if k.startswith(f"{alias}.pctile_")), None)
+                key = next((k for k in store if k.startswith(f"{alias}.") and k.split(".", 1)[1] in full_windows), None)
                 if not key:
                     continue
                 pct = store[key].value

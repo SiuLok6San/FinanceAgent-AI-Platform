@@ -146,6 +146,18 @@ def _series_meta(table: Dict[str, Any]) -> Dict[str, Any]:
     return meta
 
 
+def history_window(dates: pd.Series, freq: Optional[str]) -> str:
+    """Label for the span of the fetched history: the configured one ("5y") if the data covers it,
+    else what it covers ("1y", "8m"), so a short table never claims a five-year range."""
+    full = load_config("data_sources")["fred"]["history_label"].get(freq or "")
+    years = (pd.Timestamp(dates.iloc[-1]) - pd.Timestamp(dates.iloc[0])).days / 365.25
+    if full and full.endswith("y") and years >= 0.9 * float(full[:-1]):
+        return full
+    if years >= 0.9 and abs(years - round(years)) <= 0.1:
+        return f"{round(years)}y"
+    return f"{max(1, round(years * 12))}m"
+
+
 def _series_facts(t: Dict[str, Any]) -> List[FactEntry]:
     s = series_frame(t)
     if s.empty:
@@ -189,7 +201,7 @@ def _series_facts(t: Dict[str, Any]) -> List[FactEntry]:
                              f"{title}: annualized growth over the latest quarter", day.strftime("%Y-%m-%d")))
 
     # where the latest value sits in the fetched history
-    window = load_config("data_sources")["fred"]["history_label"].get(freq, f"{len(s)}obs")
+    window = history_window(s["date"], freq)
     lo, hi = s["value"].idxmin(), s["value"].idxmax()
     pctile = round(float((s["value"] <= v).mean() * 100))
     out += [
