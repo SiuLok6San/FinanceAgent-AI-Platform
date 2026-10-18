@@ -1,13 +1,16 @@
 # agents.py
 from __future__ import annotations
 
-import traceback
+import logging
+import uuid
+from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any, Dict, Optional
 
-from llm import call_llm, LLMError
+from llm import call_llm, LLMError, llm_settings
 from router import route_question
 from router_tier2 import detect_tier2_specialization
-from answer_builder import build_answer
+from answer_builder import build_answer, WRITER_TEMPERATURE
 
 from data_providers import (
     resolve_fred_series,
@@ -21,22 +24,53 @@ from data_providers import (
 )
 
 
+PLANNER_TEMPERATURE = 0.1
+ANALYST_TEMPERATURE = 0.15
+REASONER_TEMPERATURE = 0.15
+
+# --------------------------------------------------------------------------
+# Logging: tracebacks go to logs/pipeline.log, never into the report text
+# --------------------------------------------------------------------------
+LOG_FILE = Path(__file__).resolve().parent / "logs" / "pipeline.log"
+logger = logging.getLogger("financeagent")
+
+
+def _setup_logging() -> None:
+    if logger.handlers:
+        return
+    LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+    handler = logging.FileHandler(LOG_FILE, encoding="utf-8")
+    handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(name)s: %(message)s"))
+    logger.addHandler(handler)
+    logger.setLevel(logging.INFO)
+
+
+_setup_logging()
+
+LLM_UNAVAILABLE_MESSAGE = (
+    "The local language model could not be reached, so no report was generated. "
+    "Check that Ollama is running (`ollama serve`) and that the model has been pulled "
+    "(`ollama pull llama3`), then try again."
+)
+GENERIC_ERROR_MESSAGE = (
+    "Something went wrong while generating the report. Please try again; "
+    "if it keeps happening, check the log file for details."
+)
+
+
 # --------------------------------------------------------------------------
 # LLM wrapper
 # --------------------------------------------------------------------------
-def safe_llm(system_prompt: str, user_prompt: str, temperature: float = 0.15) -> str:
-    # trim to avoid Ollama slowdowns
+def ask_llm(system_prompt: str, user_prompt: str, temperature: float = 0.15) -> str:
+    # trim to avoid Ollama slowdowns; LLMError propagates to run_multiagent_pipeline
     user_prompt = (user_prompt or "")[:12000]
-    try:
-        return call_llm(system_prompt, user_prompt, temperature=temperature)
-    except LLMError as e:
-        return f"[LLM ERROR] {e}"
+    return call_llm(system_prompt, user_prompt, temperature=temperature)
 
 
 def run_planner(question: str) -> str:
     sys = "You are the Planner Agent. Produce a short step-by-step research plan."
     user = f"QUESTION:\n{question}\n\nReturn 4-6 bullets."
-    return safe_llm(sys, user, temperature=0.1)
+    return ask_llm(sys, user, temperature=PLANNER_TEMPERATURE)
 
 
 def run_researcher(question: str, ticker: Optional[str]) -> Dict[str, Any]:
@@ -55,7 +89,7 @@ def run_researcher(question: str, ticker: Optional[str]) -> Dict[str, Any]:
             out["charts"].extend(fred_bundle.get("charts", []))
             out["sources"].extend(fred_bundle.get("sources", []))
     except Exception:
-        pass
+        logger.warning("FRED fetch failed", exc_info=True)
 
     # 2) Finnhub (only if ticker)
     if ticker:
@@ -73,6 +107,7 @@ def run_researcher(question: str, ticker: Optional[str]) -> Dict[str, Any]:
                     out["charts"].extend(b.get("charts", []))
                     out["sources"].extend(b.get("sources", []))
             except Exception:
+                logger.warning("Finnhub fetch %s failed for %s", fn.__name__, ticker, exc_info=True)
                 continue
 
     # 3) Web news (Tavily)
@@ -83,7 +118,7 @@ def run_researcher(question: str, ticker: Optional[str]) -> Dict[str, Any]:
             if web.get("summary"):
                 out["notes"].append(web["summary"])
     except Exception:
-        pass
+        logger.warning("Web news fetch failed", exc_info=True)
 
     # keep notes compact
     out["notes"] = [n[:2000] for n in out["notes"]]
@@ -101,19 +136,50 @@ def run_analyst(question: str, planner_steps: str, research_note: str) -> str:
         f"PLANNER STEPS:\n{planner_steps}\n\n"
         f"RESEARCH NOTES (may be partial):\n{research_note}"
     )
-    return safe_llm(sys, user)
+    return ask_llm(sys, user, temperature=ANALYST_TEMPERATURE)
 
 
 def run_reasoner(question: str, analyst_text: str) -> str:
     sys = "You are the Reasoner Agent. Remove weak claims and sharpen logic."
     user = f"QUESTION:\n{question}\n\nANALYST DRAFT:\n{analyst_text}"
-    return safe_llm(sys, user)
+    return ask_llm(sys, user, temperature=REASONER_TEMPERATURE)
 
 
 # --------------------------------------------------------------------------
 # Main Pipeline (used by app.py)
 # --------------------------------------------------------------------------
+def _run_meta(run_id: str) -> Dict[str, Any]:
+    """Model name and settings stored with every report (and every error)."""
+    return {
+        "run_id": run_id,
+        "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        **llm_settings(),
+        "temperatures": {
+            "planner": PLANNER_TEMPERATURE,
+            "analyst": ANALYST_TEMPERATURE,
+            "reasoner": REASONER_TEMPERATURE,
+            "writer": WRITER_TEMPERATURE,
+        },
+    }
+
+
+def _error_result(message: str, run_meta: Dict[str, Any]) -> Dict[str, Any]:
+    text = f"{message}\n\nReference: `{run_meta['run_id']}` (see `logs/pipeline.log`)."
+    return {
+        "error": True,
+        "answer": text,
+        "report_text": text,
+        "key_data_tables": [],
+        "chart_specs": [],
+        "sources": [],
+        "citations_used": [],
+        "run_meta": run_meta,
+    }
+
+
 def run_multiagent_pipeline(question: str, ticker: Optional[str] = None) -> Dict[str, Any]:
+    run_id = datetime.now().strftime("%Y%m%d-%H%M%S") + "-" + uuid.uuid4().hex[:6]
+    run_meta = _run_meta(run_id)
     try:
         tags = route_question(question)
         tier2 = detect_tier2_specialization(question)
@@ -148,14 +214,14 @@ def run_multiagent_pipeline(question: str, ticker: Optional[str] = None) -> Dict
         if "answer" not in final_answer and "report_text" in final_answer:
             final_answer["answer"] = final_answer["report_text"]
 
+        final_answer["error"] = False
+        final_answer["run_meta"] = run_meta
+        logger.info("Report generated [ref=%s] meta=%s", run_id, run_meta)
         return final_answer
 
-    except Exception as e:
-        return {
-            "answer": f"[CRITICAL ERROR]\n{e}\n{traceback.format_exc()}",
-            "report_text": f"[CRITICAL ERROR]\n{e}\n{traceback.format_exc()}",
-            "key_data": {"tables": []},
-            "charts": [],
-            "sources": [],
-            "citations_used": [],
-        }
+    except LLMError:
+        logger.exception("LLM call failed [ref=%s] question=%r ticker=%r", run_id, question, ticker)
+        return _error_result(LLM_UNAVAILABLE_MESSAGE, run_meta)
+    except Exception:
+        logger.exception("Pipeline failed [ref=%s] question=%r ticker=%r", run_id, question, ticker)
+        return _error_result(GENERIC_ERROR_MESSAGE, run_meta)

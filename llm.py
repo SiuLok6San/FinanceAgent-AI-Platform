@@ -6,7 +6,12 @@ import os
 import json
 import time
 import requests
-from typing import Optional, Union
+from typing import Any, Dict, Optional, Union
+
+from dotenv import load_dotenv
+
+# Load .env (if present) before reading settings; existing env vars win.
+load_dotenv()
 
 # Environment variables
 def _env(k, d=""):
@@ -16,6 +21,18 @@ def _env(k, d=""):
 LLM_API_BASE = _env("LLM_API_BASE", "http://localhost:11434")
 LLM_MODEL_NAME = _env("LLM_MODEL_NAME", "llama3")
 LLM_TIMEOUT_SEC = float(_env("LLM_TIMEOUT_SEC", "120"))
+# Fixed seed so repeated runs with the same inputs give the same output.
+LLM_SEED = int(_env("LLM_SEED", "42"))
+
+
+def llm_settings() -> Dict[str, Any]:
+    """Settings that are logged with every report for reproducibility."""
+    return {
+        "model": LLM_MODEL_NAME,
+        "api_base": LLM_API_BASE,
+        "seed": LLM_SEED,
+        "timeout_sec": LLM_TIMEOUT_SEC,
+    }
 
 class LLMError(RuntimeError):
     pass
@@ -52,7 +69,8 @@ def call_llm(
             {"role": "user", "content": user_prompt},
         ],
         "options": {
-            "temperature": temperature
+            "temperature": temperature,
+            "seed": LLM_SEED,
         },
         "stream": False
     }

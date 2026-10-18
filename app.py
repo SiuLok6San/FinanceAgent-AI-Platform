@@ -114,6 +114,10 @@ with right:
                     ticker.strip().upper() or None
                 )
 
+            if result.get("error"):
+                st.error(result["report_text"])
+                st.stop()
+
             # ---------------------------------------------------
             # Final Institutional Report
             # ---------------------------------------------------

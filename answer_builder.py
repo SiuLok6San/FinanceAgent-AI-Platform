@@ -26,6 +26,8 @@ from typing import Any, Dict, List, Optional
 
 from llm import call_llm
 
+WRITER_TEMPERATURE = 0.2
+
 
 # ---------------------------------------------------------------------
 # Source Normalization
@@ -182,11 +184,8 @@ def build_institutional_report(
         Now write the final institutional report.
     """).strip()
 
-    # Call LLM
-    try:
-        report = call_llm(system_prompt, user_prompt, temperature=0.2)
-    except Exception as e:
-        report = f"[FINAL WRITER ERROR] {e}"
+    # Call LLM (LLMError propagates; run_multiagent_pipeline turns it into a friendly message)
+    report = call_llm(system_prompt, user_prompt, temperature=WRITER_TEMPERATURE)
 
     # Extract citations actually used
     used = extract_citations_used(report, sources)
