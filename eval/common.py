@@ -36,8 +36,10 @@ def load_questions() -> List[Dict[str, str]]:
 
 
 def git_commit() -> str:
+    """Short HEAD hash, marked "+uncommitted" if any code or config file has local changes."""
     out = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=REPO, capture_output=True, text=True)
-    dirty = subprocess.run(["git", "status", "--porcelain", "--untracked-files=no"], cwd=REPO, capture_output=True, text=True)
+    dirty = subprocess.run(["git", "status", "--porcelain", "--untracked-files=no", "--", "*.py", "config/", "requirements*.txt"],
+                           cwd=REPO, capture_output=True, text=True)
     return out.stdout.strip() + ("+uncommitted" if dirty.stdout.strip() else "")
 
 
