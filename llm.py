@@ -7,6 +7,7 @@ format plus a Bearer API key (OLLAMA_API_KEY).
 """
 
 import json
+import logging
 import threading
 import time
 import requests
@@ -39,6 +40,9 @@ def llm_settings() -> Dict[str, Any]:
         "num_ctx": LLM_NUM_CTX,
         "timeout_sec": LLM_TIMEOUT_SEC,
     }
+
+
+logger = logging.getLogger("financeagent.llm")
 
 
 class LLMError(RuntimeError):
@@ -133,14 +137,17 @@ def call_llm(
             else:
                 time.sleep(LLM_BACKOFF_SEC * 2 ** (attempt - 1))
         retry_after = None
+        started = time.monotonic()
         try:
             r = _post_json(url, payload, headers)
         except (requests.RequestException, _Deadline) as e:
             last_err = f"{type(e).__name__}: {e}"
+            logger.warning("LLM attempt %d failed after %.0fs: %s", attempt + 1, time.monotonic() - started, last_err)
             continue
 
         if r.status_code != 200:
             last_err = f"HTTP {r.status_code}: {r.text[:200]}"
+            logger.warning("LLM attempt %d failed after %.0fs: %s", attempt + 1, time.monotonic() - started, last_err)
             if r.status_code == 429:
                 try:
                     retry_after = float((getattr(r, "headers", None) or {}).get("retry-after", 0))

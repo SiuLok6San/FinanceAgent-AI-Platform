@@ -5,7 +5,7 @@
 api_base = "http://localhost:11434"   # env: LLM_API_BASE (https://ollama.com for the Ollama API)
 model = "llama3"                      # env: LLM_MODEL_NAME
 seed = 42                             # env: LLM_SEED
-timeout_sec = 180                     # env: LLM_TIMEOUT_SEC
+timeout_sec = 300                     # env: LLM_TIMEOUT_SEC; total limit per call (long Writer calls can take minutes)
 retries = 3                           # retries on timeouts, 429 and 5xx responses
 backoff_sec = 2.0                     # first retry wait; doubles each retry
 rate_limit_wait_sec = 20.0            # first wait after HTTP 429 (rate limit); doubles each retry
