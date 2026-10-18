@@ -281,3 +281,51 @@ def test_field_named_in_sentence_wins_when_values_round_the_same():
 def test_multiplication_sign_is_a_multiple():
     figs = v.extract_figures("P/E of 13.69× and 15x")
     assert [(f.text, f.unit) for f in figs] == [("13.69×", "x"), ("15x", "x")]
+
+
+
+# --- assumptions and feedback for the writer ------------------------------------------
+
+def test_labelled_assumptions_are_counted_and_not_no_data_issues():
+    report = "- Hold 10% (assumption) in Treasuries.\n- Rates could fall to 2.1% next year.\n"
+    res = v.validate_report(report, "q", [UNRATE], SOURCES[:1], ["macro", "rates"], today=date(2026, 10, 17))
+    figs = {f["text"]: f for f in res["figures"]}
+    assert figs["10%"]["assumption"] is True and figs["2.1%"]["assumption"] is False
+    rates = res["no_data"]["topics_without_data"][0]
+    assert rates["unverified_figures"] == ["2.1%"]
+    assert "1 labelled as assumptions" in res["summary"]
+
+
+def test_feedback_lists_fixable_items_with_the_right_source():
+    sources = SOURCES + [source(5, url="https://news/x", snippet="Core CPI was 2.39% in September.")]
+    report = ("- Unemployment is 4.3%.\n"
+              "- Core CPI is 2.39%.\n"
+              "- Spreads will hit 5.5% [S9].\n")
+    res = v.validate_report(report, "q", TABLES, sources, ["macro", "rates"], today=date(2026, 10, 17))
+    fb = v.feedback_for_writer(res)
+    assert 'Add a citation to: "- Unemployment is 4.3%."' in fb and "come from [S1]" in fb
+    assert '"2.39%"' in fb and "appears in source [S5]" in fb
+    assert '"5.5%"' in fb and 'mark it "(assumption)"' in fb
+    assert "Citations S9 do not exist; the only sources are S1, S2, S3, S4, S5." in fb
+    assert "No data was fetched for rates; add one sentence saying so." in fb
+    assert res["open_issues"] == 5  # 2.39% + 5.5% + uncited paragraph + dangling S9 + undisclosed rates
+
+
+def test_cited_snippet_figure_is_not_an_open_issue():
+    sources = SOURCES + [source(5, url="https://news/x", snippet="Core CPI was 2.39% in September.")]
+    res = v.validate_report("- Core CPI is 2.39% [S5].\n", "q", TABLES, sources, ["macro"], today=date(2026, 10, 17))
+    assert res["counts"]["unverified"] == 1 and res["open_issues"] == 0
+    assert v.feedback_for_writer(res) == ""
+
+
+def test_iso_dates_with_non_breaking_hyphens():
+    # Real case (Q11, Oct 2026): "3.23 % (2026‑10‑15)" written with U+2011
+    report = "HY OAS is 3.3% (2026\u201110\u201115) [S2]."
+    figs = v.check_numeric_grounding(report, "q", TABLES, SOURCES)
+    assert [(f.text, f.unit, f.status) for f in figs] == [("3.3%", "%", "verified"), ("2026\u201110\u201115", "date", "verified")]
+
+
+def test_parenthesised_citations():
+    # Real case (Oct 2026 UI run): "... tight relative to historical levels (S4, S8)"
+    from answer_builder import parse_citation_markers
+    assert [m["ids"] for m in parse_citation_markers("levels (S4, S8) and (S3) but not (see S2 above)")] == [["S4", "S8"], ["S3"]]

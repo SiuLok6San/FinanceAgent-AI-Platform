@@ -1,5 +1,7 @@
 # FinanceAgent-AI-Platform
 
+[![tests](https://github.com/SiuLok6San/FinanceAgent-AI-Platform/actions/workflows/tests.yml/badge.svg)](https://github.com/SiuLok6San/FinanceAgent-AI-Platform/actions/workflows/tests.yml)
+
 A multi-agent research assistant that answers investor questions with live FRED, Finnhub and Tavily data — and checks every number and citation in its own reports with a deterministic validation layer.
 
 ## Context
@@ -21,8 +23,10 @@ A multi-agent research assistant that answers investor questions with live FRED,
         ▼
  Planner ──► Researcher ──► Analyst ──► Reasoner ──► Writer ──► Validator ──► Streamlit UI
   (LLM)      (no LLM:         (LLM)       (LLM)        (LLM)      (no LLM)
-             FRED, Finnhub,
-             Tavily)
+             FRED, Finnhub,                              ▲            │
+             Tavily)                                     └────────────┘
+                                          feedback: one revision, kept only if the
+                                          validator finds fewer open issues
 ```
 
 - **Routing is rule-based, not learned.** `router.py` and `router_tier2.py` match whole-word keywords from [`config/routing.toml`](config/routing.toml) (hyphens and plurals handled, with a few exclude phrases such as "unemployment rate" for the rates tag). It is fast, transparent and testable, and it misclassifies unusual phrasings (see Results).
@@ -34,34 +38,37 @@ A multi-agent research assistant that answers investor questions with live FRED,
   3. **Data freshness** — the latest observation of each series against what its frequency allows (e.g. a monthly series more than 60 days old).
   4. **No-data honesty** — routed topics with no fetched data must be disclosed and must not carry unverified figures.
 
-  Flagged content is never deleted: the report gets a one-line summary on top — for the credit example below, *"31 of 45 figures verified against source data (17 exact, 14 derived); 14 flagged …"* — and the UI highlights flagged figures in a Validation panel.
+  **Feedback loop.** The findings go back to the Writer as concrete instructions (replace or remove a figure that is not in the data or mark it "(assumption)", cite the web source a figure came from, add the `[S#]` of the data behind an uncited paragraph, disclose a topic with no data). The validator, not the LLM, decides whether the revision is better: it is kept only if it has strictly fewer open issues. The first draft, its validation and the feedback are stored with the report and shown in the UI.
+
+  The validator itself never deletes content (a revision is the Writer's, and the draft is kept): the report gets a one-line summary on top — for the credit example below, *"27 of 37 figures verified against source data (14 exact, 13 derived); 10 flagged (10 labelled as assumptions)."* — and the UI highlights flagged figures in a Validation panel.
 
 ## Results
 
-Both pipelines were run on 20 investor questions (4 each on macro, rates, credit, equity and portfolio) on 2026-10-18 with `gpt-oss:20b` through the hosted Ollama API, and the same validator scored both. "Original" is the Dec 2025 code, run unchanged from its git commit except for the LLM connection. Full tables, per-question results and caveats: [`eval/RESULTS.md`](eval/RESULTS.md).
+Both pipelines were run on 20 investor questions (4 each on macro, rates, credit, equity and portfolio) on 2026-10-18 with `gpt-oss:20b` through the hosted Ollama API, and the same validator scored everything. "Original" is the Dec 2025 code, run unchanged from its git commit except for the LLM connection. The two "Revised" columns come from the same run: the Writer's first draft, and the report kept after one round of validator feedback. Full tables, per-question results and caveats: [`eval/RESULTS.md`](eval/RESULTS.md).
 
-| | Original (Dec 2025) | Revised (Oct 2026) |
-|---|---|---|
-| Routing: exact match of expected topic tags (rule-based, no LLM) | 12/20 | 17/20 ¹ |
-| Reports with any fetched data table | 9/20 | 20/20 |
-| Numbers in reports traceable to fetched data (exact or derived) | 46/527 (9%) | 303/517 (59%) |
-| Reports with a no-data honesty issue | 13/20 | 2/20 |
-| Dangling citations | 0 | 0 |
-| Paragraphs stating grounded figures without a citation | 19 | 65 |
+| | Original (Dec 2025) | Revised, first draft | Revised, after feedback loop |
+|---|---|---|---|
+| Routing: exact match of expected topic tags (rule-based) | 12/20 | 17/20 ¹ | 17/20 ¹ |
+| Reports with any fetched data table | 9/20 | 20/20 | 20/20 |
+| Numbers in reports traceable to fetched data (exact or derived) | 46/527 (9%) | 320/527 (61%) | 329/514 (64%) |
+| Paragraphs stating grounded figures without a citation | 19 | 60 | 26 |
+| Reports with a no-data honesty issue | 13/20 | 1/20 | 1/20 |
+| Open issues the validator asks the Writer to fix | 509 | 169 | 69 |
+| Dangling citations | 0 | 0 | 0 |
 
 ¹ The router fixes were written after the questions were drafted, so this is optimistic.
 
 What this shows, and what it does not:
 
-- Run on the original outputs, the validator found only 9% of numbers traceable to fetched data. The causes were in the code: the original agents never saw the data they fetched (only table titles reached the Writer), and no credit data was fetched for "high-yield" or "IG vs HY" questions. The revised pipeline fixes both, and traceable numbers rose to 59% (the evaluation does not separate the effect of each change).
-- 41% of the revised reports' numbers still cannot be traced to fetched data, and the revised reports leave many grounded figures uncited (65 paragraphs).
-- "Traceable" is a lower bar than "correct": a coarse number can match by coincidence. In the JPM example, "P/E could fall below 12×" matched the count of 12 *hold* ratings; 111 of the 303 traceable numbers are written without decimals.
+- Run on the original outputs, the validator found only 9% of numbers traceable to fetched data. The causes were in the code: the original agents never saw the data they fetched (only table titles reached the Writer), and no credit data was fetched for "high-yield" or "IG vs HY" questions. The revised pipeline fixes both; its first drafts reach 61% (the evaluation does not separate the effect of each change).
+- The feedback loop cut open issues from 169 to 69 and uncited paragraphs from 60 to 26. The validator kept 16 of 20 revisions and rejected 4 that were not strictly better. It mostly fixes attribution: traceable numbers moved only from 61% to 64%, while 124 numbers are now labelled as the writer's own assumptions (counted separately, still unverified).
+- "Traceable" is a lower bar than "correct": a coarse number can match by coincidence. In Q04, "a credit spread buffer of at least 50 bp (assumption)" matched a 2024 value of the Sahm-rule indicator (0.50); 95 of the 329 traceable numbers are written without decimals.
 
-Example reports (real runs, unedited model output, with every figure's check): [macro](examples/Q01-macro.md) · [credit](examples/Q09-credit.md) · [equity](examples/Q13-equity.md).
+Example reports (real runs, unedited model output, with the first draft, the feedback it received and every figure's check): [macro](examples/Q01-macro.md) · [credit](examples/Q09-credit.md) · [equity](examples/Q13-equity.md).
 
 ## Screenshots
 
-A credit question ("Are high-yield corporate bond spreads tight relative to history?") run in the app on 2026-10-18 with live data:
+A credit question ("Are high-yield corporate bond spreads tight relative to history?") run in the app with live data on 2026-10-18. The first three screenshots are from the version before the feedback loop; the fourth is from the current version:
 
 ![Report with validation summary](examples/screenshots/1-report-with-validation-summary.jpg)
 
@@ -70,6 +77,8 @@ A credit question ("Are high-yield corporate bond spreads tight relative to hist
 ![Fetched FRED tables and chart](examples/screenshots/3-data-tables-and-chart.jpg)
 
 In the second screenshot, "3.5%" (the report's 10-year Treasury yield) matched an earlier value of the high-yield spread: no Treasury data was fetched for this question, so this is a coincidental match of the kind described under Limitations.
+
+![Feedback loop: the first draft's validation, and the revision that was kept](examples/screenshots/4-feedback-loop-summary.jpg)
 
 ## How to run
 
@@ -121,7 +130,8 @@ python eval/score.py
 - **Keyword routing can misclassify unusual questions**, e.g. "stocks and bonds fall together" is tagged rates and equity as well as portfolio.
 - **Free API limits.** Finnhub (60 calls/min), Tavily (monthly credits) and the hosted Ollama API all have free-tier limits; FRED requires a free key.
 - **Not reproducible run to run on the hosted API.** The seed is sent, but in our test the hosted Ollama API returned different outputs for the same prompt and seed, so saved outputs in `eval/results/` are the record.
-- **Small evaluation.** 20 questions written by the authors; they also served as the development set for the router fixes.
+- **Assumption labels are a policy choice.** A number the report marks "(assumption)" stays unverified but is not counted as an open issue; a writer could over-label to pass the checks, so the count is reported separately.
+- **Small evaluation.** 20 questions written by the authors; they also served as the development set for the router fixes, and several validator fixes were made after reading real outputs (listed in `eval/RESULTS.md`).
 - **Not investment advice.** This is a course project for research and education.
 
 ## Project structure

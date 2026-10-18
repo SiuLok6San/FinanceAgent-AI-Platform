@@ -7,8 +7,8 @@
     "rates"
   ],
   "pipeline": "revised",
-  "run_utc": "2026-10-18T03:20:19+00:00",
-  "elapsed_sec": 58.8,
+  "run_utc": "2026-10-18T14:44:57+00:00",
+  "elapsed_sec": 92.8,
   "router_tags": [
     "rates"
   ],
@@ -16,8 +16,23 @@
     "rates": "yield_curve_inversion"
   },
   "error": false,
-  "report_text": "**Treasury Yield‑Curve Signal – 10‑Year – 2‑Year Spread (as of 2026‑10‑15)**  \n\n---\n\n### 1. Executive Summary  \n- **Current spread:** 10‑year minus 2‑year = **+0.35 %** (S1).  \n- **Trend:** The spread has **flattened** from ~0.54 % in April 2026 to 0.35 % today (S1).  \n- **Absolute yields:** 10‑year = **5.10 %**, 2‑year = **4.77 %** (S2, S3).  \n- **Interpretation:** A modestly positive but narrowing spread signals growing uncertainty about the Fed’s policy path and hints at a potential slowdown in growth.  \n- **Implication:** Credit spreads may widen, especially for longer‑dated securities; portfolios should consider shortening duration and tilting toward higher‑quality bonds.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro Context  \n- **Fed policy:** Recent rate hikes have pushed 10‑year yields above 5 % while 2‑year yields remain near 4.8 % (S2, S3).  \n- **Inflation & growth:** CPI/PCE remain above 2 % but easing; the flattening curve aligns with a transition from high‑inflation growth to a more subdued outlook (S4).  \n- **Historical benchmark:** A spread < 0 % has historically preceded recessions; the current spread is still positive but narrowing (S1).\n\n#### Sector & Credit Impact  \n- **Investment‑grade (IG):** Likely to see widening spreads as investors demand higher risk‑premia for longer maturities.  \n- **High‑yield (HY):** More sensitive to duration risk; flattening may push spreads higher.  \n- **Short‑duration bonds:** Less exposed to curve flattening; may hold up better.\n\n#### Portfolio‑Level Effects  \n- **Duration risk:** Flattening increases the risk of price declines for longer‑dated holdings.  \n- **Credit quality:** Higher‑quality bonds may outperform as risk‑aversion rises.  \n- **Liquidity:** Maintaining a larger cash buffer can allow opportunistic buying if the curve inverts.\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Key Drivers | Expected Spread | Credit & Portfolio Impact |\n|----------|-------------|-----------------|---------------------------|\n| **Base** | Fed maintains current stance; inflation moderates | Spread stabilizes around +0.30 % | Mild widening of IG/HY spreads; duration remains moderate |\n| **Upside** | Fed cuts rates or inflation falls sharply | Spread steepens to +0.50 % | IG spreads tighten; potential upside for longer‑dated bonds |\n| **Downside** | Fed hikes further or inflation spikes; 2‑year > 10‑year | Spread turns negative (inversion) | IG/HY spreads widen sharply; duration risk increases; portfolio may suffer losses on long‑dated holdings |\n\n*All scenarios are qualitative; no new data were fetched beyond the current spread.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n| Risk | Monitoring Metric | Source |\n|------|-------------------|--------|\n| **Fed policy surprise** | Fed minutes, FOMC statements | S4 |\n| **Inflation acceleration** | CPI, PCE releases | S4 |\n| **Geopolitical shocks** | Market volatility (VIX) | S4 |\n| **Yield‑curve inversion** | 10‑year – 2‑year spread | S1 |\n| **Credit spread widening** | IG/HY spread indices | S4 |\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Duration Management** – Reduce overall duration or shift to ≤ 5‑yr fixed‑income to mitigate price risk from further flattening.  \n- **Credit Tilt** – Favor IG over HY until spreads normalize; consider laddering to capture potential IG spread recovery.  \n- **Liquidity** – Increase cash holdings to exploit any sudden curve inversion or rate cuts.  \n- **Risk‑Managed Alternatives** – Short‑duration ETFs or floating‑rate instruments can hedge against additional rate hikes.  \n- **Sector Rotation** – Defensive sectors (utilities, consumer staples) may outperform as growth expectations wane.\n\n---\n\n### 6. Conclusion  \n\nThe 10‑year – 2‑year Treasury spread is currently **+0.35 %** and has been **flattening** over the past eight months (S1). This shape signals **increasing uncertainty** about the Fed’s policy trajectory and suggests a potential slowdown in economic growth. Credit markets should anticipate widening spreads, especially for longer‑dated securities, while portfolios benefit from shortening duration, favoring higher‑quality bonds, and preserving liquidity. Continuous monitoring of Fed actions, inflation data, and the spread itself will be critical to adjust strategy in real time.",
-  "report_text_annotated": "> **Validation:** 14 of 15 figures verified against source data (12 exact, 2 derived); 1 flagged (1 of them appear in a fetched web/news snippet). 9 paragraph(s) state figures without a citation.\n\n**Treasury Yield‑Curve Signal – 10‑Year – 2‑Year Spread (as of 2026‑10‑15)**  \n\n---\n\n### 1. Executive Summary  \n- **Current spread:** 10‑year minus 2‑year = **+0.35 %** (S1).  \n- **Trend:** The spread has **flattened** from ~0.54 % in April 2026 to 0.35 % today (S1).  \n- **Absolute yields:** 10‑year = **5.10 %**, 2‑year = **4.77 %** (S2, S3).  \n- **Interpretation:** A modestly positive but narrowing spread signals growing uncertainty about the Fed’s policy path and hints at a potential slowdown in growth.  \n- **Implication:** Credit spreads may widen, especially for longer‑dated securities; portfolios should consider shortening duration and tilting toward higher‑quality bonds.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro Context  \n- **Fed policy:** Recent rate hikes have pushed 10‑year yields above 5 % while 2‑year yields remain near 4.8 % (S2, S3).  \n- **Inflation & growth:** CPI/PCE remain above 2 % but easing; the flattening curve aligns with a transition from high‑inflation growth to a more subdued outlook (S4).  \n- **Historical benchmark:** A spread < 0 % has historically preceded recessions; the current spread is still positive but narrowing (S1).\n\n#### Sector & Credit Impact  \n- **Investment‑grade (IG):** Likely to see widening spreads as investors demand higher risk‑premia for longer maturities.  \n- **High‑yield (HY):** More sensitive to duration risk; flattening may push spreads higher.  \n- **Short‑duration bonds:** Less exposed to curve flattening; may hold up better.\n\n#### Portfolio‑Level Effects  \n- **Duration risk:** Flattening increases the risk of price declines for longer‑dated holdings.  \n- **Credit quality:** Higher‑quality bonds may outperform as risk‑aversion rises.  \n- **Liquidity:** Maintaining a larger cash buffer can allow opportunistic buying if the curve inverts.\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Key Drivers | Expected Spread | Credit & Portfolio Impact |\n|----------|-------------|-----------------|---------------------------|\n| **Base** | Fed maintains current stance; inflation moderates | Spread stabilizes around +0.30 % | Mild widening of IG/HY spreads; duration remains moderate |\n| **Upside** | Fed cuts rates or inflation falls sharply | Spread steepens to +0.50 % | IG spreads tighten; potential upside for longer‑dated bonds |\n| **Downside** | Fed hikes further or inflation spikes; 2‑year > 10‑year | Spread turns negative (inversion) | IG/HY spreads widen sharply; duration risk increases; portfolio may suffer losses on long‑dated holdings |\n\n*All scenarios are qualitative; no new data were fetched beyond the current spread.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n| Risk | Monitoring Metric | Source |\n|------|-------------------|--------|\n| **Fed policy surprise** | Fed minutes, FOMC statements | S4 |\n| **Inflation acceleration** | CPI, PCE releases | S4 |\n| **Geopolitical shocks** | Market volatility (VIX) | S4 |\n| **Yield‑curve inversion** | 10‑year – 2‑year spread | S1 |\n| **Credit spread widening** | IG/HY spread indices | S4 |\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Duration Management** – Reduce overall duration or shift to ≤ 5‑yr fixed‑income to mitigate price risk from further flattening.  \n- **Credit Tilt** – Favor IG over HY until spreads normalize; consider laddering to capture potential IG spread recovery.  \n- **Liquidity** – Increase cash holdings to exploit any sudden curve inversion or rate cuts.  \n- **Risk‑Managed Alternatives** – Short‑duration ETFs or floating‑rate instruments can hedge against additional rate hikes.  \n- **Sector Rotation** – Defensive sectors (utilities, consumer staples) may outperform as growth expectations wane.\n\n---\n\n### 6. Conclusion  \n\nThe 10‑year – 2‑year Treasury spread is currently **+0.35 %** and has been **flattening** over the past eight months (S1). This shape signals **increasing uncertainty** about the Fed’s policy trajectory and suggests a potential slowdown in economic growth. Credit markets should anticipate widening spreads, especially for longer‑dated securities, while portfolios benefit from shortening duration, favoring higher‑quality bonds, and preserving liquidity. Continuous monitoring of Fed actions, inflation data, and the spread itself will be critical to adjust strategy in real time.",
+  "report_text": "**Treasury Yield‑Curve Signal – 10‑Year – 2‑Year Spread (T10Y2Y)**  \n\n---\n\n### 1. Executive Summary  \n- Current 10‑yr minus 2‑yr spread: **0.35 %** (10‑yr 5.1 % vs. 2‑yr 4.77 %)【S1】【S2】【S3】.  \n- Spread has flattened from **0.54 %** in mid‑April to **0.35 %** today, a decline of **0.19 pp** over six months【S1】.  \n- Flat‑ish spread signals market pricing in a potential slowdown but no inversion yet【S4】.  \n- 10‑yr yield remains above 5 % reflecting the Fed’s policy stance【S2】.  \n- Implications: modest duration compression, defensive sector tilt, and monitoring of credit spreads【S4】.  \n\n---\n\n### 2. Core Analysis  \n\n**Macro**  \n- Flat curve indicates uncertainty about the policy path; investors expect future rate cuts or slower growth【S4】.  \n- 10‑yr yield 5.1 % vs. 2‑yr 4.77 % shows 10‑yr still higher but narrowing【S2】【S3】.  \n\n**Sector**  \n- Growth‑sensitive sectors may face headwinds as the curve flattens; defensive sectors could benefit【S4】.  \n\n**Credit**  \n- Higher base yields keep borrowing costs elevated; IG spreads may compress slightly, HY spreads likely widen if recession risk materializes【S4】.  \n\n**Portfolio**  \n- Duration risk increases if the curve continues to flatten or invert; curve‑trade opportunities (short 10‑yr, long 2‑yr) become attractive if further flattening is priced in【S4】.  \n\n---\n\n### 3. Scenarios  \n\n- **Base** – Spread remains flat at **+0.35 %** to **+0.40 %** (assumption) – mild slowdown, modest duration compression, defensive tilt【S1】.  \n- **Upside** – Spread turns negative (inversion) (assumption) – recession risk rises, steepening of credit spreads, potential rate cuts.  \n- **Downside** – Spread widens to **+0.45 %–+0.55 %** (assumption) – growth picks up, yields rise, credit spreads tighten.  \n\n*See Table 1 for the 10‑Year minus 2‑Year spread trend.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- Fed policy shifts – dovish cues could accelerate flattening; hawkish stance could steepen【S4】.  \n- Inflation data – persistent high CPI/PCE may keep yields elevated despite flat curve (likely).  \n- Employment trends – strong jobs data could support a steepening curve (likely).  \n- Spread reversal – any move toward negative territory signals stronger recession risk (likely).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Fixed‑Income** – consider shortening duration or shifting to short‑term IG to mitigate steepening risk【S4】.  \n- **Curve Trades** – short 10‑yr, long 2‑yr positions if further flattening is priced in【S4】.  \n- **Credit** – monitor HY spreads; consider hedging with credit default swaps if exposure is significant (likely).  \n- **Equities** – tilt toward defensive sectors; maintain cash buffer to capture potential rate cuts (likely).  \n\n---\n\n### 6. Conclusion  \n\n- The 10‑yr minus 2‑yr Treasury spread is currently flat‑ish at **0.35 %** and has been steadily narrowing, signaling market expectations of a potential slowdown rather than an outright recession【S1】.  \n- Persistently high 10‑yr yields reflect the Fed’s policy stance【S2】.  \n- Portfolio managers should focus on duration management, defensive sector tilts, and monitoring of credit spreads, while remaining alert to any shift toward inversion or steepening that could alter the risk profile.",
+  "report_text_annotated": "> **Validation:** 14 of 14 figures verified against source data (13 exact, 1 derived); 0 flagged. 1 paragraph(s) state figures without a citation.\n\n**Treasury Yield‑Curve Signal – 10‑Year – 2‑Year Spread (T10Y2Y)**  \n\n---\n\n### 1. Executive Summary  \n- Current 10‑yr minus 2‑yr spread: **0.35 %** (10‑yr 5.1 % vs. 2‑yr 4.77 %)【S1】【S2】【S3】.  \n- Spread has flattened from **0.54 %** in mid‑April to **0.35 %** today, a decline of **0.19 pp** over six months【S1】.  \n- Flat‑ish spread signals market pricing in a potential slowdown but no inversion yet【S4】.  \n- 10‑yr yield remains above 5 % reflecting the Fed’s policy stance【S2】.  \n- Implications: modest duration compression, defensive sector tilt, and monitoring of credit spreads【S4】.  \n\n---\n\n### 2. Core Analysis  \n\n**Macro**  \n- Flat curve indicates uncertainty about the policy path; investors expect future rate cuts or slower growth【S4】.  \n- 10‑yr yield 5.1 % vs. 2‑yr 4.77 % shows 10‑yr still higher but narrowing【S2】【S3】.  \n\n**Sector**  \n- Growth‑sensitive sectors may face headwinds as the curve flattens; defensive sectors could benefit【S4】.  \n\n**Credit**  \n- Higher base yields keep borrowing costs elevated; IG spreads may compress slightly, HY spreads likely widen if recession risk materializes【S4】.  \n\n**Portfolio**  \n- Duration risk increases if the curve continues to flatten or invert; curve‑trade opportunities (short 10‑yr, long 2‑yr) become attractive if further flattening is priced in【S4】.  \n\n---\n\n### 3. Scenarios  \n\n- **Base** – Spread remains flat at **+0.35 %** to **+0.40 %** (assumption) – mild slowdown, modest duration compression, defensive tilt【S1】.  \n- **Upside** – Spread turns negative (inversion) (assumption) – recession risk rises, steepening of credit spreads, potential rate cuts.  \n- **Downside** – Spread widens to **+0.45 %–+0.55 %** (assumption) – growth picks up, yields rise, credit spreads tighten.  \n\n*See Table 1 for the 10‑Year minus 2‑Year spread trend.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- Fed policy shifts – dovish cues could accelerate flattening; hawkish stance could steepen【S4】.  \n- Inflation data – persistent high CPI/PCE may keep yields elevated despite flat curve (likely).  \n- Employment trends – strong jobs data could support a steepening curve (likely).  \n- Spread reversal – any move toward negative territory signals stronger recession risk (likely).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Fixed‑Income** – consider shortening duration or shifting to short‑term IG to mitigate steepening risk【S4】.  \n- **Curve Trades** – short 10‑yr, long 2‑yr positions if further flattening is priced in【S4】.  \n- **Credit** – monitor HY spreads; consider hedging with credit default swaps if exposure is significant (likely).  \n- **Equities** – tilt toward defensive sectors; maintain cash buffer to capture potential rate cuts (likely).  \n\n---\n\n### 6. Conclusion  \n\n- The 10‑yr minus 2‑yr Treasury spread is currently flat‑ish at **0.35 %** and has been steadily narrowing, signaling market expectations of a potential slowdown rather than an outright recession【S1】.  \n- Persistently high 10‑yr yields reflect the Fed’s policy stance【S2】.  \n- Portfolio managers should focus on duration management, defensive sector tilts, and monitoring of credit spreads, while remaining alert to any shift toward inversion or steepening that could alter the risk profile.",
+  "draft_report_text": "**Treasury Yield‑Curve Signal – 10‑Year – 2‑Year Spread (T10Y2Y)**  \n\n**Executive Summary**  \n- Current spread: **+0.35 %** (10‑yr 5.10 % vs. 2‑yr 4.77 %) [S1][S2][S3].  \n- Trend: Flattening from **+0.54 %** in mid‑April to **+0.35 %** today – a decline of **0.19 pp** over six months [S1].  \n- Flat‑ish spread signals market pricing in a **potential slowdown** but no inversion yet.  \n- Persistently high 10‑yr yield reflects the Fed’s policy stance (~5 %) and inflation expectations.  \n- Implications: modest duration compression, defensive sector tilt, and monitoring of credit spreads.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Flat curve indicates uncertainty about the policy path; investors expect future rate cuts or slower growth [S4].  \n- 10‑yr yield remains above 5 % while 2‑yr yield has risen sharply, narrowing the spread [S2][S3].  \n\n*Sector*  \n- Growth‑sensitive sectors (industrial, consumer discretionary) may face headwinds as the curve flattens.  \n- Defensive sectors (utilities, consumer staples) could benefit from a slowdown environment.  \n\n*Credit*  \n- Higher base yields keep borrowing costs elevated; IG spreads may compress slightly, but duration risk rises.  \n- HY issuers face higher refinancing costs; risk‑premium spreads likely widen if recession risk materializes.  \n\n*Portfolio*  \n- Duration risk increases if the curve continues to flatten or invert.  \n- Curve‑trade opportunities (short 10‑yr, long 2‑yr) become attractive if further flattening is expected.  \n\n---\n\n**Scenarios**\n\n| Scenario | Spread Outlook | Implications | Assumption |\n|----------|----------------|--------------|------------|\n| **Base** | Remains flat at **+0.35 %** to **+0.40 %** | Mild slowdown; modest duration compression; defensive tilt | – |\n| **Upside** | Turns negative (inversion) | Recession risk rises; steepening of credit spreads; potential for rate cuts | (assumption) |\n| **Downside** | Widens to **+0.45 %**–**+0.55 %** | Growth picks up; yields rise; credit spreads tighten | (assumption) |\n\n*See Chart 1 for the 10‑Year minus 2‑Year spread trend.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Fed policy shifts** – dovish cues could accelerate flattening; hawkish stance could steepen.  \n- **Inflation data** – persistent high CPI/PCE may keep yields elevated despite a flat curve.  \n- **Employment trends** – strong jobs data could support a steepening curve.  \n- **Spread reversal** – any move toward negative territory signals stronger recession risk.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Fixed‑Income** – consider shortening duration or shifting to short‑term IG to mitigate steepening risk.  \n- **Curve Trades** – short 10‑yr, long 2‑yr positions if further flattening is priced in.  \n- **Credit** – monitor HY spreads; consider hedging with credit default swaps if exposure is significant.  \n- **Equities** – tilt toward defensive sectors; maintain cash buffer to capture potential rate cuts.  \n\n---\n\n**Conclusion**\n\nThe 10‑year minus 2‑year Treasury spread is currently flat‑ish at **+0.35 %** and has been steadily narrowing, signaling market expectations of a **potential slowdown** rather than an outright recession. Persistently high 10‑yr yields reflect the Fed’s policy stance and inflation concerns. Portfolio managers should focus on duration management, defensive sector tilts, and monitoring of credit spreads, while remaining alert to any shift toward inversion or steepening that could alter the risk profile.",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. Add a citation to: \"- Persistently high 10‑yr yield reflects the Fed’s policy stance (~5 %) and inflation expectations.\" — its figures 5 % come from [S2].\n2. Add a citation to: \"| Scenario | Spread Outlook | Implications | Assumption |\n|----------|----------------|--------------|------------|\n| **Base** | Remains flat at **+0.35 %** to \" — its figures +0.35 %, +0.40 %, +0.45 %, +0.55 % come from [S1].\n3. Add a citation to: \"The 10‑year minus 2‑year Treasury spread is currently flat‑ish at **+0.35 %** and has been steadily narrowing, signaling market expectations of a **potential sl\" — its figures +0.35 % come from [S1].",
+        "open_issues_before": 3,
+        "summary_before": "13 of 13 figures verified against source data (12 exact, 1 derived); 0 flagged. 3 paragraph(s) state figures without a citation.",
+        "accepted": true,
+        "open_issues_after": 1,
+        "summary_after": "14 of 14 figures verified against source data (13 exact, 1 derived); 0 flagged. 1 paragraph(s) state figures without a citation.",
+        "revised_report_text": "**Treasury Yield‑Curve Signal – 10‑Year – 2‑Year Spread (T10Y2Y)**  \n\n---\n\n### 1. Executive Summary  \n- Current 10‑yr minus 2‑yr spread: **0.35 %** (10‑yr 5.1 % vs. 2‑yr 4.77 %)【S1】【S2】【S3】.  \n- Spread has flattened from **0.54 %** in mid‑April to **0.35 %** today, a decline of **0.19 pp** over six months【S1】.  \n- Flat‑ish spread signals market pricing in a potential slowdown but no inversion yet【S4】.  \n- 10‑yr yield remains above 5 % reflecting the Fed’s policy stance【S2】.  \n- Implications: modest duration compression, defensive sector tilt, and monitoring of credit spreads【S4】.  \n\n---\n\n### 2. Core Analysis  \n\n**Macro**  \n- Flat curve indicates uncertainty about the policy path; investors expect future rate cuts or slower growth【S4】.  \n- 10‑yr yield 5.1 % vs. 2‑yr 4.77 % shows 10‑yr still higher but narrowing【S2】【S3】.  \n\n**Sector**  \n- Growth‑sensitive sectors may face headwinds as the curve flattens; defensive sectors could benefit【S4】.  \n\n**Credit**  \n- Higher base yields keep borrowing costs elevated; IG spreads may compress slightly, HY spreads likely widen if recession risk materializes【S4】.  \n\n**Portfolio**  \n- Duration risk increases if the curve continues to flatten or invert; curve‑trade opportunities (short 10‑yr, long 2‑yr) become attractive if further flattening is priced in【S4】.  \n\n---\n\n### 3. Scenarios  \n\n- **Base** – Spread remains flat at **+0.35 %** to **+0.40 %** (assumption) – mild slowdown, modest duration compression, defensive tilt【S1】.  \n- **Upside** – Spread turns negative (inversion) (assumption) – recession risk rises, steepening of credit spreads, potential rate cuts.  \n- **Downside** – Spread widens to **+0.45 %–+0.55 %** (assumption) – growth picks up, yields rise, credit spreads tighten.  \n\n*See Table 1 for the 10‑Year minus 2‑Year spread trend.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- Fed policy shifts – dovish cues could accelerate flattening; hawkish stance could steepen【S4】.  \n- Inflation data – persistent high CPI/PCE may keep yields elevated despite flat curve (likely).  \n- Employment trends – strong jobs data could support a steepening curve (likely).  \n- Spread reversal – any move toward negative territory signals stronger recession risk (likely).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Fixed‑Income** – consider shortening duration or shifting to short‑term IG to mitigate steepening risk【S4】.  \n- **Curve Trades** – short 10‑yr, long 2‑yr positions if further flattening is priced in【S4】.  \n- **Credit** – monitor HY spreads; consider hedging with credit default swaps if exposure is significant (likely).  \n- **Equities** – tilt toward defensive sectors; maintain cash buffer to capture potential rate cuts (likely).  \n\n---\n\n### 6. Conclusion  \n\n- The 10‑yr minus 2‑yr Treasury spread is currently flat‑ish at **0.35 %** and has been steadily narrowing, signaling market expectations of a potential slowdown rather than an outright recession【S1】.  \n- Persistently high 10‑yr yields reflect the Fed’s policy stance【S2】.  \n- Portfolio managers should focus on duration management, defensive sector tilts, and monitoring of credit spreads, while remaining alert to any shift toward inversion or steepening that could alter the risk profile."
+      }
+    ]
+  },
   "sources": [
     {
       "title": "FRED series T10Y2Y: 10-Year Treasury Minus 2-Year Treasury",
@@ -69,21 +84,26 @@
       "id": "S7"
     },
     {
-      "title": "Analysis-US yield curve nears flip with jury out on recession signal",
-      "url": "https://ca.finance.yahoo.com/news/analysis-us-yield-curve-nears-100443516.html",
-      "source": "web (Tavily)",
-      "snippet": "In recent weeks, that curve has steepened - meaning that the spread of two-year yields over 10-year (2/10 curve) has narrowed - amid signs of a cooling economy. On Wednesday, the curve hit minus-14.5 basis points, the least inverted it has been since July 2022, Tradeweb data showed. On Friday it was at minus-18.5. [...",
-      "id": "S8"
-    },
-    {
       "title": "2-Year Treasury Yield Today — Live Rate & Chart",
       "url": "https://stockmarketwatch.com/bonds/2-year-treasury-yield",
       "source": "web (Tavily)",
       "snippet": "Subtract the 2-year from the 10-year and you get the 2s10s spread, the most cited yield-curve measure in financial media. Normally it is positive, because investors want extra compensation for lending over ten years rather than two. When it turns negative the curve is inverted, and that has preceded every US recession ",
+      "id": "S8"
+    },
+    {
+      "title": "10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity (T10Y2Y) | FRED | St. Louis Fed",
+      "url": "https://fred.stlouisfed.org/series/t10y2y",
+      "source": "web (Tavily)",
+      "snippet": "Observations  |  |  |  |  ---  | 2026-10-16: | 0.35 |  | | 2026-10-15: | 0.33 |  | | 2026-10-14: | 0.37 |  | | 2026-10-13: | 0.42 |  | | 2026-10-12: | . |  | | View All | |  Units:  Frequency:  Data in this graph are copyrighted. Please review the copyright information in the series notes before sharing.  ## Notes  Sou",
       "id": "S9"
     }
   ],
-  "citations_used": [],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
   "tables": [
     {
       "title": "FRED: 10-Year Treasury Minus 2-Year Treasury (T10Y2Y)",
@@ -4845,283 +4865,337 @@
   ],
   "validation": {
     "counts": {
-      "figures": 15,
-      "verified": 12,
-      "derived": 2,
-      "unverified": 1
+      "figures": 14,
+      "verified": 13,
+      "derived": 1,
+      "unverified": 0
     },
     "figures": [
-      {
-        "text": "10",
-        "value": 10.0,
-        "unit": "",
-        "tolerance": 0.500000001,
-        "start": 68,
-        "end": 70,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
-        "in_source_text": "S5",
-        "context": "**Treasury Yield‑Curve Signal – 10‑Year – 2‑Year Spread (as of 2026‑10‑15)**"
-      },
-      {
-        "text": "15",
-        "value": 15.0,
-        "unit": "",
-        "tolerance": 0.500000001,
-        "start": 71,
-        "end": 73,
-        "status": "derived",
-        "matched": "DGS2 % change 2026-07-16 to 2026-10-15",
-        "source_id": "S3",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "**Treasury Yield‑Curve Signal – 10‑Year – 2‑Year Spread (as of 2026‑10‑15)**"
-      },
-      {
-        "text": "+0.35 %",
-        "value": 0.35,
-        "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 159,
-        "end": 166,
-        "status": "verified",
-        "matched": "T10Y2Y on 2026-07-02",
-        "source_id": "S1",
-        "topic_match": false,
-        "in_source_text": null,
-        "context": "- **Current spread:** 10‑year minus 2‑year = **+0.35 %** (S1)."
-      },
-      {
-        "text": "0.54 %",
-        "value": 0.54,
-        "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 225,
-        "end": 231,
-        "status": "verified",
-        "matched": "T10Y2Y on 2025-10-09",
-        "source_id": "S1",
-        "topic_match": false,
-        "in_source_text": null,
-        "context": "- **Trend:** The spread has **flattened** from ~0.54 % in April 2026 to 0.35 % today (S1)."
-      },
-      {
-        "text": "April 2026",
-        "value": 0.0,
-        "unit": "date",
-        "tolerance": 0.0,
-        "start": 235,
-        "end": 245,
-        "status": "verified",
-        "matched": "observation / as-of date in fetched data",
-        "source_id": null,
-        "topic_match": null,
-        "in_source_text": null,
-        "context": "- **Trend:** The spread has **flattened** from ~0.54 % in April 2026 to 0.35 % today (S1)."
-      },
       {
         "text": "0.35 %",
         "value": 0.35,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 249,
-        "end": 255,
+        "start": 139,
+        "end": 145,
         "status": "verified",
-        "matched": "T10Y2Y on 2026-07-02",
+        "matched": "T10Y2Y on 2026-10-16",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": false,
         "in_source_text": null,
-        "context": "- **Trend:** The spread has **flattened** from ~0.54 % in April 2026 to 0.35 % today (S1)."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "context": "- Current 10‑yr minus 2‑yr spread: **0.35 %** (10‑yr 5.1 % vs."
       },
       {
-        "text": "5.10 %",
+        "text": "5.1 %",
         "value": 5.1,
         "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 305,
-        "end": 311,
+        "tolerance": 0.050000001,
+        "start": 155,
+        "end": 160,
         "status": "verified",
         "matched": "DGS10 on 2026-10-15",
         "source_id": "S2",
-        "topic_match": true,
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": false,
         "in_source_text": null,
-        "context": "- **Absolute yields:** 10‑year = **5.10 %**, 2‑year = **4.77 %** (S2, S3)."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "context": "- Current 10‑yr minus 2‑yr spread: **0.35 %** (10‑yr 5.1 % vs."
       },
       {
         "text": "4.77 %",
         "value": 4.77,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 326,
-        "end": 332,
+        "start": 170,
+        "end": 176,
         "status": "verified",
-        "matched": "DGS10 on 2026-09-03",
-        "source_id": "S2",
-        "topic_match": true,
+        "matched": "DGS2 on 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
         "in_source_text": null,
-        "context": "- **Absolute yields:** 10‑year = **5.10 %**, 2‑year = **4.77 %** (S2, S3)."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "context": "2‑yr 4.77 %)【S1】【S2】【S3】."
+      },
+      {
+        "text": "0.54 %",
+        "value": 0.54,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 223,
+        "end": 229,
+        "status": "verified",
+        "matched": "T10Y2Y on 2026-05-19",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Spread has flattened from **0.54 %** in mid‑April to **0.35 %** today, a decline of **0.19 pp** over six months【S1】."
+      },
+      {
+        "text": "0.35 %",
+        "value": 0.35,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 250,
+        "end": 256,
+        "status": "verified",
+        "matched": "T10Y2Y on 2026-10-16",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Spread has flattened from **0.54 %** in mid‑April to **0.35 %** today, a decline of **0.19 pp** over six months【S1】."
+      },
+      {
+        "text": "0.19 pp",
+        "value": 0.19,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 281,
+        "end": 288,
+        "status": "derived",
+        "matched": "T10Y2Y change 2026-04-16 to 2026-10-16",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Spread has flattened from **0.54 %** in mid‑April to **0.35 %** today, a decline of **0.19 pp** over six months【S1】."
       },
       {
         "text": "5 %",
         "value": 5.0,
         "unit": "%",
         "tolerance": 0.500000001,
-        "start": 806,
-        "end": 809,
+        "start": 435,
+        "end": 438,
         "status": "verified",
         "matched": "DGS10 on 2026-09-15",
         "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- **Fed policy:** Recent rate hikes have pushed 10‑year yields above 5 % while 2‑year yields remain near 4.8 % (S2, S3)."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- 10‑yr yield remains above 5 % reflecting the Fed’s policy stance【S2】."
       },
       {
-        "text": "4.8 %",
-        "value": 4.8,
+        "text": "5.1 %",
+        "value": 5.1,
         "unit": "%",
         "tolerance": 0.050000001,
-        "start": 842,
-        "end": 847,
+        "start": 761,
+        "end": 766,
         "status": "verified",
-        "matched": "DGS10 on 2026-09-08",
+        "matched": "DGS10 on 2026-10-15",
         "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- **Fed policy:** Recent rate hikes have pushed 10‑year yields above 5 % while 2‑year yields remain near 4.8 % (S2, S3)."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S3"
+        ],
+        "context": "- 10‑yr yield 5.1 % vs."
       },
       {
-        "text": "2 %",
-        "value": 2.0,
-        "unit": "%",
-        "tolerance": 0.500000001,
-        "start": 907,
-        "end": 910,
-        "status": "derived",
-        "matched": "DGS10 % change 2026-09-15 to 2026-10-15",
-        "source_id": "S2",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "- **Inflation & growth:** CPI/PCE remain above 2 % but easing; the flattening curve aligns with a transition from high‑inflation growth to a more subdued outlook (S4)."
-      },
-      {
-        "text": "0 %",
-        "value": 0.0,
-        "unit": "%",
-        "tolerance": 0.500000001,
-        "start": 1069,
-        "end": 1072,
-        "status": "verified",
-        "matched": "T10Y2Y on 2026-09-21",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "- **Historical benchmark:** A spread < 0 % has historically preceded recessions; the current spread is still positive but narrowing (S1)."
-      },
-      {
-        "text": "+0.30 %",
-        "value": 0.3,
+        "text": "4.77 %",
+        "value": 4.77,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 2078,
-        "end": 2085,
+        "start": 776,
+        "end": 782,
         "status": "verified",
-        "matched": "T10Y2Y on 2026-06-24",
-        "source_id": "S1",
-        "topic_match": true,
+        "matched": "DGS2 on 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
         "in_source_text": null,
-        "context": "| **Base** | Fed maintains current stance; inflation moderates | Spread stabilizes around +0.30 % | Mild widening of IG/HY spreads; duration remains moderate |"
-      },
-      {
-        "text": "+0.50 %",
-        "value": 0.5,
-        "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 2226,
-        "end": 2233,
-        "status": "verified",
-        "matched": "T10Y2Y on 2025-10-30",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "| **Upside** | Fed cuts rates or inflation falls sharply | Spread steepens to +0.50 % | IG spreads tighten; potential upside for longer‑dated bonds |"
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S3"
+        ],
+        "context": "2‑yr 4.77 % shows 10‑yr still higher but narrowing【S2】【S3】."
       },
       {
         "text": "+0.35 %",
         "value": 0.35,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 3740,
-        "end": 3747,
+        "start": 1380,
+        "end": 1387,
         "status": "verified",
-        "matched": "T10Y2Y on 2026-07-02",
+        "matched": "T10Y2Y on 2026-10-16",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "The 10‑year – 2‑year Treasury spread is currently **+0.35 %** and has been **flattening** over the past eight months (S1)."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Base** – Spread remains flat at **+0.35 %** to **+0.40 %** (assumption) – mild slowdown, modest duration compression, defensive tilt【S1】."
+      },
+      {
+        "text": "+0.40 %",
+        "value": 0.4,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1395,
+        "end": 1402,
+        "status": "verified",
+        "matched": "T10Y2Y on 2026-09-09",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Base** – Spread remains flat at **+0.35 %** to **+0.40 %** (assumption) – mild slowdown, modest duration compression, defensive tilt【S1】."
+      },
+      {
+        "text": "+0.45 %",
+        "value": 0.45,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1661,
+        "end": 1668,
+        "status": "verified",
+        "matched": "T10Y2Y on 2026-10-02",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- **Downside** – Spread widens to **+0.45 %–+0.55 %** (assumption) – growth picks up, yields rise, credit spreads tighten."
+      },
+      {
+        "text": "+0.55 %",
+        "value": 0.55,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1669,
+        "end": 1676,
+        "status": "verified",
+        "matched": "T10Y2Y on 2026-04-17",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- **Downside** – Spread widens to **+0.45 %–+0.55 %** (assumption) – growth picks up, yields rise, credit spreads tighten."
+      },
+      {
+        "text": "0.35 %",
+        "value": 0.35,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 2812,
+        "end": 2818,
+        "status": "verified",
+        "matched": "T10Y2Y on 2026-10-16",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- The 10‑yr minus 2‑yr Treasury spread is currently flat‑ish at **0.35 %** and has been steadily narrowing, signaling market expectations of a potential slowdown rather than an outright recession【S1】."
       }
     ],
     "citations": {
-      "markers": 0,
+      "markers": 19,
       "dangling": [],
       "uncited_paragraphs": [
         {
-          "text": "**Treasury Yield‑Curve Signal – 10‑Year – 2‑Year Spread (as of 2026‑10‑15)**",
+          "text": "- **Downside** – Spread widens to **+0.45 %–+0.55 %** (assumption) – growth picks up, yields rise, credit spreads tighten.",
           "figures": [
-            "15"
-          ]
-        },
-        {
-          "text": "- **Current spread:** 10‑year minus 2‑year = **+0.35 %** (S1).",
-          "figures": [
-            "+0.35 %"
-          ]
-        },
-        {
-          "text": "- **Trend:** The spread has **flattened** from ~0.54 % in April 2026 to 0.35 % today (S1).",
-          "figures": [
-            "0.54 %",
-            "0.35 %"
-          ]
-        },
-        {
-          "text": "- **Absolute yields:** 10‑year = **5.10 %**, 2‑year = **4.77 %** (S2, S3).",
-          "figures": [
-            "5.10 %",
-            "4.77 %"
-          ]
-        },
-        {
-          "text": "- **Fed policy:** Recent rate hikes have pushed 10‑year yields above 5 % while 2‑year yields remain near 4.8 % (S2, S3).",
-          "figures": [
-            "5 %",
-            "4.8 %"
-          ]
-        },
-        {
-          "text": "- **Inflation & growth:** CPI/PCE remain above 2 % but easing; the flattening curve aligns with a transition from high‑inflation growth to a more subdued outlook (S4).",
-          "figures": [
-            "2 %"
-          ]
-        },
-        {
-          "text": "- **Historical benchmark:** A spread < 0 % has historically preceded recessions; the current spread is still positive but narrowing (S1).",
-          "figures": [
-            "0 %"
-          ]
-        },
-        {
-          "text": "| Scenario | Key Drivers | Expected Spread | Credit & Portfolio Impact |\n|----------|-------------|-----------------|---------------------------|\n| **Base** | Fed maintains current stance; inflation m",
-          "figures": [
-            "+0.30 %",
-            "+0.50 %"
-          ]
-        },
-        {
-          "text": "The 10‑year – 2‑year Treasury spread is currently **+0.35 %** and has been **flattening** over the past eight months (S1). This shape signals **increasing uncertainty** about the Fed’s policy trajecto",
-          "figures": [
-            "+0.35 %"
+            "+0.45 %",
+            "+0.55 %"
+          ],
+          "sources": [
+            "S1"
           ]
         }
       ],
@@ -5132,7 +5206,7 @@
         "table": "FRED: 10-Year Treasury Minus 2-Year Treasury (T10Y2Y)",
         "last_date": "2026-10-16",
         "frequency": "daily",
-        "age_days": 1,
+        "age_days": 2,
         "max_age_days": 7,
         "status": "ok"
       },
@@ -5140,7 +5214,7 @@
         "table": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
         "last_date": "2026-10-15",
         "frequency": "daily",
-        "age_days": 2,
+        "age_days": 3,
         "max_age_days": 7,
         "status": "ok"
       },
@@ -5148,7 +5222,7 @@
         "table": "FRED: 2-Year Treasury Constant Maturity Yield (DGS2)",
         "last_date": "2026-10-15",
         "frequency": "daily",
-        "age_days": 2,
+        "age_days": 3,
         "max_age_days": 7,
         "status": "ok"
       }
@@ -5158,11 +5232,23 @@
       "issue": false
     },
     "data_status": [],
-    "summary": "14 of 15 figures verified against source data (12 exact, 2 derived); 1 flagged (1 of them appear in a fetched web/news snippet). 9 paragraph(s) state figures without a citation."
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ],
+    "open_issues": 1,
+    "summary": "14 of 14 figures verified against source data (13 exact, 1 derived); 0 flagged. 1 paragraph(s) state figures without a citation."
   },
   "run_meta": {
-    "run_id": "20261017-231920-5268f7",
-    "timestamp": "2026-10-18T03:19:20+00:00",
+    "run_id": "20261018-104324-e6e620",
+    "timestamp": "2026-10-18T14:43:24+00:00",
     "model": "gpt-oss:20b",
     "api_base": "https://ollama.com",
     "provider": "ollama-api",
@@ -5174,6 +5260,11 @@
       "analyst": 0.15,
       "reasoner": 0.15,
       "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
     }
   }
 }

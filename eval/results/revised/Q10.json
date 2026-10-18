@@ -7,8 +7,8 @@
     "credit"
   ],
   "pipeline": "revised",
-  "run_utc": "2026-10-18T03:25:54+00:00",
-  "elapsed_sec": 80.4,
+  "run_utc": "2026-10-18T14:55:31+00:00",
+  "elapsed_sec": 76.6,
   "router_tags": [
     "credit"
   ],
@@ -16,8 +16,23 @@
     "credit": "spread_dynamics"
   },
   "error": false,
-  "report_text": "**High‑Yield Corporate Bond Spread Tightness – Institutional Research Report**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- Current 10‑yr high‑yield spread: **3.23 %** (ICE BofA US High‑Yield OAS)【S1】.  \n- Current 10‑yr investment‑grade spread: **0.84 %** (ICE BofA US IG OAS)【S2】.  \n- HY‑IG spread differential: **2.39 pp**【S1,S2】.  \n- Qualitative consensus from market commentary indicates that the 3.23 % spread is **tight relative to historical averages**【S4,S6,S7】.  \n- Tightness is driven by elevated Treasury yields and a muted risk‑premium environment.  \n\n---\n\n### 2. Core Analysis  \n\n**Macro backdrop**  \n- Treasury yields remain high due to persistent inflation and a tightening monetary stance, compressing credit spreads.  \n\n**Credit market dynamics**  \n- **High‑yield**: Spread at 3.23 % is near the lower end of the 2000‑2026 distribution per consensus views【S4,S6,S7】.  \n- **Investment‑grade**: Spread at 0.84 % is stable and very tight, reflecting low default risk and steady credit quality【S8】.  \n\n**Historical context**  \n- No quantitative historical mean or percentile data were fetched for high‑yield spreads.  \n- Qualitative sources consistently describe current spreads as “tight relative to history”【S4,S6,S7】.  \n\n**Return implications**  \n- Tight spreads can erode risk‑adjusted returns, but may still offer attractive yields depending on horizon【S3】.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Key Drivers | Expected Spread Path | Impact on Portfolio |\n|----------|-------------|----------------------|---------------------|\n| **Base** | Treasury yields remain elevated; risk appetite stable | Spreads stay near 3.2‑3.3 % | Yield‑sensitive strategies maintain current returns; credit risk manageable |\n| **Upside** | Fed rate hikes accelerate; inflation persists | Spreads widen to 3.5‑3.8 % | Higher risk‑premia; potential for better risk‑adjusted returns but lower yields |\n| **Downside** | Credit quality deteriorates (e.g., rising defaults); market stress | Spreads widen sharply to 4.0‑4.5 % | Increased default risk; yield compression; portfolio volatility rises |\n\n*All scenarios assume no structural break in the high‑yield market beyond current conditions.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Treasury Yield Movements** – Monitor Fed policy announcements and inflation data.  \n- **Credit Quality Trends** – Watch default rates, credit ratings actions, and sector‑specific stress signals.  \n- **Risk‑Aversion Indicators** – VIX, credit‑default‑swap spreads, and liquidity metrics.  \n- **Structural Market Changes** – Ongoing shifts in high‑yield supply/demand dynamics (e.g., regulatory changes, ESG considerations)【S5】.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Yield vs. Risk** – HY offers higher nominal yields (~ 8 % YTM) but with higher default exposure; IG offers lower yields (~ 3 %) with superior credit quality.  \n- **Duration Management** – Tight spreads reduce duration risk; consider duration‑matching to Treasury benchmarks.  \n- **Diversification** – A balanced allocation that tilts toward IG can mitigate downside while capturing some HY upside.  \n- **Credit‑Quality Weighting** – Emphasize sectors with stable fundamentals to reduce default risk.  \n- **Monitoring** – Track the HY‑IG spread differential; a widening gap may signal deteriorating credit conditions.  \n\n---\n\n### 6. Conclusion  \n\nCurrent high‑yield corporate bond spreads are **tight relative to historical consensus**【S4,S6,S7】, with the 3.23 % spread sitting near the lower end of the long‑term distribution. While this tightness offers attractive nominal yields, it also compresses risk‑adjusted returns and heightens sensitivity to Treasury yield movements and credit quality shifts. Investors should maintain vigilant monitoring of macro‑financial indicators and consider a diversified, credit‑quality‑weighted approach to balance yield capture against potential downside risk.",
-  "report_text_annotated": "> **Validation:** 12 of 16 figures verified against source data (10 exact, 2 derived); 4 flagged. 2 paragraph(s) state figures without a citation. 4 paragraph(s) cite a different source than the data.\n\n**High‑Yield Corporate Bond Spread Tightness – Institutional Research Report**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- Current 10‑yr high‑yield spread: **3.23 %** (ICE BofA US High‑Yield OAS)【S1】.  \n- Current 10‑yr investment‑grade spread: **0.84 %** (ICE BofA US IG OAS)【S2】.  \n- HY‑IG spread differential: **2.39 pp**【S1,S2】.  \n- Qualitative consensus from market commentary indicates that the 3.23 % spread is **tight relative to historical averages**【S4,S6,S7】.  \n- Tightness is driven by elevated Treasury yields and a muted risk‑premium environment.  \n\n---\n\n### 2. Core Analysis  \n\n**Macro backdrop**  \n- Treasury yields remain high due to persistent inflation and a tightening monetary stance, compressing credit spreads.  \n\n**Credit market dynamics**  \n- **High‑yield**: Spread at 3.23 % is near the lower end of the 2000‑2026 distribution per consensus views【S4,S6,S7】.  \n- **Investment‑grade**: Spread at 0.84 % is stable and very tight, reflecting low default risk and steady credit quality【S8】.  \n\n**Historical context**  \n- No quantitative historical mean or percentile data were fetched for high‑yield spreads.  \n- Qualitative sources consistently describe current spreads as “tight relative to history”【S4,S6,S7】.  \n\n**Return implications**  \n- Tight spreads can erode risk‑adjusted returns, but may still offer attractive yields depending on horizon【S3】.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Key Drivers | Expected Spread Path | Impact on Portfolio |\n|----------|-------------|----------------------|---------------------|\n| **Base** | Treasury yields remain elevated; risk appetite stable | Spreads stay near 3.2‑3.3 % | Yield‑sensitive strategies maintain current returns; credit risk manageable |\n| **Upside** | Fed rate hikes accelerate; inflation persists | Spreads widen to 3.5‑3.8 % | Higher risk‑premia; potential for better risk‑adjusted returns but lower yields |\n| **Downside** | Credit quality deteriorates (e.g., rising defaults); market stress | Spreads widen sharply to 4.0‑4.5 % | Increased default risk; yield compression; portfolio volatility rises |\n\n*All scenarios assume no structural break in the high‑yield market beyond current conditions.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Treasury Yield Movements** – Monitor Fed policy announcements and inflation data.  \n- **Credit Quality Trends** – Watch default rates, credit ratings actions, and sector‑specific stress signals.  \n- **Risk‑Aversion Indicators** – VIX, credit‑default‑swap spreads, and liquidity metrics.  \n- **Structural Market Changes** – Ongoing shifts in high‑yield supply/demand dynamics (e.g., regulatory changes, ESG considerations)【S5】.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Yield vs. Risk** – HY offers higher nominal yields (~ 8 % YTM) but with higher default exposure; IG offers lower yields (~ 3 %) with superior credit quality.  \n- **Duration Management** – Tight spreads reduce duration risk; consider duration‑matching to Treasury benchmarks.  \n- **Diversification** – A balanced allocation that tilts toward IG can mitigate downside while capturing some HY upside.  \n- **Credit‑Quality Weighting** – Emphasize sectors with stable fundamentals to reduce default risk.  \n- **Monitoring** – Track the HY‑IG spread differential; a widening gap may signal deteriorating credit conditions.  \n\n---\n\n### 6. Conclusion  \n\nCurrent high‑yield corporate bond spreads are **tight relative to historical consensus**【S4,S6,S7】, with the 3.23 % spread sitting near the lower end of the long‑term distribution. While this tightness offers attractive nominal yields, it also compresses risk‑adjusted returns and heightens sensitivity to Treasury yield movements and credit quality shifts. Investors should maintain vigilant monitoring of macro‑financial indicators and consider a diversified, credit‑quality‑weighted approach to balance yield capture against potential downside risk.",
+  "report_text": "**Executive Summary**  \n- Current high‑yield OAS: **3.23 %** [S1]  \n- Current investment‑grade OAS: **0.84 %** [S2]  \n- HY‑IG spread compression: **+2.39 pp** [S1], [S2]  \n- Literature indicates present spreads are tighter than long‑term averages [S4], [S5], [S8]  \n- Tight spreads can still generate attractive long‑term returns, though risk‑adjusted performance varies [S3]  \n\n---\n\n**Core Analysis**\n\n*Macro & Market Context*  \n- Treasury yields remain low, anchoring the risk‑free base and compressing credit premiums.  \n- VIX and liquidity metrics are subdued, supporting spread tightening.  \n\n*Historical Spread Distribution*  \n- Recent studies note that HY spreads have been “tight relative to historical levels” [S4], [S5], [S8].  \n- IG spreads have shown steadiness, with limited upside in recent years [S7].  \n\n*Current Spread Snapshot*  \n- HY OAS 3.23 % vs. IG OAS 0.84 % → 2.39 pp gap [S1], [S2].  \n\n*Yield‑to‑Maturity*  \n- S&P U.S. High‑Yield Index YTM: **8.18 %** to date this year [S6].  \n\n*Return Implications*  \n- Tight spreads may not be “great” for short‑term prospects but can still deliver solid returns over longer horizons [S3].  \n\n---\n\n**Scenarios**\n\n- **Base** – Current macro conditions persist; Treasury yields stable; credit quality unchanged.  \n  - HY‑IG spread remains ~2.4 pp (derived from 3.23 % HY OAS and 0.84 % IG OAS) [S1], [S2];  \n  - Yield ≈ 8.2 % (S&P U.S. High‑Yield Index YTM) [S6].  \n\n- **Upside** – Treasury yields rise modestly; liquidity improves; credit quality strengthens.  \n  - HY‑IG spread widens to ~3.0 pp (assumption) (based on current levels) [S1], [S2];  \n  - Yield rises to ≈ 8.5 % (assumption).  \n\n- **Downside** – Economic slowdown; credit quality deteriorates; liquidity dries up.  \n  - HY‑IG spread compresses to <2.0 pp (assumption) or spreads widen sharply due to defaults;  \n  - Yield falls to ≈ 7.5 % (assumption).  \n\n---\n\n**Key Risks & Monitoring**\n\n- **Fed Policy & Treasury Yields** – Monitor Fed minutes and 10‑yr Treasury yield changes.  \n- **Credit Quality** – Watch for rating downgrades, earnings misses, and sector‑specific stress (e.g., retail, energy).  \n- **Liquidity** – Track bid‑ask spreads and market depth in the HY market.  \n- **VIX & Market Volatility** – Sudden spikes can trigger spread widening.  \n- **Default Rates** – Rising default rates can erode yield advantage.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Allocation** – Consider a modest HY allocation (10–20 % (assumption)) to capture the 2.39 pp risk‑premium while keeping overall risk within target limits [S1], [S2].  \n- **Duration Management** – HY duration remains higher; use duration‑hedged strategies if risk tolerance is low.  \n- **Credit Selection** – Focus on sectors with strong earnings and lower downgrade risk; avoid highly leveraged or distressed names.  \n- **Risk‑Adjusted Yield** – Tight spreads increase expected yield but also default exposure; maintain robust credit analytics.  \n\n---\n\n**Conclusion**\n\nHigh‑yield corporate bond spreads are currently tighter than long‑term historical norms, as evidenced by the 3.23 % HY OAS and the 2.39 pp compression over IG [S1], [S2]. While tight spreads can still deliver attractive long‑term returns [S3], they also heighten sensitivity to credit quality and liquidity shocks. A disciplined allocation strategy that balances yield capture with credit risk monitoring is recommended.",
+  "report_text_annotated": "> **Validation:** 14 of 20 figures verified against source data (8 exact, 6 derived); 6 flagged (2 of them appear in a fetched web/news snippet; 4 labelled as assumptions).\n\n**Executive Summary**  \n- Current high‑yield OAS: **3.23 %** [S1]  \n- Current investment‑grade OAS: **0.84 %** [S2]  \n- HY‑IG spread compression: **+2.39 pp** [S1], [S2]  \n- Literature indicates present spreads are tighter than long‑term averages [S4], [S5], [S8]  \n- Tight spreads can still generate attractive long‑term returns, though risk‑adjusted performance varies [S3]  \n\n---\n\n**Core Analysis**\n\n*Macro & Market Context*  \n- Treasury yields remain low, anchoring the risk‑free base and compressing credit premiums.  \n- VIX and liquidity metrics are subdued, supporting spread tightening.  \n\n*Historical Spread Distribution*  \n- Recent studies note that HY spreads have been “tight relative to historical levels” [S4], [S5], [S8].  \n- IG spreads have shown steadiness, with limited upside in recent years [S7].  \n\n*Current Spread Snapshot*  \n- HY OAS 3.23 % vs. IG OAS 0.84 % → 2.39 pp gap [S1], [S2].  \n\n*Yield‑to‑Maturity*  \n- S&P U.S. High‑Yield Index YTM: **8.18 %** to date this year [S6].  \n\n*Return Implications*  \n- Tight spreads may not be “great” for short‑term prospects but can still deliver solid returns over longer horizons [S3].  \n\n---\n\n**Scenarios**\n\n- **Base** – Current macro conditions persist; Treasury yields stable; credit quality unchanged.  \n  - HY‑IG spread remains ~2.4 pp (derived from 3.23 % HY OAS and 0.84 % IG OAS) [S1], [S2];  \n  - Yield ≈ 8.2 % (S&P U.S. High‑Yield Index YTM) [S6].  \n\n- **Upside** – Treasury yields rise modestly; liquidity improves; credit quality strengthens.  \n  - HY‑IG spread widens to ~3.0 pp (assumption) (based on current levels) [S1], [S2];  \n  - Yield rises to ≈ 8.5 % (assumption).  \n\n- **Downside** – Economic slowdown; credit quality deteriorates; liquidity dries up.  \n  - HY‑IG spread compresses to <2.0 pp (assumption) or spreads widen sharply due to defaults;  \n  - Yield falls to ≈ 7.5 % (assumption).  \n\n---\n\n**Key Risks & Monitoring**\n\n- **Fed Policy & Treasury Yields** – Monitor Fed minutes and 10‑yr Treasury yield changes.  \n- **Credit Quality** – Watch for rating downgrades, earnings misses, and sector‑specific stress (e.g., retail, energy).  \n- **Liquidity** – Track bid‑ask spreads and market depth in the HY market.  \n- **VIX & Market Volatility** – Sudden spikes can trigger spread widening.  \n- **Default Rates** – Rising default rates can erode yield advantage.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Allocation** – Consider a modest HY allocation (10–20 % (assumption)) to capture the 2.39 pp risk‑premium while keeping overall risk within target limits [S1], [S2].  \n- **Duration Management** – HY duration remains higher; use duration‑hedged strategies if risk tolerance is low.  \n- **Credit Selection** – Focus on sectors with strong earnings and lower downgrade risk; avoid highly leveraged or distressed names.  \n- **Risk‑Adjusted Yield** – Tight spreads increase expected yield but also default exposure; maintain robust credit analytics.  \n\n---\n\n**Conclusion**\n\nHigh‑yield corporate bond spreads are currently tighter than long‑term historical norms, as evidenced by the 3.23 % HY OAS and the 2.39 pp compression over IG [S1], [S2]. While tight spreads can still deliver attractive long‑term returns [S3], they also heighten sensitivity to credit quality and liquidity shocks. A disciplined allocation strategy that balances yield capture with credit risk monitoring is recommended.",
+  "draft_report_text": "**Executive Summary**  \n- Current high‑yield OAS: **3.23 %** [S1]  \n- Current investment‑grade OAS: **0.84 %** [S2]  \n- HY‑IG spread compression: **+2.39 pp** [S1]  \n- Literature indicates that present spreads are tighter than long‑term averages [S4], [S5], [S8]  \n- Tight spreads can still generate attractive long‑term returns, though risk‑adjusted performance varies [S3]  \n\n---\n\n**Core Analysis**\n\n*Macro & Market Context*  \n- Treasury yields remain low, anchoring the risk‑free base and compressing credit premiums.  \n- VIX and liquidity metrics are subdued, supporting spread tightening.  \n\n*Historical Spread Distribution*  \n- Recent studies note that HY spreads have been “tight relative to historical levels” [S4], [S5], [S8].  \n- IG spreads have shown steadiness, with limited upside in recent years [S7].  \n\n*Current Spread Snapshot*  \n- HY OAS 3.23 % vs. IG OAS 0.84 % → 2.39 pp gap [S1], [S2].  \n- Yield‑to‑maturity for the S&P U.S. High‑Yield Index: **8.18 %** to date this year [S6].  \n\n*Return Implications*  \n- Tight spreads may not be “great” for short‑term prospects but can still deliver solid returns over longer horizons [S3].  \n\n---\n\n**Scenarios**\n\n| Scenario | Assumptions | Expected Spread Dynamics | Yield Impact |\n|----------|-------------|--------------------------|--------------|\n| **Base** | Current macro conditions persist; Treasury yields stable; credit quality unchanged | HY‑IG spread remains ~2.4 pp | Yield ≈ 8.2 % |\n| **Upside** | Treasury yields rise modestly; liquidity improves; credit quality strengthens | HY‑IG spread widens to ~3.0 pp | Yield rises to ≈ 8.5 % |\n| **Downside** | Economic slowdown; credit quality deteriorates; liquidity dries up | HY‑IG spread compresses to <2.0 pp or spreads widen sharply due to defaults | Yield falls to ≈ 7.5 % or higher default losses |\n\n*(All scenario levels are qualitative; no new data fetched.)*  \n\n---\n\n**Key Risks & Monitoring**\n\n- **Fed Policy & Treasury Yields** – Monitor Fed minutes and 10‑yr Treasury yield changes.  \n- **Credit Quality** – Watch for rating downgrades, earnings misses, and sector‑specific stress (e.g., retail, energy).  \n- **Liquidity** – Track bid‑ask spreads and market depth in the HY market.  \n- **VIX & Market Volatility** – Sudden spikes can trigger spread widening.  \n- **Default Rates** – Rising default rates can erode yield advantage.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Allocation** – Consider a modest HY allocation (10–20 %) to capture the 2.39 pp risk‑premium while keeping overall risk within target limits.  \n- **Duration Management** – HY duration remains higher; use duration‑hedged strategies if risk tolerance is low.  \n- **Credit Selection** – Focus on sectors with strong earnings and lower downgrade risk; avoid highly leveraged or distressed names.  \n- **Risk‑Adjusted Yield** – Tight spreads increase expected yield but also default exposure; maintain robust credit analytics.  \n\n---\n\n**Conclusion**\n\nHigh‑yield corporate bond spreads are currently tighter than long‑term historical norms, as evidenced by the 3.23 % HY OAS and the 2.39 pp compression over IG [S1], [S2]. While tight spreads can still deliver attractive long‑term returns [S3], they also heighten sensitivity to credit quality and liquidity shocks. A disciplined allocation strategy that balances yield capture with credit risk monitoring is recommended.",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"8.2 %\" in: \"| **Base** | Current macro conditions persist; Treasury yields stable; credit quality unchanged | HY‑IG spread remains ~2.4 pp | Yield ≈ 8.2 % |\" — this number appears in source [S6]; cite it in that sentence.\n2. \"8.5 %\" in: \"| **Upside** | Treasury yields rise modestly; liquidity improves; credit quality strengthens | HY‑IG spread widens to ~3.0 pp | Yield rises to ≈ 8.5 % |\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n3. \"2.0 pp\" in: \"| **Downside** | Economic slowdown; credit quality deteriorates; liquidity dries up | HY‑IG spread compresses to <2.0 pp or spreads widen sharply due to default\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n4. \"7.5 %\" in: \"| **Downside** | Economic slowdown; credit quality deteriorates; liquidity dries up | HY‑IG spread compresses to <2.0 pp or spreads widen sharply due to default\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n5. \"10\" in: \"- **Allocation** – Consider a modest HY allocation (10–20 %) to capture the 2.39 pp risk‑premium while keeping overall risk within target limits.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n6. Add a citation to: \"| Scenario | Assumptions | Expected Spread Dynamics | Yield Impact |\n|----------|-------------|--------------------------|--------------|\n| **Base** | Current m\" — its figures 2.4 pp, 3.0 pp come from [S1], [S2].\n7. Add a citation to: \"- **Allocation** – Consider a modest HY allocation (10–20 %) to capture the 2.39 pp risk‑premium while keeping overall risk within target limits.\" — its figures 20 %, 2.39 pp come from [S1], [S2].",
+        "open_issues_before": 7,
+        "summary_before": "12 of 18 figures verified against source data (6 exact, 6 derived); 6 flagged (2 of them appear in a fetched web/news snippet). 2 paragraph(s) state figures without a citation.",
+        "accepted": true,
+        "open_issues_after": 0,
+        "summary_after": "14 of 20 figures verified against source data (8 exact, 6 derived); 6 flagged (2 of them appear in a fetched web/news snippet; 4 labelled as assumptions).",
+        "revised_report_text": "**Executive Summary**  \n- Current high‑yield OAS: **3.23 %** [S1]  \n- Current investment‑grade OAS: **0.84 %** [S2]  \n- HY‑IG spread compression: **+2.39 pp** [S1], [S2]  \n- Literature indicates present spreads are tighter than long‑term averages [S4], [S5], [S8]  \n- Tight spreads can still generate attractive long‑term returns, though risk‑adjusted performance varies [S3]  \n\n---\n\n**Core Analysis**\n\n*Macro & Market Context*  \n- Treasury yields remain low, anchoring the risk‑free base and compressing credit premiums.  \n- VIX and liquidity metrics are subdued, supporting spread tightening.  \n\n*Historical Spread Distribution*  \n- Recent studies note that HY spreads have been “tight relative to historical levels” [S4], [S5], [S8].  \n- IG spreads have shown steadiness, with limited upside in recent years [S7].  \n\n*Current Spread Snapshot*  \n- HY OAS 3.23 % vs. IG OAS 0.84 % → 2.39 pp gap [S1], [S2].  \n\n*Yield‑to‑Maturity*  \n- S&P U.S. High‑Yield Index YTM: **8.18 %** to date this year [S6].  \n\n*Return Implications*  \n- Tight spreads may not be “great” for short‑term prospects but can still deliver solid returns over longer horizons [S3].  \n\n---\n\n**Scenarios**\n\n- **Base** – Current macro conditions persist; Treasury yields stable; credit quality unchanged.  \n  - HY‑IG spread remains ~2.4 pp (derived from 3.23 % HY OAS and 0.84 % IG OAS) [S1], [S2];  \n  - Yield ≈ 8.2 % (S&P U.S. High‑Yield Index YTM) [S6].  \n\n- **Upside** – Treasury yields rise modestly; liquidity improves; credit quality strengthens.  \n  - HY‑IG spread widens to ~3.0 pp (assumption) (based on current levels) [S1], [S2];  \n  - Yield rises to ≈ 8.5 % (assumption).  \n\n- **Downside** – Economic slowdown; credit quality deteriorates; liquidity dries up.  \n  - HY‑IG spread compresses to <2.0 pp (assumption) or spreads widen sharply due to defaults;  \n  - Yield falls to ≈ 7.5 % (assumption).  \n\n---\n\n**Key Risks & Monitoring**\n\n- **Fed Policy & Treasury Yields** – Monitor Fed minutes and 10‑yr Treasury yield changes.  \n- **Credit Quality** – Watch for rating downgrades, earnings misses, and sector‑specific stress (e.g., retail, energy).  \n- **Liquidity** – Track bid‑ask spreads and market depth in the HY market.  \n- **VIX & Market Volatility** – Sudden spikes can trigger spread widening.  \n- **Default Rates** – Rising default rates can erode yield advantage.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Allocation** – Consider a modest HY allocation (10–20 % (assumption)) to capture the 2.39 pp risk‑premium while keeping overall risk within target limits [S1], [S2].  \n- **Duration Management** – HY duration remains higher; use duration‑hedged strategies if risk tolerance is low.  \n- **Credit Selection** – Focus on sectors with strong earnings and lower downgrade risk; avoid highly leveraged or distressed names.  \n- **Risk‑Adjusted Yield** – Tight spreads increase expected yield but also default exposure; maintain robust credit analytics.  \n\n---\n\n**Conclusion**\n\nHigh‑yield corporate bond spreads are currently tighter than long‑term historical norms, as evidenced by the 3.23 % HY OAS and the 2.39 pp compression over IG [S1], [S2]. While tight spreads can still deliver attractive long‑term returns [S3], they also heighten sensitivity to credit quality and liquidity shocks. A disciplined allocation strategy that balances yield capture with credit risk monitoring is recommended."
+      }
+    ]
+  },
   "sources": [
     {
       "title": "FRED series BAMLH0A0HYM2: ICE BofA US High Yield Option-Adjusted Spread",
@@ -55,24 +70,24 @@
       "id": "S5"
     },
     {
-      "title": "The Consistency of Fallen Angel High Yield Bond Returns",
-      "url": "https://finance.yahoo.com/news/consistency-fallen-angel-high-yield-150018212.html",
-      "source": "web (Tavily)",
-      "snippet": "After essentially completing a market cycle in just three quarters in 2020, high yield spreads are back below historical averages and yields are as low as they've ever been. High yield investors may be asking what might drive performance going forward, and how to navigate an environment characterized by both tight spre",
-      "id": "S6"
-    },
-    {
       "title": "US high yield spreads still tight despite pick-up in distress",
       "url": "https://finance.yahoo.com/news/us-high-yield-spreads-still-193325758.html",
       "source": "web (Tavily)",
       "snippet": "High-yield bonds have provided a yield to maturity of 8.18% so far this year, according to the S&P U.S. High Yield Corporate Bond Index.  \"Obviously any increase in default distress is concerning,\" said Andrew Bellis, head of private debt at private equity firm Partners Group.  \"But I think if you have to put it in com",
-      "id": "S7"
+      "id": "S6"
     },
     {
       "title": "Investment grade corporate bond spreads could change soon",
       "url": "https://www.cnbc.com/2022/02/07/investment-grade-corporate-bond-spreads-have-been-steady-but-that-could-soon-change.html",
       "source": "web (Tavily)",
       "snippet": "The stock market has slid ahead of Federal Reserve rate hikes, but investment-grade corporate bond spreads have been steadier than some expected. Gilbert Garcia, managing partner with Garcia Hamilton Associates, said spreads — that is, the difference in yields — between investment-grade corporate bonds and Treasury yie",
+      "id": "S7"
+    },
+    {
+      "title": "Spread Levels Matter - Madison Investments",
+      "url": "https://madisoninvestments.com/spread-levels-matter",
+      "source": "web (Tavily)",
+      "snippet": "Currently, spread sectors are near historically tight levels. It is possible that spreads could stay here for some time or even tighten modestly. But in an overall higher yielding environment, conservative investors shouldn’t feel compelled to take on excessive spread risk in order to get attractive yield into their po",
       "id": "S8"
     }
   ],
@@ -3384,308 +3399,471 @@
   ],
   "validation": {
     "counts": {
-      "figures": 16,
-      "verified": 10,
-      "derived": 2,
-      "unverified": 4
+      "figures": 20,
+      "verified": 8,
+      "derived": 6,
+      "unverified": 6
     },
     "figures": [
-      {
-        "text": "18 Oct 2026",
-        "value": 0.0,
-        "unit": "date",
-        "tolerance": 0.0,
-        "start": 124,
-        "end": 135,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
-        "in_source_text": null,
-        "context": "*Prepared for B17 Institutional Research – 18 Oct 2026*"
-      },
       {
         "text": "3.23 %",
         "value": 3.23,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 209,
-        "end": 215,
+        "start": 52,
+        "end": 58,
         "status": "verified",
         "matched": "BAMLH0A0HYM2 on 2026-10-15",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- Current 10‑yr high‑yield spread: **3.23 %** (ICE BofA US High‑Yield OAS)【S1】."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Current high‑yield OAS: **3.23 %** [S1]"
       },
       {
         "text": "0.84 %",
         "value": 0.84,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 297,
-        "end": 303,
+        "start": 102,
+        "end": 108,
         "status": "verified",
-        "matched": "BAMLC0A0CM on 2025-11-07",
+        "matched": "BAMLC0A0CM on 2026-10-15",
         "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- Current 10‑yr investment‑grade spread: **0.84 %** (ICE BofA US IG OAS)【S2】."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- Current investment‑grade OAS: **0.84 %** [S2]"
+      },
+      {
+        "text": "+2.39 pp",
+        "value": 2.39,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 148,
+        "end": 156,
+        "status": "derived",
+        "matched": "BAMLH0A0HYM2 minus BAMLC0A0CM (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- HY‑IG spread compression: **+2.39 pp** [S1], [S2]"
+      },
+      {
+        "text": "3.23 %",
+        "value": 3.23,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 857,
+        "end": 863,
+        "status": "verified",
+        "matched": "BAMLH0A0HYM2 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- HY OAS 3.23 % vs."
+      },
+      {
+        "text": "0.84 %",
+        "value": 0.84,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 875,
+        "end": 881,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "IG OAS 0.84 % → 2.39 pp gap [S1], [S2]."
       },
       {
         "text": "2.39 pp",
         "value": 2.39,
         "unit": "pp",
         "tolerance": 0.0050000010000000004,
-        "start": 365,
-        "end": 372,
+        "start": 884,
+        "end": 891,
         "status": "derived",
         "matched": "BAMLH0A0HYM2 minus BAMLC0A0CM (latest: 2026-10-15, 2026-10-15)",
         "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- HY‑IG spread differential: **2.39 pp**【S1,S2】."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "IG OAS 0.84 % → 2.39 pp gap [S1], [S2]."
+      },
+      {
+        "text": "8.18 %",
+        "value": 8.18,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 968,
+        "end": 974,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": false,
+        "cited": [
+          "S6"
+        ],
+        "context": "High‑Yield Index YTM: **8.18 %** to date this year [S6]."
+      },
+      {
+        "text": "2.4 pp",
+        "value": 2.4,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1299,
+        "end": 1305,
+        "status": "derived",
+        "matched": "BAMLH0A0HYM2 minus BAMLC0A0CM (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- HY‑IG spread remains ~2.4 pp (derived from 3.23 % HY OAS and 0.84 % IG OAS) [S1], [S2];"
       },
       {
         "text": "3.23 %",
         "value": 3.23,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 451,
-        "end": 457,
+        "start": 1320,
+        "end": 1326,
         "status": "verified",
         "matched": "BAMLH0A0HYM2 on 2026-10-15",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- Qualitative consensus from market commentary indicates that the 3.23 % spread is **tight relative to historical averages**【S4,S6,S7】."
-      },
-      {
-        "text": "3.23 %",
-        "value": 3.23,
-        "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 844,
-        "end": 850,
-        "status": "verified",
-        "matched": "BAMLH0A0HYM2 on 2026-10-15",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "- **High‑yield**: Spread at 3.23 % is near the lower end of the 2000‑2026 distribution per consensus views【S4,S6,S7】."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- HY‑IG spread remains ~2.4 pp (derived from 3.23 % HY OAS and 0.84 % IG OAS) [S1], [S2];"
       },
       {
         "text": "0.84 %",
         "value": 0.84,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 970,
-        "end": 976,
+        "start": 1338,
+        "end": 1344,
         "status": "verified",
-        "matched": "BAMLC0A0CM on 2025-11-07",
+        "matched": "BAMLC0A0CM on 2026-10-15",
         "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- **Investment‑grade**: Spread at 0.84 % is stable and very tight, reflecting low default risk and steady credit quality【S8】."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- HY‑IG spread remains ~2.4 pp (derived from 3.23 % HY OAS and 0.84 % IG OAS) [S1], [S2];"
       },
       {
-        "text": "3.2",
-        "value": 3.2,
-        "unit": "",
-        "tolerance": 0.050000001,
-        "start": 1685,
-        "end": 1688,
-        "status": "verified",
-        "matched": "BAMLH0A0HYM2 on 2025-11-18",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "| **Base** | Treasury yields remain elevated; risk appetite stable | Spreads stay near 3.2‑3.3 % | Yield‑sensitive strategies maintain current returns; credit risk manageable |"
-      },
-      {
-        "text": "3.3 %",
-        "value": 3.3,
+        "text": "8.2 %",
+        "value": 8.2,
         "unit": "%",
         "tolerance": 0.050000001,
-        "start": 1689,
-        "end": 1694,
-        "status": "verified",
-        "matched": "BAMLH0A0HYM2 on 2026-03-13",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "| **Base** | Treasury yields remain elevated; risk appetite stable | Spreads stay near 3.2‑3.3 % | Yield‑sensitive strategies maintain current returns; credit risk manageable |"
-      },
-      {
-        "text": "3.5",
-        "value": 3.5,
-        "unit": "",
-        "tolerance": 0.050000001,
-        "start": 1855,
-        "end": 1858,
-        "status": "verified",
-        "matched": "BAMLH0A0HYM2 on 2026-03-30",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "| **Upside** | Fed rate hikes accelerate; inflation persists | Spreads widen to 3.5‑3.8 % | Higher risk‑premia; potential for better risk‑adjusted returns but lower yields |"
-      },
-      {
-        "text": "3.8 %",
-        "value": 3.8,
-        "unit": "%",
-        "tolerance": 0.050000001,
-        "start": 1859,
-        "end": 1864,
+        "start": 1379,
+        "end": 1384,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
-        "in_source_text": null,
-        "context": "| **Upside** | Fed rate hikes accelerate; inflation persists | Spreads widen to 3.5‑3.8 % | Higher risk‑premia; potential for better risk‑adjusted returns but lower yields |"
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": false,
+        "cited": [
+          "S6"
+        ],
+        "context": "- Yield ≈ 8.2 % (S&P U.S."
       },
       {
-        "text": "4.0",
-        "value": 4.0,
-        "unit": "",
-        "tolerance": 0.050000001,
-        "start": 2060,
-        "end": 2063,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
-        "in_source_text": null,
-        "context": "| **Downside** | Credit quality deteriorates (e.g., rising defaults); market stress | Spreads widen sharply to 4.0‑4.5 % | Increased default risk; yield compression; portfolio volatility rises |"
-      },
-      {
-        "text": "4.5 %",
-        "value": 4.5,
-        "unit": "%",
-        "tolerance": 0.050000001,
-        "start": 2064,
-        "end": 2069,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
-        "in_source_text": null,
-        "context": "| **Downside** | Credit quality deteriorates (e.g., rising defaults); market stress | Spreads widen sharply to 4.0‑4.5 % | Increased default risk; yield compression; portfolio volatility rises |"
-      },
-      {
-        "text": "8 %",
-        "value": 8.0,
-        "unit": "%",
-        "tolerance": 0.500000001,
-        "start": 2822,
-        "end": 2825,
-        "status": "derived",
-        "matched": "BAMLC0A0CM % change 2026-09-16 to 2026-10-15",
-        "source_id": "S2",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "Risk** – HY offers higher nominal yields (~ 8 % YTM) but with higher default exposure; IG offers lower yields (~ 3 %) with superior credit quality."
-      },
-      {
-        "text": "3 %",
+        "text": "3.0 pp",
         "value": 3.0,
-        "unit": "%",
-        "tolerance": 0.500000001,
-        "start": 2891,
-        "end": 2894,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1550,
+        "end": 1556,
         "status": "verified",
-        "matched": "BAMLH0A0HYM2 on 2025-11-26",
+        "matched": "BAMLH0A0HYM2 on 2026-03-05",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "Risk** – HY offers higher nominal yields (~ 8 % YTM) but with higher default exposure; IG offers lower yields (~ 3 %) with superior credit quality."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- HY‑IG spread widens to ~3.0 pp (assumption) (based on current levels) [S1], [S2];"
+      },
+      {
+        "text": "8.5 %",
+        "value": 8.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1631,
+        "end": 1636,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- Yield rises to ≈ 8.5 % (assumption)."
+      },
+      {
+        "text": "2.0 pp",
+        "value": 2.0,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1773,
+        "end": 1779,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- HY‑IG spread compresses to <2.0 pp (assumption) or spreads widen sharply due to defaults;"
+      },
+      {
+        "text": "7.5 %",
+        "value": 7.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1858,
+        "end": 1863,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- Yield falls to ≈ 7.5 % (assumption)."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2452,
+        "end": 2454,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- **Allocation** – Consider a modest HY allocation (10–20 % (assumption)) to capture the 2.39 pp risk‑premium while keeping overall risk within target limits [S1], [S2]."
+      },
+      {
+        "text": "20 %",
+        "value": 20.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2455,
+        "end": 2459,
+        "status": "derived",
+        "matched": "BAMLH0A0HYM2 % change 2026-07-20 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- **Allocation** – Consider a modest HY allocation (10–20 % (assumption)) to capture the 2.39 pp risk‑premium while keeping overall risk within target limits [S1], [S2]."
+      },
+      {
+        "text": "2.39 pp",
+        "value": 2.39,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 2489,
+        "end": 2496,
+        "status": "derived",
+        "matched": "BAMLH0A0HYM2 minus BAMLC0A0CM (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- **Allocation** – Consider a modest HY allocation (10–20 % (assumption)) to capture the 2.39 pp risk‑premium while keeping overall risk within target limits [S1], [S2]."
       },
       {
         "text": "3.23 %",
         "value": 3.23,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 3523,
-        "end": 3529,
+        "start": 3082,
+        "end": 3088,
         "status": "verified",
         "matched": "BAMLH0A0HYM2 on 2026-10-15",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "Current high‑yield corporate bond spreads are **tight relative to historical consensus**【S4,S6,S7】, with the 3.23 % spread sitting near the lower end of the long‑term distribution."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "context": "High‑yield corporate bond spreads are currently tighter than long‑term historical norms, as evidenced by the 3.23 % HY OAS and the 2.39 pp compression over IG [S1], [S2]."
+      },
+      {
+        "text": "2.39 pp",
+        "value": 2.39,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 3104,
+        "end": 3111,
+        "status": "derived",
+        "matched": "BAMLH0A0HYM2 minus BAMLC0A0CM (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "context": "High‑yield corporate bond spreads are currently tighter than long‑term historical norms, as evidenced by the 3.23 % HY OAS and the 2.39 pp compression over IG [S1], [S2]."
       }
     ],
     "citations": {
-      "markers": 10,
+      "markers": 26,
       "dangling": [],
-      "uncited_paragraphs": [
-        {
-          "text": "| Scenario | Key Drivers | Expected Spread Path | Impact on Portfolio |\n|----------|-------------|----------------------|---------------------|\n| **Base** | Treasury yields remain elevated; risk appet",
-          "figures": [
-            "3.2",
-            "3.3 %",
-            "3.5"
-          ]
-        },
-        {
-          "text": "- **Yield vs. Risk** – HY offers higher nominal yields (~ 8 % YTM) but with higher default exposure; IG offers lower yields (~ 3 %) with superior credit quality.",
-          "figures": [
-            "8 %",
-            "3 %"
-          ]
-        }
-      ],
-      "source_mismatches": [
-        {
-          "text": "- Qualitative consensus from market commentary indicates that the 3.23 % spread is **tight relative to historical averages**【S4,S6,S7】.",
-          "figures": [
-            "3.23 %"
-          ],
-          "cited": [
-            "S4",
-            "S6",
-            "S7"
-          ]
-        },
-        {
-          "text": "- **High‑yield**: Spread at 3.23 % is near the lower end of the 2000‑2026 distribution per consensus views【S4,S6,S7】.",
-          "figures": [
-            "3.23 %"
-          ],
-          "cited": [
-            "S4",
-            "S6",
-            "S7"
-          ]
-        },
-        {
-          "text": "- **Investment‑grade**: Spread at 0.84 % is stable and very tight, reflecting low default risk and steady credit quality【S8】.",
-          "figures": [
-            "0.84 %"
-          ],
-          "cited": [
-            "S8"
-          ]
-        },
-        {
-          "text": "Current high‑yield corporate bond spreads are **tight relative to historical consensus**【S4,S6,S7】, with the 3.23 % spread sitting near the lower end of the long‑term distribution. While this tightnes",
-          "figures": [
-            "3.23 %"
-          ],
-          "cited": [
-            "S4",
-            "S6",
-            "S7"
-          ]
-        }
-      ]
+      "uncited_paragraphs": [],
+      "source_mismatches": []
     },
     "freshness": [
       {
         "table": "FRED: ICE BofA US High Yield Option-Adjusted Spread (BAMLH0A0HYM2)",
         "last_date": "2026-10-15",
         "frequency": "daily",
-        "age_days": 2,
+        "age_days": 3,
         "max_age_days": 7,
         "status": "ok"
       },
@@ -3693,7 +3871,7 @@
         "table": "FRED: ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread (BAMLC0A0CM)",
         "last_date": "2026-10-15",
         "frequency": "daily",
-        "age_days": 2,
+        "age_days": 3,
         "max_age_days": 7,
         "status": "ok"
       }
@@ -3703,11 +3881,22 @@
       "issue": false
     },
     "data_status": [],
-    "summary": "12 of 16 figures verified against source data (10 exact, 2 derived); 4 flagged. 2 paragraph(s) state figures without a citation. 4 paragraph(s) cite a different source than the data."
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "open_issues": 0,
+    "summary": "14 of 20 figures verified against source data (8 exact, 6 derived); 6 flagged (2 of them appear in a fetched web/news snippet; 4 labelled as assumptions)."
   },
   "run_meta": {
-    "run_id": "20261017-232433-104750",
-    "timestamp": "2026-10-18T03:24:33+00:00",
+    "run_id": "20261018-105414-c366d8",
+    "timestamp": "2026-10-18T14:54:14+00:00",
     "model": "gpt-oss:20b",
     "api_base": "https://ollama.com",
     "provider": "ollama-api",
@@ -3719,6 +3908,11 @@
       "analyst": 0.15,
       "reasoner": 0.15,
       "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
     }
   }
 }

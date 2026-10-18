@@ -9,8 +9,8 @@
     "rates"
   ],
   "pipeline": "revised",
-  "run_utc": "2026-10-18T03:34:38+00:00",
-  "elapsed_sec": 88.1,
+  "run_utc": "2026-10-18T15:14:11+00:00",
+  "elapsed_sec": 75.4,
   "router_tags": [
     "rates",
     "credit",
@@ -20,8 +20,23 @@
     "portfolio": "allocation_framework"
   },
   "error": false,
-  "report_text": "**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % [S1].  \n- Investment‑grade (IG) corporate spread is 0.84 % over Treasuries [S3]; high‑yield (HY) spread is 3.23 % [S2].  \n- IG spread is narrow (+4.26 pp vs Treasury) and offers limited upside unless yields rise further [S1‑S3].  \n- Treasuries remain the safest core income source; IG adds modest yield with low default risk [S5], [S8].  \n- No data was fetched for portfolio‑specific allocation details; the recommendation below is qualitative and based on the available spread and yield information.\n\n---\n\n**Core Analysis**\n\n*Macro & Yield Environment*  \n- Steepening yield curve; 10‑yr Treasury at 5.10 % [S1].  \n- IG spread at 0.84 % indicates a modest premium over Treasuries; HY spread at 3.23 % remains attractive for risk‑tolerant investors [S2], [S3].\n\n*Credit Risk & Yield Premium*  \n- IG bonds provide a low‑default‑risk yield lift of ~0.8 % over Treasuries [S3].  \n- HY bonds offer ~3.2 % over Treasuries but carry higher default and liquidity risk [S2].  \n- IG spread is near historic lows; upside potential is limited unless Treasury yields rise further [S3].\n\n*Duration & Interest‑Rate Sensitivity*  \n- IG bonds typically have shorter duration than Treasuries of the same maturity, reducing overall portfolio duration risk [S5].  \n- Treasuries deliver higher price appreciation if rates fall or remain flat; IG offers a more stable core with lower sensitivity to rate hikes.\n\n---\n\n**Scenarios**\n\n| Scenario | Impact on IG | Impact on Treasuries | Portfolio Implication |\n|----------|--------------|----------------------|-----------------------|\n| **Rate hike +0.25 %** | Minor price drop (~0.5 %) | Larger price drop (~1.0 %) | IG‑heavy allocation mitigates loss |\n| **Rate cut +0.25 %** | Small price gain | Larger price gain | Treasuries capture upside |\n| **Credit shock (IG downgrade)** | Potential spread widening >1 pp | Minimal | Concentration risk in IG sector |\n| **Inflation spike** | Spread compression risk | Yield rise, price fall | Treasuries still core, IG adds yield |\n\n*Note: Scenario impacts are qualitative; exact price changes are not sourced.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Interest‑Rate Risk** – Treasuries are more sensitive to rate changes; monitor Fed policy and yield‑curve shifts.  \n- **Credit Risk** – IG spreads may widen if economic fundamentals deteriorate; monitor corporate credit ratings and default indicators.  \n- **Liquidity Risk** – HY bonds can experience tighter spreads; monitor market depth and bid‑ask spreads.  \n- **Concentration Risk** – Avoid over‑exposure to a few large issuers; diversify across sectors and maturities.  \n- **Inflation Risk** – Rising inflation can erode real returns; track CPI and inflation‑linked securities.\n\n---\n\n**Portfolio / Decision Implications**\n\n- **Core Treasuries** – 50–60 % of the fixed‑income allocation provides a stable income base and limits duration risk [S4].  \n- **IG Corporate Overlay** – 30–40 % captures the modest spread premium while keeping default exposure low [S4].  \n- **Optional HY Exposure** – 10–20 % for investors with higher risk tolerance and a desire for additional yield [S4].  \n- **Rationale** – The current spread environment (IG +0.84 % over Treasury) offers limited upside; a Treasuries‑heavy core protects against rate volatility, while IG adds yield.  \n- **Monitoring** – Re‑balance annually or after significant spread or yield movements; adjust HY exposure if credit conditions deteriorate.\n\n---\n\n**Conclusion**\n\nThe prevailing yield and spread data suggest a diversified fixed‑income portfolio should anchor around Treasuries (50–60 %) and supplement with investment‑grade corporate bonds (30–40 %). Optional high‑yield exposure (10–20 %) can be considered for higher‑risk‑tolerant investors. This framework balances yield enhancement with credit and duration risk, aligning with the current steepening yield curve and narrow IG spread environment.",
-  "report_text_annotated": "> **Validation:** 15 of 27 figures verified against source data (11 exact, 4 derived); 12 flagged (10 of them appear in a fetched web/news snippet). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data. 7 unverified figure(s) on portfolio, which has no data.\n\n**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % [S1].  \n- Investment‑grade (IG) corporate spread is 0.84 % over Treasuries [S3]; high‑yield (HY) spread is 3.23 % [S2].  \n- IG spread is narrow (+4.26 pp vs Treasury) and offers limited upside unless yields rise further [S1‑S3].  \n- Treasuries remain the safest core income source; IG adds modest yield with low default risk [S5], [S8].  \n- No data was fetched for portfolio‑specific allocation details; the recommendation below is qualitative and based on the available spread and yield information.\n\n---\n\n**Core Analysis**\n\n*Macro & Yield Environment*  \n- Steepening yield curve; 10‑yr Treasury at 5.10 % [S1].  \n- IG spread at 0.84 % indicates a modest premium over Treasuries; HY spread at 3.23 % remains attractive for risk‑tolerant investors [S2], [S3].\n\n*Credit Risk & Yield Premium*  \n- IG bonds provide a low‑default‑risk yield lift of ~0.8 % over Treasuries [S3].  \n- HY bonds offer ~3.2 % over Treasuries but carry higher default and liquidity risk [S2].  \n- IG spread is near historic lows; upside potential is limited unless Treasury yields rise further [S3].\n\n*Duration & Interest‑Rate Sensitivity*  \n- IG bonds typically have shorter duration than Treasuries of the same maturity, reducing overall portfolio duration risk [S5].  \n- Treasuries deliver higher price appreciation if rates fall or remain flat; IG offers a more stable core with lower sensitivity to rate hikes.\n\n---\n\n**Scenarios**\n\n| Scenario | Impact on IG | Impact on Treasuries | Portfolio Implication |\n|----------|--------------|----------------------|-----------------------|\n| **Rate hike +0.25 %** | Minor price drop (~0.5 %) | Larger price drop (~1.0 %) | IG‑heavy allocation mitigates loss |\n| **Rate cut +0.25 %** | Small price gain | Larger price gain | Treasuries capture upside |\n| **Credit shock (IG downgrade)** | Potential spread widening >1 pp | Minimal | Concentration risk in IG sector |\n| **Inflation spike** | Spread compression risk | Yield rise, price fall | Treasuries still core, IG adds yield |\n\n*Note: Scenario impacts are qualitative; exact price changes are not sourced.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Interest‑Rate Risk** – Treasuries are more sensitive to rate changes; monitor Fed policy and yield‑curve shifts.  \n- **Credit Risk** – IG spreads may widen if economic fundamentals deteriorate; monitor corporate credit ratings and default indicators.  \n- **Liquidity Risk** – HY bonds can experience tighter spreads; monitor market depth and bid‑ask spreads.  \n- **Concentration Risk** – Avoid over‑exposure to a few large issuers; diversify across sectors and maturities.  \n- **Inflation Risk** – Rising inflation can erode real returns; track CPI and inflation‑linked securities.\n\n---\n\n**Portfolio / Decision Implications**\n\n- **Core Treasuries** – 50–60 % of the fixed‑income allocation provides a stable income base and limits duration risk [S4].  \n- **IG Corporate Overlay** – 30–40 % captures the modest spread premium while keeping default exposure low [S4].  \n- **Optional HY Exposure** – 10–20 % for investors with higher risk tolerance and a desire for additional yield [S4].  \n- **Rationale** – The current spread environment (IG +0.84 % over Treasury) offers limited upside; a Treasuries‑heavy core protects against rate volatility, while IG adds yield.  \n- **Monitoring** – Re‑balance annually or after significant spread or yield movements; adjust HY exposure if credit conditions deteriorate.\n\n---\n\n**Conclusion**\n\nThe prevailing yield and spread data suggest a diversified fixed‑income portfolio should anchor around Treasuries (50–60 %) and supplement with investment‑grade corporate bonds (30–40 %). Optional high‑yield exposure (10–20 %) can be considered for higher‑risk‑tolerant investors. This framework balances yield enhancement with credit and duration risk, aligning with the current steepening yield curve and narrow IG spread environment.",
+  "report_text": "**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % [S1].  \n- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption).  \n- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption).  \n- IG spreads are near‑historical lows, limiting upside but offering modest credit risk premium.  \n- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption).  \n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed policy remains tight; yields are high but credit spreads are compressed.  \n- Inflation expectations are moderating, supporting a stable yield environment.  \n\n*Sector*  \n- IG corporate bonds dominate the corporate sector; spreads are 0.84 % above Treasury [S3].  \n- HY sector offers higher yield (3.23 % above Treasury) but carries higher default risk [S2].  \n\n*Credit*  \n- IG credit risk is moderate; default rates remain low in the current environment.  \n- HY credit risk is higher; spreads reflect a wider risk‑reward trade‑off.  \n\n*Portfolio*  \n- Treasuries provide the lowest credit risk and a stable yield base.  \n- IG bonds add yield with limited spread risk; duration is slightly higher than Treasuries.  \n\n*See Table 1 for Treasury yield data, Table 2 for HY spread data, Table 3 for IG spread data.*\n\n---\n\n**Scenarios**\n\n| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment. |\n| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk. |\n| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises. |\n\n*All allocations are scenario‑based and marked as assumptions.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Credit Spread Compression** – IG spreads could widen if corporate fundamentals deteriorate.  \n- **Fed Rate Hikes** – Further tightening could erode bond prices, especially for longer‑dated IG issues.  \n- **Liquidity Constraints** – Market stress could reduce liquidity in the IG market.  \n- **Default Events** – A spike in corporate defaults would disproportionately affect IG and HY holdings.  \n- **Monitoring** – Track daily OAS levels for IG and HY, Treasury yield movements, and Fed policy statements.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).  \n- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption).  \n- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption).  \n\nAdjust allocations in response to spread movements, Fed guidance, and credit outlook changes.  \n\n*No portfolio‑specific data were fetched for this analysis.*\n\n---\n\n**Conclusion**\n\nThe current market snapshot shows a high‑yield environment with compressed IG spreads. A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk. Investors should monitor spread dynamics and Fed policy closely, adjusting the allocation toward Treasuries in a tightening or credit‑stress scenario and toward IG in a widening‑spread environment.  \n\n---",
+  "report_text_annotated": "> **Validation:** 7 of 39 figures verified against source data (5 exact, 2 derived); 32 flagged (30 of them appear in a fetched web/news snippet; 28 labelled as assumptions). 2 paragraph(s) state figures without a citation. 4 unverified figure(s) on portfolio, which has no data.\n\n**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % [S1].  \n- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption).  \n- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption).  \n- IG spreads are near‑historical lows, limiting upside but offering modest credit risk premium.  \n- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption).  \n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed policy remains tight; yields are high but credit spreads are compressed.  \n- Inflation expectations are moderating, supporting a stable yield environment.  \n\n*Sector*  \n- IG corporate bonds dominate the corporate sector; spreads are 0.84 % above Treasury [S3].  \n- HY sector offers higher yield (3.23 % above Treasury) but carries higher default risk [S2].  \n\n*Credit*  \n- IG credit risk is moderate; default rates remain low in the current environment.  \n- HY credit risk is higher; spreads reflect a wider risk‑reward trade‑off.  \n\n*Portfolio*  \n- Treasuries provide the lowest credit risk and a stable yield base.  \n- IG bonds add yield with limited spread risk; duration is slightly higher than Treasuries.  \n\n*See Table 1 for Treasury yield data, Table 2 for HY spread data, Table 3 for IG spread data.*\n\n---\n\n**Scenarios**\n\n| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment. |\n| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk. |\n| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises. |\n\n*All allocations are scenario‑based and marked as assumptions.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Credit Spread Compression** – IG spreads could widen if corporate fundamentals deteriorate.  \n- **Fed Rate Hikes** – Further tightening could erode bond prices, especially for longer‑dated IG issues.  \n- **Liquidity Constraints** – Market stress could reduce liquidity in the IG market.  \n- **Default Events** – A spike in corporate defaults would disproportionately affect IG and HY holdings.  \n- **Monitoring** – Track daily OAS levels for IG and HY, Treasury yield movements, and Fed policy statements.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).  \n- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption).  \n- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption).  \n\nAdjust allocations in response to spread movements, Fed guidance, and credit outlook changes.  \n\n*No portfolio‑specific data were fetched for this analysis.*\n\n---\n\n**Conclusion**\n\nThe current market snapshot shows a high‑yield environment with compressed IG spreads. A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk. Investors should monitor spread dynamics and Fed policy closely, adjusting the allocation toward Treasuries in a tightening or credit‑stress scenario and toward IG in a widening‑spread environment.  \n\n---",
+  "draft_report_text": "**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % [S1].  \n- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption).  \n- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption).  \n- IG spreads are near‑historical lows, limiting upside but offering modest credit risk premium.  \n- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption).  \n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed policy remains tight; yields are high but credit spreads are compressed.  \n- Inflation expectations are moderating, supporting a stable yield environment.  \n\n*Sector*  \n- IG corporate bonds dominate the corporate sector; spreads are 0.84 % above Treasury [S3].  \n- HY sector offers higher yield (3.23 % above Treasury) but carries higher default risk [S2].  \n\n*Credit*  \n- IG credit risk is moderate; default rates remain low in the current environment.  \n- HY credit risk is higher; spreads reflect a wider risk‑reward trade‑off.  \n\n*Portfolio*  \n- Treasuries provide the lowest credit risk and a stable yield base.  \n- IG bonds add yield with limited spread risk; duration is slightly higher than Treasuries.  \n\n*See Table 1 for Treasury yield data, Table 2 for HY spread data, Table 3 for IG spread data.*\n\n---\n\n**Scenarios**\n\n| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment. |\n| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk. |\n| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises. |\n\n*All allocations are scenario‑based and marked as assumptions.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Credit Spread Compression** – IG spreads could widen if corporate fundamentals deteriorate.  \n- **Fed Rate Hikes** – Further tightening could erode bond prices, especially for longer‑dated IG issues.  \n- **Liquidity Constraints** – Market stress could reduce liquidity in the IG market.  \n- **Default Events** – A spike in corporate defaults would disproportionately affect IG and HY holdings.  \n- **Monitoring** – Track daily OAS levels for IG and HY, Treasury yield movements, and Fed policy statements.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).  \n- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption).  \n- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption).  \n\nAdjust allocations in response to spread movements, Fed guidance, and credit outlook changes.  \n\n*No portfolio‑specific data were fetched for this analysis.*\n\n---\n\n**Conclusion**\n\nThe current market snapshot shows a high‑yield environment with compressed IG spreads. A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk. Investors should monitor spread dynamics and Fed policy closely, adjusting the allocation toward Treasuries in a tightening or credit‑stress scenario and toward IG in a widening‑spread environment.  \n\n---",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"40\" in: \"A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk.\" — this number appears in source [S4]; cite it in that sentence.\n2. \"50 %\" in: \"A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk.\" — this number appears in source [S4]; cite it in that sentence.\n3. \"50\" in: \"A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk.\" — this number appears in source [S4]; cite it in that sentence.\n4. \"60 %\" in: \"A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk.\" — this number appears in source [S4]; cite it in that sentence.\n5. Add a citation to: \"| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) \" — its figures 20 come from [S2].\n6. Add a citation to: \"- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).\" — its figures 20 come from [S2].",
+        "open_issues_before": 6,
+        "summary_before": "7 of 39 figures verified against source data (5 exact, 2 derived); 32 flagged (30 of them appear in a fetched web/news snippet; 28 labelled as assumptions). 2 paragraph(s) state figures without a citation. 4 unverified figure(s) on portfolio, which has no data.",
+        "accepted": false,
+        "open_issues_after": 6,
+        "summary_after": "7 of 39 figures verified against source data (5 exact, 2 derived); 32 flagged (30 of them appear in a fetched web/news snippet; 28 labelled as assumptions). 2 paragraph(s) state figures without a citation. 4 unverified figure(s) on portfolio, which has no data.",
+        "revised_report_text": "**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % [S1].  \n- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption).  \n- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption).  \n- IG spreads are near‑historical lows, limiting upside but offering modest credit risk premium.  \n- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption) [S4].\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed policy remains tight; yields are high but credit spreads are compressed.  \n- Inflation expectations are moderating, supporting a stable yield environment.  \n\n*Sector*  \n- IG corporate bonds dominate the corporate sector; spreads are 0.84 % above Treasury [S3].  \n- HY sector offers higher yield (3.23 % above Treasury) but carries higher default risk [S2].  \n\n*Credit*  \n- IG credit risk is moderate; default rates remain low in the current environment.  \n- HY credit risk is higher; spreads reflect a wider risk‑reward trade‑off.  \n\n*Portfolio*  \n- Treasuries provide the lowest credit risk and a stable yield base.  \n- IG bonds add yield with limited spread risk; duration is slightly higher than Treasuries.  \n\n*See Table 1 for Treasury yield data, Table 2 for HY spread data, Table 3 for IG spread data.*\n\n---\n\n**Scenarios**\n\n| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment. |\n| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk. |\n| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises. |\n\n*All allocations are scenario‑based and marked as assumptions.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Credit Spread Compression** – IG spreads could widen if corporate fundamentals deteriorate.  \n- **Fed Rate Hikes** – Further tightening could erode bond prices, especially for longer‑dated IG issues.  \n- **Liquidity Constraints** – Market stress could reduce liquidity in the IG market.  \n- **Default Events** – A spike in corporate defaults would disproportionately affect IG and HY holdings.  \n- **Monitoring** – Track daily OAS levels for IG and HY, Treasury yield movements, and Fed policy statements.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).  \n- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption) [S4].  \n- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption) [S4].  \n\nAdjust allocations in response to spread movements, Fed guidance, and credit outlook changes.  \n\n*No portfolio‑specific data were fetched for this analysis.*\n\n---\n\n**Conclusion**\n\nThe current market snapshot shows a high‑yield environment with compressed IG spreads. A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk. Investors should monitor spread dynamics and Fed policy closely, adjusting the allocation toward Treasuries in a tightening or credit‑stress scenario and toward IG in a widening‑spread environment."
+      }
+    ]
+  },
   "sources": [
     {
       "title": "FRED series DGS10: 10-Year Treasury Constant Maturity Yield",
@@ -52,31 +67,31 @@
       "id": "S4"
     },
     {
-      "title": "How Corporate Bonds Can Improve Portfolio Diversification",
-      "url": "https://blog.siebert.com/how-corporate-bonds-improve-portfolio-diversification",
-      "source": "web (Tavily)",
-      "snippet": "Interest rate risk. Bond prices move inversely to interest rates. Longer-maturity bonds are more sensitive to rate changes. Investment-grade corporate yields were running around 5.22% as of March 2026, with the Federal Reserve's rate path still uncertain as of the publication date of this article. (investmentgrade.com,",
-      "id": "S5"
-    },
-    {
       "title": "2026 Outlook: Fixed Income Views - Cambridge Associates",
       "url": "https://www.cambridgeassociates.com/insight/2026-outlook-fixed-income-views",
       "source": "web (Tavily)",
       "snippet": "Overall, we anticipate that bonds will outperform cash in most major markets—supported by steeper yield curves—and should maintain their defense role in a downturn. However, since current bond yields are not especially attractive relative to our fair value estimates, we recommend maintaining allocations at policy level",
+      "id": "S5"
+    },
+    {
+      "title": "2026 Market Outlook page - BondBloxx® ETF",
+      "url": "https://bondbloxxetf.com/2026-fixed-income-market-outlook",
+      "source": "web (Tavily)",
+      "snippet": "Credit: Intermediate BBB rated corporate bonds were the best performing sector within U.S. corporate bonds, reflecting strong fundamentals and declining interest rates. In U.S. high yield, BB rated bonds were the top performer, as a result of attractive coupon income and price appreciation.  U.S. Treasuries:Intermediat",
       "id": "S6"
     },
     {
-      "title": "2026 Investment Outlook: Process Over Predictions | Johnson Financial Group",
-      "url": "https://www.johnsonfinancialgroup.com/resources/blogs/markets-and-economy/2026-investment-outlook-process-over-predictions",
+      "title": "Checking in with Outflows: How Much Did Investment-Grade Bond Funds See Last Week?",
+      "url": "https://finance.yahoo.com/news/checking-outflows-much-did-investment-130719505.html",
       "source": "web (Tavily)",
-      "snippet": "The chart below provides a summary of the average expected return for major bond, stock, and alternative asset classes over the next 10-15 years. We expect diversified portfolios to return roughly 6% on average over this period. This outlook reflects a return to \"normalcy,\" where bonds provide genuine income and stocks",
+      "snippet": "Like yields, the OAS (option-adjusted spread) rose by seven basis points to end at ~2.1% on February 5. The OAS measures the average difference in yields between investment-grade bonds and Treasuries. Thus, a rise in this spread implies that the risk of high-grade bonds relative to Treasuries has increased.  For more a",
       "id": "S7"
     },
     {
-      "title": "Bond market outlook June 2026 | Midyear outlook | Fidelity",
-      "url": "https://www.fidelity.com/learning-center/trading-investing/bond-market-outlook",
+      "title": "UBS Diversified Credit",
+      "url": "https://finance.yahoo.com/news/ubs-diversified-credit-130300125.html",
       "source": "web (Tavily)",
-      "snippet": "1. Holding plenty of Treasurys  “Treasurys are very attractive,” says Ware, particularly after the recent rise in yields. Backed by the full faith and credit of the US government, they offer low risk of default, relatively attractive yields, and excellent liquidity. For those reasons, Ware and team have been favoring T",
+      "snippet": "consists of investment-grade and non-investment-grade credit assets. UBS holds securities such as hybrids, U.S. high-yield securities (a maximum of 25% of the portfolio), investment-grade corporate bonds (up to 100%), and other securitised assets (up to 30%). Australian hybrids have historically been a reasonable propo",
       "id": "S8"
     },
     {
@@ -90,10 +105,7 @@
   "citations_used": [
     "S1",
     "S2",
-    "S3",
-    "S4",
-    "S5",
-    "S8"
+    "S3"
   ],
   "tables": [
     {
@@ -4975,10 +4987,10 @@
   ],
   "validation": {
     "counts": {
-      "figures": 27,
-      "verified": 11,
-      "derived": 4,
-      "unverified": 12
+      "figures": 39,
+      "verified": 5,
+      "derived": 2,
+      "unverified": 32
     },
     "figures": [
       {
@@ -4991,8 +5003,16 @@
         "status": "verified",
         "matched": "DGS10 on 2026-10-15",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": true,
         "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
         "context": "- 10‑yr Treasury yield is 5.10 % [S1]."
       },
       {
@@ -5000,415 +5020,817 @@
         "value": 0.84,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 109,
-        "end": 115,
+        "start": 106,
+        "end": 112,
         "status": "verified",
-        "matched": "BAMLC0A0CM on 2025-11-07",
+        "matched": "BAMLC0A0CM on 2026-10-15",
         "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- Investment‑grade (IG) corporate spread is 0.84 % over Treasuries [S3]; high‑yield (HY) spread is 3.23 % [S2]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption)."
+      },
+      {
+        "text": "5.94 %",
+        "value": 5.94,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 157,
+        "end": 163,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S3"
+        ],
+        "context": "- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption)."
       },
       {
         "text": "3.23 %",
         "value": 3.23,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 164,
-        "end": 170,
+        "start": 205,
+        "end": 211,
         "status": "verified",
         "matched": "BAMLH0A0HYM2 on 2026-10-15",
         "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- Investment‑grade (IG) corporate spread is 0.84 % over Treasuries [S3]; high‑yield (HY) spread is 3.23 % [S2]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption)."
       },
       {
-        "text": "+4.26 pp",
-        "value": 4.26,
-        "unit": "pp",
-        "tolerance": 0.0050000010000000004,
-        "start": 202,
-        "end": 210,
-        "status": "verified",
-        "matched": "DGS10 on 2026-01-21",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "- IG spread is narrow (+4.26 pp vs Treasury) and offers limited upside unless yields rise further [S1‑S3]."
-      },
-      {
-        "text": "5.10 %",
-        "value": 5.1,
+        "text": "8.33 %",
+        "value": 8.33,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 657,
-        "end": 663,
-        "status": "verified",
-        "matched": "DGS10 on 2026-10-15",
-        "source_id": "S1",
-        "topic_match": true,
+        "start": 255,
+        "end": 261,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
         "in_source_text": null,
-        "context": "- Steepening yield curve; 10‑yr Treasury at 5.10 % [S1]."
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S2"
+        ],
+        "context": "- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption)."
+      },
+      {
+        "text": "40",
+        "value": 40.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 404,
+        "end": 406,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption)."
+      },
+      {
+        "text": "50 %",
+        "value": 50.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 407,
+        "end": 411,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption)."
+      },
+      {
+        "text": "50",
+        "value": 50.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 420,
+        "end": 422,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption)."
+      },
+      {
+        "text": "60 %",
+        "value": 60.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 423,
+        "end": 427,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption)."
       },
       {
         "text": "0.84 %",
         "value": 0.84,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 687,
-        "end": 693,
+        "start": 790,
+        "end": 796,
         "status": "verified",
-        "matched": "BAMLC0A0CM on 2025-11-07",
+        "matched": "BAMLC0A0CM on 2026-10-15",
         "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- IG spread at 0.84 % indicates a modest premium over Treasuries; HY spread at 3.23 % remains attractive for risk‑tolerant investors [S2], [S3]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- IG corporate bonds dominate the corporate sector; spreads are 0.84 % above Treasury [S3]."
       },
       {
         "text": "3.23 %",
         "value": 3.23,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 751,
-        "end": 757,
+        "start": 853,
+        "end": 859,
         "status": "verified",
         "matched": "BAMLH0A0HYM2 on 2026-10-15",
         "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- IG spread at 0.84 % indicates a modest premium over Treasuries; HY spread at 3.23 % remains attractive for risk‑tolerant investors [S2], [S3]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- HY sector offers higher yield (3.23 % above Treasury) but carries higher default risk [S2]."
       },
       {
-        "text": "0.8 %",
-        "value": 0.8,
-        "unit": "%",
-        "tolerance": 0.050000001,
-        "start": 903,
-        "end": 908,
-        "status": "verified",
-        "matched": "BAMLC0A0CM on 2025-10-16",
-        "source_id": "S3",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "- IG bonds provide a low‑default‑risk yield lift of ~0.8 % over Treasuries [S3]."
-      },
-      {
-        "text": "3.2 %",
-        "value": 3.2,
-        "unit": "%",
-        "tolerance": 0.050000001,
-        "start": 951,
-        "end": 956,
-        "status": "verified",
-        "matched": "BAMLH0A0HYM2 on 2025-11-18",
-        "source_id": "S2",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "- HY bonds offer ~3.2 % over Treasuries but carry higher default and liquidity risk [S2]."
-      },
-      {
-        "text": "+0.25 %",
-        "value": 0.25,
-        "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 1631,
-        "end": 1638,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
-        "in_source_text": null,
-        "context": "| **Rate hike +0.25 %** | Minor price drop (~0.5 %) | Larger price drop (~1.0 %) | IG‑heavy allocation mitigates loss |"
-      },
-      {
-        "text": "0.5 %",
-        "value": 0.5,
-        "unit": "%",
-        "tolerance": 0.050000001,
-        "start": 1662,
-        "end": 1667,
-        "status": "derived",
-        "matched": "DGS10 change 2026-07-16 to 2026-10-15",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "| **Rate hike +0.25 %** | Minor price drop (~0.5 %) | Larger price drop (~1.0 %) | IG‑heavy allocation mitigates loss |"
-      },
-      {
-        "text": "1.0 %",
-        "value": 1.0,
-        "unit": "%",
-        "tolerance": 0.050000001,
-        "start": 1691,
-        "end": 1696,
-        "status": "derived",
-        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "| **Rate hike +0.25 %** | Minor price drop (~0.5 %) | Larger price drop (~1.0 %) | IG‑heavy allocation mitigates loss |"
-      },
-      {
-        "text": "+0.25 %",
-        "value": 0.25,
-        "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 1750,
-        "end": 1757,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
-        "in_source_text": null,
-        "context": "| **Rate cut +0.25 %** | Small price gain | Larger price gain | Treasuries capture upside |"
-      },
-      {
-        "text": "1 pp",
-        "value": 1.0,
-        "unit": "pp",
+        "text": "40",
+        "value": 40.0,
+        "unit": "",
         "tolerance": 0.500000001,
-        "start": 1892,
-        "end": 1896,
-        "status": "verified",
-        "matched": "BAMLC0A0CM on 2026-03-16",
-        "source_id": "S3",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "| **Credit shock (IG downgrade)** | Potential spread widening >1 pp | Minimal | Concentration risk in IG sector |"
+        "start": 1526,
+        "end": 1528,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment."
+      },
+      {
+        "text": "50 %",
+        "value": 50.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1529,
+        "end": 1533,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment."
       },
       {
         "text": "50",
         "value": 50.0,
         "unit": "",
         "tolerance": 0.500000001,
-        "start": 2826,
-        "end": 2828,
+        "start": 1549,
+        "end": 1551,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": "S4",
-        "context": "- **Core Treasuries** – 50–60 % of the fixed‑income allocation provides a stable income base and limits duration risk [S4]."
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment."
       },
       {
         "text": "60 %",
         "value": 60.0,
         "unit": "%",
         "tolerance": 0.500000001,
-        "start": 2829,
-        "end": 2833,
+        "start": 1552,
+        "end": 1556,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": "S4",
-        "context": "- **Core Treasuries** – 50–60 % of the fixed‑income allocation provides a stable income base and limits duration risk [S4]."
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment."
+      },
+      {
+        "text": "60",
+        "value": 60.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1644,
+        "end": 1646,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk."
+      },
+      {
+        "text": "70 %",
+        "value": 70.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1647,
+        "end": 1651,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk."
       },
       {
         "text": "30",
         "value": 30.0,
         "unit": "",
         "tolerance": 0.500000001,
-        "start": 2957,
-        "end": 2959,
+        "start": 1667,
+        "end": 1669,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": "S4",
-        "context": "- **IG Corporate Overlay** – 30–40 % captures the modest spread premium while keeping default exposure low [S4]."
+        "snippet_ids": [
+          "S4",
+          "S8"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk."
       },
       {
         "text": "40 %",
         "value": 40.0,
         "unit": "%",
         "tolerance": 0.500000001,
-        "start": 2960,
-        "end": 2964,
+        "start": 1670,
+        "end": 1674,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": "S4",
-        "context": "- **IG Corporate Overlay** – 30–40 % captures the modest spread premium while keeping default exposure low [S4]."
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk."
       },
       {
-        "text": "10",
-        "value": 10.0,
+        "text": "20",
+        "value": 20.0,
         "unit": "",
         "tolerance": 0.500000001,
-        "start": 3072,
-        "end": 3074,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
-        "in_source_text": "S4",
-        "context": "- **Optional HY Exposure** – 10–20 % for investors with higher risk tolerance and a desire for additional yield [S4]."
-      },
-      {
-        "text": "20 %",
-        "value": 20.0,
-        "unit": "%",
-        "tolerance": 0.500000001,
-        "start": 3075,
-        "end": 3079,
+        "start": 1776,
+        "end": 1778,
         "status": "derived",
         "matched": "BAMLH0A0HYM2 % change 2026-07-20 to 2026-10-15",
         "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- **Optional HY Exposure** – 10–20 % for investors with higher risk tolerance and a desire for additional yield [S4]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises."
       },
       {
-        "text": "+0.84 %",
-        "value": 0.84,
+        "text": "30 %",
+        "value": 30.0,
         "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 3216,
-        "end": 3223,
-        "status": "verified",
-        "matched": "BAMLC0A0CM on 2025-11-07",
-        "source_id": "S3",
+        "tolerance": 0.500000001,
+        "start": 1779,
+        "end": 1783,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S8"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises."
+      },
+      {
+        "text": "70",
+        "value": 70.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1799,
+        "end": 1801,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises."
+      },
+      {
+        "text": "80 %",
+        "value": 80.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1802,
+        "end": 1806,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises."
+      },
+      {
+        "text": "20",
+        "value": 20.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2568,
+        "end": 2570,
+        "status": "derived",
+        "matched": "BAMLH0A0HYM2 % change 2026-07-20 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- **Rationale** – The current spread environment (IG +0.84 % over Treasury) offers limited upside; a Treasuries‑heavy core protects against rate volatility, while IG adds yield."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption)."
+      },
+      {
+        "text": "30 %",
+        "value": 30.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2571,
+        "end": 2575,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S8"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption)."
+      },
+      {
+        "text": "70",
+        "value": 70.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2580,
+        "end": 2582,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption)."
+      },
+      {
+        "text": "80 %",
+        "value": 80.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2583,
+        "end": 2587,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption)."
+      },
+      {
+        "text": "40",
+        "value": 40.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2631,
+        "end": 2633,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption)."
+      },
+      {
+        "text": "50 %",
+        "value": 50.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2634,
+        "end": 2638,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption)."
       },
       {
         "text": "50",
         "value": 50.0,
         "unit": "",
         "tolerance": 0.500000001,
-        "start": 3620,
-        "end": 3622,
+        "start": 2643,
+        "end": 2645,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": "S4",
-        "context": "The prevailing yield and spread data suggest a diversified fixed‑income portfolio should anchor around Treasuries (50–60 %) and supplement with investment‑grade corporate bonds (30–40 %)."
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption)."
       },
       {
         "text": "60 %",
         "value": 60.0,
         "unit": "%",
         "tolerance": 0.500000001,
-        "start": 3623,
-        "end": 3627,
+        "start": 2646,
+        "end": 2650,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": "S4",
-        "context": "The prevailing yield and spread data suggest a diversified fixed‑income portfolio should anchor around Treasuries (50–60 %) and supplement with investment‑grade corporate bonds (30–40 %)."
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption)."
+      },
+      {
+        "text": "60",
+        "value": 60.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2696,
+        "end": 2698,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption)."
+      },
+      {
+        "text": "70 %",
+        "value": 70.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2699,
+        "end": 2703,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption)."
       },
       {
         "text": "30",
         "value": 30.0,
         "unit": "",
         "tolerance": 0.500000001,
-        "start": 3683,
-        "end": 3685,
+        "start": 2708,
+        "end": 2710,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": "S4",
-        "context": "The prevailing yield and spread data suggest a diversified fixed‑income portfolio should anchor around Treasuries (50–60 %) and supplement with investment‑grade corporate bonds (30–40 %)."
+        "snippet_ids": [
+          "S4",
+          "S8"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption)."
       },
       {
         "text": "40 %",
         "value": 40.0,
         "unit": "%",
         "tolerance": 0.500000001,
-        "start": 3686,
-        "end": 3690,
+        "start": 2711,
+        "end": 2715,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": "S4",
-        "context": "The prevailing yield and spread data suggest a diversified fixed‑income portfolio should anchor around Treasuries (50–60 %) and supplement with investment‑grade corporate bonds (30–40 %)."
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption)."
       },
       {
-        "text": "10",
-        "value": 10.0,
+        "text": "40",
+        "value": 40.0,
         "unit": "",
         "tolerance": 0.500000001,
-        "start": 3723,
-        "end": 3725,
+        "start": 3044,
+        "end": 3046,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": "S4",
-        "context": "Optional high‑yield exposure (10–20 %) can be considered for higher‑risk‑tolerant investors."
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk."
       },
       {
-        "text": "20 %",
-        "value": 20.0,
+        "text": "50 %",
+        "value": 50.0,
         "unit": "%",
         "tolerance": 0.500000001,
-        "start": 3726,
-        "end": 3730,
-        "status": "derived",
-        "matched": "BAMLH0A0HYM2 % change 2026-07-20 to 2026-10-15",
-        "source_id": "S2",
-        "topic_match": false,
-        "in_source_text": null,
-        "context": "Optional high‑yield exposure (10–20 %) can be considered for higher‑risk‑tolerant investors."
+        "start": 3047,
+        "end": 3051,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk."
+      },
+      {
+        "text": "50",
+        "value": 50.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 3059,
+        "end": 3061,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk."
+      },
+      {
+        "text": "60 %",
+        "value": 60.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 3062,
+        "end": 3066,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk."
       }
     ],
     "citations": {
-      "markers": 15,
+      "markers": 5,
       "dangling": [],
       "uncited_paragraphs": [
         {
-          "text": "- IG spread is narrow (+4.26 pp vs Treasury) and offers limited upside unless yields rise further [S1‑S3].",
+          "text": "| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield ",
           "figures": [
-            "+4.26 pp"
+            "20"
+          ],
+          "sources": [
+            "S2"
           ]
         },
         {
-          "text": "| Scenario | Impact on IG | Impact on Treasuries | Portfolio Implication |\n|----------|--------------|----------------------|-----------------------|\n| **Rate hike +0.25 %** | Minor price drop (~0.5 %",
+          "text": "- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).",
           "figures": [
-            "0.5 %",
-            "1.0 %",
-            "1 pp"
-          ]
-        },
-        {
-          "text": "- **Rationale** – The current spread environment (IG +0.84 % over Treasury) offers limited upside; a Treasuries‑heavy core protects against rate volatility, while IG adds yield.",
-          "figures": [
-            "+0.84 %"
-          ]
-        },
-        {
-          "text": "The prevailing yield and spread data suggest a diversified fixed‑income portfolio should anchor around Treasuries (50–60 %) and supplement with investment‑grade corporate bonds (30–40 %). Optional hig",
-          "figures": [
-            "20 %"
+            "20"
+          ],
+          "sources": [
+            "S2"
           ]
         }
       ],
-      "source_mismatches": [
-        {
-          "text": "- **Optional HY Exposure** – 10–20 % for investors with higher risk tolerance and a desire for additional yield [S4].",
-          "figures": [
-            "20 %"
-          ],
-          "cited": [
-            "S4"
-          ]
-        }
-      ]
+      "source_mismatches": []
     },
     "freshness": [
       {
         "table": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
         "last_date": "2026-10-15",
         "frequency": "daily",
-        "age_days": 2,
+        "age_days": 3,
         "max_age_days": 7,
         "status": "ok"
       },
@@ -5416,7 +5838,7 @@
         "table": "FRED: ICE BofA US High Yield Option-Adjusted Spread (BAMLH0A0HYM2)",
         "last_date": "2026-10-15",
         "frequency": "daily",
-        "age_days": 2,
+        "age_days": 3,
         "max_age_days": 7,
         "status": "ok"
       },
@@ -5424,7 +5846,7 @@
         "table": "FRED: ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread (BAMLC0A0CM)",
         "last_date": "2026-10-15",
         "frequency": "daily",
-        "age_days": 2,
+        "age_days": 3,
         "max_age_days": 7,
         "status": "ok"
       }
@@ -5435,24 +5857,33 @@
           "topic": "portfolio",
           "disclosed": true,
           "unverified_figures": [
-            "+0.25 %",
+            "40",
+            "50 %",
             "50",
-            "60 %",
-            "50",
-            "60 %",
-            "30",
-            "40 %"
+            "60 %"
           ]
         }
       ],
       "issue": true
     },
     "data_status": [],
-    "summary": "15 of 27 figures verified against source data (11 exact, 4 derived); 12 flagged (10 of them appear in a fetched web/news snippet). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data. 7 unverified figure(s) on portfolio, which has no data."
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ],
+    "open_issues": 6,
+    "summary": "7 of 39 figures verified against source data (5 exact, 2 derived); 32 flagged (30 of them appear in a fetched web/news snippet; 28 labelled as assumptions). 2 paragraph(s) state figures without a citation. 4 unverified figure(s) on portfolio, which has no data."
   },
   "run_meta": {
-    "run_id": "20261017-233310-542c8e",
-    "timestamp": "2026-10-18T03:33:10+00:00",
+    "run_id": "20261018-111256-6b65c0",
+    "timestamp": "2026-10-18T15:12:56+00:00",
     "model": "gpt-oss:20b",
     "api_base": "https://ollama.com",
     "provider": "ollama-api",
@@ -5464,6 +5895,11 @@
       "analyst": 0.15,
       "reasoner": 0.15,
       "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
     }
   }
 }

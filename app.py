@@ -96,6 +96,27 @@ def highlight_flagged(report: str, figures: list) -> str:
                   .replace("\u2063HL_END", "]"))
 
 
+def render_repair_note(result: dict) -> None:
+    """One line on the validator feedback loop, plus the first draft for comparison."""
+    rounds = (result.get("repair") or {}).get("rounds") or []
+    if not rounds:
+        return
+    last = rounds[-1]
+    if last.get("error"):
+        st.caption("A revision pass was attempted but failed; showing the first draft.")
+    elif any(r["accepted"] for r in rounds):
+        st.caption(f"Revised after validation feedback: open issues {rounds[0]['open_issues_before']} → "
+                   f"{last['open_issues_after'] if last['accepted'] else last['open_issues_before']}.")
+    else:
+        st.caption(f"A revision was tried but not kept (open issues {last['open_issues_before']} → "
+                   f"{last['open_issues_after']}); showing the first draft.")
+    with st.expander("First draft and the feedback it received"):
+        st.markdown(f"**Validation of the first draft:** {escape_md(result['draft_validation']['summary'])}")
+        st.markdown(highlight_flagged(result["draft_report_text"], result["draft_validation"]["figures"]))
+        st.markdown("**Feedback sent to the Writer:**")
+        st.code(rounds[0]["feedback"], language=None)
+
+
 def render_validation_panel(validation: dict, result: dict) -> None:
     counts = validation["counts"]
     cit = validation["citations"]
@@ -103,11 +124,12 @@ def render_validation_panel(validation: dict, result: dict) -> None:
     box.subheader("Validation")
 
     with box:
-        c1, c2, c3, c4 = st.columns(4)
+        c1, c2, c3, c4, c5 = st.columns(5)
         c1.metric("Verified", counts["verified"])
         c2.metric("Derived", counts["derived"])
         c3.metric("Unverified", counts["unverified"])
-        c4.metric("Dangling citations", len(cit["dangling"]))
+        c4.metric("Open issues", validation.get("open_issues", 0))
+        c5.metric("Dangling citations", len(cit["dangling"]))
 
         if validation["figures"]:
             with st.expander("Figures in the report", expanded=counts["unverified"] > 0):
@@ -116,6 +138,7 @@ def render_validation_panel(validation: dict, result: dict) -> None:
                     "status": f["status"],
                     "matched data": f["matched"] or "",
                     "source": f["source_id"] or (f"in snippet {f['in_source_text']}" if f["in_source_text"] else ""),
+                "assumption": "yes" if f.get("assumption") else "",
                     "same topic": "" if f["topic_match"] is None else ("yes" if f["topic_match"] else "no"),
                     "context": f["context"],
                 } for f in validation["figures"]]
@@ -204,6 +227,7 @@ with right:
                     flagged = validation["counts"]["unverified"] or validation["no_data"]["issue"] or \
                         validation["citations"]["dangling"] or validation["citations"]["uncited_paragraphs"]
                     (st.warning if flagged else st.success)(f"**Validation:** {escape_md(validation['summary'])}")
+                render_repair_note(result)
                 st.markdown(highlight_flagged(result.get("report_text_raw", result["report_text"]), figures))
                 st.caption(
                     "Highlighted figures could not be matched to the fetched data tables "

@@ -19,3 +19,12 @@ writer = 0.15
 [limits]
 max_prompt_chars = 20000   # agent prompts are trimmed to this length
 max_note_chars = 2000      # each web-news note passed to the Analyst
+
+# Validator feedback loop: after the Writer's draft is validated, the
+# findings go back to the Writer for a revision. The revision is kept only
+# if the validator counts strictly fewer open issues (and it is not much
+# shorter than the draft); otherwise the draft stays. Both are stored.
+[repair]
+enabled = true
+max_rounds = 1
+min_length_ratio = 0.5

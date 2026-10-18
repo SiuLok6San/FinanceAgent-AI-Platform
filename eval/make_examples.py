@@ -32,6 +32,38 @@ def _cell(text) -> str:
     return str(text or "").replace("|", "\\|").replace("\n", " ")
 
 
+def _repair_lines(rec) -> list:
+    rounds = (rec.get("repair") or {}).get("rounds") or []
+    if not rounds:
+        return []
+    r = rounds[0]
+    if r.get("error"):
+        outcome = "the revision call failed, so the first draft is shown"
+    elif r["accepted"]:
+        outcome = f"the revision was kept (open issues {r['open_issues_before']} → {r['open_issues_after']})"
+    else:
+        outcome = (f"the revision was not kept (open issues {r['open_issues_before']} → {r['open_issues_after']}), "
+                   "so the first draft is shown")
+    return [
+        f"**Validator feedback loop:** the first draft was checked and the findings were sent back to the Writer; {outcome}.",
+        "",
+        "<details><summary>First draft, its validation and the feedback it received</summary>",
+        "",
+        f"**First draft validation:** {r['summary_before']}",
+        "",
+        rec["draft_report_text"],
+        "",
+        "**Feedback sent to the Writer:**",
+        "",
+        "```",
+        r["feedback"],
+        "```",
+        "",
+        "</details>",
+        "",
+    ]
+
+
 def render(rec) -> str:
     v = validate_record(rec)
     meta = rec["run_meta"]
@@ -47,6 +79,7 @@ def render(rec) -> str:
         "",
         f"> **Validation:** {v['summary']}",
         "",
+        *_repair_lines(rec),
         "## Report (unedited model output; <mark>highlighted</mark> figures could not be matched to fetched data)",
         "",
         _mark_unverified(rec["report_text"], v["figures"]),

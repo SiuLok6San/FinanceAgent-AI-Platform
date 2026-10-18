@@ -103,6 +103,8 @@ def main() -> None:
             "error": bool(result.get("error")) or any(m in str(result.get("report_text", "")) for m in ERROR_MARKERS),
             "report_text": result.get("report_text_raw", result.get("report_text", "")),
             "report_text_annotated": result.get("report_text") if "report_text_raw" in result else None,
+            "draft_report_text": result.get("draft_report_text"),
+            "repair": result.get("repair"),
             "sources": result.get("sources", []),
             "citations_used": result.get("citations_used", []),
             "tables": [table_to_json(t) for t in result.get("key_data_tables", [])],
@@ -116,7 +118,11 @@ def main() -> None:
               f"({len(record['tables'])} tables, {len(record['sources'])} sources)")
         time.sleep(args.pause)
 
-    session["finished_utc"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    # re-read before writing: another run of the same pipeline may have added its session meanwhile
+    info = json.loads(info_path.read_text())
+    for s in info["sessions"]:
+        if s["started_utc"] == session["started_utc"] and s["ids"] == session["ids"]:
+            s["finished_utc"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     write_json(info_path, info)
 
 

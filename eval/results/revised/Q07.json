@@ -8,8 +8,8 @@
     "portfolio"
   ],
   "pipeline": "revised",
-  "run_utc": "2026-10-18T03:21:20+00:00",
-  "elapsed_sec": 59.1,
+  "run_utc": "2026-10-18T15:21:13+00:00",
+  "elapsed_sec": 75.7,
   "router_tags": [
     "rates"
   ],
@@ -17,8 +17,23 @@
     "rates": "duration_volatility"
   },
   "error": false,
-  "report_text": "**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % (2026‑10‑15) – up ~1.05 % from 4.05 % a year earlier [S1].  \n- Short‑term yields have fallen ~100 bp since September 2024 but remain above the 10‑yr, indicating a steepening front‑end [S5].  \n- Market sentiment suggests long‑term yields may plateau near current levels; traders expect limited further upside [S2].  \n- Extending duration locks in the current high yield but exposes the portfolio to potential further rises; a cautious, incremental approach is advised.  \n\n**Core Analysis**  \n\n*Macro*  \n- Fed policy signals keep rates elevated until inflation eases; no recent CPI/PCE data fetched, but the prevailing view is that rates will not fall quickly [S2].  \n- The 10‑yr yield trend shows a modest decline in the last week (5.28 % → 5.10 %) but remains well above the 4‑year‑ago level, reflecting a still‑high‑yield environment [S1].  \n\n*Sector*  \n- Treasury yields have recently risen after a 10‑yr break, reflecting expectations of higher real GDP growth and inflation [S6].  \n- The yield curve now exhibits a typical upward slope after a period of front‑end dominance [S4].  \n\n*Credit*  \n- Risk‑premium spreads are likely tightening as risk appetite improves, yet remain above historical lows; no specific spread data fetched [S5].  \n\n*Portfolio*  \n- A 25‑bp rise in the 10‑yr would erode portfolio value by ~0.25 % per 1‑yr of duration (DV01 ≈ $10 k per 1 % move per $1 m) [S1].  \n- Extending duration now increases exposure to the current upward trend; if yields plateau, the higher yield could be locked in.  \n\n**Scenarios**  \n\n*Base* – Yield stabilizes near 5.10 %  \n- Extend duration modestly (e.g., 5‑yr to 7‑yr) to capture higher yields with limited upside risk.  \n\n*Upside* – Yields rise further  \n- Maintain or shorten duration; consider short‑duration Treasuries or floating‑rate instruments to hedge.  \n\n*Downside* – Yields fall sharply  \n- Longer duration would benefit from price appreciation; however, current yields are already high, so the upside is limited.  \n\n**Key Risks & Monitoring**  \n\n- Fed rate‑setting decisions and inflation data releases.  \n- Market sentiment shifts regarding long‑term yield expectations.  \n- Liquidity conditions in Treasury auctions for target maturities.  \n- Credit spread movements that could affect risk‑premium dynamics.  \n\n**Portfolio / Decision Implications**  \n\n- If conviction that yields will plateau, a controlled duration extension (e.g., 5‑yr to 7‑yr) can enhance yield without excessive risk.  \n- If further yield increases are expected, keep duration flat or shorten; use Treasury futures or laddering to lock in current yields while preserving flexibility.  \n- Monitor weekly yield changes (see Table 1 for yield‑curve shift data) and adjust exposure accordingly.  \n\n**Conclusion**  \n\n- The 10‑yr Treasury yield remains high and trending upward; market sentiment points to a potential plateau.  \n- Extending duration should be approached cautiously, with a preference for incremental increases and active monitoring of Fed signals and inflation data.  \n- A disciplined, scenario‑based strategy will align duration exposure with the investor’s risk tolerance and return objectives.",
-  "report_text_annotated": "> **Validation:** 7 of 15 figures verified against source data (5 exact, 2 derived); 8 flagged (1 of them appear in a fetched web/news snippet). 1 paragraph(s) state figures without a citation.\n\n**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % (2026‑10‑15) – up ~1.05 % from 4.05 % a year earlier [S1].  \n- Short‑term yields have fallen ~100 bp since September 2024 but remain above the 10‑yr, indicating a steepening front‑end [S5].  \n- Market sentiment suggests long‑term yields may plateau near current levels; traders expect limited further upside [S2].  \n- Extending duration locks in the current high yield but exposes the portfolio to potential further rises; a cautious, incremental approach is advised.  \n\n**Core Analysis**  \n\n*Macro*  \n- Fed policy signals keep rates elevated until inflation eases; no recent CPI/PCE data fetched, but the prevailing view is that rates will not fall quickly [S2].  \n- The 10‑yr yield trend shows a modest decline in the last week (5.28 % → 5.10 %) but remains well above the 4‑year‑ago level, reflecting a still‑high‑yield environment [S1].  \n\n*Sector*  \n- Treasury yields have recently risen after a 10‑yr break, reflecting expectations of higher real GDP growth and inflation [S6].  \n- The yield curve now exhibits a typical upward slope after a period of front‑end dominance [S4].  \n\n*Credit*  \n- Risk‑premium spreads are likely tightening as risk appetite improves, yet remain above historical lows; no specific spread data fetched [S5].  \n\n*Portfolio*  \n- A 25‑bp rise in the 10‑yr would erode portfolio value by ~0.25 % per 1‑yr of duration (DV01 ≈ $10 k per 1 % move per $1 m) [S1].  \n- Extending duration now increases exposure to the current upward trend; if yields plateau, the higher yield could be locked in.  \n\n**Scenarios**  \n\n*Base* – Yield stabilizes near 5.10 %  \n- Extend duration modestly (e.g., 5‑yr to 7‑yr) to capture higher yields with limited upside risk.  \n\n*Upside* – Yields rise further  \n- Maintain or shorten duration; consider short‑duration Treasuries or floating‑rate instruments to hedge.  \n\n*Downside* – Yields fall sharply  \n- Longer duration would benefit from price appreciation; however, current yields are already high, so the upside is limited.  \n\n**Key Risks & Monitoring**  \n\n- Fed rate‑setting decisions and inflation data releases.  \n- Market sentiment shifts regarding long‑term yield expectations.  \n- Liquidity conditions in Treasury auctions for target maturities.  \n- Credit spread movements that could affect risk‑premium dynamics.  \n\n**Portfolio / Decision Implications**  \n\n- If conviction that yields will plateau, a controlled duration extension (e.g., 5‑yr to 7‑yr) can enhance yield without excessive risk.  \n- If further yield increases are expected, keep duration flat or shorten; use Treasury futures or laddering to lock in current yields while preserving flexibility.  \n- Monitor weekly yield changes (see Table 1 for yield‑curve shift data) and adjust exposure accordingly.  \n\n**Conclusion**  \n\n- The 10‑yr Treasury yield remains high and trending upward; market sentiment points to a potential plateau.  \n- Extending duration should be approached cautiously, with a preference for incremental increases and active monitoring of Fed signals and inflation data.  \n- A disciplined, scenario‑based strategy will align duration exposure with the investor’s risk tolerance and return objectives.",
+  "report_text": "**Executive Summary**  \n- 10‑Year Treasury yield is 5.1 % (latest) [S1].  \n- Short‑term Treasury yields have fallen ~100 bps, now around 4.5 % (front‑end) [S5].  \n- Market consensus (CNBC, Schwab) expects long‑term yields to remain near 4–4.5 % in the near term, implying limited upside for duration extension [S2], [S3].  \n- Extending duration locks in the current 5.1 % yield but exposes the portfolio to steepening risk if short‑term rates rise faster than long‑term rates [S1].  \n- A conservative stance is to maintain current duration or extend modestly to 10‑12 yr (assumption) while monitoring short‑term rate movements.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- 10‑Year Treasury constant‑maturity yield: 5.1 % (2026‑10‑15) [S1].  \n- Yield change from 2025‑10‑10 to 2026‑10‑15: +1.05 pp [S1].  \n- Short‑term Treasury yields declined ~100 bps from 5.50 % to 4.50% after September 2024 (front‑end) [S5].  \n\n*Sector*  \n- Yield curve has returned to a typical upward slope after a period of inverted front‑end yields [S4].  \n\n*Credit*  \n- No data fetched for credit‑quality metrics; qualitative assessment suggests higher duration amplifies spread risk, especially for high‑yield securities.  \n\n*Portfolio*  \n- Current duration exposure aligns with the 10‑year yield.  \n- A 1‑bp rise in the 10‑year yield erodes portfolio value by ≈ 0.01 % per year of duration; a 10‑bp move would hit ≈ 0.1 % for a 10‑year‑duration portfolio (assumption) [S7].\n\n---\n\n**Scenarios**\n\n| Scenario | Duration Target | Yield Impact (assumption) | Rationale |\n|----------|-----------------|---------------------------|-----------|\n| **Base** | Maintain current duration | No change | Current yield already above expectations; limited upside. |\n| **Upside** | Extend to 10‑12 yr (assumption) | Lock in 5.1 % yield; potential capital gain if curve steepens | Modest duration increase mitigates steepening risk while capturing higher yield. |\n| **Downside** | Extend to 15‑20 yr (assumption) | Higher sensitivity to any upward move in the 10‑year yield; potential loss of ≈ 0.1 % per 10‑bp rise (assumption) | Aggressive extension exposes portfolio to significant upside risk with limited upside potential. |\n\n*Note: Yield‑to‑maturity trade‑off is limited because the current 5.1 % yield is already above many market forecasts [S1].*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Yield‑curve steepening**: Short‑term rates could rise faster than long‑term rates, eroding value of longer‑dated bonds.  \n- **Fed policy shifts**: Any change in the “normal” rate path could alter the expected yield trajectory.  \n- **Inflation dynamics**: Persistent inflation could push long‑term yields higher than current levels.  \n- **Liquidity for longer maturities**: No data fetched; monitor bid‑ask spreads and trading volume for 15‑30 yr Treasuries (assumption).  \n- **Credit‑spread widening**: No data fetched; monitor spread movements for any non‑Treasury holdings.  \n\n*Monitoring tools:*  \n- Daily yield curve updates (see Chart 1).  \n- Fed policy statements and minutes.  \n- Inflation releases (CPI, PCE).  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Interest‑rate risk**: Extending duration increases sensitivity to any upward movement in the 10‑year yield.  \n- **Yield capture**: Locking in 5.1 % yields now may provide a cushion if short‑term rates rise, but upside is limited by the current level [S1].  \n- **Credit exposure**: For investment‑grade portfolios, duration extension is less risky; for high‑yield, added duration could magnify spread widening.  \n- **Recommended action**: Hold current duration or extend modestly to 10‑12 yr (assumption) while closely monitoring short‑term rate movements and liquidity conditions. Avoid aggressive extension to 15‑20 yr (assumption) given the limited upside potential.\n\n---\n\n**Conclusion**\n\nThe 10‑Year Treasury yield of 5.1 % (latest) is above the 4–4.5 % plateau many market participants expect, indicating that the current yield environment offers limited upside for duration extension [S1]. A conservative strategy—maintaining or modestly extending duration to 10‑12 yr (assumption)—balances the benefit of locking in the current yield against the risk of a steepening curve. Aggressive duration expansion would expose the portfolio to significant upside risk with little compensating benefit. Continuous monitoring of the yield curve, Fed policy, and liquidity conditions is essential to adjust the duration stance as the macro environment evolves.",
+  "report_text_annotated": "> **Validation:** 18 of 37 figures verified against source data (13 exact, 5 derived); 19 flagged (3 of them appear in a fetched web/news snippet; 9 labelled as assumptions). 1 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.\n\n**Executive Summary**  \n- 10‑Year Treasury yield is 5.1 % (latest) [S1].  \n- Short‑term Treasury yields have fallen ~100 bps, now around 4.5 % (front‑end) [S5].  \n- Market consensus (CNBC, Schwab) expects long‑term yields to remain near 4–4.5 % in the near term, implying limited upside for duration extension [S2], [S3].  \n- Extending duration locks in the current 5.1 % yield but exposes the portfolio to steepening risk if short‑term rates rise faster than long‑term rates [S1].  \n- A conservative stance is to maintain current duration or extend modestly to 10‑12 yr (assumption) while monitoring short‑term rate movements.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- 10‑Year Treasury constant‑maturity yield: 5.1 % (2026‑10‑15) [S1].  \n- Yield change from 2025‑10‑10 to 2026‑10‑15: +1.05 pp [S1].  \n- Short‑term Treasury yields declined ~100 bps from 5.50 % to 4.50% after September 2024 (front‑end) [S5].  \n\n*Sector*  \n- Yield curve has returned to a typical upward slope after a period of inverted front‑end yields [S4].  \n\n*Credit*  \n- No data fetched for credit‑quality metrics; qualitative assessment suggests higher duration amplifies spread risk, especially for high‑yield securities.  \n\n*Portfolio*  \n- Current duration exposure aligns with the 10‑year yield.  \n- A 1‑bp rise in the 10‑year yield erodes portfolio value by ≈ 0.01 % per year of duration; a 10‑bp move would hit ≈ 0.1 % for a 10‑year‑duration portfolio (assumption) [S7].\n\n---\n\n**Scenarios**\n\n| Scenario | Duration Target | Yield Impact (assumption) | Rationale |\n|----------|-----------------|---------------------------|-----------|\n| **Base** | Maintain current duration | No change | Current yield already above expectations; limited upside. |\n| **Upside** | Extend to 10‑12 yr (assumption) | Lock in 5.1 % yield; potential capital gain if curve steepens | Modest duration increase mitigates steepening risk while capturing higher yield. |\n| **Downside** | Extend to 15‑20 yr (assumption) | Higher sensitivity to any upward move in the 10‑year yield; potential loss of ≈ 0.1 % per 10‑bp rise (assumption) | Aggressive extension exposes portfolio to significant upside risk with limited upside potential. |\n\n*Note: Yield‑to‑maturity trade‑off is limited because the current 5.1 % yield is already above many market forecasts [S1].*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Yield‑curve steepening**: Short‑term rates could rise faster than long‑term rates, eroding value of longer‑dated bonds.  \n- **Fed policy shifts**: Any change in the “normal” rate path could alter the expected yield trajectory.  \n- **Inflation dynamics**: Persistent inflation could push long‑term yields higher than current levels.  \n- **Liquidity for longer maturities**: No data fetched; monitor bid‑ask spreads and trading volume for 15‑30 yr Treasuries (assumption).  \n- **Credit‑spread widening**: No data fetched; monitor spread movements for any non‑Treasury holdings.  \n\n*Monitoring tools:*  \n- Daily yield curve updates (see Chart 1).  \n- Fed policy statements and minutes.  \n- Inflation releases (CPI, PCE).  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Interest‑rate risk**: Extending duration increases sensitivity to any upward movement in the 10‑year yield.  \n- **Yield capture**: Locking in 5.1 % yields now may provide a cushion if short‑term rates rise, but upside is limited by the current level [S1].  \n- **Credit exposure**: For investment‑grade portfolios, duration extension is less risky; for high‑yield, added duration could magnify spread widening.  \n- **Recommended action**: Hold current duration or extend modestly to 10‑12 yr (assumption) while closely monitoring short‑term rate movements and liquidity conditions. Avoid aggressive extension to 15‑20 yr (assumption) given the limited upside potential.\n\n---\n\n**Conclusion**\n\nThe 10‑Year Treasury yield of 5.1 % (latest) is above the 4–4.5 % plateau many market participants expect, indicating that the current yield environment offers limited upside for duration extension [S1]. A conservative strategy—maintaining or modestly extending duration to 10‑12 yr (assumption)—balances the benefit of locking in the current yield against the risk of a steepening curve. Aggressive duration expansion would expose the portfolio to significant upside risk with little compensating benefit. Continuous monitoring of the yield curve, Fed policy, and liquidity conditions is essential to adjust the duration stance as the macro environment evolves.",
+  "draft_report_text": "**Executive Summary**  \n- 10‑Year Treasury yield is 5.1 % (latest) – above the 4–4.5 % plateau many market participants expect for the next 12 months [S1].  \n- Short‑term yields have fallen ~100 bps since September 2024 but remain above the 10‑year level (≈ 4.5 % vs 5.1 %) [S5].  \n- Fed policy signals a “normal” rate path; market consensus suggests limited upside for long‑term yields [S2], [S3].  \n- Extending duration locks in the current 5.1 % yield but exposes the portfolio to steepening risk if short‑term rates rise faster than long‑term rates.  \n- A conservative approach is to maintain current duration or extend modestly (10–12 yr) while monitoring short‑term rate movements.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- 10‑Year Treasury constant‑maturity yield: 5.1 % (2026‑10‑15) – up 1.05 pp from 2025‑10‑10 [S1].  \n- Short‑term yields fell ~100 bps since September 2024 but are still above the 10‑year level (≈ 4.5 % vs 5.1 %) [S5].  \n- Fed signals a “normal” rate path; market expectations place the 10‑year yield near 4–4.5 % in the near term [S2], [S3].  \n\n*Sector*  \n- Treasury curve has returned to a typical upward slope after a period of inverted front‑end yields [S4].  \n\n*Credit*  \n- No data were fetched for credit‑quality metrics; qualitative assessment suggests higher duration amplifies spread risk, especially for high‑yield securities.  \n\n*Portfolio*  \n- Current duration exposure is aligned with the 10‑year yield.  \n- A 1‑bp rise in the 10‑year yield erodes portfolio value by ≈ 0.01 % per year of duration; a 10‑bp move would hit ≈ 0.1 % for a 10‑year‑duration portfolio (assumption) [S7].  \n\n---\n\n**Scenarios**\n\n| Scenario | Duration Target | Yield Impact (assumption) | Rationale |\n|----------|-----------------|---------------------------|-----------|\n| **Base** | Maintain current duration | No change | Current yield already above expectations; limited upside. |\n| **Upside** | Extend to 10–12 yr | Lock in 5.1 % yield; potential capital gain if curve steepens | Modest duration increase mitigates steepening risk while capturing higher yield. |\n| **Downside** | Extend to 15–20 yr | Higher sensitivity to any upward move in the 10‑year yield; potential loss of 0.1 % per 10‑bp rise (assumption) | Aggressive extension exposes portfolio to significant upside risk with limited upside potential. |\n\n*Note: Yield‑to‑maturity trade‑off is limited because the current 5.1 % yield is already above many market forecasts.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Yield‑curve steepening**: Short‑term rates could rise faster than long‑term rates, eroding value of longer‑dated bonds.  \n- **Fed policy shifts**: Any change in the “normal” rate path could alter the expected yield trajectory.  \n- **Inflation dynamics**: Persistent inflation could push long‑term yields higher than current levels.  \n- **Liquidity for longer maturities**: No data fetched; monitor bid‑ask spreads and trading volume for 15‑30 yr Treasuries.  \n- **Credit‑spread widening**: No data fetched; monitor spread movements for any non‑Treasury holdings.  \n\n*Monitoring tools:*  \n- Daily yield curve updates (see Chart 1).  \n- Fed policy statements and minutes.  \n- Inflation releases (CPI, PCE).  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Interest‑rate risk**: Extending duration increases sensitivity to any upward movement in the 10‑year yield.  \n- **Yield capture**: Locking in 5.1 % yields now may provide a cushion if short‑term rates rise, but upside is limited by the current level.  \n- **Credit exposure**: For investment‑grade portfolios, duration extension is less risky; for high‑yield, added duration could magnify spread widening.  \n- **Recommended action**: Hold current duration or extend modestly to 10–12 yr (assumption) while closely monitoring short‑term rate movements and liquidity conditions. Avoid aggressive extension to 15–20 yr given the limited upside potential.  \n\n---\n\n**Conclusion**\n\nThe 10‑Year Treasury yield of 5.1 % is above the 4–4.5 % plateau many market participants expect, indicating that the current yield environment offers limited upside for duration extension. A conservative strategy—maintaining or modestly extending duration to 10–12 yr—balances the benefit of locking in the current yield against the risk of a steepening curve. Aggressive duration expansion would expose the portfolio to significant upside risk with little compensating benefit. Continuous monitoring of the yield curve, Fed policy, and liquidity conditions is essential to adjust the duration stance as the macro environment evolves.",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"September 2024\" in: \"- Short‑term yields have fallen ~100 bps since September 2024 but remain above the 10‑year level (≈ 4.5 % vs 5.1 %) [S5].\" — this date is not in the fetched data; use a date from KEY DATA or remove it.\n2. \"10\" in: \"- A conservative approach is to maintain current duration or extend modestly (10–12 yr) while monitoring short‑term rate movements.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n3. \"10\" in: \"- 10‑Year Treasury constant‑maturity yield: 5.1 % (2026‑10‑15) – up 1.05 pp from 2025‑10‑10 [S1].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n4. \"15\" in: \"- 10‑Year Treasury constant‑maturity yield: 5.1 % (2026‑10‑15) – up 1.05 pp from 2025‑10‑10 [S1].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n5. \"10\" in: \"- 10‑Year Treasury constant‑maturity yield: 5.1 % (2026‑10‑15) – up 1.05 pp from 2025‑10‑10 [S1].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n6. \"10\" in: \"- 10‑Year Treasury constant‑maturity yield: 5.1 % (2026‑10‑15) – up 1.05 pp from 2025‑10‑10 [S1].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n7. \"September 2024\" in: \"- Short‑term yields fell ~100 bps since September 2024 but are still above the 10‑year level (≈ 4.5 % vs 5.1 %) [S5].\" — this date is not in the fetched data; use a date from KEY DATA or remove it.\n8. \"10\" in: \"| **Upside** | Extend to 10–12 yr | Lock in 5.1 % yield; potential capital gain if curve steepens | Modest duration increase mitigates steepening risk while cap\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n9. \"15\" in: \"- **Liquidity for longer maturities**: No data fetched; monitor bid‑ask spreads and trading volume for 15‑30 yr Treasuries.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n10. \"15\" in: \"Avoid aggressive extension to 15–20 yr given the limited upside potential.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n11. \"10\" in: \"A conservative strategy—maintaining or modestly extending duration to 10–12 yr—balances the benefit of locking in the current yield against the risk of a steepe\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n12. Add a citation to: \"- Extending duration locks in the current 5.1 % yield but exposes the portfolio to steepening risk if short‑term rates rise faster than long‑term rates.\" — its figures 5.1 % come from [S1].\n13. Add a citation to: \"| Scenario | Duration Target | Yield Impact (assumption) | Rationale |\n|----------|-----------------|---------------------------|-----------|\n| **Base** | Maint\" — its figures 5.1 %, 0.1 %, 10‑bp come from [S1].\n14. Add a citation to: \"*Note: Yield‑to‑maturity trade‑off is limited because the current 5.1 % yield is already above many market forecasts.*\" — its figures 5.1 % come from [S1].\n15. Add a citation to: \"- **Yield capture**: Locking in 5.1 % yields now may provide a cushion if short‑term rates rise, but upside is limited by the current level.\" — its figures 5.1 % come from [S1].\n16. Add a citation to: \"The 10‑Year Treasury yield of 5.1 % is above the 4–4.5 % plateau many market participants expect, indicating that the current yield environment offers limited u\" — its figures 5.1 %, 4, 4.5 % come from [S1].\n17. \"- Short‑term yields have fallen ~100 bps since September 2024 but remain above the 10‑year level (≈ 4.5 % vs 5.1 %) [S5].\" cites S5, but figures 5.1 % come from [S1].\n18. \"- Short‑term yields fell ~100 bps since September 2024 but are still above the 10‑year level (≈ 4.5 % vs 5.1 %) [S5].\" cites S5, but figures 5.1 % come from [S1].\n19. \"- A 1‑bp rise in the 10‑year yield erodes portfolio value by ≈ 0.01 % per year of duration; a 10‑bp move would hit ≈ 0.1 % for a 10‑year‑duration portfolio (ass\" cites S7, but figures 10‑bp, 0.1 % come from [S1].",
+        "open_issues_before": 19,
+        "summary_before": "22 of 39 figures verified against source data (17 exact, 5 derived); 17 flagged (2 of them appear in a fetched web/news snippet; 4 labelled as assumptions). 5 paragraph(s) state figures without a citation. 3 paragraph(s) cite a different source than the data.",
+        "accepted": true,
+        "open_issues_after": 9,
+        "summary_after": "18 of 37 figures verified against source data (13 exact, 5 derived); 19 flagged (3 of them appear in a fetched web/news snippet; 9 labelled as assumptions). 1 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.",
+        "revised_report_text": "**Executive Summary**  \n- 10‑Year Treasury yield is 5.1 % (latest) [S1].  \n- Short‑term Treasury yields have fallen ~100 bps, now around 4.5 % (front‑end) [S5].  \n- Market consensus (CNBC, Schwab) expects long‑term yields to remain near 4–4.5 % in the near term, implying limited upside for duration extension [S2], [S3].  \n- Extending duration locks in the current 5.1 % yield but exposes the portfolio to steepening risk if short‑term rates rise faster than long‑term rates [S1].  \n- A conservative stance is to maintain current duration or extend modestly to 10‑12 yr (assumption) while monitoring short‑term rate movements.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- 10‑Year Treasury constant‑maturity yield: 5.1 % (2026‑10‑15) [S1].  \n- Yield change from 2025‑10‑10 to 2026‑10‑15: +1.05 pp [S1].  \n- Short‑term Treasury yields declined ~100 bps from 5.50 % to 4.50% after September 2024 (front‑end) [S5].  \n\n*Sector*  \n- Yield curve has returned to a typical upward slope after a period of inverted front‑end yields [S4].  \n\n*Credit*  \n- No data fetched for credit‑quality metrics; qualitative assessment suggests higher duration amplifies spread risk, especially for high‑yield securities.  \n\n*Portfolio*  \n- Current duration exposure aligns with the 10‑year yield.  \n- A 1‑bp rise in the 10‑year yield erodes portfolio value by ≈ 0.01 % per year of duration; a 10‑bp move would hit ≈ 0.1 % for a 10‑year‑duration portfolio (assumption) [S7].\n\n---\n\n**Scenarios**\n\n| Scenario | Duration Target | Yield Impact (assumption) | Rationale |\n|----------|-----------------|---------------------------|-----------|\n| **Base** | Maintain current duration | No change | Current yield already above expectations; limited upside. |\n| **Upside** | Extend to 10‑12 yr (assumption) | Lock in 5.1 % yield; potential capital gain if curve steepens | Modest duration increase mitigates steepening risk while capturing higher yield. |\n| **Downside** | Extend to 15‑20 yr (assumption) | Higher sensitivity to any upward move in the 10‑year yield; potential loss of ≈ 0.1 % per 10‑bp rise (assumption) | Aggressive extension exposes portfolio to significant upside risk with limited upside potential. |\n\n*Note: Yield‑to‑maturity trade‑off is limited because the current 5.1 % yield is already above many market forecasts [S1].*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Yield‑curve steepening**: Short‑term rates could rise faster than long‑term rates, eroding value of longer‑dated bonds.  \n- **Fed policy shifts**: Any change in the “normal” rate path could alter the expected yield trajectory.  \n- **Inflation dynamics**: Persistent inflation could push long‑term yields higher than current levels.  \n- **Liquidity for longer maturities**: No data fetched; monitor bid‑ask spreads and trading volume for 15‑30 yr Treasuries (assumption).  \n- **Credit‑spread widening**: No data fetched; monitor spread movements for any non‑Treasury holdings.  \n\n*Monitoring tools:*  \n- Daily yield curve updates (see Chart 1).  \n- Fed policy statements and minutes.  \n- Inflation releases (CPI, PCE).  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Interest‑rate risk**: Extending duration increases sensitivity to any upward movement in the 10‑year yield.  \n- **Yield capture**: Locking in 5.1 % yields now may provide a cushion if short‑term rates rise, but upside is limited by the current level [S1].  \n- **Credit exposure**: For investment‑grade portfolios, duration extension is less risky; for high‑yield, added duration could magnify spread widening.  \n- **Recommended action**: Hold current duration or extend modestly to 10‑12 yr (assumption) while closely monitoring short‑term rate movements and liquidity conditions. Avoid aggressive extension to 15‑20 yr (assumption) given the limited upside potential.\n\n---\n\n**Conclusion**\n\nThe 10‑Year Treasury yield of 5.1 % (latest) is above the 4–4.5 % plateau many market participants expect, indicating that the current yield environment offers limited upside for duration extension [S1]. A conservative strategy—maintaining or modestly extending duration to 10‑12 yr (assumption)—balances the benefit of locking in the current yield against the risk of a steepening curve. Aggressive duration expansion would expose the portfolio to significant upside risk with little compensating benefit. Continuous monitoring of the yield curve, Fed policy, and liquidity conditions is essential to adjust the duration stance as the macro environment evolves."
+      }
+    ]
+  },
   "sources": [
     {
       "title": "FRED series DGS10: 10-Year Treasury Constant Maturity Yield",
@@ -63,19 +78,20 @@
       "id": "S6"
     },
     {
-      "title": "Why bond yields are rising and what stock investors should do about that",
-      "url": "https://www.cnbc.com/2024/10/23/why-bond-yields-are-rising-and-what-stocks-investors-should-do-about-that.html",
+      "title": "Bonds 102: The Importance of Duration in Bond Investing | PIMCO",
+      "url": "https://www.pimco.com/us/en/resources/education/bonds-102-the-importance-of-duration-in-bond-investing",
       "source": "web (Tavily)",
-      "snippet": "Black & Decker, Home Depot and Best Buy are executing effectively on the things within their control. Sure, they will benefit from lower rates — but rates alone are not why we own positions. We're in them because the fundamentals are improving, which will only come further into focus when rates come down. Bottom line T",
+      "snippet": "There are various factors investors should consider when assessing the risk of a bond. One of the most common is duration, which quantifies the sensitivity of a bond or bond portfolio to changes in interest rates. Given that interest rates are the main drivers of bond pricing, duration is considered a key measure of ri",
       "id": "S7"
     }
   ],
   "citations_used": [
     "S1",
     "S2",
+    "S3",
     "S4",
     "S5",
-    "S6"
+    "S7"
   ],
   "tables": [
     {
@@ -1673,242 +1689,817 @@
   ],
   "validation": {
     "counts": {
-      "figures": 15,
-      "verified": 5,
-      "derived": 2,
-      "unverified": 8
+      "figures": 37,
+      "verified": 13,
+      "derived": 5,
+      "unverified": 19
     },
     "figures": [
       {
-        "text": "5.10 %",
+        "text": "5.1 %",
         "value": 5.1,
         "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 50,
-        "end": 56,
+        "tolerance": 0.050000001,
+        "start": 52,
+        "end": 57,
         "status": "verified",
         "matched": "DGS10 on 2026-10-15",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- 10‑yr Treasury yield is 5.10 % (2026‑10‑15) – up ~1.05 % from 4.05 % a year earlier [S1]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- 10‑Year Treasury yield is 5.1 % (latest) [S1]."
+      },
+      {
+        "text": "100 bps",
+        "value": 100.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 117,
+        "end": 124,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S5",
+        "snippet_ids": [
+          "S5"
+        ],
+        "assumption": false,
+        "cited": [
+          "S5"
+        ],
+        "context": "- Short‑term Treasury yields have fallen ~100 bps, now around 4.5 % (front‑end) [S5]."
+      },
+      {
+        "text": "4.5 %",
+        "value": 4.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 137,
+        "end": 142,
+        "status": "verified",
+        "matched": "DGS10 on 2026-06-23",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S5"
+        ],
+        "context": "- Short‑term Treasury yields have fallen ~100 bps, now around 4.5 % (front‑end) [S5]."
+      },
+      {
+        "text": "4",
+        "value": 4.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 237,
+        "end": 238,
+        "status": "verified",
+        "matched": "DGS10 on 2025-11-26",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S3"
+        ],
+        "context": "- Market consensus (CNBC, Schwab) expects long‑term yields to remain near 4–4.5 % in the near term, implying limited upside for duration extension [S2], [S3]."
+      },
+      {
+        "text": "4.5 %",
+        "value": 4.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 239,
+        "end": 244,
+        "status": "verified",
+        "matched": "DGS10 on 2026-06-23",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S3"
+        ],
+        "context": "- Market consensus (CNBC, Schwab) expects long‑term yields to remain near 4–4.5 % in the near term, implying limited upside for duration extension [S2], [S3]."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 366,
+        "end": 371,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Extending duration locks in the current 5.1 % yield but exposes the portfolio to steepening risk if short‑term rates rise faster than long‑term rates [S1]."
       },
       {
         "text": "10",
         "value": 10.0,
         "unit": "",
         "tolerance": 0.500000001,
-        "start": 63,
-        "end": 65,
+        "start": 562,
+        "end": 564,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": null,
-        "context": "- 10‑yr Treasury yield is 5.10 % (2026‑10‑15) – up ~1.05 % from 4.05 % a year earlier [S1]."
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- A conservative stance is to maintain current duration or extend modestly to 10‑12 yr (assumption) while monitoring short‑term rate movements."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 707,
+        "end": 712,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- 10‑Year Treasury constant‑maturity yield: 5.1 % (2026‑10‑15) [S1]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 719,
+        "end": 721,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- 10‑Year Treasury constant‑maturity yield: 5.1 % (2026‑10‑15) [S1]."
       },
       {
         "text": "15",
         "value": 15.0,
         "unit": "",
         "tolerance": 0.500000001,
-        "start": 66,
-        "end": 68,
+        "start": 722,
+        "end": 724,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": null,
-        "context": "- 10‑yr Treasury yield is 5.10 % (2026‑10‑15) – up ~1.05 % from 4.05 % a year earlier [S1]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- 10‑Year Treasury constant‑maturity yield: 5.1 % (2026‑10‑15) [S1]."
       },
       {
-        "text": "1.05 %",
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 759,
+        "end": 761,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Yield change from 2025‑10‑10 to 2026‑10‑15: +1.05 pp [S1]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 762,
+        "end": 764,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Yield change from 2025‑10‑10 to 2026‑10‑15: +1.05 pp [S1]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 773,
+        "end": 775,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Yield change from 2025‑10‑10 to 2026‑10‑15: +1.05 pp [S1]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 776,
+        "end": 778,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Yield change from 2025‑10‑10 to 2026‑10‑15: +1.05 pp [S1]."
+      },
+      {
+        "text": "+1.05 pp",
         "value": 1.05,
-        "unit": "%",
+        "unit": "pp",
         "tolerance": 0.0050000010000000004,
-        "start": 76,
-        "end": 82,
+        "start": 780,
+        "end": 788,
         "status": "derived",
         "matched": "DGS10 change 2025-10-10 to 2026-10-15",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- 10‑yr Treasury yield is 5.10 % (2026‑10‑15) – up ~1.05 % from 4.05 % a year earlier [S1]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Yield change from 2025‑10‑10 to 2026‑10‑15: +1.05 pp [S1]."
       },
       {
-        "text": "4.05 %",
-        "value": 4.05,
-        "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 88,
-        "end": 94,
-        "status": "verified",
-        "matched": "DGS10 on 2025-10-10",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "- 10‑yr Treasury yield is 5.10 % (2026‑10‑15) – up ~1.05 % from 4.05 % a year earlier [S1]."
-      },
-      {
-        "text": "100 bp",
+        "text": "100 bps",
         "value": 100.0,
         "unit": "bp",
         "tolerance": 0.500000001,
-        "start": 151,
-        "end": 157,
+        "start": 836,
+        "end": 843,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": "S5",
-        "context": "- Short‑term yields have fallen ~100 bp since September 2024 but remain above the 10‑yr, indicating a steepening front‑end [S5]."
+        "snippet_ids": [
+          "S5"
+        ],
+        "assumption": false,
+        "cited": [
+          "S5"
+        ],
+        "context": "- Short‑term Treasury yields declined ~100 bps from 5.50 % to 4.50% after September 2024 (front‑end) [S5]."
+      },
+      {
+        "text": "5.50 %",
+        "value": 5.5,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 849,
+        "end": 855,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S5",
+        "snippet_ids": [
+          "S5"
+        ],
+        "assumption": false,
+        "cited": [
+          "S5"
+        ],
+        "context": "- Short‑term Treasury yields declined ~100 bps from 5.50 % to 4.50% after September 2024 (front‑end) [S5]."
+      },
+      {
+        "text": "4.50%",
+        "value": 4.5,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 859,
+        "end": 864,
+        "status": "verified",
+        "matched": "DGS10 on 2026-06-23",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S5"
+        ],
+        "context": "- Short‑term Treasury yields declined ~100 bps from 5.50 % to 4.50% after September 2024 (front‑end) [S5]."
       },
       {
         "text": "September 2024",
         "value": 0.0,
         "unit": "date",
         "tolerance": 0.0,
-        "start": 164,
-        "end": 178,
+        "start": 871,
+        "end": 885,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": null,
-        "context": "- Short‑term yields have fallen ~100 bp since September 2024 but remain above the 10‑yr, indicating a steepening front‑end [S5]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S5"
+        ],
+        "context": "- Short‑term Treasury yields declined ~100 bps from 5.50 % to 4.50% after September 2024 (front‑end) [S5]."
       },
       {
-        "text": "5.28 %",
-        "value": 5.28,
-        "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 788,
-        "end": 794,
-        "status": "verified",
-        "matched": "DGS10 on 2026-10-02",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "- The 10‑yr yield trend shows a modest decline in the last week (5.28 % → 5.10 %) but remains well above the 4‑year‑ago level, reflecting a still‑high‑yield environment [S1]."
-      },
-      {
-        "text": "5.10 %",
-        "value": 5.1,
-        "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 797,
-        "end": 803,
-        "status": "verified",
-        "matched": "DGS10 on 2026-10-15",
-        "source_id": "S1",
-        "topic_match": true,
-        "in_source_text": null,
-        "context": "- The 10‑yr yield trend shows a modest decline in the last week (5.28 % → 5.10 %) but remains well above the 4‑year‑ago level, reflecting a still‑high‑yield environment [S1]."
-      },
-      {
-        "text": "25‑bp",
-        "value": 25.0,
+        "text": "1‑bp",
+        "value": 1.0,
         "unit": "bp",
         "tolerance": 0.500000001,
-        "start": 1320,
-        "end": 1325,
+        "start": 1272,
+        "end": 1276,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": null,
-        "context": "- A 25‑bp rise in the 10‑yr would erode portfolio value by ~0.25 % per 1‑yr of duration (DV01 ≈ $10 k per 1 % move per $1 m) [S1]."
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S7"
+        ],
+        "context": "- A 1‑bp rise in the 10‑year yield erodes portfolio value by ≈ 0.01 % per year of duration; a 10‑bp move would hit ≈ 0.1 % for a 10‑year‑duration portfolio (assumption) [S7]."
       },
       {
-        "text": "0.25 %",
-        "value": 0.25,
+        "text": "0.01 %",
+        "value": 0.01,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 1376,
-        "end": 1382,
+        "start": 1331,
+        "end": 1337,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": null,
-        "context": "- A 25‑bp rise in the 10‑yr would erode portfolio value by ~0.25 % per 1‑yr of duration (DV01 ≈ $10 k per 1 % move per $1 m) [S1]."
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S7"
+        ],
+        "context": "- A 1‑bp rise in the 10‑year yield erodes portfolio value by ≈ 0.01 % per year of duration; a 10‑bp move would hit ≈ 0.1 % for a 10‑year‑duration portfolio (assumption) [S7]."
       },
       {
-        "text": "$10",
+        "text": "10‑bp",
         "value": 10.0,
-        "unit": "$",
+        "unit": "bp",
         "tolerance": 0.500000001,
-        "start": 1412,
-        "end": 1415,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
-        "in_source_text": null,
-        "context": "- A 25‑bp rise in the 10‑yr would erode portfolio value by ~0.25 % per 1‑yr of duration (DV01 ≈ $10 k per 1 % move per $1 m) [S1]."
-      },
-      {
-        "text": "1 %",
-        "value": 1.0,
-        "unit": "%",
-        "tolerance": 0.500000001,
-        "start": 1422,
-        "end": 1425,
+        "start": 1362,
+        "end": 1367,
         "status": "derived",
-        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "matched": "DGS10 change 2026-09-15 to 2026-10-15",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- A 25‑bp rise in the 10‑yr would erode portfolio value by ~0.25 % per 1‑yr of duration (DV01 ≈ $10 k per 1 % move per $1 m) [S1]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S7"
+        ],
+        "context": "- A 1‑bp rise in the 10‑year yield erodes portfolio value by ≈ 0.01 % per year of duration; a 10‑bp move would hit ≈ 0.1 % for a 10‑year‑duration portfolio (assumption) [S7]."
       },
       {
-        "text": "$1",
-        "value": 1.0,
-        "unit": "$",
+        "text": "0.1 %",
+        "value": 0.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1385,
+        "end": 1390,
+        "status": "derived",
+        "matched": "DGS10 change 2026-09-15 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S7"
+        ],
+        "context": "- A 1‑bp rise in the 10‑year yield erodes portfolio value by ≈ 0.01 % per year of duration; a 10‑bp move would hit ≈ 0.1 % for a 10‑year‑duration portfolio (assumption) [S7]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
         "tolerance": 0.500000001,
-        "start": 1435,
-        "end": 1437,
+        "start": 1744,
+        "end": 1746,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": null,
-        "context": "- A 25‑bp rise in the 10‑yr would erode portfolio value by ~0.25 % per 1‑yr of duration (DV01 ≈ $10 k per 1 % move per $1 m) [S1]."
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | Extend to 10‑12 yr (assumption) | Lock in 5.1 % yield; potential capital gain if curve steepens | Modest duration increase mitigates steepening risk while capturing higher yield."
       },
       {
-        "text": "5.10 %",
+        "text": "5.1 %",
         "value": 5.1,
         "unit": "%",
-        "tolerance": 0.0050000010000000004,
-        "start": 1629,
-        "end": 1635,
+        "tolerance": 0.050000001,
+        "start": 1776,
+        "end": 1781,
         "status": "verified",
         "matched": "DGS10 on 2026-10-15",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "*Base* – Yield stabilizes near 5.10 %"
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | Extend to 10‑12 yr (assumption) | Lock in 5.1 % yield; potential capital gain if curve steepens | Modest duration increase mitigates steepening risk while capturing higher yield."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1942,
+        "end": 1944,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | Extend to 15‑20 yr (assumption) | Higher sensitivity to any upward move in the 10‑year yield; potential loss of ≈ 0.1 % per 10‑bp rise (assumption) | Aggressive extension exposes portfolio to significant upside risk with limited upside potential."
+      },
+      {
+        "text": "0.1 %",
+        "value": 0.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2046,
+        "end": 2051,
+        "status": "derived",
+        "matched": "DGS10 change 2026-09-15 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | Extend to 15‑20 yr (assumption) | Higher sensitivity to any upward move in the 10‑year yield; potential loss of ≈ 0.1 % per 10‑bp rise (assumption) | Aggressive extension exposes portfolio to significant upside risk with limited upside potential."
+      },
+      {
+        "text": "10‑bp",
+        "value": 10.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2056,
+        "end": 2061,
+        "status": "derived",
+        "matched": "DGS10 change 2026-09-15 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | Extend to 15‑20 yr (assumption) | Higher sensitivity to any upward move in the 10‑year yield; potential loss of ≈ 0.1 % per 10‑bp rise (assumption) | Aggressive extension exposes portfolio to significant upside risk with limited upside potential."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2248,
+        "end": 2253,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "*Note: Yield‑to‑maturity trade‑off is limited because the current 5.1 % yield is already above many market forecasts [S1].*"
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2781,
+        "end": 2783,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Liquidity for longer maturities**: No data fetched; monitor bid‑ask spreads and trading volume for 15‑30 yr Treasuries (assumption)."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 3255,
+        "end": 3260,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Yield capture**: Locking in 5.1 % yields now may provide a cushion if short‑term rates rise, but upside is limited by the current level [S1]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 3595,
+        "end": 3597,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Recommended action**: Hold current duration or extend modestly to 10‑12 yr (assumption) while closely monitoring short‑term rate movements and liquidity conditions."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 3724,
+        "end": 3726,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "Avoid aggressive extension to 15‑20 yr (assumption) given the limited upside potential."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 3834,
+        "end": 3839,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "The 10‑Year Treasury yield of 5.1 % (latest) is above the 4–4.5 % plateau many market participants expect, indicating that the current yield environment offers limited upside for duration extension [S1]."
+      },
+      {
+        "text": "4",
+        "value": 4.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 3862,
+        "end": 3863,
+        "status": "verified",
+        "matched": "DGS10 on 2025-11-26",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "The 10‑Year Treasury yield of 5.1 % (latest) is above the 4–4.5 % plateau many market participants expect, indicating that the current yield environment offers limited upside for duration extension [S1]."
+      },
+      {
+        "text": "4.5 %",
+        "value": 4.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 3864,
+        "end": 3869,
+        "status": "verified",
+        "matched": "DGS10 on 2026-06-23",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "The 10‑Year Treasury yield of 5.1 % (latest) is above the 4–4.5 % plateau many market participants expect, indicating that the current yield environment offers limited upside for duration extension [S1]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 4078,
+        "end": 4080,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1"
+        ],
+        "context": "A conservative strategy—maintaining or modestly extending duration to 10‑12 yr (assumption)—balances the benefit of locking in the current yield against the risk of a steepening curve."
       }
     ],
     "citations": {
-      "markers": 9,
+      "markers": 13,
       "dangling": [],
       "uncited_paragraphs": [
         {
-          "text": "*Base* – Yield stabilizes near 5.10 %",
+          "text": "| Scenario | Duration Target | Yield Impact (assumption) | Rationale |\n|----------|-----------------|---------------------------|-----------|\n| **Base** | Maintain current duration | No change | Curre",
           "figures": [
-            "5.10 %"
+            "5.1 %",
+            "0.1 %",
+            "10‑bp"
+          ],
+          "sources": [
+            "S1"
           ]
         }
       ],
-      "source_mismatches": []
+      "source_mismatches": [
+        {
+          "text": "- A 1‑bp rise in the 10‑year yield erodes portfolio value by ≈ 0.01 % per year of duration; a 10‑bp move would hit ≈ 0.1 % for a 10‑year‑duration portfolio (assumption) [S7].",
+          "figures": [
+            "10‑bp",
+            "0.1 %"
+          ],
+          "cited": [
+            "S7"
+          ],
+          "sources": [
+            "S1"
+          ]
+        }
+      ]
     },
     "freshness": [
       {
         "table": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
         "last_date": "2026-10-15",
         "frequency": "daily",
-        "age_days": 2,
+        "age_days": 3,
         "max_age_days": 7,
         "status": "ok"
       }
@@ -1918,11 +2509,21 @@
       "issue": false
     },
     "data_status": [],
-    "summary": "7 of 15 figures verified against source data (5 exact, 2 derived); 8 flagged (1 of them appear in a fetched web/news snippet). 1 paragraph(s) state figures without a citation."
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7"
+    ],
+    "open_issues": 9,
+    "summary": "18 of 37 figures verified against source data (13 exact, 5 derived); 19 flagged (3 of them appear in a fetched web/news snippet; 9 labelled as assumptions). 1 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
   },
   "run_meta": {
-    "run_id": "20261017-232021-b03360",
-    "timestamp": "2026-10-18T03:20:21+00:00",
+    "run_id": "20261018-111957-4b4ec0",
+    "timestamp": "2026-10-18T15:19:57+00:00",
     "model": "gpt-oss:20b",
     "api_base": "https://ollama.com",
     "provider": "ollama-api",
@@ -1934,6 +2535,11 @@
       "analyst": 0.15,
       "reasoner": 0.15,
       "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
     }
   }
 }

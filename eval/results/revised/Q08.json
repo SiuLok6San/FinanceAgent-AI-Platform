@@ -7,8 +7,8 @@
     "rates"
   ],
   "pipeline": "revised",
-  "run_utc": "2026-10-18T03:23:10+00:00",
-  "elapsed_sec": 108.7,
+  "run_utc": "2026-10-18T14:52:40+00:00",
+  "elapsed_sec": 101.3,
   "router_tags": [
     "rates"
   ],
@@ -16,8 +16,23 @@
     "rates": "fed_cut_cycle"
   },
   "error": false,
-  "report_text": "**Executive Summary**  \n- Fed rate cuts do **not** automatically lower 10‑year Treasury yields; the 10‑year can stay flat or rise due to inflation expectations, liquidity dynamics, and risk‑premiums.  \n- Mortgage rates are tightly linked to the 10‑year Treasury yield, not the Fed‑funds rate, and typically lag the 10‑year by 1–2 months.  \n- A Fed‑cut cycle can therefore produce a range of outcomes for mortgage rates: falling, flat, or even rising, depending on how the 10‑year responds.  \n- Portfolio managers should monitor the Fed‑funds/10‑year spread, inflation expectations, and liquidity indicators to anticipate yield movements.  \n- Strategic positioning: consider duration hedges, laddered MBS, and credit‑spread monitoring to mitigate potential volatility.\n\n---\n\n**Core Analysis**\n\n*Macro & Policy Context*  \n- Current Fed‑funds rate: 3.75 % [S1].  \n- Current 10‑year Treasury yield: 5.10 % [S2].  \n- Current 30‑year fixed mortgage: 7.40 % [S3].  \n- Fed‑funds minus 10‑year spread: –1.35 pp [S2].  \n- 10‑year minus mortgage spread: –2.30 pp [S3].\n\n*Transmission Mechanics*  \n- Fed cuts lower short‑term rates instantly but 10‑year yields respond to longer‑term expectations.  \n- 10‑year yields can rise when markets anticipate persistent inflation or a weaker slowdown [S7].  \n- Liquidity injections from Fed open‑market operations can temporarily suppress 10‑year yields [S6].  \n- Risk‑premium adjustments on longer maturities can widen the 10‑year yield during a cut cycle [S7].\n\n*Mortgage‑Rate Linkage*  \n- Mortgage rates track the 10‑year Treasury yield, not the Fed‑funds rate [S4], [S5].  \n- The spread between the 10‑year and 30‑year mortgage is ~2.3 pp today [S3].  \n- A 10‑year yield decline typically leads to a mortgage‑rate decline after a short lag; a 10‑year rise can push mortgage rates higher even as the Fed‑funds rate falls [S5], [S7].\n\n---\n\n**Scenarios**\n\n| Scenario | 10‑Year Yield Path | Mortgage‑Rate Path | Key Drivers |\n|----------|--------------------|--------------------|-------------|\n| **Base** | Remains flat or modestly rises (≈0–10 bps) | Remains flat or rises slightly | Inflation expectations hold; liquidity neutral |\n| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |\n| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |\n\n*Note: Quantitative ranges are illustrative; actual movements depend on market sentiment and macro data.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Inflation Expectations** – Monitor CPI releases, Fed minutes, and market‑implied inflation (e.g., breakeven inflation).  \n- **Liquidity Conditions** – Track Fed’s open‑market operations and Treasury repo volumes.  \n- **Risk‑Premium Shifts** – Watch credit spreads (IG/HY) and Treasury‑to‑credit spreads for signs of tightening.  \n- **Fed‑Funds/10‑Year Spread** – A widening spread may signal a disconnect between policy and long‑term rates.  \n- **Mortgage‑Rate Lag** – Use Treasury futures and mortgage‑rate futures to gauge expected lagged responses.\n\n---\n\n**Portfolio / Decision Implications**\n\n- **Duration Management** – Anticipate higher volatility in long‑dated bonds; consider duration‑hedging or laddering strategies.  \n- **MBS Exposure** – Rising mortgage rates increase pre‑payment risk; favor shorter‑duration or pre‑payment‑protected tranches.  \n- **Credit Allocation** – Tightening IG spreads may present buying opportunities; widening HY spreads warrant caution.  \n- **Yield‑Curve Positioning** – A steepening curve (10‑year > Fed‑funds) favors long‑duration Treasuries; a flattening curve favors short‑duration or floating‑rate instruments.  \n- **Risk‑Adjusted Returns** – Evaluate the trade‑off between potential yield gains and increased duration risk.\n\n---\n\n**Conclusion**\n\nA Fed rate‑cut cycle does **not** guarantee lower 10‑year Treasury yields or mortgage rates. The 10‑year yield is the primary lever for mortgage pricing, and its trajectory is shaped by inflation expectations, liquidity flows, and risk‑premiums. Portfolio managers should focus on monitoring the Fed‑funds/10‑year spread, inflation indicators, and liquidity metrics to anticipate yield movements and adjust duration, credit exposure, and MBS positioning accordingly.  \n\n*See Table 1 for yield‑curve shift data.*",
-  "report_text_annotated": "> **Validation:** 9 of 17 figures verified against source data (4 exact, 5 derived); 8 flagged. 2 paragraph(s) state figures without a citation. 3 paragraph(s) cite a different source than the data.\n\n**Executive Summary**  \n- Fed rate cuts do **not** automatically lower 10‑year Treasury yields; the 10‑year can stay flat or rise due to inflation expectations, liquidity dynamics, and risk‑premiums.  \n- Mortgage rates are tightly linked to the 10‑year Treasury yield, not the Fed‑funds rate, and typically lag the 10‑year by 1–2 months.  \n- A Fed‑cut cycle can therefore produce a range of outcomes for mortgage rates: falling, flat, or even rising, depending on how the 10‑year responds.  \n- Portfolio managers should monitor the Fed‑funds/10‑year spread, inflation expectations, and liquidity indicators to anticipate yield movements.  \n- Strategic positioning: consider duration hedges, laddered MBS, and credit‑spread monitoring to mitigate potential volatility.\n\n---\n\n**Core Analysis**\n\n*Macro & Policy Context*  \n- Current Fed‑funds rate: 3.75 % [S1].  \n- Current 10‑year Treasury yield: 5.10 % [S2].  \n- Current 30‑year fixed mortgage: 7.40 % [S3].  \n- Fed‑funds minus 10‑year spread: –1.35 pp [S2].  \n- 10‑year minus mortgage spread: –2.30 pp [S3].\n\n*Transmission Mechanics*  \n- Fed cuts lower short‑term rates instantly but 10‑year yields respond to longer‑term expectations.  \n- 10‑year yields can rise when markets anticipate persistent inflation or a weaker slowdown [S7].  \n- Liquidity injections from Fed open‑market operations can temporarily suppress 10‑year yields [S6].  \n- Risk‑premium adjustments on longer maturities can widen the 10‑year yield during a cut cycle [S7].\n\n*Mortgage‑Rate Linkage*  \n- Mortgage rates track the 10‑year Treasury yield, not the Fed‑funds rate [S4], [S5].  \n- The spread between the 10‑year and 30‑year mortgage is ~2.3 pp today [S3].  \n- A 10‑year yield decline typically leads to a mortgage‑rate decline after a short lag; a 10‑year rise can push mortgage rates higher even as the Fed‑funds rate falls [S5], [S7].\n\n---\n\n**Scenarios**\n\n| Scenario | 10‑Year Yield Path | Mortgage‑Rate Path | Key Drivers |\n|----------|--------------------|--------------------|-------------|\n| **Base** | Remains flat or modestly rises (≈0–10 bps) | Remains flat or rises slightly | Inflation expectations hold; liquidity neutral |\n| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |\n| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |\n\n*Note: Quantitative ranges are illustrative; actual movements depend on market sentiment and macro data.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Inflation Expectations** – Monitor CPI releases, Fed minutes, and market‑implied inflation (e.g., breakeven inflation).  \n- **Liquidity Conditions** – Track Fed’s open‑market operations and Treasury repo volumes.  \n- **Risk‑Premium Shifts** – Watch credit spreads (IG/HY) and Treasury‑to‑credit spreads for signs of tightening.  \n- **Fed‑Funds/10‑Year Spread** – A widening spread may signal a disconnect between policy and long‑term rates.  \n- **Mortgage‑Rate Lag** – Use Treasury futures and mortgage‑rate futures to gauge expected lagged responses.\n\n---\n\n**Portfolio / Decision Implications**\n\n- **Duration Management** – Anticipate higher volatility in long‑dated bonds; consider duration‑hedging or laddering strategies.  \n- **MBS Exposure** – Rising mortgage rates increase pre‑payment risk; favor shorter‑duration or pre‑payment‑protected tranches.  \n- **Credit Allocation** – Tightening IG spreads may present buying opportunities; widening HY spreads warrant caution.  \n- **Yield‑Curve Positioning** – A steepening curve (10‑year > Fed‑funds) favors long‑duration Treasuries; a flattening curve favors short‑duration or floating‑rate instruments.  \n- **Risk‑Adjusted Returns** – Evaluate the trade‑off between potential yield gains and increased duration risk.\n\n---\n\n**Conclusion**\n\nA Fed rate‑cut cycle does **not** guarantee lower 10‑year Treasury yields or mortgage rates. The 10‑year yield is the primary lever for mortgage pricing, and its trajectory is shaped by inflation expectations, liquidity flows, and risk‑premiums. Portfolio managers should focus on monitoring the Fed‑funds/10‑year spread, inflation indicators, and liquidity metrics to anticipate yield movements and adjust duration, credit exposure, and MBS positioning accordingly.  \n\n*See Table 1 for yield‑curve shift data.*",
+  "report_text": "**Institutional Research Report – Fed Rate‑Cut Cycle Impact on 10‑Year Treasury Yields & Mortgage Rates**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].  \n- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].  \n- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].  \n- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3].  \n- Mortgage rates track the 10‑yr Treasury yield, not the Fed funds rate [S5].  \n- A Fed cut cycle does **not** guarantee lower long‑term yields or mortgage rates; risk‑premium dynamics dominate the transmission.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure.  \n- **Yield curve**: Despite lower policy rates, the 10‑yr yield has risen, indicating expectations of higher inflation or weaker growth.  \n- **Risk‑premium**: Widening spreads suggest market‑imposed risk premiums have offset the downward pressure from the Fed cut.  \n\n#### Sector (Fixed‑Income)  \n- **Treasuries**: Long‑term Treasury yields are driven by expectations of future inflation and risk‑premia; the current rise aligns with a higher term premium.  \n- **Mortgage‑Backed Securities (MBS)**: Rising mortgage rates increase pre‑payment risk and compress MBS spreads.  \n\n#### Credit  \n- **Investment‑Grade (IG)**: IG spreads may widen modestly if credit risk perception rises, but the easing stance can still lower IG yields.  \n- **High‑Yield (HY)**: HY spreads are more sensitive to risk‑premium changes; a Fed cut cycle that raises long‑term yields can widen HY spreads further.  \n\n#### Portfolio  \n- **Duration exposure**: Long‑term Treasuries may underperform if yields rise; consider duration‑hedged or laddered strategies.  \n- **MBS & Real Estate**: Rising mortgage rates dampen housing demand and reduce MBS cash flows; monitor pre‑payment models.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Fed Cut Path | 10‑yr Yield Impact | Mortgage Rate Impact | Assumption |\n|----------|--------------|--------------------|----------------------|------------|\n| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |\n| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |\n| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |\n\n*See Table 1 for yield‑curve shift data.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Risk‑premium volatility** – sudden geopolitical or commodity shocks can widen spreads (see [S7]).  \n- **Inflation expectations** – higher inflation erodes real returns and pushes long‑term yields up.  \n- **Market sentiment** – if investors perceive the Fed cut as “soft,” long‑term rates may rise despite lower policy rates (see [S8], [S9]).  \n- **Pre‑payment behavior** – rising mortgage rates may accelerate pre‑payments, affecting MBS cash flows.  \n\n*Monitoring tools:*  \n- Fed minutes & forward guidance (Chart 1).  \n- 10‑yr Treasury yield trend (Chart 2).  \n- Mortgage rate trend (Chart 3).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Fixed‑Income Allocation** – shift modestly toward shorter maturities or use duration‑hedged instruments to mitigate potential yield rises.  \n- **MBS Exposure** – consider tightening spread requirements and enhancing pre‑payment risk models.  \n- **Credit Strategy** – maintain a focus on credit quality; HY portfolios may need tighter liquidity buffers.  \n- **Hedging** – interest‑rate swaps or futures can lock in favorable duration profiles.  \n\n---\n\n### 6. Conclusion  \n\nA Fed rate‑cut cycle does **not** automatically translate into lower 10‑year Treasury yields or mortgage rates. Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations. Portfolio managers should therefore focus on monitoring risk‑premium dynamics, spread behavior, and credit quality rather than assuming a simple inverse relationship between Fed policy and long‑term rates.  \n\n---",
+  "report_text_annotated": "> **Validation:** 27 of 38 figures verified against source data (7 exact, 20 derived); 11 flagged (4 labelled as assumptions). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.\n\n**Institutional Research Report – Fed Rate‑Cut Cycle Impact on 10‑Year Treasury Yields & Mortgage Rates**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].  \n- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].  \n- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].  \n- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3].  \n- Mortgage rates track the 10‑yr Treasury yield, not the Fed funds rate [S5].  \n- A Fed cut cycle does **not** guarantee lower long‑term yields or mortgage rates; risk‑premium dynamics dominate the transmission.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure.  \n- **Yield curve**: Despite lower policy rates, the 10‑yr yield has risen, indicating expectations of higher inflation or weaker growth.  \n- **Risk‑premium**: Widening spreads suggest market‑imposed risk premiums have offset the downward pressure from the Fed cut.  \n\n#### Sector (Fixed‑Income)  \n- **Treasuries**: Long‑term Treasury yields are driven by expectations of future inflation and risk‑premia; the current rise aligns with a higher term premium.  \n- **Mortgage‑Backed Securities (MBS)**: Rising mortgage rates increase pre‑payment risk and compress MBS spreads.  \n\n#### Credit  \n- **Investment‑Grade (IG)**: IG spreads may widen modestly if credit risk perception rises, but the easing stance can still lower IG yields.  \n- **High‑Yield (HY)**: HY spreads are more sensitive to risk‑premium changes; a Fed cut cycle that raises long‑term yields can widen HY spreads further.  \n\n#### Portfolio  \n- **Duration exposure**: Long‑term Treasuries may underperform if yields rise; consider duration‑hedged or laddered strategies.  \n- **MBS & Real Estate**: Rising mortgage rates dampen housing demand and reduce MBS cash flows; monitor pre‑payment models.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Fed Cut Path | 10‑yr Yield Impact | Mortgage Rate Impact | Assumption |\n|----------|--------------|--------------------|----------------------|------------|\n| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |\n| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |\n| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |\n\n*See Table 1 for yield‑curve shift data.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Risk‑premium volatility** – sudden geopolitical or commodity shocks can widen spreads (see [S7]).  \n- **Inflation expectations** – higher inflation erodes real returns and pushes long‑term yields up.  \n- **Market sentiment** – if investors perceive the Fed cut as “soft,” long‑term rates may rise despite lower policy rates (see [S8], [S9]).  \n- **Pre‑payment behavior** – rising mortgage rates may accelerate pre‑payments, affecting MBS cash flows.  \n\n*Monitoring tools:*  \n- Fed minutes & forward guidance (Chart 1).  \n- 10‑yr Treasury yield trend (Chart 2).  \n- Mortgage rate trend (Chart 3).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Fixed‑Income Allocation** – shift modestly toward shorter maturities or use duration‑hedged instruments to mitigate potential yield rises.  \n- **MBS Exposure** – consider tightening spread requirements and enhancing pre‑payment risk models.  \n- **Credit Strategy** – maintain a focus on credit quality; HY portfolios may need tighter liquidity buffers.  \n- **Hedging** – interest‑rate swaps or futures can lock in favorable duration profiles.  \n\n---\n\n### 6. Conclusion  \n\nA Fed rate‑cut cycle does **not** automatically translate into lower 10‑year Treasury yields or mortgage rates. Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations. Portfolio managers should therefore focus on monitoring risk‑premium dynamics, spread behavior, and credit quality rather than assuming a simple inverse relationship between Fed policy and long‑term rates.  \n\n---",
+  "draft_report_text": "**Institutional Research Report – Fed Rate‑Cut Cycle Impact on 10‑Year Treasury Yields & Mortgage Rates**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].  \n- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].  \n- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].  \n- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3].  \n- Mortgage rates track the 10‑yr Treasury yield, not the Fed funds rate [S5].  \n- A Fed cut cycle does **not** guarantee lower long‑term yields or mortgage rates; risk‑premium dynamics dominate the transmission.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure.  \n- **Yield curve**: Despite lower policy rates, the 10‑yr yield has risen, indicating expectations of higher inflation or weaker growth.  \n- **Risk‑premium**: Widening spreads suggest market‑imposed risk premiums have offset the downward pressure from the Fed cut.  \n\n#### Sector (Fixed‑Income)  \n- **Treasuries**: Long‑term Treasury yields are driven by expectations of future inflation and risk‑premia; the current rise aligns with a higher term premium.  \n- **Mortgage‑Backed Securities (MBS)**: Rising mortgage rates increase pre‑payment risk and compress MBS spreads.  \n\n#### Credit  \n- **Investment‑Grade (IG)**: IG spreads may widen modestly if credit risk perception rises, but the easing stance can still lower IG yields.  \n- **High‑Yield (HY)**: HY spreads are more sensitive to risk‑premium changes; a Fed cut cycle that raises long‑term yields can widen HY spreads further.  \n\n#### Portfolio  \n- **Duration exposure**: Long‑term Treasuries may underperform if yields rise; consider duration‑hedged or laddered strategies.  \n- **MBS & Real Estate**: Rising mortgage rates dampen housing demand and reduce MBS cash flows; monitor pre‑payment models.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Fed Cut Path | 10‑yr Yield Impact | Mortgage Rate Impact | Assumption |\n|----------|--------------|--------------------|----------------------|------------|\n| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |\n| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |\n| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |\n\n*See Table 1 for yield‑curve shift data.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Risk‑premium volatility** – sudden geopolitical or commodity shocks can widen spreads (see [S7]).  \n- **Inflation expectations** – higher inflation erodes real returns and pushes long‑term yields up.  \n- **Market sentiment** – if investors perceive the Fed cut as “soft,” long‑term rates may rise despite lower policy rates (see [S8], [S9]).  \n- **Pre‑payment behavior** – rising mortgage rates may accelerate pre‑payments, affecting MBS cash flows.  \n\n*Monitoring tools:*  \n- Fed minutes & forward guidance (Chart 1).  \n- 10‑yr Treasury yield trend (Chart 2).  \n- Mortgage rate trend (Chart 3).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Fixed‑Income Allocation** – shift modestly toward shorter maturities or use duration‑hedged instruments to mitigate potential yield rises.  \n- **MBS Exposure** – consider tightening spread requirements and enhancing pre‑payment risk models.  \n- **Credit Strategy** – maintain a focus on credit quality; HY portfolios may need tighter liquidity buffers.  \n- **Hedging** – interest‑rate swaps or futures can lock in favorable duration profiles.  \n\n---\n\n### 6. Conclusion  \n\nA Fed rate‑cut cycle does **not** automatically translate into lower 10‑year Treasury yields or mortgage rates. Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations. Portfolio managers should therefore focus on monitoring risk‑premium dynamics, spread behavior, and credit quality rather than assuming a simple inverse relationship between Fed policy and long‑term rates.  \n\n---",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"18 Oct 2026\" in: \"*Prepared for B17 Institutional Research – 18 Oct 2026*\" — this date is not in the fetched data; use a date from KEY DATA or remove it.\n2. \"09\" in: \"- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n3. \"09\" in: \"- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n4. \"10\" in: \"- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n5. \"15\" in: \"- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n6. \"10\" in: \"- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n7. \"15\" in: \"- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n8. Add a citation to: \"- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3].\" — its figures –1.35 pp, –3.65 pp, –2.30 pp come from [S1], [S2], [S3].\n9. Add a citation to: \"- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure.\" — its figures 47 bp come from [S1].\n10. Add a citation to: \"| Scenario | Fed Cut Path | 10‑yr Yield Impact | Mortgage Rate Impact | Assumption |\n|----------|--------------|--------------------|----------------------|----\" — its figures 4, 1 %, 0.5 pp, 0.4 pp, 4, 2 %, 1.0 pp, 0.8 pp, 4, 0.5 pp, 0.5 pp come from [S2], [S3].\n11. Add a citation to: \"A Fed rate‑cut cycle does **not** automatically translate into lower 10‑year Treasury yields or mortgage rates. Current data show that, even after a 47 bp cut, \" — its figures 47 bp, 1.05 pp, 1.13 pp come from [S1], [S2], [S3].\n12. \"- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].\" cites S1, but figures 4.22 %, 01, 01 come from [S1], [S2].",
+        "open_issues_before": 12,
+        "summary_before": "27 of 38 figures verified against source data (7 exact, 20 derived); 11 flagged (4 labelled as assumptions). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.",
+        "accepted": false,
+        "open_issues_after": 15,
+        "summary_after": "27 of 37 figures verified against source data (7 exact, 20 derived); 10 flagged (4 labelled as assumptions). 8 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.",
+        "revised_report_text": "**Institutional Research Report – Fed Rate‑Cut Cycle Impact on 10‑Year Treasury Yields & Mortgage Rates**  \n*Prepared for B17 Institutional Research*\n\n---\n\n### 1. Executive Summary  \n- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].  \n- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].  \n- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].  \n- Fed‑10‑yr spread widened to –1.35 pp [S1,S2]; Fed‑mortgage spread to –3.65 pp [S1,S3]; 10‑yr‑mortgage spread to –2.30 pp [S2,S3].  \n- Mortgage rates track the 10‑yr Treasury yield, not the Fed funds rate [S5].  \n- A Fed cut cycle does **not** guarantee lower long‑term yields or mortgage rates; risk‑premium dynamics dominate the transmission.\n\n---\n\n### 2. Core Analysis  \n\n**Macro**  \n- Fed policy shift: 47 bp cut indicates accommodative stance [S1].  \n- Yield curve: 10‑yr Treasury yield has risen despite lower policy rates, suggesting expectations of higher inflation or weaker growth.  \n- Risk‑premium: Widening spreads imply market‑imposed risk premiums offsetting Fed‑driven downward pressure.\n\n**Sector (Fixed‑Income)**  \n- Treasuries: Long‑term yields driven by inflation expectations and term premium; current rise aligns with higher term premium.  \n- Mortgage‑Backed Securities (MBS): Rising mortgage rates increase pre‑payment risk and compress MBS spreads.\n\n**Credit**  \n- Investment‑Grade (IG): Spreads may widen modestly if credit risk perception rises (likely).  \n- High‑Yield (HY): Spreads more sensitive to risk‑premium changes; a Fed cut cycle that raises long‑term yields could widen HY spreads further (likely).\n\n**Portfolio**  \n- Duration exposure: Long‑term Treasuries may underperform if yields rise; consider duration‑hedged or laddered strategies (likely).  \n- MBS & Real Estate: Rising mortgage rates dampen housing demand and reduce MBS cash flows; monitor pre‑payment models (likely).\n\n---\n\n### 3. Scenarios  \n\n- **Base** – 25 bp cuts each quarter for 4 qtrs (total 1 %) (assumption).  \n  - 10‑yr yield falls 0.5 pp (assumption).  \n  - Mortgage rate falls 0.4 pp (assumption).  \n\n- **Upside** – 50 bp cuts each quarter for 4 qtrs (total 2 %) (assumption).  \n  - 10‑yr yield falls 1.0 pp (assumption).  \n  - Mortgage rate falls 0.8 pp (assumption).  \n\n- **Downside** – 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp (assumption).  \n  - 10‑yr yield rises 0.5 pp (assumption).  \n  - Mortgage rate rises 0.3 pp (assumption).  \n\n*See Table 1 for yield‑curve shift data.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Risk‑premium volatility** – sudden geopolitical or commodity shocks can widen spreads (see [S7]).  \n- **Inflation expectations** – higher inflation erodes real returns and pushes long‑term yields up (likely).  \n- **Market sentiment** – if investors view the Fed cut as “soft,” long‑term rates may rise despite lower policy rates (see [S8], [S9]).  \n- **Pre‑payment behavior** – rising mortgage rates may accelerate pre‑payments, affecting MBS cash flows (likely).  \n\n*Monitoring tools:*  \n- Fed minutes & forward guidance (Chart 1).  \n- 10‑yr Treasury yield trend (Chart 2).  \n- Mortgage rate trend (Chart 3).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Fixed‑Income Allocation** – shift modestly toward shorter maturities or use duration‑hedged instruments to mitigate potential yield rises (likely).  \n- **MBS Exposure** – tighten spread requirements and enhance pre‑payment risk models (likely).  \n- **Credit Strategy** – maintain focus on credit quality; HY portfolios may need tighter liquidity buffers (likely).  \n- **Hedging** – interest‑rate swaps or futures can lock in favorable duration profiles (likely).  \n\n---\n\n### 6. Conclusion  \n\nCurrent data show that, even after a 47 bp Fed cut, the 10‑yr Treasury yield rose 1.05 pp and mortgage rates rose 1.13 pp [S1,S2,S3]. Mortgage rates track the 10‑yr Treasury yield, not the Fed funds rate [S5], and Fed cuts can raise long‑term yields due to risk‑premium dynamics [S7]. Portfolio managers should therefore focus on monitoring risk‑premium dynamics, spread behavior, and credit quality rather than assuming a simple inverse relationship between Fed policy and long‑term rates."
+      }
+    ]
+  },
   "sources": [
     {
       "title": "FRED series FEDFUNDS: Effective Federal Funds Rate",
@@ -77,7 +92,7 @@
     },
     {
       "title": "What a Fed rate cut means for Treasury yields, mortgage rates",
-      "url": "https://finance.yahoo.com/video/fed-rate-cut-means-treasury-110008376.html",
+      "url": "https://finance.yahoo.com/video/fed-rate-cut-means-treasury-110008376.html?fr=sycsrp_catchall",
       "source": "web (Tavily)",
       "snippet": "Schwab Center for Financial Research fixed income strategist Collin Martin weighs in on how the Fed's monetary policy could affect Treasury yields (^TYX, ^TNX, ^FVX) and the broader bond market, mortgage rates, and shares his thoughts on bond and fixed income ETFs.  Also catch Collin Martin's thoughts on whether Kevin ",
       "id": "S9"
@@ -87,10 +102,10 @@
     "S1",
     "S2",
     "S3",
-    "S4",
     "S5",
-    "S6",
-    "S7"
+    "S7",
+    "S8",
+    "S9"
   ],
   "tables": [
     {
@@ -2297,295 +2312,859 @@
   ],
   "validation": {
     "counts": {
-      "figures": 17,
-      "verified": 4,
-      "derived": 5,
-      "unverified": 8
+      "figures": 38,
+      "verified": 7,
+      "derived": 20,
+      "unverified": 11
     },
     "figures": [
       {
-        "text": "1",
+        "text": "18 Oct 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 151,
+        "end": 162,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "*Prepared for B17 Institutional Research – 18 Oct 2026*"
+      },
+      {
+        "text": "47 bp",
+        "value": 47.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 221,
+        "end": 226,
+        "status": "derived",
+        "matched": "FEDFUNDS change 2025-09-01 to 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "4.22 %",
+        "value": 4.22,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 232,
+        "end": 238,
+        "status": "verified",
+        "matched": "DGS10 on 2026-02-09",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "09",
+        "value": 9.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 245,
+        "end": 247,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "01",
         "value": 1.0,
         "unit": "",
         "tolerance": 0.500000001,
-        "start": 326,
-        "end": 327,
+        "start": 248,
+        "end": 250,
         "status": "derived",
         "matched": "DGS10 change 2025-10-10 to 2026-10-15",
         "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- Mortgage rates are tightly linked to the 10‑year Treasury yield, not the Fed‑funds rate, and typically lag the 10‑year by 1–2 months."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
       },
       {
         "text": "3.75 %",
         "value": 3.75,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 846,
-        "end": 852,
+        "start": 255,
+        "end": 261,
         "status": "verified",
         "matched": "FEDFUNDS on 2026-09-01",
         "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- Current Fed‑funds rate: 3.75 % [S1]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "09",
+        "value": 9.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 268,
+        "end": 270,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "01",
+        "value": 1.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 271,
+        "end": 273,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "1.05 pp",
+        "value": 1.05,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 311,
+        "end": 318,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2]."
       },
       {
         "text": "5.10 %",
         "value": 5.1,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 895,
-        "end": 901,
+        "start": 322,
+        "end": 328,
         "status": "verified",
         "matched": "DGS10 on 2026-10-15",
         "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- Current 10‑year Treasury yield: 5.10 % [S2]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 335,
+        "end": 337,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 338,
+        "end": 340,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2]."
+      },
+      {
+        "text": "1.13 pp",
+        "value": 1.13,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 394,
+        "end": 401,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2025-10-16 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3]."
       },
       {
         "text": "7.40 %",
         "value": 7.4,
         "unit": "%",
         "tolerance": 0.0050000010000000004,
-        "start": 944,
-        "end": 950,
+        "start": 405,
+        "end": 411,
         "status": "verified",
-        "matched": "MORTGAGE30US on 2026-10-08",
+        "matched": "MORTGAGE30US on 2026-10-15",
         "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- Current 30‑year fixed mortgage: 7.40 % [S3]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 418,
+        "end": 420,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 421,
+        "end": 423,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3]."
       },
       {
         "text": "–1.35 pp",
         "value": 1.35,
         "unit": "pp",
         "tolerance": 0.0050000010000000004,
-        "start": 993,
-        "end": 1001,
+        "start": 463,
+        "end": 471,
         "status": "derived",
         "matched": "FEDFUNDS minus DGS10 (latest: 2026-09-01, 2026-10-15)",
         "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "- Fed‑funds minus 10‑year spread: –1.35 pp [S2]."
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3]."
+      },
+      {
+        "text": "–3.65 pp",
+        "value": 3.65,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 496,
+        "end": 504,
+        "status": "derived",
+        "matched": "FEDFUNDS minus MORTGAGE30US (latest: 2026-09-01, 2026-10-15)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3]."
       },
       {
         "text": "–2.30 pp",
         "value": 2.3,
         "unit": "pp",
         "tolerance": 0.0050000010000000004,
-        "start": 1043,
-        "end": 1051,
+        "start": 531,
+        "end": 539,
         "status": "derived",
         "matched": "DGS10 minus MORTGAGE30US (latest: 2026-10-15, 2026-10-15)",
         "source_id": "S2",
-        "topic_match": false,
-        "in_source_text": null,
-        "context": "- 10‑year minus mortgage spread: –2.30 pp [S3]."
-      },
-      {
-        "text": "2.3 pp",
-        "value": 2.3,
-        "unit": "pp",
-        "tolerance": 0.050000001,
-        "start": 1665,
-        "end": 1671,
-        "status": "derived",
-        "matched": "DGS10 minus MORTGAGE30US (latest: 2026-10-15, 2026-10-15)",
-        "source_id": "S2",
-        "topic_match": false,
-        "in_source_text": null,
-        "context": "- The spread between the 10‑year and 30‑year mortgage is ~2.3 pp today [S3]."
-      },
-      {
-        "text": "0",
-        "value": 0.0,
-        "unit": "",
-        "tolerance": 0.500000001,
-        "start": 2070,
-        "end": 2071,
-        "status": "verified",
-        "matched": "MORTGAGE30US on 2026-02-26",
-        "source_id": "S3",
+        "source_ids": [
+          "S2",
+          "S3"
+        ],
         "topic_match": true,
         "in_source_text": null,
-        "context": "| **Base** | Remains flat or modestly rises (≈0–10 bps) | Remains flat or rises slightly | Inflation expectations hold; liquidity neutral |"
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3]."
       },
       {
-        "text": "10 bps",
-        "value": 10.0,
+        "text": "47 bp",
+        "value": 47.0,
         "unit": "bp",
         "tolerance": 0.500000001,
-        "start": 2072,
-        "end": 2078,
+        "start": 828,
+        "end": 833,
         "status": "derived",
-        "matched": "DGS10 change 2026-09-15 to 2026-10-15",
+        "matched": "FEDFUNDS change 2025-09-01 to 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure."
+      },
+      {
+        "text": "25 bp",
+        "value": 25.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2323,
+        "end": 2328,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |"
+      },
+      {
+        "text": "4",
+        "value": 4.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2351,
+        "end": 2352,
+        "status": "verified",
+        "matched": "DGS10 on 2025-11-26",
         "source_id": "S2",
-        "topic_match": false,
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
         "in_source_text": null,
-        "context": "| **Base** | Remains flat or modestly rises (≈0–10 bps) | Remains flat or rises slightly | Inflation expectations hold; liquidity neutral |"
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |"
       },
       {
-        "text": "10",
-        "value": 10.0,
-        "unit": "",
+        "text": "1 %",
+        "value": 1.0,
+        "unit": "%",
         "tolerance": 0.500000001,
-        "start": 2187,
-        "end": 2189,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
+        "start": 2365,
+        "end": 2368,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-04-16 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
         "in_source_text": null,
-        "context": "| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |"
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |"
       },
       {
-        "text": "20 bps",
-        "value": 20.0,
+        "text": "0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2390,
+        "end": 2396,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-09-17 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |"
+      },
+      {
+        "text": "0.4 pp",
+        "value": 0.4,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2419,
+        "end": 2425,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-09-17 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |"
+      },
+      {
+        "text": "50 bp",
+        "value": 50.0,
         "unit": "bp",
         "tolerance": 0.500000001,
-        "start": 2190,
-        "end": 2196,
+        "start": 2458,
+        "end": 2463,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": null,
-        "context": "| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |"
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |"
       },
       {
-        "text": "10",
-        "value": 10.0,
+        "text": "4",
+        "value": 4.0,
         "unit": "",
         "tolerance": 0.500000001,
-        "start": 2208,
-        "end": 2210,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
+        "start": 2486,
+        "end": 2487,
+        "status": "verified",
+        "matched": "DGS10 on 2025-11-26",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
         "in_source_text": null,
-        "context": "| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |"
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |"
       },
       {
-        "text": "20 bps",
-        "value": 20.0,
+        "text": "2 %",
+        "value": 2.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2500,
+        "end": 2503,
+        "status": "derived",
+        "matched": "DGS10 minus MORTGAGE30US (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2",
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |"
+      },
+      {
+        "text": "1.0 pp",
+        "value": 1.0,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2525,
+        "end": 2531,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |"
+      },
+      {
+        "text": "0.8 pp",
+        "value": 0.8,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2554,
+        "end": 2560,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-07-16 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |"
+      },
+      {
+        "text": "25 bp",
+        "value": 25.0,
         "unit": "bp",
         "tolerance": 0.500000001,
-        "start": 2211,
-        "end": 2217,
+        "start": 2595,
+        "end": 2600,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": null,
-        "context": "| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |"
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |"
       },
       {
-        "text": "20",
-        "value": 20.0,
+        "text": "4",
+        "value": 4.0,
         "unit": "",
         "tolerance": 0.500000001,
-        "start": 2308,
-        "end": 2310,
+        "start": 2623,
+        "end": 2624,
+        "status": "verified",
+        "matched": "DGS10 on 2025-11-26",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |"
+      },
+      {
+        "text": "0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2655,
+        "end": 2661,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-09-17 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |"
+      },
+      {
+        "text": "0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2682,
+        "end": 2688,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-09-17 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |"
+      },
+      {
+        "text": "0.3 pp",
+        "value": 0.3,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2711,
+        "end": 2717,
         "status": "unverified",
         "matched": null,
         "source_id": null,
+        "source_ids": [],
         "topic_match": null,
         "in_source_text": null,
-        "context": "| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |"
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |"
       },
       {
-        "text": "30 bps",
-        "value": 30.0,
+        "text": "47 bp",
+        "value": 47.0,
         "unit": "bp",
         "tolerance": 0.500000001,
-        "start": 2311,
-        "end": 2317,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
+        "start": 4096,
+        "end": 4101,
+        "status": "derived",
+        "matched": "FEDFUNDS change 2025-09-01 to 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
         "in_source_text": null,
-        "context": "| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |"
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations."
       },
       {
-        "text": "20",
-        "value": 20.0,
-        "unit": "",
-        "tolerance": 0.500000001,
-        "start": 2329,
-        "end": 2331,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
+        "text": "1.05 pp",
+        "value": 1.05,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 4133,
+        "end": 4140,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
         "in_source_text": null,
-        "context": "| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |"
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations."
       },
       {
-        "text": "30 bps",
-        "value": 30.0,
-        "unit": "bp",
-        "tolerance": 0.500000001,
-        "start": 2332,
-        "end": 2338,
-        "status": "unverified",
-        "matched": null,
-        "source_id": null,
-        "topic_match": null,
+        "text": "1.13 pp",
+        "value": 1.13,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 4171,
+        "end": 4178,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2025-10-16 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
         "in_source_text": null,
-        "context": "| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |"
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations."
       }
     ],
     "citations": {
-      "markers": 13,
+      "markers": 7,
       "dangling": [],
       "uncited_paragraphs": [
         {
-          "text": "- Mortgage rates are tightly linked to the 10‑year Treasury yield, not the Fed‑funds rate, and typically lag the 10‑year by 1–2 months.",
+          "text": "- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3].",
           "figures": [
-            "1"
+            "–1.35 pp",
+            "–3.65 pp",
+            "–2.30 pp"
+          ],
+          "sources": [
+            "S1",
+            "S2",
+            "S3"
           ]
         },
         {
-          "text": "| Scenario | 10‑Year Yield Path | Mortgage‑Rate Path | Key Drivers |\n|----------|--------------------|--------------------|-------------|\n| **Base** | Remains flat or modestly rises (≈0–10 bps) | Rema",
+          "text": "- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure.",
           "figures": [
-            "0",
-            "10 bps"
+            "47 bp"
+          ],
+          "sources": [
+            "S1"
+          ]
+        },
+        {
+          "text": "| Scenario | Fed Cut Path | 10‑yr Yield Impact | Mortgage Rate Impact | Assumption |\n|----------|--------------|--------------------|----------------------|------------|\n| **Base** | 25 bp cuts each q",
+          "figures": [
+            "4",
+            "1 %",
+            "0.5 pp",
+            "0.4 pp",
+            "4",
+            "2 %",
+            "1.0 pp",
+            "0.8 pp",
+            "4",
+            "0.5 pp",
+            "0.5 pp"
+          ],
+          "sources": [
+            "S2",
+            "S3"
+          ]
+        },
+        {
+          "text": "A Fed rate‑cut cycle does **not** automatically translate into lower 10‑year Treasury yields or mortgage rates. Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mo",
+          "figures": [
+            "47 bp",
+            "1.05 pp",
+            "1.13 pp"
+          ],
+          "sources": [
+            "S1",
+            "S2",
+            "S3"
           ]
         }
       ],
       "source_mismatches": [
         {
-          "text": "- Fed‑funds minus 10‑year spread: –1.35 pp [S2].",
+          "text": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].",
           "figures": [
-            "–1.35 pp"
+            "4.22 %",
+            "01",
+            "01"
           ],
           "cited": [
+            "S1"
+          ],
+          "sources": [
+            "S1",
             "S2"
-          ]
-        },
-        {
-          "text": "- 10‑year minus mortgage spread: –2.30 pp [S3].",
-          "figures": [
-            "–2.30 pp"
-          ],
-          "cited": [
-            "S3"
-          ]
-        },
-        {
-          "text": "- The spread between the 10‑year and 30‑year mortgage is ~2.3 pp today [S3].",
-          "figures": [
-            "2.3 pp"
-          ],
-          "cited": [
-            "S3"
           ]
         }
       ]
@@ -2595,7 +3174,7 @@
         "table": "FRED: Effective Federal Funds Rate (FEDFUNDS)",
         "last_date": "2026-09-01",
         "frequency": "monthly",
-        "age_days": 17,
+        "age_days": 18,
         "max_age_days": 60,
         "status": "ok"
       },
@@ -2603,7 +3182,7 @@
         "table": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
         "last_date": "2026-10-15",
         "frequency": "daily",
-        "age_days": 2,
+        "age_days": 3,
         "max_age_days": 7,
         "status": "ok"
       },
@@ -2611,7 +3190,7 @@
         "table": "FRED: 30-Year Fixed Rate Mortgage Average (MORTGAGE30US)",
         "last_date": "2026-10-15",
         "frequency": "weekly",
-        "age_days": 2,
+        "age_days": 3,
         "max_age_days": 14,
         "status": "ok"
       }
@@ -2621,11 +3200,23 @@
       "issue": false
     },
     "data_status": [],
-    "summary": "9 of 17 figures verified against source data (4 exact, 5 derived); 8 flagged. 2 paragraph(s) state figures without a citation. 3 paragraph(s) cite a different source than the data."
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ],
+    "open_issues": 12,
+    "summary": "27 of 38 figures verified against source data (7 exact, 20 derived); 11 flagged (4 labelled as assumptions). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
   },
   "run_meta": {
-    "run_id": "20261017-232122-519458",
-    "timestamp": "2026-10-18T03:21:22+00:00",
+    "run_id": "20261018-105058-632e10",
+    "timestamp": "2026-10-18T14:50:58+00:00",
     "model": "gpt-oss:20b",
     "api_base": "https://ollama.com",
     "provider": "ollama-api",
@@ -2637,6 +3228,11 @@
       "analyst": 0.15,
       "reasoner": 0.15,
       "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
     }
   }
 }
