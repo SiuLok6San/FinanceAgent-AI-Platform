@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-18",
+  "model": "gpt-oss:20b",
+  "api_base": "https://ollama.com",
+  "seed": 42,
+  "temperature": 0.1,
+  "repeats": 3,
+  "distinct_outputs": 3,
+  "output_hashes": [
+    "6c30884c47f7",
+    "b6081635dfc6",
+    "81b7d7066b29"
+  ]
+}

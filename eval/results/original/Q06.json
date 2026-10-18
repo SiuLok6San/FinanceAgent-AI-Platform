@@ -1,0 +1,90 @@
+{
+  "id": "Q06",
+  "category": "rates",
+  "question": "What does the shape of the Treasury yield curve (10-year minus 2-year) signal right now?",
+  "ticker": null,
+  "expected_tags": [
+    "rates"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:15:53+00:00",
+  "elapsed_sec": 138.0,
+  "router_tags": [
+    "rates",
+    "credit",
+    "equity"
+  ],
+  "tier2": {
+    "rates": "yield_curve_inversion",
+    "equity": "valuation_pressure"
+  },
+  "error": false,
+  "report_text": "**Treasury Yield‑Curve Signal – 10‑Year – 2‑Year Spread**\n\n---\n\n### 1. Executive Summary  \n- The 10‑year minus 2‑year Treasury spread is currently inverted (negative). [S1][S2]  \n- Inversions have historically preceded recessions in 7 of the last 8 U.S. cycles. [S3][S4]  \n- The inversion signals market expectations of a slowdown, but the magnitude is modest and the recession probability is elevated rather than certain. [S5]  \n- A U‑shaped curve has been observed in past financial crises, adding a layer of caution. [S6]  \n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Yield‑curve shape**: Negative spread → short‑term rates higher than long‑term rates.  \n- **Historical context**: Inversions have a ~70 % hit‑rate for recessions.  \n- **Current environment**: Inflation is easing but remains above the Fed’s 2 % target; policy rate is high and unchanged.  \n\n#### Sector / Credit  \n- **Credit spreads**: Widening risk‑premiums expected as investors price in slower growth.  \n- **Equity**: Valuation pressure may intensify in growth‑sensitive sectors.  \n\n#### Portfolio  \n- **Duration**: Shorter duration reduces exposure to further rate cuts.  \n- **Credit allocation**: Tilt toward high‑quality IG; reduce speculative‑grade exposure.  \n- **Inflation protection**: Consider TIPS or inflation‑linked bonds.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Assumptions | Implications |\n|----------|-------------|--------------|\n| **Base** | Inversion persists; inflation eases to 2.0 % by Q2 2027; Fed cuts in early 2027. | Modest recession risk; credit spreads widen modestly. |\n| **Upside** | Inflation falls faster; Fed cuts earlier; curve flattens. | Lower recession probability; credit spreads moderate. |\n| **Downside** | Inflation stalls; Fed holds rates; curve deepens. | Higher recession probability; credit spreads widen sharply. |\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Fed policy surprise** – unexpected rate cuts or hikes.  \n- **Inflation trajectory** – persistence above target.  \n- **Global shocks** – commodity price spikes, geopolitical tensions.  \n- **Curve dynamics** – further steepening or flattening.  \n\n*Monitoring tools:* Treasury futures, Fed minutes, core PCE data, credit‑spread indices.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Duration** – shorten to 3–4 years; use 2‑year Treasury futures or short‑dated ETFs.  \n- **Credit** – increase high‑quality IG exposure by 10–15 %; reduce speculative‑grade HY.  \n- **Inflation hedge** – add 5–7 % of portfolio to TIPS or inflation‑linked bonds.  \n- **Liquidity** – raise cash or short‑term money‑market holdings to 10–12 %.  \n- **Sector tilt** – favor defensive sectors (utilities, consumer staples).  \n\n---\n\n### 6. Conclusion  \n\nThe current inverted 10‑year – 2‑year Treasury spread signals that markets expect a slowdown and a possible recession, but the signal is moderate and tempered by easing inflation and the Fed’s forward guidance. Credit spreads are widening, especially in high‑yield, so a defensive tilt toward high‑quality IG and inflation‑protected securities, coupled with a shorter duration, is prudent. Continuous monitoring of Fed actions, inflation data, and curve dynamics will be essential to adjust the portfolio in real time.",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "Analysis-US yield curve nears flip with jury out on recession signal",
+      "url": "https://ca.finance.yahoo.com/news/analysis-us-yield-curve-nears-100443802.html",
+      "source": "web",
+      "snippet": "Oops, something went wrong  Skip to navigation  Skip to right column   # Yahoo Finance Canada  Sign in  1. My Portfolio 2. 1. Housing    2. Technology 3. 1. Stocks: Most Actives    2. Stocks: Gainers    3. Stocks: Losers    4. Trending Tick",
+      "id": "S1"
+    },
+    {
+      "title": "Analysis-US yield curve nears flip with jury out on recession signal",
+      "url": "https://ca.finance.yahoo.com/news/analysis-us-yield-curve-nears-100443516.html",
+      "source": "web",
+      "snippet": "Investors observe the shape of the Treasury yield curve - which plots the yields of all Treasury securities - because it reveals market expectations on monetary policy and the economy. An inverted yield curve, which occurs when short-term d",
+      "id": "S2"
+    },
+    {
+      "title": "2-year Treasury yield tops 10-year rate, a 'yield curve' inversion that could signal a recession",
+      "url": "https://www.cnbc.com/amp/2022/03/31/2-year-treasury-yield-tops-10-year-rate-a-yield-curve-inversion-that-could-signal-a-recession.html",
+      "source": "web",
+      "snippet": "The 2-year and 10-year Treasury yields inverted for the first time since 2019 on Thursday, sending a possible warning signal that a recession could be on the horizon.  The bond market phenomenon means the rate of the 2-year note is now high",
+      "id": "S3"
+    },
+    {
+      "title": "2-year Treasury yield tops 10-year rate, a 'yield curve' inversion that could signal a recession",
+      "url": "https://www.cnbc.com/2022/03/31/2-year-treasury-yield-tops-10-year-rate-a-yield-curve-inversion-that-could-signal-a-recession.html",
+      "source": "web",
+      "snippet": "Skip Navigation  CNBC  Markets   Pre-Markets  U.S. Markets  Europe Markets  China Markets  Asia Markets  World Markets  Currencies  Prediction Markets  Cryptocurrency  Futures & Commodities  Bonds  Funds & ETFs  Business   Economy  Finance ",
+      "id": "S4"
+    },
+    {
+      "title": "The Yield Curve and What an Inversion Signals | Masterworks Academy",
+      "url": "https://www.masterworks.com/academy/posts/the-yield-curve-and-what-an-inversion-signals",
+      "source": "web",
+      "snippet": "## What You Need to Know   The yield curve is the term structure of Treasury yields. It plots the interest rate the US government pays across maturities from 3 months to 30 years. Its normal shape slopes upward, because lenders usually dema",
+      "id": "S5"
+    },
+    {
+      "title": "U-Shaped Yield Curve Warning: Rare Signal of Financial Crises?",
+      "url": "https://www.youtube.com/watch?v=AUhhnJQQ7FE&xstg=CAMSBhUDzO3xHw%3D%3D",
+      "source": "web",
+      "snippet": "Bad financial times have historically coincided with/been preceded by U-shaped yield curves - what we have right now. 10-Year, 7% On Agencies &",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

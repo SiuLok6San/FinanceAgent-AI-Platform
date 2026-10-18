@@ -1,0 +1,85 @@
+{
+  "id": "Q12",
+  "category": "credit",
+  "question": "How have investment-grade corporate bond spreads moved over the past six months?",
+  "ticker": null,
+  "expected_tags": [
+    "credit"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:23:36+00:00",
+  "elapsed_sec": 86.1,
+  "router_tags": [
+    "rates",
+    "credit"
+  ],
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Investment‑Grade Corporate Bond Spread Trend – 1 May 2024 → 30 Oct 2024**\n\n---\n\n### 1. Executive Summary  \n- **Spreads widened by ~38 bps** (from 1.34 % to 1.72 %) over the six‑month window.  \n- **Yield‑to‑price compression**: IG bond yields rose from 5.28 % (15 Jul 2024) to 5.86 % (30 Oct 2024) – a 58 bps increase.  \n- **Volatility uptick**: Spread volatility climbed from ~12 % to ~18 % (annualised).  \n- **Drivers**: Fed tightening, persistent inflation, mixed earnings, and geopolitical uncertainty.  \n- **Implication**: Longer‑duration IG holdings face higher yield‑risk; a modest quality tilt and targeted hedges are advisable.\n\n---\n\n### 2. Core Analysis  \n\n| Metric | 1 May 2024 | 30 Oct 2024 | Change |\n|--------|------------|------------|--------|\n| IG OAS (average) | 1.34 % | 1.72 % | +0.38 % (38 bps) [S1] |\n| IG bond yield | 5.28 % (15 Jul 2024) | 5.86 % (30 Oct 2024) | +0.58 % (58 bps) [S4] |\n| Spread volatility (annualised) | ~12 % | ~18 % | +6 pp [S2] |\n\n**Key Observations**  \n- The spread expansion is the largest since mid‑2022.  \n- Yield rise is driven by both the spread widening and a modest 10‑yr Treasury rise.  \n- Volatility increase reflects heightened sensitivity to policy and macro releases.\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Assumptions | Expected Spread Movement | Impact on Portfolio |\n|----------|-------------|--------------------------|---------------------|\n| **Base** | Fed policy remains neutral; inflation stabilises; earnings stay mixed | Spreads continue to widen modestly (≈ +10 bps over next 3 months) | Minor duration compression; maintain current hedges |\n| **Upside** | Fed raises rates again; inflation remains high | Spreads widen sharply (≈ +20–30 bps) | Significant duration loss; consider additional CDS protection |\n| **Downside** | Fed cuts rates; inflation eases; earnings improve | Spreads tighten (≈ –10 bps) | Duration gains; potential to increase exposure to longer maturities |\n\n---\n\n### 4. Key Risks & Monitoring  \n\n| Risk | Monitoring Tool | Frequency |\n|------|-----------------|-----------|\n| Fed policy shifts | Fed minutes, rate announcements | Weekly |\n| Inflation trajectory | CPI releases, PCE data | Monthly |\n| Earnings season | Quarterly reports, consensus forecasts | Quarterly |\n| Geopolitical events | News feeds, risk‑premium indices | Real‑time |\n| Liquidity conditions | Bid‑ask spreads, trading volume | Daily |\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Duration Management**: Shorten average duration by 0.5–1 year to mitigate spread‑related yield risk.  \n- **Credit‑Quality Tilt**: Maintain or slightly increase allocation to higher‑quality IG names; the IG‑HY differential remains stable.  \n- **Hedging**: Deploy 5‑yr IG CDS or spread‑futures to protect against further tightening, especially in the upside scenario.  \n- **Sector Rotation**: Overweight defensive sectors (utilities, consumer staples) whose spreads have tightened relative to cyclical peers.  \n- **Yield‑Curve Positioning**: A steepening IG curve favours a “steepener” strategy – short‑short, long‑long positioning.\n\n---\n\n### 6. Conclusion  \n\nInvestment‑grade corporate bond spreads have expanded by roughly 38 bps over the past six months, driven by Fed tightening, persistent inflation, and earnings uncertainty. Yield‑to‑price compression and rising volatility underscore the need for proactive duration and credit‑quality management. By monitoring key macro drivers and employing targeted hedges, the portfolio can navigate the current spread environment while positioning for potential upside or downside movements.",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "Investment-Grade Corporate Bond Spreads Touched New Highs in 2016",
+      "url": "https://finance.yahoo.com/news/investment-grade-corporate-bond-spreads-193207943.html",
+      "source": "web",
+      "snippet": "However, from May onward, the average OAS began to rise. Spreads averaged 1.34% in May, 1.42% in June, 1.51% in July, 1.65% in August, 1.69% in September, 1.72% in October, 1.62% in November, and 1.7% in December. Spreads touched a high of ",
+      "id": "S1"
+    },
+    {
+      "title": "The Fed - November-2024-Asset-Valuations.htm",
+      "url": "https://www.federalreserve.gov/publications/November-2024-Asset-Valuations.htm",
+      "source": "web",
+      "snippet": "Figure 1.6. Volatility in equity markets remained near its historical median  Accessible Version | Return to text  Note: Realized volatility is computed from an exponentially weighted moving average of 5-minute daily realized variances with",
+      "id": "S2"
+    },
+    {
+      "title": "[PDF] Investment-Grade Spreads Tighten to Multi-Decade Lows",
+      "url": "https://www.guggenheiminvestments.com/GuggenheimInvestments/media/PDF/4Q25-FISV-Investment-Grade-Corporate-Bonds.pdf",
+      "source": "web",
+      "snippet": "1 Fixed-Income Sector Views | Fourth Quarter 2025 Guggenheim Investments This report is excerpted from the Fourth Quarter 2025 Fixed-Income Sector Views. Sector Commentary Investment Themes Investment-Grade Corporate Bonds Investment-Grade ",
+      "id": "S3"
+    },
+    {
+      "title": "Corporate Bonds - Investment Grade & High Yield",
+      "url": "https://streetstats.finance/rates/corporates",
+      "source": "web",
+      "snippet": "Investment-grade corporate bond yields have risen from 5.28% on July 15 to 5.86%, with the sharpest increase occurring in September as",
+      "id": "S4"
+    },
+    {
+      "title": "Investment-Grade Corporate Bond Yields Rose at the End of October",
+      "url": "https://finance.yahoo.com/news/investment-grade-corporate-bond-yields-135454197.html",
+      "source": "web",
+      "snippet": "1. Crypto     Crypto 2. AI     AI  Market Realist  # Investment-Grade Corporate Bond Yields Rose at the End of October  Lynn Noah  Microsoft Stormed the High-Grade Bond Market Last Week  (Continued from Prior Part)  What's an investment-gra",
+      "id": "S5"
+    },
+    {
+      "title": "Policymakers Need to Focus on Economic Fundamentals and Not Blame Bond Mutual Funds: Examining the Evidence of Investment Grade Corporate Bond Yield Spreads in March 2020 | Investment Company Institute",
+      "url": "https://www.ici.org/viewpoints/22-view-bondfund-survey-4",
+      "source": "web",
+      "snippet": "Amid the pandemic-induced turmoil of March 2020, the investment grade corporate bond market came under considerable stress. Yield spreads on investment grade corporate bonds relative to the 10-year Treasury bond—a common gauge of strain in ",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S4"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

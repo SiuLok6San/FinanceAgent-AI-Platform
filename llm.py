@@ -1,33 +1,58 @@
 """
 llm.py — Native Ollama Chat Caller
+
+Works with a local Ollama server (http://localhost:11434) and with the
+hosted Ollama API (https://ollama.com), which uses the same /api/chat
+format plus a Bearer API key (OLLAMA_API_KEY).
 """
 
-import os
-import json
 import time
 import requests
-from typing import Optional, Union
+from typing import Any, Dict, Optional, Union
 
-# Environment variables
-def _env(k, d=""):
-    v = os.getenv(k)
-    return v if v else d
+from settings import env, load_config
 
-LLM_API_BASE = _env("LLM_API_BASE", "http://localhost:11434")
-LLM_MODEL_NAME = _env("LLM_MODEL_NAME", "llama3")
-LLM_TIMEOUT_SEC = float(_env("LLM_TIMEOUT_SEC", "120"))
+_CFG = load_config("pipeline")["llm"]
+
+LLM_API_BASE = env("LLM_API_BASE", _CFG["api_base"]).rstrip("/")
+LLM_MODEL_NAME = env("LLM_MODEL_NAME", _CFG["model"])
+LLM_TIMEOUT_SEC = float(env("LLM_TIMEOUT_SEC", str(_CFG["timeout_sec"])))
+# Fixed seed so repeated runs with the same inputs give the same output
+# (as far as the server honours it).
+LLM_SEED = int(env("LLM_SEED", str(_CFG["seed"])))
+LLM_RETRIES = int(_CFG["retries"])
+LLM_BACKOFF_SEC = float(_CFG["backoff_sec"])
+LLM_NUM_CTX = int(_CFG["num_ctx"])
+OLLAMA_API_KEY = env("OLLAMA_API_KEY")
+
+
+def llm_settings() -> Dict[str, Any]:
+    """Settings that are logged with every report for reproducibility (no secrets)."""
+    return {
+        "model": LLM_MODEL_NAME,
+        "api_base": LLM_API_BASE,
+        "provider": "ollama-api" if OLLAMA_API_KEY else "ollama-local",
+        "seed": LLM_SEED,
+        "num_ctx": LLM_NUM_CTX,
+        "timeout_sec": LLM_TIMEOUT_SEC,
+    }
+
 
 class LLMError(RuntimeError):
     pass
+
+
+def _is_retryable(status_code: int) -> bool:
+    return status_code == 429 or status_code >= 500
 
 
 def call_llm(
     system_prompt: Union[str, None],
     user_prompt: Optional[str] = None,
     *,
-    temperature: float = 0.2,
+    temperature: float = 0.15,
     model: Optional[str] = None,
-    retries: int = 2,
+    retries: Optional[int] = None,
 ) -> str:
     """
     Call Ollama's native /api/chat endpoint.
@@ -42,8 +67,10 @@ def call_llm(
         system_prompt = "You are a professional institutional finance analyst."
 
     model = model or LLM_MODEL_NAME
+    retries = LLM_RETRIES if retries is None else retries
 
     url = f"{LLM_API_BASE}/api/chat"
+    headers = {"Authorization": f"Bearer {OLLAMA_API_KEY}"} if OLLAMA_API_KEY else {}
 
     payload = {
         "model": model,
@@ -52,36 +79,35 @@ def call_llm(
             {"role": "user", "content": user_prompt},
         ],
         "options": {
-            "temperature": temperature
+            "temperature": temperature,
+            "seed": LLM_SEED,
+            "num_ctx": LLM_NUM_CTX,
         },
         "stream": False
     }
 
-    last_err = None
+    last_err: Optional[str] = None
     for attempt in range(retries + 1):
+        if attempt:
+            time.sleep(LLM_BACKOFF_SEC * 2 ** (attempt - 1))
         try:
-            r = requests.post(
-                url,
-                json=payload,
-                timeout=LLM_TIMEOUT_SEC
-            )
-            if r.status_code != 200:
-                raise LLMError(f"Ollama HTTP {r.status_code}: {r.text[:200]}")
+            r = requests.post(url, json=payload, headers=headers, timeout=LLM_TIMEOUT_SEC)
+        except requests.RequestException as e:
+            last_err = f"{type(e).__name__}: {e}"
+            continue
 
-            data = r.json()
-            msg = data.get("message", {}).get("content", "")
+        if r.status_code != 200:
+            last_err = f"HTTP {r.status_code}: {r.text[:200]}"
+            if _is_retryable(r.status_code):
+                continue
+            break  # 401 / 404 etc. will not fix themselves
 
-            if not msg:
-                raise LLMError(f"Ollama returned empty message: {data}")
-
-            return msg.strip()
-
-        except Exception as e:
-            last_err = e
-            time.sleep(0.5)
+        msg = (r.json().get("message") or {}).get("content", "")
+        if not msg.strip():
+            last_err = "empty message from model"
+            continue
+        return msg.strip()
 
     raise LLMError(
-        f"[LLM ERROR] Could not connect to Ollama.\n"
-        f"Base: {LLM_API_BASE}\n"
-        f"Detail: {last_err}"
+        f"LLM call failed (model={model}, base={LLM_API_BASE}). Detail: {last_err}"
     )

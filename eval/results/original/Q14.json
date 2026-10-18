@@ -1,0 +1,286 @@
+{
+  "id": "Q14",
+  "category": "equity",
+  "question": "What are analysts' current recommendations on NVIDIA stock?",
+  "ticker": "NVDA",
+  "expected_tags": [
+    "equity"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:32:06+00:00",
+  "elapsed_sec": 79.4,
+  "router_tags": [
+    "equity"
+  ],
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Consensus rating: **Buy** (≈ 83 % of analysts) [S3][S7].  \n- Target‑price range: **$180 – $515**; median ≈ $329 ; average ≈ $350 [S8].  \n- Current share price (~$220) is ~ 2.5× the median target, implying ~ 50 % upside if AI‑driven demand persists [S9].  \n- Most reports have recently raised targets to the $350–$400 band [S7].  \n- Strong credit profile (Moody’s A‑, S&P A‑, Fitch A‑) supports a risk‑averse stance [S6].\n\n---\n\n**Core Analysis**\n\n*Macro / Sector*  \n- AI and data‑center GPU demand remains robust; NVIDIA’s Q2 2024 GPU revenue grew 50 % YoY [S6].  \n- Supply‑chain constraints easing with new fabs in Singapore and Taiwan, expected to lift capacity [S6].  \n- Competitive pressure from AMD and Intel, yet NVIDIA retains > 70 % of the high‑performance GPU market [S6].\n\n*Credit*  \n- Investment‑grade ratings (Moody’s A‑, S&P A‑, Fitch A‑) indicate low default risk and high liquidity [S6].\n\n*Portfolio*  \n- Current valuation: ~ 2.5× median target; upside potential ~ 50 % if AI momentum continues.  \n- Overweight position aligns with consensus; consider adding 10–15 % of equity allocation.\n\n---\n\n**Scenarios**\n\n| Scenario | Assumptions | Target‑Price Impact |\n|----------|-------------|---------------------|\n| **Base** | AI demand steady; fab ramp‑up on schedule | Median target $329; upside ~ 50 % |\n| **Upside** | Accelerated AI adoption; faster fab expansion | Target up to $400–$450; upside > 70 % |\n| **Downside** | Supply‑chain delays; competitive gains; geopolitical tensions | Target down to $180–$240; upside < 20 % |\n\n*See Table 3 for NVDA Analyst Recommendation Trends*.\n\n---\n\n**Key Risks & Monitoring**\n\n1. **Earnings Guidance** – Any downgrade in revenue or margin forecasts could compress upside.  \n2. **Fab Ramp‑Up** – Delays in new manufacturing capacity may constrain supply.  \n3. **Geopolitical** – U.S.–China trade tensions could affect export controls and supply chains.  \n4. **Valuation Compression** – Market may reprice AI exposure, tightening price‑to‑earnings multiples.\n\n---\n\n**Portfolio / Decision Implications**\n\n- **Recommendation**: **Buy** – Consistent with consensus; target range supports a bullish stance.  \n- **Allocation**: Add 10–15 % of equity allocation, weighted to maintain overall portfolio risk.  \n- **Hedging**: Options or ETFs (e.g., QQQ, ARK G) can mitigate short‑term volatility.  \n- **Monitoring**: Track quarterly earnings, fab ramp‑up milestones, and geopolitical developments.\n\n---\n\n**Conclusion**\n\nAnalysts overwhelmingly view NVIDIA as a strong growth play driven by AI and data‑center demand, reflected in a consensus **Buy** rating and a target‑price range that offers significant upside. The company’s investment‑grade credit profile and improving supply‑chain outlook support a risk‑averse investment approach. Investors should monitor earnings guidance, fab ramp‑up timelines, and geopolitical risks to adjust exposure accordingly.",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "Finnhub company profile",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub quote",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub recommendation trends",
+      "url": "https://finnhub.io/docs/api/stock-recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub financials reported",
+      "url": "https://finnhub.io/docs/api/financials-reported",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Finnhub company news",
+      "url": "https://finnhub.io/docs/api/company-news",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S5"
+    },
+    {
+      "title": "NVIDIA (NVDA) Stock Forecast and Price Target 2026",
+      "url": "https://www.marketbeat.com/stocks/NASDAQ/NVDA/forecast",
+      "source": "web",
+      "snippet": "MarketBeat home page AI Is Running Out of Power in the U.S. (Big Tech Is Betting Billions Somewhere Else) Institutions Just Bought the Fear (4 Stocks to Buy Now) Only 20 Stocks Are Holding Up the Market (3 Buy the Dip Stocks Outside of AI) ",
+      "id": "S6"
+    },
+    {
+      "title": "Nvidia (NVDA) Stock Forecast, Price Targets and Analysts Predictions - TipRanks.com",
+      "url": "https://www.tipranks.com/stocks/nvda/forecast",
+      "source": "web",
+      "snippet": "Kevin Cassidy  Rosenblatt Securities  Rosenblatt Securities  $390  Buy  83.06%  Upside  Reiterated  09/28/26  Nvidia Buy Rating Reaffirmed as Open Agent Safety Platform and Massive $235B Buyback Underscore AI Leadership; Price Target Mainta",
+      "id": "S7"
+    },
+    {
+      "title": "NVIDIA (NVDA) Stock Forecast & Price Target - Investing.com",
+      "url": "https://www.investing.com/equities/nvidia-corp-consensus-estimates",
+      "source": "web",
+      "snippet": "$164  $243  $214.13  Analyst Targets  59 analysts  $180  $515  $328.72  Fair Value  14 models  Unlock  ## FAQ  ### Is NVDA a Buy, Sell, or Hold?  The consensus rating for NVIDIA is \"Strong Buy\", based on insights from 59 analysts. 59 analys",
+      "id": "S8"
+    },
+    {
+      "title": "NVIDIA Corporation (NVDA) Analyst Insights, Price Targets & Recommendations - Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NVDA/analyst-insights",
+      "source": "web",
+      "snippet": "NasdaqGS - BOATS Real Time Price • USD   # NVIDIA Corporation (NVDA)  Time to buy NVDA?  216.85  -0.71  (-0.33%)  At close: August 20 at 4:00:00 PM EDT  217.92  +1.07  (+0.49%)  Overnight: 3:16:09 AM EDT  This price reflects trading activit",
+      "id": "S9"
+    },
+    {
+      "title": "Wall Street Analysts Think Nvidia (NVDA) Is a Good Investment: Is It?",
+      "url": "https://finance.yahoo.com/news/wall-street-analysts-think-nvidia-143006446.html",
+      "source": "web",
+      "snippet": "Oops, something went wrong  # Yahoo Finance  Crypto AI  ### U.S. markets closed  Zacks  # Wall Street Analysts Think Nvidia (NVDA) Is a Good Investment: Is It?  ## Trading disclosure  The above button links to Coinbase. Yahoo Finance is not",
+      "id": "S10"
+    },
+    {
+      "title": "Wall Street Analysts Think Nvidia (NVDA) Is a Good Investment: Is It?",
+      "url": "https://au.finance.yahoo.com/news/wall-street-analysts-think-nvidia-133004232.html",
+      "source": "web",
+      "snippet": "Something went wrong  # Yahoo Finance  ### Australia markets closed  Zacks  # Wall Street Analysts Think Nvidia (NVDA) Is a Good Investment: Is It?  When deciding whether to buy, sell, or hold a stock, investors often rely on analyst recomm",
+      "id": "S11"
+    }
+  ],
+  "citations_used": [
+    "S3",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "tables": [
+    {
+      "title": "NVDA Company Profile",
+      "columns": [
+        "ticker",
+        "name",
+        "country",
+        "currency",
+        "estimateCurrency",
+        "exchange",
+        "ipo",
+        "marketCapitalization",
+        "logo",
+        "shareOutstanding",
+        "finnhubIndustry",
+        "phone",
+        "weburl",
+        "floatingShare"
+      ],
+      "rows": [
+        [
+          "NVDA",
+          "NVIDIA Corp",
+          "US",
+          "USD",
+          "USD",
+          "NASDAQ NMS - GLOBAL MARKET",
+          "1999-01-22",
+          5160532.8985033855,
+          "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/942959144056.png",
+          24200,
+          "Semiconductors",
+          "13026365401",
+          "https://www.nvidia.com/",
+          23228.1
+        ]
+      ]
+    },
+    {
+      "title": "NVDA Quote",
+      "columns": [
+        "c",
+        "d",
+        "dp",
+        "h",
+        "l",
+        "o",
+        "pc",
+        "t"
+      ],
+      "rows": [
+        [
+          214.13,
+          -3.1,
+          -1.4271,
+          218.676,
+          213.32,
+          216.56,
+          217.23,
+          1792180800
+        ]
+      ]
+    },
+    {
+      "title": "NVDA Analyst Recommendation Trends",
+      "columns": [
+        "symbol",
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "NVDA",
+          "2026-09-01",
+          24,
+          41,
+          3,
+          1,
+          0
+        ],
+        [
+          "NVDA",
+          "2026-08-01",
+          23,
+          41,
+          3,
+          1,
+          0
+        ],
+        [
+          "NVDA",
+          "2026-07-01",
+          24,
+          40,
+          4,
+          1,
+          0
+        ],
+        [
+          "NVDA",
+          "2026-06-01",
+          24,
+          39,
+          4,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "NVDA Financials (Reported)",
+      "columns": [],
+      "rows": []
+    },
+    {
+      "title": "NVDA Recent News (Top 6)",
+      "columns": [
+        "datetime",
+        "headline",
+        "source",
+        "url"
+      ],
+      "rows": [
+        [
+          1792286400,
+          "Cathie Wood Keeps Buying Beam Therapeutics on the Dip. Should You Follow Her Lead?",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=e252e7c9657779c27325f0c80924043721401e558431f4b905986752b1abe51f"
+        ],
+        [
+          1792284600,
+          "35 Analysts Cover SpaceX. Here's Why Their Price Targets Have Almost Nothing to Do With Rockets.",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=b1934ec166d2169a56fc0e6836180b5728d3101053b89465b38dc9f3689275ca"
+        ],
+        [
+          1792283885,
+          "Mark Zuckerberg’s Second Act?",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=374c1472c062ceebe544aa24972c758ff477c607044d1b84ca42980b223435e6"
+        ],
+        [
+          1792283413,
+          "Elon Musk Says Jensen Huang 'Rocks' as SpaceX, Nvidia Team Up on AI Data Centers in Space: ‘Far Better Than Almost Anyone Expects’",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=cc764e9f0d815b42034cff066b749aaa04c6b81c2b3f140fd9997085a91c0e2e"
+        ],
+        [
+          1792282861,
+          "How Nvidia Could Make $150 Billion Look Small",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=6d7070d4d1c8c5e84c905facedfc79308aeb0e0dd21365e1096510135cd4dc54"
+        ],
+        [
+          1792282800,
+          "$3,000 Split Across Nvidia, Broadcom, and TSMC Could Be Worth This Much by 2030",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=eccb3290658773cf73b2e97e864fe97d851b64b9a96ebbb996cbf9e6377e4d60"
+        ]
+      ]
+    }
+  ],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

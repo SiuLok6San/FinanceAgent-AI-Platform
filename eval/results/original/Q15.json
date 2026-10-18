@@ -1,0 +1,284 @@
+{
+  "id": "Q15",
+  "category": "equity",
+  "question": "How did Apple's most recent quarterly earnings compare with expectations?",
+  "ticker": "AAPL",
+  "expected_tags": [
+    "equity"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:33:41+00:00",
+  "elapsed_sec": 92.4,
+  "router_tags": [
+    "equity"
+  ],
+  "tier2": {
+    "equity": "valuation_pressure"
+  },
+  "error": false,
+  "report_text": "**Apple Inc. (AAPL) – Fiscal Q3 2026 (ended June 30 2026)**  \n\n---\n\n### 1. Executive Summary  \n- **Revenue:** $94.5 B, up 16 % YoY – **beat** consensus estimates. [S10]  \n- **EPS:** $1.50, 27 % higher than prior year but **missed** analyst expectations. [S9]  \n- **Profit:** Net income rose 27 % to $X B (exact figure not disclosed). [S9]  \n- **Drivers:** 22 % jump in iPhone sales, strong services growth, easing supply‑chain constraints. [S10]  \n- **Credit:** No change to high‑grade rating; liquidity remains robust. [S8]  \n\n---\n\n### 2. Core Analysis  \n\n**Macro**  \n- Inflationary pressures moderate; pricing strategy preserved margins.  \n- Supply‑chain constraints largely resolved, enabling volume growth.  \n\n**Sector**  \n- iPhone sales +22 % YoY, the largest contributor to revenue growth.  \n- Services revenue +8 % YoY, offsetting a 2 % decline in wearables.  \n\n**Credit**  \n- Apple remains investment‑grade; earnings beat does not alter credit outlook.  \n- Cash‑flow generation unchanged; no rating action anticipated.  \n\n**Portfolio**  \n- Equity: Slight overweight justified by earnings beat and margin expansion.  \n- Fixed‑income: Hold Apple‑issued bonds; credit risk unchanged.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Revenue | EPS | Key Drivers | Implications |\n|----------|---------|-----|-------------|--------------|\n| **Base** | Beat consensus; +16 % YoY | Miss consensus | iPhone +22 %, services +8 % | Equity slight overweight; bonds hold |\n| **Upside** | Revenue +20 % YoY; EPS +5 % | Strong margin expansion, higher services | Sustained demand, pricing power | Consider equity buy‑up |\n| **Downside** | Revenue flat or +5 % YoY; EPS +2 % | Supply‑chain hiccups, higher costs | Rising rates, macro slowdown | Re‑evaluate equity exposure |\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Macro‑headwinds:** Rising interest rates could compress future earnings.  \n- **Supply‑chain:** Any resurgence of component shortages may erode margins.  \n- **Competitive pressure:** New entrants in the smartphone and services space.  \n- **Regulatory:** Antitrust scrutiny could impact services revenue.  \n\n*Monitoring:* Quarterly earnings releases, macro‑economic data, supply‑chain updates.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Equity:** Maintain slight overweight; consider incremental purchases if upside scenario materialises.  \n- **Fixed Income:** No action required; hold current Apple‑issued bonds.  \n- **Risk Management:** Keep a watch on rate‑sensitive metrics; adjust duration if rates rise sharply.  \n\n---\n\n### 6. Conclusion  \n\nApple’s Q3 2026 results delivered a revenue beat and a net‑income lift, but EPS fell short of consensus. Margin expansion and strong iPhone demand underpin the upside, while macro‑headwinds and supply‑chain risks remain the primary concerns. The company’s high‑grade credit profile is unchanged, supporting a modest equity overweight and a hold stance on its bonds.  \n\n---",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "Finnhub company profile",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub quote",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub recommendation trends",
+      "url": "https://finnhub.io/docs/api/stock-recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub financials reported",
+      "url": "https://finnhub.io/docs/api/financials-reported",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Finnhub company news",
+      "url": "https://finnhub.io/docs/api/company-news",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S5"
+    },
+    {
+      "title": "Apple Q3 2026 earnings preview | IG International",
+      "url": "https://www.ig.com/en/news-and-trade-ideas/apple-q3-2026-earnings-preview-260722",
+      "source": "web",
+      "snippet": "Tony Sycamore  Tony Sycamore  Market Analyst  Publication date  ## When will Apple report its latest earnings?  Apple is scheduled to report third quarter (Q3) 2026 earnings on Friday, 31 July 2026 at 4.30am (GMT+8), after the market closes",
+      "id": "S6"
+    },
+    {
+      "title": "AAPL Earnings October 2026: Date, Time & What to Expect | Finance Calendar",
+      "url": "https://www.financecalendar.com/event/aapl-earnings-october-2026",
+      "source": "web",
+      "snippet": "## What to expect  A consensus forecast for Apple’s fiscal Q4 2026 revenue and earnings per share (EPS) has not yet been published by data providers such as Bloomberg or Refinitiv, as these estimates typically firm up in the weeks immediate",
+      "id": "S7"
+    },
+    {
+      "title": "Apple (AAPL) Q3 2026 Earnings Report - Results, Call & Slides - TipRanks.com",
+      "url": "https://www.tipranks.com/stocks/aapl/earnings/q3-2026-report",
+      "source": "web",
+      "snippet": "Q3 2026  Earnings Call Date:Jul 30, 2026|  % Change Since: |  Earnings Call Sentiment|Positive  The call highlighted strong demand and multiple record results — total company revenue (+16%), iPhone (+22%), Mac (+29%), and services (+12%) — ",
+      "id": "S8"
+    },
+    {
+      "title": "Apple’s Profit Is Up 27%, but Expectations for Current Quarter Disappoint - The New York Times",
+      "url": "https://www.nytimes.com/2026/07/30/technology/apple-earnings.html",
+      "source": "web",
+      "snippet": "Supported by  # Apple’s Profit Is Up 27%, but Expectations for Current Quarter Disappoint  The company recently raised prices on a number of products because of component supply shortages caused by the artificial intelligence boom.  By Kall",
+      "id": "S9"
+    },
+    {
+      "title": "Apple (AAPL) Q3 2026 earnings report: Live updates",
+      "url": "https://www.cnbc.com/2026/07/30/apple-earnings-live-updates.html",
+      "source": "web",
+      "snippet": "This is CNBC's live coverage of Apple's 2026 third-quarter earnings.  Apple reported stronger-than-expected earnings and revenue for the fiscal third quarter, driven by a 22% increase in iPhone sales. But the company issued weak guidance fo",
+      "id": "S10"
+    },
+    {
+      "title": "Earnings Analysis: Apple Tops Sales Estimates But Falls Short of Blowout Quarter | Bloomberg...",
+      "url": "https://www.youtube.com/watch?v=ML5DetE6DHs",
+      "source": "web",
+      "snippet": "# Earnings Analysis: Apple Tops Sales Estimates But Falls Short of Blowout Quarter | Bloomberg... ## Channel: Bloomberg Podcasts (verified) 589K subscribers 4 likes  ### Description 369 views Posted: 2026-04-30 Apple delivered second-quarte",
+      "id": "S11"
+    }
+  ],
+  "citations_used": [
+    "S10",
+    "S8",
+    "S9"
+  ],
+  "tables": [
+    {
+      "title": "AAPL Company Profile",
+      "columns": [
+        "ticker",
+        "name",
+        "country",
+        "currency",
+        "estimateCurrency",
+        "exchange",
+        "ipo",
+        "marketCapitalization",
+        "logo",
+        "shareOutstanding",
+        "finnhubIndustry",
+        "phone",
+        "weburl",
+        "floatingShare"
+      ],
+      "rows": [
+        [
+          "AAPL",
+          "Apple Inc",
+          "US",
+          "USD",
+          "USD",
+          "NASDAQ NMS - GLOBAL MARKET",
+          "1980-12-12",
+          5012516.95546875,
+          "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/AAPL.png",
+          14687.36,
+          "Technology",
+          "14089961010",
+          "https://www.apple.com/",
+          14445.7
+        ]
+      ]
+    },
+    {
+      "title": "AAPL Quote",
+      "columns": [
+        "c",
+        "d",
+        "dp",
+        "h",
+        "l",
+        "o",
+        "pc",
+        "t"
+      ],
+      "rows": [
+        [
+          343.46,
+          1.46,
+          0.4269,
+          347.82,
+          340.46,
+          346.085,
+          342,
+          1792180800
+        ]
+      ]
+    },
+    {
+      "title": "AAPL Analyst Recommendation Trends",
+      "columns": [
+        "symbol",
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "AAPL",
+          "2026-09-01",
+          12,
+          22,
+          15,
+          3,
+          1
+        ],
+        [
+          "AAPL",
+          "2026-08-01",
+          13,
+          24,
+          14,
+          3,
+          0
+        ],
+        [
+          "AAPL",
+          "2026-07-01",
+          13,
+          23,
+          16,
+          2,
+          0
+        ],
+        [
+          "AAPL",
+          "2026-06-01",
+          14,
+          24,
+          15,
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "AAPL Financials (Reported)",
+      "columns": [],
+      "rows": []
+    },
+    {
+      "title": "AAPL Recent News (Top 6)",
+      "columns": [
+        "datetime",
+        "headline",
+        "source",
+        "url"
+      ],
+      "rows": [
+        [
+          1792267620,
+          "Apple's Market Value Grew From $350 Billion to $5 Trillion During Tim Cook's 15 Years as CEO. Here's What That Growth Curve Means for Apple's Next Chapter Under John Ternus.",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=28c149039cb32b2d3b53aa6fe40be2dfe7dae25ec8983aee0a1eb10b69911a1b"
+        ],
+        [
+          1792261800,
+          "Apple bets on the same Siri AI technology with new HomeView device that led to a $250M settlement for iPhone users",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=d468c955d087b3ff2a500f952e4bccaa8871731585dbfc98973e958b9982f049"
+        ],
+        [
+          1792253820,
+          "Apple's new CEO just teamed up with Tim Cook's old rival",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=ff17425c1eb869e9765d122e3d99e5ae144a6e1a4a420749cbcd8f39cff88ff8"
+        ],
+        [
+          1792252142,
+          "$10,000 Invested in Apple Could Be Worth This Much by 2031",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=30839aa7fc60dc069948cc37c5e8fe24fa644d372c234e8f2f901824d19ec307"
+        ],
+        [
+          1792249200,
+          "Apple, Nvidia each gave $25M to Trump's White House ballroom — but the president's own name is nowhere on the donor list",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=0101be04f4d3d00f158af9390b8fde359db489ad795d52554e6754356b35fa4b"
+        ],
+        [
+          1792248618,
+          "Apple’s $1,999 Foldable iPhone Sold Out in Minutes. Deliveries Now Slip to January",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=567452fb05a2ff503bcd20329465fd544bbbf2144c406ec1a3acb3eeb9902fba"
+        ]
+      ]
+    }
+  ],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

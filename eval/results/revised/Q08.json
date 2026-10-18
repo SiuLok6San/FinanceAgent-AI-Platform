@@ -1,0 +1,2642 @@
+{
+  "id": "Q08",
+  "category": "rates",
+  "question": "How would a Fed rate cut cycle affect 10-year Treasury yields and mortgage rates?",
+  "ticker": null,
+  "expected_tags": [
+    "rates"
+  ],
+  "pipeline": "revised",
+  "run_utc": "2026-10-18T03:23:10+00:00",
+  "elapsed_sec": 108.7,
+  "router_tags": [
+    "rates"
+  ],
+  "tier2": {
+    "rates": "fed_cut_cycle"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Fed rate cuts do **not** automatically lower 10‑year Treasury yields; the 10‑year can stay flat or rise due to inflation expectations, liquidity dynamics, and risk‑premiums.  \n- Mortgage rates are tightly linked to the 10‑year Treasury yield, not the Fed‑funds rate, and typically lag the 10‑year by 1–2 months.  \n- A Fed‑cut cycle can therefore produce a range of outcomes for mortgage rates: falling, flat, or even rising, depending on how the 10‑year responds.  \n- Portfolio managers should monitor the Fed‑funds/10‑year spread, inflation expectations, and liquidity indicators to anticipate yield movements.  \n- Strategic positioning: consider duration hedges, laddered MBS, and credit‑spread monitoring to mitigate potential volatility.\n\n---\n\n**Core Analysis**\n\n*Macro & Policy Context*  \n- Current Fed‑funds rate: 3.75 % [S1].  \n- Current 10‑year Treasury yield: 5.10 % [S2].  \n- Current 30‑year fixed mortgage: 7.40 % [S3].  \n- Fed‑funds minus 10‑year spread: –1.35 pp [S2].  \n- 10‑year minus mortgage spread: –2.30 pp [S3].\n\n*Transmission Mechanics*  \n- Fed cuts lower short‑term rates instantly but 10‑year yields respond to longer‑term expectations.  \n- 10‑year yields can rise when markets anticipate persistent inflation or a weaker slowdown [S7].  \n- Liquidity injections from Fed open‑market operations can temporarily suppress 10‑year yields [S6].  \n- Risk‑premium adjustments on longer maturities can widen the 10‑year yield during a cut cycle [S7].\n\n*Mortgage‑Rate Linkage*  \n- Mortgage rates track the 10‑year Treasury yield, not the Fed‑funds rate [S4], [S5].  \n- The spread between the 10‑year and 30‑year mortgage is ~2.3 pp today [S3].  \n- A 10‑year yield decline typically leads to a mortgage‑rate decline after a short lag; a 10‑year rise can push mortgage rates higher even as the Fed‑funds rate falls [S5], [S7].\n\n---\n\n**Scenarios**\n\n| Scenario | 10‑Year Yield Path | Mortgage‑Rate Path | Key Drivers |\n|----------|--------------------|--------------------|-------------|\n| **Base** | Remains flat or modestly rises (≈0–10 bps) | Remains flat or rises slightly | Inflation expectations hold; liquidity neutral |\n| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |\n| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |\n\n*Note: Quantitative ranges are illustrative; actual movements depend on market sentiment and macro data.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Inflation Expectations** – Monitor CPI releases, Fed minutes, and market‑implied inflation (e.g., breakeven inflation).  \n- **Liquidity Conditions** – Track Fed’s open‑market operations and Treasury repo volumes.  \n- **Risk‑Premium Shifts** – Watch credit spreads (IG/HY) and Treasury‑to‑credit spreads for signs of tightening.  \n- **Fed‑Funds/10‑Year Spread** – A widening spread may signal a disconnect between policy and long‑term rates.  \n- **Mortgage‑Rate Lag** – Use Treasury futures and mortgage‑rate futures to gauge expected lagged responses.\n\n---\n\n**Portfolio / Decision Implications**\n\n- **Duration Management** – Anticipate higher volatility in long‑dated bonds; consider duration‑hedging or laddering strategies.  \n- **MBS Exposure** – Rising mortgage rates increase pre‑payment risk; favor shorter‑duration or pre‑payment‑protected tranches.  \n- **Credit Allocation** – Tightening IG spreads may present buying opportunities; widening HY spreads warrant caution.  \n- **Yield‑Curve Positioning** – A steepening curve (10‑year > Fed‑funds) favors long‑duration Treasuries; a flattening curve favors short‑duration or floating‑rate instruments.  \n- **Risk‑Adjusted Returns** – Evaluate the trade‑off between potential yield gains and increased duration risk.\n\n---\n\n**Conclusion**\n\nA Fed rate‑cut cycle does **not** guarantee lower 10‑year Treasury yields or mortgage rates. The 10‑year yield is the primary lever for mortgage pricing, and its trajectory is shaped by inflation expectations, liquidity flows, and risk‑premiums. Portfolio managers should focus on monitoring the Fed‑funds/10‑year spread, inflation indicators, and liquidity metrics to anticipate yield movements and adjust duration, credit exposure, and MBS positioning accordingly.  \n\n*See Table 1 for yield‑curve shift data.*",
+  "report_text_annotated": "> **Validation:** 9 of 17 figures verified against source data (4 exact, 5 derived); 8 flagged. 2 paragraph(s) state figures without a citation. 3 paragraph(s) cite a different source than the data.\n\n**Executive Summary**  \n- Fed rate cuts do **not** automatically lower 10‑year Treasury yields; the 10‑year can stay flat or rise due to inflation expectations, liquidity dynamics, and risk‑premiums.  \n- Mortgage rates are tightly linked to the 10‑year Treasury yield, not the Fed‑funds rate, and typically lag the 10‑year by 1–2 months.  \n- A Fed‑cut cycle can therefore produce a range of outcomes for mortgage rates: falling, flat, or even rising, depending on how the 10‑year responds.  \n- Portfolio managers should monitor the Fed‑funds/10‑year spread, inflation expectations, and liquidity indicators to anticipate yield movements.  \n- Strategic positioning: consider duration hedges, laddered MBS, and credit‑spread monitoring to mitigate potential volatility.\n\n---\n\n**Core Analysis**\n\n*Macro & Policy Context*  \n- Current Fed‑funds rate: 3.75 % [S1].  \n- Current 10‑year Treasury yield: 5.10 % [S2].  \n- Current 30‑year fixed mortgage: 7.40 % [S3].  \n- Fed‑funds minus 10‑year spread: –1.35 pp [S2].  \n- 10‑year minus mortgage spread: –2.30 pp [S3].\n\n*Transmission Mechanics*  \n- Fed cuts lower short‑term rates instantly but 10‑year yields respond to longer‑term expectations.  \n- 10‑year yields can rise when markets anticipate persistent inflation or a weaker slowdown [S7].  \n- Liquidity injections from Fed open‑market operations can temporarily suppress 10‑year yields [S6].  \n- Risk‑premium adjustments on longer maturities can widen the 10‑year yield during a cut cycle [S7].\n\n*Mortgage‑Rate Linkage*  \n- Mortgage rates track the 10‑year Treasury yield, not the Fed‑funds rate [S4], [S5].  \n- The spread between the 10‑year and 30‑year mortgage is ~2.3 pp today [S3].  \n- A 10‑year yield decline typically leads to a mortgage‑rate decline after a short lag; a 10‑year rise can push mortgage rates higher even as the Fed‑funds rate falls [S5], [S7].\n\n---\n\n**Scenarios**\n\n| Scenario | 10‑Year Yield Path | Mortgage‑Rate Path | Key Drivers |\n|----------|--------------------|--------------------|-------------|\n| **Base** | Remains flat or modestly rises (≈0–10 bps) | Remains flat or rises slightly | Inflation expectations hold; liquidity neutral |\n| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |\n| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |\n\n*Note: Quantitative ranges are illustrative; actual movements depend on market sentiment and macro data.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Inflation Expectations** – Monitor CPI releases, Fed minutes, and market‑implied inflation (e.g., breakeven inflation).  \n- **Liquidity Conditions** – Track Fed’s open‑market operations and Treasury repo volumes.  \n- **Risk‑Premium Shifts** – Watch credit spreads (IG/HY) and Treasury‑to‑credit spreads for signs of tightening.  \n- **Fed‑Funds/10‑Year Spread** – A widening spread may signal a disconnect between policy and long‑term rates.  \n- **Mortgage‑Rate Lag** – Use Treasury futures and mortgage‑rate futures to gauge expected lagged responses.\n\n---\n\n**Portfolio / Decision Implications**\n\n- **Duration Management** – Anticipate higher volatility in long‑dated bonds; consider duration‑hedging or laddering strategies.  \n- **MBS Exposure** – Rising mortgage rates increase pre‑payment risk; favor shorter‑duration or pre‑payment‑protected tranches.  \n- **Credit Allocation** – Tightening IG spreads may present buying opportunities; widening HY spreads warrant caution.  \n- **Yield‑Curve Positioning** – A steepening curve (10‑year > Fed‑funds) favors long‑duration Treasuries; a flattening curve favors short‑duration or floating‑rate instruments.  \n- **Risk‑Adjusted Returns** – Evaluate the trade‑off between potential yield gains and increased duration risk.\n\n---\n\n**Conclusion**\n\nA Fed rate‑cut cycle does **not** guarantee lower 10‑year Treasury yields or mortgage rates. The 10‑year yield is the primary lever for mortgage pricing, and its trajectory is shaped by inflation expectations, liquidity flows, and risk‑premiums. Portfolio managers should focus on monitoring the Fed‑funds/10‑year spread, inflation indicators, and liquidity metrics to anticipate yield movements and adjust duration, credit exposure, and MBS positioning accordingly.  \n\n*See Table 1 for yield‑curve shift data.*",
+  "sources": [
+    {
+      "title": "FRED series FEDFUNDS: Effective Federal Funds Rate",
+      "url": "https://fred.stlouisfed.org/series/FEDFUNDS",
+      "source": "FRED",
+      "snippet": "Monthly series in Percent; latest observation 3.75 on 2026-09-01.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series DGS10: 10-Year Treasury Constant Maturity Yield",
+      "url": "https://fred.stlouisfed.org/series/DGS10",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 5.1 on 2026-10-15.",
+      "id": "S2"
+    },
+    {
+      "title": "FRED series MORTGAGE30US: 30-Year Fixed Rate Mortgage Average",
+      "url": "https://fred.stlouisfed.org/series/MORTGAGE30US",
+      "source": "FRED",
+      "snippet": "Weekly series in Percent; latest observation 7.4 on 2026-10-15.",
+      "id": "S3"
+    },
+    {
+      "title": "Fed Rate Cuts Don’t Always Mean Lower Mortgage Rates | Investing.com Canada",
+      "url": "https://ca.investing.com/analysis/fed-rate-cuts-dont-always-mean-lower-mortgage-rates-200618656",
+      "source": "web (Tavily)",
+      "snippet": "The fundamental disconnect comes down to a simple fact: mortgage rates do not follow the federal funds rate. Instead, they track the 10-year treasury yield, which reflects long-term economic expectations rather than short-term policy changes.  > \"Since 1970, the 10-year Treasury yield has increased in the month followi",
+      "id": "S4"
+    },
+    {
+      "title": "Which impacts mortgage interest rates more: the Fed or the 10-year Treasury yield? Experts weigh in - CBS News",
+      "url": "https://www.cbsnews.com/news/which-impacts-mortgage-rates-more-the-fed-or-10-year-treasury-yield-experts-weigh-in",
+      "source": "web (Tavily)",
+      "snippet": "\"The 10-year Treasury has the biggest impact on mortgage rates because its maturity is closer to the average life of a 30-year mortgage,\" says Heather Long, chief economist at Navy Federal Credit Union. \"The Fed rate mainly affects short-term borrowing costs and overall economic sentiment, which can indirectly influenc",
+      "id": "S5"
+    },
+    {
+      "title": "How does the Federal Reserve affect mortgages?",
+      "url": "https://www.bankrate.com/mortgages/federal-reserve-and-mortgage-rates",
+      "source": "web (Tavily)",
+      "snippet": "The war in Iran constricted the world’s oil supply and drove up prices for fuel and other goods. The resulting inflation increased bond yields, including that of the 10-year Treasury bond — and mortgage rates.  The FOMC’s next meeting is July 28-29.  ## How does a Fed rate cut affect mortgages? [...] That’s because fix",
+      "id": "S6"
+    },
+    {
+      "title": "If the Fed Is Cutting Interest Rates, Why Are 10-Year Treasury Yields Rising? How Does It Affect You?",
+      "url": "https://finance.yahoo.com/news/fed-cutting-interest-rates-why-180802072.html",
+      "source": "web (Tavily)",
+      "snippet": "Treasury yields ticked up to a three-month high on Wednesday morning despite near certainty on Wall Street that the Federal Reserve was hours away from cutting interest rates. The 10-year Treasury yield, which influences interest rates on a variety of consumer loans including mortgages, rose Wednesday morning to 4.21%,",
+      "id": "S7"
+    },
+    {
+      "title": "What a Fed rate cut means for Treasury yields, mortgage rates",
+      "url": "https://ca.finance.yahoo.com/video/fed-rate-cut-means-treasury-110008376.html",
+      "source": "web (Tavily)",
+      "snippet": "Schwab Center for Financial Research fixed income strategist Collin Martin weighs in on how the Fed's monetary policy could affect Treasury yields (^TYX, ^TNX, ^FVX) and the broader bond market, mortgage rates, and shares his thoughts on bond and fixed income ETFs.  Also catch Collin Martin's thoughts on whether Kevin ",
+      "id": "S8"
+    },
+    {
+      "title": "What a Fed rate cut means for Treasury yields, mortgage rates",
+      "url": "https://finance.yahoo.com/video/fed-rate-cut-means-treasury-110008376.html",
+      "source": "web (Tavily)",
+      "snippet": "Schwab Center for Financial Research fixed income strategist Collin Martin weighs in on how the Fed's monetary policy could affect Treasury yields (^TYX, ^TNX, ^FVX) and the broader bond market, mortgage rates, and shares his thoughts on bond and fixed income ETFs.  Also catch Collin Martin's thoughts on whether Kevin ",
+      "id": "S9"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Effective Federal Funds Rate (FEDFUNDS)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "FEDFUNDS",
+      "frequency": "monthly",
+      "units": "Percent",
+      "last_date": "2026-09-01",
+      "topics": [
+        "rates"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/FEDFUNDS",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2024-04-01",
+          5.33
+        ],
+        [
+          "2024-05-01",
+          5.33
+        ],
+        [
+          "2024-06-01",
+          5.33
+        ],
+        [
+          "2024-07-01",
+          5.33
+        ],
+        [
+          "2024-08-01",
+          5.33
+        ],
+        [
+          "2024-09-01",
+          5.13
+        ],
+        [
+          "2024-10-01",
+          4.83
+        ],
+        [
+          "2024-11-01",
+          4.64
+        ],
+        [
+          "2024-12-01",
+          4.48
+        ],
+        [
+          "2025-01-01",
+          4.33
+        ],
+        [
+          "2025-02-01",
+          4.33
+        ],
+        [
+          "2025-03-01",
+          4.33
+        ],
+        [
+          "2025-04-01",
+          4.33
+        ],
+        [
+          "2025-05-01",
+          4.33
+        ],
+        [
+          "2025-06-01",
+          4.33
+        ],
+        [
+          "2025-07-01",
+          4.33
+        ],
+        [
+          "2025-08-01",
+          4.33
+        ],
+        [
+          "2025-09-01",
+          4.22
+        ],
+        [
+          "2025-10-01",
+          4.09
+        ],
+        [
+          "2025-11-01",
+          3.88
+        ],
+        [
+          "2025-12-01",
+          3.72
+        ],
+        [
+          "2026-01-01",
+          3.64
+        ],
+        [
+          "2026-02-01",
+          3.64
+        ],
+        [
+          "2026-03-01",
+          3.64
+        ],
+        [
+          "2026-04-01",
+          3.64
+        ],
+        [
+          "2026-05-01",
+          3.63
+        ],
+        [
+          "2026-06-01",
+          3.63
+        ],
+        [
+          "2026-07-01",
+          3.63
+        ],
+        [
+          "2026-08-01",
+          3.63
+        ],
+        [
+          "2026-09-01",
+          3.75
+        ]
+      ]
+    },
+    {
+      "title": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "DGS10",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "rates"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/DGS10",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-03",
+          4.13
+        ],
+        [
+          "2025-10-06",
+          4.18
+        ],
+        [
+          "2025-10-07",
+          4.14
+        ],
+        [
+          "2025-10-08",
+          4.13
+        ],
+        [
+          "2025-10-09",
+          4.14
+        ],
+        [
+          "2025-10-10",
+          4.05
+        ],
+        [
+          "2025-10-14",
+          4.03
+        ],
+        [
+          "2025-10-15",
+          4.05
+        ],
+        [
+          "2025-10-16",
+          3.99
+        ],
+        [
+          "2025-10-17",
+          4.02
+        ],
+        [
+          "2025-10-20",
+          4.0
+        ],
+        [
+          "2025-10-21",
+          3.98
+        ],
+        [
+          "2025-10-22",
+          3.97
+        ],
+        [
+          "2025-10-23",
+          4.01
+        ],
+        [
+          "2025-10-24",
+          4.02
+        ],
+        [
+          "2025-10-27",
+          4.01
+        ],
+        [
+          "2025-10-28",
+          3.99
+        ],
+        [
+          "2025-10-29",
+          4.08
+        ],
+        [
+          "2025-10-30",
+          4.11
+        ],
+        [
+          "2025-10-31",
+          4.11
+        ],
+        [
+          "2025-11-03",
+          4.13
+        ],
+        [
+          "2025-11-04",
+          4.1
+        ],
+        [
+          "2025-11-05",
+          4.17
+        ],
+        [
+          "2025-11-06",
+          4.11
+        ],
+        [
+          "2025-11-07",
+          4.11
+        ],
+        [
+          "2025-11-10",
+          4.13
+        ],
+        [
+          "2025-11-12",
+          4.08
+        ],
+        [
+          "2025-11-13",
+          4.11
+        ],
+        [
+          "2025-11-14",
+          4.14
+        ],
+        [
+          "2025-11-17",
+          4.13
+        ],
+        [
+          "2025-11-18",
+          4.12
+        ],
+        [
+          "2025-11-19",
+          4.13
+        ],
+        [
+          "2025-11-20",
+          4.1
+        ],
+        [
+          "2025-11-21",
+          4.06
+        ],
+        [
+          "2025-11-24",
+          4.04
+        ],
+        [
+          "2025-11-25",
+          4.01
+        ],
+        [
+          "2025-11-26",
+          4.0
+        ],
+        [
+          "2025-11-28",
+          4.02
+        ],
+        [
+          "2025-12-01",
+          4.09
+        ],
+        [
+          "2025-12-02",
+          4.09
+        ],
+        [
+          "2025-12-03",
+          4.06
+        ],
+        [
+          "2025-12-04",
+          4.11
+        ],
+        [
+          "2025-12-05",
+          4.14
+        ],
+        [
+          "2025-12-08",
+          4.17
+        ],
+        [
+          "2025-12-09",
+          4.18
+        ],
+        [
+          "2025-12-10",
+          4.13
+        ],
+        [
+          "2025-12-11",
+          4.14
+        ],
+        [
+          "2025-12-12",
+          4.19
+        ],
+        [
+          "2025-12-15",
+          4.18
+        ],
+        [
+          "2025-12-16",
+          4.15
+        ],
+        [
+          "2025-12-17",
+          4.16
+        ],
+        [
+          "2025-12-18",
+          4.12
+        ],
+        [
+          "2025-12-19",
+          4.16
+        ],
+        [
+          "2025-12-22",
+          4.17
+        ],
+        [
+          "2025-12-23",
+          4.18
+        ],
+        [
+          "2025-12-24",
+          4.15
+        ],
+        [
+          "2025-12-26",
+          4.14
+        ],
+        [
+          "2025-12-29",
+          4.12
+        ],
+        [
+          "2025-12-30",
+          4.14
+        ],
+        [
+          "2025-12-31",
+          4.18
+        ],
+        [
+          "2026-01-02",
+          4.19
+        ],
+        [
+          "2026-01-05",
+          4.17
+        ],
+        [
+          "2026-01-06",
+          4.18
+        ],
+        [
+          "2026-01-07",
+          4.15
+        ],
+        [
+          "2026-01-08",
+          4.19
+        ],
+        [
+          "2026-01-09",
+          4.18
+        ],
+        [
+          "2026-01-12",
+          4.19
+        ],
+        [
+          "2026-01-13",
+          4.18
+        ],
+        [
+          "2026-01-14",
+          4.15
+        ],
+        [
+          "2026-01-15",
+          4.17
+        ],
+        [
+          "2026-01-16",
+          4.24
+        ],
+        [
+          "2026-01-20",
+          4.3
+        ],
+        [
+          "2026-01-21",
+          4.26
+        ],
+        [
+          "2026-01-22",
+          4.26
+        ],
+        [
+          "2026-01-23",
+          4.24
+        ],
+        [
+          "2026-01-26",
+          4.22
+        ],
+        [
+          "2026-01-27",
+          4.24
+        ],
+        [
+          "2026-01-28",
+          4.26
+        ],
+        [
+          "2026-01-29",
+          4.24
+        ],
+        [
+          "2026-01-30",
+          4.26
+        ],
+        [
+          "2026-02-02",
+          4.29
+        ],
+        [
+          "2026-02-03",
+          4.28
+        ],
+        [
+          "2026-02-04",
+          4.29
+        ],
+        [
+          "2026-02-05",
+          4.21
+        ],
+        [
+          "2026-02-06",
+          4.22
+        ],
+        [
+          "2026-02-09",
+          4.22
+        ],
+        [
+          "2026-02-10",
+          4.16
+        ],
+        [
+          "2026-02-11",
+          4.18
+        ],
+        [
+          "2026-02-12",
+          4.09
+        ],
+        [
+          "2026-02-13",
+          4.04
+        ],
+        [
+          "2026-02-17",
+          4.05
+        ],
+        [
+          "2026-02-18",
+          4.09
+        ],
+        [
+          "2026-02-19",
+          4.08
+        ],
+        [
+          "2026-02-20",
+          4.08
+        ],
+        [
+          "2026-02-23",
+          4.03
+        ],
+        [
+          "2026-02-24",
+          4.04
+        ],
+        [
+          "2026-02-25",
+          4.05
+        ],
+        [
+          "2026-02-26",
+          4.02
+        ],
+        [
+          "2026-02-27",
+          3.97
+        ],
+        [
+          "2026-03-02",
+          4.05
+        ],
+        [
+          "2026-03-03",
+          4.06
+        ],
+        [
+          "2026-03-04",
+          4.09
+        ],
+        [
+          "2026-03-05",
+          4.13
+        ],
+        [
+          "2026-03-06",
+          4.15
+        ],
+        [
+          "2026-03-09",
+          4.12
+        ],
+        [
+          "2026-03-10",
+          4.15
+        ],
+        [
+          "2026-03-11",
+          4.21
+        ],
+        [
+          "2026-03-12",
+          4.27
+        ],
+        [
+          "2026-03-13",
+          4.28
+        ],
+        [
+          "2026-03-16",
+          4.23
+        ],
+        [
+          "2026-03-17",
+          4.2
+        ],
+        [
+          "2026-03-18",
+          4.26
+        ],
+        [
+          "2026-03-19",
+          4.25
+        ],
+        [
+          "2026-03-20",
+          4.39
+        ],
+        [
+          "2026-03-23",
+          4.34
+        ],
+        [
+          "2026-03-24",
+          4.39
+        ],
+        [
+          "2026-03-25",
+          4.33
+        ],
+        [
+          "2026-03-26",
+          4.42
+        ],
+        [
+          "2026-03-27",
+          4.44
+        ],
+        [
+          "2026-03-30",
+          4.35
+        ],
+        [
+          "2026-03-31",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.33
+        ],
+        [
+          "2026-04-02",
+          4.31
+        ],
+        [
+          "2026-04-03",
+          4.35
+        ],
+        [
+          "2026-04-06",
+          4.34
+        ],
+        [
+          "2026-04-07",
+          4.33
+        ],
+        [
+          "2026-04-08",
+          4.29
+        ],
+        [
+          "2026-04-09",
+          4.29
+        ],
+        [
+          "2026-04-10",
+          4.31
+        ],
+        [
+          "2026-04-13",
+          4.3
+        ],
+        [
+          "2026-04-14",
+          4.26
+        ],
+        [
+          "2026-04-15",
+          4.29
+        ],
+        [
+          "2026-04-16",
+          4.32
+        ],
+        [
+          "2026-04-17",
+          4.26
+        ],
+        [
+          "2026-04-20",
+          4.26
+        ],
+        [
+          "2026-04-21",
+          4.3
+        ],
+        [
+          "2026-04-22",
+          4.3
+        ],
+        [
+          "2026-04-23",
+          4.34
+        ],
+        [
+          "2026-04-24",
+          4.31
+        ],
+        [
+          "2026-04-27",
+          4.35
+        ],
+        [
+          "2026-04-28",
+          4.36
+        ],
+        [
+          "2026-04-29",
+          4.42
+        ],
+        [
+          "2026-04-30",
+          4.4
+        ],
+        [
+          "2026-05-01",
+          4.39
+        ],
+        [
+          "2026-05-04",
+          4.45
+        ],
+        [
+          "2026-05-05",
+          4.43
+        ],
+        [
+          "2026-05-06",
+          4.36
+        ],
+        [
+          "2026-05-07",
+          4.41
+        ],
+        [
+          "2026-05-08",
+          4.38
+        ],
+        [
+          "2026-05-11",
+          4.42
+        ],
+        [
+          "2026-05-12",
+          4.46
+        ],
+        [
+          "2026-05-13",
+          4.46
+        ],
+        [
+          "2026-05-14",
+          4.47
+        ],
+        [
+          "2026-05-15",
+          4.59
+        ],
+        [
+          "2026-05-18",
+          4.61
+        ],
+        [
+          "2026-05-19",
+          4.67
+        ],
+        [
+          "2026-05-20",
+          4.57
+        ],
+        [
+          "2026-05-21",
+          4.57
+        ],
+        [
+          "2026-05-22",
+          4.56
+        ],
+        [
+          "2026-05-26",
+          4.5
+        ],
+        [
+          "2026-05-27",
+          4.48
+        ],
+        [
+          "2026-05-28",
+          4.45
+        ],
+        [
+          "2026-05-29",
+          4.45
+        ],
+        [
+          "2026-06-01",
+          4.47
+        ],
+        [
+          "2026-06-02",
+          4.46
+        ],
+        [
+          "2026-06-03",
+          4.49
+        ],
+        [
+          "2026-06-04",
+          4.47
+        ],
+        [
+          "2026-06-05",
+          4.55
+        ],
+        [
+          "2026-06-08",
+          4.56
+        ],
+        [
+          "2026-06-09",
+          4.53
+        ],
+        [
+          "2026-06-10",
+          4.55
+        ],
+        [
+          "2026-06-11",
+          4.45
+        ],
+        [
+          "2026-06-12",
+          4.48
+        ],
+        [
+          "2026-06-15",
+          4.47
+        ],
+        [
+          "2026-06-16",
+          4.43
+        ],
+        [
+          "2026-06-17",
+          4.49
+        ],
+        [
+          "2026-06-18",
+          4.46
+        ],
+        [
+          "2026-06-22",
+          4.51
+        ],
+        [
+          "2026-06-23",
+          4.5
+        ],
+        [
+          "2026-06-24",
+          4.41
+        ],
+        [
+          "2026-06-25",
+          4.4
+        ],
+        [
+          "2026-06-26",
+          4.38
+        ],
+        [
+          "2026-06-29",
+          4.38
+        ],
+        [
+          "2026-06-30",
+          4.44
+        ],
+        [
+          "2026-07-01",
+          4.48
+        ],
+        [
+          "2026-07-02",
+          4.49
+        ],
+        [
+          "2026-07-06",
+          4.48
+        ],
+        [
+          "2026-07-07",
+          4.55
+        ],
+        [
+          "2026-07-08",
+          4.56
+        ],
+        [
+          "2026-07-09",
+          4.54
+        ],
+        [
+          "2026-07-10",
+          4.56
+        ],
+        [
+          "2026-07-13",
+          4.62
+        ],
+        [
+          "2026-07-14",
+          4.58
+        ],
+        [
+          "2026-07-15",
+          4.55
+        ],
+        [
+          "2026-07-16",
+          4.57
+        ],
+        [
+          "2026-07-17",
+          4.55
+        ],
+        [
+          "2026-07-20",
+          4.6
+        ],
+        [
+          "2026-07-21",
+          4.63
+        ],
+        [
+          "2026-07-22",
+          4.67
+        ],
+        [
+          "2026-07-23",
+          4.71
+        ],
+        [
+          "2026-07-24",
+          4.69
+        ],
+        [
+          "2026-07-27",
+          4.65
+        ],
+        [
+          "2026-07-28",
+          4.61
+        ],
+        [
+          "2026-07-29",
+          4.67
+        ],
+        [
+          "2026-07-30",
+          4.68
+        ],
+        [
+          "2026-07-31",
+          4.75
+        ],
+        [
+          "2026-08-03",
+          4.7
+        ],
+        [
+          "2026-08-04",
+          4.63
+        ],
+        [
+          "2026-08-05",
+          4.63
+        ],
+        [
+          "2026-08-06",
+          4.69
+        ],
+        [
+          "2026-08-07",
+          4.65
+        ],
+        [
+          "2026-08-10",
+          4.72
+        ],
+        [
+          "2026-08-11",
+          4.7
+        ],
+        [
+          "2026-08-12",
+          4.68
+        ],
+        [
+          "2026-08-13",
+          4.63
+        ],
+        [
+          "2026-08-14",
+          4.68
+        ],
+        [
+          "2026-08-17",
+          4.72
+        ],
+        [
+          "2026-08-18",
+          4.71
+        ],
+        [
+          "2026-08-19",
+          4.65
+        ],
+        [
+          "2026-08-20",
+          4.69
+        ],
+        [
+          "2026-08-21",
+          4.74
+        ],
+        [
+          "2026-08-24",
+          4.7
+        ],
+        [
+          "2026-08-25",
+          4.64
+        ],
+        [
+          "2026-08-26",
+          4.66
+        ],
+        [
+          "2026-08-27",
+          4.67
+        ],
+        [
+          "2026-08-28",
+          4.73
+        ],
+        [
+          "2026-08-31",
+          4.75
+        ],
+        [
+          "2026-09-01",
+          4.79
+        ],
+        [
+          "2026-09-02",
+          4.79
+        ],
+        [
+          "2026-09-03",
+          4.77
+        ],
+        [
+          "2026-09-04",
+          4.78
+        ],
+        [
+          "2026-09-08",
+          4.8
+        ],
+        [
+          "2026-09-09",
+          4.83
+        ],
+        [
+          "2026-09-10",
+          4.95
+        ],
+        [
+          "2026-09-11",
+          4.96
+        ],
+        [
+          "2026-09-14",
+          4.97
+        ],
+        [
+          "2026-09-15",
+          5.0
+        ],
+        [
+          "2026-09-16",
+          5.01
+        ],
+        [
+          "2026-09-17",
+          4.94
+        ],
+        [
+          "2026-09-18",
+          5.01
+        ],
+        [
+          "2026-09-21",
+          4.96
+        ],
+        [
+          "2026-09-22",
+          4.96
+        ],
+        [
+          "2026-09-23",
+          5.11
+        ],
+        [
+          "2026-09-24",
+          5.18
+        ],
+        [
+          "2026-09-25",
+          5.17
+        ],
+        [
+          "2026-09-28",
+          5.24
+        ],
+        [
+          "2026-09-29",
+          5.26
+        ],
+        [
+          "2026-09-30",
+          5.29
+        ],
+        [
+          "2026-10-01",
+          5.24
+        ],
+        [
+          "2026-10-02",
+          5.28
+        ],
+        [
+          "2026-10-05",
+          5.31
+        ],
+        [
+          "2026-10-06",
+          5.27
+        ],
+        [
+          "2026-10-07",
+          5.28
+        ],
+        [
+          "2026-10-08",
+          5.22
+        ],
+        [
+          "2026-10-09",
+          5.24
+        ],
+        [
+          "2026-10-13",
+          5.21
+        ],
+        [
+          "2026-10-14",
+          5.19
+        ],
+        [
+          "2026-10-15",
+          5.1
+        ]
+      ]
+    },
+    {
+      "title": "FRED: 30-Year Fixed Rate Mortgage Average (MORTGAGE30US)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "MORTGAGE30US",
+      "frequency": "weekly",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "rates",
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/MORTGAGE30US",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-08-28",
+          6.56
+        ],
+        [
+          "2025-09-04",
+          6.5
+        ],
+        [
+          "2025-09-11",
+          6.35
+        ],
+        [
+          "2025-09-18",
+          6.26
+        ],
+        [
+          "2025-09-25",
+          6.3
+        ],
+        [
+          "2025-10-02",
+          6.34
+        ],
+        [
+          "2025-10-09",
+          6.3
+        ],
+        [
+          "2025-10-16",
+          6.27
+        ],
+        [
+          "2025-10-23",
+          6.19
+        ],
+        [
+          "2025-10-30",
+          6.17
+        ],
+        [
+          "2025-11-06",
+          6.22
+        ],
+        [
+          "2025-11-13",
+          6.24
+        ],
+        [
+          "2025-11-20",
+          6.26
+        ],
+        [
+          "2025-11-26",
+          6.23
+        ],
+        [
+          "2025-12-04",
+          6.19
+        ],
+        [
+          "2025-12-11",
+          6.22
+        ],
+        [
+          "2025-12-18",
+          6.21
+        ],
+        [
+          "2025-12-24",
+          6.18
+        ],
+        [
+          "2025-12-31",
+          6.15
+        ],
+        [
+          "2026-01-08",
+          6.16
+        ],
+        [
+          "2026-01-15",
+          6.06
+        ],
+        [
+          "2026-01-22",
+          6.09
+        ],
+        [
+          "2026-01-29",
+          6.1
+        ],
+        [
+          "2026-02-05",
+          6.11
+        ],
+        [
+          "2026-02-12",
+          6.09
+        ],
+        [
+          "2026-02-19",
+          6.01
+        ],
+        [
+          "2026-02-26",
+          5.98
+        ],
+        [
+          "2026-03-05",
+          6.0
+        ],
+        [
+          "2026-03-12",
+          6.11
+        ],
+        [
+          "2026-03-19",
+          6.22
+        ],
+        [
+          "2026-03-26",
+          6.38
+        ],
+        [
+          "2026-04-02",
+          6.46
+        ],
+        [
+          "2026-04-09",
+          6.37
+        ],
+        [
+          "2026-04-16",
+          6.3
+        ],
+        [
+          "2026-04-23",
+          6.23
+        ],
+        [
+          "2026-04-30",
+          6.3
+        ],
+        [
+          "2026-05-07",
+          6.37
+        ],
+        [
+          "2026-05-14",
+          6.36
+        ],
+        [
+          "2026-05-21",
+          6.51
+        ],
+        [
+          "2026-05-28",
+          6.53
+        ],
+        [
+          "2026-06-04",
+          6.48
+        ],
+        [
+          "2026-06-11",
+          6.52
+        ],
+        [
+          "2026-06-18",
+          6.47
+        ],
+        [
+          "2026-06-25",
+          6.49
+        ],
+        [
+          "2026-07-02",
+          6.43
+        ],
+        [
+          "2026-07-09",
+          6.49
+        ],
+        [
+          "2026-07-16",
+          6.55
+        ],
+        [
+          "2026-07-23",
+          6.58
+        ],
+        [
+          "2026-07-30",
+          6.66
+        ],
+        [
+          "2026-08-06",
+          6.69
+        ],
+        [
+          "2026-08-13",
+          6.67
+        ],
+        [
+          "2026-08-20",
+          6.65
+        ],
+        [
+          "2026-08-27",
+          6.66
+        ],
+        [
+          "2026-09-03",
+          6.71
+        ],
+        [
+          "2026-09-10",
+          6.76
+        ],
+        [
+          "2026-09-17",
+          6.95
+        ],
+        [
+          "2026-09-24",
+          7.03
+        ],
+        [
+          "2026-10-01",
+          7.28
+        ],
+        [
+          "2026-10-08",
+          7.4
+        ],
+        [
+          "2026-10-15",
+          7.4
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Effective Federal Funds Rate (FEDFUNDS)",
+      "type": "line",
+      "x": [
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-10-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        5.33,
+        5.33,
+        5.33,
+        5.33,
+        5.33,
+        5.13,
+        4.83,
+        4.64,
+        4.48,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.22,
+        4.09,
+        3.88,
+        3.72,
+        3.64,
+        3.64,
+        3.64,
+        3.64,
+        3.63,
+        3.63,
+        3.63,
+        3.63,
+        3.75
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "10-Year Treasury Constant Maturity Yield (DGS10)",
+      "type": "line",
+      "x": [
+        "2025-10-03",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        4.13,
+        4.18,
+        4.14,
+        4.13,
+        4.14,
+        4.05,
+        4.03,
+        4.05,
+        3.99,
+        4.02,
+        4.0,
+        3.98,
+        3.97,
+        4.01,
+        4.02,
+        4.01,
+        3.99,
+        4.08,
+        4.11,
+        4.11,
+        4.13,
+        4.1,
+        4.17,
+        4.11,
+        4.11,
+        4.13,
+        4.08,
+        4.11,
+        4.14,
+        4.13,
+        4.12,
+        4.13,
+        4.1,
+        4.06,
+        4.04,
+        4.01,
+        4.0,
+        4.02,
+        4.09,
+        4.09,
+        4.06,
+        4.11,
+        4.14,
+        4.17,
+        4.18,
+        4.13,
+        4.14,
+        4.19,
+        4.18,
+        4.15,
+        4.16,
+        4.12,
+        4.16,
+        4.17,
+        4.18,
+        4.15,
+        4.14,
+        4.12,
+        4.14,
+        4.18,
+        4.19,
+        4.17,
+        4.18,
+        4.15,
+        4.19,
+        4.18,
+        4.19,
+        4.18,
+        4.15,
+        4.17,
+        4.24,
+        4.3,
+        4.26,
+        4.26,
+        4.24,
+        4.22,
+        4.24,
+        4.26,
+        4.24,
+        4.26,
+        4.29,
+        4.28,
+        4.29,
+        4.21,
+        4.22,
+        4.22,
+        4.16,
+        4.18,
+        4.09,
+        4.04,
+        4.05,
+        4.09,
+        4.08,
+        4.08,
+        4.03,
+        4.04,
+        4.05,
+        4.02,
+        3.97,
+        4.05,
+        4.06,
+        4.09,
+        4.13,
+        4.15,
+        4.12,
+        4.15,
+        4.21,
+        4.27,
+        4.28,
+        4.23,
+        4.2,
+        4.26,
+        4.25,
+        4.39,
+        4.34,
+        4.39,
+        4.33,
+        4.42,
+        4.44,
+        4.35,
+        4.3,
+        4.33,
+        4.31,
+        4.35,
+        4.34,
+        4.33,
+        4.29,
+        4.29,
+        4.31,
+        4.3,
+        4.26,
+        4.29,
+        4.32,
+        4.26,
+        4.26,
+        4.3,
+        4.3,
+        4.34,
+        4.31,
+        4.35,
+        4.36,
+        4.42,
+        4.4,
+        4.39,
+        4.45,
+        4.43,
+        4.36,
+        4.41,
+        4.38,
+        4.42,
+        4.46,
+        4.46,
+        4.47,
+        4.59,
+        4.61,
+        4.67,
+        4.57,
+        4.57,
+        4.56,
+        4.5,
+        4.48,
+        4.45,
+        4.45,
+        4.47,
+        4.46,
+        4.49,
+        4.47,
+        4.55,
+        4.56,
+        4.53,
+        4.55,
+        4.45,
+        4.48,
+        4.47,
+        4.43,
+        4.49,
+        4.46,
+        4.51,
+        4.5,
+        4.41,
+        4.4,
+        4.38,
+        4.38,
+        4.44,
+        4.48,
+        4.49,
+        4.48,
+        4.55,
+        4.56,
+        4.54,
+        4.56,
+        4.62,
+        4.58,
+        4.55,
+        4.57,
+        4.55,
+        4.6,
+        4.63,
+        4.67,
+        4.71,
+        4.69,
+        4.65,
+        4.61,
+        4.67,
+        4.68,
+        4.75,
+        4.7,
+        4.63,
+        4.63,
+        4.69,
+        4.65,
+        4.72,
+        4.7,
+        4.68,
+        4.63,
+        4.68,
+        4.72,
+        4.71,
+        4.65,
+        4.69,
+        4.74,
+        4.7,
+        4.64,
+        4.66,
+        4.67,
+        4.73,
+        4.75,
+        4.79,
+        4.79,
+        4.77,
+        4.78,
+        4.8,
+        4.83,
+        4.95,
+        4.96,
+        4.97,
+        5.0,
+        5.01,
+        4.94,
+        5.01,
+        4.96,
+        4.96,
+        5.11,
+        5.18,
+        5.17,
+        5.24,
+        5.26,
+        5.29,
+        5.24,
+        5.28,
+        5.31,
+        5.27,
+        5.28,
+        5.22,
+        5.24,
+        5.21,
+        5.19,
+        5.1
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "30-Year Fixed Rate Mortgage Average (MORTGAGE30US)",
+      "type": "line",
+      "x": [
+        "2025-08-28",
+        "2025-09-04",
+        "2025-09-11",
+        "2025-09-18",
+        "2025-09-25",
+        "2025-10-02",
+        "2025-10-09",
+        "2025-10-16",
+        "2025-10-23",
+        "2025-10-30",
+        "2025-11-06",
+        "2025-11-13",
+        "2025-11-20",
+        "2025-11-26",
+        "2025-12-04",
+        "2025-12-11",
+        "2025-12-18",
+        "2025-12-24",
+        "2025-12-31",
+        "2026-01-08",
+        "2026-01-15",
+        "2026-01-22",
+        "2026-01-29",
+        "2026-02-05",
+        "2026-02-12",
+        "2026-02-19",
+        "2026-02-26",
+        "2026-03-05",
+        "2026-03-12",
+        "2026-03-19",
+        "2026-03-26",
+        "2026-04-02",
+        "2026-04-09",
+        "2026-04-16",
+        "2026-04-23",
+        "2026-04-30",
+        "2026-05-07",
+        "2026-05-14",
+        "2026-05-21",
+        "2026-05-28",
+        "2026-06-04",
+        "2026-06-11",
+        "2026-06-18",
+        "2026-06-25",
+        "2026-07-02",
+        "2026-07-09",
+        "2026-07-16",
+        "2026-07-23",
+        "2026-07-30",
+        "2026-08-06",
+        "2026-08-13",
+        "2026-08-20",
+        "2026-08-27",
+        "2026-09-03",
+        "2026-09-10",
+        "2026-09-17",
+        "2026-09-24",
+        "2026-10-01",
+        "2026-10-08",
+        "2026-10-15"
+      ],
+      "y": [
+        6.56,
+        6.5,
+        6.35,
+        6.26,
+        6.3,
+        6.34,
+        6.3,
+        6.27,
+        6.19,
+        6.17,
+        6.22,
+        6.24,
+        6.26,
+        6.23,
+        6.19,
+        6.22,
+        6.21,
+        6.18,
+        6.15,
+        6.16,
+        6.06,
+        6.09,
+        6.1,
+        6.11,
+        6.09,
+        6.01,
+        5.98,
+        6.0,
+        6.11,
+        6.22,
+        6.38,
+        6.46,
+        6.37,
+        6.3,
+        6.23,
+        6.3,
+        6.37,
+        6.36,
+        6.51,
+        6.53,
+        6.48,
+        6.52,
+        6.47,
+        6.49,
+        6.43,
+        6.49,
+        6.55,
+        6.58,
+        6.66,
+        6.69,
+        6.67,
+        6.65,
+        6.66,
+        6.71,
+        6.76,
+        6.95,
+        7.03,
+        7.28,
+        7.4,
+        7.4
+      ],
+      "y_label": "Percent"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "FEDFUNDS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "DGS10",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "MORTGAGE30US",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "validation": {
+    "counts": {
+      "figures": 17,
+      "verified": 4,
+      "derived": 5,
+      "unverified": 8
+    },
+    "figures": [
+      {
+        "text": "1",
+        "value": 1.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 326,
+        "end": 327,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S2",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- Mortgage rates are tightly linked to the 10‑year Treasury yield, not the Fed‑funds rate, and typically lag the 10‑year by 1–2 months."
+      },
+      {
+        "text": "3.75 %",
+        "value": 3.75,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 846,
+        "end": 852,
+        "status": "verified",
+        "matched": "FEDFUNDS on 2026-09-01",
+        "source_id": "S1",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- Current Fed‑funds rate: 3.75 % [S1]."
+      },
+      {
+        "text": "5.10 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 895,
+        "end": 901,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S2",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- Current 10‑year Treasury yield: 5.10 % [S2]."
+      },
+      {
+        "text": "7.40 %",
+        "value": 7.4,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 944,
+        "end": 950,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2026-10-08",
+        "source_id": "S3",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- Current 30‑year fixed mortgage: 7.40 % [S3]."
+      },
+      {
+        "text": "–1.35 pp",
+        "value": 1.35,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 993,
+        "end": 1001,
+        "status": "derived",
+        "matched": "FEDFUNDS minus DGS10 (latest: 2026-09-01, 2026-10-15)",
+        "source_id": "S1",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- Fed‑funds minus 10‑year spread: –1.35 pp [S2]."
+      },
+      {
+        "text": "–2.30 pp",
+        "value": 2.3,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 1043,
+        "end": 1051,
+        "status": "derived",
+        "matched": "DGS10 minus MORTGAGE30US (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S2",
+        "topic_match": false,
+        "in_source_text": null,
+        "context": "- 10‑year minus mortgage spread: –2.30 pp [S3]."
+      },
+      {
+        "text": "2.3 pp",
+        "value": 2.3,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1665,
+        "end": 1671,
+        "status": "derived",
+        "matched": "DGS10 minus MORTGAGE30US (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S2",
+        "topic_match": false,
+        "in_source_text": null,
+        "context": "- The spread between the 10‑year and 30‑year mortgage is ~2.3 pp today [S3]."
+      },
+      {
+        "text": "0",
+        "value": 0.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2070,
+        "end": 2071,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2026-02-26",
+        "source_id": "S3",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Base** | Remains flat or modestly rises (≈0–10 bps) | Remains flat or rises slightly | Inflation expectations hold; liquidity neutral |"
+      },
+      {
+        "text": "10 bps",
+        "value": 10.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2072,
+        "end": 2078,
+        "status": "derived",
+        "matched": "DGS10 change 2026-09-15 to 2026-10-15",
+        "source_id": "S2",
+        "topic_match": false,
+        "in_source_text": null,
+        "context": "| **Base** | Remains flat or modestly rises (≈0–10 bps) | Remains flat or rises slightly | Inflation expectations hold; liquidity neutral |"
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2187,
+        "end": 2189,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |"
+      },
+      {
+        "text": "20 bps",
+        "value": 20.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2190,
+        "end": 2196,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |"
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2208,
+        "end": 2210,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |"
+      },
+      {
+        "text": "20 bps",
+        "value": 20.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2211,
+        "end": 2217,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Upside** | Falls (≈10–20 bps) | Falls (≈10–20 bps) | Strong liquidity injection; lower inflation outlook |"
+      },
+      {
+        "text": "20",
+        "value": 20.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2308,
+        "end": 2310,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |"
+      },
+      {
+        "text": "30 bps",
+        "value": 30.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2311,
+        "end": 2317,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |"
+      },
+      {
+        "text": "20",
+        "value": 20.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2329,
+        "end": 2331,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |"
+      },
+      {
+        "text": "30 bps",
+        "value": 30.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2332,
+        "end": 2338,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Downside** | Rises sharply (≈20–30 bps) | Rises (≈20–30 bps) | Persistent inflation; higher risk‑premium |"
+      }
+    ],
+    "citations": {
+      "markers": 13,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "- Mortgage rates are tightly linked to the 10‑year Treasury yield, not the Fed‑funds rate, and typically lag the 10‑year by 1–2 months.",
+          "figures": [
+            "1"
+          ]
+        },
+        {
+          "text": "| Scenario | 10‑Year Yield Path | Mortgage‑Rate Path | Key Drivers |\n|----------|--------------------|--------------------|-------------|\n| **Base** | Remains flat or modestly rises (≈0–10 bps) | Rema",
+          "figures": [
+            "0",
+            "10 bps"
+          ]
+        }
+      ],
+      "source_mismatches": [
+        {
+          "text": "- Fed‑funds minus 10‑year spread: –1.35 pp [S2].",
+          "figures": [
+            "–1.35 pp"
+          ],
+          "cited": [
+            "S2"
+          ]
+        },
+        {
+          "text": "- 10‑year minus mortgage spread: –2.30 pp [S3].",
+          "figures": [
+            "–2.30 pp"
+          ],
+          "cited": [
+            "S3"
+          ]
+        },
+        {
+          "text": "- The spread between the 10‑year and 30‑year mortgage is ~2.3 pp today [S3].",
+          "figures": [
+            "2.3 pp"
+          ],
+          "cited": [
+            "S3"
+          ]
+        }
+      ]
+    },
+    "freshness": [
+      {
+        "table": "FRED: Effective Federal Funds Rate (FEDFUNDS)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 17,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 2,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: 30-Year Fixed Rate Mortgage Average (MORTGAGE30US)",
+        "last_date": "2026-10-15",
+        "frequency": "weekly",
+        "age_days": 2,
+        "max_age_days": 14,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "summary": "9 of 17 figures verified against source data (4 exact, 5 derived); 8 flagged. 2 paragraph(s) state figures without a citation. 3 paragraph(s) cite a different source than the data."
+  },
+  "run_meta": {
+    "run_id": "20261017-232122-519458",
+    "timestamp": "2026-10-18T03:21:22+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    }
+  }
+}

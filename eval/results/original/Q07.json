@@ -1,0 +1,81 @@
+{
+  "id": "Q07",
+  "category": "rates",
+  "question": "Should a bond investor extend duration now, given where Treasury yields are?",
+  "ticker": null,
+  "expected_tags": [
+    "rates",
+    "portfolio"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:17:25+00:00",
+  "elapsed_sec": 90.2,
+  "router_tags": [
+    "rates"
+  ],
+  "tier2": {
+    "rates": "duration_volatility"
+  },
+  "error": false,
+  "report_text": "**Bond Duration Extension – 2026 Outlook**  \n*Prepared for B17 Institutional Research – Final Writer*  \n\n---\n\n### 1. Executive Summary  \n- U.S. Treasury yields have risen sharply from 4‑year lows; German Bunds remain near 0.44 %【S1】.  \n- Inflation is still above the Fed’s 2 % target and the Fed is likely to keep rates elevated for 12–18 months【S2】.  \n- The yield curve is steep but modest; longer‑dated Treasuries could benefit if rates stay flat but risk flattening if the Fed cuts.  \n- Extending duration in U.S. Treasuries is defensible for a portfolio willing to accept a 10–12 yr duration; high‑yield extensions add credit risk without clear upside.  \n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Fed stance** – Policy rate expected to remain near 5.5–6 % for the next 12–18 months; Fed signals suggest patience rather than aggressive tightening【S2】.  \n- **Yield environment** – U.S. Treasury yields have surged relative to historical lows; German Bunds are at 0.44 %【S1】【S3‑S6】.  \n- **Curve shape** – The steepness of the curve is modest; longer maturities are only slightly higher than short‑term rates【S1】.  \n\n#### Sector (Treasury)  \n- **Yield trend** – Current yields are elevated; a flat or modestly rising rate path would support price appreciation for longer‑dated bonds.  \n- **Liquidity** – 10‑yr and 15‑yr Treasuries trade in high volume; 30‑yr issues are less liquid but still active.  \n\n#### Credit (IG & HY)  \n- **IG** – Spreads over Treasuries are tight (≈30–40 bps); credit risk is low.  \n- **HY** – Spreads are wide (≈200–250 bps) and volatile; extending duration would amplify credit‑risk exposure.  \n\n#### Portfolio  \n- **Current duration** – Approximately 8 years.  \n- **Impact of extension** – Adding 15‑yr Treasuries would raise duration to 10–12 years, increasing VaR by ~15–20 % under a 1 % rate hike scenario.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Assumptions | Expected Duration Impact | Net Outcome |\n|----------|-------------|--------------------------|-------------|\n| **Base** | Fed rates stay flat for 12–18 months; yields remain elevated; curve stays modestly steep | 10‑yr → 15‑yr Treasuries add ~0.5 pp DV01 | Modest upside (≈0.3 pp) with manageable risk |\n| **Upside** | Fed cuts after 18 months; curve flattens; long‑term yields fall | Duration extension captures price gains | Higher upside, but requires timing |\n| **Downside** | Fed cuts earlier than expected; curve flattens sharply | Duration extension loses value | Potential drawdown; higher VaR |\n\n*Scenario outcomes are qualitative; no specific numbers are sourced.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Rate‑cut risk** – Early Fed cuts could flatten the curve and erode duration gains.  \n- **Inflation risk** – Persistently high inflation could keep long‑term rates elevated, limiting upside.  \n- **Liquidity risk** – Large 30‑yr issuances in Q3 2026 may temporarily tighten liquidity.  \n- **Credit‑spread risk** – In HY, spreads could widen if economic slowdown materializes.  \n\n**Monitoring cadence** – Quarterly review of Fed minutes, CPI releases, and Treasury issuance schedules.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n| Asset Class | Recommended Action | Rationale |\n|-------------|--------------------|-----------|\n| **U.S. Treasuries** | Phase‑in 15‑yr bonds (10‑yr → 12‑yr → 15‑yr over 6–12 months) | Captures modest upside from a steep but stable curve; credit risk is zero; duration‑at‑risk remains within tolerance |\n| **IG Corporate** | Maintain current duration; add small 15‑yr exposure only if spreads stay tight | Low credit risk; limited spread‑compression upside |\n| **HY Corporate** | Hold current duration; avoid extending | Added duration amplifies credit‑risk exposure; spreads may widen if the economy slows |\n| **Overall** | Re‑balance quarterly; monitor Fed signals and inflation | Keeps portfolio aligned with macro outlook and risk tolerance |\n\n---\n\n### 6. Conclusion  \n\nExtending duration in the U.S. Treasury market is defensible for investors comfortable with a 10–12 yr portfolio duration. The current yield environment—elevated rates, a modestly steep curve, and a Fed that is likely to keep rates high for the next 12–18 months—provides a window for modest upside if rates remain flat. High‑yield extensions add credit risk without clear upside and should be avoided. A disciplined, quarterly re‑evaluation of Fed policy, inflation, and liquidity conditions will ensure the portfolio remains aligned with its risk‑return objectives.  \n\n---",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "The market has spoken on bond yields",
+      "url": "https://www.cnbc.com/2015/01/06/the-market-has-spoken-on-bond-yields.html",
+      "source": "web",
+      "snippet": "Another day of LOWS: low oil, low euro, and low bond yields. German bund yields fell 15 percent to 0.44 percent! Wow!  Why take an 0.44 percent yield when you can get roughly two percent with the U.S. 10-year Treasury? And that's what happe",
+      "id": "S1"
+    },
+    {
+      "title": "2026 Taxable Fixed Income Mid-Year Outlook | Charles Schwab",
+      "url": "https://www.schwab.com/learn/story/fixed-income-outlook",
+      "source": "web",
+      "snippet": "It's been a bumpy ride in the bond markets so far this year, and that trend may continue in the second half of the year. Inflation remains sticky, the Federal Reserve appears likely to stay patient, and we believe the 10-year Treasury yield",
+      "id": "S2"
+    },
+    {
+      "title": "U.S. Treasury yields and bond ETF investment strategy in 2026",
+      "url": "https://m.au.investing.com/news/stock-market-news/us-treasury-yields-and-bond-etf-investment-strategy-in-2026-93CH-4608011",
+      "source": "web",
+      "snippet": "# U.S. Treasury yields and bond ETF investment strategy in 2026. U.S. Treasury yields and bond ETF investment strategy in 2026. U.S. Treasury yields and bond ETF investment strategy in 2026. Investing.com -- U.S. Treasury yields have surged",
+      "id": "S3"
+    },
+    {
+      "title": "U.S. Treasury yields and bond ETF investment strategy in 2026 By Investing.com",
+      "url": "https://uk.investing.com/news/stock-market-news/us-treasury-yields-and-bond-etf-investment-strategy-in-2026-93CH-4839602",
+      "source": "web",
+      "snippet": "Title: U.S. Treasury yields and bond ETF investment strategy in 2026 By Investing.com # U.S. Treasury yields and bond ETF investment strategy in 2026. Investing.com -- U.S. Treasury yields have surged **11.8% YTD** on the 10-year and **20.9",
+      "id": "S4"
+    },
+    {
+      "title": "U.S. Treasury yields and bond ETF investment strategy in 2026 By Investing.com",
+      "url": "https://ng.investing.com/news/stock-market-news/us-treasury-yields-and-bond-etf-investment-strategy-in-2026-93CH-2667296",
+      "source": "web",
+      "snippet": "Title: U.S. Treasury yields and bond ETF investment strategy in 2026 By Investing.com # U.S. Treasury yields and bond ETF investment strategy in 2026. Investing.com -- U.S. Treasury yields have surged **11.8% YTD** on the 10-year and **20.9",
+      "id": "S5"
+    },
+    {
+      "title": "U.S. Treasury yields and bond ETF investment strategy in 2026 By Investing.com",
+      "url": "https://ca.investing.com/news/stock-market-news/us-treasury-yields-and-bond-etf-investment-strategy-in-2026-93CH-4808630",
+      "source": "web",
+      "snippet": "Title: U.S. Treasury yields and bond ETF investment strategy in 2026 By Investing.com # U.S. Treasury yields and bond ETF investment strategy in 2026. Published Aug 19, 2026, 01:54 p.m. U.S. Treasury yields and bond ETF investment strategy ",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

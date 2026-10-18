@@ -1,0 +1,87 @@
+{
+  "id": "Q19",
+  "category": "portfolio",
+  "question": "How does risk parity allocation perform when stocks and bonds fall together?",
+  "ticker": null,
+  "expected_tags": [
+    "portfolio"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:27:46+00:00",
+  "elapsed_sec": 83.5,
+  "router_tags": [
+    "rates",
+    "portfolio",
+    "equity"
+  ],
+  "tier2": {
+    "portfolio": "risk_parity",
+    "equity": "valuation_pressure"
+  },
+  "error": false,
+  "report_text": "**Risk‑Parity Allocation in Joint Stock‑Bond Downturns**  \n*Institutional Research – B17*  \n\n---\n\n### 1. Executive Summary  \n- **Correlation spike erodes diversification** – when equity and bond returns move together, risk‑parity’s equal‑risk‑contribution logic loses its edge.  \n- **Leverage amplifies losses** – the typical use of leverage on the low‑volatility leg (investment‑grade bonds) magnifies drawdowns when both legs fall.  \n- **Performance gap vs. 60/40** – historical evidence indicates risk‑parity under‑performs a simple 60/40 allocation during periods of high equity‑bond correlation.  \n- **Mitigation pathways** – dynamic weighting, credit‑tier diversification (IG + HY), low‑correlation alternatives, and soft‑leverage caps can reduce downside exposure.  \n- **Monitoring focus** – correlation, volatility, and credit‑spreads should be tracked continuously to trigger rebalancing or hedging actions.\n\n---\n\n### 2. Core Analysis  \n\n| Dimension | Key Insight | Source |\n|-----------|-------------|--------|\n| **Macro** | Joint downturns are driven by liquidity shocks, flight‑to‑quality, and macro‑policy tightening, which push both equities and investment‑grade bonds lower. | [S2] |\n| **Sector** | Equity sectors with high beta (technology, consumer discretionary) and IG bond sectors (corporate) are most sensitive to systemic risk spikes. | [S5] |\n| **Credit** | IG bonds are the usual levered leg in risk‑parity; during a joint fall, spreads widen and leverage magnifies losses. Adding a HY layer can provide tail‑risk diversification because HY spreads often move less in tandem with equities. | [S5] |\n| **Portfolio** | Risk‑parity equalises risk contributions by adjusting weights and leverage. When correlations rise above ~0.7, the diversification benefit collapses, leading to higher drawdowns and lower risk‑adjusted returns compared with a 60/40 benchmark. | [S2], [S4] |\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Assumptions | Expected Risk‑Parity Outcome | Benchmark (60/40) Outcome |\n|----------|-------------|-----------------------------|---------------------------|\n| **Base** | Moderate correlation (0.4–0.5), normal market volatility. | Risk‑parity delivers comparable risk‑adjusted returns; volatility is balanced across legs. | 60/40 offers slightly higher return but higher volatility. |\n| **Upside** | Correlation remains low, equity rally outpaces bond gains. | Risk‑parity captures upside through higher equity weighting while maintaining risk balance. | 60/40 benefits from higher equity exposure but with greater volatility. |\n| **Downside** | Correlation spikes to >0.8, simultaneous equity and IG bond decline. | Risk‑parity experiences deeper drawdowns due to leveraged IG leg; risk‑adjusted returns fall below 60/40. | 60/40 suffers a decline but with a smaller drawdown relative to risk‑parity. |\n\n*Note: Detailed performance metrics for each scenario are summarized in Appendix A (Table 1).*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Correlation Risk** – rising equity‑bond correlation reduces diversification.  \n- **Leverage Risk** – leverage on the low‑volatility leg magnifies losses during joint falls.  \n- **Credit‑Spread Risk** – widening IG spreads can erode bond returns and increase volatility.  \n- **Liquidity Risk** – stressed markets can impair the ability to rebalance or unwind positions.  \n- **Monitoring Cadence**  \n  - Daily correlation and volatility metrics.  \n  - Weekly credit‑spread monitoring for IG and HY legs.  \n  - Monthly stress‑testing of joint‑fall scenarios.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Dynamic Rebalancing** – tighten risk‑parity weights when correlation exceeds 0.7; consider reducing equity exposure and increasing cash or short‑term treasuries.  \n- **Credit‑Tier Diversification** – incorporate a hybrid IG + HY allocation to dampen tail risk; monitor default‑probability metrics.  \n- **Alternative Assets** – add low‑correlation holdings (commodities, real estate, infrastructure) to preserve diversification when bonds and stocks fall together.  \n- **Leverage Management** – implement a soft‑leverage cap (e.g., equity exposure ≤ 35 % of portfolio) to limit downside while retaining upside potential.  \n- **Stress‑Testing** – run joint‑fall shocks (e.g., 30 % equity, 20 % IG bond decline) to quantify potential drawdowns and adjust risk‑parity weights accordingly.  \n\n---\n\n### 6. Conclusion  \n\nRisk‑parity offers attractive risk‑adjusted performance when equity‑bond correlations are low to moderate. However, during joint downturns, its leveraged equal‑risk‑contribution structure leads to larger drawdowns and lower Sharpe ratios compared with a traditional 60/40 allocation. By adopting dynamic weighting, credit‑tier diversification, low‑correlation alternatives, and controlled leverage, a risk‑parity strategy can be hardened against correlation spikes and preserve its core diversification benefits. Continuous monitoring of correlation, volatility, and credit spreads is essential to trigger timely adjustments and maintain portfolio resilience.",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "What is Risk Parity Investing? — Flat Fee & Fee-Only Financial Advisor Bryan Minogue | Madison, WI",
+      "url": "https://kardinalfinancial.com/blog/what-is-risk-parity-investing",
+      "source": "web",
+      "snippet": "### Exposure to Major Economic Environments  Traditional stock and bond portfolios are typically composed of stocks and investment-grade bonds (a mix of corporate bonds and government bonds). Often missing from these portfolios are assets t",
+      "id": "S1"
+    },
+    {
+      "title": "Risk parity - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Risk_parity",
+      "source": "web",
+      "snippet": "Jump to content  Search  ## Contents   (Top)  1 Description  2 Equally-weighted risk contributions portfolios  3 History  4 Performance  5 Reception  6 Use of leverage  7 Risk parity and the bull market in bonds  8 Risk parity and the Capit",
+      "id": "S2"
+    },
+    {
+      "title": "Does Risk Parity Maximize Risk-Adjusted Returns? · The Hedge Fund Journal",
+      "url": "https://thehedgefundjournal.com/does-risk-parity-maximize-risk-adjusted-returns",
+      "source": "web",
+      "snippet": "Articles  50 Giants  More   + 50 Giants   + Rankings  Subscribe  Info   + About   + Reprints   + Advertise   + Contribute   + Contact   Sign in      #### Research  #### Issue 118  # Does Risk Parity Maximize Risk-Adjusted Returns?  ### The ",
+      "id": "S3"
+    },
+    {
+      "title": "Adaptive Asset Allocation For A Regime Agnostic 'Balanced Fund'  | Investing.com",
+      "url": "https://www.investing.com/analysis/adaptive-asset-allocation-for-a-regime-agnostic-'balanced-fund'-126614",
+      "source": "web",
+      "snippet": "Our last article described an Adaptive Risk Parity (ARP) framework for a stock/bond balanced allocation, and discussed the advantages and risks relative to traditional 60/40 approach. While ARP makes intuitive, logical and empirical sense a",
+      "id": "S4"
+    },
+    {
+      "title": "Investment fundamentals: What is risk parity? | SEI U.S.",
+      "url": "https://www.seic.com/about-sei/thought-leadership-old/investment-fundamentals-what-risk-parity",
+      "source": "web",
+      "snippet": "Risk parity is an investment strategy that seeks to balance the sources of risk in a portfolio. The easiest way to envision this concept may be to consider it in the context of a traditional, diversified portfolio. For many investors, this ",
+      "id": "S5"
+    },
+    {
+      "title": "All You Need to Know About Risk Parity",
+      "url": "https://finance.yahoo.com/news/know-risk-parity-134756975.html",
+      "source": "web",
+      "snippet": "SmartAsset  # All You Need to Know About Risk Parity  Ashley Chorpenning   by trying to maximize returns while adhering closely to the investor's risk tolerance. However, risk parity adjusts for risk first and assumes good returns will foll",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S2",
+    "S4",
+    "S5"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

@@ -7,6 +7,9 @@ Goal:
 - Identify the HIGH-LEVEL category of the user's finance question.
 - This determines which agents (Analyst, Researcher) emphasize which topics.
 
+This is a rule-based (keyword) router, not a learned classifier. The
+keyword lists live in config/routing.toml.
+
 Output:
 A simple list of tags, e.g.:
     ["macro", "rates"]
@@ -15,70 +18,47 @@ A simple list of tags, e.g.:
 """
 
 from __future__ import annotations
-from typing import List
+
+import re
+from functools import lru_cache
+from typing import Iterable, List, Tuple
+
+from settings import load_config
+
+
+def normalize_text(text: str) -> str:
+    """Lower-case and treat hyphens as spaces ("high-yield" -> "high yield")."""
+    return re.sub(r"\s+", " ", (text or "").lower().replace("-", " ")).strip()
+
+
+@lru_cache(maxsize=None)
+def _pattern(keywords: Tuple[str, ...]) -> re.Pattern:
+    """Whole-word pattern for any keyword, allowing a plural "s"/"es"."""
+    alts = sorted((re.escape(normalize_text(k)) for k in keywords), key=len, reverse=True)
+    return re.compile(r"(?<![\w/])(?:" + "|".join(alts) + r")(?:s|es)?(?![\w/])")
+
+
+def matches_any(text: str, keywords: Iterable[str], exclude_phrases: Iterable[str] = ()) -> bool:
+    """True if any keyword appears as a whole word in text (after removing excluded phrases)."""
+    keywords = tuple(keywords)
+    if not keywords:
+        return False
+    q = normalize_text(text)
+    exclude_phrases = tuple(exclude_phrases)
+    if exclude_phrases:
+        q = _pattern(exclude_phrases).sub(" ", q)
+    return bool(_pattern(keywords).search(q))
+
+
+def topics_in(text: str) -> List[str]:
+    """Tier-1 tags whose keywords appear in text (no fallback)."""
+    cfg = load_config("routing")
+    return [
+        tag for tag in cfg["tag_order"]
+        if matches_any(text, cfg["tier1"][tag]["keywords"], cfg["tier1"][tag]["exclude_phrases"])
+    ]
 
 
 def route_question(question: str) -> List[str]:
-    q = question.lower()
-    tags = []
-
-    # --------------------
-    # Macro Economics
-    # --------------------
-    macro_keywords = [
-        "inflation", "cpi", "ppi", "gdp", "growth", "economy", "labor",
-        "employment", "unemployment", "productivity", "recession",
-        "macro", "economic outlook", "macro outlook"
-    ]
-    if any(k in q for k in macro_keywords):
-        tags.append("macro")
-
-    # --------------------
-    # Rates / Yield Curve / Fed
-    # --------------------
-    rates_keywords = [
-        "rate", "rates", "fed", "monetary policy", "yield",
-        "curve", "yield curve", "bonds", "treasury", "duration",
-        "higher for longer", "ffr", "federal reserve"
-    ]
-    if any(k in q for k in rates_keywords):
-        tags.append("rates")
-
-    # --------------------
-    # Credit (IG / HY / Spreads / Defaults)
-    # --------------------
-    credit_keywords = [
-        "credit", "spread", "ig", "investment grade", "high yield",
-        "hy", "default", "default risk", "credit cycle", "credit spread"
-    ]
-    if any(k in q for k in credit_keywords):
-        tags.append("credit")
-
-    # --------------------
-    # Portfolio / Asset Allocation
-    # --------------------
-    portfolio_keywords = [
-        "portfolio", "allocation", "diversification", "var", "sharpe",
-        "risk parity", "asset mix", "hedge", "rebalance", "returns",
-        "risk budgeting"
-    ]
-    if any(k in q for k in portfolio_keywords):
-        tags.append("portfolio")
-
-    # --------------------
-    # Equities / Valuation / Fundamentals
-    # --------------------
-    equity_keywords = [
-        "stock", "equity", "valuation", "eps", "earnings",
-        "multiple", "pe", "pb", "cash flow", "fundamental"
-    ]
-    if any(k in q for k in equity_keywords):
-        tags.append("equity")
-
-    # --------------------
-    # If nothing matched → fallback macro
-    # --------------------
-    if not tags:
-        tags.append("macro")
-
-    return tags
+    # If nothing matched → fallback (macro)
+    return topics_in(question) or list(load_config("routing")["fallback_tags"])

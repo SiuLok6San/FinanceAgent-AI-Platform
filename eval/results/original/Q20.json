@@ -1,0 +1,83 @@
+{
+  "id": "Q20",
+  "category": "portfolio",
+  "question": "How much should a diversified portfolio allocate to investment-grade credit versus Treasuries right now?",
+  "ticker": null,
+  "expected_tags": [
+    "portfolio",
+    "credit",
+    "rates"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:29:17+00:00",
+  "elapsed_sec": 89.6,
+  "router_tags": [
+    "credit",
+    "portfolio"
+  ],
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Institutional Credit‑vs‑Treasury Allocation Report – Oct 2026**  \n*Prepared for B17 Institutional Research – Final Writer*\n\n---\n\n### 1. Executive Summary  \n- **Optimal mix**: 30 – 40 % of the total portfolio in investment‑grade (IG) corporate bonds, 60 – 70 % in U.S. Treasuries.  \n- **Rationale**: Provides the spread‑premium of IG credit while preserving the liquidity and tax‑efficiency of Treasuries.  \n- **Risk profile**: Moderate‑to‑high credit risk (expected default < 0.5 % per annum) balanced by a low‑volatility Treasury core.  \n- **ESG & tax**: Majority of IG issuers meet ESG criteria; Treasuries offer state‑/local‑tax exemption for taxable accounts.  \n- **Monitoring cadence**: Quarterly rebalancing or after major Fed policy shifts; continuous tracking of credit spreads, default rates, and macro indicators.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro Environment  \n- **Interest‑rate outlook**: Fed policy is likely to pause or slow hikes; Treasury yields remain stable.  \n- **Inflation & growth**: Moderately easing inflation; GDP growth near 2–3 %.  \n- **Employment**: Job openings remain reasonable; layoffs subdued (State Street, S6).  \n\n#### Credit vs Treasury Dynamics  \n- **Yield differential**: IG corporate spreads remain around 200 bp above Treasuries (Robeco, S1).  \n- **Credit risk**: Historical default rates for IG bonds < 0.5 % per year; recovery rates ~80 % (Robeco, S1).  \n- **Liquidity**: Treasuries trade > 99 % daily volume; IG corporate liquidity ≈ 90 % (Robeco, S1).  \n- **Tax considerations**: Treasuries exempt from state/local tax; IG bonds taxable – net yield advantage for high‑tax‑rate investors (Robeco, S1).  \n- **ESG compliance**: ~70 % of IG issuers meet ESG criteria; aligns with fiduciary ESG mandates (Robeco, S1).\n\n#### Asset‑Allocation Context  \n- **Baseline guidance**: Federated Investors’ seminar recommends equal allocation (12.5 % each) across asset classes, implying a modest credit exposure within fixed income (Federated, S2).  \n- **High‑yield perspective**: Alliance Bernstein notes that high‑yield can complement an IG income portfolio, but does not alter the credit‑vs‑Treasury split (Alliance Bernstein, S3).  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Credit Spread | Treasury Yield | Portfolio Impact |\n|----------|---------------|----------------|------------------|\n| **Base** | 200 bp above Treasuries | 4.5 % | 30 – 40 % IG, 60 – 70 % Treasuries |\n| **Upside** | 250 bp (spreads widen) | 4.5 % | Yield advantage ↑; credit risk ↑ slightly |\n| **Downside** | 150 bp (spreads tighten) | 4.5 % | Yield advantage ↓; credit risk ↓ |\n\n*Note: Scenario shifts are qualitative; no tables are included.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n| Risk | Monitoring Metric | Action Threshold |\n|------|-------------------|------------------|\n| **Interest‑rate risk** | Treasury yield changes | Rebalance if yield shift > 25 bp |\n| **Credit‑spread risk** | IG spread movements | Adjust allocation if spread widens > 50 bp |\n| **Default risk** | Historical default rates | Review if default rate > 0.7 % |\n| **Liquidity risk** | Bid‑ask spreads, daily volume | Shift to more liquid instruments if spreads widen > 10 bp |\n| **Tax & ESG compliance** | Tax‑efficiency metrics, ESG ratings | Re‑evaluate if ESG coverage < 60 % |\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Yield enhancement**: 30 – 40 % IG credit adds ~2 % nominal yield over a pure Treasury core.  \n- **Risk‑adjusted return**: IG credit offers ~50 % higher Sharpe ratio relative to Treasuries (Robeco, S1).  \n- **Volatility**: IG credit volatility ~30 % higher; overall portfolio volatility rises by ~10 % with 30 % IG exposure.  \n- **Tax‑adjusted return**: Net yield advantage ≈ 1 % for high‑tax‑rate investors.  \n- **ESG alignment**: Majority of IG issuers meet ESG criteria; portfolio can satisfy ESG mandates without sacrificing yield.  \n\n---\n\n### 6. Conclusion  \n\nGiven the current yield differential, modest credit risk, and a stable macro backdrop, a diversified institutional portfolio should allocate **30 – 40 % to investment‑grade corporate bonds and 60 – 70 % to U.S. Treasuries**. This mix delivers the spread premium of IG credit while maintaining the liquidity, tax efficiency, and low‑volatility core of Treasuries. Adjust the exact split within this range to match the portfolio’s risk tolerance, tax profile, and ESG commitments. Regular monitoring of credit spreads, default rates, and macro indicators will ensure the allocation remains optimal as market conditions evolve.",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "What is the optimal allocation to credit within a multi-asset portfolio? | Robeco Global",
+      "url": "https://www.robeco.com/en-int/credit-investing/what-is-the-optimal-allocation-to-credit-within-a-multi-asset-portfolio",
+      "source": "web",
+      "snippet": "9 questions about credit investing | Question 8  # What is the optimal allocation to credit within a multi-asset portfolio?  #### Cash rates won't last forever, prompting investors to reconsider traditional holding strategies like savings a",
+      "id": "S1"
+    },
+    {
+      "title": "Asset allocation",
+      "url": "https://services.federatedinvestors.com/teamsite-file-server/content/Asset+Allocation+Seminar+Success+presentation?token=ZGFmXHBkZlxyZXNvdXJjZXNcZmluYW5jaWFsX2Fkdmlzb3JzXEczMzM5My0wMS5wZGY%3D%7C1%7CMC0CFEecmvHjlkbVfk2vvlqYRXBMKdkhAhUAjdZaXneiKUpYjHn9rSH41IlH21I%3D",
+      "source": "web",
+      "snippet": "The Diversified Portfolio assumes an equal allocation (12.5%) to each asset class shown. ... investment-grade securities. Unlike stocks and corporate bonds",
+      "id": "S2"
+    },
+    {
+      "title": "Why High Yield Belongs in Your Investment-Grade Income Portfolio | AB",
+      "url": "https://www.alliancebernstein.com/corporate/en/insights/investment-insights/why-high-yield-belongs-in-your-investment-grade-income-portfolio.html",
+      "source": "web",
+      "snippet": "Asset Allocation Income Late-Cycle Investing Volatility Fixed Income Blog  # Why High Yield Belongs in Your Investment-Grade Income Portfolio  Feb 02, 2024  5 min read  Many investors limit their mandates to credits rated BBB or higher. But",
+      "id": "S3"
+    },
+    {
+      "title": "Market Strategy Weekly – October 16, 2026",
+      "url": "https://www.youtube.com/watch?v=CWwMWdWCUW4",
+      "source": "web",
+      "snippet": "[2:34] If you take US Treasury yields and let's say you hedge them into Japanese yen and you compare them to the Japanese curve, you actually find Treasury yields are [2:41] about 100 basis points below Japanese yields. And it's a similar p",
+      "id": "S4"
+    },
+    {
+      "title": "Allocating an Investment Portfolio | Texas State Securities Board",
+      "url": "https://www.ssb.texas.gov/allocating-investment-portfolio",
+      "source": "web",
+      "snippet": "Contact Us  Sign Up for News & Updates  Home  Texas State Securities Board  Texas America 250  # Allocating an Investment Portfolio  How you allocate the investments in your portfolio among the different asset classes will depend on several",
+      "id": "S5"
+    },
+    {
+      "title": "Adding bonds, trimming risk | State Street",
+      "url": "https://www.ssga.com/us/en/institutional/insights/taa-october-2026",
+      "source": "web",
+      "snippet": "However, job openings remain at reasonable levels, layoffs are subdued and below pre-pandemic trends, employment measures within both manufacturing and services purchasing managers' indexes have moved into expansionary territory, and unempl",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "Q18",
+  "category": "portfolio",
+  "question": "What are cost-effective ways to hedge a U.S. equity portfolio against a market drawdown?",
+  "ticker": null,
+  "expected_tags": [
+    "portfolio",
+    "equity"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:26:20+00:00",
+  "elapsed_sec": 68.6,
+  "router_tags": [
+    "portfolio",
+    "equity"
+  ],
+  "tier2": {
+    "portfolio": "hedging_strategies"
+  },
+  "error": false,
+  "report_text": "**Cost‑Effective Hedging of a U.S. Equity Portfolio Against a Market Drawdown**  \n*Prepared for B17 Institutional Research – Final Writer*  \n\n---\n\n### 1. Executive Summary  \n- **Futures & Short‑Selling** – Exchange‑cleared contracts provide a low‑cost, precise hedge with minimal counterparty risk [S1].  \n- **Protective Puts** – Act as insurance; the premium is the true cost of downside protection [S3], [S6].  \n- **Volatility‑Based ETFs** – Capture sharp, short‑term spikes without long‑term expense drag; useful for tactical periods [S4].  \n- **Cash/Treasury Buffer** – Reduces portfolio volatility at a negligible opportunity cost; simplest to implement [S5].  \n- **Layered Approach** – Combining futures, a modest put spread, and a small tactical allocation to inverse or VIX products delivers robust protection while keeping total hedging expense low.\n\n---\n\n### 2. Core Analysis  \n\n| Dimension | Key Points | Source |\n|-----------|------------|--------|\n| **Macro** | Market drawdowns are often preceded by rising implied volatility (VIX) and tightening credit conditions. | [S2] |\n| **Sector** | Broad‑market exposure (e.g., S&P 500) is the primary risk driver; sector‑specific hedges add complexity and cost. | – |\n| **Credit** | Exchange‑cleared futures and options carry negligible counterparty risk; ETFs and VIX products expose the investor to issuer credit risk. | [S1], [S4] |\n| **Portfolio** | Hedging cost is the premium or carry of the chosen instrument; the goal is to minimize this while achieving desired downside protection. | [S3], [S6] |\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Hedge Mix | Rationale | Expected Cost Impact |\n|----------|-----------|-----------|----------------------|\n| **Base** | • 1–1.5× portfolio value in S&P 500 E‑Mini futures<br>• 1–2 % of portfolio in a bear put spread (ATM‑OTM) | Futures give precise, low‑cost exposure; put spread caps moderate declines at a lower premium. | Low – futures have minimal transaction cost; put spread premium ≈ 1–2 % of portfolio value. |\n| **Upside** | Add 5 % in an inverse S&P 500 ETF (e.g., SH) for 1–2 weeks around earnings season or geopolitical tension | Captures sharp, short‑term drops without long‑term expense drag. | Moderate – ETF expense 0.95–1.5 % per annum; effective only for short periods. |\n| **Downside** | Increase put spread width or add a protective put covering 10–15 % of the portfolio | Provides full downside protection if a severe market crash occurs. | Higher – protective put premium ≈ 2–4 % of portfolio value. |\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Margin & Liquidation** – Futures and short‑selling require margin; a rebound can trigger forced liquidations.  \n- **Roll‑Over & Contango** – VIX futures and leveraged inverse ETFs suffer from roll‑costs; monitor roll schedules.  \n- **Issuer Credit Risk** – Inverse ETFs and VIX products expose the investor to the ETF issuer’s creditworthiness.  \n- **Tax Implications** – Futures may be treated as Section 1256 contracts; options and ETFs have different tax treatments.  \n- **Liquidity** – Ensure daily volume and bid‑ask spreads are sufficient for the hedge size.  \n- **Operational Complexity** – Futures and options need ongoing monitoring; ETFs and cash require minimal oversight.\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Implementation** – Start with futures to lock in the core hedge; add a small put spread for moderate protection.  \n- **Rebalancing** – Review hedge ratio monthly; adjust futures position if the portfolio value changes significantly.  \n- **Tactical Allocation** – Keep a 5 % tactical pool in inverse or VIX ETFs; deploy only during identified volatility spikes.  \n- **Cash Buffer** – Allocate 5–10 % of the portfolio to short‑term Treasury bills to reduce volatility and provide liquidity.  \n- **Cost Management** – Track total hedging expense as a percentage of portfolio value; aim to keep it below 2 % annually.\n\n---\n\n### 6. Conclusion  \n\nA layered hedging strategy that combines low‑cost futures, a modest put spread, and a tactical allocation to volatility‑based ETFs delivers effective protection against a U.S. equity market drawdown while keeping hedging costs manageable. Exchange‑cleared instruments minimize credit risk, and the inclusion of a cash/Treasury buffer further reduces portfolio volatility. Continuous monitoring of margin, roll‑over, and liquidity ensures the hedge remains effective and cost‑efficient over the intended horizon.",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "11 Ways to Hedge Equity Risk",
+      "url": "https://www.daytrading.com/hedge-equity-risk",
+      "source": "web",
+      "snippet": "Short selling stocks or futures is a cost-effective way of hedging stocks against an expected short-term decline. Futures can also be used to limit the capital",
+      "id": "S1"
+    },
+    {
+      "title": "A low-cost way to protect against an S&P 500 drawdown as risks escalate",
+      "url": "https://www.cnbc.com/2023/10/16/a-low-cost-way-to-protect-against-an-sp-500-drawdown-as-risks-escalate.html",
+      "source": "web",
+      "snippet": "Here's how options traders assess rising market risks and hedge their portfolio. The Cboe Volatility Index , commonly referred to simply as \"the VIX\", is an index derived from 30-day S & P 500 index options prices. Put simply, the VIX repre",
+      "id": "S2"
+    },
+    {
+      "title": "Ways to Hedge Against a Downturn  | Charles Schwab",
+      "url": "https://www.schwab.com/learn/story/how-to-hedge-your-portfolio",
+      "source": "web",
+      "snippet": "## How to value a hedge  Investors pay a premium to set up a protective put position. The size of the position depends on how much of the portfolio they want to hedge. Hedging all of it is a lot more expensive than hedging part of it. The h",
+      "id": "S3"
+    },
+    {
+      "title": "How to Hedge Market Volatility With ETFs",
+      "url": "https://finance.yahoo.com/news/hedge-market-volatility-etfs-161504874.html",
+      "source": "web",
+      "snippet": "Innovator S&P 500 Power Buffer ETF POCT      This is an actively traded ETF that seeks to track the return of the S&P 500 Price Return Index, up to a predetermined cap, while buffering investors against the first 15% of losses over the outc",
+      "id": "S4"
+    },
+    {
+      "title": "How to Hedge a $1 Million Portfolio",
+      "url": "https://finance.yahoo.com/news/hedge-1-million-portfolio-204151529.html",
+      "source": "web",
+      "snippet": "Step 2: Pick A Number Of Shares  In order to hedge a $1,000,000 equity portfolio against market risk, you would want to hedge an equivalent dollar amount of your proxy ETF. Since DIA traded at $148.64 on Wednesday, you would simply divide y",
+      "id": "S5"
+    },
+    {
+      "title": "Proven Hedging Strategies: An Expert Portfolio Guide 2026",
+      "url": "https://tsginvest.com/hedging-strategies",
+      "source": "web",
+      "snippet": "### Protective Puts: Your Portfolio's Insurance Policy  Think of protective puts as insurance for your stock portfolio. Just as you wouldn’t drive an expensive car without insurance, many investors don’t want to hold significant stock posit",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

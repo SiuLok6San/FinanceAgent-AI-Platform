@@ -1,18 +1,7 @@
-streamlit>=1.29
-pandas>=2.2.0
-numpy>=1.26
-requests>=2.31
-python-dotenv>=1.0.1
-
-# Finance APIs
-finnhub-python>=2.4.0
-
-# TAVILY Web Search
-tavily-python>=0.3.3
-
-# For charts / dataframe display
-matplotlib>=3.8
-altair>=5.0
-
-# OPTIONAL: OpenAI compatibility (future-proof)
-openai>=1.40.0
+# Runtime dependencies. Versions are the ones tested with Python 3.12 (Oct 2026).
+# Every package here is imported directly by the code; the external APIs
+# (FRED, Finnhub, Tavily, Ollama) are called over HTTP with `requests`.
+streamlit==1.66.0
+pandas==3.0.6
+requests==2.34.2
+python-dotenv==1.2.4

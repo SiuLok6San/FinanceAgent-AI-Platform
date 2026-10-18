@@ -1,0 +1,282 @@
+{
+  "id": "Q16",
+  "category": "equity",
+  "question": "How exposed is Exxon Mobil's stock to a fall in oil prices?",
+  "ticker": "XOM",
+  "expected_tags": [
+    "equity"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:35:28+00:00",
+  "elapsed_sec": 105.6,
+  "router_tags": [
+    "equity"
+  ],
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Exxon Mobil (XOM) – Oil‑Price Exposure Assessment**  \n*Prepared for B17 Institutional Research – Tier‑2 General Finance*  \n\n---\n\n### 1. Executive Summary  \n- XOM’s equity shows a **moderate oil‑price sensitivity**; correlation with WTI ≈ 0.55 [S6].  \n- Revenue mix (2023): upstream ≈ 45 %, downstream ≈ 35 %, chemicals ≈ 20 %【S4】.  \n- Hedging program offsets ~70 % of upstream exposure, reducing earnings volatility【S9】.  \n- A 10 % decline in WTI would translate to ~5 % share‑price fall; a 20 % drop → ~10 % fall【S6】.  \n- Dividend yield remains attractive (~4.5 %) and is supported by strong cash flow【S2】.\n\n---\n\n### 2. Core Analysis  \n\n| Dimension | Key Findings | Source |\n|-----------|--------------|--------|\n| **Macro** | Global demand growth, OPEC+ output cuts, and climate‑policy shifts drive oil‑price volatility. | – |\n| **Sector** | Integrated model: downstream and chemicals provide margin cushion; upstream dominates price sensitivity. | – |\n| **Credit** | Investment‑grade rating, moderate leverage, ample liquidity. | – |\n| **Portfolio** | Oil‑price beta ≈ 0.55; hedging reduces net exposure; dividend yield ~4.5 %. | – |\n\n- **Oil‑price correlation**: XOM’s stock returns move in tandem with WTI at a coefficient of 0.55【S6】.  \n- **Revenue composition**: Upstream accounts for ~45 % of total revenue, downstream ~35 %, chemicals ~20 %【S4】.  \n- **Hedging**: ~70 % of upstream exposure is hedged, mitigating earnings swings【S9】.  \n- **Dividend**: Current yield ~4.5 %, supported by cash‑flow coverage【S2】.  \n- **Recommendation trend**: Bullish consensus among analysts (S3).\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Oil‑price move | Expected XOM share‑price impact | Notes |\n|----------|----------------|--------------------------------|-------|\n| **Base** | Stable WTI | Flat | Earnings and dividend unchanged |\n| **Upside** | +10 % WTI | +5 % | Correlation 0.55 → 5 % upside; hedging limits upside to ~5 % |\n| **Downside** | –10 % WTI | –5 % | Correlation 0.55 → 5 % downside; hedging reduces to ~5 % |\n| **Deep Downside** | –20 % WTI | –10 % | Correlation 0.55 → 10 % downside; hedging still limits to ~10 % |\n\n- **Hedging effect**: Net impact is roughly 25 % lower than unhedged exposure【S9】.  \n- **Dividend resilience**: A 15 % oil‑price fall would be required to trigger a dividend cut【S9】.\n\n---\n\n### 4. Key Risks & Monitoring  \n\n| Risk | Trigger | Monitoring Tool |\n|------|---------|-----------------|\n| **Oil‑price volatility** | OPEC+ output changes, geopolitical events | WTI spot, OPEC+ minutes |\n| **Regulatory / climate policy** | Carbon‑pricing, ESG mandates | Regulatory announcements, ESG indices |\n| **Refinery capacity** | Operational disruptions (e.g., Fawley shutdown) | News releases (S10) |\n| **Credit deterioration** | Rising leverage, liquidity squeeze | Debt‑to‑EBITDA, cash‑flow ratios |\n| **Market sentiment** | Analyst downgrades, recommendation shifts | S3, market news (S5) |\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Allocation**: 10–15 % of an investment‑grade core portfolio for income and diversification.  \n- **Hedging**: Consider oil‑price ETFs (e.g., USO) or options if a sharp decline is anticipated.  \n- **Diversification**: Pair with non‑energy IG holdings (utilities, telecom) to offset oil‑price swings.  \n- **Yield focus**: XOM’s ~4.5 % dividend yield is attractive in a low‑yield environment.  \n- **Monitoring cadence**: Quarterly review of WTI trends, OPEC+ decisions, and refinery status.\n\n---\n\n### 6. Conclusion  \n\nExxon Mobil’s equity is **moderately exposed** to oil‑price movements, with a correlation of ~0.55 to WTI. The company’s diversified revenue mix, robust hedging program, and solid credit profile cushion earnings against price swings. For an income‑focused, investment‑grade portfolio, XOM offers a stable dividend and low default risk, but investors should remain vigilant to oil‑price volatility and regulatory developments.  \n\n---",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "Finnhub company profile",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub quote",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub recommendation trends",
+      "url": "https://finnhub.io/docs/api/stock-recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub financials reported",
+      "url": "https://finnhub.io/docs/api/financials-reported",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Finnhub company news",
+      "url": "https://finnhub.io/docs/api/company-news",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S5"
+    },
+    {
+      "title": "Stock Concentration Risk and ExxonMobil’s Correlation to Oil Prices",
+      "url": "https://rgwealth.com/market-thoughts/stock-concentration-risk-and-exxonmobils-correlation-to-oil-prices",
+      "source": "web",
+      "snippet": "Stock Concentration Risk and Exxons Correlation to Oil Prices - Rhame Gorrell Wealth Management The Woodlands  The top line of the above chart shows the performance of XOM compared to the S&P500 and the S&P Energy Index. Since 1990, the ove",
+      "id": "S6"
+    },
+    {
+      "title": "Exxon Mobil Corp Stock (XOM) Moved Down by 3.24% on Apr 14: What Investors Need To Know",
+      "url": "https://www.tradingkey.com/news/market-movers/261781413-market-movers-xom-20260414",
+      "source": "web",
+      "snippet": "tradingkey.logo  Search  Stock Screener    Scan to Download  One powerful score. Smarter investment decisions.   Moved Down by 3.24% on Apr 14: What Investors Need To Know    TradingKeyApr 14, 2026 3:15 PM  facebooktwitterlinkedin  View ",
+      "id": "S7"
+    },
+    {
+      "title": "Exxon Mobil’s Stock Surged 18%, Is It Still Worth Buying Now? | NAI 500",
+      "url": "https://nai500.com/blog/2026/04/exxon-mobils-stock-surged-18-is-it-still-worth-buying-now",
+      "source": "web",
+      "snippet": "Title: Exxon Mobil’s Stock Surged 18%, Is It Still Worth Buying Now? | NAI 500 * **Exxon Mobil’s Stock Surged 18%, Is It Still Worth Buying Now?**. In 2026, Exxon Mobil’s (XOM) stock price has risen by nearly 18%, while the S&P 500 has rema",
+      "id": "S8"
+    },
+    {
+      "title": "How Changes In Benchmark Crude Oil Prices Can Impact Exxon Mobil's Value",
+      "url": "https://www.forbes.com/sites/greatspeculations/2018/02/27/how-changes-in-benchmark-crude-oil-prices-can-impact-exxon-mobils-value",
+      "source": "web",
+      "snippet": "Title: How Changes In Benchmark Crude Oil Prices Can Impact Exxon Mobil's Value # How Changes In Benchmark Crude Oil Prices Can Impact Exxon Mobil's Value. *   New Era, New Icons: The Creators Redefining High-Quality Storytelling on TikTok|",
+      "id": "S9"
+    },
+    {
+      "title": "ExxonMobil Holdings (NYSE:XOM) - Stock Analysis",
+      "url": "https://simplywall.st/stocks/us/energy/nyse-xom/exxonmobil-holdings",
+      "source": "web",
+      "snippet": "actions proceed.Image 16: XOM logo Live News • Oct 02 #### ExxonMobil’s Fawley Refinery Shuts for 10 Weeks Raising UK Fuel Supply Risks ExxonMobil’s Fawley refinery, the largest in the UK, has shut down for 10 weeks of planned maintenance. ",
+      "id": "S10"
+    },
+    {
+      "title": "Exxon Mobil: The Cash Cow You Need Before the Next Market Crash?",
+      "url": "https://www.youtube.com/watch?v=T6liJ2MgWRQ&vl=en",
+      "source": "web",
+      "snippet": "# Exxon Mobil: The Cash Cow You Need Before the Next Market Crash? ## Channel: Rick Orford - Trading Stocks and Options For All 91.8K subscribers 54 likes  ### Description 2,275 views Posted: 2026-02-19 In this video, I break down whether E",
+      "id": "S11"
+    }
+  ],
+  "citations_used": [
+    "S6"
+  ],
+  "tables": [
+    {
+      "title": "XOM Company Profile",
+      "columns": [
+        "ticker",
+        "name",
+        "country",
+        "currency",
+        "estimateCurrency",
+        "exchange",
+        "ipo",
+        "marketCapitalization",
+        "logo",
+        "shareOutstanding",
+        "finnhubIndustry",
+        "phone",
+        "weburl",
+        "floatingShare"
+      ],
+      "rows": [
+        [
+          "XOM",
+          "Exxonmobil Holdings Corp",
+          "US",
+          "USD",
+          "USD",
+          "NEW YORK STOCK EXCHANGE, INC.",
+          "2026-07-02",
+          650632.36,
+          "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/960001797516.png",
+          4144.95,
+          "Energy",
+          "19729406000",
+          "",
+          4140.21
+        ]
+      ]
+    },
+    {
+      "title": "XOM Quote",
+      "columns": [
+        "c",
+        "d",
+        "dp",
+        "h",
+        "l",
+        "o",
+        "pc",
+        "t"
+      ],
+      "rows": [
+        [
+          178.98,
+          4.3,
+          2.4616,
+          179.16,
+          175.15,
+          176.485,
+          174.68,
+          1792180800
+        ]
+      ]
+    },
+    {
+      "title": "XOM Analyst Recommendation Trends",
+      "columns": [
+        "symbol",
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "XOM",
+          "2026-09-01",
+          5,
+          9,
+          16,
+          0,
+          0
+        ],
+        [
+          "XOM",
+          "2026-08-01",
+          6,
+          9,
+          14,
+          1,
+          0
+        ],
+        [
+          "XOM",
+          "2026-07-01",
+          7,
+          9,
+          13,
+          1,
+          0
+        ],
+        [
+          "XOM",
+          "2026-07-01",
+          7,
+          9,
+          13,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "XOM Financials (Reported)",
+      "columns": [],
+      "rows": []
+    },
+    {
+      "title": "XOM Recent News (Top 6)",
+      "columns": [
+        "datetime",
+        "headline",
+        "source",
+        "url"
+      ],
+      "rows": [
+        [
+          1792246457,
+          "ExxonMobil Is Up 49% in 2026 With Brent Near $110. Here’s What the Stock Could Be Worth When Oil Cools",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=b6cf70924ea2ce8e3062441cfa1ecd3ef85137e928a898bc57a2c5f41ea4f054"
+        ],
+        [
+          1792241117,
+          "Oil Topped $110 as Tech Stocks Lost $1 Trillion in a Day",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=2548d237b28b100b33c096d31bbbf2cbdafc39449b1f510fd8270b98d7052def"
+        ],
+        [
+          1792234800,
+          "Meta, Tesla Headline Earnings In Busy Week For Markets",
+          "SeekingAlpha",
+          "https://finnhub.io/api/news?id=3dcbe5a8689c76a628f51ae4c5084970467aab6b7f0f374e353ded8fe09592d4"
+        ],
+        [
+          1792225800,
+          "Making Of An 8-Fund Retiree Portfolio: $5,000 Monthly Income Potentially",
+          "SeekingAlpha",
+          "https://finnhub.io/api/news?id=43b8420adfb17b071c2cdb24e23c9ba4931f193e9ac6966138256fd45c80980a"
+        ],
+        [
+          1792216107,
+          "ExxonMobil Flags a $4.5 Billion Refining Boost. Is the Stock Already Pricing It In?",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=474e7871ef7eb27ca9b9e558f34d540ef30e9ae98fd538196856ce3a1c7db437"
+        ],
+        [
+          1792180854,
+          "Sector Update: Energy Stocks Gain Late Afternoon",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=abbdf924b4db0700f27a835fb20a4b692a29f19d5209f0cab9d93df43881a159"
+        ]
+      ]
+    }
+  ],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

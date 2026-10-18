@@ -1,0 +1,21 @@
+id,category,question,ticker,expected_tags
+Q01,macro,Is U.S. inflation cooling? What does the latest CPI data show about the trend over the past year?,,macro
+Q02,macro,What does the current unemployment rate say about the strength of the U.S. labor market?,,macro
+Q03,macro,How likely is a U.S. recession in the next 12 months based on real GDP growth and labor data?,,macro
+Q04,macro,Is the U.S. economy heading for a soft landing or a hard landing?,,macro
+Q05,rates,What is the outlook for the federal funds rate over the next year?,,rates
+Q06,rates,What does the shape of the Treasury yield curve (10-year minus 2-year) signal right now?,,rates
+Q07,rates,"Should a bond investor extend duration now, given where Treasury yields are?",,rates;portfolio
+Q08,rates,How would a Fed rate cut cycle affect 10-year Treasury yields and mortgage rates?,,rates
+Q09,credit,How does higher-for-longer rates affect U.S. IG vs HY credit spreads?,,credit;rates
+Q10,credit,Are high-yield corporate bond spreads tight relative to history?,,credit
+Q11,credit,"Is the corporate default cycle turning, and what does that mean for high-yield bonds?",,credit
+Q12,credit,How have investment-grade corporate bond spreads moved over the past six months?,,credit
+Q13,equity,Is JPMorgan's valuation attractive relative to its earnings?,JPM,equity
+Q14,equity,What are analysts' current recommendations on NVIDIA stock?,NVDA,equity
+Q15,equity,How did Apple's most recent quarterly earnings compare with expectations?,AAPL,equity
+Q16,equity,How exposed is Exxon Mobil's stock to a fall in oil prices?,XOM,equity
+Q17,portfolio,How should a 60/40 portfolio be rebalanced if inflation stays above target?,,portfolio;macro
+Q18,portfolio,What are cost-effective ways to hedge a U.S. equity portfolio against a market drawdown?,,portfolio;equity
+Q19,portfolio,How does risk parity allocation perform when stocks and bonds fall together?,,portfolio
+Q20,portfolio,How much should a diversified portfolio allocate to investment-grade credit versus Treasuries right now?,,portfolio;credit;rates
