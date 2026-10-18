@@ -141,6 +141,21 @@ def test_dangling_and_uncited_and_mismatched():
     assert mism == {"4.3%": ["S9"], "0.85%": ["S1"]}
 
 
+def test_citing_either_series_of_a_spread_is_fine():
+    report = "HY minus IG is 2.45 percentage points [S3]."
+    figs = v.check_numeric_grounding(report, "q", TABLES, SOURCES)
+    assert figs[0].source_ids == ("S2", "S3")
+    assert v.check_citations(report, SOURCES, figs)["source_mismatches"] == []
+
+
+def test_figure_also_in_cited_snippet_is_not_a_mismatch():
+    sources = SOURCES + [source(5, url="https://news/fed", snippet="Unemployment held at 4.3% in September.")]
+    report = "Unemployment is 4.3% [S5]."
+    figs = v.check_numeric_grounding(report, "q", TABLES, sources)
+    assert figs[0].status == "verified" and figs[0].source_id == "S1"
+    assert v.check_citations(report, sources, figs)["source_mismatches"] == []
+
+
 def test_grouped_citation_markers():
     report = "Unemployment is 4.3% [S1, S2]."
     figs = v.check_numeric_grounding(report, "q", TABLES, SOURCES)

@@ -155,6 +155,7 @@ class Figure:
     status: str = "unverified"     # verified | derived | unverified
     matched: Optional[str] = None  # description of the matching fact
     source_id: Optional[str] = None
+    source_ids: Tuple[str, ...] = ()  # every source the matched fact comes from (two for a spread)
     topic_match: Optional[bool] = None
     in_source_text: Optional[str] = None  # S# of a snippet that contains the same number
     context: str = ""
@@ -288,6 +289,7 @@ def check_numeric_grounding(
             fig.status = "verified" if fact.kind == "observed" else "derived"
             fig.matched = fact.label
             fig.source_id = url_to_id.get(fact.source_url)
+            fig.source_ids = tuple(url_to_id[u] for u in (fact.source_url, *fact.other_source_urls) if u in url_to_id)
             fig.topic_match = best[0][0] == 0
         else:
             for sid, sf in snippet_figures:
@@ -323,8 +325,14 @@ def _units(text: str) -> List[Tuple[int, int]]:
     return spans
 
 
+def _in_snippet(fig: Figure, snippet_figs: List[Figure]) -> bool:
+    return any((sf.unit == fig.unit or "" in (sf.unit, fig.unit)) and abs(sf.value - fig.value) <= max(sf.tolerance, fig.tolerance)
+               for sf in snippet_figs)
+
+
 def check_citations(report: str, sources: List[Dict[str, Any]], figures: List[Figure]) -> Dict[str, Any]:
     markers = parse_citation_markers(report)
+    snippet_figs = {s["id"]: [f for f in extract_figures(s.get("snippet") or "") if f.unit != "date"] for s in sources}
     uncited, mismatched = [], []
     for a, b in _units(report):
         grounded = [f for f in figures if a <= f.start < b and f.status in ("verified", "derived") and f.unit != "date"]
@@ -335,7 +343,11 @@ def check_citations(report: str, sources: List[Dict[str, Any]], figures: List[Fi
         if not cited:
             uncited.append({"text": snippet, "figures": [f.text for f in grounded]})
             continue
-        wrong = [f.text for f in grounded if f.source_id and f.source_id not in cited]
+        # a figure is mis-cited only if none of its data sources is cited and the
+        # cited sources' own text does not contain it either
+        wrong = [f.text for f in grounded
+                 if f.source_ids and not set(f.source_ids) & cited
+                 and not any(_in_snippet(f, snippet_figs.get(i, [])) for i in cited)]
         if wrong:
             mismatched.append({"text": snippet, "figures": wrong, "cited": sorted(cited)})
     return {

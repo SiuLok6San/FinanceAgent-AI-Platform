@@ -156,6 +156,8 @@ def pipeline_metrics(records: List[Dict[str, Any]]) -> Dict[str, Any]:
         "dates": len(figs) - len(num),
         "dates_verified": count("verified", [f for f in figs if f["unit"] == "date"]),
         "grounded_same_topic": sum(f["status"] != "unverified" and f["topic_match"] is True for f in num),
+        # written without decimals ("2%", "4"), so the match tolerance is ±0.5 or wider
+        "grounded_low_precision": sum(f["status"] != "unverified" and f["tolerance"] >= 0.5 for f in num),
         "unverified_in_snippets": sum(f["status"] == "unverified" and bool(f["in_source_text"]) for f in num),
         "citation_markers": sum(v["citations"]["markers"] for v in vals),
         "dangling_ids": sum(len(v["citations"]["dangling"]) for v in vals),
@@ -278,6 +280,8 @@ def write_results_md(routing: Dict[str, Any], metrics: Dict[str, Any], infos: Di
         row("Numbers only: verified + derived", lambda m: _pct(m["numbers_verified"] + m["numbers_derived"], m["numbers"]))
         row("Grounded numbers matched to a series on the sentence's topic",
             lambda m: _pct(m["grounded_same_topic"], m["numbers_verified"] + m["numbers_derived"]))
+        row("Grounded numbers written without decimals (match tolerance ±0.5 or wider)",
+            lambda m: _pct(m["grounded_low_precision"], m["numbers_verified"] + m["numbers_derived"]))
         row("Unverified numbers that appear in a web/news snippet", lambda m: str(m["unverified_in_snippets"]))
         row("Citation markers", lambda m: str(m["citation_markers"]))
         row("Dangling citation ids (reports affected)", lambda m: f"{m['dangling_ids']} ({m['reports_with_dangling']})")
@@ -312,8 +316,9 @@ def write_results_md(routing: Dict[str, Any], metrics: Dict[str, Any], infos: Di
         "## How to read these numbers",
         "",
         "- *Verified* means the number matches a value in the fetched tables within the rounding its digits imply "
-        "(\"4%\" matches anything from 3.5 to 4.5), so coarse numbers can match by coincidence. The \"same topic\" row "
-        "shows how many matches came from a series the sentence actually talks about.",
+        "(\"4%\" matches anything from 3.5 to 4.5), so coarse numbers can match by coincidence, e.g. \"the Fed's 2% "
+        "target\" can match an inflation change that rounds to 2%. The \"same topic\" and \"without decimals\" rows "
+        "show how much of the grounding is solid.",
         "- *Unverified* does not mean wrong: it means the number could not be traced to fetched data (it may come from "
         "a web snippet, general knowledge, or be invented).",
         "- 20 questions is a small sample, and live data and LLM outputs change from day to day.",

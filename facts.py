@@ -35,6 +35,7 @@ class Fact:
     series_id: Optional[str] = None
     date: Optional[str] = None
     topics: Tuple[str, ...] = field(default_factory=tuple)
+    other_source_urls: Tuple[str, ...] = ()  # e.g. the second series of a spread
 
 
 def _cfg() -> Dict[str, Any]:
@@ -184,7 +185,8 @@ def derived_facts(tables: List[Dict[str, Any]]) -> List[Fact]:
     for (a, va, da), (b, vb, db) in combinations(pct_latest, 2):
         ida, idb = a.get("series_id") or a["title"], b.get("series_id") or b["title"]
         topics = tuple(sorted(set(a.get("topics") or ()) | set(b.get("topics") or ())))
-        facts.append(Fact(va - vb, "derived", f"{ida} minus {idb} (latest: {da}, {db})", True, a.get("source_url", ""), None, max(da, db), topics))
+        facts.append(Fact(va - vb, "derived", f"{ida} minus {idb} (latest: {da}, {db})", True, a.get("source_url", ""),
+                          None, max(da, db), topics, (b.get("source_url", ""),)))
     return facts
 
 
