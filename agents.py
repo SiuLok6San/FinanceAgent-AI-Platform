@@ -11,9 +11,9 @@ from llm import call_llm, LLMError, llm_settings
 from settings import load_config
 from router import route_question
 from router_tier2 import detect_tier2_specialization
-from answer_builder import build_answer, normalize_sources
+from answer_builder import build_answer, extract_citations_used, normalize_sources, revise_report
 from facts import key_data_block, topics_with_data
-from validators import annotate_report, validate_report
+from validators import annotate_report, feedback_for_writer, validate_report
 
 from data_providers import (
     resolve_fred_series,
@@ -31,6 +31,7 @@ _PIPELINE_CFG = load_config("pipeline")
 TEMPERATURES = _PIPELINE_CFG["temperatures"]
 MAX_PROMPT_CHARS = _PIPELINE_CFG["limits"]["max_prompt_chars"]
 MAX_NOTE_CHARS = _PIPELINE_CFG["limits"]["max_note_chars"]
+REPAIR = _PIPELINE_CFG["repair"]
 
 # --------------------------------------------------------------------------
 # Logging: tracebacks go to logs/pipeline.log, never into the report text
@@ -175,6 +176,39 @@ def run_reasoner(question: str, analyst_text: str, key_data: str = "") -> str:
 # --------------------------------------------------------------------------
 # Main Pipeline (used by app.py)
 # --------------------------------------------------------------------------
+def _repair_loop(question, draft, validation, key_data, tables, sources, tags, status):
+    """Send the validator's findings back to the Writer; keep a revision only if it is better.
+
+    Returns (final report, its validation, list of rounds). The validator, not
+    the LLM, decides: a revision is accepted only if it has strictly fewer open
+    issues and is not much shorter than the text it replaces.
+    """
+    report, rounds = draft, []
+    if not REPAIR["enabled"]:
+        return report, validation, rounds
+    for _ in range(REPAIR["max_rounds"]):
+        feedback = feedback_for_writer(validation)
+        if not feedback:
+            break
+        entry = {"feedback": feedback, "open_issues_before": validation["open_issues"],
+                 "summary_before": validation["summary"]}
+        try:
+            revised = revise_report(question, report, feedback, key_data, sources)
+        except LLMError:
+            logger.warning("Revision pass failed; keeping the draft", exc_info=True)
+            rounds.append({**entry, "accepted": False, "error": "LLM call failed"})
+            break
+        revised_validation = validate_report(revised, question, tables, sources, tags, data_status=status)
+        accepted = (revised_validation["open_issues"] < validation["open_issues"]
+                    and len(revised) >= REPAIR["min_length_ratio"] * len(report))
+        rounds.append({**entry, "accepted": accepted, "open_issues_after": revised_validation["open_issues"],
+                       "summary_after": revised_validation["summary"], "revised_report_text": revised})
+        if not accepted:
+            break
+        report, validation = revised, revised_validation
+    return report, validation, rounds
+
+
 def _run_meta(run_id: str) -> Dict[str, Any]:
     """Model name and settings stored with every report (and every error)."""
     return {
@@ -182,6 +216,7 @@ def _run_meta(run_id: str) -> Dict[str, Any]:
         "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         **llm_settings(),
         "temperatures": dict(TEMPERATURES),
+        "repair": dict(REPAIR),
     }
 
 
@@ -241,12 +276,18 @@ def run_multiagent_pipeline(question: str, ticker: Optional[str] = None) -> Dict
             no_data_topics=no_data_topics,
         )
 
-        # deterministic checks on the final text; flagged content is kept, not deleted
-        raw_report = final_answer["report_text"]
-        validation = validate_report(
-            raw_report, question, tables, final_answer["sources"], tags,
-            data_status=research_bundle.get("status", []),
-        )
+        # deterministic checks on the draft; flagged content is kept, not deleted
+        sources = final_answer["sources"]
+        status = research_bundle.get("status", [])
+        draft = final_answer["report_text"]
+        draft_validation = validate_report(draft, question, tables, sources, tags, data_status=status)
+        raw_report, validation, rounds = _repair_loop(
+            question, draft, draft_validation, key_data, tables, sources, tags, status)
+
+        final_answer["draft_report_text"] = draft
+        final_answer["draft_validation"] = draft_validation
+        final_answer["repair"] = {"enabled": REPAIR["enabled"], "rounds": rounds}
+        final_answer["citations_used"] = extract_citations_used(raw_report, sources)
         final_answer["report_text_raw"] = raw_report
         final_answer["report_text"] = annotate_report(raw_report, validation)
         final_answer["validation"] = validation

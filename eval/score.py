@@ -35,6 +35,9 @@ from settings import load_config  # noqa: E402
 from validators import validate_report  # noqa: E402
 
 PIPELINES = ["original", "revised"]
+# columns in RESULTS.md; "revised_draft" is the revised pipeline's first draft, before the feedback loop
+LABELS = {"original": "Original pipeline", "revised_draft": "Revised, first draft",
+          "revised": "Revised, after feedback loop"}
 TAGS = load_config("routing")["tag_order"]
 
 # Temperatures hard-wired in the original code (agents.py / answer_builder.py at 0468eea).
@@ -170,6 +173,8 @@ def pipeline_metrics(records: List[Dict[str, Any]]) -> Dict[str, Any]:
         "no_data_undisclosed": sum(not t["disclosed"] for t in nd_topics),
         "no_data_unverified_figures": sum(len(t["unverified_figures"]) for t in nd_topics),
         "reports_with_no_data_issue": sum(v["no_data"]["issue"] for v in vals),
+        "open_issues": sum(v["open_issues"] for v in vals),
+        "assumptions": sum(f["status"] == "unverified" and f.get("assumption", False) for f in num),
         "mean_elapsed_sec": round(sum(r["elapsed_sec"] for r in records) / len(records), 1) if records else None,
         "per_question": [{
             "id": r["id"], "category": r["category"], "tables": v["n_tables"], **v["counts"],
@@ -206,7 +211,17 @@ def _setup_rows(infos: Dict[str, Any], records: Dict[str, List[Dict[str, Any]]])
     def temps(p):
         if p == "original":
             return ", ".join(f"{k} {v}" for k, v in ORIGINAL_TEMPERATURES.items()) + " (hard-coded in original code)"
-        return ", ".join(f"{k} {v}" for k, v in load_config("pipeline")["temperatures"].items()) + " (config/pipeline.toml)"
+        seen = {tuple(r["run_meta"]["temperatures"].items()) for r in records.get(p, []) if r["run_meta"].get("temperatures")}
+        return "; ".join(", ".join(f"{k} {v}" for k, v in t) for t in sorted(seen)) or "n/a"
+
+    def loop(p):
+        if p == "original":
+            return "none"
+        seen = {(m["enabled"], m["max_rounds"]) for r in records.get(p, []) if (m := r["run_meta"].get("repair"))}
+        if not seen:
+            return "none"
+        return "; ".join(f"validator feedback → {n} Writer revision(s), kept only if it has fewer open issues"
+                         if on else "off" for on, n in sorted(seen))
 
     rows = [
         ("Code", lambda i, r: "; ".join(sorted({s["code"] for s in i["sessions"]}))),
@@ -220,11 +235,13 @@ def _setup_rows(infos: Dict[str, Any], records: Dict[str, List[Dict[str, Any]]])
     for label, fn in rows:
         out.append(f"| {label} | {cell('original', fn)} | {cell('revised', fn)} |")
     out.append(f"| Temperatures | {temps('original')} | {temps('revised')} |")
+    out.append(f"| Feedback loop | {loop('original')} | {loop('revised')} |")
     return out
 
 
 def write_results_md(routing: Dict[str, Any], metrics: Dict[str, Any], infos: Dict[str, Any],
-                     records: Dict[str, List[Dict[str, Any]]], determinism: Optional[Dict[str, Any]]) -> str:
+                     records: Dict[str, List[Dict[str, Any]]], determinism: Optional[Dict[str, Any]],
+                     repair: Optional[Dict[str, Any]] = None) -> str:
     o, r = routing["original"], routing["revised"]
     lines = [
         "# Evaluation results",
@@ -264,8 +281,9 @@ def write_results_md(routing: Dict[str, Any], metrics: Dict[str, Any], infos: Di
     if not metrics:
         lines.append("No pipeline outputs found yet; run `eval/run_eval.py` first.")
     else:
-        cols = [p for p in PIPELINES if p in metrics]
-        header = "| Metric | " + " | ".join(f"{p.capitalize()} pipeline" for p in cols) + " |"
+        cols = [p for p in ("original", "revised_draft", "revised") if p in metrics]
+        labels = dict(LABELS, revised="Revised pipeline") if "revised_draft" not in metrics else LABELS
+        header = "| Metric | " + " | ".join(labels[p] for p in cols) + " |"
         lines += [header, "|---" * (len(cols) + 1) + "|"]
 
         def row(label, fn):
@@ -283,6 +301,7 @@ def write_results_md(routing: Dict[str, Any], metrics: Dict[str, Any], infos: Di
         row("Grounded numbers written without decimals (match tolerance ±0.5 or wider)",
             lambda m: _pct(m["grounded_low_precision"], m["numbers_verified"] + m["numbers_derived"]))
         row("Unverified numbers that appear in a web/news snippet", lambda m: str(m["unverified_in_snippets"]))
+        row("Unverified numbers labelled as assumptions", lambda m: str(m.get("assumptions", 0)))
         row("Citation markers", lambda m: str(m["citation_markers"]))
         row("Dangling citation ids (reports affected)", lambda m: f"{m['dangling_ids']} ({m['reports_with_dangling']})")
         row("Paragraphs with grounded figures but no citation", lambda m: str(m["uncited_paragraphs"]))
@@ -292,10 +311,19 @@ def write_results_md(routing: Dict[str, Any], metrics: Dict[str, Any], infos: Di
         row("… not disclosed in the report", lambda m: str(m["no_data_undisclosed"]))
         row("… unverified figures on those topics", lambda m: str(m["no_data_unverified_figures"]))
         row("Reports with a no-data honesty issue", lambda m: _pct(m["reports_with_no_data_issue"], m["questions"] - m["errors"]))
+        row("Open issues a writer could fix (validator count)", lambda m: str(m.get("open_issues", "")))
         row("Mean time per question (s)", lambda m: str(m["mean_elapsed_sec"]))
 
+        if repair:
+            lines += ["", "### Validator feedback loop (revised pipeline)", "",
+                      f"Questions where the first draft had open issues and a revision was requested: {repair['attempted']}/{repair['questions']}. "
+                      f"Revisions kept (strictly fewer open issues): {repair['accepted']}. "
+                      f"Rejected: {repair['rejected']}. Revision calls that failed: {repair['failed']}. "
+                      f"Open issues over all questions: {repair['issues_before']} in the first drafts, "
+                      f"{repair['issues_after']} in the final reports."]
+
         for p in cols:
-            lines += ["", f"### Per question: {p} pipeline", "",
+            lines += ["", f"### Per question: {labels[p]}", "",
                       "| Question | Tables | Figures | Verified | Derived | Unverified | Dangling | Uncited | No-data issue |",
                       "|---|---|---|---|---|---|---|---|---|"]
             for q in metrics[p]["per_question"]:
@@ -344,11 +372,28 @@ def main() -> None:
             records[p] = [read_json(f) for f in files]
             metrics[p] = pipeline_metrics(records[p])
             infos[p] = _run_info(p)
+
+    # the revised pipeline's first drafts, scored the same way, isolate the feedback loop's effect
+    repair = None
+    revised = records.get("revised", [])
+    if revised and all(r.get("draft_report_text") for r in revised if not r["error"]):
+        drafts = [dict(r, report_text=r["draft_report_text"]) for r in revised]
+        metrics["revised_draft"] = pipeline_metrics(drafts)
+        rounds = [r["repair"]["rounds"][0] for r in revised if not r["error"] and r["repair"]["rounds"]]
+        repair = {
+            "questions": sum(not r["error"] for r in revised),
+            "attempted": len(rounds),
+            "accepted": sum(x["accepted"] for x in rounds),
+            "rejected": sum(not x["accepted"] and not x.get("error") for x in rounds),
+            "failed": sum(bool(x.get("error")) for x in rounds),
+            "issues_before": metrics["revised_draft"]["open_issues"],
+            "issues_after": metrics["revised"]["open_issues"],
+        }
     det_path = RESULTS_DIR / "determinism.json"
     determinism = read_json(det_path) if det_path.exists() else None
 
-    write_json(RESULTS_DIR / "metrics.json", {"routing": routing, "validation": metrics})
-    print(write_results_md(routing, metrics, infos, records, determinism))
+    write_json(RESULTS_DIR / "metrics.json", {"routing": routing, "validation": metrics, "repair": repair})
+    print(write_results_md(routing, metrics, infos, records, determinism, repair))
 
 
 if __name__ == "__main__":

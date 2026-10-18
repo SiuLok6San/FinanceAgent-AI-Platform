@@ -29,6 +29,36 @@ from settings import load_config
 
 WRITER_TEMPERATURE = load_config("pipeline")["temperatures"]["writer"]
 
+WRITER_SYSTEM_PROMPT = textwrap.dedent("""
+    You are the Final Writer for B17 Institutional Research.
+
+    Objectives:
+    - Produce a crisp, structured, professional finance report.
+    - Avoid long paragraphs. Prefer bullets + concise sections.
+    - Use ONLY provided sources and cite them as [S1], [S2], ... (plain square brackets).
+    - If a claim cannot be sourced → phrase as scenario (e.g., “likely”, “probable”).
+
+    Required Sections:
+    1. Executive Summary (3–5 bullets)
+    2. Core Analysis (macro / sector / credit / portfolio)
+    3. Scenarios (base / upside / downside)
+    4. Key Risks & Monitoring
+    5. Portfolio / Decision Implications
+    6. Conclusion
+
+    Additional rules:
+    - DO NOT include tables or charts inside the text. Mention them by name only:
+        “See Table 1 for yield-curve shift data.”
+    - DO NOT fabricate numbers or dates. Every number and date you state must
+      appear in KEY DATA or in a source snippet, and must carry the [S#] of
+      that source in the same bullet or sentence.
+    - A number that is your own assumption (a scenario level, a suggested
+      weight) must be marked "(assumption)" right after it.
+    - For every topic listed under NO DATA FETCHED, write one sentence saying
+      that no data was fetched for that topic, and keep that part qualitative.
+    - Professional tone. No filler language.
+""").strip()
+
 
 # ---------------------------------------------------------------------
 # Source Normalization
@@ -148,34 +178,6 @@ def build_institutional_report(
     sources = normalize_sources(raw_sources)
     sources_block = build_sources_block(sources)
 
-    # LLM system prompt
-    system_prompt = textwrap.dedent("""
-        You are the Final Writer for B17 Institutional Research.
-
-        Objectives:
-        - Produce a crisp, structured, professional finance report.
-        - Avoid long paragraphs. Prefer bullets + concise sections.
-        - Use ONLY provided sources and cite them as [S1], [S2], ...
-        - If a claim cannot be sourced → phrase as scenario (e.g., “likely”, “probable”).
-
-        Required Sections:
-        1. Executive Summary (3–5 bullets)
-        2. Core Analysis (macro / sector / credit / portfolio)
-        3. Scenarios (base / upside / downside)
-        4. Key Risks & Monitoring
-        5. Portfolio / Decision Implications
-        6. Conclusion
-
-        Additional rules:
-        - DO NOT include tables or charts inside the text. Mention them by name only:
-            “See Table 1 for yield-curve shift data.”
-        - DO NOT fabricate numbers or dates. Every number and date you state must
-          appear in KEY DATA or in a source snippet, and must carry the [S#] of
-          that source in the same bullet or sentence.
-        - For every topic listed under NO DATA FETCHED, write one sentence saying
-          that no data was fetched for that topic, and keep that part qualitative.
-        - Professional tone. No filler language.
-    """).strip()
 
     # Compose user prompt
     agent_block = "\n\n".join(
@@ -214,7 +216,7 @@ def build_institutional_report(
     ])
 
     # Call LLM (LLMError propagates; run_multiagent_pipeline turns it into a friendly message)
-    report = call_llm(system_prompt, user_prompt, temperature=WRITER_TEMPERATURE)
+    report = call_llm(WRITER_SYSTEM_PROMPT, user_prompt, temperature=WRITER_TEMPERATURE)
 
     # Extract citations actually used
     used = extract_citations_used(report, sources)
@@ -227,6 +229,26 @@ def build_institutional_report(
         "sources": sources,
         "citations_used": used,
     }
+
+
+def revise_report(
+    question: str,
+    draft: str,
+    feedback: str,
+    key_data: str,
+    sources: List[Dict[str, Any]],
+) -> str:
+    """Second Writer pass: revise the draft using the validator's findings."""
+    user_prompt = "\n\n".join([
+        f"USER QUESTION:\n{question}",
+        key_data or "KEY DATA: (none fetched)",
+        build_sources_block(sources),
+        f"YOUR DRAFT REPORT:\n{draft}",
+        feedback,
+        "Return the complete revised report with the same sections. Fix every item above. "
+        "Do not add numbers that are not in KEY DATA or a source snippet.",
+    ])
+    return call_llm(WRITER_SYSTEM_PROMPT, user_prompt, temperature=WRITER_TEMPERATURE)
 
 
 # ---------------------------------------------------------------------

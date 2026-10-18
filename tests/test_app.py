@@ -46,8 +46,11 @@ def test_report_validation_panel_and_highlight(mocked_pipeline):
     report = next(m.value for m in at.markdown if "Unemployment is" in m.value)
     assert ":orange-background[6.1%]" in report     # unverified figure highlighted, not removed
     assert "\\$5" in report                          # "$" escaped so it is not rendered as LaTeX
-    assert [m.label for m in at.metric] == ["Verified", "Derived", "Unverified", "Dangling citations"]
-    assert [m.value for m in at.metric] == ["1", "0", "2", "0"]
+    assert [m.label for m in at.metric] == ["Verified", "Derived", "Unverified", "Open issues", "Dangling citations"]
+    assert [m.value for m in at.metric] == ["1", "0", "2", "2", "0"]
+    # the fake writer repeats itself, so the revision is not kept and the UI says so
+    assert any("revision was tried but not kept" in c.value for c in at.caption)
+    assert any("First draft" in e.label for e in at.expander)
     assert [s.value for s in at.subheader][-4:] == ["Validation", "Key Data Tables", "Charts", "Sources"]
 
 

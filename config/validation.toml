@@ -55,3 +55,12 @@ disclosure_patterns = [
     "\\bdata\\b[^.]{0,60}\\b(not available|unavailable|not fetched|was not fetched|were not fetched|missing|could not be retrieved|not retrieved)\\b",
     "\\b(without|lack of|lacking|absence of)\\b[^.]{0,40}\\bdata\\b",
 ]
+
+# ---------------------------------------------------------------------------
+# Assumptions: an unverified number that the report itself marks as an
+# assumption (e.g. "16× (assumption)") stays "unverified", but it is counted
+# separately and is not treated as a no-data honesty problem. Patterns are
+# matched against the number's sentence (regex, case-insensitive).
+# ---------------------------------------------------------------------------
+[assumptions]
+patterns = ["\\(assumption\\)", "\\bassum(e|ed|es|ing|ption|ptions)\\b", "\\bhypothetical", "\\billustrative"]

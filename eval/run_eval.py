@@ -103,6 +103,8 @@ def main() -> None:
             "error": bool(result.get("error")) or any(m in str(result.get("report_text", "")) for m in ERROR_MARKERS),
             "report_text": result.get("report_text_raw", result.get("report_text", "")),
             "report_text_annotated": result.get("report_text") if "report_text_raw" in result else None,
+            "draft_report_text": result.get("draft_report_text"),
+            "repair": result.get("repair"),
             "sources": result.get("sources", []),
             "citations_used": result.get("citations_used", []),
             "tables": [table_to_json(t) for t in result.get("key_data_tables", [])],

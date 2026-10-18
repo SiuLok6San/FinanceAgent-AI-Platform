@@ -158,6 +158,9 @@ class Figure:
     source_ids: Tuple[str, ...] = ()  # every source the matched fact comes from (two for a spread)
     topic_match: Optional[bool] = None
     in_source_text: Optional[str] = None  # S# of a snippet that contains the same number
+    snippet_ids: Tuple[str, ...] = ()     # every snippet that contains the same number
+    assumption: bool = False              # the report labels this number as its own assumption
+    cited: Tuple[str, ...] = ()           # citation ids in the same bullet / paragraph
     context: str = ""
 
 
@@ -302,13 +305,21 @@ def check_numeric_grounding(
             fig.source_ids = tuple(url_to_id[u] for u in (fact.source_url, *fact.other_source_urls) if u in url_to_id)
             fig.topic_match = best[0][0] == 0
         else:
-            for sid, sf in snippet_figures:
-                same_unit = sf.unit == fig.unit or "" in (sf.unit, fig.unit)
-                if same_unit and abs(sf.value - fig.value) <= max(sf.tolerance, fig.tolerance):
-                    fig.in_source_text = sid
-                    break
+            fig.snippet_ids = tuple(dict.fromkeys(
+                sid for sid, sf in snippet_figures
+                if (sf.unit == fig.unit or "" in (sf.unit, fig.unit))
+                and abs(sf.value - fig.value) <= max(sf.tolerance, fig.tolerance)))
+            fig.in_source_text = fig.snippet_ids[0] if fig.snippet_ids else None
+            fig.assumption = _is_assumption(report, fig)
         figures.append(fig)
     return figures
+
+
+def _is_assumption(report: str, fig: Figure) -> bool:
+    """The number is marked as the report's own assumption ("16× (assumption)") or its sentence says so."""
+    after = report[fig.end:fig.end + 40]
+    patterns = _cfg()["assumptions"]["patterns"]
+    return bool(re.match(r"\W{0,3}\(\s*assumption", after, re.I)) or any(re.search(p, fig.context, re.I) for p in patterns)
 
 
 # ---------------------------------------------------------------------------
@@ -345,13 +356,17 @@ def check_citations(report: str, sources: List[Dict[str, Any]], figures: List[Fi
     snippet_figs = {s["id"]: [f for f in extract_figures(s.get("snippet") or "") if f.unit != "date"] for s in sources}
     uncited, mismatched = [], []
     for a, b in _units(report):
+        cited = {i for m in markers if a <= m["start"] < b for i in m["ids"]}
+        for f in figures:
+            if a <= f.start < b:
+                f.cited = tuple(sorted(cited, key=lambda i: int(i[1:])))
         grounded = [f for f in figures if a <= f.start < b and f.status in ("verified", "derived") and f.unit != "date"]
         if not grounded:
             continue
-        cited = {i for m in markers if a <= m["start"] < b for i in m["ids"]}
         snippet = report[a:b].strip()[:200]
+        data_sources = sorted({i for f in grounded for i in f.source_ids}, key=lambda i: int(i[1:]))
         if not cited:
-            uncited.append({"text": snippet, "figures": [f.text for f in grounded]})
+            uncited.append({"text": snippet, "figures": [f.text for f in grounded], "sources": data_sources})
             continue
         # a figure is mis-cited only if none of its data sources is cited and the
         # cited sources' own text does not contain it either
@@ -359,7 +374,7 @@ def check_citations(report: str, sources: List[Dict[str, Any]], figures: List[Fi
                  if f.source_ids and not set(f.source_ids) & cited
                  and not any(_in_snippet(f, snippet_figs.get(i, [])) for i in cited)]
         if wrong:
-            mismatched.append({"text": snippet, "figures": wrong, "cited": sorted(cited)})
+            mismatched.append({"text": snippet, "figures": wrong, "cited": sorted(cited), "sources": data_sources})
     return {
         "markers": len(markers),
         "dangling": find_dangling_citations(report, sources),
@@ -415,7 +430,8 @@ def check_no_data(report: str, tags: List[str], tables: List[Dict[str, Any]], fi
         words = [topic] + routing.get(topic, {}).get("keywords", [])
         disclosed = any(any(p.search(s) for p in patterns) and matches_any(s, words) for s in sentences)
         unverified = [f.text for f in figures
-                      if f.status == "unverified" and f.unit != "date" and topic in topics_in(f.context)]
+                      if f.status == "unverified" and f.unit != "date" and not f.assumption
+                      and topic in topics_in(f.context)]
         topics.append({"topic": topic, "disclosed": disclosed, "unverified_figures": unverified})
     issue = any(not t["disclosed"] or t["unverified_figures"] for t in topics)
     return {"topics_without_data": topics, "issue": issue}
@@ -436,24 +452,80 @@ def validate_report(
 ) -> Dict[str, Any]:
     """Run all checks; the result is JSON-serializable and stored with the report."""
     figures = check_numeric_grounding(report, question, tables, sources)
+    citations = check_citations(report, sources, figures)
     counts = {k: sum(f.status == k for f in figures) for k in ("verified", "derived", "unverified")}
     result = {
         "counts": {"figures": len(figures), **counts},
         "figures": [asdict(f) for f in figures],
-        "citations": check_citations(report, sources, figures),
+        "citations": citations,
         "freshness": check_freshness(tables, today),
         "no_data": check_no_data(report, tags, tables, figures),
         "data_status": [s for s in (data_status or []) if not s.get("ok")],
+        "valid_source_ids": [s["id"] for s in sources],
     }
+    result["open_issues"] = open_issues(result)
     result["summary"] = summary_line(result)
     return result
+
+
+def _needs_attention(f: Dict[str, Any]) -> bool:
+    """Unverified, not labelled as an assumption, and not backed by a snippet the paragraph cites."""
+    if f["status"] != "unverified" or f["assumption"]:
+        return False
+    return not set(f["snippet_ids"]) & set(f["cited"])
+
+
+def open_issues(v: Dict[str, Any]) -> int:
+    """Problems a writer can fix: used to decide whether a revision is better than the draft."""
+    cit = v["citations"]
+    return (sum(_needs_attention(f) for f in v["figures"])
+            + len(cit["uncited_paragraphs"]) + len(cit["source_mismatches"]) + len(cit["dangling"])
+            + sum(not t["disclosed"] for t in v["no_data"]["topics_without_data"]))
+
+
+def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
+    """The validator's findings as concrete instructions for a revision pass ("" if nothing to fix)."""
+    items: List[str] = []
+    for f in v["figures"]:
+        if not _needs_attention(f):
+            continue
+        where = f'"{f["text"]}" in: "{f["context"][:160]}"'
+        if f["snippet_ids"]:
+            items.append(f"{where} — this number appears in source [{f['snippet_ids'][0]}]; cite it in that sentence.")
+        elif f["unit"] == "date":
+            items.append(f"{where} — this date is not in the fetched data; use a date from KEY DATA or remove it.")
+        else:
+            items.append(f"{where} — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], "
+                         "remove it, or mark it \"(assumption)\" if it is your own assumption.")
+    cit = v["citations"]
+    for u in cit["uncited_paragraphs"]:
+        src = ", ".join(f"[{i}]" for i in u["sources"]) or "its source"
+        items.append(f'Add a citation to: "{u["text"][:160]}" — its figures {", ".join(u["figures"])} come from {src}.')
+    for m in cit["source_mismatches"]:
+        src = ", ".join(f"[{i}]" for i in m["sources"])
+        items.append(f'"{m["text"][:160]}" cites {", ".join(m["cited"])}, but figures {", ".join(m["figures"])} come from {src}.')
+    if cit["dangling"]:
+        valid = ", ".join(v.get("valid_source_ids", [])) or "none"
+        items.append(f"Citations {', '.join(cit['dangling'])} do not exist; the only sources are {valid}.")
+    for t in v["no_data"]["topics_without_data"]:
+        if not t["disclosed"]:
+            items.append(f"No data was fetched for {t['topic']}; add one sentence saying so.")
+    if not items:
+        return ""
+    more = f"\n(and {len(items) - max_items} more of the same kind)" if len(items) > max_items else ""
+    numbered = "\n".join(f"{i}. {text}" for i, text in enumerate(items[:max_items], start=1))
+    return "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n" + numbered + more
 
 
 def summary_line(v: Dict[str, Any]) -> str:
     c = v["counts"]
     if c["figures"]:
         in_snippets = sum(f["status"] == "unverified" and bool(f["in_source_text"]) for f in v["figures"])
-        note = f" ({in_snippets} of them appear in a fetched web/news snippet)" if in_snippets else ""
+        assumed = sum(f["status"] == "unverified" and f["assumption"] for f in v["figures"])
+        notes = [f"{in_snippets} of them appear in a fetched web/news snippet" if in_snippets else "",
+                 f"{assumed} labelled as assumptions" if assumed else ""]
+        notes = [n for n in notes if n]
+        note = f" ({'; '.join(notes)})" if notes else ""
         parts = [f"{c['verified'] + c['derived']} of {c['figures']} figures verified against source data "
                  f"({c['verified']} exact, {c['derived']} derived); {c['unverified']} flagged{note}."]
     else:
