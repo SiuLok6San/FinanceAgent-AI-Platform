@@ -1,5 +1,22 @@
 # Changelog
 
+## Oct 2026 — validator feedback loop (`validation-feedback-loop` branch)
+
+Added
+- The validator's findings go back to the Writer for one revision (replace, remove or label as
+  "(assumption)" figures not in the data; cite the web source a figure came from; add missing citations;
+  disclose topics with no data). The revision is kept only if the validator counts strictly fewer open
+  issues; the first draft, its validation and the feedback are stored with the report and shown in the UI.
+- Numbers the report labels "(assumption)" are counted separately (still unverified).
+- GitHub Actions runs the test suite on every push.
+- Evaluation re-run with the loop: open issues 169 → 69 and uncited paragraphs 60 → 26 between first drafts
+  and kept reports; numbers traceable to fetched data 61% → 64% (see `eval/RESULTS.md`).
+
+Fixed
+- An LLM call now has a hard total time limit (the request runs in a watchdog thread). Long eval runs looked
+  stuck for hours; the actual cause was the laptop sleeping mid-run, and the limit is kept as a safeguard.
+- The validator reads citations written as `(S4, S8)` and ISO dates written with non-breaking hyphens.
+
 ## Oct 2026 — revision (`revision-2026` branch)
 
 Added
