@@ -366,12 +366,16 @@ def check_numeric_grounding(
 
 
 def _in_snippets(fig: Figure, snippet_figures: List[Tuple[str, Figure]], only: Optional[str] = None) -> Tuple[str, ...]:
-    """Ids of the fetched web/news snippets that contain the same number (optionally one source only)."""
+    """Ids of the fetched web/news snippets that contain the same number (optionally one source only).
+
+    Same at the precision the report writes it: "4%" matches a source's "4.2%", but "0.8 pp" does not
+    match the "1" in "1 of the 50 states".
+    """
     return tuple(dict.fromkeys(
         sid for sid, sf in snippet_figures
         if (only is None or sid == only)
         and (sf.unit == fig.unit or "" in (sf.unit, fig.unit))
-        and abs(sf.value - fig.value) <= max(sf.tolerance, fig.tolerance)))
+        and abs(sf.value - fig.value) <= fig.tolerance))
 
 
 def _written_in(fig: Figure, snippet_figures: List[Tuple[str, Figure]]) -> Tuple[str, ...]:

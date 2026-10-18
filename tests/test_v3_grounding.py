@@ -94,6 +94,17 @@ def test_assumption_label_on_a_number_from_a_cited_source_is_an_issue():
     assert "it appears in the text of [S5], so quote it as {{S5: 25.2%}}" in fb
 
 
+def test_a_quote_must_match_the_source_at_the_precision_written():
+    page = {"id": "S5", "url": "https://example.com/bls", "title": "BLS", "source": "web",
+            "snippet": "## 1. Introduction. Residents of the 50 states; the rate rose 0.8 pp to 4.3%."}
+    tpl = "- It rose {{S5: 0.8 pp}}.\n- It is {{S5: 4%}}.\n- It is {{S5: 0.7 pp}} above the low.\n"
+    text, refs = render(tpl, STORE, SOURCES + [page])
+    res = v.validate_report(text, "q", TABLES, SOURCES + [page], ["credit"], today=date(2026, 10, 17), refs=refs)
+    found = {f["text"]: bool(f["snippet_ids"]) for f in res["figures"] if f["origin"] == "quote"}
+    # "4%" rounds the source's 4.3%; "0.7 pp" is not in the text (only "1" and "0.8 pp" are near it)
+    assert found == {"0.8 pp": True, "4%": True, "0.7 pp": False}
+
+
 def test_direction_check_on_placeholders():
     ok = _validate("- HY spreads widened {{HY_OAS.chg_1y}} over the year.\n")
     assert ok["directions"] == []
