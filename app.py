@@ -1,8 +1,18 @@
+import hmac
+
 import pandas as pd
 import streamlit as st
 
 from agents import run_multiagent_pipeline
+from demo import demo_runs, load_demo_result
 from llm import llm_settings
+from settings import env
+
+# Set APP_PASSWORD (env var or Streamlit secret) on a public deployment so that
+# only people with the password can start live runs, which spend API quota.
+APP_PASSWORD = env("APP_PASSWORD")
+EXAMPLE_MODE = "Example runs (saved, no API calls)"
+LIVE_MODE = "Live analysis"
 
 st.set_page_config(
     page_title="B17 Finance Multi-Agent",
@@ -176,6 +186,73 @@ def render_validation_panel(validation: dict, result: dict) -> None:
                     st.write(f"{s['provider']} {s['item']}: {s['detail']}")
 
 
+def render_result(result: dict) -> None:
+    """Report, validation panel, data tables, charts and sources for one pipeline result."""
+    validation = result.get("validation") or {}
+    figures = validation.get("figures", [])
+
+    # ---------------------------------------------------
+    # Final Institutional Report (flagged figures highlighted)
+    # ---------------------------------------------------
+    with st.container(border=True):
+        st.subheader("Final Institutional Report")
+        if validation:
+            flagged = validation["counts"]["unverified"] or validation["no_data"]["issue"] or \
+                validation["citations"]["dangling"] or validation["citations"]["uncited_paragraphs"]
+            (st.warning if flagged else st.success)(f"**Validation:** {escape_md(validation['summary'])}")
+        render_repair_note(result)
+        st.markdown(highlight_flagged(result.get("report_text_raw", result["report_text"]), figures))
+        st.caption(
+            "Highlighted figures could not be matched to the fetched data tables "
+            "(blue: the number appears in a fetched web/news snippet; orange: found nowhere). "
+            f"Model: {result['run_meta']['model']} · seed {result['run_meta']['seed']} · "
+            f"run {result['run_meta']['run_id']}"
+        )
+
+    # ---------------------------------------------------
+    # Validation panel
+    # ---------------------------------------------------
+    if validation:
+        render_validation_panel(validation, result)
+
+    # ---------------------------------------------------
+    # Key Data Tables
+    # ---------------------------------------------------
+    if result.get("key_data_tables"):
+        box = st.container(border=True)
+        box.subheader("Key Data Tables")
+
+        for i, tbl in enumerate(result["key_data_tables"], start=1):
+            with box.expander(f"Table {i}: {tbl.get('title', 'Untitled')}"):
+                st.dataframe(tbl.get("data"), hide_index=True)
+
+    # ---------------------------------------------------
+    # Charts
+    # ---------------------------------------------------
+    if result.get("chart_specs"):
+        box = st.container(border=True)
+        box.subheader("Charts")
+
+        for i, chart in enumerate(result["chart_specs"], start=1):
+            with box.expander(f"Chart {i}: {chart.get('title','Untitled')}"):
+                series = pd.Series(chart.get("y", []), index=pd.to_datetime(chart.get("x", [])),
+                                   name=chart.get("y_label") or "value")
+                st.line_chart(series)
+
+    # ---------------------------------------------------
+    # Sources
+    # ---------------------------------------------------
+    if result.get("sources"):
+        box = st.container(border=True)
+        box.subheader("Sources")
+
+        for src in result["sources"]:
+            title = escape_md(src["title"])
+            link = f"[{title}]({src['url']})" if src.get("url") else title
+            box.markdown(f"**[{src['id']}]** {link}  \n*{escape_md(src['source'])}*  \n{escape_md(src.get('snippet', ''))}")
+
+
+
 # -------------------------------------------------------
 # Layout: left input, right output
 # -------------------------------------------------------
@@ -183,98 +260,61 @@ left, right = st.columns([1.15, 2], gap="large")
 
 with left:
     st.subheader("Input")
+    mode = st.radio("Mode", [EXAMPLE_MODE, LIVE_MODE], label_visibility="collapsed")
 
-    question = st.text_area(
-        "Finance Question",
-        placeholder="Example: How does higher-for-longer rates affect U.S. IG vs HY credit spreads?",
-        height=160
-    )
+    if mode == EXAMPLE_MODE:
+        runs = demo_runs()
+        labels = {r["id"]: f"{r['id']} · {r['category']} · {r['question']}" + (f" ({r['ticker']})" if r["ticker"] else "")
+                  for r in runs}
+        chosen = st.selectbox("Saved evaluation run", list(labels), format_func=labels.get)
+        st.caption("Real outputs of the revised pipeline on the 20 evaluation questions, saved in "
+                   "`eval/results/` and re-checked by the current validator. Nothing is fetched or generated now.")
+        run_button = False
+    else:
+        question = st.text_area(
+            "Finance Question",
+            placeholder="Example: How does higher-for-longer rates affect U.S. IG vs HY credit spreads?",
+            height=160
+        )
 
-    ticker = st.text_input(
-        "Ticker (optional)",
-        placeholder="e.g., JPM"
-    )
+        ticker = st.text_input(
+            "Ticker (optional)",
+            placeholder="e.g., JPM"
+        )
 
-    run_button = st.button("Run Institutional Analysis")
+        unlocked = True
+        if APP_PASSWORD:
+            entered = st.text_input("Password for live runs", type="password",
+                                    help="Live runs call the LLM and data APIs, which have usage limits.")
+            unlocked = hmac.compare_digest(entered.encode(), APP_PASSWORD.encode())
+            if entered and not unlocked:
+                st.error("Wrong password.")
+
+        run_button = st.button("Run Institutional Analysis", disabled=not unlocked)
+        if not unlocked:
+            st.caption("Live analysis is password-protected on the public site. The example runs show real outputs.")
 
 
 with right:
-    if not run_button:
+    if mode == EXAMPLE_MODE:
+        result = load_demo_result(chosen)
+        meta = result["run_meta"]
+        st.info(f"**Saved run** of {result['run_utc'][:10]} with `{meta['model']}` — data and model output from that "
+                "day; live results would differ.")
+        render_result(result)
+    elif not run_button:
         st.info("Enter a question and click **Run Institutional Analysis** to begin.")
+    elif not question.strip():
+        st.error("Please enter a finance question.")
     else:
-        if not question.strip():
-            st.error("Please enter a finance question.")
-        else:
-            with st.spinner("Generating institutional research…"):
-                result = run_multiagent_pipeline(
-                    question.strip(),
-                    ticker.strip().upper() or None
-                )
+        with st.spinner("Generating institutional research…"):
+            result = run_multiagent_pipeline(
+                question.strip(),
+                ticker.strip().upper() or None
+            )
 
-            if result.get("error"):
-                st.error(result["report_text"])
-                st.stop()
+        if result.get("error"):
+            st.error(result["report_text"])
+            st.stop()
 
-            validation = result.get("validation") or {}
-            figures = validation.get("figures", [])
-
-            # ---------------------------------------------------
-            # Final Institutional Report (flagged figures highlighted)
-            # ---------------------------------------------------
-            with st.container(border=True):
-                st.subheader("Final Institutional Report")
-                if validation:
-                    flagged = validation["counts"]["unverified"] or validation["no_data"]["issue"] or \
-                        validation["citations"]["dangling"] or validation["citations"]["uncited_paragraphs"]
-                    (st.warning if flagged else st.success)(f"**Validation:** {escape_md(validation['summary'])}")
-                render_repair_note(result)
-                st.markdown(highlight_flagged(result.get("report_text_raw", result["report_text"]), figures))
-                st.caption(
-                    "Highlighted figures could not be matched to the fetched data tables "
-                    "(blue: the number appears in a fetched web/news snippet; orange: found nowhere). "
-                    f"Model: {result['run_meta']['model']} · seed {result['run_meta']['seed']} · "
-                    f"run {result['run_meta']['run_id']}"
-                )
-
-            # ---------------------------------------------------
-            # Validation panel
-            # ---------------------------------------------------
-            if validation:
-                render_validation_panel(validation, result)
-
-            # ---------------------------------------------------
-            # Key Data Tables
-            # ---------------------------------------------------
-            if result.get("key_data_tables"):
-                box = st.container(border=True)
-                box.subheader("Key Data Tables")
-
-                for i, tbl in enumerate(result["key_data_tables"], start=1):
-                    with box.expander(f"Table {i}: {tbl.get('title', 'Untitled')}"):
-                        st.dataframe(tbl.get("data"), hide_index=True)
-
-            # ---------------------------------------------------
-            # Charts
-            # ---------------------------------------------------
-            if result.get("chart_specs"):
-                box = st.container(border=True)
-                box.subheader("Charts")
-
-                for i, chart in enumerate(result["chart_specs"], start=1):
-                    with box.expander(f"Chart {i}: {chart.get('title','Untitled')}"):
-                        series = pd.Series(chart.get("y", []), index=pd.to_datetime(chart.get("x", [])),
-                                           name=chart.get("y_label") or "value")
-                        st.line_chart(series)
-
-            # ---------------------------------------------------
-            # Sources
-            # ---------------------------------------------------
-            if result.get("sources"):
-                box = st.container(border=True)
-                box.subheader("Sources")
-
-                for src in result["sources"]:
-                    title = escape_md(src["title"])
-                    link = f"[{title}]({src['url']})" if src.get("url") else title
-                    box.markdown(f"**[{src['id']}]** {link}  \n*{escape_md(src['source'])}*  \n{escape_md(src.get('snippet', ''))}")
-
+        render_result(result)
