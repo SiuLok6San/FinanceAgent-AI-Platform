@@ -1,4 +1,5 @@
 import hmac
+import html
 
 import pandas as pd
 import streamlit as st
@@ -73,6 +74,12 @@ textarea, input {
 }
 
 
+/* Report figures: hover a number to see where it comes from */
+.b17-fact { border-bottom: 1px dotted rgba(0, 89, 179, 0.7); cursor: help; }
+.b17-quote { border-bottom: 1px dotted rgba(46, 125, 50, 0.8); cursor: help; }
+.b17-assume { background: rgba(128, 128, 128, 0.18); border-radius: 3px; padding: 0 2px; cursor: help; }
+.b17-flag { background: rgba(255, 152, 0, 0.32); border-radius: 3px; padding: 0 2px; cursor: help; }
+.b17-flag-snippet { background: rgba(33, 150, 243, 0.25); border-radius: 3px; padding: 0 2px; cursor: help; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -96,16 +103,51 @@ def escape_md(text: str) -> str:
     return (text or "").replace("$", "\\$")
 
 
-def highlight_flagged(report: str, figures: list) -> str:
-    """Highlight unverified figures (orange: found nowhere; blue: only in a web/news snippet). Nothing is removed."""
-    flagged = sorted((f for f in figures if f["status"] == "unverified"), key=lambda f: f["start"], reverse=True)
-    for f in flagged:
-        tag = "\u2063HL_SNIPPET" if f.get("in_source_text") else "\u2063HL_NONE"
-        report = report[:f["start"]] + tag + report[f["start"]:f["end"]] + "\u2063HL_END" + report[f["end"]:]
-    report = escape_md(report)
-    return (report.replace("\u2063HL_NONE", ":orange-background[")
-                  .replace("\u2063HL_SNIPPET", ":blue-background[")
-                  .replace("\u2063HL_END", "]"))
+def _span(cls: str, title: str, inner: str) -> str:
+    return f'<span class="{cls}" title="{html.escape(title, quote=True)}">{inner}</span>'
+
+
+def decorate_report(report: str, figures: list, refs: list = None, facts: dict = None) -> str:
+    """Report as markdown with every number marked; hover shows where it comes from. Nothing is removed.
+
+    Values inserted from the fact table get a dotted underline, quotes from web sources a green
+    one, the writer's assumptions a grey background; numbers typed by the model that are not in
+    the data are orange (blue if they at least appear in a fetched web/news snippet).
+    """
+    facts = facts or {}
+    marks = []  # (start, end, css class, tooltip)
+    covered = set()
+    for r in refs or []:
+        if r["kind"] == "fact":
+            f = facts.get(r["fact_id"], {})
+            marks.append((r["start"], r["end"], "b17-fact", f"{r['fact_id']}: {f.get('label', '')}"))
+        elif r["kind"] == "quote":
+            marks.append((r["start"], r["end"], "b17-quote", f"Quoted from source {r['source_id']}"))
+        elif r["kind"] == "assumption":
+            marks.append((r["start"], r["end"], "b17-assume", "The writer's own assumption, not data"))
+        covered.update(range(r["start"], r["end"]))
+    for f in figures:
+        if f["start"] in covered or f["status"] != "unverified" or f.get("assumption"):
+            continue
+        if f.get("in_source_text"):
+            marks.append((f["start"], f["end"], "b17-flag-snippet",
+                          f"Not in the data tables; appears in source {f['in_source_text']}"))
+        else:
+            marks.append((f["start"], f["end"], "b17-flag", "Not found in the fetched data"))
+    out, pos = [], 0
+    for start, end, cls, title in sorted(marks):
+        if start < pos:
+            continue
+        out.append(escape_md(report[pos:start]))
+        out.append(_span(cls, title, escape_md(report[start:end]).replace("\\$", "&#36;")))
+        pos = end
+    out.append(escape_md(report[pos:]))
+    return "".join(out)
+
+
+LEGEND = ("Hover a number to see where it comes from. Dotted underline: value from the data (blue) or quoted "
+          "from a web source (green); grey: the writer's own assumption; orange: typed by the model and not "
+          "found in the data; light blue: not in the data tables but in a fetched web/news snippet.")
 
 
 def render_repair_note(result: dict) -> None:
@@ -124,7 +166,8 @@ def render_repair_note(result: dict) -> None:
                    f"{last['open_issues_after']}); showing the first draft.")
     with st.expander("First draft and the feedback it received"):
         st.markdown(f"**Validation of the first draft:** {escape_md(result['draft_validation']['summary'])}")
-        st.markdown(highlight_flagged(result["draft_report_text"], result["draft_validation"]["figures"]))
+        st.markdown(decorate_report(result["draft_report_text"], result["draft_validation"]["figures"],
+                                    result.get("draft_refs"), result.get("facts")), unsafe_allow_html=True)
         st.markdown("**Feedback sent to the Writer:**")
         st.code(rounds[0]["feedback"], language=None)
 
@@ -137,11 +180,30 @@ def render_validation_panel(validation: dict, result: dict) -> None:
 
     with box:
         c1, c2, c3, c4, c5 = st.columns(5)
-        c1.metric("Verified", counts["verified"])
-        c2.metric("Derived", counts["derived"])
-        c3.metric("Unverified", counts["unverified"])
-        c4.metric("Open issues", validation.get("open_issues", 0))
-        c5.metric("Dangling citations", len(cit["dangling"]))
+        if validation.get("placeholders"):
+            figs = [f for f in validation["figures"] if f["unit"] != "date"]
+            c1.metric("From the data", sum(f.get("origin") == "fact" for f in figs))
+            c2.metric("Quoted from sources", sum(f.get("origin") == "quote" for f in figs))
+            c3.metric("Assumptions", sum(f.get("origin") == "assumption" for f in figs))
+            c4.metric("Typed by the model", sum(f.get("origin") == "free" for f in figs))
+        else:
+            c1.metric("Verified", counts["verified"])
+            c2.metric("Derived", counts["derived"])
+            c3.metric("Unverified", counts["unverified"])
+            c4.metric("Dangling citations", len(cit["dangling"]))
+        c5.metric("Open issues", validation.get("open_issues", 0))
+
+        plan = result.get("plan")
+        if plan:
+            series = ", ".join(plan.get("series") or []) or "none"
+            st.caption(f"Planner ({'LLM' if plan.get('source') == 'planner' else 'rule-based fallback'}): "
+                       f"topics {', '.join(plan.get('topics') or [])} · FRED series {series}")
+
+        if validation.get("directions"):
+            with st.expander(f"Direction check: {len(validation['directions'])} problem(s)", expanded=True):
+                for d in validation["directions"]:
+                    st.warning(f"\"{escape_md(d['context'])}\" says *{d['word']}* ({d['says']}), "
+                               f"but {d['fact']} went {d['data']}.")
 
         if validation["figures"]:
             with st.expander("Figures in the report", expanded=counts["unverified"] > 0):
@@ -150,6 +212,7 @@ def render_validation_panel(validation: dict, result: dict) -> None:
                     "status": f["status"],
                     "matched data": f["matched"] or "",
                     "source": f["source_id"] or (f"in snippet {f['in_source_text']}" if f["in_source_text"] else ""),
+                "origin": f.get("origin", ""),
                 "assumption": "yes" if f.get("assumption") else "",
                     "same topic": "" if f["topic_match"] is None else ("yes" if f["topic_match"] else "no"),
                     "context": f["context"],
@@ -182,6 +245,11 @@ def render_validation_panel(validation: dict, result: dict) -> None:
                     msg += f"; unverified figures: {', '.join(t['unverified_figures'])}"
                 (st.warning if (not t["disclosed"] or t["unverified_figures"]) else st.write)(escape_md(msg))
 
+        if result.get("facts"):
+            with st.expander(f"Fact table ({len(result['facts'])} facts the writer could use)"):
+                st.dataframe(pd.DataFrame([{"id": k, "value": f["display"], "meaning": f["label"]}
+                                           for k, f in result["facts"].items()]), hide_index=True)
+
         if validation["data_status"]:
             with st.expander("Data source problems"):
                 for s in validation["data_status"]:
@@ -203,11 +271,10 @@ def render_result(result: dict) -> None:
                 validation["citations"]["dangling"] or validation["citations"]["uncited_paragraphs"]
             (st.warning if flagged else st.success)(f"**Validation:** {escape_md(validation['summary'])}")
         render_repair_note(result)
-        st.markdown(highlight_flagged(result.get("report_text_raw", result["report_text"]), figures))
+        st.markdown(decorate_report(result.get("report_text_raw", result["report_text"]), figures,
+                                    result.get("refs"), result.get("facts")), unsafe_allow_html=True)
         st.caption(
-            "Highlighted figures could not be matched to the fetched data tables "
-            "(blue: the number appears in a fetched web/news snippet; orange: found nowhere). "
-            f"Model: {result['run_meta']['model']} · seed {result['run_meta']['seed']} · "
+            f"{LEGEND} Model: {result['run_meta']['model']} · seed {result['run_meta']['seed']} · "
             f"run {result['run_meta']['run_id']}"
         )
 

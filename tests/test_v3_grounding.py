@@ -71,7 +71,7 @@ def test_placeholder_figures_are_grounded_exactly_and_typed_numbers_are_issues()
     assert figs["0.84%"]["origin"] == "free" and figs["0.84%"]["status"] == "verified"
     # typed directly (even though correct) and uncited -> 2 open issues in placeholder mode
     assert res["open_issues"] == 2
-    assert "2 figure(s) inserted from the fact table, 1 typed directly." in res["summary"]
+    assert "2 figure(s) inserted from the fact table, 0 quoted from web sources, 1 typed directly." in res["summary"]
     fb = v.feedback_for_writer(res)
     assert '"0.84%"' in fb and "write it as the matching {{ID}}" in fb
 
@@ -102,3 +102,33 @@ def test_unknown_fact_is_an_open_issue():
     res = _validate("- Spread is {{HY_OAS.nope}}.\n")
     assert res["unknown_facts"] == ["HY_OAS.nope"] and res["open_issues"] >= 1
     assert "{{HY_OAS.nope}} is not in the FACT TABLE" in v.feedback_for_writer(res)
+
+
+def test_web_quotes_must_appear_in_the_named_source():
+    sources = SOURCES + [{"id": "S5", "url": "https://news/x", "title": "n", "source": "web",
+                          "snippet": "Core PCE inflation was 2.9% in August."}]
+    text, refs = render("- Core PCE is {{S5: 2.9%}} and {{S5: 3.4%}}.\n", STORE, sources)
+    assert text == "- Core PCE is 2.9% [S5] and 3.4%.\n"
+    res = v.validate_report(text, "q", TABLES, sources, ["macro"], today=date(2026, 10, 17), refs=refs)
+    figs = {f["text"]: f for f in res["figures"]}
+    assert figs["2.9%"]["origin"] == "quote" and figs["2.9%"]["in_source_text"] == "S5"
+    assert figs["3.4%"]["matched"] == "quoted from S5 (not found in its text)"
+    assert res["open_issues"] == 1
+    assert "quoted from a source whose text does not contain it" in v.feedback_for_writer(res)
+
+
+def test_duplicate_units_and_signs_around_placeholders_are_dropped():
+    text, refs = render("- IG is {{IG_OAS.latest}} %, HY moved +{{HY_OAS.chg_1y}} bp, at the "
+                        "{{HY_OAS.pctile_5y}} percentile; P/E {{JPM.pe_ttm}}x; keep 5 bp.", STORE, SOURCES)
+    assert text == (f"- IG is 0.84% [S2], HY moved {STORE['HY_OAS.chg_1y'].display} [S1], at the "
+                    f"{STORE['HY_OAS.pctile_5y'].display}; P/E 13.7x [S4]; keep 5 bp.")
+    assert [text[r.start:r.end] for r in refs][0] == "0.84%"
+
+
+def test_spreads_are_larger_minus_smaller():
+    assert "HY_OAS_minus_IG_OAS" in STORE and "IG_OAS_minus_HY_OAS" not in STORE
+
+
+def test_writer_citation_right_after_a_placeholder_is_not_doubled():
+    text, _ = render("- IG is {{IG_OAS.latest}} [S2]; spread {{HY_OAS_minus_IG_OAS}} [S1,S2].", STORE, SOURCES)
+    assert text == "- IG is 0.84% [S2]; spread +239 bp [S1,S2]."

@@ -310,6 +310,17 @@ def check_numeric_grounding(
             fig.origin, fig.assumption = "assumption", True
             figures.append(fig)
             continue
+        if ref is not None and ref.kind == "quote":
+            # quoted from a web/news source: stays "unverified" (not in the data tables), but must
+            # appear in the text of the source it is attributed to
+            fig.origin = "quote"
+            fig.snippet_ids = tuple(sid for sid, sf in snippet_figures if sid == ref.source_id
+                                    and (sf.unit == fig.unit or "" in (sf.unit, fig.unit))
+                                    and abs(sf.value - fig.value) <= max(sf.tolerance, fig.tolerance))[:1]
+            fig.in_source_text = fig.snippet_ids[0] if fig.snippet_ids else None
+            fig.matched = f"quoted from {ref.source_id}" + ("" if fig.snippet_ids else " (not found in its text)")
+            figures.append(fig)
+            continue
 
         if round(fig.value, 9) in question_values:
             continue  # the number comes from the question itself
@@ -560,6 +571,8 @@ def _needs_attention(f: Dict[str, Any], placeholders: bool = False) -> bool:
     """
     if f["assumption"] or f.get("origin") == "fact":
         return False
+    if f.get("origin") == "quote":
+        return not f["snippet_ids"]  # a quote must be found in the source it names
     if placeholders and f["unit"] != "date":
         return True
     if f["status"] != "unverified":
@@ -590,7 +603,10 @@ def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
         if not _needs_attention(f, ph):
             continue
         where = f'"{f["text"]}" in: "{f["context"][:160]}"'
-        if ph:
+        if f.get("origin") == "quote":
+            items.append(f"{where} — quoted from a source whose text does not contain it; fix the number or "
+                         "the source, or drop it.")
+        elif ph:
             items.append(f"{where} — typed directly; write it as the matching {{{{ID}}}} from the FACT TABLE, "
                          "or as {{assume: …}} if it is your own estimate.")
         elif f["snippet_ids"]:
@@ -636,7 +652,9 @@ def summary_line(v: Dict[str, Any]) -> str:
     if v.get("placeholders"):
         typed = sum(f.get("origin") == "free" and f["unit"] != "date" for f in v["figures"])
         from_facts = sum(f.get("origin") == "fact" for f in v["figures"])
-        parts.append(f"{from_facts} figure(s) inserted from the fact table, {typed} typed directly.")
+        quoted = sum(f.get("origin") == "quote" for f in v["figures"])
+        parts.append(f"{from_facts} figure(s) inserted from the fact table, {quoted} quoted from web sources, "
+                     f"{typed} typed directly.")
     if v.get("directions"):
         parts.append(f"{len(v['directions'])} change figure(s) described in the wrong direction.")
     if v.get("unknown_facts"):

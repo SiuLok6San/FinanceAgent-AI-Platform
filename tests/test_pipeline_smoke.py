@@ -1,5 +1,6 @@
-"""Smoke tests for run_multiagent_pipeline with the LLM and data APIs mocked."""
+"""Smoke tests for the v3 pipeline with the LLM and data APIs mocked."""
 
+import json
 import logging
 
 import pandas as pd
@@ -9,16 +10,18 @@ import agents
 import answer_builder
 from llm import LLMError
 
+PLAN = json.dumps({"topics": ["macro"], "series": ["UNRATE"], "steps": ["check the unemployment trend"]})
+
 
 @pytest.fixture
 def mocked_data(monkeypatch):
     """Replace every external data call with a small fixed bundle (no network)."""
     table = pd.DataFrame({"date": pd.to_datetime(["2026-08-01", "2026-09-01"]), "value": [4.2, 4.3]})
-    monkeypatch.setattr(agents, "resolve_fred_series", lambda q: ["UNRATE"])
-    monkeypatch.setattr(
-        agents,
-        "fetch_fred_macro_timeseries",
-        lambda ids: {
+    fetched = []
+
+    def fred(ids):
+        fetched.append(list(ids))
+        return {
             "tables": [{
                 "title": "FRED: Unemployment Rate (UNRATE)", "data": table, "provider": "FRED",
                 "kind": "timeseries", "series_id": "UNRATE", "frequency": "monthly", "units": "Percent",
@@ -28,43 +31,89 @@ def mocked_data(monkeypatch):
             "charts": [],
             "sources": [{"title": "FRED series UNRATE", "url": "https://fred.stlouisfed.org/series/UNRATE", "source": "FRED"}],
             "status": [{"provider": "FRED", "item": "UNRATE", "ok": True, "detail": ""}],
-        },
-    )
+        }
+
+    monkeypatch.setattr(agents, "fetch_fred_macro_timeseries", fred)
     monkeypatch.setattr(agents, "fetch_general_web_news", lambda q: {})
+    return fetched
 
 
-def test_pipeline_returns_report_when_llm_works(monkeypatch, mocked_data):
-    calls = []
+def fake_llm(monkeypatch, plan=PLAN, writer=("- Unemployment is {{UNRATE.latest}}.",)):
+    """Planner -> plan; Analyst / Reasoner -> notes; Writer calls -> the given templates in order."""
+    calls = {"planner": [], "analyst": [], "reasoner": [], "writer": []}
 
-    def fake_llm(system_prompt, user_prompt, temperature=0.2, **kwargs):
-        calls.append(user_prompt)
-        return "Unemployment was 4.3% in September 2026 [S1], and will reach 6.1% [S1]."
+    def fake(system_prompt, user_prompt, temperature=0.2, **kwargs):
+        if "Planner Agent" in system_prompt:
+            calls["planner"].append(user_prompt)
+            return plan
+        if "Analyst Agent" in system_prompt:
+            calls["analyst"].append(user_prompt)
+            return "- unemployment {{UNRATE.latest}}"
+        if "Reasoner Agent" in system_prompt:
+            calls["reasoner"].append(user_prompt)
+            return "- unemployment {{UNRATE.latest}}"
+        calls["writer"].append(user_prompt)
+        return writer[min(len(calls["writer"]), len(writer)) - 1]
 
-    monkeypatch.setattr(agents, "call_llm", fake_llm)
-    monkeypatch.setattr(answer_builder, "call_llm", fake_llm)
+    monkeypatch.setattr(agents, "call_llm", fake)
+    monkeypatch.setattr(answer_builder, "call_llm", fake)
+    return calls
+
+
+def test_pipeline_renders_placeholders_with_values_and_citations(monkeypatch, mocked_data):
+    calls = fake_llm(monkeypatch, writer=(
+        "- Unemployment was {{UNRATE.latest}} in {{UNRATE.latest_date}}, {{UNRATE.chg_1m}} over a month.\n"
+        "- It could reach {{assume: 6.1%}} next year.\n",))
 
     result = agents.run_multiagent_pipeline("What is the unemployment outlook?")
 
     assert result["error"] is False
-    assert "4.3%" in result["report_text"]
-    assert result["citations_used"] == ["S1"]
-    assert len(result["key_data_tables"]) == 1
-    assert len(calls) == 5  # planner, analyst, reasoner, writer, writer revision
-    # analyst, reasoner and writer see the fetched numbers with their source id
-    assert all("[S1] FRED: Unemployment Rate (UNRATE)" in p and "latest 4.3 (2026-09-01)" in p for p in calls[1:])
-    # the revision pass gets the validator's findings
-    assert "VALIDATION FEEDBACK" in calls[4] and '"6.1%"' in calls[4]
-    # the fake writer returns the same text, so the revision is not better and the draft stays
-    assert result["repair"]["rounds"][0]["accepted"] is False
-
+    assert result["plan"]["source"] == "planner" and mocked_data == [["UNRATE"]]
+    assert result["report_text_raw"] == (
+        "- Unemployment was 4.3% [S1] in September 2026, +0.1 pp over a month.\n"
+        "- It could reach 6.1% (assumption) next year.\n")
     v = result["validation"]
-    assert v["counts"] == {"figures": 3, "verified": 2, "derived": 0, "unverified": 1}
-    assert result["report_text"].startswith("> **Validation:** 2 of 3 figures verified")
-    assert result["report_text_raw"] in result["report_text"]  # flagged text is kept
-    assert result["tags"] == ["macro"]
-    meta = result["run_meta"]
-    assert meta["seed"] == agents.llm_settings()["seed"]
-    assert set(meta["temperatures"]) == {"planner", "analyst", "reasoner", "writer"}
+    assert v["open_issues"] == 0 and result["repair"]["rounds"] == []
+    assert {f["origin"] for f in v["figures"]} == {"fact", "assumption"}
+    # every agent after the planner saw the fact table
+    assert all("{{UNRATE.latest}} = 4.3%" in p for p in calls["analyst"] + calls["reasoner"] + calls["writer"])
+    assert result["report_text"].startswith("> **Validation:**")
+    assert result["facts"]["UNRATE.latest"]["display"] == "4.3%"
+
+
+def test_unusable_plan_falls_back_to_rules(monkeypatch, mocked_data):
+    fake_llm(monkeypatch, plan="I think we should look at jobs data.")
+    result = agents.run_multiagent_pipeline("What does the unemployment rate say about the economy?")
+    assert result["plan"]["source"] == "rules"
+    assert result["tags"] == result["rule_tags"] == ["macro"]
+    assert mocked_data == [["UNRATE", "GDPC1"]]  # keyword fallback: "unemployment", "economy"
+
+
+def test_feedback_loop_keeps_a_better_revision(monkeypatch, mocked_data):
+    draft = "- Unemployment fell {{UNRATE.chg_1m}} to 4.3%.\n"            # wrong direction + typed number
+    fixed = "- Unemployment rose {{UNRATE.chg_1m}} to {{UNRATE.latest}}.\n"
+    calls = fake_llm(monkeypatch, writer=(draft, fixed))
+
+    result = agents.run_multiagent_pipeline("What is the unemployment outlook?")
+
+    rnd = result["repair"]["rounds"][0]
+    assert rnd["accepted"] is True and rnd["open_issues_before"] > rnd["open_issues_after"] == 0
+    assert "fix the wording" in calls["writer"][1] and "typed directly" in calls["writer"][1]
+    assert result["report_template"] == fixed and result["draft_report_template"] == draft
+    assert result["report_text_raw"] == "- Unemployment rose +0.1 pp [S1] to 4.3%.\n"
+    assert result["draft_validation"]["directions"][0]["word"] == "fell"
+
+
+def test_feedback_loop_rejects_a_worse_revision(monkeypatch, mocked_data):
+    draft = "- Unemployment is {{UNRATE.latest}}, maybe 5%.\n"
+    worse = "- Unemployment is 4.3%, maybe 5%, or 6%, {{UNRATE.nope}}.\n"
+    fake_llm(monkeypatch, writer=(draft, worse))
+
+    result = agents.run_multiagent_pipeline("What is the unemployment outlook?")
+
+    assert result["repair"]["rounds"][0]["accepted"] is False
+    assert result["report_template"] == draft
+    assert result["repair"]["rounds"][0]["revised_report_text"] == worse  # kept for inspection
 
 
 def test_llm_failure_gives_friendly_message_and_logs_traceback(monkeypatch, mocked_data, caplog):
@@ -82,7 +131,6 @@ def test_llm_failure_gives_friendly_message_and_logs_traceback(monkeypatch, mock
     assert "Traceback" not in result["report_text"]
     assert "connection refused" not in result["report_text"]
     assert result["run_meta"]["run_id"] in result["report_text"]
-    # The traceback goes to the log instead.
     assert any(r.exc_info for r in caplog.records)
 
 
@@ -101,43 +149,8 @@ def test_unexpected_failure_gives_generic_message(monkeypatch, mocked_data, capl
     assert any(r.exc_info and r.exc_info[0] is ValueError for r in caplog.records)
 
 
-def _writer_sequence(monkeypatch, outputs):
-    """LLM fake: planner/analyst/reasoner get "notes"; writer calls return the given outputs in order."""
-    writer_calls = []
-
-    def fake(system_prompt, user_prompt, temperature=0.2, **kwargs):
-        if "Final Writer" in system_prompt:
-            writer_calls.append(user_prompt)
-            return outputs[len(writer_calls) - 1]
-        return "notes"
-
-    monkeypatch.setattr(agents, "call_llm", fake)
-    monkeypatch.setattr(answer_builder, "call_llm", fake)
-    return writer_calls
-
-
-def test_feedback_loop_accepts_a_better_revision(monkeypatch, mocked_data):
-    draft = "- Unemployment was 4.3% in September 2026.\n- It will reach 6.1% next year [S1].\n"
-    fixed = "- Unemployment was 4.3% in September 2026 [S1].\n- It could reach 6.1% (assumption) next year.\n"
-    _writer_sequence(monkeypatch, [draft, fixed])
-
-    result = agents.run_multiagent_pipeline("What is the unemployment outlook?")
-
-    rnd = result["repair"]["rounds"][0]
-    assert rnd["accepted"] is True and rnd["open_issues_after"] < rnd["open_issues_before"]
-    assert result["report_text_raw"] == fixed
-    assert result["draft_report_text"] == draft            # the draft is kept, not discarded
-    assert result["draft_validation"]["open_issues"] == rnd["open_issues_before"]
-    assert result["validation"]["open_issues"] == 0
-
-
-def test_feedback_loop_rejects_a_worse_revision(monkeypatch, mocked_data):
-    draft = "- Unemployment was 4.3% [S1], and may reach 6.1%.\n"
-    worse = "- Unemployment was 4.3%, may reach 6.1%, then 7.2% [S9].\n"
-    _writer_sequence(monkeypatch, [draft, worse])
-
-    result = agents.run_multiagent_pipeline("What is the unemployment outlook?")
-
-    assert result["repair"]["rounds"][0]["accepted"] is False
-    assert result["report_text_raw"] == draft
-    assert result["repair"]["rounds"][0]["revised_report_text"] == worse  # kept for inspection
+def test_parse_plan_keeps_only_known_topics_and_series():
+    plan = agents.parse_plan('Sure! {"topics": ["Credit", "spreads"], "series": ["hy_oas", "BAMLC0A0CM", "SPX"], "steps": ["a"]}')
+    assert plan == {"topics": ["credit"], "series": ["BAMLH0A0HYM2", "BAMLC0A0CM"], "steps": ["a"]}
+    assert agents.parse_plan('{"topics": ["stuff"], "series": ["HY_OAS"]}') is None
+    assert agents.parse_plan("no json here") is None

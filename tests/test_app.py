@@ -28,7 +28,11 @@ def mocked_pipeline(monkeypatch):
         "status": [],
     })
     monkeypatch.setattr(agents, "fetch_general_web_news", lambda q: {})
-    fake = lambda *a, **k: "Unemployment is 4.3% [S1] and may reach 6.1% [S1]; it costs $5."  # noqa: E731
+
+    def fake(system_prompt, user_prompt, **k):
+        if "Planner Agent" in system_prompt:
+            return '{"topics": ["macro"], "series": ["UNRATE"], "steps": ["check"]}'
+        return "Unemployment is {{UNRATE.latest}} and may reach 6.1%; it costs $5."
     monkeypatch.setattr(agents, "call_llm", fake)
     monkeypatch.setattr(answer_builder, "call_llm", fake)
 
@@ -88,12 +92,15 @@ def test_live_mode_needs_the_password_when_one_is_set(mocked_pipeline, monkeypat
 def test_report_validation_panel_and_highlight(mocked_pipeline):
     at = _run("What is the unemployment rate?")
     assert not at.exception
-    assert any("Validation:" in w.value and "1 of 3 figures verified" in w.value for w in at.warning)
+    assert any("Validation:" in w.value and "1 figure(s) inserted from the fact table" in w.value for w in at.warning)
     report = next(m.value for m in at.markdown if "Unemployment is" in m.value)
-    assert ":orange-background[6.1%]" in report     # unverified figure highlighted, not removed
-    assert "\\$5" in report                          # "$" escaped so it is not rendered as LaTeX
-    assert [m.label for m in at.metric] == ["Verified", "Derived", "Unverified", "Open issues", "Dangling citations"]
-    assert [m.value for m in at.metric] == ["1", "0", "2", "2", "0"]
+    assert '<span class="b17-fact" title="UNRATE.latest: Unemployment Rate, latest (September 2026)">4.3%</span> [S1]' in report
+    assert '<span class="b17-flag" title="Not found in the fetched data">6.1%</span>' in report  # flagged, not removed
+    assert "&#36;5" in report                       # "$" kept out of LaTeX
+    assert [m.label for m in at.metric] == ["From the data", "Quoted from sources", "Assumptions",
+                                            "Typed by the model", "Open issues"]
+    assert [m.value for m in at.metric] == ["1", "0", "0", "2", "2"]
+    assert any("Planner (LLM): topics macro" in c.value for c in at.caption)
     # the fake writer repeats itself, so the revision is not kept and the UI says so
     assert any("revision was tried but not kept" in c.value for c in at.caption)
     assert any("First draft" in e.label for e in at.expander)

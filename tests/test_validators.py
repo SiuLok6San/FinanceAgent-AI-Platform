@@ -6,7 +6,7 @@ import pandas as pd
 import pytest
 
 import validators as v
-from facts import all_facts, key_data_block
+from facts import all_facts
 
 
 def fred_table(sid, values, dates, units="Percent", frequency="monthly", topics=("macro",)):
@@ -213,11 +213,7 @@ def test_validate_report_summary_and_annotation():
     assert v.annotate_report(report, res).startswith("> **Validation:** 1 of 2 figures")
 
 
-def test_key_data_block_cites_sources_and_shows_changes():
-    block = key_data_block([UNRATE, HY, IG], SOURCES)
-    assert "[S1] FRED: UNRATE" in block
-    assert "latest 4.3 (2026-09-01)" in block
-    assert "BAMLH0A0HYM2 minus BAMLC0A0CM: +2.45" in block
+def test_derived_facts_exist():
     assert any(f.kind == "derived" for f in all_facts([UNRATE]))
 
 

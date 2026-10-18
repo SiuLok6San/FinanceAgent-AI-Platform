@@ -1,20 +1,14 @@
 """
 answer_builder.py
 -----------------
-Final institutional report builder.
+Final Writer and source handling.
 
 Responsibilities:
-- Take multi-agent outputs + data tables + charts + sources
-- Produce a clean, readable institutional-style report text
-- Insert proper citation markers [S1], [S2], …
-- Return a structured dict consumed directly by app.py:
-        {
-            "report_text": ...,
-            "key_data_tables": [...],
-            "chart_specs": [...],
-            "sources": [...],
-            "citations_used": [...]
-        }
+- Normalize sources and give them citation ids [S1], [S2], ...
+- Parse citation markers in a report ([S1], [S1, S2], 【S1】, (S1))
+- Write the report as a template with fact placeholders ({{HY_OAS.latest}});
+  render.py turns it into text with exact values and citations
+- Revise a template using the validator's feedback
 """
 
 from __future__ import annotations
@@ -29,14 +23,27 @@ from settings import load_config
 
 WRITER_TEMPERATURE = load_config("pipeline")["temperatures"]["writer"]
 
+PLACEHOLDER_RULES = (
+    "NUMBER RULES (strict):\n"
+    "- Write every number from the data as its placeholder, e.g. 'HY spreads are {{HY_OAS.latest}}, "
+    "{{HY_OAS.chg_1m}} over the past month'. Copy IDs exactly from the FACT TABLE. Never type digits yourself.\n"
+    "- A placeholder already contains its unit and sign ({{HY_OAS.chg_1m}} becomes '+53 bp'): do not add %, bp, "
+    "+ or - around it.\n"
+    "- A number quoted from a web/news source in SOURCES: {{S5: 2.9%}} (copy it exactly as the source writes it).\n"
+    "- Your own estimate (a scenario level, a suggested weight): {{assume: 10-15%}}.\n"
+    "- Words must match the sign of a change: positive changes rose / widened / increased, negative changes "
+    "fell / narrowed / decreased.\n"
+    "- Citations [S#] for numbers are added automatically; cite web sources yourself only for qualitative claims."
+)
+
 WRITER_SYSTEM_PROMPT = textwrap.dedent("""
     You are the Final Writer for B17 Institutional Research.
 
     Objectives:
     - Produce a crisp, structured, professional finance report.
     - Avoid long paragraphs. Prefer bullets + concise sections.
-    - Use ONLY provided sources and cite them as [S1], [S2], ... (plain square brackets).
-    - If a claim cannot be sourced → phrase as scenario (e.g., “likely”, “probable”).
+    - Use ONLY the FACT TABLE and the provided sources.
+    - If a claim cannot be supported → phrase it as a scenario (e.g., “likely”, “probable”).
 
     Required Sections:
     1. Executive Summary (3–5 bullets)
@@ -49,15 +56,10 @@ WRITER_SYSTEM_PROMPT = textwrap.dedent("""
     Additional rules:
     - DO NOT include tables or charts inside the text. Mention them by name only:
         “See Table 1 for yield-curve shift data.”
-    - DO NOT fabricate numbers or dates. Every number and date you state must
-      appear in KEY DATA or in a source snippet, and must carry the [S#] of
-      that source in the same bullet or sentence.
-    - A number that is your own assumption (a scenario level, a suggested
-      weight) must be marked "(assumption)" right after it.
     - For every topic listed under NO DATA FETCHED, write one sentence saying
       that no data was fetched for that topic, and keep that part qualitative.
     - Professional tone. No filler language.
-""").strip()
+""").strip() + "\n\n" + PLACEHOLDER_RULES
 
 
 # ---------------------------------------------------------------------
@@ -157,126 +159,62 @@ def find_dangling_citations(text: str, sources: List[Dict[str, Any]]) -> List[st
 
 
 # ---------------------------------------------------------------------
-# Main Builder
+# Writer
 # ---------------------------------------------------------------------
 
-def build_institutional_report(
+def _tables_and_charts(data_tables: List[Dict[str, Any]], chart_specs: List[Dict[str, Any]]) -> str:
+    lines = ["AVAILABLE TABLES:"]
+    for i, t in enumerate(data_tables, start=1):
+        lines.append(f"- Table {i}: {t.get('title', 'Untitled')}")
+    lines.append("AVAILABLE CHARTS:")
+    for i, c in enumerate(chart_specs, start=1):
+        lines.append(f"- Chart {i}: {c.get('title', 'Untitled')}")
+    return "\n".join(lines)
+
+
+def write_template(
     question: str,
-    agent_outputs: Dict[str, str],
+    analyst: str,
+    reasoner: str,
     tags: List[str],
     tier2_subtags: Dict[str, str],
-    ctx_text: str,
+    fact_table: str,
+    no_data_topics: List[str],
+    sources: List[Dict[str, Any]],
     data_tables: List[Dict[str, Any]],
     chart_specs: List[Dict[str, Any]],
-    raw_sources: Any,
-    key_data: str = "",
-    no_data_topics: Optional[List[str]] = None,
-) -> Dict[str, Any]:
-    """
-    Produce final structured report.
-    """
-    # Normalize sources
-    sources = normalize_sources(raw_sources)
-    sources_block = build_sources_block(sources)
-
-
-    # Compose user prompt
-    agent_block = "\n\n".join(
-        [f"--- {k.upper()} ---\n{v}" for k, v in agent_outputs.items() if v]
-    )
-
-    # List available tables & charts
-    tables_block = "AVAILABLE TABLES:\n"
-    if data_tables:
-        for i, t in enumerate(data_tables, start=1):
-            cols = list(getattr(t.get("data"), "columns", []))
-            tables_block += f"- Table {i}: {t.get('title','Untitled')} (cols={cols})\n"
-    else:
-        tables_block += "- (none)\n"
-
-    charts_block = "AVAILABLE CHARTS:\n"
-    if chart_specs:
-        for i, c in enumerate(chart_specs, start=1):
-            charts_block += f"- Chart {i}: {c.get('title','Untitled')} ({c.get('type','line')})\n"
-    else:
-        charts_block += "- (none)\n"
-
-    no_data_block = "NO DATA FETCHED FOR: " + (", ".join(no_data_topics) if no_data_topics else "(none)")
-
-    user_prompt = "\n\n".join([
-        f"USER QUESTION:\n{question}",
-        f"TAGS:\n{tags}",
-        f"TIER-2 SPECIALIZATION:\n{tier2_subtags}",
-        f"CONTEXT:\n{ctx_text or '(none)'}",
-        agent_block,
-        key_data or "KEY DATA: (none fetched)",
-        no_data_block,
-        tables_block + charts_block,
-        sources_block,
-        "Now write the final institutional report.",
-    ])
-
-    # Call LLM (LLMError propagates; run_multiagent_pipeline turns it into a friendly message)
-    report = call_llm(WRITER_SYSTEM_PROMPT, user_prompt, temperature=WRITER_TEMPERATURE)
-
-    # Extract citations actually used
-    used = extract_citations_used(report, sources)
-
-    # Return in app.py format
-    return {
-        "report_text": report,
-        "key_data_tables": data_tables,
-        "chart_specs": chart_specs,
-        "sources": sources,
-        "citations_used": used,
-    }
-
-
-def revise_report(
-    question: str,
-    draft: str,
-    feedback: str,
-    key_data: str,
-    sources: List[Dict[str, Any]],
 ) -> str:
-    """Second Writer pass: revise the draft using the validator's findings."""
+    """The report as a template with fact placeholders (rendered by render.py)."""
     user_prompt = "\n\n".join([
         f"USER QUESTION:\n{question}",
-        key_data or "KEY DATA: (none fetched)",
+        f"TOPICS: {tags}\nTIER-2 SPECIALIZATION: {tier2_subtags}",
+        f"--- ANALYST ---\n{analyst}",
+        f"--- REASONER ---\n{reasoner}",
+        fact_table,
+        "NO DATA FETCHED FOR: " + (", ".join(no_data_topics) if no_data_topics else "(none)"),
+        _tables_and_charts(data_tables, chart_specs),
         build_sources_block(sources),
-        f"YOUR DRAFT REPORT:\n{draft}",
-        feedback,
-        "Return the complete revised report with the same sections. Fix every item above. "
-        "Do not add numbers that are not in KEY DATA or a source snippet.",
+        "Now write the final institutional report, with every number as a placeholder.",
     ])
+    # LLMError propagates; run_multiagent_pipeline turns it into a friendly message
     return call_llm(WRITER_SYSTEM_PROMPT, user_prompt, temperature=WRITER_TEMPERATURE)
 
 
-# ---------------------------------------------------------------------
-# Backward-compatible wrapper
-# ---------------------------------------------------------------------
-
-def build_answer(
+def revise_template(
     question: str,
-    agent_outputs: Dict[str, str],
-    tags: Optional[List[str]] = None,
-    tier2_subtags: Optional[Dict[str, str]] = None,
-    ctx_text: str = "",
-    data_tables: Optional[List[Dict[str, Any]]] = None,
-    chart_specs: Optional[List[Dict[str, Any]]] = None,
-    sources: Any = None,
-    key_data: str = "",
-    no_data_topics: Optional[List[str]] = None,
-) -> Dict[str, Any]:
-    return build_institutional_report(
-        question=question,
-        agent_outputs=agent_outputs or {},
-        tags=tags or [],
-        tier2_subtags=tier2_subtags or {},
-        ctx_text=ctx_text or "",
-        data_tables=data_tables or [],
-        chart_specs=chart_specs or [],
-        raw_sources=sources,
-        key_data=key_data,
-        no_data_topics=no_data_topics,
-    )
+    template: str,
+    feedback: str,
+    fact_table: str,
+    sources: List[Dict[str, Any]],
+) -> str:
+    """Second Writer pass: revise the template using the validator's findings."""
+    user_prompt = "\n\n".join([
+        f"USER QUESTION:\n{question}",
+        fact_table,
+        build_sources_block(sources),
+        f"YOUR DRAFT REPORT (template with placeholders):\n{template}",
+        feedback,
+        "Return the complete revised report template with the same sections. Fix every item above. "
+        "Keep every number as a placeholder.",
+    ])
+    return call_llm(WRITER_SYSTEM_PROMPT, user_prompt, temperature=WRITER_TEMPERATURE)

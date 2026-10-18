@@ -8,10 +8,8 @@ Turns the Researcher's data tables into a flat list of numeric facts.
             observation, % change, annualized quarterly growth, spread
             between the latest values of two series)
 
-The same facts feed two things: the KEY DATA block that the Analyst,
-Reasoner and Writer see (so the LLM works from real numbers), and the
-numeric-grounding check in validators.py (so every number in the report can
-be traced back to the data).
+These are what validators.py matches numbers against. (The agents see a
+smaller, named set built from the same data: fact_store.py.)
 """
 
 from __future__ import annotations
@@ -205,75 +203,6 @@ def observation_dates(tables: List[Dict[str, Any]]) -> Set[str]:
             if col in df.columns:
                 dates.update(pd.to_datetime(df[col], errors="coerce").dropna().dt.strftime("%Y-%m-%d"))
     return dates
-
-
-# ---------------------------------------------------------------------------
-# KEY DATA block for the LLM agents
-# ---------------------------------------------------------------------------
-
-def source_ids_by_url(sources: List[Dict[str, Any]]) -> Dict[str, str]:
-    return {s["url"]: s["id"] for s in sources if s.get("url")}
-
-
-def fmt_number(v: float, signed: bool = False) -> str:
-    sign = "+" if signed and v > 0 else ""
-    a = abs(v)
-    for size, word in ((1e12, "trillion"), (1e9, "billion"), (1e6, "million")):
-        if a >= size:
-            return f"{sign}{v / size:.2f} {word}"
-    if a >= 1000:
-        return f"{sign}{v:,.1f}"
-    return f"{sign}{v:.4g}"
-
-
-def _cite(url: str, ids: Dict[str, str]) -> str:
-    return f"[{ids[url]}] " if url in ids else ""
-
-
-def key_data_block(tables: List[Dict[str, Any]], sources: List[Dict[str, Any]]) -> str:
-    """Compact, citable summary of the fetched data for the LLM prompts."""
-    if not tables:
-        return "KEY DATA: (none fetched)"
-    ids = source_ids_by_url(sources)
-    lines = ["KEY DATA (fetched by the Researcher; quote these numbers and cite the [S#] shown):"]
-
-    for t in tables:
-        df = t["data"]
-        cite = _cite(t.get("source_url", ""), ids)
-        if t.get("kind") == "timeseries":
-            s = series_frame(t)
-            if s.empty:
-                continue
-            freq = table_frequency(t) or "unknown frequency"
-            pct = is_percent_units(t.get("units"))
-            lines.append(f"{cite}{t['title']} — units: {t.get('units') or 'n/a'}, {freq}")
-            last_v, last_d = s["value"].iloc[-1], s["date"].iloc[-1].strftime("%Y-%m-%d")
-            parts = [f"latest {fmt_number(last_v)} ({last_d})"]
-            for lag in _cfg()["derived"]["lags"].get(freq, [])[:6]:
-                prev = lagged(s, freq, lag)
-                if prev is None:
-                    continue
-                pv, pd_ = prev[0], prev[1].strftime("%Y-%m-%d")
-                change = f"change {fmt_number(last_v - pv, signed=True)}" + ("" if pct else f", {fmt_number((last_v / pv - 1) * 100, signed=True)}%" if pv else "")
-                parts.append(f"{pd_}: {fmt_number(pv)} ({change})")
-            lines.append("  " + "; ".join(parts))
-        elif {"field", "value"} <= set(df.columns):
-            items = [f"{r.field}: {fmt_number(v) if (v := _numeric(r.value)) is not None else r.value}" for r in df.itertuples()]
-            lines.append(f"{cite}{t['title']}: " + "; ".join(items))
-        elif "headline" in df.columns:
-            heads = [f"{_cite(r.url, ids)}{r.headline} ({r.date})" for r in df.itertuples()]
-            lines.append(f"{t['title']}: " + " | ".join(heads))
-        else:
-            rows = []
-            for _, r in df.head(2).iterrows():
-                rows.append(", ".join(f"{c} {fmt_number(v) if (v := _numeric(r[c])) is not None else r[c]}" for c in df.columns))
-            lines.append(f"{cite}{t['title']}: " + " | ".join(rows))
-
-    spreads = [f for f in derived_facts(tables) if " minus " in f.label]
-    if spreads:
-        lines.append("Spreads between latest values (percentage points): " + "; ".join(
-            f"{f.label.split(' (latest')[0]}: {fmt_number(f.value, signed=True)}" for f in spreads))
-    return "\n".join(lines)
 
 
 def topics_with_data(tables: List[Dict[str, Any]]) -> Set[str]:

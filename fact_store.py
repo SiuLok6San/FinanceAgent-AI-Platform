@@ -218,7 +218,9 @@ def _spread_facts(tables: List[Dict[str, Any]]) -> List[FactEntry]:
             s = series_frame(t)
             pcts.append((t, meta, float(s["value"].iloc[-1]), _decimals(s["value"])))
     out = []
-    for (ta, ma, va, da), (tb, mb, vb, db) in combinations(pcts, 2):
+    for a, b in combinations(pcts, 2):
+        # larger minus smaller, so the spread reads naturally (HY_OAS_minus_IG_OAS, not IG minus HY)
+        (ta, ma, va, da), (tb, mb, vb, db) = (a, b) if a[2] >= b[2] else (b, a)
         unit = "bp" if ma["change_unit"] == "bp" and mb["change_unit"] == "bp" else "pp"
         diff = va - vb
         out.append(FactEntry(
