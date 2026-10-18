@@ -32,11 +32,56 @@ def mocked_pipeline(monkeypatch):
     monkeypatch.setattr(answer_builder, "call_llm", fake)
 
 
+LIVE = "Live analysis"
+
+
 def _run(question: str) -> AppTest:
     at = AppTest.from_file(APP, default_timeout=30).run()
+    at.radio[0].set_value(LIVE).run()
     at.text_area[0].input(question)
     at.button[0].click().run()
     return at
+
+
+@pytest.fixture
+def no_api(monkeypatch):
+    """Fail the test if anything tries to call the LLM or a data API."""
+    def boom(*a, **k):
+        raise AssertionError("example mode must not call any API")
+    for mod, name in [(agents, "call_llm"), (answer_builder, "call_llm"), (agents, "fetch_general_web_news"),
+                      (agents, "fetch_fred_macro_timeseries")]:
+        monkeypatch.setattr(mod, name, boom)
+
+
+def test_example_mode_is_default_and_calls_no_api(no_api, monkeypatch):
+    monkeypatch.delenv("APP_PASSWORD", raising=False)
+    at = AppTest.from_file(APP, default_timeout=30).run()
+    assert not at.exception
+    assert at.radio[0].value.startswith("Example runs")
+    assert at.selectbox[0].value == "Q01"
+    assert any("Saved run" in i.value for i in at.info)
+    assert any("Validation:" in w.value for w in [*at.warning, *at.success])
+    assert [s.value for s in at.subheader][:2] == ["Input", "Final Institutional Report"]
+
+    at.selectbox[0].set_value("Q13").run()   # equity example with Finnhub tables
+    assert not at.exception
+    assert any("Key Data Tables" == s.value for s in at.subheader)
+
+
+def test_live_mode_needs_the_password_when_one_is_set(mocked_pipeline, monkeypatch):
+    monkeypatch.setenv("APP_PASSWORD", "open-sesame")
+    at = AppTest.from_file(APP, default_timeout=30).run()
+    at.radio[0].set_value(LIVE).run()
+    assert at.button[0].disabled is True
+
+    at.text_input[1].input("wrong").run()
+    assert at.button[0].disabled is True and at.error[0].value == "Wrong password."
+
+    at.text_input[1].input("open-sesame").run()
+    assert at.button[0].disabled is False
+    at.text_area[0].input("What is the unemployment rate?")
+    at.button[0].click().run()
+    assert any("Final Institutional Report" == s.value for s in at.subheader)
 
 
 def test_report_validation_panel_and_highlight(mocked_pipeline):
