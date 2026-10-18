@@ -69,7 +69,7 @@ _NUMBER_RE = re.compile(r"""
 _MONTHS = ("jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?"
            "|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?")
 _DATE_RE = re.compile(
-    rf"\b(?:(?P<iso>(?:19|20)\d{{2}}-\d{{2}}-\d{{2}})"
+    rf"\b(?:(?P<iso>(?:19|20)\d{{2}}[-\u2010\u2011\u2012]\d{{2}}[-\u2010\u2011\u2012]\d{{2}})"
     rf"|(?P<mon>{_MONTHS})\.?\s+(?:(?P<day>\d{{1,2}}),?\s+)?(?P<year>(?:19|20)\d{{2}})"
     rf"|(?P<day2>\d{{1,2}})\s+(?P<mon2>{_MONTHS})\.?,?\s+(?P<year2>(?:19|20)\d{{2}}))\b",
     re.I,
@@ -195,7 +195,7 @@ def _parse_date(text: str) -> Tuple[Optional[str], Optional[Tuple[int, int]]]:
     if not m:
         return None, None
     if m.group("iso"):
-        iso = m.group("iso")
+        iso = re.sub(f"[{_HYPHENS}]", "-", m.group("iso"))
         return iso, (int(iso[:4]), int(iso[5:7]))
     month = _MONTH_NUM[(m.group("mon") or m.group("mon2"))[:3].lower()]
     year = int(m.group("year") or m.group("year2"))

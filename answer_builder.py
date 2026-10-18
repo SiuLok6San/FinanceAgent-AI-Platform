@@ -120,9 +120,10 @@ def build_sources_block(sources: List[Dict[str, Any]]) -> str:
     return "\n".join(lines)
 
 
-# [S1], [S1, S3], [S1; S2], [S1-S3] / [S1–3]; some models write 【S1】 or 【S1†L4-L9】
+# [S1], [S1, S3], [S1; S2], [S1-S3] / [S1–3]; some models write 【S1】, 【S1†L4-L9】 or (S4, S8)
 _CITATION_RE = re.compile(
     r"[\[\u3010]\s*(S\d+(?:\s*(?:[,;]|[-\u2013])\s*S?\d+)*)\s*(?:\u2020[^\]\u3011]*)?[\]\u3011]"
+    r"|\(\s*(S\d+(?:\s*(?:[,;]|[-\u2013])\s*S?\d+)*)\s*\)"
 )
 
 
@@ -131,7 +132,7 @@ def parse_citation_markers(text: str) -> List[Dict[str, Any]]:
     out = []
     for m in _CITATION_RE.finditer(text or ""):
         ids: List[str] = []
-        for part in re.split(r"\s*[,;]\s*", m.group(1)):
+        for part in re.split(r"\s*[,;]\s*", m.group(1) or m.group(2)):
             rng = re.match(r"S(\d+)\s*[-\u2013]\s*S?(\d+)$", part)
             if rng and int(rng.group(1)) <= int(rng.group(2)) <= int(rng.group(1)) + 50:
                 ids.extend(f"S{i}" for i in range(int(rng.group(1)), int(rng.group(2)) + 1))

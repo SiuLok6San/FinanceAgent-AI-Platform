@@ -316,3 +316,16 @@ def test_cited_snippet_figure_is_not_an_open_issue():
     res = v.validate_report("- Core CPI is 2.39% [S5].\n", "q", TABLES, sources, ["macro"], today=date(2026, 10, 17))
     assert res["counts"]["unverified"] == 1 and res["open_issues"] == 0
     assert v.feedback_for_writer(res) == ""
+
+
+def test_iso_dates_with_non_breaking_hyphens():
+    # Real case (Q11, Oct 2026): "3.23 % (2026‑10‑15)" written with U+2011
+    report = "HY OAS is 3.3% (2026\u201110\u201115) [S2]."
+    figs = v.check_numeric_grounding(report, "q", TABLES, SOURCES)
+    assert [(f.text, f.unit, f.status) for f in figs] == [("3.3%", "%", "verified"), ("2026\u201110\u201115", "date", "verified")]
+
+
+def test_parenthesised_citations():
+    # Real case (Oct 2026 UI run): "... tight relative to historical levels (S4, S8)"
+    from answer_builder import parse_citation_markers
+    assert [m["ids"] for m in parse_citation_markers("levels (S4, S8) and (S3) but not (see S2 above)")] == [["S4", "S8"], ["S3"]]
