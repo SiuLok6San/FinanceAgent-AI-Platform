@@ -123,13 +123,16 @@ def call_llm(
     }
 
     last_err: Optional[str] = None
-    rate_limited = False
+    retry_after: Optional[float] = None
     for attempt in range(retries + 1):
         if attempt:
-            # a rate limit (429) needs a real pause; other errors retry quickly
-            base = LLM_RATE_LIMIT_WAIT_SEC if rate_limited else LLM_BACKOFF_SEC
-            time.sleep(base * 2 ** (attempt - 1))
-        rate_limited = False
+            # a rate limit (429) needs a real pause: the server's Retry-After if given, else
+            # rate_limit_wait_sec doubling; other errors retry quickly
+            if retry_after is not None:
+                time.sleep(max(retry_after, LLM_RATE_LIMIT_WAIT_SEC * 2 ** (attempt - 1)))
+            else:
+                time.sleep(LLM_BACKOFF_SEC * 2 ** (attempt - 1))
+        retry_after = None
         try:
             r = _post_json(url, payload, headers)
         except (requests.RequestException, _Deadline) as e:
@@ -138,7 +141,11 @@ def call_llm(
 
         if r.status_code != 200:
             last_err = f"HTTP {r.status_code}: {r.text[:200]}"
-            rate_limited = r.status_code == 429
+            if r.status_code == 429:
+                try:
+                    retry_after = float((getattr(r, "headers", None) or {}).get("retry-after", 0))
+                except ValueError:
+                    retry_after = 0.0
             if _is_retryable(r.status_code):
                 continue
             break  # 401 / 404 etc. will not fix themselves
