@@ -528,6 +528,52 @@ def check_directions(report: str, figures: List[Figure]) -> List[Dict[str, Any]]
 
 
 # ---------------------------------------------------------------------------
+# 6) Comparisons between facts (placeholder reports only)
+# ---------------------------------------------------------------------------
+
+_SENTENCE_END = re.compile(r"[.!?](?=\s|$)|[;\n|]")
+_CLAUSE_JOIN = re.compile(r",\s|\s(?:or|and|but|while|whereas)\s", re.I)
+
+
+def check_comparisons(report: str, refs: Optional[List[Any]]) -> List[Dict[str, Any]]:
+    """"{{A}} is above {{B}}": A and B must have comparable units and the order must match the data."""
+    facts = [r for r in refs or [] if r.kind == "fact" and isinstance(r.fact.value, (int, float))]
+    if len(facts) < 2:
+        return []
+    cfg = _cfg()["comparisons"]
+    families = cfg["unit_families"]
+    words = {w: 1 for w in cfg["above"]} | {w: -1 for w in cfg["below"]} | {w: 0 for w in cfg["neutral"]}
+    pattern = re.compile(r"(?<![\w])(" + "|".join(sorted(map(re.escape, words), key=len, reverse=True)) + r")(?![\w])", re.I)
+    # both sides must sit in the same clause as the comparison word: "beta exceeds X or VIX rises
+    # above Y" compares beta with X and VIX with Y, never X with Y
+    bounds = sorted({0, len(report)} | {m.end() for m in _SENTENCE_END.finditer(report)}
+                    | {m.start() for m in _CLAUSE_JOIN.finditer(report)} | {m.end() for m in _CLAUSE_JOIN.finditer(report)})
+    issues = []
+    for m in pattern.finditer(report):
+        lo = max(b for b in bounds if b <= m.start())
+        hi = min(b for b in bounds if b >= m.end())
+        before = [r for r in facts if lo <= r.start and r.end <= m.start()]
+        after = [r for r in facts if m.end() <= r.start and r.end <= hi]
+        if not before or not after:
+            continue
+        a, b = before[-1].fact, after[0].fact
+        fa, fb = families.get(a.unit), families.get(b.unit)
+        if not fa or not fb:
+            continue
+        context = report[lo:hi].strip()[:200]
+        word = m.group(1).lower()
+        if fa != fb:
+            issues.append({"kind": "units", "word": word, "a": a.id, "b": b.id, "context": context,
+                           "detail": f"{a.id} ({a.unit}) and {b.id} ({b.unit}) are not comparable"})
+            continue
+        claim = words[word]
+        if claim and a.value != b.value and (a.value > b.value) != (claim > 0):
+            issues.append({"kind": "order", "word": word, "a": a.id, "b": b.id, "context": context,
+                           "detail": f"{a.id} = {a.display} is {'below' if claim > 0 else 'above'} {b.id} = {b.display}"})
+    return issues
+
+
+# ---------------------------------------------------------------------------
 # Orchestration
 # ---------------------------------------------------------------------------
 
@@ -558,6 +604,7 @@ def validate_report(
         "data_status": [s for s in (data_status or []) if not s.get("ok")],
         "valid_source_ids": [s["id"] for s in sources],
         "directions": check_directions(report, figures),
+        "comparisons": check_comparisons(report, refs),
         "placeholders": refs is not None,
         "unknown_facts": [r.fact_id for r in (refs or []) if r.kind == "unknown"],
     }
@@ -591,7 +638,7 @@ def open_issues(v: Dict[str, Any]) -> int:
     return (sum(_needs_attention(f, ph) for f in v["figures"])
             + len(cit["uncited_paragraphs"]) + len(cit["source_mismatches"]) + len(cit["dangling"])
             + sum(not t["disclosed"] for t in v["no_data"]["topics_without_data"])
-            + len(v.get("directions", [])) + len(v.get("unknown_facts", [])))
+            + len(v.get("directions", [])) + len(v.get("unknown_facts", [])) + len(v.get("comparisons", [])))
 
 
 def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
@@ -600,6 +647,9 @@ def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
     ph = v.get("placeholders", False)
     for fid in v.get("unknown_facts", []):
         items.append(f"{{{{{fid}}}}} is not in the FACT TABLE; use an ID from the table or rewrite without it.")
+    for c in v.get("comparisons", []):
+        items.append(f'"{c["context"][:160]}" compares with "{c["word"]}", but {c["detail"]}; '
+                     "fix or drop the comparison.")
     for d in v.get("directions", []):
         items.append(f'"{d["context"][:160]}" says "{d["word"]}" ({d["says"]}), but {d["fact"]} went {d["data"]}; '
                      "fix the wording.")
@@ -661,6 +711,8 @@ def summary_line(v: Dict[str, Any]) -> str:
                      f"{typed} typed directly.")
     if v.get("directions"):
         parts.append(f"{len(v['directions'])} change figure(s) described in the wrong direction.")
+    if v.get("comparisons"):
+        parts.append(f"{len(v['comparisons'])} comparison(s) between facts that do not hold.")
     if v.get("unknown_facts"):
         parts.append(f"{len(v['unknown_facts'])} unknown fact reference(s).")
     cit = v["citations"]

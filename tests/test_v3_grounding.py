@@ -149,3 +149,28 @@ def test_direction_check_stops_at_commas():
 
 def test_label_phrases_allow_any_whitespace():
     assert [f.text for f in v.extract_figures("Relative to the S&P\u00a0500 and the S&P  500 index")] == []
+
+
+def test_comparison_check_units_and_order():
+    good = _validate("- HY OAS {{HY_OAS.latest}} is above IG OAS {{IG_OAS.latest}}.\n")
+    assert good["comparisons"] == []
+    wrong_order = _validate("- IG OAS {{IG_OAS.latest}} is above HY OAS {{HY_OAS.latest}}.\n")
+    assert [(c["kind"], c["word"]) for c in wrong_order["comparisons"]] == [("order", "above")]
+    # real case from a v3 dev draft: a P/E multiple compared with an index level
+    units = _validate("- JPM's P/E of {{JPM.pe_ttm}} is modest relative to CPI at {{CPI.latest}}.\n")
+    assert [(c["kind"], c["a"], c["b"]) for c in units["comparisons"]] == [("units", "JPM.pe_ttm", "CPI.latest")]
+    assert units["open_issues"] == 1
+    assert "compares with \"relative to\"" in v.feedback_for_writer(units)
+    assert "1 comparison(s) between facts that do not hold." in units["summary"]
+
+
+def test_comparison_needs_facts_on_both_sides_in_one_sentence():
+    res = _validate("- HY OAS is {{HY_OAS.latest}}. That is above average.\n- IG is {{IG_OAS.latest}}.\n")
+    assert res["comparisons"] == []
+
+
+def test_comparison_check_ignores_time_phrases_and_other_clauses():
+    # real false positives from v3 dev drafts
+    res = _validate("- IG widened {{IG_OAS.chg_1y}} over the past year and HY by {{HY_OAS.chg_1y}}.\n"
+                    "- Cut risk if P/E exceeds {{JPM.pe_ttm}} or HY OAS rises above {{HY_OAS.latest}}.\n")
+    assert res["comparisons"] == []

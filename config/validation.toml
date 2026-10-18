@@ -85,3 +85,29 @@ down = [
     "dropped", "drop", "slowed", "slowing", "cooled", "cooling", "softened", "plunged", "contracted",
     "flattened", "flattening", "shrank", "slipped", "retreated",
 ]
+
+# ---------------------------------------------------------------------------
+# Comparison check (reports written with fact placeholders): in a sentence
+# like "{{A}} is above {{B}}", A and B must be in comparable units and the
+# order must match the data. Neutral words ("relative to", "vs") only need
+# comparable units. Families group units that can be compared.
+# ---------------------------------------------------------------------------
+[comparisons]
+# "over" is left out: "over three months" is about time, not a comparison
+above = ["above", "higher than", "greater than", "more than", "exceeds", "exceeding"]
+below = ["below", "lower than", "less than", "under", "beneath"]
+neutral = ["relative to", "compared with", "compared to", "versus", "vs", "vs."]
+
+[comparisons.unit_families]
+percent = "rate"
+pp = "rate"
+bp = "rate"
+pct = "rate"
+x = "multiple"
+index = "index"
+pts = "index"
+usd = "money"
+bn_usd = "money"
+count = "count"
+ratio = "ratio"
+percentile = "percentile"
