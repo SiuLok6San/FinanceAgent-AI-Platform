@@ -61,7 +61,7 @@ _NUMBER_RE = re.compile(r"""
     )?
     (?:
         (?:\s|[-\u2010\u2011])?(?P<unit>%|percent(?:age)?\s+points?|percent|ppts?|pp|bps|bp|basis\s+points?|pts?|points?)(?![\w])
-      | (?P<times>x)(?![\w])
+      | (?P<times>[x\u00d7])(?![\w])
     )?
     (?![\w/]|[.,]\d)
 """, re.I | re.X)
@@ -233,6 +233,13 @@ def _candidate_values(fig: Figure, fact: Fact) -> List[Tuple[float, float]]:
     return out
 
 
+_STOPWORDS = {"the", "and", "for", "with", "from", "that", "this", "ttm", "yoy", "annual", "latest", "change"}
+
+
+def _words(text: str) -> Set[str]:
+    return {w for w in re.findall(r"[a-z]{3,}", text.lower()) if w not in _STOPWORDS}
+
+
 def _topic_match(sentence: str, fact: Fact, sentence_topics: Set[str], series_keywords: Dict[str, List[str]]) -> bool:
     if fact.series_id and matches_any(sentence, series_keywords.get(fact.series_id, [])):
         return True
@@ -272,16 +279,19 @@ def check_numeric_grounding(
             continue  # the number comes from the question itself
 
         sentence_topics = set(topics_in(sentence))
+        sentence_words = _words(sentence)
         best: Optional[Tuple[Tuple[int, int, float], Fact]] = None
         for fact in facts:
             for x, tol in _candidate_values(fig, fact):
                 err = abs(x - abs(fact.value))
                 if err <= tol:
                     topical = _topic_match(sentence, fact, sentence_topics, series_keywords)
-                    # prefer facts about what the sentence discusses, then exact values, then closeness,
-                    # then the most recent observation
+                    # prefer facts about what the sentence discusses, then exact values, then a field whose
+                    # name shares words with the sentence ("earnings growth" -> "EPS growth", not "ROE"),
+                    # then closeness, then the most recent observation
                     recency = -int((fact.date or "0").replace("-", "")[:8] or 0)
-                    rank = (0 if topical else 1, 0 if fact.kind == "observed" else 1, err / max(tol, 1e-12), recency)
+                    overlap = -len(sentence_words & _words(fact.label))
+                    rank = (0 if topical else 1, 0 if fact.kind == "observed" else 1, overlap, err / max(tol, 1e-12), recency)
                     if best is None or rank < best[0]:
                         best = (rank, fact)
         if best:

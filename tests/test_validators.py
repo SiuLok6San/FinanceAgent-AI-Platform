@@ -263,3 +263,21 @@ def test_ties_prefer_the_latest_observation():
     t = fred_table("BAMLC0A0CM", [0.84, 0.90, 0.84], ["2026-10-13", "2026-10-14", "2026-10-15"], frequency="daily", topics=("credit",))
     fig = v.check_numeric_grounding("IG OAS is 0.84% [S1].", "q", [t], [source(1, "BAMLC0A0CM")])[0]
     assert fig.matched == "BAMLC0A0CM on 2026-10-15"
+
+
+def _metrics_table():
+    return {"title": "JPM Key Financial Metrics", "kind": "snapshot", "topics": ["equity"], "source_url": "https://finnhub/metric",
+            "last_date": None, "frequency": None,
+            "data": pd.DataFrame({"field": ["P/E (TTM)", "EPS growth TTM YoY (%)", "ROE TTM (%)"], "value": [13.6868, 17.88, 17.91]})}
+
+
+def test_field_named_in_sentence_wins_when_values_round_the_same():
+    # Real case (Q13, Oct 2026): EPS growth 17.88 and ROE 17.91 both round to 17.9
+    src = [{"id": "S1", "title": "m", "url": "https://finnhub/metric", "source": "Finnhub", "snippet": ""}]
+    fig = v.check_numeric_grounding("Earnings growth of 17.9% YoY [S1].", "q", [_metrics_table()], src)[0]
+    assert fig.matched == "JPM Key Financial Metrics: EPS growth TTM YoY (%)"
+
+
+def test_multiplication_sign_is_a_multiple():
+    figs = v.extract_figures("P/E of 13.69× and 15x")
+    assert [(f.text, f.unit) for f in figs] == [("13.69×", "x"), ("15x", "x")]
