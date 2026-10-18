@@ -162,6 +162,9 @@ class Figure:
     assumption: bool = False              # the report labels this number as its own assumption
     cited: Tuple[str, ...] = ()           # citation ids in the same bullet / paragraph
     context: str = ""
+    origin: str = "free"                  # "fact" (inserted from {{ID}}), "assumption" ({{assume: …}}) or "free" (typed)
+    fact_id: Optional[str] = None         # the fact a placeholder pointed to
+    change_sign: Optional[int] = None     # +1 / -1 if the matched fact is a change, for the direction check
 
 
 def extract_figures(text: str) -> List[Figure]:
@@ -249,12 +252,23 @@ def _topic_match(sentence: str, fact: Fact, sentence_topics: Set[str], series_ke
     return bool(sentence_topics & set(fact.topics))
 
 
+_STATUS_BY_KIND = {"level": "verified", "stat": "verified", "date": "verified", "text": "verified",
+                   "change": "derived", "pct_change": "derived", "spread": "derived", "percentile": "derived"}
+
+
+def _sign(v: float) -> Optional[int]:
+    return None if not v else (1 if v > 0 else -1)
+
+
 def check_numeric_grounding(
     report: str,
     question: str,
     tables: List[Dict[str, Any]],
     sources: List[Dict[str, Any]],
+    refs: Optional[List[Any]] = None,
 ) -> List[Figure]:
+    """Classify every figure; refs (from render.py) say which spans were inserted from facts."""
+    refs = refs or []
     facts = all_facts(tables)
     url_to_id = {s["url"]: s["id"] for s in sources if s.get("url")}
     dates = observation_dates(tables)
@@ -272,9 +286,28 @@ def check_numeric_grounding(
         fig.context = sentence[:300]
 
         if fig.unit == "date":
+            if any(r.kind == "fact" and r.start <= fig.start < r.end for r in refs):
+                fig.origin, fig.status, fig.matched = "fact", "verified", "date from the fact table"
+                figures.append(fig)
+                continue
             iso, ym = _parse_date(fig.text)
             if (iso and iso in dates) or (not iso and ym in months):
                 fig.status, fig.matched = "verified", "observation / as-of date in fetched data"
+            figures.append(fig)
+            continue
+
+        ref = next((r for r in refs if r.start <= fig.start < r.end), None)
+        if ref is not None and ref.kind == "fact":
+            f = ref.fact
+            fig.origin, fig.fact_id = "fact", f.id
+            fig.status, fig.matched, fig.topic_match = _STATUS_BY_KIND.get(f.kind, "verified"), f.label, True
+            fig.source_ids = tuple(url_to_id[u] for u in f.source_urls if u in url_to_id)
+            fig.source_id = fig.source_ids[0] if fig.source_ids else None
+            fig.change_sign = _sign(f.value) if f.is_change else None
+            figures.append(fig)
+            continue
+        if ref is not None and ref.kind == "assumption":
+            fig.origin, fig.assumption = "assumption", True
             figures.append(fig)
             continue
 
@@ -304,6 +337,8 @@ def check_numeric_grounding(
             fig.source_id = url_to_id.get(fact.source_url)
             fig.source_ids = tuple(url_to_id[u] for u in (fact.source_url, *fact.other_source_urls) if u in url_to_id)
             fig.topic_match = best[0][0] == 0
+            if " change " in fact.label or "annualized growth" in fact.label:
+                fig.change_sign = _sign(fact.value)
         else:
             fig.snippet_ids = tuple(dict.fromkeys(
                 sid for sid, sf in snippet_figures
@@ -438,6 +473,46 @@ def check_no_data(report: str, tags: List[str], tables: List[Dict[str, Any]], fi
 
 
 # ---------------------------------------------------------------------------
+# 5) Direction of change
+# ---------------------------------------------------------------------------
+
+_CLAUSE_END = re.compile(r"[.!?](?=\s|$)|[;\n|]")
+
+
+def check_directions(report: str, figures: List[Figure]) -> List[Dict[str, Any]]:
+    """Change figures next to a word saying the opposite ("rose" next to a fall), or with the wrong sign."""
+    cfg = _cfg()["directions"]
+    words = {w: 1 for w in cfg["up"]} | {w: -1 for w in cfg["down"]}
+    pattern = re.compile(r"\b(" + "|".join(sorted(map(re.escape, words), key=len, reverse=True)) + r")\b", re.I)
+    errors = []
+    for f in figures:
+        if not f.change_sign:
+            continue
+        # clause around the figure: stop at sentence ends (not decimal points), ";", line breaks and table cells
+        cuts = [m.end() for m in _CLAUSE_END.finditer(report, 0, f.start)]
+        a = max([0, f.start - cfg["window_chars"]] + cuts[-1:])
+        nxt = _CLAUSE_END.search(report, f.end)
+        b = min(nxt.start() if nxt else len(report), f.end + cfg["window_chars"])
+        best = None
+        for m in pattern.finditer(report, a, b):
+            dist = f.start - m.end() if m.end() <= f.start else m.start() - f.end
+            if best is None or dist < best[0]:
+                best = (dist, m.group(1), words[m.group(1).lower()])
+        written_sign = {"+": 1, "-": -1, "\u2212": -1}.get(f.text[:1])
+        says = best[2] if best else written_sign
+        if says is not None and says != f.change_sign:
+            errors.append({
+                "figure": f.text,
+                "says": "up" if says > 0 else "down",
+                "data": "up" if f.change_sign > 0 else "down",
+                "word": best[1] if best else f.text[:1],
+                "fact": f.fact_id or f.matched,
+                "context": f.context[:200],
+            })
+    return errors
+
+
+# ---------------------------------------------------------------------------
 # Orchestration
 # ---------------------------------------------------------------------------
 
@@ -449,9 +524,14 @@ def validate_report(
     tags: List[str],
     data_status: Optional[List[Dict[str, Any]]] = None,
     today: Optional[date] = None,
+    refs: Optional[List[Any]] = None,
 ) -> Dict[str, Any]:
-    """Run all checks; the result is JSON-serializable and stored with the report."""
-    figures = check_numeric_grounding(report, question, tables, sources)
+    """Run all checks; the result is JSON-serializable and stored with the report.
+
+    refs come from render.py when the report was written with fact placeholders;
+    then numbers typed directly by the model ("free" numbers) are open issues too.
+    """
+    figures = check_numeric_grounding(report, question, tables, sources, refs)
     citations = check_citations(report, sources, figures)
     counts = {k: sum(f.status == k for f in figures) for k in ("verified", "derived", "unverified")}
     result = {
@@ -462,15 +542,27 @@ def validate_report(
         "no_data": check_no_data(report, tags, tables, figures),
         "data_status": [s for s in (data_status or []) if not s.get("ok")],
         "valid_source_ids": [s["id"] for s in sources],
+        "directions": check_directions(report, figures),
+        "placeholders": refs is not None,
+        "unknown_facts": [r.fact_id for r in (refs or []) if r.kind == "unknown"],
     }
     result["open_issues"] = open_issues(result)
     result["summary"] = summary_line(result)
     return result
 
 
-def _needs_attention(f: Dict[str, Any]) -> bool:
-    """Unverified, not labelled as an assumption, and not backed by a snippet the paragraph cites."""
-    if f["status"] != "unverified" or f["assumption"]:
+def _needs_attention(f: Dict[str, Any], placeholders: bool = False) -> bool:
+    """A figure the writer should fix.
+
+    Free text: unverified, not labelled as an assumption, and not backed by a
+    snippet the paragraph cites. Placeholder mode: also any number typed
+    directly instead of being written as {{ID}} (dates excepted).
+    """
+    if f["assumption"] or f.get("origin") == "fact":
+        return False
+    if placeholders and f["unit"] != "date":
+        return True
+    if f["status"] != "unverified":
         return False
     return not set(f["snippet_ids"]) & set(f["cited"])
 
@@ -478,19 +570,30 @@ def _needs_attention(f: Dict[str, Any]) -> bool:
 def open_issues(v: Dict[str, Any]) -> int:
     """Problems a writer can fix: used to decide whether a revision is better than the draft."""
     cit = v["citations"]
-    return (sum(_needs_attention(f) for f in v["figures"])
+    ph = v.get("placeholders", False)
+    return (sum(_needs_attention(f, ph) for f in v["figures"])
             + len(cit["uncited_paragraphs"]) + len(cit["source_mismatches"]) + len(cit["dangling"])
-            + sum(not t["disclosed"] for t in v["no_data"]["topics_without_data"]))
+            + sum(not t["disclosed"] for t in v["no_data"]["topics_without_data"])
+            + len(v.get("directions", [])) + len(v.get("unknown_facts", [])))
 
 
 def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
     """The validator's findings as concrete instructions for a revision pass ("" if nothing to fix)."""
     items: List[str] = []
+    ph = v.get("placeholders", False)
+    for fid in v.get("unknown_facts", []):
+        items.append(f"{{{{{fid}}}}} is not in the FACT TABLE; use an ID from the table or rewrite without it.")
+    for d in v.get("directions", []):
+        items.append(f'"{d["context"][:160]}" says "{d["word"]}" ({d["says"]}), but {d["fact"]} went {d["data"]}; '
+                     "fix the wording.")
     for f in v["figures"]:
-        if not _needs_attention(f):
+        if not _needs_attention(f, ph):
             continue
         where = f'"{f["text"]}" in: "{f["context"][:160]}"'
-        if f["snippet_ids"]:
+        if ph:
+            items.append(f"{where} — typed directly; write it as the matching {{{{ID}}}} from the FACT TABLE, "
+                         "or as {{assume: …}} if it is your own estimate.")
+        elif f["snippet_ids"]:
             items.append(f"{where} — this number appears in source [{f['snippet_ids'][0]}]; cite it in that sentence.")
         elif f["unit"] == "date":
             items.append(f"{where} — this date is not in the fetched data; use a date from KEY DATA or remove it.")
@@ -530,6 +633,14 @@ def summary_line(v: Dict[str, Any]) -> str:
                  f"({c['verified']} exact, {c['derived']} derived); {c['unverified']} flagged{note}."]
     else:
         parts = ["No figures to verify."]
+    if v.get("placeholders"):
+        typed = sum(f.get("origin") == "free" and f["unit"] != "date" for f in v["figures"])
+        from_facts = sum(f.get("origin") == "fact" for f in v["figures"])
+        parts.append(f"{from_facts} figure(s) inserted from the fact table, {typed} typed directly.")
+    if v.get("directions"):
+        parts.append(f"{len(v['directions'])} change figure(s) described in the wrong direction.")
+    if v.get("unknown_facts"):
+        parts.append(f"{len(v['unknown_facts'])} unknown fact reference(s).")
     cit = v["citations"]
     if cit["dangling"]:
         parts.append(f"{len(cit['dangling'])} citation(s) point to no source ({', '.join(cit['dangling'])}).")

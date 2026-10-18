@@ -64,3 +64,24 @@ disclosure_patterns = [
 # ---------------------------------------------------------------------------
 [assumptions]
 patterns = ["\\(assumption\\)", "\\bassum(e|ed|es|ing|ption|ptions)\\b", "\\bhypothetical", "\\billustrative"]
+
+# ---------------------------------------------------------------------------
+# Direction check: a change figure (e.g. "+25 bp", or a number that matches a
+# change in the data) must not sit next to a word saying the opposite
+# ("rose" next to a fall). Only words with one clear direction are listed;
+# "tightening"/"easing" are left out because they mean opposite things for
+# spreads and for monetary policy.
+# ---------------------------------------------------------------------------
+[directions]
+window_chars = 60
+up = [
+    "rose", "rise", "rises", "rising", "risen", "increase", "increased", "increases", "increasing",
+    "up", "higher", "widened", "widening", "widen", "widens", "climbed", "climbing", "gained", "jumped",
+    "surged", "accelerated", "rebounded", "steepened", "steepening", "grew", "expanded", "advanced",
+]
+down = [
+    "fell", "fall", "falls", "falling", "fallen", "decrease", "decreased", "decreases", "decreasing",
+    "down", "lower", "narrowed", "narrowing", "narrows", "declined", "decline", "declines", "declining",
+    "dropped", "drop", "slowed", "slowing", "cooled", "cooling", "softened", "plunged", "contracted",
+    "flattened", "flattening", "shrank", "slipped", "retreated",
+]
