@@ -24,6 +24,7 @@ LLM_TIMEOUT_SEC = float(env("LLM_TIMEOUT_SEC", str(_CFG["timeout_sec"])))
 LLM_SEED = int(env("LLM_SEED", str(_CFG["seed"])))
 LLM_RETRIES = int(_CFG["retries"])
 LLM_BACKOFF_SEC = float(_CFG["backoff_sec"])
+LLM_RATE_LIMIT_WAIT_SEC = float(_CFG.get("rate_limit_wait_sec", 20.0))
 LLM_NUM_CTX = int(_CFG["num_ctx"])
 OLLAMA_API_KEY = env("OLLAMA_API_KEY")
 
@@ -122,9 +123,13 @@ def call_llm(
     }
 
     last_err: Optional[str] = None
+    rate_limited = False
     for attempt in range(retries + 1):
         if attempt:
-            time.sleep(LLM_BACKOFF_SEC * 2 ** (attempt - 1))
+            # a rate limit (429) needs a real pause; other errors retry quickly
+            base = LLM_RATE_LIMIT_WAIT_SEC if rate_limited else LLM_BACKOFF_SEC
+            time.sleep(base * 2 ** (attempt - 1))
+        rate_limited = False
         try:
             r = _post_json(url, payload, headers)
         except (requests.RequestException, _Deadline) as e:
@@ -133,6 +138,7 @@ def call_llm(
 
         if r.status_code != 200:
             last_err = f"HTTP {r.status_code}: {r.text[:200]}"
+            rate_limited = r.status_code == 429
             if _is_retryable(r.status_code):
                 continue
             break  # 401 / 404 etc. will not fix themselves

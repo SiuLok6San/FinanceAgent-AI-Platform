@@ -8,6 +8,7 @@ seed = 42                             # env: LLM_SEED
 timeout_sec = 180                     # env: LLM_TIMEOUT_SEC
 retries = 3                           # retries on timeouts, 429 and 5xx responses
 backoff_sec = 2.0                     # first retry wait; doubles each retry
+rate_limit_wait_sec = 20.0            # first wait after HTTP 429 (rate limit); doubles each retry
 num_ctx = 16384                       # context window (tokens); local Ollama otherwise defaults to a small one
 
 [temperatures]

@@ -63,12 +63,14 @@ def test_example_mode_is_default_and_calls_no_api(no_api, monkeypatch):
     at = AppTest.from_file(APP, default_timeout=30).run()
     assert not at.exception
     assert at.radio[0].value.startswith("Example runs")
-    assert at.selectbox[0].value == "Q01"
+    from demo import demo_runs
+    ids = [r["id"] for r in demo_runs()]
+    assert at.selectbox[0].value == ids[0]
     assert any("Saved run" in i.value for i in at.info)
     assert any("Validation:" in w.value for w in [*at.warning, *at.success])
     assert [s.value for s in at.subheader][:2] == ["Input", "Final Institutional Report"]
 
-    at.selectbox[0].set_value("Q13").run()   # equity example with Finnhub tables
+    at.selectbox[0].set_value(ids[-1]).run()   # any other saved run renders too
     assert not at.exception
     assert any("Key Data Tables" == s.value for s in at.subheader)
 

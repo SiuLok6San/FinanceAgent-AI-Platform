@@ -58,7 +58,11 @@ def test_client_errors_are_not_retried(monkeypatch, no_sleep):
     assert len(calls) == 1
 
 
-def test_rate_limit_is_retried(monkeypatch, no_sleep):
-    responses = [FakeResponse(status=429, body={"error": "slow down"}), FakeResponse()]
+def test_rate_limit_is_retried_after_a_longer_wait(monkeypatch):
+    waits = []
+    monkeypatch.setattr(llm.time, "sleep", waits.append)
+    responses = [FakeResponse(status=429, body={"error": "too many concurrent requests"}),
+                 FakeResponse(status=500, body={"error": "oops"}), FakeResponse()]
     monkeypatch.setattr(llm.requests, "post", lambda *a, **k: responses.pop(0))
-    assert llm.call_llm("sys", "user", retries=2) == "hello"
+    assert llm.call_llm("sys", "user", retries=3) == "hello"
+    assert waits == [llm.LLM_RATE_LIMIT_WAIT_SEC, llm.LLM_BACKOFF_SEC * 2]
