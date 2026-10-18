@@ -8,6 +8,7 @@ seed = 42                             # env: LLM_SEED
 timeout_sec = 180                     # env: LLM_TIMEOUT_SEC
 retries = 3                           # retries on timeouts, 429 and 5xx responses
 backoff_sec = 2.0                     # first retry wait; doubles each retry
+num_ctx = 16384                       # context window (tokens); local Ollama otherwise defaults to a small one
 
 [temperatures]
 planner = 0.1
@@ -16,5 +17,5 @@ reasoner = 0.15
 writer = 0.15
 
 [limits]
-max_prompt_chars = 12000   # user prompts are trimmed to this length
+max_prompt_chars = 20000   # agent prompts are trimmed to this length
 max_note_chars = 2000      # each web-news note passed to the Analyst

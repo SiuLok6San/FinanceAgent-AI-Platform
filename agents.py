@@ -5,13 +5,15 @@ import logging
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 from llm import call_llm, LLMError, llm_settings
 from settings import load_config
 from router import route_question
 from router_tier2 import detect_tier2_specialization
-from answer_builder import build_answer
+from answer_builder import build_answer, normalize_sources
+from facts import key_data_block, topics_with_data
+from validators import annotate_report, validate_report
 
 from data_providers import (
     resolve_fred_series,
@@ -81,7 +83,7 @@ def run_researcher(question: str, ticker: Optional[str]) -> Dict[str, Any]:
     Collect real data (FRED macro, Finnhub company data, Tavily web news).
     Never raises.
     """
-    out: Dict[str, Any] = {"tables": [], "charts": [], "sources": [], "notes": []}
+    out: Dict[str, Any] = {"tables": [], "charts": [], "sources": [], "notes": [], "status": []}
 
     # 1) FRED
     try:
@@ -91,6 +93,7 @@ def run_researcher(question: str, ticker: Optional[str]) -> Dict[str, Any]:
             out["tables"].extend(fred_bundle.get("tables", []))
             out["charts"].extend(fred_bundle.get("charts", []))
             out["sources"].extend(fred_bundle.get("sources", []))
+            out["status"].extend(fred_bundle.get("status", []))
     except Exception:
         logger.warning("FRED fetch failed", exc_info=True)
 
@@ -109,6 +112,7 @@ def run_researcher(question: str, ticker: Optional[str]) -> Dict[str, Any]:
                     out["tables"].extend(b.get("tables", []))
                     out["charts"].extend(b.get("charts", []))
                     out["sources"].extend(b.get("sources", []))
+                    out["status"].extend(b.get("status", []))
             except Exception:
                 logger.warning("Finnhub fetch %s failed for %s", fn.__name__, ticker, exc_info=True)
                 continue
@@ -118,6 +122,7 @@ def run_researcher(question: str, ticker: Optional[str]) -> Dict[str, Any]:
         web = fetch_general_web_news(question)
         if web:
             out["sources"].extend(web.get("sources", []))
+            out["status"].extend(web.get("status", []))
             if web.get("summary"):
                 out["notes"].append(web["summary"])
     except Exception:
@@ -128,23 +133,42 @@ def run_researcher(question: str, ticker: Optional[str]) -> Dict[str, Any]:
     return out
 
 
-def run_analyst(question: str, planner_steps: str, research_note: str) -> str:
+def _no_data_line(no_data_topics: List[str]) -> str:
+    return "NO DATA FETCHED FOR: " + (", ".join(no_data_topics) if no_data_topics else "(none)")
+
+
+def run_analyst(question: str, planner_steps: str, research_note: str,
+                key_data: str = "", no_data_topics: Optional[List[str]] = None) -> str:
     sys = (
         "You are the Analyst Agent. Use the plan + evidence to write concise, "
         "institutional analysis. Use short bullets, avoid fluff. "
-        "Highlight macro, credit (IG vs HY), and portfolio implications."
+        "Highlight macro, credit (IG vs HY), and portfolio implications. "
+        "Take every number from KEY DATA or the research notes and keep its [S#] "
+        "citation; never invent figures. For topics under NO DATA FETCHED, say that "
+        "no data was fetched and keep that part qualitative."
     )
+    # KEY DATA goes before the notes so prompt trimming cuts notes first
     user = (
         f"QUESTION:\n{question}\n\n"
         f"PLANNER STEPS:\n{planner_steps}\n\n"
+        f"{key_data or 'KEY DATA: (none fetched)'}\n\n"
+        f"{_no_data_line(no_data_topics or [])}\n\n"
         f"RESEARCH NOTES (may be partial):\n{research_note}"
     )
     return ask_llm(sys, user, temperature=TEMPERATURES["analyst"])
 
 
-def run_reasoner(question: str, analyst_text: str) -> str:
-    sys = "You are the Reasoner Agent. Remove weak claims and sharpen logic."
-    user = f"QUESTION:\n{question}\n\nANALYST DRAFT:\n{analyst_text}"
+def run_reasoner(question: str, analyst_text: str, key_data: str = "") -> str:
+    sys = (
+        "You are the Reasoner Agent. Remove weak claims and sharpen logic. "
+        "Check every number in the draft against KEY DATA: keep it with its [S#] "
+        "citation if it is there, otherwise remove it or rewrite the claim without it."
+    )
+    user = (
+        f"QUESTION:\n{question}\n\n"
+        f"{key_data or 'KEY DATA: (none fetched)'}\n\n"
+        f"ANALYST DRAFT:\n{analyst_text}"
+    )
     return ask_llm(sys, user, temperature=TEMPERATURES["reasoner"])
 
 
@@ -184,14 +208,21 @@ def run_multiagent_pipeline(question: str, ticker: Optional[str] = None) -> Dict
 
         planner = run_planner(question)
         research_bundle = run_researcher(question, ticker)
+        tables = research_bundle.get("tables", [])
+        # assign [S#] ids now so every agent cites the same ids
+        sources = normalize_sources(research_bundle.get("sources", []))
+        key_data = key_data_block(tables, sources)
+        no_data_topics = [t for t in tags if t not in topics_with_data(tables)]
 
         analyst = run_analyst(
             question,
             planner_steps=planner,
             research_note="\n".join(research_bundle.get("notes", [])),
+            key_data=key_data,
+            no_data_topics=no_data_topics,
         )
 
-        reasoner = run_reasoner(question, analyst)
+        reasoner = run_reasoner(question, analyst, key_data=key_data)
 
         final_answer = build_answer(
             question=question,
@@ -203,18 +234,32 @@ def run_multiagent_pipeline(question: str, ticker: Optional[str] = None) -> Dict
             tags=tags,
             tier2_subtags=tier2,
             ctx_text="",
-            data_tables=research_bundle.get("tables", []),
+            data_tables=tables,
             chart_specs=research_bundle.get("charts", []),
-            sources=research_bundle.get("sources", []),
+            sources=sources,
+            key_data=key_data,
+            no_data_topics=no_data_topics,
         )
 
+        # deterministic checks on the final text; flagged content is kept, not deleted
+        raw_report = final_answer["report_text"]
+        validation = validate_report(
+            raw_report, question, tables, final_answer["sources"], tags,
+            data_status=research_bundle.get("status", []),
+        )
+        final_answer["report_text_raw"] = raw_report
+        final_answer["report_text"] = annotate_report(raw_report, validation)
+        final_answer["validation"] = validation
+        final_answer["tags"] = tags
+        final_answer["tier2"] = tier2
+        final_answer["data_status"] = research_bundle.get("status", [])
+
         # compatibility: some UI versions expect "answer"
-        if "answer" not in final_answer and "report_text" in final_answer:
-            final_answer["answer"] = final_answer["report_text"]
+        final_answer["answer"] = final_answer["report_text"]
 
         final_answer["error"] = False
         final_answer["run_meta"] = run_meta
-        logger.info("Report generated [ref=%s] meta=%s", run_id, run_meta)
+        logger.info("Report generated [ref=%s] meta=%s validation=%s", run_id, run_meta, validation["summary"])
         return final_answer
 
     except LLMError:

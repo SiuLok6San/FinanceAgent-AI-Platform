@@ -22,6 +22,7 @@ LLM_TIMEOUT_SEC = float(env("LLM_TIMEOUT_SEC", str(_CFG["timeout_sec"])))
 LLM_SEED = int(env("LLM_SEED", str(_CFG["seed"])))
 LLM_RETRIES = int(_CFG["retries"])
 LLM_BACKOFF_SEC = float(_CFG["backoff_sec"])
+LLM_NUM_CTX = int(_CFG["num_ctx"])
 OLLAMA_API_KEY = env("OLLAMA_API_KEY")
 
 
@@ -32,6 +33,7 @@ def llm_settings() -> Dict[str, Any]:
         "api_base": LLM_API_BASE,
         "provider": "ollama-api" if OLLAMA_API_KEY else "ollama-local",
         "seed": LLM_SEED,
+        "num_ctx": LLM_NUM_CTX,
         "timeout_sec": LLM_TIMEOUT_SEC,
     }
 
@@ -79,6 +81,7 @@ def call_llm(
         "options": {
             "temperature": temperature,
             "seed": LLM_SEED,
+            "num_ctx": LLM_NUM_CTX,
         },
         "stream": False
     }

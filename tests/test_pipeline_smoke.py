@@ -19,9 +19,15 @@ def mocked_data(monkeypatch):
         agents,
         "fetch_fred_macro_timeseries",
         lambda ids: {
-            "tables": [{"title": "FRED: Unemployment Rate (UNRATE)", "data": table}],
+            "tables": [{
+                "title": "FRED: Unemployment Rate (UNRATE)", "data": table, "provider": "FRED",
+                "kind": "timeseries", "series_id": "UNRATE", "frequency": "monthly", "units": "Percent",
+                "last_date": "2026-09-01", "topics": ["macro"],
+                "source_url": "https://fred.stlouisfed.org/series/UNRATE",
+            }],
             "charts": [],
             "sources": [{"title": "FRED series UNRATE", "url": "https://fred.stlouisfed.org/series/UNRATE", "source": "FRED"}],
+            "status": [{"provider": "FRED", "item": "UNRATE", "ok": True, "detail": ""}],
         },
     )
     monkeypatch.setattr(agents, "fetch_general_web_news", lambda q: {})
@@ -31,8 +37,8 @@ def test_pipeline_returns_report_when_llm_works(monkeypatch, mocked_data):
     calls = []
 
     def fake_llm(system_prompt, user_prompt, temperature=0.2, **kwargs):
-        calls.append(temperature)
-        return "Unemployment was 4.3% in September [S1]."
+        calls.append(user_prompt)
+        return "Unemployment was 4.3% in September 2026 [S1], and will reach 6.1% [S1]."
 
     monkeypatch.setattr(agents, "call_llm", fake_llm)
     monkeypatch.setattr(answer_builder, "call_llm", fake_llm)
@@ -44,6 +50,14 @@ def test_pipeline_returns_report_when_llm_works(monkeypatch, mocked_data):
     assert result["citations_used"] == ["S1"]
     assert len(result["key_data_tables"]) == 1
     assert len(calls) == 4  # planner, analyst, reasoner, writer
+    # analyst, reasoner and writer see the fetched numbers with their source id
+    assert all("[S1] FRED: Unemployment Rate (UNRATE)" in p and "latest 4.3 (2026-09-01)" in p for p in calls[1:])
+
+    v = result["validation"]
+    assert v["counts"] == {"figures": 3, "verified": 2, "derived": 0, "unverified": 1}
+    assert result["report_text"].startswith("> **Validation:** 2 of 3 figures verified")
+    assert result["report_text_raw"] in result["report_text"]  # flagged text is kept
+    assert result["tags"] == ["macro"]
     meta = result["run_meta"]
     assert meta["seed"] == agents.llm_settings()["seed"]
     assert set(meta["temperatures"]) == {"planner", "analyst", "reasoner", "writer"}
