@@ -55,11 +55,12 @@ class _Deadline(Exception):
 def _post_json(url: str, payload: Dict[str, Any], headers: Dict[str, str]) -> requests.Response:
     """POST with a hard total time limit.
 
-    requests' timeout only limits the wait for each socket read, so a server
-    that trickles bytes can hold a call open indefinitely (seen with the
-    hosted API: calls stuck for over an hour inside http.client's readline).
-    The request runs in a daemon thread and the caller stops waiting once
-    LLM_TIMEOUT_SEC has passed; a stuck thread is abandoned, not joined.
+    requests' timeout only limits the wait for each socket read, not the whole
+    call. The request runs in a daemon thread and the caller stops waiting
+    once LLM_TIMEOUT_SEC has passed; a stuck thread is abandoned, not joined.
+    (Background: eval runs looked stuck for over an hour. The real cause was
+    the laptop sleeping mid-run, which froze the process and left stale
+    connections behind; the total limit is kept as a safeguard.)
     """
     box: Dict[str, Any] = {}
     done = threading.Event()
