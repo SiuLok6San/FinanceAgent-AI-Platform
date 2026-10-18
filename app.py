@@ -229,7 +229,7 @@ def render_validation_panel(validation: dict, result: dict) -> None:
             st.caption(f"Lines backed by data: {n_data} · interpretation (no figure from the data): {len(lines) - n_data}")
 
         wording = validation.get("wording") or {}
-        wording_issues = wording.get("history", []) + wording.get("trend", []) + validation.get("comparisons", [])
+        wording_issues = ([w for x in wording.values() for w in x]) + validation.get("comparisons", [])
         if wording_issues:
             with st.expander(f"Wording vs. data: {len(wording_issues)} problem(s)", expanded=True):
                 for w in wording.get("history", []):
@@ -237,6 +237,9 @@ def render_validation_panel(validation: dict, result: dict) -> None:
                                f"{w['pctile']}th percentile of its history.")
                 for w in wording.get("trend", []):
                     st.warning(f"\"{escape_md(w['context'])}\" says *{w['word']}*, but {w['series']} moved {w['change']}.")
+                for w in wording.get("rate", []):
+                    st.warning(f"\"{escape_md(w['context'])}\" says *{w['word']}*, but for {w['series']} "
+                               f"{escape_md(w['evidence'])}.")
                 for c in validation.get("comparisons", []):
                     st.warning(f"\"{escape_md(c['context'])}\" — {c['detail']}.")
 

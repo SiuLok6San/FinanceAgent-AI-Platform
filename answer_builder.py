@@ -33,6 +33,9 @@ PLACEHOLDER_RULES = (
     "- Your own estimate (a scenario level, a suggested weight): {{assume: 10-15%}}.\n"
     "- Words must match the sign of a change: positive changes rose / widened / increased, negative changes "
     "fell / narrowed / decreased.\n"
+    "- Whether inflation or growth is speeding up or slowing down is about the rate, not the index level: "
+    "compare a series' .pct_1y with its .pct_1y_prev and its recent annualized pace (.ann_3m; quarterly "
+    "series: .ann_growth_1q against .ann_growth_1q_prev) before saying 'cooling' or 'accelerating'.\n"
     "- Citations [S#] for numbers are added automatically; cite web sources yourself only for qualitative claims."
 )
 

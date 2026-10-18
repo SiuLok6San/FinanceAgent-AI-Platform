@@ -20,6 +20,10 @@ Added
 - Wording checks: history words ("near five-year lows", "tight relative to history") are checked against the
   fact's percentile in the fetched window, and trend words ("widening", "rising") against its recent change.
   Like the direction and comparison checks, their findings go back to the Writer in the feedback loop.
+- Growth-rate wording: "inflation is cooling" or "growth is slowing" is checked against the rate, not the
+  index level: the 12-month rate against a period earlier and the recent annualized pace (new facts
+  `CPI.pct_1y_prev`, `CPI.ann_3m`, `GDP.ann_growth_1q_prev`). It is flagged only when both disagree with the
+  word. "Inflation fell from {{CPI.pct_1y_prev}} to {{CPI.pct_1y}}" is judged by the two rates.
 - A number labelled "(assumption)" that is written the same way in a source the line cites counts as an open
   issue (it is that source's figure). A revision could otherwise clear typed numbers by relabelling them; the
   feedback now says to quote such numbers as `{{S#: …}}` and names the fact a typed number matches.

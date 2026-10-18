@@ -188,6 +188,7 @@ def report_metrics(records: List[Dict[str, Any]], vals: List[Dict[str, Any]]) ->
         "comparison_errors": sum(len(v.get("comparisons", [])) for v in vals),
         "history_wording_errors": sum(len((v.get("wording") or {}).get("history", [])) for v in vals),
         "trend_wording_errors": sum(len((v.get("wording") or {}).get("trend", [])) for v in vals),
+        "rate_wording_errors": sum(len((v.get("wording") or {}).get("rate", [])) for v in vals),
         "reports_with_direction_errors": sum(bool(v.get("directions")) for v in vals),
         "citation_markers": sum(v["citations"]["markers"] for v in vals),
         "dangling_ids": sum(len(v["citations"]["dangling"]) for v in vals),
@@ -325,6 +326,8 @@ def _metrics_table(scores: Dict[str, Any], which_set: str) -> List[str]:
     row("History wording contradicted by the percentile (\"near lows\", \"tight\") ²",
         lambda x: str(x["history_wording_errors"]) if x["placeholder_mode"] else "—")
     row("Trend wording contradicted by the recent change (\"widening\")", lambda x: str(x["trend_wording_errors"]))
+    row("Growth-rate wording contradicted by the rates (\"inflation is cooling\")",
+        lambda x: str(x["rate_wording_errors"]))
     row("Paragraphs with grounded figures but no citation", lambda x: str(x["uncited_paragraphs"]))
     row("Paragraphs citing a different source than the data", lambda x: str(x["source_mismatches"]))
     row("Dangling citation ids", lambda x: str(x["dangling_ids"]))
@@ -334,8 +337,8 @@ def _metrics_table(scores: Dict[str, Any], which_set: str) -> List[str]:
     row("Mean time per question (s)", lambda x: str(x["mean_elapsed_sec"]))
     lines += ["", "² Only for v3. The comparison check needs to know which fact each side of the comparison is "
               "(a placeholder). History wording is judged against 5 years of daily or 10 years of monthly data; "
-              "original and v2 fetched 1–2.5 years, too short to judge \"five-year lows\". Trend wording "
-              "(\"widening\" against the recent change) is checked for every version."]
+              "original and v2 fetched 1–2.5 years, too short to judge \"five-year lows\". Trend and growth-rate "
+              "wording are checked for every version."]
     return lines
 
 

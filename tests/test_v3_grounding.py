@@ -225,6 +225,56 @@ def test_short_history_is_labelled_by_its_span_and_not_judged():
     assert res["wording"]["history"] == []
 
 
+# 14 months of CPI: the 12-month rate goes from +3.4% (August) to +3.7% (September), and the last
+# three months run faster than that, so inflation is speeding up
+CPI_UP = fred("CPIAUCSL", [300.0, 301.0] + [303.0] * 9 + [308.0, 310.2, 312.1],
+              [f"2025-{m:02d}-01" for m in range(8, 13)] + [f"2026-{m:02d}-01" for m in range(1, 10)],
+              units="Index 1982-1984=100", frequency="monthly", topics=("macro",))
+GDP_UP = fred("GDPC1", [100.0, 100.5, 101.0, 101.2, 101.5, 102.4], ["2025-01-01", "2025-04-01", "2025-07-01",
+              "2025-10-01", "2026-01-01", "2026-04-01"], units="Billions of Chained 2017 Dollars",
+              frequency="quarterly", topics=("macro",))
+
+
+def _validate_with(tables, tpl):
+    sources = [{"id": f"S{i}", "url": t["source_url"], "title": t["title"], "source": "x", "snippet": ""}
+               for i, t in enumerate(tables, start=1)]
+    text, refs = render(tpl, build_fact_store(tables), sources)
+    return v.validate_report(text, "q", tables, sources, ["macro"], today=date(2026, 10, 17), refs=refs)
+
+
+def test_rate_facts_for_price_indexes_and_gdp():
+    store = build_fact_store([CPI_UP, GDP_UP])
+    assert store["CPI.pct_1y_prev"].display == "+3.4%" and store["CPI.pct_1y"].display == "+3.7%"
+    assert store["CPI.ann_3m"].kind == "rate" and not store["CPI.ann_3m"].is_change
+    assert store["GDP.ann_growth_1q"].value > store["GDP.ann_growth_1q_prev"].value
+
+
+def test_growth_rate_wording_is_checked_against_the_rates():
+    bad = _validate_with([CPI_UP], "- Inflation is cooling, at {{CPI.pct_1y}} over the year.\n")
+    [w] = bad["wording"]["rate"]
+    assert (w["word"], w["says"], w["series"]) == ("cooling", "down", "CPI")
+    assert "from +3.4% to +3.7%" in w["evidence"] and bad["open_issues"] == 1
+    assert "is speeding up" in v.feedback_for_writer(bad) and "{{CPI.pct_1y_prev}}" in v.feedback_for_writer(bad)
+    ok = _validate_with([CPI_UP], "- Inflation is accelerating: {{CPI.pct_1y}} after {{CPI.pct_1y_prev}}.\n"
+                                  "- CPI shows no cooling.\n"
+                                  "- That is an acceleration rather than cooling.\n"
+                                  "- The Fed is far from easing policy.\n"
+                                  "- Core inflation is easing.\n"
+                                  "- If inflation keeps easing, yields fall.\n")
+    assert ok["wording"]["rate"] == []
+    gdp = _validate_with([GDP_UP], "- Real GDP growth is slowing.\n")
+    assert [w["series"] for w in gdp["wording"]["rate"]] == ["GDP"]
+
+
+def test_direction_of_a_rate_quoted_with_its_earlier_value():
+    up = _validate_with([CPI_UP], "- Inflation rose from {{CPI.pct_1y_prev}} to {{CPI.pct_1y}}.\n")
+    assert up["directions"] == []
+    wrong = _validate_with([CPI_UP], "- Inflation fell from {{CPI.pct_1y_prev}} to {{CPI.pct_1y}}.\n")
+    assert [(d["word"], d["data"]) for d in wrong["directions"]] == [("fell", "up")]
+    down = dict(CPI_UP, data=CPI_UP["data"].assign(value=[300.0, 301.0] + [303.0] * 9 + [308.0, 310.5, 311.0]))
+    assert _validate_with([down], "- Inflation fell from {{CPI.pct_1y_prev}} to {{CPI.pct_1y}}.\n")["directions"] == []
+
+
 def test_history_wording_skips_negations_and_scenarios():
     res = _validate("- HY spreads are not historically tight.\n"
                     "- If HY spreads return to five-year lows, cut risk.\n")

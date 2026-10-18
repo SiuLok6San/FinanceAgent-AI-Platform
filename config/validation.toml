@@ -123,8 +123,8 @@ percentile = "percentile"
 [wording]
 skip_words = ["if", "could", "may", "might", "would", "should", "unless", "scenario", "assume", "assuming",
               "expect", "expected", "expects", "forecast", "likely", "will", "potential", "risk", "outlook",
-              "monitor", "watch"]
-negations = ["not", "no longer", "isn't", "aren't", "never", "hardly"]
+              "monitor", "watch", "upside", "downside", "until"]
+negations = ["not", "no", "no longer", "isn't", "aren't", "never", "hardly", "rather than", "instead of", "without"]
 
 [wording.history]
 # percentile of the latest value in its fetched history (fact_store *.pctile_*)
@@ -152,6 +152,22 @@ tightening = { credit_spread = "down", yield = "up" }
 # For price indexes and GDP, trend words describe the growth rate ("inflation is falling"), but the
 # fact store has the level's changes, which are almost always positive; these series are not checked.
 skip_series = ["CPI", "PCE", "GDP"]
+
+# For price indexes and GDP these words describe the growth rate, so they are checked against the
+# rate, not the level. A word is flagged only if both measures contradict it: the 12-month rate
+# against a period earlier, and the short-term pace (monthly series: the last 3 months annualized
+# against the 12-month rate; quarterly: the latest quarter annualized against the one before).
+[wording.rate_trend]
+series = ["CPI", "PCE", "GDP"]
+down = ["cooling", "easing", "slowing", "decelerating", "deceleration", "moderating", "softening", "disinflation"]
+up = ["accelerating", "acceleration", "re-accelerating", "reaccelerating", "reacceleration", "heating up",
+      "picking up"]
+min_gap = 0.05   # percentage points; smaller differences count as no change
+# "easing" of monetary policy is not inflation easing
+exclude = ["easing policy", "policy easing", "monetary easing", "easing cycle", "easing bias", "quantitative easing",
+           "fed easing", "rate easing", "easing financial conditions", "easing of financial conditions"]
+# the fetched series is headline CPI / PCE; a sentence about another measure is not checked
+other_measures = ["core", "components", "categories", "services inflation", "goods inflation", "wage", "wages"]
 
 # a horizon named in the sentence picks which change to compare with (default: the latest month)
 [wording.trend.horizons]

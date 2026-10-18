@@ -27,13 +27,18 @@ Hand-written context for these runs (the numbers above are computed by `eval/sco
      attempts are logged (`1de5e0a`);
   4. a revision that cleared typed numbers by labelling them as assumptions ("New York Fed: 25.2%
      (assumption) [S4]", with 25.2% in S4's text; Q03): such labels now count as open issues (`e28852d`);
-  5. two scoring fixes found while checking item 4: a number counted as "in a source's text" on matches such
+  5. a report (Q01) concluding "inflation is cooling modestly" while the 12-month rate had gone from +3.4%
+     to +3.7% and the last three months ran at +4.6% annualized: the trend check skipped price indexes,
+     because their level almost always rises. "Cooling" and "accelerating" are now checked against the
+     rates, flagged only when both measures disagree; on the development reports of all versions the
+     check flagged 15 statements, all of which contradicted the data;
+  6. two scoring fixes found while checking item 4: a number counted as "in a source's text" on matches such
      as "0.8 pp" against the "1" in "## 1. Introduction" (now the source must show the same number at the
      precision written, `ddc5b56`), and percentile facts labelled "5y" for tables covering one year, which
      would have judged the original and v2 reports on "five-year lows" with one year of data (`d74f5ea`).
 
   All 40 v3 results in the tables come from one run of the final code; earlier v3 outputs are not used.
-  The scoring fixes in item 5 also change the original and v2 numbers, since every report is re-scored with
+  The fixes in items 5 and 6 also change the original and v2 numbers, since every report is re-scored with
   the current validator.
 - **One request at a time.** The hosted free tier allows one concurrent request (HTTP 429 beyond that). Early
   runs of several pipelines in parallel failed on a few questions; those were run again one at a time, and the

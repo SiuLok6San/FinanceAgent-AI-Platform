@@ -8,6 +8,7 @@ gets a stable ID, a unit, a date, a source and a fixed display format.
     HY_OAS.chg_1m        +12 bp         change since 2026-09-15                           [S1]
     HY_OAS.pctile_5y     8th percentile where the latest value sits in its 5y range       [S1]
     HY_OAS_minus_IG_OAS  +239 bp        spread between two series                         [S1, S2]
+    CPI.pct_1y_prev      +3.4%          12-month rate a month earlier (for "cooling" claims) [S3]
     JPM.pe_ttm           13.7x          P/E (TTM) from Finnhub                            [S4]
 
 The Analyst, Reasoner and Writer see this table and write {{ID}} instead of
@@ -158,6 +159,38 @@ def history_window(dates: pd.Series, freq: Optional[str]) -> str:
     return f"{max(1, round(years * 12))}m"
 
 
+def _rate_facts(s: pd.DataFrame, freq: Optional[str], cu: str, entry, title: str) -> List[FactEntry]:
+    """Growth-rate facts for price indexes and GDP: whether inflation or growth is speeding up or slowing
+    down is a statement about the rate, not the level, so the wording check needs the 12-month rate a
+    period earlier and the short-term pace, annualized. Kind "rate": not a change of the level."""
+    if cu != "pct" or freq not in ("monthly", "quarterly") or len(s) < 3:
+        return []
+    out = []
+    year = 12 if freq == "monthly" else 4
+    v, day = float(s["value"].iloc[-1]), s["date"].iloc[-1]
+    earlier = s.iloc[:-1].reset_index(drop=True)
+    pv, pday = float(earlier["value"].iloc[-1]), earlier["date"].iloc[-1]
+    base = lagged(earlier, freq, year)
+    if base is not None and base[0] > 0:
+        r = (pv / float(base[0]) - 1) * 100
+        out.append(entry("pct_1y_prev", r, "rate", "pct", fmt_change(r, "pct", 1),
+                         f"{title}: % change over the 12 months to {_date_label(pday, freq)}", pday.strftime("%Y-%m-%d")))
+    if freq == "monthly":
+        three = lagged(s, freq, 3)
+        if three is not None and three[0] > 0 and v > 0:
+            r = ((v / float(three[0])) ** 4 - 1) * 100
+            out.append(entry("ann_3m", r, "rate", "pct", fmt_change(r, "pct", 1),
+                             f"{title}: change over the last 3 months, annualized", day.strftime("%Y-%m-%d")))
+    else:
+        before = lagged(earlier, freq, 1)
+        if before is not None and before[0] > 0 and pv > 0:
+            r = ((pv / float(before[0])) ** 4 - 1) * 100
+            out.append(entry("ann_growth_1q_prev", r, "rate", "pct", fmt_change(r, "pct", 1),
+                             f"{title}: annualized growth over the quarter to {_date_label(pday, freq)}",
+                             pday.strftime("%Y-%m-%d")))
+    return out
+
+
 def _series_facts(t: Dict[str, Any]) -> List[FactEntry]:
     s = series_frame(t)
     if s.empty:
@@ -199,6 +232,8 @@ def _series_facts(t: Dict[str, Any]) -> List[FactEntry]:
             ann = ((v / pv) ** 4 - 1) * 100
             out.append(entry("ann_growth_1q", ann, "pct_change", "pct", fmt_change(ann, "pct", dec),
                              f"{title}: annualized growth over the latest quarter", day.strftime("%Y-%m-%d")))
+
+    out += _rate_facts(s, freq, cu, entry, title)
 
     # where the latest value sits in the fetched history
     window = history_window(s["date"], freq)

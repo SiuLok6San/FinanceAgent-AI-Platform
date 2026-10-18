@@ -257,7 +257,8 @@ def _topic_match(sentence: str, fact: Fact, sentence_topics: Set[str], series_ke
 
 
 _STATUS_BY_KIND = {"level": "verified", "stat": "verified", "date": "verified", "text": "verified",
-                   "change": "derived", "pct_change": "derived", "spread": "derived", "percentile": "derived"}
+                   "change": "derived", "pct_change": "derived", "spread": "derived", "percentile": "derived",
+                   "rate": "derived"}
 
 
 def _sign(v: float) -> Optional[int]:
@@ -525,6 +526,7 @@ def check_directions(report: str, figures: List[Figure]) -> List[Dict[str, Any]]
     words = {w: 1 for w in cfg["up"]} | {w: -1 for w in cfg["down"]}
     pattern = re.compile(r"\b(" + "|".join(sorted(map(re.escape, words), key=len, reverse=True)) + r")\b", re.I)
     errors = []
+    signed = lambda g: -g.value if g.text[:1] in "-\u2212" else g.value  # noqa: E731
     for f in figures:
         if not f.change_sign:
             continue
@@ -533,18 +535,26 @@ def check_directions(report: str, figures: List[Figure]) -> List[Dict[str, Any]]
         a = max([0, f.start - cfg["window_chars"]] + cuts[-1:])
         nxt = _CLAUSE_END.search(report, f.end)
         b = min(nxt.start() if nxt else len(report), f.end + cfg["window_chars"])
+        change_sign, written_sign = f.change_sign, {"+": 1, "-": -1, "\u2212": -1}.get(f.text[:1])
+        if (f.fact_id or "").endswith(".pct_1y"):
+            # "inflation fell from {{CPI.pct_1y_prev}} to {{CPI.pct_1y}}": the word describes the rate
+            prev = next((g for g in figures if g.fact_id == f.fact_id + "_prev" and a <= g.start < b), None)
+            if prev is not None:
+                d = signed(f) - signed(prev)
+                change_sign, written_sign = (1 if d > 0 else -1 if d < 0 else 0), None
+                if not change_sign:
+                    continue
         best = None
         for m in pattern.finditer(report, a, b):
             dist = f.start - m.end() if m.end() <= f.start else m.start() - f.end
             if best is None or dist < best[0]:
                 best = (dist, m.group(1), words[m.group(1).lower()])
-        written_sign = {"+": 1, "-": -1, "\u2212": -1}.get(f.text[:1])
         says = best[2] if best else written_sign
-        if says is not None and says != f.change_sign:
+        if says is not None and says != change_sign:
             errors.append({
                 "figure": f.text,
                 "says": "up" if says > 0 else "down",
-                "data": "up" if f.change_sign > 0 else "down",
+                "data": "up" if change_sign > 0 else "down",
                 "word": best[1] if best else f.text[:1],
                 "fact": f.fact_id or f.matched,
                 "context": f.context[:200],
@@ -647,7 +657,12 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
     # history words are judged only against a full window ("5y", "10y"): a report built on one year
     # of data cannot be told it is wrong about "five-year lows"
     full_windows = {f"pctile_{w}" for w in load_config("data_sources")["fred"]["history_label"].values()}
-    history_issues, trend_issues = [], []
+    rate = cfg["rate_trend"]
+    rate_words = {_norm_phrase(w): 1 for w in rate["up"]} | {_norm_phrase(w): -1 for w in rate["down"]}
+    rate_pat = _phrase_pattern(list(rate_words))
+    rate_exclude = _phrase_pattern(rate["exclude"])
+    rate_other = _phrase_pattern(rate["other_measures"])
+    history_issues, trend_issues, rate_issues = [], [], []
 
     for a, b in _sentences(report):
         sentence = report[a:b]
@@ -706,7 +721,44 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
             if (store[key].value > 0) != (says > 0):
                 trend_issues.append({"word": word, "says": "up" if says > 0 else "down", "series": alias,
                                      "fact": key, "change": store[key].display, "context": sentence.strip()[:200]})
-    return {"history": history_issues, "trend": trend_issues}
+
+        excluded = [x.span() for x in rate_exclude.finditer(report, a, b)]
+        other_measure = bool(rate_other.search(report, a, b))
+        for m in rate_pat.finditer(report, a, b):
+            alias = nearest(m.start())
+            if negated(m) or alias not in rate["series"] or other_measure:
+                continue
+            if any(s <= m.start() < e for s, e in excluded):
+                continue
+            word = _norm_phrase(m.group(1))
+            found = _rate_direction(store, alias, rate["min_gap"])
+            if found and found[0] != rate_words[word]:
+                rate_issues.append({"word": word, "says": "up" if rate_words[word] > 0 else "down", "series": alias,
+                                    "evidence": found[1], "facts": found[2], "context": sentence.strip()[:200]})
+    return {"history": history_issues, "trend": trend_issues, "rate": rate_issues}
+
+
+def _rate_direction(store, alias: str, gap: float) -> Optional[Tuple[int, str, List[str]]]:
+    """(+1 speeding up / -1 slowing down, evidence, fact ids) when both rate measures agree, else None."""
+    ids = {k: f"{alias}.{k}" for k in ("pct_1y", "pct_1y_prev", "ann_3m", "ann_growth_1q", "ann_growth_1q_prev")}
+    got = {k: store[i] for k, i in ids.items() if i in store}
+    if "pct_1y" not in got or "pct_1y_prev" not in got:
+        return None
+    yoy, prev = got["pct_1y"], got["pct_1y_prev"]
+    if "ann_3m" in got:
+        pace, against = got["ann_3m"], yoy
+        pace_text = f"the last 3 months ran at {pace.display} annualized"
+    elif "ann_growth_1q" in got and "ann_growth_1q_prev" in got:
+        pace, against = got["ann_growth_1q"], got["ann_growth_1q_prev"]
+        pace_text = f"the latest quarter grew {pace.display} annualized after {against.display}"
+    else:
+        return None
+    sign = lambda d: 1 if d > gap else -1 if d < -gap else 0  # noqa: E731
+    a, b = sign(yoy.value - prev.value), sign(pace.value - against.value)
+    if not a or a != b:
+        return None
+    evidence = f"its 12-month rate went from {prev.display} to {yoy.display} and {pace_text}"
+    return a, evidence, [prev.id, yoy.id, pace.id]
 
 
 def classify_lines(report: str, figures: List[Figure]) -> List[Dict[str, Any]]:
@@ -804,7 +856,7 @@ def open_issues(v: Dict[str, Any]) -> int:
             + len(cit["uncited_paragraphs"]) + len(cit["source_mismatches"]) + len(cit["dangling"])
             + sum(not t["disclosed"] for t in v["no_data"]["topics_without_data"])
             + len(v.get("directions", [])) + len(v.get("unknown_facts", [])) + len(v.get("comparisons", []))
-            + len((v.get("wording") or {}).get("history", [])) + len((v.get("wording") or {}).get("trend", [])))
+            + sum(len(x) for x in (v.get("wording") or {}).values()))
 
 
 def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
@@ -820,6 +872,11 @@ def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
     for w in wording.get("trend", []):
         items.append(f'"{w["context"][:160]}" says "{w["word"]}", but {w["series"]} moved {w["change"]} '
                      f'({{{{{w["fact"]}}}}}); fix the wording or name the period you mean.')
+    for w in wording.get("rate", []):
+        ids = ", ".join(f"{{{{{i}}}}}" for i in w["facts"])
+        items.append(f'"{w["context"][:160]}" says "{w["word"]}", but {w["series"]} is '
+                     f'{"speeding up" if w["says"] == "down" else "slowing down"}: {w["evidence"]} ({ids}); '
+                     "fix the wording.")
     for c in v.get("comparisons", []):
         items.append(f'"{c["context"][:160]}" compares with "{c["word"]}", but {c["detail"]}; '
                      "fix or drop the comparison.")
@@ -901,7 +958,7 @@ def summary_line(v: Dict[str, Any]) -> str:
     if v.get("comparisons"):
         parts.append(f"{len(v['comparisons'])} comparison(s) between facts that do not hold.")
     wording = v.get("wording") or {}
-    n_wording = len(wording.get("history", [])) + len(wording.get("trend", []))
+    n_wording = sum(len(x) for x in wording.values())
     if n_wording:
         parts.append(f"{n_wording} statement(s) about history or trend that the data contradicts.")
     if v.get("unknown_facts"):
