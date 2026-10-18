@@ -90,10 +90,37 @@ def build_sources_block(sources: List[Dict[str, Any]]) -> str:
     return "\n".join(lines)
 
 
+# [S1], [S1, S3], [S1; S2], [S1-S3] / [S1–3]
+_CITATION_RE = re.compile(r"\[\s*(S\d+(?:\s*(?:[,;]|[-\u2013])\s*S?\d+)*)\s*\]")
+
+
+def parse_citation_markers(text: str) -> List[Dict[str, Any]]:
+    """Every citation marker in text: [{"ids": ["S1", "S2"], "start": i, "end": j}, ...]."""
+    out = []
+    for m in _CITATION_RE.finditer(text or ""):
+        ids: List[str] = []
+        for part in re.split(r"\s*[,;]\s*", m.group(1)):
+            rng = re.match(r"S(\d+)\s*[-\u2013]\s*S?(\d+)$", part)
+            if rng and int(rng.group(1)) <= int(rng.group(2)) <= int(rng.group(1)) + 50:
+                ids.extend(f"S{i}" for i in range(int(rng.group(1)), int(rng.group(2)) + 1))
+            else:
+                ids.append(part.strip())
+        out.append({"ids": ids, "start": m.start(), "end": m.end()})
+    return out
+
+
 def extract_citations_used(text: str, sources: List[Dict[str, Any]]) -> List[str]:
+    """Citation ids used in text that refer to a real source."""
     ids = {s["id"] for s in sources}
-    found = set(re.findall(r"\[(S\d+)\]", text))
-    return sorted(id_ for id_ in found if id_ in ids)
+    found = {i for m in parse_citation_markers(text) for i in m["ids"]}
+    return sorted((i for i in found if i in ids), key=lambda i: int(i[1:]))
+
+
+def find_dangling_citations(text: str, sources: List[Dict[str, Any]]) -> List[str]:
+    """Citation ids used in text that do NOT refer to any fetched source."""
+    ids = {s["id"] for s in sources}
+    found = {i for m in parse_citation_markers(text) for i in m["ids"]}
+    return sorted((i for i in found if i not in ids), key=lambda i: int(i[1:]))
 
 
 # ---------------------------------------------------------------------
@@ -109,6 +136,8 @@ def build_institutional_report(
     data_tables: List[Dict[str, Any]],
     chart_specs: List[Dict[str, Any]],
     raw_sources: Any,
+    key_data: str = "",
+    no_data_topics: Optional[List[str]] = None,
 ) -> Dict[str, Any]:
     """
     Produce final structured report.
@@ -138,7 +167,11 @@ def build_institutional_report(
         Additional rules:
         - DO NOT include tables or charts inside the text. Mention them by name only:
             “See Table 1 for yield-curve shift data.”
-        - DO NOT fabricate numbers or dates.
+        - DO NOT fabricate numbers or dates. Every number and date you state must
+          appear in KEY DATA or in a source snippet, and must carry the [S#] of
+          that source in the same bullet or sentence.
+        - For every topic listed under NO DATA FETCHED, write one sentence saying
+          that no data was fetched for that topic, and keep that part qualitative.
         - Professional tone. No filler language.
     """).strip()
 
@@ -151,7 +184,8 @@ def build_institutional_report(
     tables_block = "AVAILABLE TABLES:\n"
     if data_tables:
         for i, t in enumerate(data_tables, start=1):
-            tables_block += f"- Table {i}: {t.get('title','Untitled')} (cols={t.get('columns',[])})\n"
+            cols = list(getattr(t.get("data"), "columns", []))
+            tables_block += f"- Table {i}: {t.get('title','Untitled')} (cols={cols})\n"
     else:
         tables_block += "- (none)\n"
 
@@ -162,28 +196,20 @@ def build_institutional_report(
     else:
         charts_block += "- (none)\n"
 
-    user_prompt = textwrap.dedent(f"""
-        USER QUESTION:
-        {question}
+    no_data_block = "NO DATA FETCHED FOR: " + (", ".join(no_data_topics) if no_data_topics else "(none)")
 
-        TAGS:
-        {tags}
-
-        TIER-2 SPECIALIZATION:
-        {tier2_subtags}
-
-        CONTEXT:
-        {ctx_text or "(none)"}
-
-        {agent_block}
-
-        {tables_block}
-        {charts_block}
-
-        {sources_block}
-
-        Now write the final institutional report.
-    """).strip()
+    user_prompt = "\n\n".join([
+        f"USER QUESTION:\n{question}",
+        f"TAGS:\n{tags}",
+        f"TIER-2 SPECIALIZATION:\n{tier2_subtags}",
+        f"CONTEXT:\n{ctx_text or '(none)'}",
+        agent_block,
+        key_data or "KEY DATA: (none fetched)",
+        no_data_block,
+        tables_block + charts_block,
+        sources_block,
+        "Now write the final institutional report.",
+    ])
 
     # Call LLM (LLMError propagates; run_multiagent_pipeline turns it into a friendly message)
     report = call_llm(system_prompt, user_prompt, temperature=WRITER_TEMPERATURE)
@@ -214,6 +240,8 @@ def build_answer(
     data_tables: Optional[List[Dict[str, Any]]] = None,
     chart_specs: Optional[List[Dict[str, Any]]] = None,
     sources: Any = None,
+    key_data: str = "",
+    no_data_topics: Optional[List[str]] = None,
 ) -> Dict[str, Any]:
     return build_institutional_report(
         question=question,
@@ -224,4 +252,6 @@ def build_answer(
         data_tables=data_tables or [],
         chart_specs=chart_specs or [],
         raw_sources=sources,
+        key_data=key_data,
+        no_data_topics=no_data_topics,
     )

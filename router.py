@@ -50,12 +50,15 @@ def matches_any(text: str, keywords: Iterable[str], exclude_phrases: Iterable[st
     return bool(_pattern(keywords).search(q))
 
 
-def route_question(question: str) -> List[str]:
+def topics_in(text: str) -> List[str]:
+    """Tier-1 tags whose keywords appear in text (no fallback)."""
     cfg = load_config("routing")
-    tags = [
+    return [
         tag for tag in cfg["tag_order"]
-        if matches_any(question, cfg["tier1"][tag]["keywords"], cfg["tier1"][tag]["exclude_phrases"])
+        if matches_any(text, cfg["tier1"][tag]["keywords"], cfg["tier1"][tag]["exclude_phrases"])
     ]
 
+
+def route_question(question: str) -> List[str]:
     # If nothing matched → fallback (macro)
-    return tags or list(cfg["fallback_tags"])
+    return topics_in(question) or list(load_config("routing")["fallback_tags"])
