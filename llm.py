@@ -6,6 +6,7 @@ hosted Ollama API (https://ollama.com), which uses the same /api/chat
 format plus a Bearer API key (OLLAMA_API_KEY).
 """
 
+import json
 import time
 import requests
 from typing import Any, Dict, Optional, Union
@@ -44,6 +45,32 @@ class LLMError(RuntimeError):
 
 def _is_retryable(status_code: int) -> bool:
     return status_code == 429 or status_code >= 500
+
+
+class _Deadline(Exception):
+    pass
+
+
+def _post_json(url: str, payload: Dict[str, Any], headers: Dict[str, str]) -> requests.Response:
+    """POST with a total time limit.
+
+    requests' timeout only limits the gap between two reads, so a server that
+    keeps trickling bytes can hold a call open indefinitely (seen with the
+    hosted API: a call stuck for 45+ minutes). The body is read in chunks and
+    the call is abandoned once LLM_TIMEOUT_SEC has passed in total.
+    """
+    deadline = time.monotonic() + LLM_TIMEOUT_SEC
+    r = requests.post(url, json=payload, headers=headers, timeout=(15, LLM_TIMEOUT_SEC), stream=True)
+    try:
+        chunks = []
+        for chunk in r.iter_content(chunk_size=16384):
+            chunks.append(chunk)
+            if time.monotonic() > deadline:
+                raise _Deadline(f"no complete response within {LLM_TIMEOUT_SEC:.0f}s")
+        r._content = b"".join(chunks)
+        return r
+    finally:
+        r.close()
 
 
 def call_llm(
@@ -91,8 +118,8 @@ def call_llm(
         if attempt:
             time.sleep(LLM_BACKOFF_SEC * 2 ** (attempt - 1))
         try:
-            r = requests.post(url, json=payload, headers=headers, timeout=LLM_TIMEOUT_SEC)
-        except requests.RequestException as e:
+            r = _post_json(url, payload, headers)
+        except (requests.RequestException, _Deadline) as e:
             last_err = f"{type(e).__name__}: {e}"
             continue
 
@@ -102,7 +129,11 @@ def call_llm(
                 continue
             break  # 401 / 404 etc. will not fix themselves
 
-        msg = (r.json().get("message") or {}).get("content", "")
+        try:
+            msg = (json.loads(r.content).get("message") or {}).get("content", "")
+        except ValueError:
+            last_err = "response was not valid JSON"
+            continue
         if not msg.strip():
             last_err = "empty message from model"
             continue
