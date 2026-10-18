@@ -7,6 +7,7 @@ format plus a Bearer API key (OLLAMA_API_KEY).
 """
 
 import json
+import threading
 import time
 import requests
 from typing import Any, Dict, Optional, Union
@@ -52,31 +53,31 @@ class _Deadline(Exception):
 
 
 def _post_json(url: str, payload: Dict[str, Any], headers: Dict[str, str]) -> requests.Response:
-    """POST with a total time limit.
+    """POST with a hard total time limit.
 
-    requests' timeout only limits the gap between two reads, so a server that
-    keeps trickling bytes can hold a call open indefinitely (seen with the
-    hosted API: a call stuck for 45+ minutes). The body is read in chunks and
-    the call is abandoned once LLM_TIMEOUT_SEC has passed in total.
+    requests' timeout only limits the wait for each socket read, so a server
+    that trickles bytes can hold a call open indefinitely (seen with the
+    hosted API: calls stuck for over an hour inside http.client's readline).
+    The request runs in a daemon thread and the caller stops waiting once
+    LLM_TIMEOUT_SEC has passed; a stuck thread is abandoned, not joined.
     """
-    deadline = time.monotonic() + LLM_TIMEOUT_SEC
-    r = requests.post(url, json=payload, headers=headers, timeout=(15, LLM_TIMEOUT_SEC), stream=True)
-    try:
-        chunks = []
-        while True:
-            # read1 returns after a single socket read, so a trickle of a few bytes
-            # still comes back here and the deadline is checked (iter_content would
-            # keep reading until it had a full chunk)
-            chunk = r.raw.read1(16384, decode_content=True)
-            if not chunk:
-                break
-            chunks.append(chunk)
-            if time.monotonic() > deadline:
-                raise _Deadline(f"no complete response within {LLM_TIMEOUT_SEC:.0f}s")
-        r._content = b"".join(chunks)
-        return r
-    finally:
-        r.close()
+    box: Dict[str, Any] = {}
+    done = threading.Event()
+
+    def worker() -> None:
+        try:
+            box["response"] = requests.post(url, json=payload, headers=headers, timeout=(15, LLM_TIMEOUT_SEC))
+        except BaseException as e:  # handed to the caller below
+            box["error"] = e
+        finally:
+            done.set()
+
+    threading.Thread(target=worker, daemon=True, name="llm-request").start()
+    if not done.wait(LLM_TIMEOUT_SEC):
+        raise _Deadline(f"no complete response within {LLM_TIMEOUT_SEC:.0f}s")
+    if "error" in box:
+        raise box["error"]
+    return box["response"]
 
 
 def call_llm(

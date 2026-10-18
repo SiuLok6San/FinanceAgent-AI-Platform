@@ -1,6 +1,7 @@
 """llm.py: total time limit, retries and error handling (HTTP mocked)."""
 
 import json
+import threading
 
 import pytest
 
@@ -8,35 +9,10 @@ import llm
 
 
 class FakeResponse:
-    def __init__(self, status=200, body=None, chunks=None, clock=None, step=0.0):
+    def __init__(self, status=200, body=None):
         self.status_code = status
-        self._body = json.dumps(body or {"message": {"content": "hello"}}).encode()
-        self._chunks = chunks
-        self._clock, self._step = clock, step
-        self.text = self._body.decode()
-
-    @property
-    def raw(self):
-        if not hasattr(self, "_raw"):
-            pieces = iter(self._chunks or [self._body])
-            outer = self
-
-            class Raw:
-                def read1(self, amt=None, decode_content=None):
-                    piece = next(pieces, b"")
-                    if piece and outer._clock is not None:
-                        outer._clock[0] += outer._step
-                    return piece
-
-            self._raw = Raw()
-        return self._raw
-
-    @property
-    def content(self):
-        return getattr(self, "_content", self._body)
-
-    def close(self):
-        pass
+        self.content = json.dumps(body or {"message": {"content": "hello"}}).encode()
+        self.text = self.content.decode()
 
 
 @pytest.fixture
@@ -49,20 +25,24 @@ def test_returns_message_content(monkeypatch, no_sleep):
     assert llm.call_llm("sys", "user") == "hello"
 
 
-def test_trickling_response_is_abandoned_after_total_timeout(monkeypatch, no_sleep):
-    clock = [0.0]
-    monkeypatch.setattr(llm.time, "monotonic", lambda: clock[0])
+def test_stuck_request_is_abandoned_after_total_timeout(monkeypatch, no_sleep):
+    # a request that never returns (like a server trickling bytes forever)
+    release = threading.Event()
     calls = []
 
     def post(*a, **k):
         calls.append(1)
-        # one byte every 60 s: each read is within the read timeout, but the total is not
-        return FakeResponse(chunks=[b" "] * 100, clock=clock, step=60.0)
+        release.wait(5)
+        return FakeResponse()
 
+    monkeypatch.setattr(llm, "LLM_TIMEOUT_SEC", 0.2)
     monkeypatch.setattr(llm.requests, "post", post)
-    with pytest.raises(llm.LLMError, match="no complete response within"):
-        llm.call_llm("sys", "user", retries=1)
-    assert len(calls) == 2  # retried once, then gave up
+    try:
+        with pytest.raises(llm.LLMError, match="no complete response within"):
+            llm.call_llm("sys", "user", retries=1)
+        assert len(calls) == 2  # retried once, then gave up
+    finally:
+        release.set()
 
 
 def test_client_errors_are_not_retried(monkeypatch, no_sleep):
