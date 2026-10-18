@@ -63,7 +63,13 @@ def _post_json(url: str, payload: Dict[str, Any], headers: Dict[str, str]) -> re
     r = requests.post(url, json=payload, headers=headers, timeout=(15, LLM_TIMEOUT_SEC), stream=True)
     try:
         chunks = []
-        for chunk in r.iter_content(chunk_size=16384):
+        while True:
+            # read1 returns after a single socket read, so a trickle of a few bytes
+            # still comes back here and the deadline is checked (iter_content would
+            # keep reading until it had a full chunk)
+            chunk = r.raw.read1(16384, decode_content=True)
+            if not chunk:
+                break
             chunks.append(chunk)
             if time.monotonic() > deadline:
                 raise _Deadline(f"no complete response within {LLM_TIMEOUT_SEC:.0f}s")

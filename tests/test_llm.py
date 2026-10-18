@@ -15,11 +15,21 @@ class FakeResponse:
         self._clock, self._step = clock, step
         self.text = self._body.decode()
 
-    def iter_content(self, chunk_size=1):
-        for c in (self._chunks or [self._body]):
-            if self._clock is not None:
-                self._clock[0] += self._step
-            yield c
+    @property
+    def raw(self):
+        if not hasattr(self, "_raw"):
+            pieces = iter(self._chunks or [self._body])
+            outer = self
+
+            class Raw:
+                def read1(self, amt=None, decode_content=None):
+                    piece = next(pieces, b"")
+                    if piece and outer._clock is not None:
+                        outer._clock[0] += outer._step
+                    return piece
+
+            self._raw = Raw()
+        return self._raw
 
     @property
     def content(self):
