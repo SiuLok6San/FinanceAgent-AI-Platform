@@ -156,14 +156,14 @@ def fetch_fred_macro_timeseries(series_id: Union[str, List[str]]) -> Dict[str, A
 # =====================================================================
 
 def _snapshot_table(title: str, df: pd.DataFrame, ticker: str, url: str,
-                    last_date: Optional[str] = None) -> Dict[str, Any]:
+                    last_date: Optional[str] = None, frequency: Optional[str] = None) -> Dict[str, Any]:
     return {
         "title": title,
         "data": df.reset_index(drop=True),
         "provider": "Finnhub",
         "kind": "snapshot",
         "series_id": None,
-        "frequency": None,
+        "frequency": frequency,  # how often it updates; used by the freshness check
         "units": None,
         "last_date": last_date,
         "topics": ["equity"],
@@ -216,7 +216,7 @@ def fetch_finnhub_quote(ticker: str) -> Dict[str, Any]:
         as_of = datetime.fromtimestamp(data["t"], tz=timezone.utc).strftime("%Y-%m-%d") if data.get("t") else None
         url = "https://finnhub.io/docs/api/quote"
         return {
-            "tables": [_snapshot_table(f"{ticker} Quote", _field_table(data, _CFG["finnhub"]["quote_fields"]), ticker, url, as_of)],
+            "tables": [_snapshot_table(f"{ticker} Quote", _field_table(data, _CFG["finnhub"]["quote_fields"]), ticker, url, as_of, "daily")],
             "charts": [],
             "sources": [_source(f"Finnhub quote: {ticker}", url, f"Quote as of {as_of}." if as_of else "")],
         }
@@ -234,7 +234,7 @@ def fetch_finnhub_recommendations(ticker: str) -> Dict[str, Any]:
         url = "https://finnhub.io/docs/api/recommendation-trends"
         latest = str(df["period"].iloc[0]) if "period" in df else None
         return {
-            "tables": [_snapshot_table(f"{ticker} Analyst Recommendation Trends", df, ticker, url, latest)],
+            "tables": [_snapshot_table(f"{ticker} Analyst Recommendation Trends", df, ticker, url, latest, "monthly")],
             "charts": [],
             "sources": [_source(f"Finnhub recommendation trends: {ticker}", url)],
         }
