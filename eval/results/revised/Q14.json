@@ -1,0 +1,1158 @@
+{
+  "id": "Q14",
+  "category": "equity",
+  "question": "What are analysts' current recommendations on NVIDIA stock?",
+  "ticker": "NVDA",
+  "expected_tags": [
+    "equity"
+  ],
+  "pipeline": "revised",
+  "run_utc": "2026-10-18T15:00:35+00:00",
+  "elapsed_sec": 85.1,
+  "router_tags": [
+    "equity"
+  ],
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Consensus rating: Buy – 24 Strong‑Buy, 41 Buy, 3 Hold, 1 Sell (S3).  \n- Current share price: **$214.1** (S2).  \n- Target price: **$325** (S16) – upside ≈ 52.5 % (S16).  \n- P/E ≈ 26.8, P/B ≈ 20.8, P/S ≈ 17.0 – high multiples driven by AI‑chip demand (S4).  \n- Beta 2.266 indicates higher volatility; credit profile remains investment‑grade (S4).  \n\n**Core Analysis**  \n\n*Macro* – AI, cloud, and automotive sectors are the primary growth drivers for NVIDIA’s GPU business (likely).  \n\n*Sector* – Semiconductor valuation multiples are above peer average; growth expectations remain strong (likely).  \n\n*Credit* – ROE 110.1 %, net margin 63.66 % and strong cash‑flow support IG status (S4).  \n\n*Portfolio* – 52‑week high $243.4, low $164.3 – current price near the lower end of the range (S4).  \n\n**Scenarios**  \n\n| Scenario | Assumptions (citation) | Expected Outcome |\n|----------|------------------------|------------------|\n| **Base** | Consensus Buy, target $325 (S16), earnings growth 125 % YoY (S4). | 52‑week high reached, modest upside. |\n| **Upside** | AI‑chip demand accelerates, revenue growth 83.38 % YoY (S4). | Target price rises to ~$380 (assumption). |\n| **Downside** | Supply‑chain constraints, margin compression >10 % (assumption). | Price falls to ~$180 (assumption). |\n\n**Key Risks & Monitoring**  \n\n- **Valuation risk** – high multiples may not be sustainable if growth slows (likely).  \n- **Beta & volatility** – 2.266 beta could amplify market swings (S4).  \n- **Supply‑chain constraints** – semiconductor shortages could hit margins (likely).  \n- **Regulatory risk** – AI‑chip export controls could limit growth (likely).  \n- **Credit risk** – remains low; monitor cash‑flow trends (S4).  \n\n**Portfolio / Decision Implications**  \n\n- **Allocation** – consider 5–10 % of a growth‑focused portfolio in NVDA (assumption).  \n- **Entry timing** – target entry near earnings releases to capture guidance revisions (assumption).  \n- **Risk management** – stop‑loss at ~$190 (~30 % below current price) to hedge valuation pullback (assumption).  \n- **Diversification** – pair with other IG growth names (AMD, ASML) to reduce sector concentration (assumption).  \n\n**Conclusion**  \n- Analysts maintain a bullish consensus with a strong‑buy tilt; target price suggests significant upside if AI‑chip demand persists.  \n- High valuation multiples and beta warrant cautious sizing and active monitoring of supply‑chain and regulatory developments.  \n- A moderate allocation to NVIDIA can enhance growth exposure while preserving portfolio balance.  \n\n*See Table 1 for company profile, Table 2 for current quote, Table 3 for recommendation trends, Table 4 for key financial metrics.*",
+  "report_text_annotated": "> **Validation:** 16 of 26 figures verified against source data (16 exact, 0 derived); 10 flagged (4 of them appear in a fetched web/news snippet; 7 labelled as assumptions). 8 paragraph(s) state figures without a citation.\n\n**Executive Summary**  \n- Consensus rating: Buy – 24 Strong‑Buy, 41 Buy, 3 Hold, 1 Sell (S3).  \n- Current share price: **$214.1** (S2).  \n- Target price: **$325** (S16) – upside ≈ 52.5 % (S16).  \n- P/E ≈ 26.8, P/B ≈ 20.8, P/S ≈ 17.0 – high multiples driven by AI‑chip demand (S4).  \n- Beta 2.266 indicates higher volatility; credit profile remains investment‑grade (S4).  \n\n**Core Analysis**  \n\n*Macro* – AI, cloud, and automotive sectors are the primary growth drivers for NVIDIA’s GPU business (likely).  \n\n*Sector* – Semiconductor valuation multiples are above peer average; growth expectations remain strong (likely).  \n\n*Credit* – ROE 110.1 %, net margin 63.66 % and strong cash‑flow support IG status (S4).  \n\n*Portfolio* – 52‑week high $243.4, low $164.3 – current price near the lower end of the range (S4).  \n\n**Scenarios**  \n\n| Scenario | Assumptions (citation) | Expected Outcome |\n|----------|------------------------|------------------|\n| **Base** | Consensus Buy, target $325 (S16), earnings growth 125 % YoY (S4). | 52‑week high reached, modest upside. |\n| **Upside** | AI‑chip demand accelerates, revenue growth 83.38 % YoY (S4). | Target price rises to ~$380 (assumption). |\n| **Downside** | Supply‑chain constraints, margin compression >10 % (assumption). | Price falls to ~$180 (assumption). |\n\n**Key Risks & Monitoring**  \n\n- **Valuation risk** – high multiples may not be sustainable if growth slows (likely).  \n- **Beta & volatility** – 2.266 beta could amplify market swings (S4).  \n- **Supply‑chain constraints** – semiconductor shortages could hit margins (likely).  \n- **Regulatory risk** – AI‑chip export controls could limit growth (likely).  \n- **Credit risk** – remains low; monitor cash‑flow trends (S4).  \n\n**Portfolio / Decision Implications**  \n\n- **Allocation** – consider 5–10 % of a growth‑focused portfolio in NVDA (assumption).  \n- **Entry timing** – target entry near earnings releases to capture guidance revisions (assumption).  \n- **Risk management** – stop‑loss at ~$190 (~30 % below current price) to hedge valuation pullback (assumption).  \n- **Diversification** – pair with other IG growth names (AMD, ASML) to reduce sector concentration (assumption).  \n\n**Conclusion**  \n- Analysts maintain a bullish consensus with a strong‑buy tilt; target price suggests significant upside if AI‑chip demand persists.  \n- High valuation multiples and beta warrant cautious sizing and active monitoring of supply‑chain and regulatory developments.  \n- A moderate allocation to NVIDIA can enhance growth exposure while preserving portfolio balance.  \n\n*See Table 1 for company profile, Table 2 for current quote, Table 3 for recommendation trends, Table 4 for key financial metrics.*",
+  "draft_report_text": "**Executive Summary**  \n- Consensus rating: **Buy** – 36 analysts, 24 Strong‑Buy, 41 Buy, 3 Hold, 1 Sell (S11).  \n- Current share price: **$214.1** (S2).  \n- Target‑price range: **$325** (up‑side ≈ 52.5 %) (S16).  \n- P/E ≈ 26.8, P/B ≈ 20.8, P/S ≈ 17.0 – high multiples driven by AI‑chip demand (S4).  \n- Beta 2.27 indicates higher volatility; credit profile remains investment‑grade (S4).  \n\n**Core Analysis**  \n\n*Macro*  \n- AI, cloud, and automotive sectors are the primary growth drivers for NVIDIA’s GPU business (likely).  \n\n*Sector*  \n- Semiconductor valuation multiples are above peer average; growth expectations remain strong (likely).  \n\n*Credit*  \n- ROE 110 %, net margin 63.7 % and strong cash flow support IG status (S4).  \n\n*Portfolio*  \n- 52‑week high $243.4, low $164.3 – current price near the lower end of the range (S4).  \n\n**Scenarios**  \n\n| Scenario | Assumptions (citation) | Expected Outcome |\n|----------|------------------------|------------------|\n| **Base** | Consensus Buy, target $325, earnings growth 125 % YoY (S4). | 52‑week high reached, modest upside. |\n| **Upside** | AI‑chip demand accelerates, revenue growth > 90 % YoY (scenario). | Target price rises to ~$380 (assumption). |\n| **Downside** | Supply‑chain constraints, margin compression > 10 % (scenario). | Price falls to ~$180 (assumption). |\n\n**Key Risks & Monitoring**  \n\n- **Valuation risk** – high multiples may not be sustainable if growth slows (likely).  \n- **Beta & volatility** – 2.27 beta could amplify market swings (S4).  \n- **Supply‑chain constraints** – semiconductor shortages could hit margins (likely).  \n- **Regulatory risk** – AI‑chip export controls could limit growth (likely).  \n- **Credit risk** – remains low; monitor cash‑flow trends (S4).  \n\n**Portfolio / Decision Implications**  \n\n- **Allocation** – consider 5–10 % of a growth‑focused portfolio in NVDA (assumption).  \n- **Entry timing** – target entry near earnings releases to capture guidance revisions (assumption).  \n- **Risk management** – stop‑loss at ~$190 (~30 % below current price) to hedge valuation pullback (assumption).  \n- **Diversification** – pair with other IG growth names (AMD, ASML) to reduce sector concentration (assumption).  \n\n**Conclusion**  \n- Analysts maintain a bullish consensus with a strong‑buy tilt; target price suggests significant upside if AI‑chip demand persists.  \n- High valuation multiples and beta warrant cautious sizing and active monitoring of supply‑chain and regulatory developments.  \n- A moderate allocation to NVIDIA can enhance growth exposure while preserving portfolio balance.  \n\n*See Table 1 for company profile, Table 2 for current quote, Table 3 for recommendation trends, Table 4 for key financial metrics.*",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"36\" in: \"- Consensus rating: **Buy** – 36 analysts, 24 Strong‑Buy, 41 Buy, 3 Hold, 1 Sell (S11).\" — this number appears in source [S11]; cite it in that sentence.\n2. \"$325\" in: \"- Target‑price range: **$325** (up‑side ≈ 52.5 %) (S16).\" — this number appears in source [S16]; cite it in that sentence.\n3. \"52.5 %\" in: \"- Target‑price range: **$325** (up‑side ≈ 52.5 %) (S16).\" — this number appears in source [S16]; cite it in that sentence.\n4. \"$325\" in: \"| **Base** | Consensus Buy, target $325, earnings growth 125 % YoY (S4).\" — this number appears in source [S16]; cite it in that sentence.\n5. \"90 %\" in: \"| **Upside** | AI‑chip demand accelerates, revenue growth > 90 % YoY (scenario).\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n6. \"10 %\" in: \"| **Downside** | Supply‑chain constraints, margin compression > 10 % (scenario).\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n7. Add a citation to: \"- Consensus rating: **Buy** – 36 analysts, 24 Strong‑Buy, 41 Buy, 3 Hold, 1 Sell (S11).\" — its figures 24, 41, 3, 1 come from [S3].\n8. Add a citation to: \"- Current share price: **$214.1** (S2).\" — its figures $214.1 come from [S2].\n9. Add a citation to: \"- P/E ≈ 26.8, P/B ≈ 20.8, P/S ≈ 17.0 – high multiples driven by AI‑chip demand (S4).\" — its figures 26.8, 20.8, 17.0 come from [S4].\n10. Add a citation to: \"- Beta 2.27 indicates higher volatility; credit profile remains investment‑grade (S4).\" — its figures 2.27 come from [S4].\n11. Add a citation to: \"- ROE 110 %, net margin 63.7 % and strong cash flow support IG status (S4).\" — its figures 110 %, 63.7 % come from [S4].\n12. Add a citation to: \"- 52‑week high $243.4, low $164.3 – current price near the lower end of the range (S4).\" — its figures $243.4, $164.3 come from [S4].\n13. Add a citation to: \"| Scenario | Assumptions (citation) | Expected Outcome |\n|----------|------------------------|------------------|\n| **Base** | Consensus Buy, target $325, earni\" — its figures 125 % come from [S4].\n14. Add a citation to: \"- **Beta & volatility** – 2.27 beta could amplify market swings (S4).\" — its figures 2.27 come from [S4].",
+        "open_issues_before": 14,
+        "summary_before": "15 of 27 figures verified against source data (15 exact, 0 derived); 12 flagged (5 of them appear in a fetched web/news snippet; 6 labelled as assumptions). 8 paragraph(s) state figures without a citation.",
+        "accepted": true,
+        "open_issues_after": 11,
+        "summary_after": "16 of 26 figures verified against source data (16 exact, 0 derived); 10 flagged (4 of them appear in a fetched web/news snippet; 7 labelled as assumptions). 8 paragraph(s) state figures without a citation.",
+        "revised_report_text": "**Executive Summary**  \n- Consensus rating: Buy – 24 Strong‑Buy, 41 Buy, 3 Hold, 1 Sell (S3).  \n- Current share price: **$214.1** (S2).  \n- Target price: **$325** (S16) – upside ≈ 52.5 % (S16).  \n- P/E ≈ 26.8, P/B ≈ 20.8, P/S ≈ 17.0 – high multiples driven by AI‑chip demand (S4).  \n- Beta 2.266 indicates higher volatility; credit profile remains investment‑grade (S4).  \n\n**Core Analysis**  \n\n*Macro* – AI, cloud, and automotive sectors are the primary growth drivers for NVIDIA’s GPU business (likely).  \n\n*Sector* – Semiconductor valuation multiples are above peer average; growth expectations remain strong (likely).  \n\n*Credit* – ROE 110.1 %, net margin 63.66 % and strong cash‑flow support IG status (S4).  \n\n*Portfolio* – 52‑week high $243.4, low $164.3 – current price near the lower end of the range (S4).  \n\n**Scenarios**  \n\n| Scenario | Assumptions (citation) | Expected Outcome |\n|----------|------------------------|------------------|\n| **Base** | Consensus Buy, target $325 (S16), earnings growth 125 % YoY (S4). | 52‑week high reached, modest upside. |\n| **Upside** | AI‑chip demand accelerates, revenue growth 83.38 % YoY (S4). | Target price rises to ~$380 (assumption). |\n| **Downside** | Supply‑chain constraints, margin compression >10 % (assumption). | Price falls to ~$180 (assumption). |\n\n**Key Risks & Monitoring**  \n\n- **Valuation risk** – high multiples may not be sustainable if growth slows (likely).  \n- **Beta & volatility** – 2.266 beta could amplify market swings (S4).  \n- **Supply‑chain constraints** – semiconductor shortages could hit margins (likely).  \n- **Regulatory risk** – AI‑chip export controls could limit growth (likely).  \n- **Credit risk** – remains low; monitor cash‑flow trends (S4).  \n\n**Portfolio / Decision Implications**  \n\n- **Allocation** – consider 5–10 % of a growth‑focused portfolio in NVDA (assumption).  \n- **Entry timing** – target entry near earnings releases to capture guidance revisions (assumption).  \n- **Risk management** – stop‑loss at ~$190 (~30 % below current price) to hedge valuation pullback (assumption).  \n- **Diversification** – pair with other IG growth names (AMD, ASML) to reduce sector concentration (assumption).  \n\n**Conclusion**  \n- Analysts maintain a bullish consensus with a strong‑buy tilt; target price suggests significant upside if AI‑chip demand persists.  \n- High valuation multiples and beta warrant cautious sizing and active monitoring of supply‑chain and regulatory developments.  \n- A moderate allocation to NVIDIA can enhance growth exposure while preserving portfolio balance.  \n\n*See Table 1 for company profile, Table 2 for current quote, Table 3 for recommendation trends, Table 4 for key financial metrics.*"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "Finnhub company profile: NVDA",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub quote: NVDA",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "Quote as of 2026-10-16.",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub recommendation trends: NVDA",
+      "url": "https://finnhub.io/docs/api/recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub basic financials: NVDA",
+      "url": "https://finnhub.io/docs/api/company-basic-financials",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Dutch Bros (BROS) Is 52% Below Its All-Time High: Here's 1 Reason to Buy and 1 Reason to Pause.",
+      "url": "https://finnhub.io/api/news?id=2eaa3fb1b58bb473f603abd0bba8412ff8a770afa980d6e53d89c8609367b084",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-18: Investor enthusiasm toward the rising coffeehouse chain has clearly crashed.",
+      "id": "S5"
+    },
+    {
+      "title": "Own VGT? Here's How Much of It Is Really Nvidia, Apple, Microsoft, and Broadcom.",
+      "url": "https://finnhub.io/api/news?id=997c82bec29b639e1cac57a3bdc3156b75a04e58d14b2b935bca4a0e3da0bab0",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-18: This Vanguard tech ETF has beaten the Nasdaq-100 for the past 10 years -- but its portfolio is surprisingly top-heavy with just four big names.",
+      "id": "S6"
+    },
+    {
+      "title": "Moderna Just Joined the Nasdaq-100. Here's What That Means for Investors.",
+      "url": "https://finnhub.io/api/news?id=df82a56df15e90495c351ce929d7cbf38d5fb8c6da4a97e9263335a6b8ff7f6a",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-18: It was a head-turning headline. Here's why the market was buzzing.",
+      "id": "S7"
+    },
+    {
+      "title": "The Best Growth Stock to Invest $10,000 in Right Now",
+      "url": "https://finnhub.io/api/news?id=b7fcc2b45f4052e82a401295febec0036b949bf21668ec4ca201cb45bf953ccb",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-18: Sandisk's impressive growth potential can make it a multibagger by 2030.",
+      "id": "S8"
+    },
+    {
+      "title": "Ken Griffin Increased His Position in This Dividend King by a Whopping 546% in Q2. Here's Why It's Still a Buy.",
+      "url": "https://finnhub.io/api/news?id=570856080f30dedc6a30108c52b103de2d2d80bcd2821912f4052624a5a5ac89",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-18: It was Griffin's biggest add for Citadel last quarter.",
+      "id": "S9"
+    },
+    {
+      "title": "Archer Aviation Stock Is Down Roughly 50% This Year. Here's Why I'm Still Buying.",
+      "url": "https://finnhub.io/api/news?id=220cabcb26125d5b98b1a362fe0592c7a99ced4db4bee915734a52ae5cc3e96c",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-18: Archer is down but not out.",
+      "id": "S10"
+    },
+    {
+      "title": "NVIDIA (NVDA) Stock Forecast: Analyst Ratings, Predictions & Price Target 2026",
+      "url": "https://public.com/stocks/nvda/forecast-price-target",
+      "source": "web (Tavily)",
+      "snippet": "According to 36 analysts, NVIDIA (NVDA) has a Buy consensus rating as of Oct 15, 2026. This rating is provided by third-party analysts and is not investment advice from Public.com.  Wall Street analysts have set a price target of $329.78, reflecting a 0.00% increase from the current stock price. [...] NVIDIA (NVDA) has",
+      "id": "S11"
+    },
+    {
+      "title": "Wall Street Analysts Think Nvidia (NVDA) Is a Good Investment: Is It?",
+      "url": "https://au.finance.yahoo.com/news/wall-street-analysts-think-nvidia-133004232.html",
+      "source": "web (Tavily)",
+      "snippet": "Nvidia currently has an average brokerage recommendation (ABR) of 1.18, on a scale of 1 to 5 (Strong Buy to Strong Sell), calculated based on the actual recommendations (Buy, Hold, Sell, etc.) made by 50 brokerage firms. An ABR of 1.18 approximates between Strong Buy and Buy.  Of the 50 recommendations that derive the ",
+      "id": "S12"
+    },
+    {
+      "title": "Wall Street Analysts Think Nvidia (NVDA) Is a Good Investment: Is It?",
+      "url": "https://finance.yahoo.com/news/wall-street-analysts-think-nvidia-143006446.html",
+      "source": "web (Tavily)",
+      "snippet": "Let's take a look at what these Wall Street heavyweights have to say about Nvidia (NVDA) before we discuss the reliability of brokerage recommendations and how to use them to your advantage.  Nvidia currently has an average brokerage recommendation (ABR) of 1.13, on a scale of 1 to 5 (Strong Buy to Strong Sell), calcul",
+      "id": "S13"
+    },
+    {
+      "title": "Wall Street Analysts Think Nvidia (NVDA) Is a Good Investment: Is It?",
+      "url": "https://finance.yahoo.com/news/wall-street-analysts-think-nvidia-133009366.html",
+      "source": "web (Tavily)",
+      "snippet": "Let's take a look at what these Wall Street heavyweights have to say about Nvidia (NVDA) before we discuss the reliability of brokerage recommendations and how to use them to your advantage.  Nvidia currently has an average brokerage recommendation (ABR) of 1.20, on a scale of 1 to 5 (Strong Buy to Strong Sell), calcul",
+      "id": "S14"
+    },
+    {
+      "title": "Is Nvidia (NVDA) a Buy as Wall Street Analysts Look Optimistic?",
+      "url": "https://finance.yahoo.com/news/nvidia-nvda-buy-wall-street-143003635.html",
+      "source": "web (Tavily)",
+      "snippet": "Before we discuss the reliability of brokerage recommendations and how to use them to your advantage, let's see what these Wall Street heavyweights think about Nvidia (NVDA).  Nvidia currently has an average brokerage recommendation (ABR) of 1.16, on a scale of 1 to 5 (Strong Buy to Strong Sell), calculated based on th",
+      "id": "S15"
+    },
+    {
+      "title": "Nvidia (NVDA) Stock Forecast, Price Targets and Analysts Predictions - TipRanks.com",
+      "url": "https://www.tipranks.com/stocks/nvda/forecast",
+      "source": "web (Tavily)",
+      "snippet": "$325  Buy  52.55%  Upside  Reiterated  09/21/26  Nvidia (NVDA): New Buy Recommendation for This Technology Giant  Goldman Sachs Analyst forecast on NVDA  James Schneider  Goldman Sachs  Goldman Sachs  $300  Buy  40.81%  Upside  Reiterated  09/10/26  Nvidia Maintained at Buy as Analyst Cites Structural AI Advantages and",
+      "id": "S16"
+    }
+  ],
+  "citations_used": [],
+  "tables": [
+    {
+      "title": "NVDA Company Profile",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": null,
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/company-profile2",
+      "ticker": "NVDA",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "Company",
+          "NVIDIA Corp"
+        ],
+        [
+          "Exchange",
+          "NASDAQ NMS - GLOBAL MARKET"
+        ],
+        [
+          "Industry",
+          "Semiconductors"
+        ],
+        [
+          "Country",
+          "US"
+        ],
+        [
+          "Currency",
+          "USD"
+        ],
+        [
+          "IPO date",
+          "1999-01-22"
+        ],
+        [
+          "Market capitalization (USD)",
+          5160532898503.386
+        ],
+        [
+          "Shares outstanding",
+          24200000000.0
+        ]
+      ]
+    },
+    {
+      "title": "NVDA Quote",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": "daily",
+      "units": null,
+      "last_date": "2026-10-16",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/quote",
+      "ticker": "NVDA",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "Current price",
+          214.13
+        ],
+        [
+          "Change",
+          -3.1
+        ],
+        [
+          "Percent change (%)",
+          -1.4271
+        ],
+        [
+          "Open",
+          216.56
+        ],
+        [
+          "Day high",
+          218.676
+        ],
+        [
+          "Day low",
+          213.32
+        ],
+        [
+          "Previous close",
+          217.23
+        ]
+      ]
+    },
+    {
+      "title": "NVDA Analyst Recommendation Trends",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": "monthly",
+      "units": null,
+      "last_date": "2026-09-01",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/recommendation-trends",
+      "ticker": "NVDA",
+      "columns": [
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "2026-09-01",
+          24,
+          41,
+          3,
+          1,
+          0
+        ],
+        [
+          "2026-08-01",
+          23,
+          41,
+          3,
+          1,
+          0
+        ],
+        [
+          "2026-07-01",
+          24,
+          40,
+          4,
+          1,
+          0
+        ],
+        [
+          "2026-06-01",
+          24,
+          39,
+          4,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "NVDA Key Financial Metrics",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": null,
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/company-basic-financials",
+      "ticker": "NVDA",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "P/E (TTM)",
+          26.7553
+        ],
+        [
+          "P/B (quarterly)",
+          20.768
+        ],
+        [
+          "P/S (TTM)",
+          17.0332
+        ],
+        [
+          "EPS (TTM)",
+          7.9108
+        ],
+        [
+          "EPS growth TTM YoY (%)",
+          125.15
+        ],
+        [
+          "Revenue growth TTM YoY (%)",
+          83.38
+        ],
+        [
+          "ROE TTM (%)",
+          110.11
+        ],
+        [
+          "Net profit margin TTM (%)",
+          63.66
+        ],
+        [
+          "Dividend yield, indicated annual (%)",
+          0.03349
+        ],
+        [
+          "Beta",
+          2.2658267
+        ],
+        [
+          "52-week high",
+          243.37
+        ],
+        [
+          "52-week low",
+          164.27
+        ],
+        [
+          "52-week price return (%)",
+          17.7768
+        ]
+      ]
+    },
+    {
+      "title": "NVDA Recent News",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": "2026-10-18",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "",
+      "ticker": "NVDA",
+      "columns": [
+        "date",
+        "headline",
+        "publisher",
+        "url"
+      ],
+      "rows": [
+        [
+          "2026-10-18",
+          "Dutch Bros (BROS) Is 52% Below Its All-Time High: Here's 1 Reason to Buy and 1 Reason to Pause.",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=2eaa3fb1b58bb473f603abd0bba8412ff8a770afa980d6e53d89c8609367b084"
+        ],
+        [
+          "2026-10-18",
+          "Own VGT? Here's How Much of It Is Really Nvidia, Apple, Microsoft, and Broadcom.",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=997c82bec29b639e1cac57a3bdc3156b75a04e58d14b2b935bca4a0e3da0bab0"
+        ],
+        [
+          "2026-10-18",
+          "Moderna Just Joined the Nasdaq-100. Here's What That Means for Investors.",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=df82a56df15e90495c351ce929d7cbf38d5fb8c6da4a97e9263335a6b8ff7f6a"
+        ],
+        [
+          "2026-10-18",
+          "The Best Growth Stock to Invest $10,000 in Right Now",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=b7fcc2b45f4052e82a401295febec0036b949bf21668ec4ca201cb45bf953ccb"
+        ],
+        [
+          "2026-10-18",
+          "Ken Griffin Increased His Position in This Dividend King by a Whopping 546% in Q2. Here's Why It's Still a Buy.",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=570856080f30dedc6a30108c52b103de2d2d80bcd2821912f4052624a5a5ac89"
+        ],
+        [
+          "2026-10-18",
+          "Archer Aviation Stock Is Down Roughly 50% This Year. Here's Why I'm Still Buying.",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=220cabcb26125d5b98b1a362fe0592c7a99ced4db4bee915734a52ae5cc3e96c"
+        ]
+      ]
+    }
+  ],
+  "charts": [],
+  "data_status": [
+    {
+      "provider": "Finnhub",
+      "item": "profile NVDA",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "quote NVDA",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "recommendations NVDA",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "financials NVDA",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "news NVDA",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "validation": {
+    "counts": {
+      "figures": 26,
+      "verified": 16,
+      "derived": 0,
+      "unverified": 10
+    },
+    "figures": [
+      {
+        "text": "24",
+        "value": 24.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 50,
+        "end": 52,
+        "status": "verified",
+        "matched": "NVDA Analyst Recommendation Trends: strongBuy (2026-09-01)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Consensus rating: Buy – 24 Strong‑Buy, 41 Buy, 3 Hold, 1 Sell (S3)."
+      },
+      {
+        "text": "41",
+        "value": 41.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 65,
+        "end": 67,
+        "status": "verified",
+        "matched": "NVDA Analyst Recommendation Trends: buy (2026-09-01)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Consensus rating: Buy – 24 Strong‑Buy, 41 Buy, 3 Hold, 1 Sell (S3)."
+      },
+      {
+        "text": "3",
+        "value": 3.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 73,
+        "end": 74,
+        "status": "verified",
+        "matched": "NVDA Analyst Recommendation Trends: hold (2026-09-01)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Consensus rating: Buy – 24 Strong‑Buy, 41 Buy, 3 Hold, 1 Sell (S3)."
+      },
+      {
+        "text": "1",
+        "value": 1.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 81,
+        "end": 82,
+        "status": "verified",
+        "matched": "NVDA Analyst Recommendation Trends: sell (2026-09-01)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Consensus rating: Buy – 24 Strong‑Buy, 41 Buy, 3 Hold, 1 Sell (S3)."
+      },
+      {
+        "text": "$214.1",
+        "value": 214.1,
+        "unit": "$",
+        "tolerance": 0.050000001,
+        "start": 121,
+        "end": 127,
+        "status": "verified",
+        "matched": "NVDA Quote: Current price",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Current share price: **$214.1** (S2)."
+      },
+      {
+        "text": "$325",
+        "value": 325.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 156,
+        "end": 160,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S16",
+        "snippet_ids": [
+          "S16"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "- Target price: **$325** (S16) – upside ≈ 52.5 % (S16)."
+      },
+      {
+        "text": "52.5 %",
+        "value": 52.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 180,
+        "end": 186,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S16",
+        "snippet_ids": [
+          "S16"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "- Target price: **$325** (S16) – upside ≈ 52.5 % (S16)."
+      },
+      {
+        "text": "26.8",
+        "value": 26.8,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 204,
+        "end": 208,
+        "status": "verified",
+        "matched": "NVDA Key Financial Metrics: P/E (TTM)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- P/E ≈ 26.8, P/B ≈ 20.8, P/S ≈ 17.0 – high multiples driven by AI‑chip demand (S4)."
+      },
+      {
+        "text": "20.8",
+        "value": 20.8,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 216,
+        "end": 220,
+        "status": "verified",
+        "matched": "NVDA Key Financial Metrics: P/B (quarterly)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- P/E ≈ 26.8, P/B ≈ 20.8, P/S ≈ 17.0 – high multiples driven by AI‑chip demand (S4)."
+      },
+      {
+        "text": "17.0",
+        "value": 17.0,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 228,
+        "end": 232,
+        "status": "verified",
+        "matched": "NVDA Key Financial Metrics: P/S (TTM)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- P/E ≈ 26.8, P/B ≈ 20.8, P/S ≈ 17.0 – high multiples driven by AI‑chip demand (S4)."
+      },
+      {
+        "text": "2.266",
+        "value": 2.266,
+        "unit": "",
+        "tolerance": 0.000500001,
+        "start": 290,
+        "end": 295,
+        "status": "verified",
+        "matched": "NVDA Key Financial Metrics: Beta",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Beta 2.266 indicates higher volatility; credit profile remains investment‑grade (S4)."
+      },
+      {
+        "text": "110.1 %",
+        "value": 110.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 640,
+        "end": 647,
+        "status": "verified",
+        "matched": "NVDA Key Financial Metrics: ROE TTM (%)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "*Credit* – ROE 110.1 %, net margin 63.66 % and strong cash‑flow support IG status (S4)."
+      },
+      {
+        "text": "63.66 %",
+        "value": 63.66,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 660,
+        "end": 667,
+        "status": "verified",
+        "matched": "NVDA Key Financial Metrics: Net profit margin TTM (%)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "*Credit* – ROE 110.1 %, net margin 63.66 % and strong cash‑flow support IG status (S4)."
+      },
+      {
+        "text": "$243.4",
+        "value": 243.4,
+        "unit": "$",
+        "tolerance": 0.050000001,
+        "start": 743,
+        "end": 749,
+        "status": "verified",
+        "matched": "NVDA Key Financial Metrics: 52-week high",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "*Portfolio* – 52‑week high $243.4, low $164.3 – current price near the lower end of the range (S4)."
+      },
+      {
+        "text": "$164.3",
+        "value": 164.3,
+        "unit": "$",
+        "tolerance": 0.050000001,
+        "start": 755,
+        "end": 761,
+        "status": "verified",
+        "matched": "NVDA Key Financial Metrics: 52-week low",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "*Portfolio* – 52‑week high $243.4, low $164.3 – current price near the lower end of the range (S4)."
+      },
+      {
+        "text": "$325",
+        "value": 325.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 985,
+        "end": 989,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S16",
+        "snippet_ids": [
+          "S16"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | Consensus Buy, target $325 (S16), earnings growth 125 % YoY (S4)."
+      },
+      {
+        "text": "125 %",
+        "value": 125.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1013,
+        "end": 1018,
+        "status": "verified",
+        "matched": "NVDA Key Financial Metrics: EPS growth TTM YoY (%)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | Consensus Buy, target $325 (S16), earnings growth 125 % YoY (S4)."
+      },
+      {
+        "text": "83.38 %",
+        "value": 83.38,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1128,
+        "end": 1135,
+        "status": "verified",
+        "matched": "NVDA Key Financial Metrics: Revenue growth TTM YoY (%)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | AI‑chip demand accelerates, revenue growth 83.38 % YoY (S4)."
+      },
+      {
+        "text": "$380",
+        "value": 380.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 1171,
+        "end": 1175,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| Target price rises to ~$380 (assumption)."
+      },
+      {
+        "text": "10 %",
+        "value": 10.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1255,
+        "end": 1259,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | Supply‑chain constraints, margin compression >10 % (assumption)."
+      },
+      {
+        "text": "$180",
+        "value": 180.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 1292,
+        "end": 1296,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| Price falls to ~$180 (assumption)."
+      },
+      {
+        "text": "2.266",
+        "value": 2.266,
+        "unit": "",
+        "tolerance": 0.000500001,
+        "start": 1459,
+        "end": 1464,
+        "status": "verified",
+        "matched": "NVDA Key Financial Metrics: Beta",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- **Beta & volatility** – 2.266 beta could amplify market swings (S4)."
+      },
+      {
+        "text": "5",
+        "value": 5.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1808,
+        "end": 1809,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S12",
+        "snippet_ids": [
+          "S12",
+          "S13",
+          "S14",
+          "S15"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Allocation** – consider 5–10 % of a growth‑focused portfolio in NVDA (assumption)."
+      },
+      {
+        "text": "10 %",
+        "value": 10.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1810,
+        "end": 1814,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Allocation** – consider 5–10 % of a growth‑focused portfolio in NVDA (assumption)."
+      },
+      {
+        "text": "$190",
+        "value": 190.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 2010,
+        "end": 2014,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Risk management** – stop‑loss at ~$190 (~30 % below current price) to hedge valuation pullback (assumption)."
+      },
+      {
+        "text": "30 %",
+        "value": 30.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2017,
+        "end": 2021,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Risk management** – stop‑loss at ~$190 (~30 % below current price) to hedge valuation pullback (assumption)."
+      }
+    ],
+    "citations": {
+      "markers": 0,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "- Consensus rating: Buy – 24 Strong‑Buy, 41 Buy, 3 Hold, 1 Sell (S3).",
+          "figures": [
+            "24",
+            "41",
+            "3",
+            "1"
+          ],
+          "sources": [
+            "S3"
+          ]
+        },
+        {
+          "text": "- Current share price: **$214.1** (S2).",
+          "figures": [
+            "$214.1"
+          ],
+          "sources": [
+            "S2"
+          ]
+        },
+        {
+          "text": "- P/E ≈ 26.8, P/B ≈ 20.8, P/S ≈ 17.0 – high multiples driven by AI‑chip demand (S4).",
+          "figures": [
+            "26.8",
+            "20.8",
+            "17.0"
+          ],
+          "sources": [
+            "S4"
+          ]
+        },
+        {
+          "text": "- Beta 2.266 indicates higher volatility; credit profile remains investment‑grade (S4).",
+          "figures": [
+            "2.266"
+          ],
+          "sources": [
+            "S4"
+          ]
+        },
+        {
+          "text": "*Credit* – ROE 110.1 %, net margin 63.66 % and strong cash‑flow support IG status (S4).",
+          "figures": [
+            "110.1 %",
+            "63.66 %"
+          ],
+          "sources": [
+            "S4"
+          ]
+        },
+        {
+          "text": "*Portfolio* – 52‑week high $243.4, low $164.3 – current price near the lower end of the range (S4).",
+          "figures": [
+            "$243.4",
+            "$164.3"
+          ],
+          "sources": [
+            "S4"
+          ]
+        },
+        {
+          "text": "| Scenario | Assumptions (citation) | Expected Outcome |\n|----------|------------------------|------------------|\n| **Base** | Consensus Buy, target $325 (S16), earnings growth 125 % YoY (S4). | 52‑we",
+          "figures": [
+            "125 %",
+            "83.38 %"
+          ],
+          "sources": [
+            "S4"
+          ]
+        },
+        {
+          "text": "- **Beta & volatility** – 2.266 beta could amplify market swings (S4).",
+          "figures": [
+            "2.266"
+          ],
+          "sources": [
+            "S4"
+          ]
+        }
+      ],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "NVDA Quote",
+        "last_date": "2026-10-16",
+        "frequency": "daily",
+        "age_days": 2,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "NVDA Analyst Recommendation Trends",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "NVDA Recent News",
+        "last_date": "2026-10-18",
+        "frequency": null,
+        "age_days": null,
+        "max_age_days": null,
+        "status": "n/a"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16"
+    ],
+    "open_issues": 11,
+    "summary": "16 of 26 figures verified against source data (16 exact, 0 derived); 10 flagged (4 of them appear in a fetched web/news snippet; 7 labelled as assumptions). 8 paragraph(s) state figures without a citation."
+  },
+  "run_meta": {
+    "run_id": "20261018-105910-d32bf6",
+    "timestamp": "2026-10-18T14:59:10+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}

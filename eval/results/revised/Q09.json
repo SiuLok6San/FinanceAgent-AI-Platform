@@ -1,0 +1,6176 @@
+{
+  "id": "Q09",
+  "category": "credit",
+  "question": "How does higher-for-longer rates affect U.S. IG vs HY credit spreads?",
+  "ticker": null,
+  "expected_tags": [
+    "credit",
+    "rates"
+  ],
+  "pipeline": "revised",
+  "run_utc": "2026-10-18T14:54:12+00:00",
+  "elapsed_sec": 90.3,
+  "router_tags": [
+    "rates",
+    "credit"
+  ],
+  "tier2": {
+    "rates": "fed_hike_cycle",
+    "credit": "ig_vs_hy"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- U.S. Treasury 10‑yr yield 5.10 % [S2]; Fed funds 3.75 % [S1].  \n- Current IG OAS 0.84 % [S4]; HY OAS 3.23 % [S3]; HY–IG spread 2.39 pp [S3][S4].  \n- Higher‑for‑longer expectations likely tighten liquidity and expand default‑risk premia, widening both IG and HY spreads, with HY more sensitive [S5][S7][S9].  \n- A 25‑bp rise in the 10‑yr yield is likely to widen IG spreads by ~0.5‑1 pp and HY spreads by ~1.5‑2 pp (assumption) [S1][S2][S3][S4].  \n- Portfolio impact: IG portfolios face modest spread pressure; HY portfolios face significant compression risk and higher volatility.  \n\n---\n\n**Core Analysis**\n\n*Macro backdrop*  \n- Fed funds 3.75 % vs 10‑yr Treasury 5.10 % → Fed‑funds minus Treasury = –1.35 pp [S1][S2].  \n- 10‑yr yield change since last month: –0.09 pp [S2].  \n- Fed funds change: +0.12 pp [S1].  \n\n*Current spread levels*  \n- IG OAS 0.84 % [S4].  \n- HY OAS 3.23 % [S3].  \n- HY–IG spread 2.39 pp [S3][S4].  \n- Treasury–HY spread 1.87 pp [S2][S3].  \n- Treasury–IG spread 4.26 pp [S2][S4].  \n\n*Rate‑sensitivity*  \n- IG spreads track Treasury yields but with lower elasticity; HY spreads are more responsive to rate changes due to larger default‑risk premium [S8][S7].  \n- Higher‑for‑longer expectations compress liquidity premia, pushing both IG and HY spreads higher, but the effect is magnified in HY because of its higher default‑risk exposure [S9].  \n\n*Liquidity & risk‑premia decomposition*  \n- IG spreads comprise liquidity and default‑risk components; HY spreads are dominated by risk‑premia [S8].  \n\n*Event‑study insight*  \n- Fed rate‑hike announcements tend to lift IG spreads by ~0.3 pp and HY spreads by ~0.8 pp over a 5‑day window (assumption) [S4].  \n\n---\n\n**Scenarios**\n\n- **Base** – 10‑yr yield unchanged; IG spread unchanged; HY spread unchanged; spread differential 2.39 pp [S2][S3][S4].  \n- **Upside** – 10‑yr yield +25 bp; IG spread +0.5‑1 pp; HY spread +1.5‑2 pp; spread differential 3.39‑4.39 pp (assumption) [S1][S2][S3][S4].  \n- **Downside** – 10‑yr yield –25 bp; IG spread –0.5‑1 pp; HY spread –1.5‑2 pp; spread differential 1.39‑0.39 pp (assumption) [S1][S2][S3][S4].  \n\n---\n\n**Key Risks & Monitoring**\n\n- Yield‑curve shifts: Monitor daily 10‑yr Treasury yield changes [S2].  \n- Fed policy signals: Track Fed minutes and forward‑guidance for higher‑for‑longer expectations [S5].  \n- Credit default swap spreads: Rising CDS spreads signal widening risk premia, especially for HY [S5].  \n- Liquidity metrics: Monitor bid‑ask spreads and trading volumes in IG and HY markets; tightening liquidity can accelerate spread widening [S9].  \n- Sector‑specific stress: Monitor earnings and leverage in high‑yield sectors (e.g., energy, telecom) that are more sensitive to rate hikes [S10].  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **IG portfolios** – Expect modest spread pressure; duration risk remains manageable. Consider Treasury futures or credit‑VIX hedges to mitigate duration exposure; limited protection against spread widening.  \n- **HY portfolios** – Anticipate larger spread compression; higher volatility and liquidity risk. Sector rotation toward defensive industries (utilities, consumer staples) can reduce default risk. Use credit‑spread options or swaps for targeted hedging; maintain liquidity buffer for potential redemptions.  \n- **Cross‑asset strategy** – Pair IG and HY holdings to capture widening spread differential; requires tighter risk monitoring due to HY volatility. Duration‑matched Treasury indices can isolate pure credit‑spread movements.  \n\n---\n\n**Conclusion**\n\nHigher‑for‑longer rates are tightening liquidity and expanding default‑risk premia, leading to widening U.S. credit spreads. The impact is more pronounced for high‑yield bonds, which exhibit greater sensitivity to Treasury yield movements and higher default‑risk exposure. IG portfolios face moderate spread pressure; HY portfolios face significant compression risk and higher volatility. Active monitoring of Treasury yields, Fed guidance, CDS spreads, and liquidity metrics, coupled with targeted hedging and sector rotation, is essential to manage the differential impact on IG versus HY credit spreads.",
+  "report_text_annotated": "> **Validation:** 27 of 37 figures verified against source data (14 exact, 13 derived); 10 flagged (10 labelled as assumptions).\n\n**Executive Summary**  \n- U.S. Treasury 10‑yr yield 5.10 % [S2]; Fed funds 3.75 % [S1].  \n- Current IG OAS 0.84 % [S4]; HY OAS 3.23 % [S3]; HY–IG spread 2.39 pp [S3][S4].  \n- Higher‑for‑longer expectations likely tighten liquidity and expand default‑risk premia, widening both IG and HY spreads, with HY more sensitive [S5][S7][S9].  \n- A 25‑bp rise in the 10‑yr yield is likely to widen IG spreads by ~0.5‑1 pp and HY spreads by ~1.5‑2 pp (assumption) [S1][S2][S3][S4].  \n- Portfolio impact: IG portfolios face modest spread pressure; HY portfolios face significant compression risk and higher volatility.  \n\n---\n\n**Core Analysis**\n\n*Macro backdrop*  \n- Fed funds 3.75 % vs 10‑yr Treasury 5.10 % → Fed‑funds minus Treasury = –1.35 pp [S1][S2].  \n- 10‑yr yield change since last month: –0.09 pp [S2].  \n- Fed funds change: +0.12 pp [S1].  \n\n*Current spread levels*  \n- IG OAS 0.84 % [S4].  \n- HY OAS 3.23 % [S3].  \n- HY–IG spread 2.39 pp [S3][S4].  \n- Treasury–HY spread 1.87 pp [S2][S3].  \n- Treasury–IG spread 4.26 pp [S2][S4].  \n\n*Rate‑sensitivity*  \n- IG spreads track Treasury yields but with lower elasticity; HY spreads are more responsive to rate changes due to larger default‑risk premium [S8][S7].  \n- Higher‑for‑longer expectations compress liquidity premia, pushing both IG and HY spreads higher, but the effect is magnified in HY because of its higher default‑risk exposure [S9].  \n\n*Liquidity & risk‑premia decomposition*  \n- IG spreads comprise liquidity and default‑risk components; HY spreads are dominated by risk‑premia [S8].  \n\n*Event‑study insight*  \n- Fed rate‑hike announcements tend to lift IG spreads by ~0.3 pp and HY spreads by ~0.8 pp over a 5‑day window (assumption) [S4].  \n\n---\n\n**Scenarios**\n\n- **Base** – 10‑yr yield unchanged; IG spread unchanged; HY spread unchanged; spread differential 2.39 pp [S2][S3][S4].  \n- **Upside** – 10‑yr yield +25 bp; IG spread +0.5‑1 pp; HY spread +1.5‑2 pp; spread differential 3.39‑4.39 pp (assumption) [S1][S2][S3][S4].  \n- **Downside** – 10‑yr yield –25 bp; IG spread –0.5‑1 pp; HY spread –1.5‑2 pp; spread differential 1.39‑0.39 pp (assumption) [S1][S2][S3][S4].  \n\n---\n\n**Key Risks & Monitoring**\n\n- Yield‑curve shifts: Monitor daily 10‑yr Treasury yield changes [S2].  \n- Fed policy signals: Track Fed minutes and forward‑guidance for higher‑for‑longer expectations [S5].  \n- Credit default swap spreads: Rising CDS spreads signal widening risk premia, especially for HY [S5].  \n- Liquidity metrics: Monitor bid‑ask spreads and trading volumes in IG and HY markets; tightening liquidity can accelerate spread widening [S9].  \n- Sector‑specific stress: Monitor earnings and leverage in high‑yield sectors (e.g., energy, telecom) that are more sensitive to rate hikes [S10].  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **IG portfolios** – Expect modest spread pressure; duration risk remains manageable. Consider Treasury futures or credit‑VIX hedges to mitigate duration exposure; limited protection against spread widening.  \n- **HY portfolios** – Anticipate larger spread compression; higher volatility and liquidity risk. Sector rotation toward defensive industries (utilities, consumer staples) can reduce default risk. Use credit‑spread options or swaps for targeted hedging; maintain liquidity buffer for potential redemptions.  \n- **Cross‑asset strategy** – Pair IG and HY holdings to capture widening spread differential; requires tighter risk monitoring due to HY volatility. Duration‑matched Treasury indices can isolate pure credit‑spread movements.  \n\n---\n\n**Conclusion**\n\nHigher‑for‑longer rates are tightening liquidity and expanding default‑risk premia, leading to widening U.S. credit spreads. The impact is more pronounced for high‑yield bonds, which exhibit greater sensitivity to Treasury yield movements and higher default‑risk exposure. IG portfolios face moderate spread pressure; HY portfolios face significant compression risk and higher volatility. Active monitoring of Treasury yields, Fed guidance, CDS spreads, and liquidity metrics, coupled with targeted hedging and sector rotation, is essential to manage the differential impact on IG versus HY credit spreads.",
+  "draft_report_text": "**Executive Summary**  \n- U.S. Treasury yields have risen to 5.10 % (10‑yr) while the Fed funds rate sits at 3.75 % [S1][S2].  \n- Current credit spreads: IG OAS = 0.84 % [S4]; HY OAS = 3.23 % [S3]; HY–IG differential = 2.39 pp [S3][S4].  \n- Higher‑for‑longer expectations are tightening liquidity and expanding default‑risk premia, widening both IG and HY spreads, with HY more sensitive.  \n- A 25‑bp rise in the 10‑yr yield is likely to widen IG spreads by ~0.5‑1 pp and HY spreads by ~1.5‑2 pp (assumption).  \n- Portfolio impact: IG portfolios face modest spread pressure; HY portfolios face significant compression risk and higher volatility.\n\n---\n\n**Core Analysis**\n\n*Macro backdrop*  \n- Fed funds 3.75 % vs 10‑yr Treasury 5.10 % → Fed‑funds minus Treasury = –1.35 pp [S1][S2].  \n- 10‑yr yield has risen ~1.05 pp since 2025‑10‑10, reflecting higher‑for‑longer sentiment [S2].  \n\n*Current spread levels*  \n- IG OAS 0.84 % [S4]; HY OAS 3.23 % [S3].  \n- HY–IG spread differential 2.39 pp; Treasury–HY 1.87 pp; Treasury–IG 4.26 pp [S3][S4].  \n\n*Rate‑sensitivity*  \n- IG spreads track Treasury yields but with lower elasticity; HY spreads are more responsive to rate changes due to larger default‑risk premium [S8][S7].  \n- Higher‑for‑longer expectations compress liquidity premia, pushing both IG and HY spreads higher, but the effect is magnified in HY because of its higher default‑risk exposure [S9].  \n\n*Liquidity & risk‑premia decomposition*  \n- IG spreads: ~70 % liquidity + default‑risk premia; HY spreads: ~80 % risk‑premia component [S8].  \n- Rising rates increase borrowing costs, tightening liquidity and expanding risk premia, especially for HY [S9].  \n\n*Event‑study insight* (scenario)  \n- Fed rate‑hike announcements tend to lift IG spreads by ~0.3 pp and HY spreads by ~0.8 pp over a 5‑day window (assumption).  \n\n---\n\n**Scenarios**\n\n| Scenario | 10‑yr Yield Move | IG Spread Impact | HY Spread Impact | Spread Differential |\n|----------|------------------|------------------|------------------|---------------------|\n| Base | +0 bp | ~0 pp | ~0 pp | 2.39 pp |\n| Upside | +25 bp | +0.5‑1 pp (assumption) | +1.5‑2 pp (assumption) | 3.39‑4.39 pp |\n| Downside | –25 bp | –0.5‑1 pp (assumption) | –1.5‑2 pp (assumption) | 1.39‑0.39 pp |\n\n*Assumptions* are based on historical sensitivity estimates and qualitative market expectations [S5][S7][S9].\n\n---\n\n**Key Risks & Monitoring**\n\n- **Yield‑curve shifts**: Monitor daily 10‑yr Treasury yield changes [S2].  \n- **Fed policy signals**: Track Fed minutes and forward‑guidance for higher‑for‑longer expectations [S5].  \n- **Credit default swap (CDS) spreads**: Rising CDS spreads signal widening risk premia, especially for HY [S5].  \n- **Liquidity metrics**: Monitor bid‑ask spreads and trading volumes in IG and HY markets; tightening liquidity can accelerate spread widening [S9].  \n- **Sector‑specific stress**: Monitor earnings and leverage in high‑yield sectors (e.g., energy, telecom) that are more sensitive to rate hikes [S10].\n\n---\n\n**Portfolio / Decision Implications**\n\n- **IG portfolios**  \n  - Expect modest spread pressure; duration risk remains manageable.  \n  - Consider Treasury futures or credit‑VIX hedges to mitigate duration exposure; limited protection against spread widening.  \n\n- **HY portfolios**  \n  - Anticipate larger spread compression; higher volatility and liquidity risk.  \n  - Sector rotation toward defensive industries (utilities, consumer staples) can reduce default risk.  \n  - Use credit‑spread options or swaps for targeted hedging; maintain liquidity buffer for potential redemptions.  \n\n- **Cross‑asset strategy**  \n  - Pair IG and HY holdings to capture widening spread differential; requires tighter risk monitoring due to HY volatility.  \n  - Duration‑matched Treasury indices can isolate pure credit‑spread movements.  \n\n---\n\n**Conclusion**\n\nHigher‑for‑longer rates are tightening liquidity and expanding default‑risk premia, leading to widening U.S. credit spreads. The impact is more pronounced for high‑yield bonds, which exhibit greater sensitivity to Treasury yield movements and higher default‑risk exposure. IG portfolios face moderate spread pressure; HY portfolios face significant compression risk and higher volatility. Active monitoring of Treasury yields, Fed guidance, CDS spreads, and liquidity metrics, coupled with targeted hedging and sector rotation, is essential to manage the differential impact on IG versus HY credit spreads.",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"10\" in: \"- 10‑yr yield has risen ~1.05 pp since 2025‑10‑10, reflecting higher‑for‑longer sentiment [S2].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n2. \"10\" in: \"- 10‑yr yield has risen ~1.05 pp since 2025‑10‑10, reflecting higher‑for‑longer sentiment [S2].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n3. \"70 %\" in: \"- IG spreads: ~70 % liquidity + default‑risk premia; HY spreads: ~80 % risk‑premia component [S8].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n4. \"80 %\" in: \"- IG spreads: ~70 % liquidity + default‑risk premia; HY spreads: ~80 % risk‑premia component [S8].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n5. Add a citation to: \"- A 25‑bp rise in the 10‑yr yield is likely to widen IG spreads by ~0.5‑1 pp and HY spreads by ~1.5‑2 pp (assumption).\" — its figures 0.5, 1 pp, 2 pp come from [S1], [S2], [S3], [S4].\n6. Add a citation to: \"- Fed rate‑hike announcements tend to lift IG spreads by ~0.3 pp and HY spreads by ~0.8 pp over a 5‑day window (assumption).\" — its figures 0.8 pp come from [S4].\n7. Add a citation to: \"| Scenario | 10‑yr Yield Move | IG Spread Impact | HY Spread Impact | Spread Differential |\n|----------|------------------|------------------|------------------\" — its figures +0 bp, 0 pp, 0 pp, 2.39 pp, +0.5, 1 pp, 2 pp, 4.39 pp, –0.5, 1 pp, 2 pp come from [S1], [S2], [S3], [S4].\n8. \"- HY–IG spread differential 2.39 pp; Treasury–HY 1.87 pp; Treasury–IG 4.26 pp [S3][S4].\" cites S3, S4, but figures 4.26 pp come from [S2], [S3], [S4].",
+        "open_issues_before": 8,
+        "summary_before": "29 of 43 figures verified against source data (14 exact, 15 derived); 14 flagged (10 labelled as assumptions). 3 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.",
+        "accepted": true,
+        "open_issues_after": 0,
+        "summary_after": "27 of 37 figures verified against source data (14 exact, 13 derived); 10 flagged (10 labelled as assumptions).",
+        "revised_report_text": "**Executive Summary**  \n- U.S. Treasury 10‑yr yield 5.10 % [S2]; Fed funds 3.75 % [S1].  \n- Current IG OAS 0.84 % [S4]; HY OAS 3.23 % [S3]; HY–IG spread 2.39 pp [S3][S4].  \n- Higher‑for‑longer expectations likely tighten liquidity and expand default‑risk premia, widening both IG and HY spreads, with HY more sensitive [S5][S7][S9].  \n- A 25‑bp rise in the 10‑yr yield is likely to widen IG spreads by ~0.5‑1 pp and HY spreads by ~1.5‑2 pp (assumption) [S1][S2][S3][S4].  \n- Portfolio impact: IG portfolios face modest spread pressure; HY portfolios face significant compression risk and higher volatility.  \n\n---\n\n**Core Analysis**\n\n*Macro backdrop*  \n- Fed funds 3.75 % vs 10‑yr Treasury 5.10 % → Fed‑funds minus Treasury = –1.35 pp [S1][S2].  \n- 10‑yr yield change since last month: –0.09 pp [S2].  \n- Fed funds change: +0.12 pp [S1].  \n\n*Current spread levels*  \n- IG OAS 0.84 % [S4].  \n- HY OAS 3.23 % [S3].  \n- HY–IG spread 2.39 pp [S3][S4].  \n- Treasury–HY spread 1.87 pp [S2][S3].  \n- Treasury–IG spread 4.26 pp [S2][S4].  \n\n*Rate‑sensitivity*  \n- IG spreads track Treasury yields but with lower elasticity; HY spreads are more responsive to rate changes due to larger default‑risk premium [S8][S7].  \n- Higher‑for‑longer expectations compress liquidity premia, pushing both IG and HY spreads higher, but the effect is magnified in HY because of its higher default‑risk exposure [S9].  \n\n*Liquidity & risk‑premia decomposition*  \n- IG spreads comprise liquidity and default‑risk components; HY spreads are dominated by risk‑premia [S8].  \n\n*Event‑study insight*  \n- Fed rate‑hike announcements tend to lift IG spreads by ~0.3 pp and HY spreads by ~0.8 pp over a 5‑day window (assumption) [S4].  \n\n---\n\n**Scenarios**\n\n- **Base** – 10‑yr yield unchanged; IG spread unchanged; HY spread unchanged; spread differential 2.39 pp [S2][S3][S4].  \n- **Upside** – 10‑yr yield +25 bp; IG spread +0.5‑1 pp; HY spread +1.5‑2 pp; spread differential 3.39‑4.39 pp (assumption) [S1][S2][S3][S4].  \n- **Downside** – 10‑yr yield –25 bp; IG spread –0.5‑1 pp; HY spread –1.5‑2 pp; spread differential 1.39‑0.39 pp (assumption) [S1][S2][S3][S4].  \n\n---\n\n**Key Risks & Monitoring**\n\n- Yield‑curve shifts: Monitor daily 10‑yr Treasury yield changes [S2].  \n- Fed policy signals: Track Fed minutes and forward‑guidance for higher‑for‑longer expectations [S5].  \n- Credit default swap spreads: Rising CDS spreads signal widening risk premia, especially for HY [S5].  \n- Liquidity metrics: Monitor bid‑ask spreads and trading volumes in IG and HY markets; tightening liquidity can accelerate spread widening [S9].  \n- Sector‑specific stress: Monitor earnings and leverage in high‑yield sectors (e.g., energy, telecom) that are more sensitive to rate hikes [S10].  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **IG portfolios** – Expect modest spread pressure; duration risk remains manageable. Consider Treasury futures or credit‑VIX hedges to mitigate duration exposure; limited protection against spread widening.  \n- **HY portfolios** – Anticipate larger spread compression; higher volatility and liquidity risk. Sector rotation toward defensive industries (utilities, consumer staples) can reduce default risk. Use credit‑spread options or swaps for targeted hedging; maintain liquidity buffer for potential redemptions.  \n- **Cross‑asset strategy** – Pair IG and HY holdings to capture widening spread differential; requires tighter risk monitoring due to HY volatility. Duration‑matched Treasury indices can isolate pure credit‑spread movements.  \n\n---\n\n**Conclusion**\n\nHigher‑for‑longer rates are tightening liquidity and expanding default‑risk premia, leading to widening U.S. credit spreads. The impact is more pronounced for high‑yield bonds, which exhibit greater sensitivity to Treasury yield movements and higher default‑risk exposure. IG portfolios face moderate spread pressure; HY portfolios face significant compression risk and higher volatility. Active monitoring of Treasury yields, Fed guidance, CDS spreads, and liquidity metrics, coupled with targeted hedging and sector rotation, is essential to manage the differential impact on IG versus HY credit spreads."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FRED series FEDFUNDS: Effective Federal Funds Rate",
+      "url": "https://fred.stlouisfed.org/series/FEDFUNDS",
+      "source": "FRED",
+      "snippet": "Monthly series in Percent; latest observation 3.75 on 2026-09-01.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series DGS10: 10-Year Treasury Constant Maturity Yield",
+      "url": "https://fred.stlouisfed.org/series/DGS10",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 5.1 on 2026-10-15.",
+      "id": "S2"
+    },
+    {
+      "title": "FRED series BAMLH0A0HYM2: ICE BofA US High Yield Option-Adjusted Spread",
+      "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 3.23 on 2026-10-15.",
+      "id": "S3"
+    },
+    {
+      "title": "FRED series BAMLC0A0CM: ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread",
+      "url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 0.84 on 2026-10-15.",
+      "id": "S4"
+    },
+    {
+      "title": "US corporate bond spreads widen as hopes dim for soft landing",
+      "url": "https://ca.finance.yahoo.com/news/us-corporate-bond-spreads-widen-163626693.html",
+      "source": "web (Tavily)",
+      "snippet": "Credit spreads could widen further, especially if U.S. Treasury bonds continue their sell-off and the market accepts higher-for-longer interest rates from the U.S. Federal Reserve, said Krieter.  High yield bond spreads widened 15 bps on Tuesday to 426 bps, according to the ICE BofA High Yield Index Option-Adjusted Spr",
+      "id": "S5"
+    },
+    {
+      "title": "Market Insight – Understanding the current credit cycle",
+      "url": "https://finance.yahoo.com/news/market-insight-understanding-current-credit-001705439.html",
+      "source": "web (Tavily)",
+      "snippet": "These developments should further restrict financial conditions, which have eased considerably since last year against a backdrop of resilient economic growth, enabling companies to refinance on capital markets, albeit at a higher cost. At time of writing, the yield offered in US IG corporate bonds markets stands at 5.",
+      "id": "S6"
+    },
+    {
+      "title": "The relationship between interest rates and credit spreads",
+      "url": "https://finance.yahoo.com/news/relationship-between-interest-rates-credit-130021479.html",
+      "source": "web (Tavily)",
+      "snippet": "are falling, the credit spread for high-yield bonds is getting wider.",
+      "id": "S7"
+    },
+    {
+      "title": "How Fed Policy Can Impact Corporate Bond Spreads",
+      "url": "https://finance.yahoo.com/news/fed-policy-impact-corporate-bond-164300838.html",
+      "source": "web (Tavily)",
+      "snippet": "Over the last five years, the average OAS for the IG Index is 1.06%, and the average for the HY Index is 3.50%. Both indexes' OAS are currently low relative to their five-year averages as of September 22, 2025, indicating a lower risk credit market: [...] The clear differences in the OAS behavior between the two indexe",
+      "id": "S8"
+    },
+    {
+      "title": "Hedging investment-grade and high-yield bonds with credit VIX",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0165176524001137",
+      "source": "web (Tavily)",
+      "snippet": "## Introduction  The credit stress in North America has been mounting. Increased borrowing costs under a higher interest rate and inflation regime seem persistent, adversely affecting the capacity of the borrower to repay debt and interests, especially for low-grade bond issuers.1 In such a worrying credit environment,",
+      "id": "S9"
+    },
+    {
+      "title": "High yield bonds: Can tight credit spreads persist? - Janus Henderson Investors - US Investor",
+      "url": "https://www.janushenderson.com/en-us/investor/article/high-yield-bonds-can-tight-credit-spreads-persist",
+      "source": "web (Tavily)",
+      "snippet": "## 4. Ratings changes mean spreads may not be all that tight  High yield indices are, on average, better quality than in previous credit cycles, i.e. the index today has a higher proportion of BB rated bonds and fewer of the lower quality CCC rated bonds, so it is somewhat unfair to compare with spread tights of the pa",
+      "id": "S10"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S7",
+    "S8",
+    "S9",
+    "S10"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Effective Federal Funds Rate (FEDFUNDS)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "FEDFUNDS",
+      "frequency": "monthly",
+      "units": "Percent",
+      "last_date": "2026-09-01",
+      "topics": [
+        "rates"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/FEDFUNDS",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2024-04-01",
+          5.33
+        ],
+        [
+          "2024-05-01",
+          5.33
+        ],
+        [
+          "2024-06-01",
+          5.33
+        ],
+        [
+          "2024-07-01",
+          5.33
+        ],
+        [
+          "2024-08-01",
+          5.33
+        ],
+        [
+          "2024-09-01",
+          5.13
+        ],
+        [
+          "2024-10-01",
+          4.83
+        ],
+        [
+          "2024-11-01",
+          4.64
+        ],
+        [
+          "2024-12-01",
+          4.48
+        ],
+        [
+          "2025-01-01",
+          4.33
+        ],
+        [
+          "2025-02-01",
+          4.33
+        ],
+        [
+          "2025-03-01",
+          4.33
+        ],
+        [
+          "2025-04-01",
+          4.33
+        ],
+        [
+          "2025-05-01",
+          4.33
+        ],
+        [
+          "2025-06-01",
+          4.33
+        ],
+        [
+          "2025-07-01",
+          4.33
+        ],
+        [
+          "2025-08-01",
+          4.33
+        ],
+        [
+          "2025-09-01",
+          4.22
+        ],
+        [
+          "2025-10-01",
+          4.09
+        ],
+        [
+          "2025-11-01",
+          3.88
+        ],
+        [
+          "2025-12-01",
+          3.72
+        ],
+        [
+          "2026-01-01",
+          3.64
+        ],
+        [
+          "2026-02-01",
+          3.64
+        ],
+        [
+          "2026-03-01",
+          3.64
+        ],
+        [
+          "2026-04-01",
+          3.64
+        ],
+        [
+          "2026-05-01",
+          3.63
+        ],
+        [
+          "2026-06-01",
+          3.63
+        ],
+        [
+          "2026-07-01",
+          3.63
+        ],
+        [
+          "2026-08-01",
+          3.63
+        ],
+        [
+          "2026-09-01",
+          3.75
+        ]
+      ]
+    },
+    {
+      "title": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "DGS10",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "rates"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/DGS10",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-03",
+          4.13
+        ],
+        [
+          "2025-10-06",
+          4.18
+        ],
+        [
+          "2025-10-07",
+          4.14
+        ],
+        [
+          "2025-10-08",
+          4.13
+        ],
+        [
+          "2025-10-09",
+          4.14
+        ],
+        [
+          "2025-10-10",
+          4.05
+        ],
+        [
+          "2025-10-14",
+          4.03
+        ],
+        [
+          "2025-10-15",
+          4.05
+        ],
+        [
+          "2025-10-16",
+          3.99
+        ],
+        [
+          "2025-10-17",
+          4.02
+        ],
+        [
+          "2025-10-20",
+          4.0
+        ],
+        [
+          "2025-10-21",
+          3.98
+        ],
+        [
+          "2025-10-22",
+          3.97
+        ],
+        [
+          "2025-10-23",
+          4.01
+        ],
+        [
+          "2025-10-24",
+          4.02
+        ],
+        [
+          "2025-10-27",
+          4.01
+        ],
+        [
+          "2025-10-28",
+          3.99
+        ],
+        [
+          "2025-10-29",
+          4.08
+        ],
+        [
+          "2025-10-30",
+          4.11
+        ],
+        [
+          "2025-10-31",
+          4.11
+        ],
+        [
+          "2025-11-03",
+          4.13
+        ],
+        [
+          "2025-11-04",
+          4.1
+        ],
+        [
+          "2025-11-05",
+          4.17
+        ],
+        [
+          "2025-11-06",
+          4.11
+        ],
+        [
+          "2025-11-07",
+          4.11
+        ],
+        [
+          "2025-11-10",
+          4.13
+        ],
+        [
+          "2025-11-12",
+          4.08
+        ],
+        [
+          "2025-11-13",
+          4.11
+        ],
+        [
+          "2025-11-14",
+          4.14
+        ],
+        [
+          "2025-11-17",
+          4.13
+        ],
+        [
+          "2025-11-18",
+          4.12
+        ],
+        [
+          "2025-11-19",
+          4.13
+        ],
+        [
+          "2025-11-20",
+          4.1
+        ],
+        [
+          "2025-11-21",
+          4.06
+        ],
+        [
+          "2025-11-24",
+          4.04
+        ],
+        [
+          "2025-11-25",
+          4.01
+        ],
+        [
+          "2025-11-26",
+          4.0
+        ],
+        [
+          "2025-11-28",
+          4.02
+        ],
+        [
+          "2025-12-01",
+          4.09
+        ],
+        [
+          "2025-12-02",
+          4.09
+        ],
+        [
+          "2025-12-03",
+          4.06
+        ],
+        [
+          "2025-12-04",
+          4.11
+        ],
+        [
+          "2025-12-05",
+          4.14
+        ],
+        [
+          "2025-12-08",
+          4.17
+        ],
+        [
+          "2025-12-09",
+          4.18
+        ],
+        [
+          "2025-12-10",
+          4.13
+        ],
+        [
+          "2025-12-11",
+          4.14
+        ],
+        [
+          "2025-12-12",
+          4.19
+        ],
+        [
+          "2025-12-15",
+          4.18
+        ],
+        [
+          "2025-12-16",
+          4.15
+        ],
+        [
+          "2025-12-17",
+          4.16
+        ],
+        [
+          "2025-12-18",
+          4.12
+        ],
+        [
+          "2025-12-19",
+          4.16
+        ],
+        [
+          "2025-12-22",
+          4.17
+        ],
+        [
+          "2025-12-23",
+          4.18
+        ],
+        [
+          "2025-12-24",
+          4.15
+        ],
+        [
+          "2025-12-26",
+          4.14
+        ],
+        [
+          "2025-12-29",
+          4.12
+        ],
+        [
+          "2025-12-30",
+          4.14
+        ],
+        [
+          "2025-12-31",
+          4.18
+        ],
+        [
+          "2026-01-02",
+          4.19
+        ],
+        [
+          "2026-01-05",
+          4.17
+        ],
+        [
+          "2026-01-06",
+          4.18
+        ],
+        [
+          "2026-01-07",
+          4.15
+        ],
+        [
+          "2026-01-08",
+          4.19
+        ],
+        [
+          "2026-01-09",
+          4.18
+        ],
+        [
+          "2026-01-12",
+          4.19
+        ],
+        [
+          "2026-01-13",
+          4.18
+        ],
+        [
+          "2026-01-14",
+          4.15
+        ],
+        [
+          "2026-01-15",
+          4.17
+        ],
+        [
+          "2026-01-16",
+          4.24
+        ],
+        [
+          "2026-01-20",
+          4.3
+        ],
+        [
+          "2026-01-21",
+          4.26
+        ],
+        [
+          "2026-01-22",
+          4.26
+        ],
+        [
+          "2026-01-23",
+          4.24
+        ],
+        [
+          "2026-01-26",
+          4.22
+        ],
+        [
+          "2026-01-27",
+          4.24
+        ],
+        [
+          "2026-01-28",
+          4.26
+        ],
+        [
+          "2026-01-29",
+          4.24
+        ],
+        [
+          "2026-01-30",
+          4.26
+        ],
+        [
+          "2026-02-02",
+          4.29
+        ],
+        [
+          "2026-02-03",
+          4.28
+        ],
+        [
+          "2026-02-04",
+          4.29
+        ],
+        [
+          "2026-02-05",
+          4.21
+        ],
+        [
+          "2026-02-06",
+          4.22
+        ],
+        [
+          "2026-02-09",
+          4.22
+        ],
+        [
+          "2026-02-10",
+          4.16
+        ],
+        [
+          "2026-02-11",
+          4.18
+        ],
+        [
+          "2026-02-12",
+          4.09
+        ],
+        [
+          "2026-02-13",
+          4.04
+        ],
+        [
+          "2026-02-17",
+          4.05
+        ],
+        [
+          "2026-02-18",
+          4.09
+        ],
+        [
+          "2026-02-19",
+          4.08
+        ],
+        [
+          "2026-02-20",
+          4.08
+        ],
+        [
+          "2026-02-23",
+          4.03
+        ],
+        [
+          "2026-02-24",
+          4.04
+        ],
+        [
+          "2026-02-25",
+          4.05
+        ],
+        [
+          "2026-02-26",
+          4.02
+        ],
+        [
+          "2026-02-27",
+          3.97
+        ],
+        [
+          "2026-03-02",
+          4.05
+        ],
+        [
+          "2026-03-03",
+          4.06
+        ],
+        [
+          "2026-03-04",
+          4.09
+        ],
+        [
+          "2026-03-05",
+          4.13
+        ],
+        [
+          "2026-03-06",
+          4.15
+        ],
+        [
+          "2026-03-09",
+          4.12
+        ],
+        [
+          "2026-03-10",
+          4.15
+        ],
+        [
+          "2026-03-11",
+          4.21
+        ],
+        [
+          "2026-03-12",
+          4.27
+        ],
+        [
+          "2026-03-13",
+          4.28
+        ],
+        [
+          "2026-03-16",
+          4.23
+        ],
+        [
+          "2026-03-17",
+          4.2
+        ],
+        [
+          "2026-03-18",
+          4.26
+        ],
+        [
+          "2026-03-19",
+          4.25
+        ],
+        [
+          "2026-03-20",
+          4.39
+        ],
+        [
+          "2026-03-23",
+          4.34
+        ],
+        [
+          "2026-03-24",
+          4.39
+        ],
+        [
+          "2026-03-25",
+          4.33
+        ],
+        [
+          "2026-03-26",
+          4.42
+        ],
+        [
+          "2026-03-27",
+          4.44
+        ],
+        [
+          "2026-03-30",
+          4.35
+        ],
+        [
+          "2026-03-31",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.33
+        ],
+        [
+          "2026-04-02",
+          4.31
+        ],
+        [
+          "2026-04-03",
+          4.35
+        ],
+        [
+          "2026-04-06",
+          4.34
+        ],
+        [
+          "2026-04-07",
+          4.33
+        ],
+        [
+          "2026-04-08",
+          4.29
+        ],
+        [
+          "2026-04-09",
+          4.29
+        ],
+        [
+          "2026-04-10",
+          4.31
+        ],
+        [
+          "2026-04-13",
+          4.3
+        ],
+        [
+          "2026-04-14",
+          4.26
+        ],
+        [
+          "2026-04-15",
+          4.29
+        ],
+        [
+          "2026-04-16",
+          4.32
+        ],
+        [
+          "2026-04-17",
+          4.26
+        ],
+        [
+          "2026-04-20",
+          4.26
+        ],
+        [
+          "2026-04-21",
+          4.3
+        ],
+        [
+          "2026-04-22",
+          4.3
+        ],
+        [
+          "2026-04-23",
+          4.34
+        ],
+        [
+          "2026-04-24",
+          4.31
+        ],
+        [
+          "2026-04-27",
+          4.35
+        ],
+        [
+          "2026-04-28",
+          4.36
+        ],
+        [
+          "2026-04-29",
+          4.42
+        ],
+        [
+          "2026-04-30",
+          4.4
+        ],
+        [
+          "2026-05-01",
+          4.39
+        ],
+        [
+          "2026-05-04",
+          4.45
+        ],
+        [
+          "2026-05-05",
+          4.43
+        ],
+        [
+          "2026-05-06",
+          4.36
+        ],
+        [
+          "2026-05-07",
+          4.41
+        ],
+        [
+          "2026-05-08",
+          4.38
+        ],
+        [
+          "2026-05-11",
+          4.42
+        ],
+        [
+          "2026-05-12",
+          4.46
+        ],
+        [
+          "2026-05-13",
+          4.46
+        ],
+        [
+          "2026-05-14",
+          4.47
+        ],
+        [
+          "2026-05-15",
+          4.59
+        ],
+        [
+          "2026-05-18",
+          4.61
+        ],
+        [
+          "2026-05-19",
+          4.67
+        ],
+        [
+          "2026-05-20",
+          4.57
+        ],
+        [
+          "2026-05-21",
+          4.57
+        ],
+        [
+          "2026-05-22",
+          4.56
+        ],
+        [
+          "2026-05-26",
+          4.5
+        ],
+        [
+          "2026-05-27",
+          4.48
+        ],
+        [
+          "2026-05-28",
+          4.45
+        ],
+        [
+          "2026-05-29",
+          4.45
+        ],
+        [
+          "2026-06-01",
+          4.47
+        ],
+        [
+          "2026-06-02",
+          4.46
+        ],
+        [
+          "2026-06-03",
+          4.49
+        ],
+        [
+          "2026-06-04",
+          4.47
+        ],
+        [
+          "2026-06-05",
+          4.55
+        ],
+        [
+          "2026-06-08",
+          4.56
+        ],
+        [
+          "2026-06-09",
+          4.53
+        ],
+        [
+          "2026-06-10",
+          4.55
+        ],
+        [
+          "2026-06-11",
+          4.45
+        ],
+        [
+          "2026-06-12",
+          4.48
+        ],
+        [
+          "2026-06-15",
+          4.47
+        ],
+        [
+          "2026-06-16",
+          4.43
+        ],
+        [
+          "2026-06-17",
+          4.49
+        ],
+        [
+          "2026-06-18",
+          4.46
+        ],
+        [
+          "2026-06-22",
+          4.51
+        ],
+        [
+          "2026-06-23",
+          4.5
+        ],
+        [
+          "2026-06-24",
+          4.41
+        ],
+        [
+          "2026-06-25",
+          4.4
+        ],
+        [
+          "2026-06-26",
+          4.38
+        ],
+        [
+          "2026-06-29",
+          4.38
+        ],
+        [
+          "2026-06-30",
+          4.44
+        ],
+        [
+          "2026-07-01",
+          4.48
+        ],
+        [
+          "2026-07-02",
+          4.49
+        ],
+        [
+          "2026-07-06",
+          4.48
+        ],
+        [
+          "2026-07-07",
+          4.55
+        ],
+        [
+          "2026-07-08",
+          4.56
+        ],
+        [
+          "2026-07-09",
+          4.54
+        ],
+        [
+          "2026-07-10",
+          4.56
+        ],
+        [
+          "2026-07-13",
+          4.62
+        ],
+        [
+          "2026-07-14",
+          4.58
+        ],
+        [
+          "2026-07-15",
+          4.55
+        ],
+        [
+          "2026-07-16",
+          4.57
+        ],
+        [
+          "2026-07-17",
+          4.55
+        ],
+        [
+          "2026-07-20",
+          4.6
+        ],
+        [
+          "2026-07-21",
+          4.63
+        ],
+        [
+          "2026-07-22",
+          4.67
+        ],
+        [
+          "2026-07-23",
+          4.71
+        ],
+        [
+          "2026-07-24",
+          4.69
+        ],
+        [
+          "2026-07-27",
+          4.65
+        ],
+        [
+          "2026-07-28",
+          4.61
+        ],
+        [
+          "2026-07-29",
+          4.67
+        ],
+        [
+          "2026-07-30",
+          4.68
+        ],
+        [
+          "2026-07-31",
+          4.75
+        ],
+        [
+          "2026-08-03",
+          4.7
+        ],
+        [
+          "2026-08-04",
+          4.63
+        ],
+        [
+          "2026-08-05",
+          4.63
+        ],
+        [
+          "2026-08-06",
+          4.69
+        ],
+        [
+          "2026-08-07",
+          4.65
+        ],
+        [
+          "2026-08-10",
+          4.72
+        ],
+        [
+          "2026-08-11",
+          4.7
+        ],
+        [
+          "2026-08-12",
+          4.68
+        ],
+        [
+          "2026-08-13",
+          4.63
+        ],
+        [
+          "2026-08-14",
+          4.68
+        ],
+        [
+          "2026-08-17",
+          4.72
+        ],
+        [
+          "2026-08-18",
+          4.71
+        ],
+        [
+          "2026-08-19",
+          4.65
+        ],
+        [
+          "2026-08-20",
+          4.69
+        ],
+        [
+          "2026-08-21",
+          4.74
+        ],
+        [
+          "2026-08-24",
+          4.7
+        ],
+        [
+          "2026-08-25",
+          4.64
+        ],
+        [
+          "2026-08-26",
+          4.66
+        ],
+        [
+          "2026-08-27",
+          4.67
+        ],
+        [
+          "2026-08-28",
+          4.73
+        ],
+        [
+          "2026-08-31",
+          4.75
+        ],
+        [
+          "2026-09-01",
+          4.79
+        ],
+        [
+          "2026-09-02",
+          4.79
+        ],
+        [
+          "2026-09-03",
+          4.77
+        ],
+        [
+          "2026-09-04",
+          4.78
+        ],
+        [
+          "2026-09-08",
+          4.8
+        ],
+        [
+          "2026-09-09",
+          4.83
+        ],
+        [
+          "2026-09-10",
+          4.95
+        ],
+        [
+          "2026-09-11",
+          4.96
+        ],
+        [
+          "2026-09-14",
+          4.97
+        ],
+        [
+          "2026-09-15",
+          5.0
+        ],
+        [
+          "2026-09-16",
+          5.01
+        ],
+        [
+          "2026-09-17",
+          4.94
+        ],
+        [
+          "2026-09-18",
+          5.01
+        ],
+        [
+          "2026-09-21",
+          4.96
+        ],
+        [
+          "2026-09-22",
+          4.96
+        ],
+        [
+          "2026-09-23",
+          5.11
+        ],
+        [
+          "2026-09-24",
+          5.18
+        ],
+        [
+          "2026-09-25",
+          5.17
+        ],
+        [
+          "2026-09-28",
+          5.24
+        ],
+        [
+          "2026-09-29",
+          5.26
+        ],
+        [
+          "2026-09-30",
+          5.29
+        ],
+        [
+          "2026-10-01",
+          5.24
+        ],
+        [
+          "2026-10-02",
+          5.28
+        ],
+        [
+          "2026-10-05",
+          5.31
+        ],
+        [
+          "2026-10-06",
+          5.27
+        ],
+        [
+          "2026-10-07",
+          5.28
+        ],
+        [
+          "2026-10-08",
+          5.22
+        ],
+        [
+          "2026-10-09",
+          5.24
+        ],
+        [
+          "2026-10-13",
+          5.21
+        ],
+        [
+          "2026-10-14",
+          5.19
+        ],
+        [
+          "2026-10-15",
+          5.1
+        ]
+      ]
+    },
+    {
+      "title": "FRED: ICE BofA US High Yield Option-Adjusted Spread (BAMLH0A0HYM2)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "BAMLH0A0HYM2",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "credit"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-09",
+          2.95
+        ],
+        [
+          "2025-10-10",
+          3.18
+        ],
+        [
+          "2025-10-13",
+          3.18
+        ],
+        [
+          "2025-10-14",
+          3.11
+        ],
+        [
+          "2025-10-15",
+          2.95
+        ],
+        [
+          "2025-10-16",
+          3.04
+        ],
+        [
+          "2025-10-17",
+          3.04
+        ],
+        [
+          "2025-10-20",
+          2.99
+        ],
+        [
+          "2025-10-21",
+          2.97
+        ],
+        [
+          "2025-10-22",
+          3.01
+        ],
+        [
+          "2025-10-23",
+          2.96
+        ],
+        [
+          "2025-10-24",
+          2.88
+        ],
+        [
+          "2025-10-27",
+          2.8
+        ],
+        [
+          "2025-10-28",
+          2.82
+        ],
+        [
+          "2025-10-29",
+          2.76
+        ],
+        [
+          "2025-10-30",
+          2.85
+        ],
+        [
+          "2025-10-31",
+          2.94
+        ],
+        [
+          "2025-11-03",
+          3.04
+        ],
+        [
+          "2025-11-04",
+          3.13
+        ],
+        [
+          "2025-11-05",
+          3.05
+        ],
+        [
+          "2025-11-06",
+          3.13
+        ],
+        [
+          "2025-11-07",
+          3.15
+        ],
+        [
+          "2025-11-10",
+          3.02
+        ],
+        [
+          "2025-11-11",
+          3.02
+        ],
+        [
+          "2025-11-12",
+          3.02
+        ],
+        [
+          "2025-11-13",
+          3.09
+        ],
+        [
+          "2025-11-14",
+          3.07
+        ],
+        [
+          "2025-11-17",
+          3.13
+        ],
+        [
+          "2025-11-18",
+          3.2
+        ],
+        [
+          "2025-11-19",
+          3.17
+        ],
+        [
+          "2025-11-20",
+          3.17
+        ],
+        [
+          "2025-11-21",
+          3.19
+        ],
+        [
+          "2025-11-24",
+          3.15
+        ],
+        [
+          "2025-11-25",
+          3.1
+        ],
+        [
+          "2025-11-26",
+          3.0
+        ],
+        [
+          "2025-11-27",
+          3.0
+        ],
+        [
+          "2025-11-28",
+          2.95
+        ],
+        [
+          "2025-11-30",
+          2.92
+        ],
+        [
+          "2025-12-01",
+          2.94
+        ],
+        [
+          "2025-12-02",
+          2.92
+        ],
+        [
+          "2025-12-03",
+          2.89
+        ],
+        [
+          "2025-12-04",
+          2.88
+        ],
+        [
+          "2025-12-05",
+          2.85
+        ],
+        [
+          "2025-12-08",
+          2.89
+        ],
+        [
+          "2025-12-09",
+          2.89
+        ],
+        [
+          "2025-12-10",
+          2.91
+        ],
+        [
+          "2025-12-11",
+          2.88
+        ],
+        [
+          "2025-12-12",
+          2.91
+        ],
+        [
+          "2025-12-15",
+          2.91
+        ],
+        [
+          "2025-12-16",
+          2.98
+        ],
+        [
+          "2025-12-17",
+          2.99
+        ],
+        [
+          "2025-12-18",
+          2.95
+        ],
+        [
+          "2025-12-19",
+          2.9
+        ],
+        [
+          "2025-12-22",
+          2.88
+        ],
+        [
+          "2025-12-23",
+          2.83
+        ],
+        [
+          "2025-12-24",
+          2.84
+        ],
+        [
+          "2025-12-26",
+          2.86
+        ],
+        [
+          "2025-12-29",
+          2.87
+        ],
+        [
+          "2025-12-30",
+          2.84
+        ],
+        [
+          "2025-12-31",
+          2.81
+        ],
+        [
+          "2026-01-02",
+          2.83
+        ],
+        [
+          "2026-01-05",
+          2.81
+        ],
+        [
+          "2026-01-06",
+          2.79
+        ],
+        [
+          "2026-01-07",
+          2.79
+        ],
+        [
+          "2026-01-08",
+          2.76
+        ],
+        [
+          "2026-01-09",
+          2.74
+        ],
+        [
+          "2026-01-12",
+          2.74
+        ],
+        [
+          "2026-01-13",
+          2.75
+        ],
+        [
+          "2026-01-14",
+          2.76
+        ],
+        [
+          "2026-01-15",
+          2.71
+        ],
+        [
+          "2026-01-16",
+          2.65
+        ],
+        [
+          "2026-01-19",
+          2.65
+        ],
+        [
+          "2026-01-20",
+          2.73
+        ],
+        [
+          "2026-01-21",
+          2.69
+        ],
+        [
+          "2026-01-22",
+          2.64
+        ],
+        [
+          "2026-01-23",
+          2.68
+        ],
+        [
+          "2026-01-26",
+          2.69
+        ],
+        [
+          "2026-01-27",
+          2.71
+        ],
+        [
+          "2026-01-28",
+          2.72
+        ],
+        [
+          "2026-01-29",
+          2.77
+        ],
+        [
+          "2026-01-30",
+          2.8
+        ],
+        [
+          "2026-01-31",
+          2.88
+        ],
+        [
+          "2026-02-02",
+          2.81
+        ],
+        [
+          "2026-02-03",
+          2.85
+        ],
+        [
+          "2026-02-04",
+          2.86
+        ],
+        [
+          "2026-02-05",
+          2.97
+        ],
+        [
+          "2026-02-06",
+          2.87
+        ],
+        [
+          "2026-02-09",
+          2.84
+        ],
+        [
+          "2026-02-10",
+          2.86
+        ],
+        [
+          "2026-02-11",
+          2.84
+        ],
+        [
+          "2026-02-12",
+          2.92
+        ],
+        [
+          "2026-02-13",
+          2.95
+        ],
+        [
+          "2026-02-16",
+          2.94
+        ],
+        [
+          "2026-02-17",
+          2.94
+        ],
+        [
+          "2026-02-18",
+          2.86
+        ],
+        [
+          "2026-02-19",
+          2.88
+        ],
+        [
+          "2026-02-20",
+          2.86
+        ],
+        [
+          "2026-02-23",
+          2.95
+        ],
+        [
+          "2026-02-24",
+          2.97
+        ],
+        [
+          "2026-02-25",
+          2.94
+        ],
+        [
+          "2026-02-26",
+          2.98
+        ],
+        [
+          "2026-02-27",
+          3.1
+        ],
+        [
+          "2026-02-28",
+          3.12
+        ],
+        [
+          "2026-03-02",
+          3.03
+        ],
+        [
+          "2026-03-03",
+          3.08
+        ],
+        [
+          "2026-03-04",
+          2.97
+        ],
+        [
+          "2026-03-05",
+          3.0
+        ],
+        [
+          "2026-03-06",
+          3.13
+        ],
+        [
+          "2026-03-09",
+          3.19
+        ],
+        [
+          "2026-03-10",
+          3.06
+        ],
+        [
+          "2026-03-11",
+          3.09
+        ],
+        [
+          "2026-03-12",
+          3.17
+        ],
+        [
+          "2026-03-13",
+          3.28
+        ],
+        [
+          "2026-03-16",
+          3.27
+        ],
+        [
+          "2026-03-17",
+          3.22
+        ],
+        [
+          "2026-03-18",
+          3.2
+        ],
+        [
+          "2026-03-19",
+          3.27
+        ],
+        [
+          "2026-03-20",
+          3.24
+        ],
+        [
+          "2026-03-23",
+          3.19
+        ],
+        [
+          "2026-03-24",
+          3.19
+        ],
+        [
+          "2026-03-25",
+          3.17
+        ],
+        [
+          "2026-03-26",
+          3.21
+        ],
+        [
+          "2026-03-27",
+          3.42
+        ],
+        [
+          "2026-03-30",
+          3.46
+        ],
+        [
+          "2026-03-31",
+          3.28
+        ],
+        [
+          "2026-04-01",
+          3.16
+        ],
+        [
+          "2026-04-02",
+          3.17
+        ],
+        [
+          "2026-04-03",
+          3.13
+        ],
+        [
+          "2026-04-06",
+          3.05
+        ],
+        [
+          "2026-04-07",
+          3.12
+        ],
+        [
+          "2026-04-08",
+          2.94
+        ],
+        [
+          "2026-04-09",
+          2.9
+        ],
+        [
+          "2026-04-10",
+          2.94
+        ],
+        [
+          "2026-04-13",
+          2.95
+        ],
+        [
+          "2026-04-14",
+          2.84
+        ],
+        [
+          "2026-04-15",
+          2.85
+        ],
+        [
+          "2026-04-16",
+          2.86
+        ],
+        [
+          "2026-04-17",
+          2.83
+        ],
+        [
+          "2026-04-20",
+          2.87
+        ],
+        [
+          "2026-04-21",
+          2.85
+        ],
+        [
+          "2026-04-22",
+          2.84
+        ],
+        [
+          "2026-04-23",
+          2.86
+        ],
+        [
+          "2026-04-24",
+          2.86
+        ],
+        [
+          "2026-04-27",
+          2.84
+        ],
+        [
+          "2026-04-28",
+          2.85
+        ],
+        [
+          "2026-04-29",
+          2.82
+        ],
+        [
+          "2026-04-30",
+          2.83
+        ],
+        [
+          "2026-05-01",
+          2.77
+        ],
+        [
+          "2026-05-04",
+          2.78
+        ],
+        [
+          "2026-05-05",
+          2.77
+        ],
+        [
+          "2026-05-06",
+          2.75
+        ],
+        [
+          "2026-05-07",
+          2.79
+        ],
+        [
+          "2026-05-08",
+          2.81
+        ],
+        [
+          "2026-05-11",
+          2.79
+        ],
+        [
+          "2026-05-12",
+          2.82
+        ],
+        [
+          "2026-05-13",
+          2.82
+        ],
+        [
+          "2026-05-14",
+          2.76
+        ],
+        [
+          "2026-05-15",
+          2.8
+        ],
+        [
+          "2026-05-18",
+          2.83
+        ],
+        [
+          "2026-05-19",
+          2.86
+        ],
+        [
+          "2026-05-20",
+          2.8
+        ],
+        [
+          "2026-05-21",
+          2.78
+        ],
+        [
+          "2026-05-22",
+          2.74
+        ],
+        [
+          "2026-05-25",
+          2.74
+        ],
+        [
+          "2026-05-26",
+          2.72
+        ],
+        [
+          "2026-05-27",
+          2.71
+        ],
+        [
+          "2026-05-28",
+          2.72
+        ],
+        [
+          "2026-05-29",
+          2.72
+        ],
+        [
+          "2026-05-31",
+          2.74
+        ],
+        [
+          "2026-06-01",
+          2.72
+        ],
+        [
+          "2026-06-02",
+          2.71
+        ],
+        [
+          "2026-06-03",
+          2.75
+        ],
+        [
+          "2026-06-04",
+          2.74
+        ],
+        [
+          "2026-06-05",
+          2.76
+        ],
+        [
+          "2026-06-08",
+          2.75
+        ],
+        [
+          "2026-06-09",
+          2.78
+        ],
+        [
+          "2026-06-10",
+          2.8
+        ],
+        [
+          "2026-06-11",
+          2.78
+        ],
+        [
+          "2026-06-12",
+          2.71
+        ],
+        [
+          "2026-06-15",
+          2.66
+        ],
+        [
+          "2026-06-16",
+          2.71
+        ],
+        [
+          "2026-06-17",
+          2.63
+        ],
+        [
+          "2026-06-18",
+          2.66
+        ],
+        [
+          "2026-06-19",
+          2.66
+        ],
+        [
+          "2026-06-22",
+          2.65
+        ],
+        [
+          "2026-06-23",
+          2.71
+        ],
+        [
+          "2026-06-24",
+          2.76
+        ],
+        [
+          "2026-06-25",
+          2.78
+        ],
+        [
+          "2026-06-26",
+          2.83
+        ],
+        [
+          "2026-06-29",
+          2.8
+        ],
+        [
+          "2026-06-30",
+          2.75
+        ],
+        [
+          "2026-07-01",
+          2.74
+        ],
+        [
+          "2026-07-02",
+          2.75
+        ],
+        [
+          "2026-07-03",
+          2.74
+        ],
+        [
+          "2026-07-06",
+          2.72
+        ],
+        [
+          "2026-07-07",
+          2.67
+        ],
+        [
+          "2026-07-08",
+          2.7
+        ],
+        [
+          "2026-07-09",
+          2.7
+        ],
+        [
+          "2026-07-10",
+          2.69
+        ],
+        [
+          "2026-07-13",
+          2.69
+        ],
+        [
+          "2026-07-14",
+          2.72
+        ],
+        [
+          "2026-07-15",
+          2.71
+        ],
+        [
+          "2026-07-16",
+          2.71
+        ],
+        [
+          "2026-07-17",
+          2.73
+        ],
+        [
+          "2026-07-20",
+          2.69
+        ],
+        [
+          "2026-07-21",
+          2.69
+        ],
+        [
+          "2026-07-22",
+          2.68
+        ],
+        [
+          "2026-07-23",
+          2.77
+        ],
+        [
+          "2026-07-24",
+          2.79
+        ],
+        [
+          "2026-07-27",
+          2.81
+        ],
+        [
+          "2026-07-28",
+          2.84
+        ],
+        [
+          "2026-07-29",
+          2.87
+        ],
+        [
+          "2026-07-30",
+          2.84
+        ],
+        [
+          "2026-07-31",
+          2.85
+        ],
+        [
+          "2026-08-03",
+          2.78
+        ],
+        [
+          "2026-08-04",
+          2.73
+        ],
+        [
+          "2026-08-05",
+          2.75
+        ],
+        [
+          "2026-08-06",
+          2.71
+        ],
+        [
+          "2026-08-07",
+          2.7
+        ],
+        [
+          "2026-08-10",
+          2.7
+        ],
+        [
+          "2026-08-11",
+          2.72
+        ],
+        [
+          "2026-08-12",
+          2.71
+        ],
+        [
+          "2026-08-13",
+          2.71
+        ],
+        [
+          "2026-08-14",
+          2.67
+        ],
+        [
+          "2026-08-17",
+          2.7
+        ],
+        [
+          "2026-08-18",
+          2.75
+        ],
+        [
+          "2026-08-19",
+          2.73
+        ],
+        [
+          "2026-08-20",
+          2.75
+        ],
+        [
+          "2026-08-21",
+          2.7
+        ],
+        [
+          "2026-08-24",
+          2.69
+        ],
+        [
+          "2026-08-25",
+          2.7
+        ],
+        [
+          "2026-08-26",
+          2.67
+        ],
+        [
+          "2026-08-27",
+          2.63
+        ],
+        [
+          "2026-08-28",
+          2.6
+        ],
+        [
+          "2026-08-31",
+          2.63
+        ],
+        [
+          "2026-09-01",
+          2.65
+        ],
+        [
+          "2026-09-02",
+          2.66
+        ],
+        [
+          "2026-09-03",
+          2.65
+        ],
+        [
+          "2026-09-04",
+          2.68
+        ],
+        [
+          "2026-09-07",
+          2.68
+        ],
+        [
+          "2026-09-08",
+          2.67
+        ],
+        [
+          "2026-09-09",
+          2.71
+        ],
+        [
+          "2026-09-10",
+          2.7
+        ],
+        [
+          "2026-09-11",
+          2.65
+        ],
+        [
+          "2026-09-14",
+          2.71
+        ],
+        [
+          "2026-09-15",
+          2.76
+        ],
+        [
+          "2026-09-16",
+          2.7
+        ],
+        [
+          "2026-09-17",
+          2.7
+        ],
+        [
+          "2026-09-18",
+          2.68
+        ],
+        [
+          "2026-09-21",
+          2.66
+        ],
+        [
+          "2026-09-22",
+          2.68
+        ],
+        [
+          "2026-09-23",
+          2.73
+        ],
+        [
+          "2026-09-24",
+          2.8
+        ],
+        [
+          "2026-09-25",
+          2.93
+        ],
+        [
+          "2026-09-28",
+          3.02
+        ],
+        [
+          "2026-09-29",
+          3.08
+        ],
+        [
+          "2026-09-30",
+          3.12
+        ],
+        [
+          "2026-10-01",
+          3.24
+        ],
+        [
+          "2026-10-02",
+          3.1
+        ],
+        [
+          "2026-10-05",
+          3.12
+        ],
+        [
+          "2026-10-06",
+          3.03
+        ],
+        [
+          "2026-10-07",
+          3.09
+        ],
+        [
+          "2026-10-08",
+          3.15
+        ],
+        [
+          "2026-10-09",
+          3.11
+        ],
+        [
+          "2026-10-12",
+          3.11
+        ],
+        [
+          "2026-10-13",
+          3.16
+        ],
+        [
+          "2026-10-14",
+          3.25
+        ],
+        [
+          "2026-10-15",
+          3.23
+        ]
+      ]
+    },
+    {
+      "title": "FRED: ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread (BAMLC0A0CM)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "BAMLC0A0CM",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "credit"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-09",
+          0.77
+        ],
+        [
+          "2025-10-10",
+          0.81
+        ],
+        [
+          "2025-10-13",
+          0.81
+        ],
+        [
+          "2025-10-14",
+          0.81
+        ],
+        [
+          "2025-10-15",
+          0.78
+        ],
+        [
+          "2025-10-16",
+          0.8
+        ],
+        [
+          "2025-10-17",
+          0.8
+        ],
+        [
+          "2025-10-20",
+          0.79
+        ],
+        [
+          "2025-10-21",
+          0.79
+        ],
+        [
+          "2025-10-22",
+          0.8
+        ],
+        [
+          "2025-10-23",
+          0.78
+        ],
+        [
+          "2025-10-24",
+          0.77
+        ],
+        [
+          "2025-10-27",
+          0.76
+        ],
+        [
+          "2025-10-28",
+          0.76
+        ],
+        [
+          "2025-10-29",
+          0.75
+        ],
+        [
+          "2025-10-30",
+          0.77
+        ],
+        [
+          "2025-10-31",
+          0.8
+        ],
+        [
+          "2025-11-03",
+          0.83
+        ],
+        [
+          "2025-11-04",
+          0.83
+        ],
+        [
+          "2025-11-05",
+          0.81
+        ],
+        [
+          "2025-11-06",
+          0.82
+        ],
+        [
+          "2025-11-07",
+          0.84
+        ],
+        [
+          "2025-11-10",
+          0.82
+        ],
+        [
+          "2025-11-11",
+          0.82
+        ],
+        [
+          "2025-11-12",
+          0.83
+        ],
+        [
+          "2025-11-13",
+          0.84
+        ],
+        [
+          "2025-11-14",
+          0.83
+        ],
+        [
+          "2025-11-17",
+          0.84
+        ],
+        [
+          "2025-11-18",
+          0.85
+        ],
+        [
+          "2025-11-19",
+          0.84
+        ],
+        [
+          "2025-11-20",
+          0.85
+        ],
+        [
+          "2025-11-21",
+          0.86
+        ],
+        [
+          "2025-11-24",
+          0.85
+        ],
+        [
+          "2025-11-25",
+          0.84
+        ],
+        [
+          "2025-11-26",
+          0.82
+        ],
+        [
+          "2025-11-27",
+          0.82
+        ],
+        [
+          "2025-11-28",
+          0.82
+        ],
+        [
+          "2025-11-30",
+          0.82
+        ],
+        [
+          "2025-12-01",
+          0.82
+        ],
+        [
+          "2025-12-02",
+          0.81
+        ],
+        [
+          "2025-12-03",
+          0.81
+        ],
+        [
+          "2025-12-04",
+          0.8
+        ],
+        [
+          "2025-12-05",
+          0.79
+        ],
+        [
+          "2025-12-08",
+          0.78
+        ],
+        [
+          "2025-12-09",
+          0.79
+        ],
+        [
+          "2025-12-10",
+          0.78
+        ],
+        [
+          "2025-12-11",
+          0.78
+        ],
+        [
+          "2025-12-12",
+          0.8
+        ],
+        [
+          "2025-12-15",
+          0.8
+        ],
+        [
+          "2025-12-16",
+          0.81
+        ],
+        [
+          "2025-12-17",
+          0.81
+        ],
+        [
+          "2025-12-18",
+          0.81
+        ],
+        [
+          "2025-12-19",
+          0.8
+        ],
+        [
+          "2025-12-22",
+          0.8
+        ],
+        [
+          "2025-12-23",
+          0.79
+        ],
+        [
+          "2025-12-24",
+          0.79
+        ],
+        [
+          "2025-12-26",
+          0.79
+        ],
+        [
+          "2025-12-29",
+          0.79
+        ],
+        [
+          "2025-12-30",
+          0.79
+        ],
+        [
+          "2025-12-31",
+          0.79
+        ],
+        [
+          "2026-01-02",
+          0.79
+        ],
+        [
+          "2026-01-05",
+          0.79
+        ],
+        [
+          "2026-01-06",
+          0.79
+        ],
+        [
+          "2026-01-07",
+          0.79
+        ],
+        [
+          "2026-01-08",
+          0.79
+        ],
+        [
+          "2026-01-09",
+          0.78
+        ],
+        [
+          "2026-01-12",
+          0.78
+        ],
+        [
+          "2026-01-13",
+          0.77
+        ],
+        [
+          "2026-01-14",
+          0.77
+        ],
+        [
+          "2026-01-15",
+          0.76
+        ],
+        [
+          "2026-01-16",
+          0.75
+        ],
+        [
+          "2026-01-19",
+          0.75
+        ],
+        [
+          "2026-01-20",
+          0.75
+        ],
+        [
+          "2026-01-21",
+          0.74
+        ],
+        [
+          "2026-01-22",
+          0.73
+        ],
+        [
+          "2026-01-23",
+          0.73
+        ],
+        [
+          "2026-01-26",
+          0.74
+        ],
+        [
+          "2026-01-27",
+          0.73
+        ],
+        [
+          "2026-01-28",
+          0.73
+        ],
+        [
+          "2026-01-29",
+          0.74
+        ],
+        [
+          "2026-01-30",
+          0.74
+        ],
+        [
+          "2026-01-31",
+          0.75
+        ],
+        [
+          "2026-02-02",
+          0.74
+        ],
+        [
+          "2026-02-03",
+          0.74
+        ],
+        [
+          "2026-02-04",
+          0.75
+        ],
+        [
+          "2026-02-05",
+          0.76
+        ],
+        [
+          "2026-02-06",
+          0.76
+        ],
+        [
+          "2026-02-09",
+          0.76
+        ],
+        [
+          "2026-02-10",
+          0.77
+        ],
+        [
+          "2026-02-11",
+          0.77
+        ],
+        [
+          "2026-02-12",
+          0.78
+        ],
+        [
+          "2026-02-13",
+          0.79
+        ],
+        [
+          "2026-02-16",
+          0.79
+        ],
+        [
+          "2026-02-17",
+          0.8
+        ],
+        [
+          "2026-02-18",
+          0.78
+        ],
+        [
+          "2026-02-19",
+          0.79
+        ],
+        [
+          "2026-02-20",
+          0.78
+        ],
+        [
+          "2026-02-23",
+          0.8
+        ],
+        [
+          "2026-02-24",
+          0.81
+        ],
+        [
+          "2026-02-25",
+          0.8
+        ],
+        [
+          "2026-02-26",
+          0.82
+        ],
+        [
+          "2026-02-27",
+          0.85
+        ],
+        [
+          "2026-02-28",
+          0.86
+        ],
+        [
+          "2026-03-02",
+          0.85
+        ],
+        [
+          "2026-03-03",
+          0.84
+        ],
+        [
+          "2026-03-04",
+          0.82
+        ],
+        [
+          "2026-03-05",
+          0.82
+        ],
+        [
+          "2026-03-06",
+          0.84
+        ],
+        [
+          "2026-03-09",
+          0.85
+        ],
+        [
+          "2026-03-10",
+          0.84
+        ],
+        [
+          "2026-03-11",
+          0.88
+        ],
+        [
+          "2026-03-12",
+          0.91
+        ],
+        [
+          "2026-03-13",
+          0.93
+        ],
+        [
+          "2026-03-16",
+          0.94
+        ],
+        [
+          "2026-03-17",
+          0.92
+        ],
+        [
+          "2026-03-18",
+          0.91
+        ],
+        [
+          "2026-03-19",
+          0.9
+        ],
+        [
+          "2026-03-20",
+          0.88
+        ],
+        [
+          "2026-03-23",
+          0.88
+        ],
+        [
+          "2026-03-24",
+          0.87
+        ],
+        [
+          "2026-03-25",
+          0.87
+        ],
+        [
+          "2026-03-26",
+          0.88
+        ],
+        [
+          "2026-03-27",
+          0.91
+        ],
+        [
+          "2026-03-30",
+          0.93
+        ],
+        [
+          "2026-03-31",
+          0.9
+        ],
+        [
+          "2026-04-01",
+          0.87
+        ],
+        [
+          "2026-04-02",
+          0.86
+        ],
+        [
+          "2026-04-03",
+          0.86
+        ],
+        [
+          "2026-04-06",
+          0.85
+        ],
+        [
+          "2026-04-07",
+          0.86
+        ],
+        [
+          "2026-04-08",
+          0.83
+        ],
+        [
+          "2026-04-09",
+          0.83
+        ],
+        [
+          "2026-04-10",
+          0.82
+        ],
+        [
+          "2026-04-13",
+          0.82
+        ],
+        [
+          "2026-04-14",
+          0.81
+        ],
+        [
+          "2026-04-15",
+          0.8
+        ],
+        [
+          "2026-04-16",
+          0.81
+        ],
+        [
+          "2026-04-17",
+          0.8
+        ],
+        [
+          "2026-04-20",
+          0.81
+        ],
+        [
+          "2026-04-21",
+          0.8
+        ],
+        [
+          "2026-04-22",
+          0.79
+        ],
+        [
+          "2026-04-23",
+          0.8
+        ],
+        [
+          "2026-04-24",
+          0.8
+        ],
+        [
+          "2026-04-27",
+          0.81
+        ],
+        [
+          "2026-04-28",
+          0.81
+        ],
+        [
+          "2026-04-29",
+          0.81
+        ],
+        [
+          "2026-04-30",
+          0.81
+        ],
+        [
+          "2026-05-01",
+          0.81
+        ],
+        [
+          "2026-05-04",
+          0.8
+        ],
+        [
+          "2026-05-05",
+          0.79
+        ],
+        [
+          "2026-05-06",
+          0.78
+        ],
+        [
+          "2026-05-07",
+          0.79
+        ],
+        [
+          "2026-05-08",
+          0.79
+        ],
+        [
+          "2026-05-11",
+          0.78
+        ],
+        [
+          "2026-05-12",
+          0.77
+        ],
+        [
+          "2026-05-13",
+          0.76
+        ],
+        [
+          "2026-05-14",
+          0.76
+        ],
+        [
+          "2026-05-15",
+          0.75
+        ],
+        [
+          "2026-05-18",
+          0.75
+        ],
+        [
+          "2026-05-19",
+          0.76
+        ],
+        [
+          "2026-05-20",
+          0.75
+        ],
+        [
+          "2026-05-21",
+          0.75
+        ],
+        [
+          "2026-05-22",
+          0.74
+        ],
+        [
+          "2026-05-25",
+          0.74
+        ],
+        [
+          "2026-05-26",
+          0.74
+        ],
+        [
+          "2026-05-27",
+          0.74
+        ],
+        [
+          "2026-05-28",
+          0.73
+        ],
+        [
+          "2026-05-29",
+          0.73
+        ],
+        [
+          "2026-05-31",
+          0.74
+        ],
+        [
+          "2026-06-01",
+          0.73
+        ],
+        [
+          "2026-06-02",
+          0.74
+        ],
+        [
+          "2026-06-03",
+          0.74
+        ],
+        [
+          "2026-06-04",
+          0.74
+        ],
+        [
+          "2026-06-05",
+          0.74
+        ],
+        [
+          "2026-06-08",
+          0.75
+        ],
+        [
+          "2026-06-09",
+          0.75
+        ],
+        [
+          "2026-06-10",
+          0.75
+        ],
+        [
+          "2026-06-11",
+          0.75
+        ],
+        [
+          "2026-06-12",
+          0.74
+        ],
+        [
+          "2026-06-15",
+          0.73
+        ],
+        [
+          "2026-06-16",
+          0.75
+        ],
+        [
+          "2026-06-17",
+          0.74
+        ],
+        [
+          "2026-06-18",
+          0.74
+        ],
+        [
+          "2026-06-19",
+          0.74
+        ],
+        [
+          "2026-06-22",
+          0.74
+        ],
+        [
+          "2026-06-23",
+          0.74
+        ],
+        [
+          "2026-06-24",
+          0.75
+        ],
+        [
+          "2026-06-25",
+          0.76
+        ],
+        [
+          "2026-06-26",
+          0.77
+        ],
+        [
+          "2026-06-29",
+          0.76
+        ],
+        [
+          "2026-06-30",
+          0.76
+        ],
+        [
+          "2026-07-01",
+          0.76
+        ],
+        [
+          "2026-07-02",
+          0.75
+        ],
+        [
+          "2026-07-03",
+          0.75
+        ],
+        [
+          "2026-07-06",
+          0.75
+        ],
+        [
+          "2026-07-07",
+          0.76
+        ],
+        [
+          "2026-07-08",
+          0.76
+        ],
+        [
+          "2026-07-09",
+          0.76
+        ],
+        [
+          "2026-07-10",
+          0.77
+        ],
+        [
+          "2026-07-13",
+          0.78
+        ],
+        [
+          "2026-07-14",
+          0.79
+        ],
+        [
+          "2026-07-15",
+          0.79
+        ],
+        [
+          "2026-07-16",
+          0.78
+        ],
+        [
+          "2026-07-17",
+          0.79
+        ],
+        [
+          "2026-07-20",
+          0.78
+        ],
+        [
+          "2026-07-21",
+          0.78
+        ],
+        [
+          "2026-07-22",
+          0.78
+        ],
+        [
+          "2026-07-23",
+          0.79
+        ],
+        [
+          "2026-07-24",
+          0.8
+        ],
+        [
+          "2026-07-27",
+          0.81
+        ],
+        [
+          "2026-07-28",
+          0.81
+        ],
+        [
+          "2026-07-29",
+          0.81
+        ],
+        [
+          "2026-07-30",
+          0.8
+        ],
+        [
+          "2026-07-31",
+          0.79
+        ],
+        [
+          "2026-08-03",
+          0.78
+        ],
+        [
+          "2026-08-04",
+          0.78
+        ],
+        [
+          "2026-08-05",
+          0.78
+        ],
+        [
+          "2026-08-06",
+          0.78
+        ],
+        [
+          "2026-08-07",
+          0.78
+        ],
+        [
+          "2026-08-10",
+          0.78
+        ],
+        [
+          "2026-08-11",
+          0.79
+        ],
+        [
+          "2026-08-12",
+          0.79
+        ],
+        [
+          "2026-08-13",
+          0.79
+        ],
+        [
+          "2026-08-14",
+          0.8
+        ],
+        [
+          "2026-08-17",
+          0.81
+        ],
+        [
+          "2026-08-18",
+          0.82
+        ],
+        [
+          "2026-08-19",
+          0.81
+        ],
+        [
+          "2026-08-20",
+          0.82
+        ],
+        [
+          "2026-08-21",
+          0.81
+        ],
+        [
+          "2026-08-24",
+          0.81
+        ],
+        [
+          "2026-08-25",
+          0.81
+        ],
+        [
+          "2026-08-26",
+          0.8
+        ],
+        [
+          "2026-08-27",
+          0.79
+        ],
+        [
+          "2026-08-28",
+          0.79
+        ],
+        [
+          "2026-08-31",
+          0.8
+        ],
+        [
+          "2026-09-01",
+          0.81
+        ],
+        [
+          "2026-09-02",
+          0.81
+        ],
+        [
+          "2026-09-03",
+          0.81
+        ],
+        [
+          "2026-09-04",
+          0.81
+        ],
+        [
+          "2026-09-07",
+          0.81
+        ],
+        [
+          "2026-09-08",
+          0.81
+        ],
+        [
+          "2026-09-09",
+          0.81
+        ],
+        [
+          "2026-09-10",
+          0.8
+        ],
+        [
+          "2026-09-11",
+          0.8
+        ],
+        [
+          "2026-09-14",
+          0.8
+        ],
+        [
+          "2026-09-15",
+          0.8
+        ],
+        [
+          "2026-09-16",
+          0.78
+        ],
+        [
+          "2026-09-17",
+          0.78
+        ],
+        [
+          "2026-09-18",
+          0.77
+        ],
+        [
+          "2026-09-21",
+          0.77
+        ],
+        [
+          "2026-09-22",
+          0.77
+        ],
+        [
+          "2026-09-23",
+          0.77
+        ],
+        [
+          "2026-09-24",
+          0.79
+        ],
+        [
+          "2026-09-25",
+          0.81
+        ],
+        [
+          "2026-09-28",
+          0.83
+        ],
+        [
+          "2026-09-29",
+          0.84
+        ],
+        [
+          "2026-09-30",
+          0.84
+        ],
+        [
+          "2026-10-01",
+          0.86
+        ],
+        [
+          "2026-10-02",
+          0.85
+        ],
+        [
+          "2026-10-05",
+          0.84
+        ],
+        [
+          "2026-10-06",
+          0.83
+        ],
+        [
+          "2026-10-07",
+          0.82
+        ],
+        [
+          "2026-10-08",
+          0.82
+        ],
+        [
+          "2026-10-09",
+          0.83
+        ],
+        [
+          "2026-10-12",
+          0.83
+        ],
+        [
+          "2026-10-13",
+          0.83
+        ],
+        [
+          "2026-10-14",
+          0.84
+        ],
+        [
+          "2026-10-15",
+          0.84
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Effective Federal Funds Rate (FEDFUNDS)",
+      "type": "line",
+      "x": [
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-10-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        5.33,
+        5.33,
+        5.33,
+        5.33,
+        5.33,
+        5.13,
+        4.83,
+        4.64,
+        4.48,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.22,
+        4.09,
+        3.88,
+        3.72,
+        3.64,
+        3.64,
+        3.64,
+        3.64,
+        3.63,
+        3.63,
+        3.63,
+        3.63,
+        3.75
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "10-Year Treasury Constant Maturity Yield (DGS10)",
+      "type": "line",
+      "x": [
+        "2025-10-03",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        4.13,
+        4.18,
+        4.14,
+        4.13,
+        4.14,
+        4.05,
+        4.03,
+        4.05,
+        3.99,
+        4.02,
+        4.0,
+        3.98,
+        3.97,
+        4.01,
+        4.02,
+        4.01,
+        3.99,
+        4.08,
+        4.11,
+        4.11,
+        4.13,
+        4.1,
+        4.17,
+        4.11,
+        4.11,
+        4.13,
+        4.08,
+        4.11,
+        4.14,
+        4.13,
+        4.12,
+        4.13,
+        4.1,
+        4.06,
+        4.04,
+        4.01,
+        4.0,
+        4.02,
+        4.09,
+        4.09,
+        4.06,
+        4.11,
+        4.14,
+        4.17,
+        4.18,
+        4.13,
+        4.14,
+        4.19,
+        4.18,
+        4.15,
+        4.16,
+        4.12,
+        4.16,
+        4.17,
+        4.18,
+        4.15,
+        4.14,
+        4.12,
+        4.14,
+        4.18,
+        4.19,
+        4.17,
+        4.18,
+        4.15,
+        4.19,
+        4.18,
+        4.19,
+        4.18,
+        4.15,
+        4.17,
+        4.24,
+        4.3,
+        4.26,
+        4.26,
+        4.24,
+        4.22,
+        4.24,
+        4.26,
+        4.24,
+        4.26,
+        4.29,
+        4.28,
+        4.29,
+        4.21,
+        4.22,
+        4.22,
+        4.16,
+        4.18,
+        4.09,
+        4.04,
+        4.05,
+        4.09,
+        4.08,
+        4.08,
+        4.03,
+        4.04,
+        4.05,
+        4.02,
+        3.97,
+        4.05,
+        4.06,
+        4.09,
+        4.13,
+        4.15,
+        4.12,
+        4.15,
+        4.21,
+        4.27,
+        4.28,
+        4.23,
+        4.2,
+        4.26,
+        4.25,
+        4.39,
+        4.34,
+        4.39,
+        4.33,
+        4.42,
+        4.44,
+        4.35,
+        4.3,
+        4.33,
+        4.31,
+        4.35,
+        4.34,
+        4.33,
+        4.29,
+        4.29,
+        4.31,
+        4.3,
+        4.26,
+        4.29,
+        4.32,
+        4.26,
+        4.26,
+        4.3,
+        4.3,
+        4.34,
+        4.31,
+        4.35,
+        4.36,
+        4.42,
+        4.4,
+        4.39,
+        4.45,
+        4.43,
+        4.36,
+        4.41,
+        4.38,
+        4.42,
+        4.46,
+        4.46,
+        4.47,
+        4.59,
+        4.61,
+        4.67,
+        4.57,
+        4.57,
+        4.56,
+        4.5,
+        4.48,
+        4.45,
+        4.45,
+        4.47,
+        4.46,
+        4.49,
+        4.47,
+        4.55,
+        4.56,
+        4.53,
+        4.55,
+        4.45,
+        4.48,
+        4.47,
+        4.43,
+        4.49,
+        4.46,
+        4.51,
+        4.5,
+        4.41,
+        4.4,
+        4.38,
+        4.38,
+        4.44,
+        4.48,
+        4.49,
+        4.48,
+        4.55,
+        4.56,
+        4.54,
+        4.56,
+        4.62,
+        4.58,
+        4.55,
+        4.57,
+        4.55,
+        4.6,
+        4.63,
+        4.67,
+        4.71,
+        4.69,
+        4.65,
+        4.61,
+        4.67,
+        4.68,
+        4.75,
+        4.7,
+        4.63,
+        4.63,
+        4.69,
+        4.65,
+        4.72,
+        4.7,
+        4.68,
+        4.63,
+        4.68,
+        4.72,
+        4.71,
+        4.65,
+        4.69,
+        4.74,
+        4.7,
+        4.64,
+        4.66,
+        4.67,
+        4.73,
+        4.75,
+        4.79,
+        4.79,
+        4.77,
+        4.78,
+        4.8,
+        4.83,
+        4.95,
+        4.96,
+        4.97,
+        5.0,
+        5.01,
+        4.94,
+        5.01,
+        4.96,
+        4.96,
+        5.11,
+        5.18,
+        5.17,
+        5.24,
+        5.26,
+        5.29,
+        5.24,
+        5.28,
+        5.31,
+        5.27,
+        5.28,
+        5.22,
+        5.24,
+        5.21,
+        5.19,
+        5.1
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "ICE BofA US High Yield Option-Adjusted Spread (BAMLH0A0HYM2)",
+      "type": "line",
+      "x": [
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-13",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-11",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-27",
+        "2025-11-28",
+        "2025-11-30",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-19",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-01-31",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-02-28",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-31",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-03",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        2.95,
+        3.18,
+        3.18,
+        3.11,
+        2.95,
+        3.04,
+        3.04,
+        2.99,
+        2.97,
+        3.01,
+        2.96,
+        2.88,
+        2.8,
+        2.82,
+        2.76,
+        2.85,
+        2.94,
+        3.04,
+        3.13,
+        3.05,
+        3.13,
+        3.15,
+        3.02,
+        3.02,
+        3.02,
+        3.09,
+        3.07,
+        3.13,
+        3.2,
+        3.17,
+        3.17,
+        3.19,
+        3.15,
+        3.1,
+        3.0,
+        3.0,
+        2.95,
+        2.92,
+        2.94,
+        2.92,
+        2.89,
+        2.88,
+        2.85,
+        2.89,
+        2.89,
+        2.91,
+        2.88,
+        2.91,
+        2.91,
+        2.98,
+        2.99,
+        2.95,
+        2.9,
+        2.88,
+        2.83,
+        2.84,
+        2.86,
+        2.87,
+        2.84,
+        2.81,
+        2.83,
+        2.81,
+        2.79,
+        2.79,
+        2.76,
+        2.74,
+        2.74,
+        2.75,
+        2.76,
+        2.71,
+        2.65,
+        2.65,
+        2.73,
+        2.69,
+        2.64,
+        2.68,
+        2.69,
+        2.71,
+        2.72,
+        2.77,
+        2.8,
+        2.88,
+        2.81,
+        2.85,
+        2.86,
+        2.97,
+        2.87,
+        2.84,
+        2.86,
+        2.84,
+        2.92,
+        2.95,
+        2.94,
+        2.94,
+        2.86,
+        2.88,
+        2.86,
+        2.95,
+        2.97,
+        2.94,
+        2.98,
+        3.1,
+        3.12,
+        3.03,
+        3.08,
+        2.97,
+        3.0,
+        3.13,
+        3.19,
+        3.06,
+        3.09,
+        3.17,
+        3.28,
+        3.27,
+        3.22,
+        3.2,
+        3.27,
+        3.24,
+        3.19,
+        3.19,
+        3.17,
+        3.21,
+        3.42,
+        3.46,
+        3.28,
+        3.16,
+        3.17,
+        3.13,
+        3.05,
+        3.12,
+        2.94,
+        2.9,
+        2.94,
+        2.95,
+        2.84,
+        2.85,
+        2.86,
+        2.83,
+        2.87,
+        2.85,
+        2.84,
+        2.86,
+        2.86,
+        2.84,
+        2.85,
+        2.82,
+        2.83,
+        2.77,
+        2.78,
+        2.77,
+        2.75,
+        2.79,
+        2.81,
+        2.79,
+        2.82,
+        2.82,
+        2.76,
+        2.8,
+        2.83,
+        2.86,
+        2.8,
+        2.78,
+        2.74,
+        2.74,
+        2.72,
+        2.71,
+        2.72,
+        2.72,
+        2.74,
+        2.72,
+        2.71,
+        2.75,
+        2.74,
+        2.76,
+        2.75,
+        2.78,
+        2.8,
+        2.78,
+        2.71,
+        2.66,
+        2.71,
+        2.63,
+        2.66,
+        2.66,
+        2.65,
+        2.71,
+        2.76,
+        2.78,
+        2.83,
+        2.8,
+        2.75,
+        2.74,
+        2.75,
+        2.74,
+        2.72,
+        2.67,
+        2.7,
+        2.7,
+        2.69,
+        2.69,
+        2.72,
+        2.71,
+        2.71,
+        2.73,
+        2.69,
+        2.69,
+        2.68,
+        2.77,
+        2.79,
+        2.81,
+        2.84,
+        2.87,
+        2.84,
+        2.85,
+        2.78,
+        2.73,
+        2.75,
+        2.71,
+        2.7,
+        2.7,
+        2.72,
+        2.71,
+        2.71,
+        2.67,
+        2.7,
+        2.75,
+        2.73,
+        2.75,
+        2.7,
+        2.69,
+        2.7,
+        2.67,
+        2.63,
+        2.6,
+        2.63,
+        2.65,
+        2.66,
+        2.65,
+        2.68,
+        2.68,
+        2.67,
+        2.71,
+        2.7,
+        2.65,
+        2.71,
+        2.76,
+        2.7,
+        2.7,
+        2.68,
+        2.66,
+        2.68,
+        2.73,
+        2.8,
+        2.93,
+        3.02,
+        3.08,
+        3.12,
+        3.24,
+        3.1,
+        3.12,
+        3.03,
+        3.09,
+        3.15,
+        3.11,
+        3.11,
+        3.16,
+        3.25,
+        3.23
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread (BAMLC0A0CM)",
+      "type": "line",
+      "x": [
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-13",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-11",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-27",
+        "2025-11-28",
+        "2025-11-30",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-19",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-01-31",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-02-28",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-31",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-03",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        0.77,
+        0.81,
+        0.81,
+        0.81,
+        0.78,
+        0.8,
+        0.8,
+        0.79,
+        0.79,
+        0.8,
+        0.78,
+        0.77,
+        0.76,
+        0.76,
+        0.75,
+        0.77,
+        0.8,
+        0.83,
+        0.83,
+        0.81,
+        0.82,
+        0.84,
+        0.82,
+        0.82,
+        0.83,
+        0.84,
+        0.83,
+        0.84,
+        0.85,
+        0.84,
+        0.85,
+        0.86,
+        0.85,
+        0.84,
+        0.82,
+        0.82,
+        0.82,
+        0.82,
+        0.82,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.78,
+        0.79,
+        0.78,
+        0.78,
+        0.8,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.8,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.78,
+        0.78,
+        0.77,
+        0.77,
+        0.76,
+        0.75,
+        0.75,
+        0.75,
+        0.74,
+        0.73,
+        0.73,
+        0.74,
+        0.73,
+        0.73,
+        0.74,
+        0.74,
+        0.75,
+        0.74,
+        0.74,
+        0.75,
+        0.76,
+        0.76,
+        0.76,
+        0.77,
+        0.77,
+        0.78,
+        0.79,
+        0.79,
+        0.8,
+        0.78,
+        0.79,
+        0.78,
+        0.8,
+        0.81,
+        0.8,
+        0.82,
+        0.85,
+        0.86,
+        0.85,
+        0.84,
+        0.82,
+        0.82,
+        0.84,
+        0.85,
+        0.84,
+        0.88,
+        0.91,
+        0.93,
+        0.94,
+        0.92,
+        0.91,
+        0.9,
+        0.88,
+        0.88,
+        0.87,
+        0.87,
+        0.88,
+        0.91,
+        0.93,
+        0.9,
+        0.87,
+        0.86,
+        0.86,
+        0.85,
+        0.86,
+        0.83,
+        0.83,
+        0.82,
+        0.82,
+        0.81,
+        0.8,
+        0.81,
+        0.8,
+        0.81,
+        0.8,
+        0.79,
+        0.8,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.78,
+        0.79,
+        0.79,
+        0.78,
+        0.77,
+        0.76,
+        0.76,
+        0.75,
+        0.75,
+        0.76,
+        0.75,
+        0.75,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.73,
+        0.73,
+        0.74,
+        0.73,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.74,
+        0.73,
+        0.75,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.75,
+        0.76,
+        0.77,
+        0.76,
+        0.76,
+        0.76,
+        0.75,
+        0.75,
+        0.75,
+        0.76,
+        0.76,
+        0.76,
+        0.77,
+        0.78,
+        0.79,
+        0.79,
+        0.78,
+        0.79,
+        0.78,
+        0.78,
+        0.78,
+        0.79,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.78,
+        0.78,
+        0.78,
+        0.78,
+        0.78,
+        0.78,
+        0.79,
+        0.79,
+        0.79,
+        0.8,
+        0.81,
+        0.82,
+        0.81,
+        0.82,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.79,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.78,
+        0.78,
+        0.77,
+        0.77,
+        0.77,
+        0.77,
+        0.79,
+        0.81,
+        0.83,
+        0.84,
+        0.84,
+        0.86,
+        0.85,
+        0.84,
+        0.83,
+        0.82,
+        0.82,
+        0.83,
+        0.83,
+        0.83,
+        0.84,
+        0.84
+      ],
+      "y_label": "Percent"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "FEDFUNDS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "DGS10",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "BAMLH0A0HYM2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "BAMLC0A0CM",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "validation": {
+    "counts": {
+      "figures": 37,
+      "verified": 14,
+      "derived": 13,
+      "unverified": 10
+    },
+    "figures": [
+      {
+        "text": "5.10 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 52,
+        "end": 58,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "Treasury 10‑yr yield 5.10 % [S2]; Fed funds 3.75 % [S1]."
+      },
+      {
+        "text": "3.75 %",
+        "value": 3.75,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 75,
+        "end": 81,
+        "status": "verified",
+        "matched": "FEDFUNDS on 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "Treasury 10‑yr yield 5.10 % [S2]; Fed funds 3.75 % [S1]."
+      },
+      {
+        "text": "0.84 %",
+        "value": 0.84,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 107,
+        "end": 113,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-10-15",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- Current IG OAS 0.84 % [S4]; HY OAS 3.23 % [S3]; HY–IG spread 2.39 pp [S3][S4]."
+      },
+      {
+        "text": "3.23 %",
+        "value": 3.23,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 127,
+        "end": 133,
+        "status": "verified",
+        "matched": "BAMLH0A0HYM2 on 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- Current IG OAS 0.84 % [S4]; HY OAS 3.23 % [S3]; HY–IG spread 2.39 pp [S3][S4]."
+      },
+      {
+        "text": "2.39 pp",
+        "value": 2.39,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 153,
+        "end": 160,
+        "status": "derived",
+        "matched": "BAMLH0A0HYM2 minus BAMLC0A0CM (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3",
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- Current IG OAS 0.84 % [S4]; HY OAS 3.23 % [S3]; HY–IG spread 2.39 pp [S3][S4]."
+      },
+      {
+        "text": "25‑bp",
+        "value": 25.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 339,
+        "end": 344,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- A 25‑bp rise in the 10‑yr yield is likely to widen IG spreads by ~0.5‑1 pp and HY spreads by ~1.5‑2 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "0.5",
+        "value": 0.5,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 403,
+        "end": 406,
+        "status": "derived",
+        "matched": "FEDFUNDS minus BAMLH0A0HYM2 (latest: 2026-09-01, 2026-10-15)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- A 25‑bp rise in the 10‑yr yield is likely to widen IG spreads by ~0.5‑1 pp and HY spreads by ~1.5‑2 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "1 pp",
+        "value": 1.0,
+        "unit": "pp",
+        "tolerance": 0.500000001,
+        "start": 407,
+        "end": 411,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-03-16",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- A 25‑bp rise in the 10‑yr yield is likely to widen IG spreads by ~0.5‑1 pp and HY spreads by ~1.5‑2 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "1.5",
+        "value": 1.5,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 431,
+        "end": 434,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- A 25‑bp rise in the 10‑yr yield is likely to widen IG spreads by ~0.5‑1 pp and HY spreads by ~1.5‑2 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "2 pp",
+        "value": 2.0,
+        "unit": "pp",
+        "tolerance": 0.500000001,
+        "start": 435,
+        "end": 439,
+        "status": "derived",
+        "matched": "DGS10 % change 2026-09-15 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- A 25‑bp rise in the 10‑yr yield is likely to widen IG spreads by ~0.5‑1 pp and HY spreads by ~1.5‑2 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "3.75 %",
+        "value": 3.75,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 665,
+        "end": 671,
+        "status": "verified",
+        "matched": "FEDFUNDS on 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- Fed funds 3.75 % vs 10‑yr Treasury 5.10 % → Fed‑funds minus Treasury = –1.35 pp [S1][S2]."
+      },
+      {
+        "text": "5.10 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 690,
+        "end": 696,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- Fed funds 3.75 % vs 10‑yr Treasury 5.10 % → Fed‑funds minus Treasury = –1.35 pp [S1][S2]."
+      },
+      {
+        "text": "–1.35 pp",
+        "value": 1.35,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 726,
+        "end": 734,
+        "status": "derived",
+        "matched": "FEDFUNDS minus DGS10 (latest: 2026-09-01, 2026-10-15)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- Fed funds 3.75 % vs 10‑yr Treasury 5.10 % → Fed‑funds minus Treasury = –1.35 pp [S1][S2]."
+      },
+      {
+        "text": "–0.09 pp",
+        "value": 0.09,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 786,
+        "end": 794,
+        "status": "derived",
+        "matched": "DGS10 change 2026-10-14 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- 10‑yr yield change since last month: –0.09 pp [S2]."
+      },
+      {
+        "text": "+0.12 pp",
+        "value": 0.12,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 823,
+        "end": 831,
+        "status": "derived",
+        "matched": "FEDFUNDS change 2026-08-01 to 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds change: +0.12 pp [S1]."
+      },
+      {
+        "text": "0.84 %",
+        "value": 0.84,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 876,
+        "end": 882,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-10-15",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- IG OAS 0.84 % [S4]."
+      },
+      {
+        "text": "3.23 %",
+        "value": 3.23,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 900,
+        "end": 906,
+        "status": "verified",
+        "matched": "BAMLH0A0HYM2 on 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- HY OAS 3.23 % [S3]."
+      },
+      {
+        "text": "2.39 pp",
+        "value": 2.39,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 930,
+        "end": 937,
+        "status": "derived",
+        "matched": "BAMLH0A0HYM2 minus BAMLC0A0CM (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3",
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- HY–IG spread 2.39 pp [S3][S4]."
+      },
+      {
+        "text": "1.87 pp",
+        "value": 1.87,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 971,
+        "end": 978,
+        "status": "derived",
+        "matched": "DGS10 minus BAMLH0A0HYM2 (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2",
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S3"
+        ],
+        "context": "- Treasury–HY spread 1.87 pp [S2][S3]."
+      },
+      {
+        "text": "4.26 pp",
+        "value": 4.26,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 1012,
+        "end": 1019,
+        "status": "verified",
+        "matched": "DGS10 on 2026-04-20",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S4"
+        ],
+        "context": "- Treasury–IG spread 4.26 pp [S2][S4]."
+      },
+      {
+        "text": "0.3 pp",
+        "value": 0.3,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1630,
+        "end": 1636,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S4"
+        ],
+        "context": "- Fed rate‑hike announcements tend to lift IG spreads by ~0.3 pp and HY spreads by ~0.8 pp over a 5‑day window (assumption) [S4]."
+      },
+      {
+        "text": "0.8 pp",
+        "value": 0.8,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1656,
+        "end": 1662,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-09-15",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- Fed rate‑hike announcements tend to lift IG spreads by ~0.3 pp and HY spreads by ~0.8 pp over a 5‑day window (assumption) [S4]."
+      },
+      {
+        "text": "2.39 pp",
+        "value": 2.39,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 1823,
+        "end": 1830,
+        "status": "derived",
+        "matched": "BAMLH0A0HYM2 minus BAMLC0A0CM (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3",
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Base** – 10‑yr yield unchanged; IG spread unchanged; HY spread unchanged; spread differential 2.39 pp [S2][S3][S4]."
+      },
+      {
+        "text": "+25 bp",
+        "value": 25.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 1874,
+        "end": 1880,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Upside** – 10‑yr yield +25 bp; IG spread +0.5‑1 pp; HY spread +1.5‑2 pp; spread differential 3.39‑4.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "+0.5",
+        "value": 0.5,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 1892,
+        "end": 1896,
+        "status": "derived",
+        "matched": "FEDFUNDS minus BAMLH0A0HYM2 (latest: 2026-09-01, 2026-10-15)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Upside** – 10‑yr yield +25 bp; IG spread +0.5‑1 pp; HY spread +1.5‑2 pp; spread differential 3.39‑4.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "1 pp",
+        "value": 1.0,
+        "unit": "pp",
+        "tolerance": 0.500000001,
+        "start": 1897,
+        "end": 1901,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-03-16",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Upside** – 10‑yr yield +25 bp; IG spread +0.5‑1 pp; HY spread +1.5‑2 pp; spread differential 3.39‑4.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "+1.5",
+        "value": 1.5,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 1913,
+        "end": 1917,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Upside** – 10‑yr yield +25 bp; IG spread +0.5‑1 pp; HY spread +1.5‑2 pp; spread differential 3.39‑4.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "2 pp",
+        "value": 2.0,
+        "unit": "pp",
+        "tolerance": 0.500000001,
+        "start": 1918,
+        "end": 1922,
+        "status": "derived",
+        "matched": "DGS10 % change 2026-09-15 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Upside** – 10‑yr yield +25 bp; IG spread +0.5‑1 pp; HY spread +1.5‑2 pp; spread differential 3.39‑4.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "3.39",
+        "value": 3.39,
+        "unit": "",
+        "tolerance": 0.0050000010000000004,
+        "start": 1944,
+        "end": 1948,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Upside** – 10‑yr yield +25 bp; IG spread +0.5‑1 pp; HY spread +1.5‑2 pp; spread differential 3.39‑4.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "4.39 pp",
+        "value": 4.39,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 1949,
+        "end": 1956,
+        "status": "verified",
+        "matched": "DGS10 on 2026-05-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Upside** – 10‑yr yield +25 bp; IG spread +0.5‑1 pp; HY spread +1.5‑2 pp; spread differential 3.39‑4.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "–25 bp",
+        "value": 25.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2019,
+        "end": 2025,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Downside** – 10‑yr yield –25 bp; IG spread –0.5‑1 pp; HY spread –1.5‑2 pp; spread differential 1.39‑0.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "–0.5",
+        "value": 0.5,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 2037,
+        "end": 2041,
+        "status": "derived",
+        "matched": "FEDFUNDS minus BAMLH0A0HYM2 (latest: 2026-09-01, 2026-10-15)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Downside** – 10‑yr yield –25 bp; IG spread –0.5‑1 pp; HY spread –1.5‑2 pp; spread differential 1.39‑0.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "1 pp",
+        "value": 1.0,
+        "unit": "pp",
+        "tolerance": 0.500000001,
+        "start": 2042,
+        "end": 2046,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-03-16",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Downside** – 10‑yr yield –25 bp; IG spread –0.5‑1 pp; HY spread –1.5‑2 pp; spread differential 1.39‑0.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "–1.5",
+        "value": 1.5,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 2058,
+        "end": 2062,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Downside** – 10‑yr yield –25 bp; IG spread –0.5‑1 pp; HY spread –1.5‑2 pp; spread differential 1.39‑0.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "2 pp",
+        "value": 2.0,
+        "unit": "pp",
+        "tolerance": 0.500000001,
+        "start": 2063,
+        "end": 2067,
+        "status": "derived",
+        "matched": "DGS10 % change 2026-09-15 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Downside** – 10‑yr yield –25 bp; IG spread –0.5‑1 pp; HY spread –1.5‑2 pp; spread differential 1.39‑0.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "1.39",
+        "value": 1.39,
+        "unit": "",
+        "tolerance": 0.0050000010000000004,
+        "start": 2089,
+        "end": 2093,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Downside** – 10‑yr yield –25 bp; IG spread –0.5‑1 pp; HY spread –1.5‑2 pp; spread differential 1.39‑0.39 pp (assumption) [S1][S2][S3][S4]."
+      },
+      {
+        "text": "0.39 pp",
+        "value": 0.39,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 2094,
+        "end": 2101,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context": "- **Downside** – 10‑yr yield –25 bp; IG spread –0.5‑1 pp; HY spread –1.5‑2 pp; spread differential 1.39‑0.39 pp (assumption) [S1][S2][S3][S4]."
+      }
+    ],
+    "citations": {
+      "markers": 46,
+      "dangling": [],
+      "uncited_paragraphs": [],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: Effective Federal Funds Rate (FEDFUNDS)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: ICE BofA US High Yield Option-Adjusted Spread (BAMLH0A0HYM2)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread (BAMLC0A0CM)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10"
+    ],
+    "open_issues": 0,
+    "summary": "27 of 37 figures verified against source data (14 exact, 13 derived); 10 flagged (10 labelled as assumptions)."
+  },
+  "run_meta": {
+    "run_id": "20261018-105242-7a81e4",
+    "timestamp": "2026-10-18T14:52:42+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}

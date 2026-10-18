@@ -1,0 +1,5905 @@
+{
+  "id": "Q20",
+  "category": "portfolio",
+  "question": "How much should a diversified portfolio allocate to investment-grade credit versus Treasuries right now?",
+  "ticker": null,
+  "expected_tags": [
+    "portfolio",
+    "credit",
+    "rates"
+  ],
+  "pipeline": "revised",
+  "run_utc": "2026-10-18T15:14:11+00:00",
+  "elapsed_sec": 75.4,
+  "router_tags": [
+    "rates",
+    "credit",
+    "portfolio"
+  ],
+  "tier2": {
+    "portfolio": "allocation_framework"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % [S1].  \n- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption).  \n- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption).  \n- IG spreads are near‑historical lows, limiting upside but offering modest credit risk premium.  \n- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption).  \n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed policy remains tight; yields are high but credit spreads are compressed.  \n- Inflation expectations are moderating, supporting a stable yield environment.  \n\n*Sector*  \n- IG corporate bonds dominate the corporate sector; spreads are 0.84 % above Treasury [S3].  \n- HY sector offers higher yield (3.23 % above Treasury) but carries higher default risk [S2].  \n\n*Credit*  \n- IG credit risk is moderate; default rates remain low in the current environment.  \n- HY credit risk is higher; spreads reflect a wider risk‑reward trade‑off.  \n\n*Portfolio*  \n- Treasuries provide the lowest credit risk and a stable yield base.  \n- IG bonds add yield with limited spread risk; duration is slightly higher than Treasuries.  \n\n*See Table 1 for Treasury yield data, Table 2 for HY spread data, Table 3 for IG spread data.*\n\n---\n\n**Scenarios**\n\n| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment. |\n| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk. |\n| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises. |\n\n*All allocations are scenario‑based and marked as assumptions.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Credit Spread Compression** – IG spreads could widen if corporate fundamentals deteriorate.  \n- **Fed Rate Hikes** – Further tightening could erode bond prices, especially for longer‑dated IG issues.  \n- **Liquidity Constraints** – Market stress could reduce liquidity in the IG market.  \n- **Default Events** – A spike in corporate defaults would disproportionately affect IG and HY holdings.  \n- **Monitoring** – Track daily OAS levels for IG and HY, Treasury yield movements, and Fed policy statements.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).  \n- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption).  \n- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption).  \n\nAdjust allocations in response to spread movements, Fed guidance, and credit outlook changes.  \n\n*No portfolio‑specific data were fetched for this analysis.*\n\n---\n\n**Conclusion**\n\nThe current market snapshot shows a high‑yield environment with compressed IG spreads. A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk. Investors should monitor spread dynamics and Fed policy closely, adjusting the allocation toward Treasuries in a tightening or credit‑stress scenario and toward IG in a widening‑spread environment.  \n\n---",
+  "report_text_annotated": "> **Validation:** 7 of 39 figures verified against source data (5 exact, 2 derived); 32 flagged (30 of them appear in a fetched web/news snippet; 28 labelled as assumptions). 2 paragraph(s) state figures without a citation. 4 unverified figure(s) on portfolio, which has no data.\n\n**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % [S1].  \n- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption).  \n- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption).  \n- IG spreads are near‑historical lows, limiting upside but offering modest credit risk premium.  \n- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption).  \n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed policy remains tight; yields are high but credit spreads are compressed.  \n- Inflation expectations are moderating, supporting a stable yield environment.  \n\n*Sector*  \n- IG corporate bonds dominate the corporate sector; spreads are 0.84 % above Treasury [S3].  \n- HY sector offers higher yield (3.23 % above Treasury) but carries higher default risk [S2].  \n\n*Credit*  \n- IG credit risk is moderate; default rates remain low in the current environment.  \n- HY credit risk is higher; spreads reflect a wider risk‑reward trade‑off.  \n\n*Portfolio*  \n- Treasuries provide the lowest credit risk and a stable yield base.  \n- IG bonds add yield with limited spread risk; duration is slightly higher than Treasuries.  \n\n*See Table 1 for Treasury yield data, Table 2 for HY spread data, Table 3 for IG spread data.*\n\n---\n\n**Scenarios**\n\n| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment. |\n| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk. |\n| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises. |\n\n*All allocations are scenario‑based and marked as assumptions.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Credit Spread Compression** – IG spreads could widen if corporate fundamentals deteriorate.  \n- **Fed Rate Hikes** – Further tightening could erode bond prices, especially for longer‑dated IG issues.  \n- **Liquidity Constraints** – Market stress could reduce liquidity in the IG market.  \n- **Default Events** – A spike in corporate defaults would disproportionately affect IG and HY holdings.  \n- **Monitoring** – Track daily OAS levels for IG and HY, Treasury yield movements, and Fed policy statements.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).  \n- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption).  \n- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption).  \n\nAdjust allocations in response to spread movements, Fed guidance, and credit outlook changes.  \n\n*No portfolio‑specific data were fetched for this analysis.*\n\n---\n\n**Conclusion**\n\nThe current market snapshot shows a high‑yield environment with compressed IG spreads. A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk. Investors should monitor spread dynamics and Fed policy closely, adjusting the allocation toward Treasuries in a tightening or credit‑stress scenario and toward IG in a widening‑spread environment.  \n\n---",
+  "draft_report_text": "**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % [S1].  \n- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption).  \n- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption).  \n- IG spreads are near‑historical lows, limiting upside but offering modest credit risk premium.  \n- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption).  \n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed policy remains tight; yields are high but credit spreads are compressed.  \n- Inflation expectations are moderating, supporting a stable yield environment.  \n\n*Sector*  \n- IG corporate bonds dominate the corporate sector; spreads are 0.84 % above Treasury [S3].  \n- HY sector offers higher yield (3.23 % above Treasury) but carries higher default risk [S2].  \n\n*Credit*  \n- IG credit risk is moderate; default rates remain low in the current environment.  \n- HY credit risk is higher; spreads reflect a wider risk‑reward trade‑off.  \n\n*Portfolio*  \n- Treasuries provide the lowest credit risk and a stable yield base.  \n- IG bonds add yield with limited spread risk; duration is slightly higher than Treasuries.  \n\n*See Table 1 for Treasury yield data, Table 2 for HY spread data, Table 3 for IG spread data.*\n\n---\n\n**Scenarios**\n\n| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment. |\n| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk. |\n| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises. |\n\n*All allocations are scenario‑based and marked as assumptions.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Credit Spread Compression** – IG spreads could widen if corporate fundamentals deteriorate.  \n- **Fed Rate Hikes** – Further tightening could erode bond prices, especially for longer‑dated IG issues.  \n- **Liquidity Constraints** – Market stress could reduce liquidity in the IG market.  \n- **Default Events** – A spike in corporate defaults would disproportionately affect IG and HY holdings.  \n- **Monitoring** – Track daily OAS levels for IG and HY, Treasury yield movements, and Fed policy statements.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).  \n- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption).  \n- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption).  \n\nAdjust allocations in response to spread movements, Fed guidance, and credit outlook changes.  \n\n*No portfolio‑specific data were fetched for this analysis.*\n\n---\n\n**Conclusion**\n\nThe current market snapshot shows a high‑yield environment with compressed IG spreads. A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk. Investors should monitor spread dynamics and Fed policy closely, adjusting the allocation toward Treasuries in a tightening or credit‑stress scenario and toward IG in a widening‑spread environment.  \n\n---",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"40\" in: \"A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk.\" — this number appears in source [S4]; cite it in that sentence.\n2. \"50 %\" in: \"A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk.\" — this number appears in source [S4]; cite it in that sentence.\n3. \"50\" in: \"A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk.\" — this number appears in source [S4]; cite it in that sentence.\n4. \"60 %\" in: \"A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk.\" — this number appears in source [S4]; cite it in that sentence.\n5. Add a citation to: \"| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) \" — its figures 20 come from [S2].\n6. Add a citation to: \"- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).\" — its figures 20 come from [S2].",
+        "open_issues_before": 6,
+        "summary_before": "7 of 39 figures verified against source data (5 exact, 2 derived); 32 flagged (30 of them appear in a fetched web/news snippet; 28 labelled as assumptions). 2 paragraph(s) state figures without a citation. 4 unverified figure(s) on portfolio, which has no data.",
+        "accepted": false,
+        "open_issues_after": 6,
+        "summary_after": "7 of 39 figures verified against source data (5 exact, 2 derived); 32 flagged (30 of them appear in a fetched web/news snippet; 28 labelled as assumptions). 2 paragraph(s) state figures without a citation. 4 unverified figure(s) on portfolio, which has no data.",
+        "revised_report_text": "**Executive Summary**  \n- 10‑yr Treasury yield is 5.10 % [S1].  \n- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption).  \n- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption).  \n- IG spreads are near‑historical lows, limiting upside but offering modest credit risk premium.  \n- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption) [S4].\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed policy remains tight; yields are high but credit spreads are compressed.  \n- Inflation expectations are moderating, supporting a stable yield environment.  \n\n*Sector*  \n- IG corporate bonds dominate the corporate sector; spreads are 0.84 % above Treasury [S3].  \n- HY sector offers higher yield (3.23 % above Treasury) but carries higher default risk [S2].  \n\n*Credit*  \n- IG credit risk is moderate; default rates remain low in the current environment.  \n- HY credit risk is higher; spreads reflect a wider risk‑reward trade‑off.  \n\n*Portfolio*  \n- Treasuries provide the lowest credit risk and a stable yield base.  \n- IG bonds add yield with limited spread risk; duration is slightly higher than Treasuries.  \n\n*See Table 1 for Treasury yield data, Table 2 for HY spread data, Table 3 for IG spread data.*\n\n---\n\n**Scenarios**\n\n| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment. |\n| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk. |\n| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises. |\n\n*All allocations are scenario‑based and marked as assumptions.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Credit Spread Compression** – IG spreads could widen if corporate fundamentals deteriorate.  \n- **Fed Rate Hikes** – Further tightening could erode bond prices, especially for longer‑dated IG issues.  \n- **Liquidity Constraints** – Market stress could reduce liquidity in the IG market.  \n- **Default Events** – A spike in corporate defaults would disproportionately affect IG and HY holdings.  \n- **Monitoring** – Track daily OAS levels for IG and HY, Treasury yield movements, and Fed policy statements.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).  \n- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption) [S4].  \n- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption) [S4].  \n\nAdjust allocations in response to spread movements, Fed guidance, and credit outlook changes.  \n\n*No portfolio‑specific data were fetched for this analysis.*\n\n---\n\n**Conclusion**\n\nThe current market snapshot shows a high‑yield environment with compressed IG spreads. A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk. Investors should monitor spread dynamics and Fed policy closely, adjusting the allocation toward Treasuries in a tightening or credit‑stress scenario and toward IG in a widening‑spread environment."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FRED series DGS10: 10-Year Treasury Constant Maturity Yield",
+      "url": "https://fred.stlouisfed.org/series/DGS10",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 5.1 on 2026-10-15.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series BAMLH0A0HYM2: ICE BofA US High Yield Option-Adjusted Spread",
+      "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 3.23 on 2026-10-15.",
+      "id": "S2"
+    },
+    {
+      "title": "FRED series BAMLC0A0CM: ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread",
+      "url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 0.84 on 2026-10-15.",
+      "id": "S3"
+    },
+    {
+      "title": "How Should I Allocate My Portfolio in 2026?",
+      "url": "https://useorigin.com/resources/blog/how-should-i-allocate-my-portfolio-in-2026",
+      "source": "web (Tavily)",
+      "snippet": "30–50% stocks  50–70% bonds  Moderate (balanced growth)   60–70% stocks  30–40% bonds  Aggressive (long time horizon, high tolerance)   80–90% stocks  10–20% bonds  Younger investors often skew stock-heavy — but income stability and psychological comfort matter.  ## Step 4: Diversify Within Asset Classes  Stock diversi",
+      "id": "S4"
+    },
+    {
+      "title": "2026 Outlook: Fixed Income Views - Cambridge Associates",
+      "url": "https://www.cambridgeassociates.com/insight/2026-outlook-fixed-income-views",
+      "source": "web (Tavily)",
+      "snippet": "Overall, we anticipate that bonds will outperform cash in most major markets—supported by steeper yield curves—and should maintain their defense role in a downturn. However, since current bond yields are not especially attractive relative to our fair value estimates, we recommend maintaining allocations at policy level",
+      "id": "S5"
+    },
+    {
+      "title": "2026 Market Outlook page - BondBloxx® ETF",
+      "url": "https://bondbloxxetf.com/2026-fixed-income-market-outlook",
+      "source": "web (Tavily)",
+      "snippet": "Credit: Intermediate BBB rated corporate bonds were the best performing sector within U.S. corporate bonds, reflecting strong fundamentals and declining interest rates. In U.S. high yield, BB rated bonds were the top performer, as a result of attractive coupon income and price appreciation.  U.S. Treasuries:Intermediat",
+      "id": "S6"
+    },
+    {
+      "title": "Checking in with Outflows: How Much Did Investment-Grade Bond Funds See Last Week?",
+      "url": "https://finance.yahoo.com/news/checking-outflows-much-did-investment-130719505.html",
+      "source": "web (Tavily)",
+      "snippet": "Like yields, the OAS (option-adjusted spread) rose by seven basis points to end at ~2.1% on February 5. The OAS measures the average difference in yields between investment-grade bonds and Treasuries. Thus, a rise in this spread implies that the risk of high-grade bonds relative to Treasuries has increased.  For more a",
+      "id": "S7"
+    },
+    {
+      "title": "UBS Diversified Credit",
+      "url": "https://finance.yahoo.com/news/ubs-diversified-credit-130300125.html",
+      "source": "web (Tavily)",
+      "snippet": "consists of investment-grade and non-investment-grade credit assets. UBS holds securities such as hybrids, U.S. high-yield securities (a maximum of 25% of the portfolio), investment-grade corporate bonds (up to 100%), and other securitised assets (up to 30%). Australian hybrids have historically been a reasonable propo",
+      "id": "S8"
+    },
+    {
+      "title": "Are Bonds Becoming a Better Investment for Portfolios? | Goldman Sachs",
+      "url": "https://www.goldmansachs.com/insights/articles/are-bonds-becoming-a-better-investment-for-portfolios",
+      "source": "web (Tavily)",
+      "snippet": "“When you look over the very long run since World War II, on average, the optimal bond allocation was actually 40%,” Mueller-Glissmann says. That aligns with a typical balanced 60/40 portfolio of 60% stocks and 40% bonds. [...] Related Tags  ### Markets  #### Will 30-Year US Treasury Yields Climb Higher?  Oct 6, 2026  ",
+      "id": "S9"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "tables": [
+    {
+      "title": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "DGS10",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "rates"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/DGS10",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-03",
+          4.13
+        ],
+        [
+          "2025-10-06",
+          4.18
+        ],
+        [
+          "2025-10-07",
+          4.14
+        ],
+        [
+          "2025-10-08",
+          4.13
+        ],
+        [
+          "2025-10-09",
+          4.14
+        ],
+        [
+          "2025-10-10",
+          4.05
+        ],
+        [
+          "2025-10-14",
+          4.03
+        ],
+        [
+          "2025-10-15",
+          4.05
+        ],
+        [
+          "2025-10-16",
+          3.99
+        ],
+        [
+          "2025-10-17",
+          4.02
+        ],
+        [
+          "2025-10-20",
+          4.0
+        ],
+        [
+          "2025-10-21",
+          3.98
+        ],
+        [
+          "2025-10-22",
+          3.97
+        ],
+        [
+          "2025-10-23",
+          4.01
+        ],
+        [
+          "2025-10-24",
+          4.02
+        ],
+        [
+          "2025-10-27",
+          4.01
+        ],
+        [
+          "2025-10-28",
+          3.99
+        ],
+        [
+          "2025-10-29",
+          4.08
+        ],
+        [
+          "2025-10-30",
+          4.11
+        ],
+        [
+          "2025-10-31",
+          4.11
+        ],
+        [
+          "2025-11-03",
+          4.13
+        ],
+        [
+          "2025-11-04",
+          4.1
+        ],
+        [
+          "2025-11-05",
+          4.17
+        ],
+        [
+          "2025-11-06",
+          4.11
+        ],
+        [
+          "2025-11-07",
+          4.11
+        ],
+        [
+          "2025-11-10",
+          4.13
+        ],
+        [
+          "2025-11-12",
+          4.08
+        ],
+        [
+          "2025-11-13",
+          4.11
+        ],
+        [
+          "2025-11-14",
+          4.14
+        ],
+        [
+          "2025-11-17",
+          4.13
+        ],
+        [
+          "2025-11-18",
+          4.12
+        ],
+        [
+          "2025-11-19",
+          4.13
+        ],
+        [
+          "2025-11-20",
+          4.1
+        ],
+        [
+          "2025-11-21",
+          4.06
+        ],
+        [
+          "2025-11-24",
+          4.04
+        ],
+        [
+          "2025-11-25",
+          4.01
+        ],
+        [
+          "2025-11-26",
+          4.0
+        ],
+        [
+          "2025-11-28",
+          4.02
+        ],
+        [
+          "2025-12-01",
+          4.09
+        ],
+        [
+          "2025-12-02",
+          4.09
+        ],
+        [
+          "2025-12-03",
+          4.06
+        ],
+        [
+          "2025-12-04",
+          4.11
+        ],
+        [
+          "2025-12-05",
+          4.14
+        ],
+        [
+          "2025-12-08",
+          4.17
+        ],
+        [
+          "2025-12-09",
+          4.18
+        ],
+        [
+          "2025-12-10",
+          4.13
+        ],
+        [
+          "2025-12-11",
+          4.14
+        ],
+        [
+          "2025-12-12",
+          4.19
+        ],
+        [
+          "2025-12-15",
+          4.18
+        ],
+        [
+          "2025-12-16",
+          4.15
+        ],
+        [
+          "2025-12-17",
+          4.16
+        ],
+        [
+          "2025-12-18",
+          4.12
+        ],
+        [
+          "2025-12-19",
+          4.16
+        ],
+        [
+          "2025-12-22",
+          4.17
+        ],
+        [
+          "2025-12-23",
+          4.18
+        ],
+        [
+          "2025-12-24",
+          4.15
+        ],
+        [
+          "2025-12-26",
+          4.14
+        ],
+        [
+          "2025-12-29",
+          4.12
+        ],
+        [
+          "2025-12-30",
+          4.14
+        ],
+        [
+          "2025-12-31",
+          4.18
+        ],
+        [
+          "2026-01-02",
+          4.19
+        ],
+        [
+          "2026-01-05",
+          4.17
+        ],
+        [
+          "2026-01-06",
+          4.18
+        ],
+        [
+          "2026-01-07",
+          4.15
+        ],
+        [
+          "2026-01-08",
+          4.19
+        ],
+        [
+          "2026-01-09",
+          4.18
+        ],
+        [
+          "2026-01-12",
+          4.19
+        ],
+        [
+          "2026-01-13",
+          4.18
+        ],
+        [
+          "2026-01-14",
+          4.15
+        ],
+        [
+          "2026-01-15",
+          4.17
+        ],
+        [
+          "2026-01-16",
+          4.24
+        ],
+        [
+          "2026-01-20",
+          4.3
+        ],
+        [
+          "2026-01-21",
+          4.26
+        ],
+        [
+          "2026-01-22",
+          4.26
+        ],
+        [
+          "2026-01-23",
+          4.24
+        ],
+        [
+          "2026-01-26",
+          4.22
+        ],
+        [
+          "2026-01-27",
+          4.24
+        ],
+        [
+          "2026-01-28",
+          4.26
+        ],
+        [
+          "2026-01-29",
+          4.24
+        ],
+        [
+          "2026-01-30",
+          4.26
+        ],
+        [
+          "2026-02-02",
+          4.29
+        ],
+        [
+          "2026-02-03",
+          4.28
+        ],
+        [
+          "2026-02-04",
+          4.29
+        ],
+        [
+          "2026-02-05",
+          4.21
+        ],
+        [
+          "2026-02-06",
+          4.22
+        ],
+        [
+          "2026-02-09",
+          4.22
+        ],
+        [
+          "2026-02-10",
+          4.16
+        ],
+        [
+          "2026-02-11",
+          4.18
+        ],
+        [
+          "2026-02-12",
+          4.09
+        ],
+        [
+          "2026-02-13",
+          4.04
+        ],
+        [
+          "2026-02-17",
+          4.05
+        ],
+        [
+          "2026-02-18",
+          4.09
+        ],
+        [
+          "2026-02-19",
+          4.08
+        ],
+        [
+          "2026-02-20",
+          4.08
+        ],
+        [
+          "2026-02-23",
+          4.03
+        ],
+        [
+          "2026-02-24",
+          4.04
+        ],
+        [
+          "2026-02-25",
+          4.05
+        ],
+        [
+          "2026-02-26",
+          4.02
+        ],
+        [
+          "2026-02-27",
+          3.97
+        ],
+        [
+          "2026-03-02",
+          4.05
+        ],
+        [
+          "2026-03-03",
+          4.06
+        ],
+        [
+          "2026-03-04",
+          4.09
+        ],
+        [
+          "2026-03-05",
+          4.13
+        ],
+        [
+          "2026-03-06",
+          4.15
+        ],
+        [
+          "2026-03-09",
+          4.12
+        ],
+        [
+          "2026-03-10",
+          4.15
+        ],
+        [
+          "2026-03-11",
+          4.21
+        ],
+        [
+          "2026-03-12",
+          4.27
+        ],
+        [
+          "2026-03-13",
+          4.28
+        ],
+        [
+          "2026-03-16",
+          4.23
+        ],
+        [
+          "2026-03-17",
+          4.2
+        ],
+        [
+          "2026-03-18",
+          4.26
+        ],
+        [
+          "2026-03-19",
+          4.25
+        ],
+        [
+          "2026-03-20",
+          4.39
+        ],
+        [
+          "2026-03-23",
+          4.34
+        ],
+        [
+          "2026-03-24",
+          4.39
+        ],
+        [
+          "2026-03-25",
+          4.33
+        ],
+        [
+          "2026-03-26",
+          4.42
+        ],
+        [
+          "2026-03-27",
+          4.44
+        ],
+        [
+          "2026-03-30",
+          4.35
+        ],
+        [
+          "2026-03-31",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.33
+        ],
+        [
+          "2026-04-02",
+          4.31
+        ],
+        [
+          "2026-04-03",
+          4.35
+        ],
+        [
+          "2026-04-06",
+          4.34
+        ],
+        [
+          "2026-04-07",
+          4.33
+        ],
+        [
+          "2026-04-08",
+          4.29
+        ],
+        [
+          "2026-04-09",
+          4.29
+        ],
+        [
+          "2026-04-10",
+          4.31
+        ],
+        [
+          "2026-04-13",
+          4.3
+        ],
+        [
+          "2026-04-14",
+          4.26
+        ],
+        [
+          "2026-04-15",
+          4.29
+        ],
+        [
+          "2026-04-16",
+          4.32
+        ],
+        [
+          "2026-04-17",
+          4.26
+        ],
+        [
+          "2026-04-20",
+          4.26
+        ],
+        [
+          "2026-04-21",
+          4.3
+        ],
+        [
+          "2026-04-22",
+          4.3
+        ],
+        [
+          "2026-04-23",
+          4.34
+        ],
+        [
+          "2026-04-24",
+          4.31
+        ],
+        [
+          "2026-04-27",
+          4.35
+        ],
+        [
+          "2026-04-28",
+          4.36
+        ],
+        [
+          "2026-04-29",
+          4.42
+        ],
+        [
+          "2026-04-30",
+          4.4
+        ],
+        [
+          "2026-05-01",
+          4.39
+        ],
+        [
+          "2026-05-04",
+          4.45
+        ],
+        [
+          "2026-05-05",
+          4.43
+        ],
+        [
+          "2026-05-06",
+          4.36
+        ],
+        [
+          "2026-05-07",
+          4.41
+        ],
+        [
+          "2026-05-08",
+          4.38
+        ],
+        [
+          "2026-05-11",
+          4.42
+        ],
+        [
+          "2026-05-12",
+          4.46
+        ],
+        [
+          "2026-05-13",
+          4.46
+        ],
+        [
+          "2026-05-14",
+          4.47
+        ],
+        [
+          "2026-05-15",
+          4.59
+        ],
+        [
+          "2026-05-18",
+          4.61
+        ],
+        [
+          "2026-05-19",
+          4.67
+        ],
+        [
+          "2026-05-20",
+          4.57
+        ],
+        [
+          "2026-05-21",
+          4.57
+        ],
+        [
+          "2026-05-22",
+          4.56
+        ],
+        [
+          "2026-05-26",
+          4.5
+        ],
+        [
+          "2026-05-27",
+          4.48
+        ],
+        [
+          "2026-05-28",
+          4.45
+        ],
+        [
+          "2026-05-29",
+          4.45
+        ],
+        [
+          "2026-06-01",
+          4.47
+        ],
+        [
+          "2026-06-02",
+          4.46
+        ],
+        [
+          "2026-06-03",
+          4.49
+        ],
+        [
+          "2026-06-04",
+          4.47
+        ],
+        [
+          "2026-06-05",
+          4.55
+        ],
+        [
+          "2026-06-08",
+          4.56
+        ],
+        [
+          "2026-06-09",
+          4.53
+        ],
+        [
+          "2026-06-10",
+          4.55
+        ],
+        [
+          "2026-06-11",
+          4.45
+        ],
+        [
+          "2026-06-12",
+          4.48
+        ],
+        [
+          "2026-06-15",
+          4.47
+        ],
+        [
+          "2026-06-16",
+          4.43
+        ],
+        [
+          "2026-06-17",
+          4.49
+        ],
+        [
+          "2026-06-18",
+          4.46
+        ],
+        [
+          "2026-06-22",
+          4.51
+        ],
+        [
+          "2026-06-23",
+          4.5
+        ],
+        [
+          "2026-06-24",
+          4.41
+        ],
+        [
+          "2026-06-25",
+          4.4
+        ],
+        [
+          "2026-06-26",
+          4.38
+        ],
+        [
+          "2026-06-29",
+          4.38
+        ],
+        [
+          "2026-06-30",
+          4.44
+        ],
+        [
+          "2026-07-01",
+          4.48
+        ],
+        [
+          "2026-07-02",
+          4.49
+        ],
+        [
+          "2026-07-06",
+          4.48
+        ],
+        [
+          "2026-07-07",
+          4.55
+        ],
+        [
+          "2026-07-08",
+          4.56
+        ],
+        [
+          "2026-07-09",
+          4.54
+        ],
+        [
+          "2026-07-10",
+          4.56
+        ],
+        [
+          "2026-07-13",
+          4.62
+        ],
+        [
+          "2026-07-14",
+          4.58
+        ],
+        [
+          "2026-07-15",
+          4.55
+        ],
+        [
+          "2026-07-16",
+          4.57
+        ],
+        [
+          "2026-07-17",
+          4.55
+        ],
+        [
+          "2026-07-20",
+          4.6
+        ],
+        [
+          "2026-07-21",
+          4.63
+        ],
+        [
+          "2026-07-22",
+          4.67
+        ],
+        [
+          "2026-07-23",
+          4.71
+        ],
+        [
+          "2026-07-24",
+          4.69
+        ],
+        [
+          "2026-07-27",
+          4.65
+        ],
+        [
+          "2026-07-28",
+          4.61
+        ],
+        [
+          "2026-07-29",
+          4.67
+        ],
+        [
+          "2026-07-30",
+          4.68
+        ],
+        [
+          "2026-07-31",
+          4.75
+        ],
+        [
+          "2026-08-03",
+          4.7
+        ],
+        [
+          "2026-08-04",
+          4.63
+        ],
+        [
+          "2026-08-05",
+          4.63
+        ],
+        [
+          "2026-08-06",
+          4.69
+        ],
+        [
+          "2026-08-07",
+          4.65
+        ],
+        [
+          "2026-08-10",
+          4.72
+        ],
+        [
+          "2026-08-11",
+          4.7
+        ],
+        [
+          "2026-08-12",
+          4.68
+        ],
+        [
+          "2026-08-13",
+          4.63
+        ],
+        [
+          "2026-08-14",
+          4.68
+        ],
+        [
+          "2026-08-17",
+          4.72
+        ],
+        [
+          "2026-08-18",
+          4.71
+        ],
+        [
+          "2026-08-19",
+          4.65
+        ],
+        [
+          "2026-08-20",
+          4.69
+        ],
+        [
+          "2026-08-21",
+          4.74
+        ],
+        [
+          "2026-08-24",
+          4.7
+        ],
+        [
+          "2026-08-25",
+          4.64
+        ],
+        [
+          "2026-08-26",
+          4.66
+        ],
+        [
+          "2026-08-27",
+          4.67
+        ],
+        [
+          "2026-08-28",
+          4.73
+        ],
+        [
+          "2026-08-31",
+          4.75
+        ],
+        [
+          "2026-09-01",
+          4.79
+        ],
+        [
+          "2026-09-02",
+          4.79
+        ],
+        [
+          "2026-09-03",
+          4.77
+        ],
+        [
+          "2026-09-04",
+          4.78
+        ],
+        [
+          "2026-09-08",
+          4.8
+        ],
+        [
+          "2026-09-09",
+          4.83
+        ],
+        [
+          "2026-09-10",
+          4.95
+        ],
+        [
+          "2026-09-11",
+          4.96
+        ],
+        [
+          "2026-09-14",
+          4.97
+        ],
+        [
+          "2026-09-15",
+          5.0
+        ],
+        [
+          "2026-09-16",
+          5.01
+        ],
+        [
+          "2026-09-17",
+          4.94
+        ],
+        [
+          "2026-09-18",
+          5.01
+        ],
+        [
+          "2026-09-21",
+          4.96
+        ],
+        [
+          "2026-09-22",
+          4.96
+        ],
+        [
+          "2026-09-23",
+          5.11
+        ],
+        [
+          "2026-09-24",
+          5.18
+        ],
+        [
+          "2026-09-25",
+          5.17
+        ],
+        [
+          "2026-09-28",
+          5.24
+        ],
+        [
+          "2026-09-29",
+          5.26
+        ],
+        [
+          "2026-09-30",
+          5.29
+        ],
+        [
+          "2026-10-01",
+          5.24
+        ],
+        [
+          "2026-10-02",
+          5.28
+        ],
+        [
+          "2026-10-05",
+          5.31
+        ],
+        [
+          "2026-10-06",
+          5.27
+        ],
+        [
+          "2026-10-07",
+          5.28
+        ],
+        [
+          "2026-10-08",
+          5.22
+        ],
+        [
+          "2026-10-09",
+          5.24
+        ],
+        [
+          "2026-10-13",
+          5.21
+        ],
+        [
+          "2026-10-14",
+          5.19
+        ],
+        [
+          "2026-10-15",
+          5.1
+        ]
+      ]
+    },
+    {
+      "title": "FRED: ICE BofA US High Yield Option-Adjusted Spread (BAMLH0A0HYM2)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "BAMLH0A0HYM2",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "credit"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-09",
+          2.95
+        ],
+        [
+          "2025-10-10",
+          3.18
+        ],
+        [
+          "2025-10-13",
+          3.18
+        ],
+        [
+          "2025-10-14",
+          3.11
+        ],
+        [
+          "2025-10-15",
+          2.95
+        ],
+        [
+          "2025-10-16",
+          3.04
+        ],
+        [
+          "2025-10-17",
+          3.04
+        ],
+        [
+          "2025-10-20",
+          2.99
+        ],
+        [
+          "2025-10-21",
+          2.97
+        ],
+        [
+          "2025-10-22",
+          3.01
+        ],
+        [
+          "2025-10-23",
+          2.96
+        ],
+        [
+          "2025-10-24",
+          2.88
+        ],
+        [
+          "2025-10-27",
+          2.8
+        ],
+        [
+          "2025-10-28",
+          2.82
+        ],
+        [
+          "2025-10-29",
+          2.76
+        ],
+        [
+          "2025-10-30",
+          2.85
+        ],
+        [
+          "2025-10-31",
+          2.94
+        ],
+        [
+          "2025-11-03",
+          3.04
+        ],
+        [
+          "2025-11-04",
+          3.13
+        ],
+        [
+          "2025-11-05",
+          3.05
+        ],
+        [
+          "2025-11-06",
+          3.13
+        ],
+        [
+          "2025-11-07",
+          3.15
+        ],
+        [
+          "2025-11-10",
+          3.02
+        ],
+        [
+          "2025-11-11",
+          3.02
+        ],
+        [
+          "2025-11-12",
+          3.02
+        ],
+        [
+          "2025-11-13",
+          3.09
+        ],
+        [
+          "2025-11-14",
+          3.07
+        ],
+        [
+          "2025-11-17",
+          3.13
+        ],
+        [
+          "2025-11-18",
+          3.2
+        ],
+        [
+          "2025-11-19",
+          3.17
+        ],
+        [
+          "2025-11-20",
+          3.17
+        ],
+        [
+          "2025-11-21",
+          3.19
+        ],
+        [
+          "2025-11-24",
+          3.15
+        ],
+        [
+          "2025-11-25",
+          3.1
+        ],
+        [
+          "2025-11-26",
+          3.0
+        ],
+        [
+          "2025-11-27",
+          3.0
+        ],
+        [
+          "2025-11-28",
+          2.95
+        ],
+        [
+          "2025-11-30",
+          2.92
+        ],
+        [
+          "2025-12-01",
+          2.94
+        ],
+        [
+          "2025-12-02",
+          2.92
+        ],
+        [
+          "2025-12-03",
+          2.89
+        ],
+        [
+          "2025-12-04",
+          2.88
+        ],
+        [
+          "2025-12-05",
+          2.85
+        ],
+        [
+          "2025-12-08",
+          2.89
+        ],
+        [
+          "2025-12-09",
+          2.89
+        ],
+        [
+          "2025-12-10",
+          2.91
+        ],
+        [
+          "2025-12-11",
+          2.88
+        ],
+        [
+          "2025-12-12",
+          2.91
+        ],
+        [
+          "2025-12-15",
+          2.91
+        ],
+        [
+          "2025-12-16",
+          2.98
+        ],
+        [
+          "2025-12-17",
+          2.99
+        ],
+        [
+          "2025-12-18",
+          2.95
+        ],
+        [
+          "2025-12-19",
+          2.9
+        ],
+        [
+          "2025-12-22",
+          2.88
+        ],
+        [
+          "2025-12-23",
+          2.83
+        ],
+        [
+          "2025-12-24",
+          2.84
+        ],
+        [
+          "2025-12-26",
+          2.86
+        ],
+        [
+          "2025-12-29",
+          2.87
+        ],
+        [
+          "2025-12-30",
+          2.84
+        ],
+        [
+          "2025-12-31",
+          2.81
+        ],
+        [
+          "2026-01-02",
+          2.83
+        ],
+        [
+          "2026-01-05",
+          2.81
+        ],
+        [
+          "2026-01-06",
+          2.79
+        ],
+        [
+          "2026-01-07",
+          2.79
+        ],
+        [
+          "2026-01-08",
+          2.76
+        ],
+        [
+          "2026-01-09",
+          2.74
+        ],
+        [
+          "2026-01-12",
+          2.74
+        ],
+        [
+          "2026-01-13",
+          2.75
+        ],
+        [
+          "2026-01-14",
+          2.76
+        ],
+        [
+          "2026-01-15",
+          2.71
+        ],
+        [
+          "2026-01-16",
+          2.65
+        ],
+        [
+          "2026-01-19",
+          2.65
+        ],
+        [
+          "2026-01-20",
+          2.73
+        ],
+        [
+          "2026-01-21",
+          2.69
+        ],
+        [
+          "2026-01-22",
+          2.64
+        ],
+        [
+          "2026-01-23",
+          2.68
+        ],
+        [
+          "2026-01-26",
+          2.69
+        ],
+        [
+          "2026-01-27",
+          2.71
+        ],
+        [
+          "2026-01-28",
+          2.72
+        ],
+        [
+          "2026-01-29",
+          2.77
+        ],
+        [
+          "2026-01-30",
+          2.8
+        ],
+        [
+          "2026-01-31",
+          2.88
+        ],
+        [
+          "2026-02-02",
+          2.81
+        ],
+        [
+          "2026-02-03",
+          2.85
+        ],
+        [
+          "2026-02-04",
+          2.86
+        ],
+        [
+          "2026-02-05",
+          2.97
+        ],
+        [
+          "2026-02-06",
+          2.87
+        ],
+        [
+          "2026-02-09",
+          2.84
+        ],
+        [
+          "2026-02-10",
+          2.86
+        ],
+        [
+          "2026-02-11",
+          2.84
+        ],
+        [
+          "2026-02-12",
+          2.92
+        ],
+        [
+          "2026-02-13",
+          2.95
+        ],
+        [
+          "2026-02-16",
+          2.94
+        ],
+        [
+          "2026-02-17",
+          2.94
+        ],
+        [
+          "2026-02-18",
+          2.86
+        ],
+        [
+          "2026-02-19",
+          2.88
+        ],
+        [
+          "2026-02-20",
+          2.86
+        ],
+        [
+          "2026-02-23",
+          2.95
+        ],
+        [
+          "2026-02-24",
+          2.97
+        ],
+        [
+          "2026-02-25",
+          2.94
+        ],
+        [
+          "2026-02-26",
+          2.98
+        ],
+        [
+          "2026-02-27",
+          3.1
+        ],
+        [
+          "2026-02-28",
+          3.12
+        ],
+        [
+          "2026-03-02",
+          3.03
+        ],
+        [
+          "2026-03-03",
+          3.08
+        ],
+        [
+          "2026-03-04",
+          2.97
+        ],
+        [
+          "2026-03-05",
+          3.0
+        ],
+        [
+          "2026-03-06",
+          3.13
+        ],
+        [
+          "2026-03-09",
+          3.19
+        ],
+        [
+          "2026-03-10",
+          3.06
+        ],
+        [
+          "2026-03-11",
+          3.09
+        ],
+        [
+          "2026-03-12",
+          3.17
+        ],
+        [
+          "2026-03-13",
+          3.28
+        ],
+        [
+          "2026-03-16",
+          3.27
+        ],
+        [
+          "2026-03-17",
+          3.22
+        ],
+        [
+          "2026-03-18",
+          3.2
+        ],
+        [
+          "2026-03-19",
+          3.27
+        ],
+        [
+          "2026-03-20",
+          3.24
+        ],
+        [
+          "2026-03-23",
+          3.19
+        ],
+        [
+          "2026-03-24",
+          3.19
+        ],
+        [
+          "2026-03-25",
+          3.17
+        ],
+        [
+          "2026-03-26",
+          3.21
+        ],
+        [
+          "2026-03-27",
+          3.42
+        ],
+        [
+          "2026-03-30",
+          3.46
+        ],
+        [
+          "2026-03-31",
+          3.28
+        ],
+        [
+          "2026-04-01",
+          3.16
+        ],
+        [
+          "2026-04-02",
+          3.17
+        ],
+        [
+          "2026-04-03",
+          3.13
+        ],
+        [
+          "2026-04-06",
+          3.05
+        ],
+        [
+          "2026-04-07",
+          3.12
+        ],
+        [
+          "2026-04-08",
+          2.94
+        ],
+        [
+          "2026-04-09",
+          2.9
+        ],
+        [
+          "2026-04-10",
+          2.94
+        ],
+        [
+          "2026-04-13",
+          2.95
+        ],
+        [
+          "2026-04-14",
+          2.84
+        ],
+        [
+          "2026-04-15",
+          2.85
+        ],
+        [
+          "2026-04-16",
+          2.86
+        ],
+        [
+          "2026-04-17",
+          2.83
+        ],
+        [
+          "2026-04-20",
+          2.87
+        ],
+        [
+          "2026-04-21",
+          2.85
+        ],
+        [
+          "2026-04-22",
+          2.84
+        ],
+        [
+          "2026-04-23",
+          2.86
+        ],
+        [
+          "2026-04-24",
+          2.86
+        ],
+        [
+          "2026-04-27",
+          2.84
+        ],
+        [
+          "2026-04-28",
+          2.85
+        ],
+        [
+          "2026-04-29",
+          2.82
+        ],
+        [
+          "2026-04-30",
+          2.83
+        ],
+        [
+          "2026-05-01",
+          2.77
+        ],
+        [
+          "2026-05-04",
+          2.78
+        ],
+        [
+          "2026-05-05",
+          2.77
+        ],
+        [
+          "2026-05-06",
+          2.75
+        ],
+        [
+          "2026-05-07",
+          2.79
+        ],
+        [
+          "2026-05-08",
+          2.81
+        ],
+        [
+          "2026-05-11",
+          2.79
+        ],
+        [
+          "2026-05-12",
+          2.82
+        ],
+        [
+          "2026-05-13",
+          2.82
+        ],
+        [
+          "2026-05-14",
+          2.76
+        ],
+        [
+          "2026-05-15",
+          2.8
+        ],
+        [
+          "2026-05-18",
+          2.83
+        ],
+        [
+          "2026-05-19",
+          2.86
+        ],
+        [
+          "2026-05-20",
+          2.8
+        ],
+        [
+          "2026-05-21",
+          2.78
+        ],
+        [
+          "2026-05-22",
+          2.74
+        ],
+        [
+          "2026-05-25",
+          2.74
+        ],
+        [
+          "2026-05-26",
+          2.72
+        ],
+        [
+          "2026-05-27",
+          2.71
+        ],
+        [
+          "2026-05-28",
+          2.72
+        ],
+        [
+          "2026-05-29",
+          2.72
+        ],
+        [
+          "2026-05-31",
+          2.74
+        ],
+        [
+          "2026-06-01",
+          2.72
+        ],
+        [
+          "2026-06-02",
+          2.71
+        ],
+        [
+          "2026-06-03",
+          2.75
+        ],
+        [
+          "2026-06-04",
+          2.74
+        ],
+        [
+          "2026-06-05",
+          2.76
+        ],
+        [
+          "2026-06-08",
+          2.75
+        ],
+        [
+          "2026-06-09",
+          2.78
+        ],
+        [
+          "2026-06-10",
+          2.8
+        ],
+        [
+          "2026-06-11",
+          2.78
+        ],
+        [
+          "2026-06-12",
+          2.71
+        ],
+        [
+          "2026-06-15",
+          2.66
+        ],
+        [
+          "2026-06-16",
+          2.71
+        ],
+        [
+          "2026-06-17",
+          2.63
+        ],
+        [
+          "2026-06-18",
+          2.66
+        ],
+        [
+          "2026-06-19",
+          2.66
+        ],
+        [
+          "2026-06-22",
+          2.65
+        ],
+        [
+          "2026-06-23",
+          2.71
+        ],
+        [
+          "2026-06-24",
+          2.76
+        ],
+        [
+          "2026-06-25",
+          2.78
+        ],
+        [
+          "2026-06-26",
+          2.83
+        ],
+        [
+          "2026-06-29",
+          2.8
+        ],
+        [
+          "2026-06-30",
+          2.75
+        ],
+        [
+          "2026-07-01",
+          2.74
+        ],
+        [
+          "2026-07-02",
+          2.75
+        ],
+        [
+          "2026-07-03",
+          2.74
+        ],
+        [
+          "2026-07-06",
+          2.72
+        ],
+        [
+          "2026-07-07",
+          2.67
+        ],
+        [
+          "2026-07-08",
+          2.7
+        ],
+        [
+          "2026-07-09",
+          2.7
+        ],
+        [
+          "2026-07-10",
+          2.69
+        ],
+        [
+          "2026-07-13",
+          2.69
+        ],
+        [
+          "2026-07-14",
+          2.72
+        ],
+        [
+          "2026-07-15",
+          2.71
+        ],
+        [
+          "2026-07-16",
+          2.71
+        ],
+        [
+          "2026-07-17",
+          2.73
+        ],
+        [
+          "2026-07-20",
+          2.69
+        ],
+        [
+          "2026-07-21",
+          2.69
+        ],
+        [
+          "2026-07-22",
+          2.68
+        ],
+        [
+          "2026-07-23",
+          2.77
+        ],
+        [
+          "2026-07-24",
+          2.79
+        ],
+        [
+          "2026-07-27",
+          2.81
+        ],
+        [
+          "2026-07-28",
+          2.84
+        ],
+        [
+          "2026-07-29",
+          2.87
+        ],
+        [
+          "2026-07-30",
+          2.84
+        ],
+        [
+          "2026-07-31",
+          2.85
+        ],
+        [
+          "2026-08-03",
+          2.78
+        ],
+        [
+          "2026-08-04",
+          2.73
+        ],
+        [
+          "2026-08-05",
+          2.75
+        ],
+        [
+          "2026-08-06",
+          2.71
+        ],
+        [
+          "2026-08-07",
+          2.7
+        ],
+        [
+          "2026-08-10",
+          2.7
+        ],
+        [
+          "2026-08-11",
+          2.72
+        ],
+        [
+          "2026-08-12",
+          2.71
+        ],
+        [
+          "2026-08-13",
+          2.71
+        ],
+        [
+          "2026-08-14",
+          2.67
+        ],
+        [
+          "2026-08-17",
+          2.7
+        ],
+        [
+          "2026-08-18",
+          2.75
+        ],
+        [
+          "2026-08-19",
+          2.73
+        ],
+        [
+          "2026-08-20",
+          2.75
+        ],
+        [
+          "2026-08-21",
+          2.7
+        ],
+        [
+          "2026-08-24",
+          2.69
+        ],
+        [
+          "2026-08-25",
+          2.7
+        ],
+        [
+          "2026-08-26",
+          2.67
+        ],
+        [
+          "2026-08-27",
+          2.63
+        ],
+        [
+          "2026-08-28",
+          2.6
+        ],
+        [
+          "2026-08-31",
+          2.63
+        ],
+        [
+          "2026-09-01",
+          2.65
+        ],
+        [
+          "2026-09-02",
+          2.66
+        ],
+        [
+          "2026-09-03",
+          2.65
+        ],
+        [
+          "2026-09-04",
+          2.68
+        ],
+        [
+          "2026-09-07",
+          2.68
+        ],
+        [
+          "2026-09-08",
+          2.67
+        ],
+        [
+          "2026-09-09",
+          2.71
+        ],
+        [
+          "2026-09-10",
+          2.7
+        ],
+        [
+          "2026-09-11",
+          2.65
+        ],
+        [
+          "2026-09-14",
+          2.71
+        ],
+        [
+          "2026-09-15",
+          2.76
+        ],
+        [
+          "2026-09-16",
+          2.7
+        ],
+        [
+          "2026-09-17",
+          2.7
+        ],
+        [
+          "2026-09-18",
+          2.68
+        ],
+        [
+          "2026-09-21",
+          2.66
+        ],
+        [
+          "2026-09-22",
+          2.68
+        ],
+        [
+          "2026-09-23",
+          2.73
+        ],
+        [
+          "2026-09-24",
+          2.8
+        ],
+        [
+          "2026-09-25",
+          2.93
+        ],
+        [
+          "2026-09-28",
+          3.02
+        ],
+        [
+          "2026-09-29",
+          3.08
+        ],
+        [
+          "2026-09-30",
+          3.12
+        ],
+        [
+          "2026-10-01",
+          3.24
+        ],
+        [
+          "2026-10-02",
+          3.1
+        ],
+        [
+          "2026-10-05",
+          3.12
+        ],
+        [
+          "2026-10-06",
+          3.03
+        ],
+        [
+          "2026-10-07",
+          3.09
+        ],
+        [
+          "2026-10-08",
+          3.15
+        ],
+        [
+          "2026-10-09",
+          3.11
+        ],
+        [
+          "2026-10-12",
+          3.11
+        ],
+        [
+          "2026-10-13",
+          3.16
+        ],
+        [
+          "2026-10-14",
+          3.25
+        ],
+        [
+          "2026-10-15",
+          3.23
+        ]
+      ]
+    },
+    {
+      "title": "FRED: ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread (BAMLC0A0CM)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "BAMLC0A0CM",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "credit"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-09",
+          0.77
+        ],
+        [
+          "2025-10-10",
+          0.81
+        ],
+        [
+          "2025-10-13",
+          0.81
+        ],
+        [
+          "2025-10-14",
+          0.81
+        ],
+        [
+          "2025-10-15",
+          0.78
+        ],
+        [
+          "2025-10-16",
+          0.8
+        ],
+        [
+          "2025-10-17",
+          0.8
+        ],
+        [
+          "2025-10-20",
+          0.79
+        ],
+        [
+          "2025-10-21",
+          0.79
+        ],
+        [
+          "2025-10-22",
+          0.8
+        ],
+        [
+          "2025-10-23",
+          0.78
+        ],
+        [
+          "2025-10-24",
+          0.77
+        ],
+        [
+          "2025-10-27",
+          0.76
+        ],
+        [
+          "2025-10-28",
+          0.76
+        ],
+        [
+          "2025-10-29",
+          0.75
+        ],
+        [
+          "2025-10-30",
+          0.77
+        ],
+        [
+          "2025-10-31",
+          0.8
+        ],
+        [
+          "2025-11-03",
+          0.83
+        ],
+        [
+          "2025-11-04",
+          0.83
+        ],
+        [
+          "2025-11-05",
+          0.81
+        ],
+        [
+          "2025-11-06",
+          0.82
+        ],
+        [
+          "2025-11-07",
+          0.84
+        ],
+        [
+          "2025-11-10",
+          0.82
+        ],
+        [
+          "2025-11-11",
+          0.82
+        ],
+        [
+          "2025-11-12",
+          0.83
+        ],
+        [
+          "2025-11-13",
+          0.84
+        ],
+        [
+          "2025-11-14",
+          0.83
+        ],
+        [
+          "2025-11-17",
+          0.84
+        ],
+        [
+          "2025-11-18",
+          0.85
+        ],
+        [
+          "2025-11-19",
+          0.84
+        ],
+        [
+          "2025-11-20",
+          0.85
+        ],
+        [
+          "2025-11-21",
+          0.86
+        ],
+        [
+          "2025-11-24",
+          0.85
+        ],
+        [
+          "2025-11-25",
+          0.84
+        ],
+        [
+          "2025-11-26",
+          0.82
+        ],
+        [
+          "2025-11-27",
+          0.82
+        ],
+        [
+          "2025-11-28",
+          0.82
+        ],
+        [
+          "2025-11-30",
+          0.82
+        ],
+        [
+          "2025-12-01",
+          0.82
+        ],
+        [
+          "2025-12-02",
+          0.81
+        ],
+        [
+          "2025-12-03",
+          0.81
+        ],
+        [
+          "2025-12-04",
+          0.8
+        ],
+        [
+          "2025-12-05",
+          0.79
+        ],
+        [
+          "2025-12-08",
+          0.78
+        ],
+        [
+          "2025-12-09",
+          0.79
+        ],
+        [
+          "2025-12-10",
+          0.78
+        ],
+        [
+          "2025-12-11",
+          0.78
+        ],
+        [
+          "2025-12-12",
+          0.8
+        ],
+        [
+          "2025-12-15",
+          0.8
+        ],
+        [
+          "2025-12-16",
+          0.81
+        ],
+        [
+          "2025-12-17",
+          0.81
+        ],
+        [
+          "2025-12-18",
+          0.81
+        ],
+        [
+          "2025-12-19",
+          0.8
+        ],
+        [
+          "2025-12-22",
+          0.8
+        ],
+        [
+          "2025-12-23",
+          0.79
+        ],
+        [
+          "2025-12-24",
+          0.79
+        ],
+        [
+          "2025-12-26",
+          0.79
+        ],
+        [
+          "2025-12-29",
+          0.79
+        ],
+        [
+          "2025-12-30",
+          0.79
+        ],
+        [
+          "2025-12-31",
+          0.79
+        ],
+        [
+          "2026-01-02",
+          0.79
+        ],
+        [
+          "2026-01-05",
+          0.79
+        ],
+        [
+          "2026-01-06",
+          0.79
+        ],
+        [
+          "2026-01-07",
+          0.79
+        ],
+        [
+          "2026-01-08",
+          0.79
+        ],
+        [
+          "2026-01-09",
+          0.78
+        ],
+        [
+          "2026-01-12",
+          0.78
+        ],
+        [
+          "2026-01-13",
+          0.77
+        ],
+        [
+          "2026-01-14",
+          0.77
+        ],
+        [
+          "2026-01-15",
+          0.76
+        ],
+        [
+          "2026-01-16",
+          0.75
+        ],
+        [
+          "2026-01-19",
+          0.75
+        ],
+        [
+          "2026-01-20",
+          0.75
+        ],
+        [
+          "2026-01-21",
+          0.74
+        ],
+        [
+          "2026-01-22",
+          0.73
+        ],
+        [
+          "2026-01-23",
+          0.73
+        ],
+        [
+          "2026-01-26",
+          0.74
+        ],
+        [
+          "2026-01-27",
+          0.73
+        ],
+        [
+          "2026-01-28",
+          0.73
+        ],
+        [
+          "2026-01-29",
+          0.74
+        ],
+        [
+          "2026-01-30",
+          0.74
+        ],
+        [
+          "2026-01-31",
+          0.75
+        ],
+        [
+          "2026-02-02",
+          0.74
+        ],
+        [
+          "2026-02-03",
+          0.74
+        ],
+        [
+          "2026-02-04",
+          0.75
+        ],
+        [
+          "2026-02-05",
+          0.76
+        ],
+        [
+          "2026-02-06",
+          0.76
+        ],
+        [
+          "2026-02-09",
+          0.76
+        ],
+        [
+          "2026-02-10",
+          0.77
+        ],
+        [
+          "2026-02-11",
+          0.77
+        ],
+        [
+          "2026-02-12",
+          0.78
+        ],
+        [
+          "2026-02-13",
+          0.79
+        ],
+        [
+          "2026-02-16",
+          0.79
+        ],
+        [
+          "2026-02-17",
+          0.8
+        ],
+        [
+          "2026-02-18",
+          0.78
+        ],
+        [
+          "2026-02-19",
+          0.79
+        ],
+        [
+          "2026-02-20",
+          0.78
+        ],
+        [
+          "2026-02-23",
+          0.8
+        ],
+        [
+          "2026-02-24",
+          0.81
+        ],
+        [
+          "2026-02-25",
+          0.8
+        ],
+        [
+          "2026-02-26",
+          0.82
+        ],
+        [
+          "2026-02-27",
+          0.85
+        ],
+        [
+          "2026-02-28",
+          0.86
+        ],
+        [
+          "2026-03-02",
+          0.85
+        ],
+        [
+          "2026-03-03",
+          0.84
+        ],
+        [
+          "2026-03-04",
+          0.82
+        ],
+        [
+          "2026-03-05",
+          0.82
+        ],
+        [
+          "2026-03-06",
+          0.84
+        ],
+        [
+          "2026-03-09",
+          0.85
+        ],
+        [
+          "2026-03-10",
+          0.84
+        ],
+        [
+          "2026-03-11",
+          0.88
+        ],
+        [
+          "2026-03-12",
+          0.91
+        ],
+        [
+          "2026-03-13",
+          0.93
+        ],
+        [
+          "2026-03-16",
+          0.94
+        ],
+        [
+          "2026-03-17",
+          0.92
+        ],
+        [
+          "2026-03-18",
+          0.91
+        ],
+        [
+          "2026-03-19",
+          0.9
+        ],
+        [
+          "2026-03-20",
+          0.88
+        ],
+        [
+          "2026-03-23",
+          0.88
+        ],
+        [
+          "2026-03-24",
+          0.87
+        ],
+        [
+          "2026-03-25",
+          0.87
+        ],
+        [
+          "2026-03-26",
+          0.88
+        ],
+        [
+          "2026-03-27",
+          0.91
+        ],
+        [
+          "2026-03-30",
+          0.93
+        ],
+        [
+          "2026-03-31",
+          0.9
+        ],
+        [
+          "2026-04-01",
+          0.87
+        ],
+        [
+          "2026-04-02",
+          0.86
+        ],
+        [
+          "2026-04-03",
+          0.86
+        ],
+        [
+          "2026-04-06",
+          0.85
+        ],
+        [
+          "2026-04-07",
+          0.86
+        ],
+        [
+          "2026-04-08",
+          0.83
+        ],
+        [
+          "2026-04-09",
+          0.83
+        ],
+        [
+          "2026-04-10",
+          0.82
+        ],
+        [
+          "2026-04-13",
+          0.82
+        ],
+        [
+          "2026-04-14",
+          0.81
+        ],
+        [
+          "2026-04-15",
+          0.8
+        ],
+        [
+          "2026-04-16",
+          0.81
+        ],
+        [
+          "2026-04-17",
+          0.8
+        ],
+        [
+          "2026-04-20",
+          0.81
+        ],
+        [
+          "2026-04-21",
+          0.8
+        ],
+        [
+          "2026-04-22",
+          0.79
+        ],
+        [
+          "2026-04-23",
+          0.8
+        ],
+        [
+          "2026-04-24",
+          0.8
+        ],
+        [
+          "2026-04-27",
+          0.81
+        ],
+        [
+          "2026-04-28",
+          0.81
+        ],
+        [
+          "2026-04-29",
+          0.81
+        ],
+        [
+          "2026-04-30",
+          0.81
+        ],
+        [
+          "2026-05-01",
+          0.81
+        ],
+        [
+          "2026-05-04",
+          0.8
+        ],
+        [
+          "2026-05-05",
+          0.79
+        ],
+        [
+          "2026-05-06",
+          0.78
+        ],
+        [
+          "2026-05-07",
+          0.79
+        ],
+        [
+          "2026-05-08",
+          0.79
+        ],
+        [
+          "2026-05-11",
+          0.78
+        ],
+        [
+          "2026-05-12",
+          0.77
+        ],
+        [
+          "2026-05-13",
+          0.76
+        ],
+        [
+          "2026-05-14",
+          0.76
+        ],
+        [
+          "2026-05-15",
+          0.75
+        ],
+        [
+          "2026-05-18",
+          0.75
+        ],
+        [
+          "2026-05-19",
+          0.76
+        ],
+        [
+          "2026-05-20",
+          0.75
+        ],
+        [
+          "2026-05-21",
+          0.75
+        ],
+        [
+          "2026-05-22",
+          0.74
+        ],
+        [
+          "2026-05-25",
+          0.74
+        ],
+        [
+          "2026-05-26",
+          0.74
+        ],
+        [
+          "2026-05-27",
+          0.74
+        ],
+        [
+          "2026-05-28",
+          0.73
+        ],
+        [
+          "2026-05-29",
+          0.73
+        ],
+        [
+          "2026-05-31",
+          0.74
+        ],
+        [
+          "2026-06-01",
+          0.73
+        ],
+        [
+          "2026-06-02",
+          0.74
+        ],
+        [
+          "2026-06-03",
+          0.74
+        ],
+        [
+          "2026-06-04",
+          0.74
+        ],
+        [
+          "2026-06-05",
+          0.74
+        ],
+        [
+          "2026-06-08",
+          0.75
+        ],
+        [
+          "2026-06-09",
+          0.75
+        ],
+        [
+          "2026-06-10",
+          0.75
+        ],
+        [
+          "2026-06-11",
+          0.75
+        ],
+        [
+          "2026-06-12",
+          0.74
+        ],
+        [
+          "2026-06-15",
+          0.73
+        ],
+        [
+          "2026-06-16",
+          0.75
+        ],
+        [
+          "2026-06-17",
+          0.74
+        ],
+        [
+          "2026-06-18",
+          0.74
+        ],
+        [
+          "2026-06-19",
+          0.74
+        ],
+        [
+          "2026-06-22",
+          0.74
+        ],
+        [
+          "2026-06-23",
+          0.74
+        ],
+        [
+          "2026-06-24",
+          0.75
+        ],
+        [
+          "2026-06-25",
+          0.76
+        ],
+        [
+          "2026-06-26",
+          0.77
+        ],
+        [
+          "2026-06-29",
+          0.76
+        ],
+        [
+          "2026-06-30",
+          0.76
+        ],
+        [
+          "2026-07-01",
+          0.76
+        ],
+        [
+          "2026-07-02",
+          0.75
+        ],
+        [
+          "2026-07-03",
+          0.75
+        ],
+        [
+          "2026-07-06",
+          0.75
+        ],
+        [
+          "2026-07-07",
+          0.76
+        ],
+        [
+          "2026-07-08",
+          0.76
+        ],
+        [
+          "2026-07-09",
+          0.76
+        ],
+        [
+          "2026-07-10",
+          0.77
+        ],
+        [
+          "2026-07-13",
+          0.78
+        ],
+        [
+          "2026-07-14",
+          0.79
+        ],
+        [
+          "2026-07-15",
+          0.79
+        ],
+        [
+          "2026-07-16",
+          0.78
+        ],
+        [
+          "2026-07-17",
+          0.79
+        ],
+        [
+          "2026-07-20",
+          0.78
+        ],
+        [
+          "2026-07-21",
+          0.78
+        ],
+        [
+          "2026-07-22",
+          0.78
+        ],
+        [
+          "2026-07-23",
+          0.79
+        ],
+        [
+          "2026-07-24",
+          0.8
+        ],
+        [
+          "2026-07-27",
+          0.81
+        ],
+        [
+          "2026-07-28",
+          0.81
+        ],
+        [
+          "2026-07-29",
+          0.81
+        ],
+        [
+          "2026-07-30",
+          0.8
+        ],
+        [
+          "2026-07-31",
+          0.79
+        ],
+        [
+          "2026-08-03",
+          0.78
+        ],
+        [
+          "2026-08-04",
+          0.78
+        ],
+        [
+          "2026-08-05",
+          0.78
+        ],
+        [
+          "2026-08-06",
+          0.78
+        ],
+        [
+          "2026-08-07",
+          0.78
+        ],
+        [
+          "2026-08-10",
+          0.78
+        ],
+        [
+          "2026-08-11",
+          0.79
+        ],
+        [
+          "2026-08-12",
+          0.79
+        ],
+        [
+          "2026-08-13",
+          0.79
+        ],
+        [
+          "2026-08-14",
+          0.8
+        ],
+        [
+          "2026-08-17",
+          0.81
+        ],
+        [
+          "2026-08-18",
+          0.82
+        ],
+        [
+          "2026-08-19",
+          0.81
+        ],
+        [
+          "2026-08-20",
+          0.82
+        ],
+        [
+          "2026-08-21",
+          0.81
+        ],
+        [
+          "2026-08-24",
+          0.81
+        ],
+        [
+          "2026-08-25",
+          0.81
+        ],
+        [
+          "2026-08-26",
+          0.8
+        ],
+        [
+          "2026-08-27",
+          0.79
+        ],
+        [
+          "2026-08-28",
+          0.79
+        ],
+        [
+          "2026-08-31",
+          0.8
+        ],
+        [
+          "2026-09-01",
+          0.81
+        ],
+        [
+          "2026-09-02",
+          0.81
+        ],
+        [
+          "2026-09-03",
+          0.81
+        ],
+        [
+          "2026-09-04",
+          0.81
+        ],
+        [
+          "2026-09-07",
+          0.81
+        ],
+        [
+          "2026-09-08",
+          0.81
+        ],
+        [
+          "2026-09-09",
+          0.81
+        ],
+        [
+          "2026-09-10",
+          0.8
+        ],
+        [
+          "2026-09-11",
+          0.8
+        ],
+        [
+          "2026-09-14",
+          0.8
+        ],
+        [
+          "2026-09-15",
+          0.8
+        ],
+        [
+          "2026-09-16",
+          0.78
+        ],
+        [
+          "2026-09-17",
+          0.78
+        ],
+        [
+          "2026-09-18",
+          0.77
+        ],
+        [
+          "2026-09-21",
+          0.77
+        ],
+        [
+          "2026-09-22",
+          0.77
+        ],
+        [
+          "2026-09-23",
+          0.77
+        ],
+        [
+          "2026-09-24",
+          0.79
+        ],
+        [
+          "2026-09-25",
+          0.81
+        ],
+        [
+          "2026-09-28",
+          0.83
+        ],
+        [
+          "2026-09-29",
+          0.84
+        ],
+        [
+          "2026-09-30",
+          0.84
+        ],
+        [
+          "2026-10-01",
+          0.86
+        ],
+        [
+          "2026-10-02",
+          0.85
+        ],
+        [
+          "2026-10-05",
+          0.84
+        ],
+        [
+          "2026-10-06",
+          0.83
+        ],
+        [
+          "2026-10-07",
+          0.82
+        ],
+        [
+          "2026-10-08",
+          0.82
+        ],
+        [
+          "2026-10-09",
+          0.83
+        ],
+        [
+          "2026-10-12",
+          0.83
+        ],
+        [
+          "2026-10-13",
+          0.83
+        ],
+        [
+          "2026-10-14",
+          0.84
+        ],
+        [
+          "2026-10-15",
+          0.84
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "10-Year Treasury Constant Maturity Yield (DGS10)",
+      "type": "line",
+      "x": [
+        "2025-10-03",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        4.13,
+        4.18,
+        4.14,
+        4.13,
+        4.14,
+        4.05,
+        4.03,
+        4.05,
+        3.99,
+        4.02,
+        4.0,
+        3.98,
+        3.97,
+        4.01,
+        4.02,
+        4.01,
+        3.99,
+        4.08,
+        4.11,
+        4.11,
+        4.13,
+        4.1,
+        4.17,
+        4.11,
+        4.11,
+        4.13,
+        4.08,
+        4.11,
+        4.14,
+        4.13,
+        4.12,
+        4.13,
+        4.1,
+        4.06,
+        4.04,
+        4.01,
+        4.0,
+        4.02,
+        4.09,
+        4.09,
+        4.06,
+        4.11,
+        4.14,
+        4.17,
+        4.18,
+        4.13,
+        4.14,
+        4.19,
+        4.18,
+        4.15,
+        4.16,
+        4.12,
+        4.16,
+        4.17,
+        4.18,
+        4.15,
+        4.14,
+        4.12,
+        4.14,
+        4.18,
+        4.19,
+        4.17,
+        4.18,
+        4.15,
+        4.19,
+        4.18,
+        4.19,
+        4.18,
+        4.15,
+        4.17,
+        4.24,
+        4.3,
+        4.26,
+        4.26,
+        4.24,
+        4.22,
+        4.24,
+        4.26,
+        4.24,
+        4.26,
+        4.29,
+        4.28,
+        4.29,
+        4.21,
+        4.22,
+        4.22,
+        4.16,
+        4.18,
+        4.09,
+        4.04,
+        4.05,
+        4.09,
+        4.08,
+        4.08,
+        4.03,
+        4.04,
+        4.05,
+        4.02,
+        3.97,
+        4.05,
+        4.06,
+        4.09,
+        4.13,
+        4.15,
+        4.12,
+        4.15,
+        4.21,
+        4.27,
+        4.28,
+        4.23,
+        4.2,
+        4.26,
+        4.25,
+        4.39,
+        4.34,
+        4.39,
+        4.33,
+        4.42,
+        4.44,
+        4.35,
+        4.3,
+        4.33,
+        4.31,
+        4.35,
+        4.34,
+        4.33,
+        4.29,
+        4.29,
+        4.31,
+        4.3,
+        4.26,
+        4.29,
+        4.32,
+        4.26,
+        4.26,
+        4.3,
+        4.3,
+        4.34,
+        4.31,
+        4.35,
+        4.36,
+        4.42,
+        4.4,
+        4.39,
+        4.45,
+        4.43,
+        4.36,
+        4.41,
+        4.38,
+        4.42,
+        4.46,
+        4.46,
+        4.47,
+        4.59,
+        4.61,
+        4.67,
+        4.57,
+        4.57,
+        4.56,
+        4.5,
+        4.48,
+        4.45,
+        4.45,
+        4.47,
+        4.46,
+        4.49,
+        4.47,
+        4.55,
+        4.56,
+        4.53,
+        4.55,
+        4.45,
+        4.48,
+        4.47,
+        4.43,
+        4.49,
+        4.46,
+        4.51,
+        4.5,
+        4.41,
+        4.4,
+        4.38,
+        4.38,
+        4.44,
+        4.48,
+        4.49,
+        4.48,
+        4.55,
+        4.56,
+        4.54,
+        4.56,
+        4.62,
+        4.58,
+        4.55,
+        4.57,
+        4.55,
+        4.6,
+        4.63,
+        4.67,
+        4.71,
+        4.69,
+        4.65,
+        4.61,
+        4.67,
+        4.68,
+        4.75,
+        4.7,
+        4.63,
+        4.63,
+        4.69,
+        4.65,
+        4.72,
+        4.7,
+        4.68,
+        4.63,
+        4.68,
+        4.72,
+        4.71,
+        4.65,
+        4.69,
+        4.74,
+        4.7,
+        4.64,
+        4.66,
+        4.67,
+        4.73,
+        4.75,
+        4.79,
+        4.79,
+        4.77,
+        4.78,
+        4.8,
+        4.83,
+        4.95,
+        4.96,
+        4.97,
+        5.0,
+        5.01,
+        4.94,
+        5.01,
+        4.96,
+        4.96,
+        5.11,
+        5.18,
+        5.17,
+        5.24,
+        5.26,
+        5.29,
+        5.24,
+        5.28,
+        5.31,
+        5.27,
+        5.28,
+        5.22,
+        5.24,
+        5.21,
+        5.19,
+        5.1
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "ICE BofA US High Yield Option-Adjusted Spread (BAMLH0A0HYM2)",
+      "type": "line",
+      "x": [
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-13",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-11",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-27",
+        "2025-11-28",
+        "2025-11-30",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-19",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-01-31",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-02-28",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-31",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-03",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        2.95,
+        3.18,
+        3.18,
+        3.11,
+        2.95,
+        3.04,
+        3.04,
+        2.99,
+        2.97,
+        3.01,
+        2.96,
+        2.88,
+        2.8,
+        2.82,
+        2.76,
+        2.85,
+        2.94,
+        3.04,
+        3.13,
+        3.05,
+        3.13,
+        3.15,
+        3.02,
+        3.02,
+        3.02,
+        3.09,
+        3.07,
+        3.13,
+        3.2,
+        3.17,
+        3.17,
+        3.19,
+        3.15,
+        3.1,
+        3.0,
+        3.0,
+        2.95,
+        2.92,
+        2.94,
+        2.92,
+        2.89,
+        2.88,
+        2.85,
+        2.89,
+        2.89,
+        2.91,
+        2.88,
+        2.91,
+        2.91,
+        2.98,
+        2.99,
+        2.95,
+        2.9,
+        2.88,
+        2.83,
+        2.84,
+        2.86,
+        2.87,
+        2.84,
+        2.81,
+        2.83,
+        2.81,
+        2.79,
+        2.79,
+        2.76,
+        2.74,
+        2.74,
+        2.75,
+        2.76,
+        2.71,
+        2.65,
+        2.65,
+        2.73,
+        2.69,
+        2.64,
+        2.68,
+        2.69,
+        2.71,
+        2.72,
+        2.77,
+        2.8,
+        2.88,
+        2.81,
+        2.85,
+        2.86,
+        2.97,
+        2.87,
+        2.84,
+        2.86,
+        2.84,
+        2.92,
+        2.95,
+        2.94,
+        2.94,
+        2.86,
+        2.88,
+        2.86,
+        2.95,
+        2.97,
+        2.94,
+        2.98,
+        3.1,
+        3.12,
+        3.03,
+        3.08,
+        2.97,
+        3.0,
+        3.13,
+        3.19,
+        3.06,
+        3.09,
+        3.17,
+        3.28,
+        3.27,
+        3.22,
+        3.2,
+        3.27,
+        3.24,
+        3.19,
+        3.19,
+        3.17,
+        3.21,
+        3.42,
+        3.46,
+        3.28,
+        3.16,
+        3.17,
+        3.13,
+        3.05,
+        3.12,
+        2.94,
+        2.9,
+        2.94,
+        2.95,
+        2.84,
+        2.85,
+        2.86,
+        2.83,
+        2.87,
+        2.85,
+        2.84,
+        2.86,
+        2.86,
+        2.84,
+        2.85,
+        2.82,
+        2.83,
+        2.77,
+        2.78,
+        2.77,
+        2.75,
+        2.79,
+        2.81,
+        2.79,
+        2.82,
+        2.82,
+        2.76,
+        2.8,
+        2.83,
+        2.86,
+        2.8,
+        2.78,
+        2.74,
+        2.74,
+        2.72,
+        2.71,
+        2.72,
+        2.72,
+        2.74,
+        2.72,
+        2.71,
+        2.75,
+        2.74,
+        2.76,
+        2.75,
+        2.78,
+        2.8,
+        2.78,
+        2.71,
+        2.66,
+        2.71,
+        2.63,
+        2.66,
+        2.66,
+        2.65,
+        2.71,
+        2.76,
+        2.78,
+        2.83,
+        2.8,
+        2.75,
+        2.74,
+        2.75,
+        2.74,
+        2.72,
+        2.67,
+        2.7,
+        2.7,
+        2.69,
+        2.69,
+        2.72,
+        2.71,
+        2.71,
+        2.73,
+        2.69,
+        2.69,
+        2.68,
+        2.77,
+        2.79,
+        2.81,
+        2.84,
+        2.87,
+        2.84,
+        2.85,
+        2.78,
+        2.73,
+        2.75,
+        2.71,
+        2.7,
+        2.7,
+        2.72,
+        2.71,
+        2.71,
+        2.67,
+        2.7,
+        2.75,
+        2.73,
+        2.75,
+        2.7,
+        2.69,
+        2.7,
+        2.67,
+        2.63,
+        2.6,
+        2.63,
+        2.65,
+        2.66,
+        2.65,
+        2.68,
+        2.68,
+        2.67,
+        2.71,
+        2.7,
+        2.65,
+        2.71,
+        2.76,
+        2.7,
+        2.7,
+        2.68,
+        2.66,
+        2.68,
+        2.73,
+        2.8,
+        2.93,
+        3.02,
+        3.08,
+        3.12,
+        3.24,
+        3.1,
+        3.12,
+        3.03,
+        3.09,
+        3.15,
+        3.11,
+        3.11,
+        3.16,
+        3.25,
+        3.23
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread (BAMLC0A0CM)",
+      "type": "line",
+      "x": [
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-13",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-11",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-27",
+        "2025-11-28",
+        "2025-11-30",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-19",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-01-31",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-02-28",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-31",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-03",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        0.77,
+        0.81,
+        0.81,
+        0.81,
+        0.78,
+        0.8,
+        0.8,
+        0.79,
+        0.79,
+        0.8,
+        0.78,
+        0.77,
+        0.76,
+        0.76,
+        0.75,
+        0.77,
+        0.8,
+        0.83,
+        0.83,
+        0.81,
+        0.82,
+        0.84,
+        0.82,
+        0.82,
+        0.83,
+        0.84,
+        0.83,
+        0.84,
+        0.85,
+        0.84,
+        0.85,
+        0.86,
+        0.85,
+        0.84,
+        0.82,
+        0.82,
+        0.82,
+        0.82,
+        0.82,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.78,
+        0.79,
+        0.78,
+        0.78,
+        0.8,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.8,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.78,
+        0.78,
+        0.77,
+        0.77,
+        0.76,
+        0.75,
+        0.75,
+        0.75,
+        0.74,
+        0.73,
+        0.73,
+        0.74,
+        0.73,
+        0.73,
+        0.74,
+        0.74,
+        0.75,
+        0.74,
+        0.74,
+        0.75,
+        0.76,
+        0.76,
+        0.76,
+        0.77,
+        0.77,
+        0.78,
+        0.79,
+        0.79,
+        0.8,
+        0.78,
+        0.79,
+        0.78,
+        0.8,
+        0.81,
+        0.8,
+        0.82,
+        0.85,
+        0.86,
+        0.85,
+        0.84,
+        0.82,
+        0.82,
+        0.84,
+        0.85,
+        0.84,
+        0.88,
+        0.91,
+        0.93,
+        0.94,
+        0.92,
+        0.91,
+        0.9,
+        0.88,
+        0.88,
+        0.87,
+        0.87,
+        0.88,
+        0.91,
+        0.93,
+        0.9,
+        0.87,
+        0.86,
+        0.86,
+        0.85,
+        0.86,
+        0.83,
+        0.83,
+        0.82,
+        0.82,
+        0.81,
+        0.8,
+        0.81,
+        0.8,
+        0.81,
+        0.8,
+        0.79,
+        0.8,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.78,
+        0.79,
+        0.79,
+        0.78,
+        0.77,
+        0.76,
+        0.76,
+        0.75,
+        0.75,
+        0.76,
+        0.75,
+        0.75,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.73,
+        0.73,
+        0.74,
+        0.73,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.74,
+        0.73,
+        0.75,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.75,
+        0.76,
+        0.77,
+        0.76,
+        0.76,
+        0.76,
+        0.75,
+        0.75,
+        0.75,
+        0.76,
+        0.76,
+        0.76,
+        0.77,
+        0.78,
+        0.79,
+        0.79,
+        0.78,
+        0.79,
+        0.78,
+        0.78,
+        0.78,
+        0.79,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.78,
+        0.78,
+        0.78,
+        0.78,
+        0.78,
+        0.78,
+        0.79,
+        0.79,
+        0.79,
+        0.8,
+        0.81,
+        0.82,
+        0.81,
+        0.82,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.79,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.78,
+        0.78,
+        0.77,
+        0.77,
+        0.77,
+        0.77,
+        0.79,
+        0.81,
+        0.83,
+        0.84,
+        0.84,
+        0.86,
+        0.85,
+        0.84,
+        0.83,
+        0.82,
+        0.82,
+        0.83,
+        0.83,
+        0.83,
+        0.84,
+        0.84
+      ],
+      "y_label": "Percent"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "DGS10",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "BAMLH0A0HYM2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "BAMLC0A0CM",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "validation": {
+    "counts": {
+      "figures": 39,
+      "verified": 5,
+      "derived": 2,
+      "unverified": 32
+    },
+    "figures": [
+      {
+        "text": "5.10 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 50,
+        "end": 56,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- 10‑yr Treasury yield is 5.10 % [S1]."
+      },
+      {
+        "text": "0.84 %",
+        "value": 0.84,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 106,
+        "end": 112,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption)."
+      },
+      {
+        "text": "5.94 %",
+        "value": 5.94,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 157,
+        "end": 163,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S3"
+        ],
+        "context": "- Investment‑grade (IG) corporate OAS is 0.84 % above Treasury [S3], implying an IG yield ≈ 5.94 % (assumption)."
+      },
+      {
+        "text": "3.23 %",
+        "value": 3.23,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 205,
+        "end": 211,
+        "status": "verified",
+        "matched": "BAMLH0A0HYM2 on 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption)."
+      },
+      {
+        "text": "8.33 %",
+        "value": 8.33,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 255,
+        "end": 261,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S2"
+        ],
+        "context": "- High‑yield (HY) OAS is 3.23 % above Treasury [S2], implying a HY yield ≈ 8.33 % (assumption)."
+      },
+      {
+        "text": "40",
+        "value": 40.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 404,
+        "end": 406,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption)."
+      },
+      {
+        "text": "50 %",
+        "value": 50.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 407,
+        "end": 411,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption)."
+      },
+      {
+        "text": "50",
+        "value": 50.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 420,
+        "end": 422,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption)."
+      },
+      {
+        "text": "60 %",
+        "value": 60.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 423,
+        "end": 427,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- A balanced allocation of ~40–50 % IG and ~50–60 % Treasuries is a reasonable starting point for a moderate‑risk portfolio (assumption)."
+      },
+      {
+        "text": "0.84 %",
+        "value": 0.84,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 790,
+        "end": 796,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- IG corporate bonds dominate the corporate sector; spreads are 0.84 % above Treasury [S3]."
+      },
+      {
+        "text": "3.23 %",
+        "value": 3.23,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 853,
+        "end": 859,
+        "status": "verified",
+        "matched": "BAMLH0A0HYM2 on 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- HY sector offers higher yield (3.23 % above Treasury) but carries higher default risk [S2]."
+      },
+      {
+        "text": "40",
+        "value": 40.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1526,
+        "end": 1528,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment."
+      },
+      {
+        "text": "50 %",
+        "value": 50.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1529,
+        "end": 1533,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment."
+      },
+      {
+        "text": "50",
+        "value": 50.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1549,
+        "end": 1551,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment."
+      },
+      {
+        "text": "60 %",
+        "value": 60.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1552,
+        "end": 1556,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield and safety in a low‑spread environment."
+      },
+      {
+        "text": "60",
+        "value": 60.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1644,
+        "end": 1646,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk."
+      },
+      {
+        "text": "70 %",
+        "value": 70.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1647,
+        "end": 1651,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk."
+      },
+      {
+        "text": "30",
+        "value": 30.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1667,
+        "end": 1669,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S8"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk."
+      },
+      {
+        "text": "40 %",
+        "value": 40.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1670,
+        "end": 1674,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | 60–70 % (assumption) | 30–40 % (assumption) | Captures higher IG yield if spreads widen; acceptable credit risk."
+      },
+      {
+        "text": "20",
+        "value": 20.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1776,
+        "end": 1778,
+        "status": "derived",
+        "matched": "BAMLH0A0HYM2 % change 2026-07-20 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises."
+      },
+      {
+        "text": "30 %",
+        "value": 30.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1779,
+        "end": 1783,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S8"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises."
+      },
+      {
+        "text": "70",
+        "value": 70.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1799,
+        "end": 1801,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises."
+      },
+      {
+        "text": "80 %",
+        "value": 80.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1802,
+        "end": 1806,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | 20–30 % (assumption) | 70–80 % (assumption) | Prioritizes safety if credit spreads tighten or default risk rises."
+      },
+      {
+        "text": "20",
+        "value": 20.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2568,
+        "end": 2570,
+        "status": "derived",
+        "matched": "BAMLH0A0HYM2 % change 2026-07-20 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption)."
+      },
+      {
+        "text": "30 %",
+        "value": 30.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2571,
+        "end": 2575,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S8"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption)."
+      },
+      {
+        "text": "70",
+        "value": 70.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2580,
+        "end": 2582,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption)."
+      },
+      {
+        "text": "80 %",
+        "value": 80.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2583,
+        "end": 2587,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption)."
+      },
+      {
+        "text": "40",
+        "value": 40.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2631,
+        "end": 2633,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption)."
+      },
+      {
+        "text": "50 %",
+        "value": 50.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2634,
+        "end": 2638,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption)."
+      },
+      {
+        "text": "50",
+        "value": 50.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2643,
+        "end": 2645,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption)."
+      },
+      {
+        "text": "60 %",
+        "value": 60.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2646,
+        "end": 2650,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Moderate**: 40–50 % IG, 50–60 % Treasuries (assumption)."
+      },
+      {
+        "text": "60",
+        "value": 60.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2696,
+        "end": 2698,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption)."
+      },
+      {
+        "text": "70 %",
+        "value": 70.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2699,
+        "end": 2703,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption)."
+      },
+      {
+        "text": "30",
+        "value": 30.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2708,
+        "end": 2710,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S8"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption)."
+      },
+      {
+        "text": "40 %",
+        "value": 40.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2711,
+        "end": 2715,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Aggressive**: 60–70 % IG, 30–40 % Treasuries (assumption)."
+      },
+      {
+        "text": "40",
+        "value": 40.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 3044,
+        "end": 3046,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk."
+      },
+      {
+        "text": "50 %",
+        "value": 50.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 3047,
+        "end": 3051,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk."
+      },
+      {
+        "text": "50",
+        "value": 50.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 3059,
+        "end": 3061,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk."
+      },
+      {
+        "text": "60 %",
+        "value": 60.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 3062,
+        "end": 3066,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S9"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "A moderate allocation of roughly 40–50 % IG and 50–60 % Treasuries offers a balanced trade‑off between yield and credit risk."
+      }
+    ],
+    "citations": {
+      "markers": 5,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "| Scenario | IG Allocation | Treasury Allocation | Rationale |\n|----------|---------------|---------------------|-----------|\n| **Base** | 40–50 % (assumption) | 50–60 % (assumption) | Balances yield ",
+          "figures": [
+            "20"
+          ],
+          "sources": [
+            "S2"
+          ]
+        },
+        {
+          "text": "- **Conservative**: 20–30 % IG, 70–80 % Treasuries (assumption).",
+          "figures": [
+            "20"
+          ],
+          "sources": [
+            "S2"
+          ]
+        }
+      ],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: ICE BofA US High Yield Option-Adjusted Spread (BAMLH0A0HYM2)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread (BAMLC0A0CM)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [
+        {
+          "topic": "portfolio",
+          "disclosed": true,
+          "unverified_figures": [
+            "40",
+            "50 %",
+            "50",
+            "60 %"
+          ]
+        }
+      ],
+      "issue": true
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ],
+    "open_issues": 6,
+    "summary": "7 of 39 figures verified against source data (5 exact, 2 derived); 32 flagged (30 of them appear in a fetched web/news snippet; 28 labelled as assumptions). 2 paragraph(s) state figures without a citation. 4 unverified figure(s) on portfolio, which has no data."
+  },
+  "run_meta": {
+    "run_id": "20261018-111256-6b65c0",
+    "timestamp": "2026-10-18T15:12:56+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}

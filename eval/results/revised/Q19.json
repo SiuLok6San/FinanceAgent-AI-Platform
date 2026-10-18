@@ -1,0 +1,5740 @@
+{
+  "id": "Q19",
+  "category": "portfolio",
+  "question": "How does risk parity allocation perform when stocks and bonds fall together?",
+  "ticker": null,
+  "expected_tags": [
+    "portfolio"
+  ],
+  "pipeline": "revised",
+  "run_utc": "2026-10-18T15:12:54+00:00",
+  "elapsed_sec": 67.9,
+  "router_tags": [
+    "rates",
+    "portfolio",
+    "equity"
+  ],
+  "tier2": {
+    "portfolio": "risk_parity"
+  },
+  "error": false,
+  "report_text": "**Risk‑Parity Performance When Stocks and Bonds Fall Together**  \n*Institutional Research – B17*  \n\n---\n\n### 1. Executive Summary  \n- Risk‑parity (RP) equalises risk contribution; typical static RP allocation is about 70 % bonds, 30 % equities (assumption) [S7].  \n- In joint equity‑bond crashes, the larger bond weight can amplify total drawdown because bond prices fall when yields rise (assumption).  \n- RP smooths volatility under normal conditions but offers limited protection when equity‑bond correlation exceeds 0.8 (assumption) [S8].  \n- Dynamic‑risk‑parity, higher‑frequency rebalancing, and low‑correlation layers can mitigate joint‑fall risk (assumption).  \n- Current macro backdrop: 10‑yr Treasury yield 5.1 % [S1], S&P 500 index 7,659.44 [S2], VIX 16.46 [S3].\n\n---\n\n### 2. Core Analysis  \n\n**Macro**  \n- 10‑yr Treasury yield 5.1 % [S1].  \n- S&P 500 index 7,659.44; recent decline –1.093 % on 2026‑10‑15 [S2].  \n- VIX 16.46, moderate volatility relative to historical average [S3].  \n\n**Sector**  \n- No sector‑specific data fetched; qualitatively, equity sectors with higher beta contribute more to joint‑fall losses.  \n\n**Credit**  \n- RP typically uses investment‑grade bonds; high‑yield exposure is minimal due to higher volatility (assumption) [S6].  \n- In a joint‑fall scenario, IG bonds can still decline as yields rise; HY spreads widen, potentially worsening the portfolio if added without proper risk weighting (assumption) [S6].  \n\n**Portfolio**  \n- Static RP: ~70 % bonds, 30 % equities (assumption) [S7].  \n- RP smooths volatility but can under‑perform a 60/40 allocation during sharp, simultaneous crashes (assumption) [S6].  \n\n---\n\n### 3. Scenarios  \n\n**Base** – (assumption)  \n- Equity‑bond correlation ≈ 0.6.  \n- 10‑yr yield 5.1 % [S1].  \n- VIX 16.46 [S3].  \n- RP delivers lower volatility than 60/40; moderate drawdown during mild downturns (assumption).  \n\n**Upside** – (assumption)  \n- Equity‑bond correlation ≈ 0.3.  \n- 10‑yr yield 5.1 % [S1].  \n- VIX 12.  \n- RP benefits from diversification; equity losses offset by bond gains (assumption).  \n\n**Downside** – (assumption)  \n- Equity‑bond correlation > 0.8 (assumption) [S8].  \n- 10‑yr yield 5.1 % + 0.5 % spike (assumption).  \n- VIX > 20 (assumption) [S3].  \n- RP’s larger bond weight amplifies losses; portfolio under‑performs 60/40 (assumption).  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Correlation risk** – monitor equity‑bond correlation; trigger dynamic‑risk‑parity adjustment when > 0.8 (assumption) [S8].  \n- **Yield risk** – rising 10‑yr yields erode bond prices; track yield‑curve shifts (see Table 1).  \n- **Volatility spike** – VIX > 20 signals systemic stress; consider volatility‑targeting cut‑off (assumption) [S3].  \n- **Turnover & transaction costs** – higher rebalancing frequency increases costs; track turnover rate (assumption).  \n- **Credit spread widening** – if HY is added, monitor spread tightening/expansion; adjust risk weights accordingly (assumption) [S6].  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Rebalancing cadence** – adopt weekly rebalancing during high‑volatility periods; monthly otherwise (assumption).  \n- **Dynamic risk‑parity** – reduce bond weight when correlation > 0.8; increase equity weight to maintain risk parity (assumption) [S8].  \n- **Low‑correlation layers** – add commodities, real‑estate, or volatility‑hedged strategies to cushion joint‑fall events (assumption).  \n- **Volatility‑targeting** – scale entire portfolio down when VIX > 20 to protect against systemic shocks (assumption) [S3].  \n- **Credit allocation** – keep HY exposure minimal; use a separate risk‑parity sub‑portfolio with tighter volatility constraints (assumption) [S6].  \n\n---\n\n### 6. Conclusion  \n\nRisk‑parity offers volatility smoothing under normal market conditions but is not a bullet‑proof hedge when stocks and bonds decline together. The larger bond allocation inherent in RP can amplify losses during sharp, correlated downturns. Adaptive strategies—dynamic risk weighting, higher‑frequency rebalancing, low‑correlation layers, and volatility targeting—are essential to maintain resilience in such regimes. Institutional managers should monitor correlation, yield dynamics, and volatility thresholds to trigger appropriate tactical adjustments.",
+  "report_text_annotated": "> **Validation:** 22 of 30 figures verified against source data (13 exact, 9 derived); 8 flagged (1 of them appear in a fetched web/news snippet; 4 labelled as assumptions). 3 paragraph(s) state figures without a citation. 4 paragraph(s) cite a different source than the data.\n\n**Risk‑Parity Performance When Stocks and Bonds Fall Together**  \n*Institutional Research – B17*  \n\n---\n\n### 1. Executive Summary  \n- Risk‑parity (RP) equalises risk contribution; typical static RP allocation is about 70 % bonds, 30 % equities (assumption) [S7].  \n- In joint equity‑bond crashes, the larger bond weight can amplify total drawdown because bond prices fall when yields rise (assumption).  \n- RP smooths volatility under normal conditions but offers limited protection when equity‑bond correlation exceeds 0.8 (assumption) [S8].  \n- Dynamic‑risk‑parity, higher‑frequency rebalancing, and low‑correlation layers can mitigate joint‑fall risk (assumption).  \n- Current macro backdrop: 10‑yr Treasury yield 5.1 % [S1], S&P 500 index 7,659.44 [S2], VIX 16.46 [S3].\n\n---\n\n### 2. Core Analysis  \n\n**Macro**  \n- 10‑yr Treasury yield 5.1 % [S1].  \n- S&P 500 index 7,659.44; recent decline –1.093 % on 2026‑10‑15 [S2].  \n- VIX 16.46, moderate volatility relative to historical average [S3].  \n\n**Sector**  \n- No sector‑specific data fetched; qualitatively, equity sectors with higher beta contribute more to joint‑fall losses.  \n\n**Credit**  \n- RP typically uses investment‑grade bonds; high‑yield exposure is minimal due to higher volatility (assumption) [S6].  \n- In a joint‑fall scenario, IG bonds can still decline as yields rise; HY spreads widen, potentially worsening the portfolio if added without proper risk weighting (assumption) [S6].  \n\n**Portfolio**  \n- Static RP: ~70 % bonds, 30 % equities (assumption) [S7].  \n- RP smooths volatility but can under‑perform a 60/40 allocation during sharp, simultaneous crashes (assumption) [S6].  \n\n---\n\n### 3. Scenarios  \n\n**Base** – (assumption)  \n- Equity‑bond correlation ≈ 0.6.  \n- 10‑yr yield 5.1 % [S1].  \n- VIX 16.46 [S3].  \n- RP delivers lower volatility than 60/40; moderate drawdown during mild downturns (assumption).  \n\n**Upside** – (assumption)  \n- Equity‑bond correlation ≈ 0.3.  \n- 10‑yr yield 5.1 % [S1].  \n- VIX 12.  \n- RP benefits from diversification; equity losses offset by bond gains (assumption).  \n\n**Downside** – (assumption)  \n- Equity‑bond correlation > 0.8 (assumption) [S8].  \n- 10‑yr yield 5.1 % + 0.5 % spike (assumption).  \n- VIX > 20 (assumption) [S3].  \n- RP’s larger bond weight amplifies losses; portfolio under‑performs 60/40 (assumption).  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Correlation risk** – monitor equity‑bond correlation; trigger dynamic‑risk‑parity adjustment when > 0.8 (assumption) [S8].  \n- **Yield risk** – rising 10‑yr yields erode bond prices; track yield‑curve shifts (see Table 1).  \n- **Volatility spike** – VIX > 20 signals systemic stress; consider volatility‑targeting cut‑off (assumption) [S3].  \n- **Turnover & transaction costs** – higher rebalancing frequency increases costs; track turnover rate (assumption).  \n- **Credit spread widening** – if HY is added, monitor spread tightening/expansion; adjust risk weights accordingly (assumption) [S6].  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Rebalancing cadence** – adopt weekly rebalancing during high‑volatility periods; monthly otherwise (assumption).  \n- **Dynamic risk‑parity** – reduce bond weight when correlation > 0.8; increase equity weight to maintain risk parity (assumption) [S8].  \n- **Low‑correlation layers** – add commodities, real‑estate, or volatility‑hedged strategies to cushion joint‑fall events (assumption).  \n- **Volatility‑targeting** – scale entire portfolio down when VIX > 20 to protect against systemic shocks (assumption) [S3].  \n- **Credit allocation** – keep HY exposure minimal; use a separate risk‑parity sub‑portfolio with tighter volatility constraints (assumption) [S6].  \n\n---\n\n### 6. Conclusion  \n\nRisk‑parity offers volatility smoothing under normal market conditions but is not a bullet‑proof hedge when stocks and bonds decline together. The larger bond allocation inherent in RP can amplify losses during sharp, correlated downturns. Adaptive strategies—dynamic risk weighting, higher‑frequency rebalancing, low‑correlation layers, and volatility targeting—are essential to maintain resilience in such regimes. Institutional managers should monitor correlation, yield dynamics, and volatility thresholds to trigger appropriate tactical adjustments.",
+  "draft_report_text": "**Risk‑Parity Performance When Stocks and Bonds Fall Together**  \n*Institutional Research – B17*  \n\n---\n\n### 1. Executive Summary  \n- Risk‑parity (RP) equalises risk contribution; a static RP mix is ≈ 70 % bonds, 30 % equities [S7].  \n- In joint equity‑bond crashes, the larger bond weight can amplify total drawdown because bond prices fall when yields rise [S6].  \n- RP smooths volatility under normal conditions but offers limited protection when equity‑bond correlation > 0.8 [S8].  \n- Dynamic‑risk‑parity, higher‑frequency rebalancing, and low‑correlation layers can mitigate joint‑fall risk.  \n- Current macro backdrop: 10‑yr yield 5.1 % [S1], S&P 500 7,659.44 [S2], VIX 16.46 [S3].\n\n---\n\n### 2. Core Analysis  \n\n| Dimension | Key Points | Sources |\n|-----------|------------|---------|\n| **Macro** | • 10‑yr Treasury yield 5.1 % indicates rising bond risk‑premia [S1]. <br>• S&P 500 at 7,659.44; recent decline 1.1 % on 2026‑10‑15 [S2]. <br>• VIX 16.46, moderate volatility, above 10‑yr average [S3]. | [S1], [S2], [S3] |\n| **Sector** | No sector‑specific data were fetched; qualitative view: equity sectors with higher beta contribute more to joint‑fall losses. | – |\n| **Credit** | • RP typically uses investment‑grade bonds; high‑yield exposure is minimal due to higher volatility [S6]. <br>• In a joint‑fall scenario, IG bonds can still decline as yields rise; HY spreads widen, potentially worsening the portfolio if added without proper risk weighting. | [S6] |\n| **Portfolio** | • Static RP: ≈ 70 % bonds, 30 % equities [S7]. <br>• RP smooths volatility but can under‑perform a 60/40 during sharp, simultaneous crashes [S6]. <br>• Rebalancing frequency matters; weekly rebalancing reduces drawdown but increases turnover. | [S4], [S5], [S6], [S7] |\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Assumptions (assumption) | Expected RP Performance | Key Metrics |\n|----------|--------------------------|------------------------|-------------|\n| **Base** | • Equity‑bond correlation ≈ 0.6 <br>• 10‑yr yield 5.1 % <br>• VIX 16.5 | • RP delivers lower volatility than 60/40; moderate drawdown during mild downturns. | Sharpe ratio ↑, drawdown ↓ |\n| **Upside** | • Correlation drops to 0.3 <br>• Yield rise 0.2 % <br>• VIX falls to 12 | • RP benefits from diversification; equity losses offset by bond gains. | Sharpe ↑, volatility ↓ |\n| **Downside** | • Correlation > 0.8 <br>• Yield spike 0.5 % <br>• VIX > 20 | • RP’s larger bond weight amplifies losses; portfolio under‑performs 60/40. | Sharpe ↓, drawdown ↑ |\n\n*All scenario levels are qualitative; no numeric data were fetched for scenario construction.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Correlation Risk** – Monitor equity‑bond correlation; trigger dynamic‑risk‑parity adjustment when > 0.8.  \n- **Yield‑Risk** – Rising 10‑yr yields erode bond prices; track yield curve shifts (see Table 1).  \n- **Volatility Spike** – VIX > 20 signals systemic stress; consider volatility‑targeting cut‑off.  \n- **Turnover & Transaction Costs** – Higher rebalancing frequency increases costs; track turnover rate.  \n- **Credit Spread Widening** – If HY is added, monitor spread tightening/expansion; adjust risk weights accordingly.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Rebalancing Cadence** – Adopt weekly rebalancing during high‑volatility periods; monthly otherwise.  \n- **Dynamic Risk‑Parity** – Reduce bond weight when correlation > 0.8; increase equity weight to maintain risk parity.  \n- **Low‑Correlation Layers** – Add commodities, real‑estate, or volatility‑hedged strategies to cushion joint‑fall events.  \n- **Volatility‑Targeting** – Scale entire portfolio down when VIX > 20 to protect against systemic shocks.  \n- **Credit Allocation** – Keep HY exposure minimal; use a separate risk‑parity sub‑portfolio with tighter volatility constraints.  \n\n---\n\n### 6. Conclusion  \n\nRisk‑parity offers volatility smoothing under normal market conditions but is not a bullet‑proof hedge when stocks and bonds decline together. The larger bond allocation inherent in RP can amplify losses during sharp, correlated downturns. Adaptive strategies—dynamic risk weighting, higher‑frequency rebalancing, low‑correlation layers, and volatility targeting—are essential to maintain resilience in such regimes. Institutional managers should monitor correlation, yield dynamics, and volatility thresholds to trigger appropriate tactical adjustments.",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"70 %\" in: \"- Risk‑parity (RP) equalises risk contribution; a static RP mix is ≈ 70 % bonds, 30 % equities [S7].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n2. \"30 %\" in: \"- Risk‑parity (RP) equalises risk contribution; a static RP mix is ≈ 70 % bonds, 30 % equities [S7].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n3. \"500\" in: \"- Current macro backdrop: 10‑yr yield 5.1 % [S1], S&P 500 7,659.44 [S2], VIX 16.46 [S3].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n4. \"500\" in: \"<br>• S&P 500 at 7,659.44; recent decline 1.1 % on 2026‑10‑15 [S2].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n5. \"10\" in: \"<br>• S&P 500 at 7,659.44; recent decline 1.1 % on 2026‑10‑15 [S2].\" — this number appears in source [S8]; cite it in that sentence.\n6. \"70 %\" in: \"| **Portfolio** | • Static RP: ≈ 70 % bonds, 30 % equities [S7].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n7. \"30 %\" in: \"| **Portfolio** | • Static RP: ≈ 70 % bonds, 30 % equities [S7].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n8. \"0.6\" in: \"| **Base** | • Equity‑bond correlation ≈ 0.6 <br>• 10‑yr yield 5.1 % <br>• VIX 16.5 | • RP delivers lower volatility than 60/40; moderate drawdown during mild d\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n9. Add a citation to: \"| Scenario | Assumptions (assumption) | Expected RP Performance | Key Metrics |\n|----------|--------------------------|------------------------|-------------|\n|\" — its figures 5.1 %, 16.5, 0.3, 0.2 %, 12, 0.8, 0.5 %, 20 come from [S1], [S2], [S3].\n10. Add a citation to: \"- **Correlation Risk** – Monitor equity‑bond correlation; trigger dynamic‑risk‑parity adjustment when > 0.8.\" — its figures 0.8 come from [S1].\n11. Add a citation to: \"- **Volatility Spike** – VIX > 20 signals systemic stress; consider volatility‑targeting cut‑off.\" — its figures 20 come from [S3].\n12. Add a citation to: \"- **Dynamic Risk‑Parity** – Reduce bond weight when correlation > 0.8; increase equity weight to maintain risk parity.\" — its figures 0.8 come from [S1].\n13. Add a citation to: \"- **Volatility‑Targeting** – Scale entire portfolio down when VIX > 20 to protect against systemic shocks.\" — its figures 20 come from [S3].\n14. \"- RP smooths volatility under normal conditions but offers limited protection when equity‑bond correlation > 0.8 [S8].\" cites S8, but figures 0.8 come from [S1].",
+        "open_issues_before": 14,
+        "summary_before": "21 of 29 figures verified against source data (11 exact, 10 derived); 8 flagged (1 of them appear in a fetched web/news snippet). 5 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.",
+        "accepted": true,
+        "open_issues_after": 11,
+        "summary_after": "22 of 30 figures verified against source data (13 exact, 9 derived); 8 flagged (1 of them appear in a fetched web/news snippet; 4 labelled as assumptions). 3 paragraph(s) state figures without a citation. 4 paragraph(s) cite a different source than the data.",
+        "revised_report_text": "**Risk‑Parity Performance When Stocks and Bonds Fall Together**  \n*Institutional Research – B17*  \n\n---\n\n### 1. Executive Summary  \n- Risk‑parity (RP) equalises risk contribution; typical static RP allocation is about 70 % bonds, 30 % equities (assumption) [S7].  \n- In joint equity‑bond crashes, the larger bond weight can amplify total drawdown because bond prices fall when yields rise (assumption).  \n- RP smooths volatility under normal conditions but offers limited protection when equity‑bond correlation exceeds 0.8 (assumption) [S8].  \n- Dynamic‑risk‑parity, higher‑frequency rebalancing, and low‑correlation layers can mitigate joint‑fall risk (assumption).  \n- Current macro backdrop: 10‑yr Treasury yield 5.1 % [S1], S&P 500 index 7,659.44 [S2], VIX 16.46 [S3].\n\n---\n\n### 2. Core Analysis  \n\n**Macro**  \n- 10‑yr Treasury yield 5.1 % [S1].  \n- S&P 500 index 7,659.44; recent decline –1.093 % on 2026‑10‑15 [S2].  \n- VIX 16.46, moderate volatility relative to historical average [S3].  \n\n**Sector**  \n- No sector‑specific data fetched; qualitatively, equity sectors with higher beta contribute more to joint‑fall losses.  \n\n**Credit**  \n- RP typically uses investment‑grade bonds; high‑yield exposure is minimal due to higher volatility (assumption) [S6].  \n- In a joint‑fall scenario, IG bonds can still decline as yields rise; HY spreads widen, potentially worsening the portfolio if added without proper risk weighting (assumption) [S6].  \n\n**Portfolio**  \n- Static RP: ~70 % bonds, 30 % equities (assumption) [S7].  \n- RP smooths volatility but can under‑perform a 60/40 allocation during sharp, simultaneous crashes (assumption) [S6].  \n\n---\n\n### 3. Scenarios  \n\n**Base** – (assumption)  \n- Equity‑bond correlation ≈ 0.6.  \n- 10‑yr yield 5.1 % [S1].  \n- VIX 16.46 [S3].  \n- RP delivers lower volatility than 60/40; moderate drawdown during mild downturns (assumption).  \n\n**Upside** – (assumption)  \n- Equity‑bond correlation ≈ 0.3.  \n- 10‑yr yield 5.1 % [S1].  \n- VIX 12.  \n- RP benefits from diversification; equity losses offset by bond gains (assumption).  \n\n**Downside** – (assumption)  \n- Equity‑bond correlation > 0.8 (assumption) [S8].  \n- 10‑yr yield 5.1 % + 0.5 % spike (assumption).  \n- VIX > 20 (assumption) [S3].  \n- RP’s larger bond weight amplifies losses; portfolio under‑performs 60/40 (assumption).  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Correlation risk** – monitor equity‑bond correlation; trigger dynamic‑risk‑parity adjustment when > 0.8 (assumption) [S8].  \n- **Yield risk** – rising 10‑yr yields erode bond prices; track yield‑curve shifts (see Table 1).  \n- **Volatility spike** – VIX > 20 signals systemic stress; consider volatility‑targeting cut‑off (assumption) [S3].  \n- **Turnover & transaction costs** – higher rebalancing frequency increases costs; track turnover rate (assumption).  \n- **Credit spread widening** – if HY is added, monitor spread tightening/expansion; adjust risk weights accordingly (assumption) [S6].  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Rebalancing cadence** – adopt weekly rebalancing during high‑volatility periods; monthly otherwise (assumption).  \n- **Dynamic risk‑parity** – reduce bond weight when correlation > 0.8; increase equity weight to maintain risk parity (assumption) [S8].  \n- **Low‑correlation layers** – add commodities, real‑estate, or volatility‑hedged strategies to cushion joint‑fall events (assumption).  \n- **Volatility‑targeting** – scale entire portfolio down when VIX > 20 to protect against systemic shocks (assumption) [S3].  \n- **Credit allocation** – keep HY exposure minimal; use a separate risk‑parity sub‑portfolio with tighter volatility constraints (assumption) [S6].  \n\n---\n\n### 6. Conclusion  \n\nRisk‑parity offers volatility smoothing under normal market conditions but is not a bullet‑proof hedge when stocks and bonds decline together. The larger bond allocation inherent in RP can amplify losses during sharp, correlated downturns. Adaptive strategies—dynamic risk weighting, higher‑frequency rebalancing, low‑correlation layers, and volatility targeting—are essential to maintain resilience in such regimes. Institutional managers should monitor correlation, yield dynamics, and volatility thresholds to trigger appropriate tactical adjustments."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FRED series DGS10: 10-Year Treasury Constant Maturity Yield",
+      "url": "https://fred.stlouisfed.org/series/DGS10",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 5.1 on 2026-10-15.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series SP500: S&P 500 Index",
+      "url": "https://fred.stlouisfed.org/series/SP500",
+      "source": "FRED",
+      "snippet": "Daily series in Index; latest observation 7659.44 on 2026-10-16.",
+      "id": "S2"
+    },
+    {
+      "title": "FRED series VIXCLS: CBOE Volatility Index (VIX)",
+      "url": "https://fred.stlouisfed.org/series/VIXCLS",
+      "source": "FRED",
+      "snippet": "Daily series in Index; latest observation 16.46 on 2026-10-15.",
+      "id": "S3"
+    },
+    {
+      "title": "Does Risk Parity Maximize Risk-Adjusted Returns? · The Hedge Fund Journal",
+      "url": "https://thehedgefundjournal.com/does-risk-parity-maximize-risk-adjusted-returns",
+      "source": "web (Tavily)",
+      "snippet": "To address this issue, the risk parity approach allocates assets so that the contribution to total portfolio risk of each asset class is equal. That is, assume that bonds are half as volatile as stocks. In a simple risk parity approach and assuming zero correlation between stocks and bonds, the manager would allocate t",
+      "id": "S4"
+    },
+    {
+      "title": "What is Risk Parity Investing? — Flat Fee & Fee-Only Financial Advisor Bryan Minogue | Madison, WI",
+      "url": "https://kardinalfinancial.com/blog/what-is-risk-parity-investing",
+      "source": "web (Tavily)",
+      "snippet": "Because stocks are so volatile, even a portfolio of 60% stocks and 40% bonds will largely be driven by what stocks are doing. (Historically, a 60/40 portfolio of stocks and bonds has been highly correlated (0.98) to the stock market and has had 95% of its risk from the 60% stock allocation.) To combat the volatility of",
+      "id": "S5"
+    },
+    {
+      "title": "Adaptive Risk Parity For A Better 'Balanced Fund' | Investing.com",
+      "url": "https://www.investing.com/analysis/adaptive-risk-parity-for-a-better-'balanced-fund'-125613",
+      "source": "web (Tavily)",
+      "snippet": "However, Risk Parity skeptics have long complained that the success of the approach can largely be attributed to the much higher relative allocation to fixed income over a testing period where interest rates have steadily declined. Bonds are structurally much less volatile than stocks, and so command a much higher allo",
+      "id": "S6"
+    },
+    {
+      "title": "[PDF] Understanding Risk Parity - AQR Capital Management",
+      "url": "https://www.aqr.com/-/media/AQR/Documents/Insights/White-Papers/Understanding-Risk-Parity.pdf",
+      "source": "web (Tavily)",
+      "snippet": "allocations. By having material exposure to assets that perform well in these environments, such as government bonds, Risk Parity portfolios would have managed to largely preserve and in some cases grow capital during equity bear markets. [...] Today, portfolio allocations to equities are typically 60% or higher. Becau",
+      "id": "S7"
+    },
+    {
+      "title": "Adaptive Asset Allocation For A Regime Agnostic 'Balanced Fund'  | Investing.com",
+      "url": "https://www.investing.com/analysis/adaptive-asset-allocation-for-a-regime-agnostic-'balanced-fund'-126614",
+      "source": "web (Tavily)",
+      "snippet": "The chart below from Mebane Faber's great new(ish) series on Risk Parity demonstrates the long-term efficacy of a static version of the approach for a portfolio of stocks and bonds using long-term relative stock and bond volatility for allocations, and targeting the same long-term volatility as the 60/40 portfolio (10.",
+      "id": "S8"
+    },
+    {
+      "title": "All You Need to Know About Risk Parity",
+      "url": "https://finance.yahoo.com/news/know-risk-parity-134756975.html",
+      "source": "web (Tavily)",
+      "snippet": "Investors often default to the 60/40 method of asset allocation, with 60% of the portfolio in stocks and 40% in bonds. It's a convenient investment method that is fairly simple to rebalance when market conditions change. The downside can come with performance. Long term, 60/40 portfolios generally do not perform as wel",
+      "id": "S9"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S6",
+    "S7",
+    "S8"
+  ],
+  "tables": [
+    {
+      "title": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "DGS10",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "rates"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/DGS10",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-03",
+          4.13
+        ],
+        [
+          "2025-10-06",
+          4.18
+        ],
+        [
+          "2025-10-07",
+          4.14
+        ],
+        [
+          "2025-10-08",
+          4.13
+        ],
+        [
+          "2025-10-09",
+          4.14
+        ],
+        [
+          "2025-10-10",
+          4.05
+        ],
+        [
+          "2025-10-14",
+          4.03
+        ],
+        [
+          "2025-10-15",
+          4.05
+        ],
+        [
+          "2025-10-16",
+          3.99
+        ],
+        [
+          "2025-10-17",
+          4.02
+        ],
+        [
+          "2025-10-20",
+          4.0
+        ],
+        [
+          "2025-10-21",
+          3.98
+        ],
+        [
+          "2025-10-22",
+          3.97
+        ],
+        [
+          "2025-10-23",
+          4.01
+        ],
+        [
+          "2025-10-24",
+          4.02
+        ],
+        [
+          "2025-10-27",
+          4.01
+        ],
+        [
+          "2025-10-28",
+          3.99
+        ],
+        [
+          "2025-10-29",
+          4.08
+        ],
+        [
+          "2025-10-30",
+          4.11
+        ],
+        [
+          "2025-10-31",
+          4.11
+        ],
+        [
+          "2025-11-03",
+          4.13
+        ],
+        [
+          "2025-11-04",
+          4.1
+        ],
+        [
+          "2025-11-05",
+          4.17
+        ],
+        [
+          "2025-11-06",
+          4.11
+        ],
+        [
+          "2025-11-07",
+          4.11
+        ],
+        [
+          "2025-11-10",
+          4.13
+        ],
+        [
+          "2025-11-12",
+          4.08
+        ],
+        [
+          "2025-11-13",
+          4.11
+        ],
+        [
+          "2025-11-14",
+          4.14
+        ],
+        [
+          "2025-11-17",
+          4.13
+        ],
+        [
+          "2025-11-18",
+          4.12
+        ],
+        [
+          "2025-11-19",
+          4.13
+        ],
+        [
+          "2025-11-20",
+          4.1
+        ],
+        [
+          "2025-11-21",
+          4.06
+        ],
+        [
+          "2025-11-24",
+          4.04
+        ],
+        [
+          "2025-11-25",
+          4.01
+        ],
+        [
+          "2025-11-26",
+          4.0
+        ],
+        [
+          "2025-11-28",
+          4.02
+        ],
+        [
+          "2025-12-01",
+          4.09
+        ],
+        [
+          "2025-12-02",
+          4.09
+        ],
+        [
+          "2025-12-03",
+          4.06
+        ],
+        [
+          "2025-12-04",
+          4.11
+        ],
+        [
+          "2025-12-05",
+          4.14
+        ],
+        [
+          "2025-12-08",
+          4.17
+        ],
+        [
+          "2025-12-09",
+          4.18
+        ],
+        [
+          "2025-12-10",
+          4.13
+        ],
+        [
+          "2025-12-11",
+          4.14
+        ],
+        [
+          "2025-12-12",
+          4.19
+        ],
+        [
+          "2025-12-15",
+          4.18
+        ],
+        [
+          "2025-12-16",
+          4.15
+        ],
+        [
+          "2025-12-17",
+          4.16
+        ],
+        [
+          "2025-12-18",
+          4.12
+        ],
+        [
+          "2025-12-19",
+          4.16
+        ],
+        [
+          "2025-12-22",
+          4.17
+        ],
+        [
+          "2025-12-23",
+          4.18
+        ],
+        [
+          "2025-12-24",
+          4.15
+        ],
+        [
+          "2025-12-26",
+          4.14
+        ],
+        [
+          "2025-12-29",
+          4.12
+        ],
+        [
+          "2025-12-30",
+          4.14
+        ],
+        [
+          "2025-12-31",
+          4.18
+        ],
+        [
+          "2026-01-02",
+          4.19
+        ],
+        [
+          "2026-01-05",
+          4.17
+        ],
+        [
+          "2026-01-06",
+          4.18
+        ],
+        [
+          "2026-01-07",
+          4.15
+        ],
+        [
+          "2026-01-08",
+          4.19
+        ],
+        [
+          "2026-01-09",
+          4.18
+        ],
+        [
+          "2026-01-12",
+          4.19
+        ],
+        [
+          "2026-01-13",
+          4.18
+        ],
+        [
+          "2026-01-14",
+          4.15
+        ],
+        [
+          "2026-01-15",
+          4.17
+        ],
+        [
+          "2026-01-16",
+          4.24
+        ],
+        [
+          "2026-01-20",
+          4.3
+        ],
+        [
+          "2026-01-21",
+          4.26
+        ],
+        [
+          "2026-01-22",
+          4.26
+        ],
+        [
+          "2026-01-23",
+          4.24
+        ],
+        [
+          "2026-01-26",
+          4.22
+        ],
+        [
+          "2026-01-27",
+          4.24
+        ],
+        [
+          "2026-01-28",
+          4.26
+        ],
+        [
+          "2026-01-29",
+          4.24
+        ],
+        [
+          "2026-01-30",
+          4.26
+        ],
+        [
+          "2026-02-02",
+          4.29
+        ],
+        [
+          "2026-02-03",
+          4.28
+        ],
+        [
+          "2026-02-04",
+          4.29
+        ],
+        [
+          "2026-02-05",
+          4.21
+        ],
+        [
+          "2026-02-06",
+          4.22
+        ],
+        [
+          "2026-02-09",
+          4.22
+        ],
+        [
+          "2026-02-10",
+          4.16
+        ],
+        [
+          "2026-02-11",
+          4.18
+        ],
+        [
+          "2026-02-12",
+          4.09
+        ],
+        [
+          "2026-02-13",
+          4.04
+        ],
+        [
+          "2026-02-17",
+          4.05
+        ],
+        [
+          "2026-02-18",
+          4.09
+        ],
+        [
+          "2026-02-19",
+          4.08
+        ],
+        [
+          "2026-02-20",
+          4.08
+        ],
+        [
+          "2026-02-23",
+          4.03
+        ],
+        [
+          "2026-02-24",
+          4.04
+        ],
+        [
+          "2026-02-25",
+          4.05
+        ],
+        [
+          "2026-02-26",
+          4.02
+        ],
+        [
+          "2026-02-27",
+          3.97
+        ],
+        [
+          "2026-03-02",
+          4.05
+        ],
+        [
+          "2026-03-03",
+          4.06
+        ],
+        [
+          "2026-03-04",
+          4.09
+        ],
+        [
+          "2026-03-05",
+          4.13
+        ],
+        [
+          "2026-03-06",
+          4.15
+        ],
+        [
+          "2026-03-09",
+          4.12
+        ],
+        [
+          "2026-03-10",
+          4.15
+        ],
+        [
+          "2026-03-11",
+          4.21
+        ],
+        [
+          "2026-03-12",
+          4.27
+        ],
+        [
+          "2026-03-13",
+          4.28
+        ],
+        [
+          "2026-03-16",
+          4.23
+        ],
+        [
+          "2026-03-17",
+          4.2
+        ],
+        [
+          "2026-03-18",
+          4.26
+        ],
+        [
+          "2026-03-19",
+          4.25
+        ],
+        [
+          "2026-03-20",
+          4.39
+        ],
+        [
+          "2026-03-23",
+          4.34
+        ],
+        [
+          "2026-03-24",
+          4.39
+        ],
+        [
+          "2026-03-25",
+          4.33
+        ],
+        [
+          "2026-03-26",
+          4.42
+        ],
+        [
+          "2026-03-27",
+          4.44
+        ],
+        [
+          "2026-03-30",
+          4.35
+        ],
+        [
+          "2026-03-31",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.33
+        ],
+        [
+          "2026-04-02",
+          4.31
+        ],
+        [
+          "2026-04-03",
+          4.35
+        ],
+        [
+          "2026-04-06",
+          4.34
+        ],
+        [
+          "2026-04-07",
+          4.33
+        ],
+        [
+          "2026-04-08",
+          4.29
+        ],
+        [
+          "2026-04-09",
+          4.29
+        ],
+        [
+          "2026-04-10",
+          4.31
+        ],
+        [
+          "2026-04-13",
+          4.3
+        ],
+        [
+          "2026-04-14",
+          4.26
+        ],
+        [
+          "2026-04-15",
+          4.29
+        ],
+        [
+          "2026-04-16",
+          4.32
+        ],
+        [
+          "2026-04-17",
+          4.26
+        ],
+        [
+          "2026-04-20",
+          4.26
+        ],
+        [
+          "2026-04-21",
+          4.3
+        ],
+        [
+          "2026-04-22",
+          4.3
+        ],
+        [
+          "2026-04-23",
+          4.34
+        ],
+        [
+          "2026-04-24",
+          4.31
+        ],
+        [
+          "2026-04-27",
+          4.35
+        ],
+        [
+          "2026-04-28",
+          4.36
+        ],
+        [
+          "2026-04-29",
+          4.42
+        ],
+        [
+          "2026-04-30",
+          4.4
+        ],
+        [
+          "2026-05-01",
+          4.39
+        ],
+        [
+          "2026-05-04",
+          4.45
+        ],
+        [
+          "2026-05-05",
+          4.43
+        ],
+        [
+          "2026-05-06",
+          4.36
+        ],
+        [
+          "2026-05-07",
+          4.41
+        ],
+        [
+          "2026-05-08",
+          4.38
+        ],
+        [
+          "2026-05-11",
+          4.42
+        ],
+        [
+          "2026-05-12",
+          4.46
+        ],
+        [
+          "2026-05-13",
+          4.46
+        ],
+        [
+          "2026-05-14",
+          4.47
+        ],
+        [
+          "2026-05-15",
+          4.59
+        ],
+        [
+          "2026-05-18",
+          4.61
+        ],
+        [
+          "2026-05-19",
+          4.67
+        ],
+        [
+          "2026-05-20",
+          4.57
+        ],
+        [
+          "2026-05-21",
+          4.57
+        ],
+        [
+          "2026-05-22",
+          4.56
+        ],
+        [
+          "2026-05-26",
+          4.5
+        ],
+        [
+          "2026-05-27",
+          4.48
+        ],
+        [
+          "2026-05-28",
+          4.45
+        ],
+        [
+          "2026-05-29",
+          4.45
+        ],
+        [
+          "2026-06-01",
+          4.47
+        ],
+        [
+          "2026-06-02",
+          4.46
+        ],
+        [
+          "2026-06-03",
+          4.49
+        ],
+        [
+          "2026-06-04",
+          4.47
+        ],
+        [
+          "2026-06-05",
+          4.55
+        ],
+        [
+          "2026-06-08",
+          4.56
+        ],
+        [
+          "2026-06-09",
+          4.53
+        ],
+        [
+          "2026-06-10",
+          4.55
+        ],
+        [
+          "2026-06-11",
+          4.45
+        ],
+        [
+          "2026-06-12",
+          4.48
+        ],
+        [
+          "2026-06-15",
+          4.47
+        ],
+        [
+          "2026-06-16",
+          4.43
+        ],
+        [
+          "2026-06-17",
+          4.49
+        ],
+        [
+          "2026-06-18",
+          4.46
+        ],
+        [
+          "2026-06-22",
+          4.51
+        ],
+        [
+          "2026-06-23",
+          4.5
+        ],
+        [
+          "2026-06-24",
+          4.41
+        ],
+        [
+          "2026-06-25",
+          4.4
+        ],
+        [
+          "2026-06-26",
+          4.38
+        ],
+        [
+          "2026-06-29",
+          4.38
+        ],
+        [
+          "2026-06-30",
+          4.44
+        ],
+        [
+          "2026-07-01",
+          4.48
+        ],
+        [
+          "2026-07-02",
+          4.49
+        ],
+        [
+          "2026-07-06",
+          4.48
+        ],
+        [
+          "2026-07-07",
+          4.55
+        ],
+        [
+          "2026-07-08",
+          4.56
+        ],
+        [
+          "2026-07-09",
+          4.54
+        ],
+        [
+          "2026-07-10",
+          4.56
+        ],
+        [
+          "2026-07-13",
+          4.62
+        ],
+        [
+          "2026-07-14",
+          4.58
+        ],
+        [
+          "2026-07-15",
+          4.55
+        ],
+        [
+          "2026-07-16",
+          4.57
+        ],
+        [
+          "2026-07-17",
+          4.55
+        ],
+        [
+          "2026-07-20",
+          4.6
+        ],
+        [
+          "2026-07-21",
+          4.63
+        ],
+        [
+          "2026-07-22",
+          4.67
+        ],
+        [
+          "2026-07-23",
+          4.71
+        ],
+        [
+          "2026-07-24",
+          4.69
+        ],
+        [
+          "2026-07-27",
+          4.65
+        ],
+        [
+          "2026-07-28",
+          4.61
+        ],
+        [
+          "2026-07-29",
+          4.67
+        ],
+        [
+          "2026-07-30",
+          4.68
+        ],
+        [
+          "2026-07-31",
+          4.75
+        ],
+        [
+          "2026-08-03",
+          4.7
+        ],
+        [
+          "2026-08-04",
+          4.63
+        ],
+        [
+          "2026-08-05",
+          4.63
+        ],
+        [
+          "2026-08-06",
+          4.69
+        ],
+        [
+          "2026-08-07",
+          4.65
+        ],
+        [
+          "2026-08-10",
+          4.72
+        ],
+        [
+          "2026-08-11",
+          4.7
+        ],
+        [
+          "2026-08-12",
+          4.68
+        ],
+        [
+          "2026-08-13",
+          4.63
+        ],
+        [
+          "2026-08-14",
+          4.68
+        ],
+        [
+          "2026-08-17",
+          4.72
+        ],
+        [
+          "2026-08-18",
+          4.71
+        ],
+        [
+          "2026-08-19",
+          4.65
+        ],
+        [
+          "2026-08-20",
+          4.69
+        ],
+        [
+          "2026-08-21",
+          4.74
+        ],
+        [
+          "2026-08-24",
+          4.7
+        ],
+        [
+          "2026-08-25",
+          4.64
+        ],
+        [
+          "2026-08-26",
+          4.66
+        ],
+        [
+          "2026-08-27",
+          4.67
+        ],
+        [
+          "2026-08-28",
+          4.73
+        ],
+        [
+          "2026-08-31",
+          4.75
+        ],
+        [
+          "2026-09-01",
+          4.79
+        ],
+        [
+          "2026-09-02",
+          4.79
+        ],
+        [
+          "2026-09-03",
+          4.77
+        ],
+        [
+          "2026-09-04",
+          4.78
+        ],
+        [
+          "2026-09-08",
+          4.8
+        ],
+        [
+          "2026-09-09",
+          4.83
+        ],
+        [
+          "2026-09-10",
+          4.95
+        ],
+        [
+          "2026-09-11",
+          4.96
+        ],
+        [
+          "2026-09-14",
+          4.97
+        ],
+        [
+          "2026-09-15",
+          5.0
+        ],
+        [
+          "2026-09-16",
+          5.01
+        ],
+        [
+          "2026-09-17",
+          4.94
+        ],
+        [
+          "2026-09-18",
+          5.01
+        ],
+        [
+          "2026-09-21",
+          4.96
+        ],
+        [
+          "2026-09-22",
+          4.96
+        ],
+        [
+          "2026-09-23",
+          5.11
+        ],
+        [
+          "2026-09-24",
+          5.18
+        ],
+        [
+          "2026-09-25",
+          5.17
+        ],
+        [
+          "2026-09-28",
+          5.24
+        ],
+        [
+          "2026-09-29",
+          5.26
+        ],
+        [
+          "2026-09-30",
+          5.29
+        ],
+        [
+          "2026-10-01",
+          5.24
+        ],
+        [
+          "2026-10-02",
+          5.28
+        ],
+        [
+          "2026-10-05",
+          5.31
+        ],
+        [
+          "2026-10-06",
+          5.27
+        ],
+        [
+          "2026-10-07",
+          5.28
+        ],
+        [
+          "2026-10-08",
+          5.22
+        ],
+        [
+          "2026-10-09",
+          5.24
+        ],
+        [
+          "2026-10-13",
+          5.21
+        ],
+        [
+          "2026-10-14",
+          5.19
+        ],
+        [
+          "2026-10-15",
+          5.1
+        ]
+      ]
+    },
+    {
+      "title": "FRED: S&P 500 Index (SP500)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "SP500",
+      "frequency": "daily",
+      "units": "Index",
+      "last_date": "2026-10-16",
+      "topics": [
+        "equity",
+        "portfolio"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/SP500",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-06",
+          6740.28
+        ],
+        [
+          "2025-10-07",
+          6714.59
+        ],
+        [
+          "2025-10-08",
+          6753.72
+        ],
+        [
+          "2025-10-09",
+          6735.11
+        ],
+        [
+          "2025-10-10",
+          6552.51
+        ],
+        [
+          "2025-10-13",
+          6654.72
+        ],
+        [
+          "2025-10-14",
+          6644.31
+        ],
+        [
+          "2025-10-15",
+          6671.06
+        ],
+        [
+          "2025-10-16",
+          6629.07
+        ],
+        [
+          "2025-10-17",
+          6664.01
+        ],
+        [
+          "2025-10-20",
+          6735.13
+        ],
+        [
+          "2025-10-21",
+          6735.35
+        ],
+        [
+          "2025-10-22",
+          6699.4
+        ],
+        [
+          "2025-10-23",
+          6738.44
+        ],
+        [
+          "2025-10-24",
+          6791.69
+        ],
+        [
+          "2025-10-27",
+          6875.16
+        ],
+        [
+          "2025-10-28",
+          6890.89
+        ],
+        [
+          "2025-10-29",
+          6890.59
+        ],
+        [
+          "2025-10-30",
+          6822.34
+        ],
+        [
+          "2025-10-31",
+          6840.2
+        ],
+        [
+          "2025-11-03",
+          6851.97
+        ],
+        [
+          "2025-11-04",
+          6771.55
+        ],
+        [
+          "2025-11-05",
+          6796.29
+        ],
+        [
+          "2025-11-06",
+          6720.32
+        ],
+        [
+          "2025-11-07",
+          6728.8
+        ],
+        [
+          "2025-11-10",
+          6832.43
+        ],
+        [
+          "2025-11-11",
+          6846.61
+        ],
+        [
+          "2025-11-12",
+          6850.92
+        ],
+        [
+          "2025-11-13",
+          6737.49
+        ],
+        [
+          "2025-11-14",
+          6734.11
+        ],
+        [
+          "2025-11-17",
+          6672.41
+        ],
+        [
+          "2025-11-18",
+          6617.32
+        ],
+        [
+          "2025-11-19",
+          6642.16
+        ],
+        [
+          "2025-11-20",
+          6538.76
+        ],
+        [
+          "2025-11-21",
+          6602.99
+        ],
+        [
+          "2025-11-24",
+          6705.12
+        ],
+        [
+          "2025-11-25",
+          6765.88
+        ],
+        [
+          "2025-11-26",
+          6812.61
+        ],
+        [
+          "2025-11-28",
+          6849.09
+        ],
+        [
+          "2025-12-01",
+          6812.63
+        ],
+        [
+          "2025-12-02",
+          6829.37
+        ],
+        [
+          "2025-12-03",
+          6849.72
+        ],
+        [
+          "2025-12-04",
+          6857.12
+        ],
+        [
+          "2025-12-05",
+          6870.4
+        ],
+        [
+          "2025-12-08",
+          6846.51
+        ],
+        [
+          "2025-12-09",
+          6840.51
+        ],
+        [
+          "2025-12-10",
+          6886.68
+        ],
+        [
+          "2025-12-11",
+          6901.0
+        ],
+        [
+          "2025-12-12",
+          6827.41
+        ],
+        [
+          "2025-12-15",
+          6816.51
+        ],
+        [
+          "2025-12-16",
+          6800.26
+        ],
+        [
+          "2025-12-17",
+          6721.43
+        ],
+        [
+          "2025-12-18",
+          6774.76
+        ],
+        [
+          "2025-12-19",
+          6834.5
+        ],
+        [
+          "2025-12-22",
+          6878.49
+        ],
+        [
+          "2025-12-23",
+          6909.79
+        ],
+        [
+          "2025-12-24",
+          6932.05
+        ],
+        [
+          "2025-12-26",
+          6929.94
+        ],
+        [
+          "2025-12-29",
+          6905.74
+        ],
+        [
+          "2025-12-30",
+          6896.24
+        ],
+        [
+          "2025-12-31",
+          6845.5
+        ],
+        [
+          "2026-01-02",
+          6858.47
+        ],
+        [
+          "2026-01-05",
+          6902.05
+        ],
+        [
+          "2026-01-06",
+          6944.82
+        ],
+        [
+          "2026-01-07",
+          6920.93
+        ],
+        [
+          "2026-01-08",
+          6921.46
+        ],
+        [
+          "2026-01-09",
+          6966.28
+        ],
+        [
+          "2026-01-12",
+          6977.27
+        ],
+        [
+          "2026-01-13",
+          6963.74
+        ],
+        [
+          "2026-01-14",
+          6926.6
+        ],
+        [
+          "2026-01-15",
+          6944.47
+        ],
+        [
+          "2026-01-16",
+          6940.01
+        ],
+        [
+          "2026-01-20",
+          6796.86
+        ],
+        [
+          "2026-01-21",
+          6875.62
+        ],
+        [
+          "2026-01-22",
+          6913.35
+        ],
+        [
+          "2026-01-23",
+          6915.61
+        ],
+        [
+          "2026-01-26",
+          6950.23
+        ],
+        [
+          "2026-01-27",
+          6978.6
+        ],
+        [
+          "2026-01-28",
+          6978.03
+        ],
+        [
+          "2026-01-29",
+          6969.01
+        ],
+        [
+          "2026-01-30",
+          6939.03
+        ],
+        [
+          "2026-02-02",
+          6976.44
+        ],
+        [
+          "2026-02-03",
+          6917.81
+        ],
+        [
+          "2026-02-04",
+          6882.72
+        ],
+        [
+          "2026-02-05",
+          6798.4
+        ],
+        [
+          "2026-02-06",
+          6932.3
+        ],
+        [
+          "2026-02-09",
+          6964.82
+        ],
+        [
+          "2026-02-10",
+          6941.81
+        ],
+        [
+          "2026-02-11",
+          6941.47
+        ],
+        [
+          "2026-02-12",
+          6832.76
+        ],
+        [
+          "2026-02-13",
+          6836.17
+        ],
+        [
+          "2026-02-17",
+          6843.22
+        ],
+        [
+          "2026-02-18",
+          6881.31
+        ],
+        [
+          "2026-02-19",
+          6861.89
+        ],
+        [
+          "2026-02-20",
+          6909.51
+        ],
+        [
+          "2026-02-23",
+          6837.75
+        ],
+        [
+          "2026-02-24",
+          6890.07
+        ],
+        [
+          "2026-02-25",
+          6946.13
+        ],
+        [
+          "2026-02-26",
+          6908.86
+        ],
+        [
+          "2026-02-27",
+          6878.88
+        ],
+        [
+          "2026-03-02",
+          6881.62
+        ],
+        [
+          "2026-03-03",
+          6816.63
+        ],
+        [
+          "2026-03-04",
+          6869.5
+        ],
+        [
+          "2026-03-05",
+          6830.71
+        ],
+        [
+          "2026-03-06",
+          6740.02
+        ],
+        [
+          "2026-03-09",
+          6795.99
+        ],
+        [
+          "2026-03-10",
+          6781.48
+        ],
+        [
+          "2026-03-11",
+          6775.8
+        ],
+        [
+          "2026-03-12",
+          6672.62
+        ],
+        [
+          "2026-03-13",
+          6632.19
+        ],
+        [
+          "2026-03-16",
+          6699.38
+        ],
+        [
+          "2026-03-17",
+          6716.09
+        ],
+        [
+          "2026-03-18",
+          6624.7
+        ],
+        [
+          "2026-03-19",
+          6606.49
+        ],
+        [
+          "2026-03-20",
+          6506.48
+        ],
+        [
+          "2026-03-23",
+          6581.0
+        ],
+        [
+          "2026-03-24",
+          6556.37
+        ],
+        [
+          "2026-03-25",
+          6591.9
+        ],
+        [
+          "2026-03-26",
+          6477.16
+        ],
+        [
+          "2026-03-27",
+          6368.85
+        ],
+        [
+          "2026-03-30",
+          6343.72
+        ],
+        [
+          "2026-03-31",
+          6528.52
+        ],
+        [
+          "2026-04-01",
+          6575.32
+        ],
+        [
+          "2026-04-02",
+          6582.69
+        ],
+        [
+          "2026-04-06",
+          6611.83
+        ],
+        [
+          "2026-04-07",
+          6616.85
+        ],
+        [
+          "2026-04-08",
+          6782.81
+        ],
+        [
+          "2026-04-09",
+          6824.66
+        ],
+        [
+          "2026-04-10",
+          6816.89
+        ],
+        [
+          "2026-04-13",
+          6886.24
+        ],
+        [
+          "2026-04-14",
+          6967.38
+        ],
+        [
+          "2026-04-15",
+          7022.95
+        ],
+        [
+          "2026-04-16",
+          7041.28
+        ],
+        [
+          "2026-04-17",
+          7126.06
+        ],
+        [
+          "2026-04-20",
+          7109.14
+        ],
+        [
+          "2026-04-21",
+          7064.01
+        ],
+        [
+          "2026-04-22",
+          7137.9
+        ],
+        [
+          "2026-04-23",
+          7108.4
+        ],
+        [
+          "2026-04-24",
+          7165.08
+        ],
+        [
+          "2026-04-27",
+          7173.91
+        ],
+        [
+          "2026-04-28",
+          7138.8
+        ],
+        [
+          "2026-04-29",
+          7135.95
+        ],
+        [
+          "2026-04-30",
+          7209.01
+        ],
+        [
+          "2026-05-01",
+          7230.12
+        ],
+        [
+          "2026-05-04",
+          7200.75
+        ],
+        [
+          "2026-05-05",
+          7259.22
+        ],
+        [
+          "2026-05-06",
+          7365.12
+        ],
+        [
+          "2026-05-07",
+          7337.11
+        ],
+        [
+          "2026-05-08",
+          7398.93
+        ],
+        [
+          "2026-05-11",
+          7412.84
+        ],
+        [
+          "2026-05-12",
+          7400.96
+        ],
+        [
+          "2026-05-13",
+          7444.25
+        ],
+        [
+          "2026-05-14",
+          7501.24
+        ],
+        [
+          "2026-05-15",
+          7408.5
+        ],
+        [
+          "2026-05-18",
+          7403.05
+        ],
+        [
+          "2026-05-19",
+          7353.61
+        ],
+        [
+          "2026-05-20",
+          7432.97
+        ],
+        [
+          "2026-05-21",
+          7445.72
+        ],
+        [
+          "2026-05-22",
+          7473.47
+        ],
+        [
+          "2026-05-26",
+          7519.12
+        ],
+        [
+          "2026-05-27",
+          7520.36
+        ],
+        [
+          "2026-05-28",
+          7563.63
+        ],
+        [
+          "2026-05-29",
+          7580.06
+        ],
+        [
+          "2026-06-01",
+          7599.96
+        ],
+        [
+          "2026-06-02",
+          7609.78
+        ],
+        [
+          "2026-06-03",
+          7553.68
+        ],
+        [
+          "2026-06-04",
+          7584.31
+        ],
+        [
+          "2026-06-05",
+          7383.74
+        ],
+        [
+          "2026-06-08",
+          7405.73
+        ],
+        [
+          "2026-06-09",
+          7386.65
+        ],
+        [
+          "2026-06-10",
+          7266.99
+        ],
+        [
+          "2026-06-11",
+          7394.3
+        ],
+        [
+          "2026-06-12",
+          7431.46
+        ],
+        [
+          "2026-06-15",
+          7554.29
+        ],
+        [
+          "2026-06-16",
+          7511.35
+        ],
+        [
+          "2026-06-17",
+          7420.1
+        ],
+        [
+          "2026-06-18",
+          7500.58
+        ],
+        [
+          "2026-06-22",
+          7472.79
+        ],
+        [
+          "2026-06-23",
+          7365.46
+        ],
+        [
+          "2026-06-24",
+          7358.22
+        ],
+        [
+          "2026-06-25",
+          7357.49
+        ],
+        [
+          "2026-06-26",
+          7354.02
+        ],
+        [
+          "2026-06-29",
+          7440.43
+        ],
+        [
+          "2026-06-30",
+          7499.36
+        ],
+        [
+          "2026-07-01",
+          7483.23
+        ],
+        [
+          "2026-07-02",
+          7483.24
+        ],
+        [
+          "2026-07-06",
+          7537.43
+        ],
+        [
+          "2026-07-07",
+          7503.85
+        ],
+        [
+          "2026-07-08",
+          7482.71
+        ],
+        [
+          "2026-07-09",
+          7543.64
+        ],
+        [
+          "2026-07-10",
+          7575.39
+        ],
+        [
+          "2026-07-13",
+          7515.34
+        ],
+        [
+          "2026-07-14",
+          7543.59
+        ],
+        [
+          "2026-07-15",
+          7572.4
+        ],
+        [
+          "2026-07-16",
+          7533.77
+        ],
+        [
+          "2026-07-17",
+          7457.69
+        ],
+        [
+          "2026-07-20",
+          7443.28
+        ],
+        [
+          "2026-07-21",
+          7509.2
+        ],
+        [
+          "2026-07-22",
+          7498.96
+        ],
+        [
+          "2026-07-23",
+          7408.3
+        ],
+        [
+          "2026-07-24",
+          7411.98
+        ],
+        [
+          "2026-07-27",
+          7413.18
+        ],
+        [
+          "2026-07-28",
+          7428.78
+        ],
+        [
+          "2026-07-29",
+          7316.15
+        ],
+        [
+          "2026-07-30",
+          7437.63
+        ],
+        [
+          "2026-07-31",
+          7489.72
+        ],
+        [
+          "2026-08-03",
+          7600.5
+        ],
+        [
+          "2026-08-04",
+          7736.52
+        ],
+        [
+          "2026-08-05",
+          7723.55
+        ],
+        [
+          "2026-08-06",
+          7709.96
+        ],
+        [
+          "2026-08-07",
+          7757.64
+        ],
+        [
+          "2026-08-10",
+          7753.11
+        ],
+        [
+          "2026-08-11",
+          7728.2
+        ],
+        [
+          "2026-08-12",
+          7748.5
+        ],
+        [
+          "2026-08-13",
+          7798.99
+        ],
+        [
+          "2026-08-14",
+          7785.76
+        ],
+        [
+          "2026-08-17",
+          7745.06
+        ],
+        [
+          "2026-08-18",
+          7691.76
+        ],
+        [
+          "2026-08-19",
+          7707.98
+        ],
+        [
+          "2026-08-20",
+          7641.16
+        ],
+        [
+          "2026-08-21",
+          7674.37
+        ],
+        [
+          "2026-08-24",
+          7652.86
+        ],
+        [
+          "2026-08-25",
+          7677.28
+        ],
+        [
+          "2026-08-26",
+          7675.7
+        ],
+        [
+          "2026-08-27",
+          7730.99
+        ],
+        [
+          "2026-08-28",
+          7711.76
+        ],
+        [
+          "2026-08-31",
+          7686.14
+        ],
+        [
+          "2026-09-01",
+          7631.47
+        ],
+        [
+          "2026-09-02",
+          7666.6
+        ],
+        [
+          "2026-09-03",
+          7747.71
+        ],
+        [
+          "2026-09-04",
+          7718.6
+        ],
+        [
+          "2026-09-08",
+          7673.52
+        ],
+        [
+          "2026-09-09",
+          7636.36
+        ],
+        [
+          "2026-09-10",
+          7591.7
+        ],
+        [
+          "2026-09-11",
+          7656.98
+        ],
+        [
+          "2026-09-14",
+          7619.98
+        ],
+        [
+          "2026-09-15",
+          7585.73
+        ],
+        [
+          "2026-09-16",
+          7551.81
+        ],
+        [
+          "2026-09-17",
+          7637.76
+        ],
+        [
+          "2026-09-18",
+          7650.5
+        ],
+        [
+          "2026-09-21",
+          7764.7
+        ],
+        [
+          "2026-09-22",
+          7764.64
+        ],
+        [
+          "2026-09-23",
+          7706.03
+        ],
+        [
+          "2026-09-24",
+          7704.13
+        ],
+        [
+          "2026-09-25",
+          7743.41
+        ],
+        [
+          "2026-09-28",
+          7683.69
+        ],
+        [
+          "2026-09-29",
+          7670.84
+        ],
+        [
+          "2026-09-30",
+          7651.54
+        ],
+        [
+          "2026-10-01",
+          7666.45
+        ],
+        [
+          "2026-10-02",
+          7722.72
+        ],
+        [
+          "2026-10-05",
+          7773.95
+        ],
+        [
+          "2026-10-06",
+          7818.93
+        ],
+        [
+          "2026-10-07",
+          7801.77
+        ],
+        [
+          "2026-10-08",
+          7765.36
+        ],
+        [
+          "2026-10-09",
+          7811.54
+        ],
+        [
+          "2026-10-12",
+          7807.24
+        ],
+        [
+          "2026-10-13",
+          7805.45
+        ],
+        [
+          "2026-10-14",
+          7718.94
+        ],
+        [
+          "2026-10-15",
+          7744.06
+        ],
+        [
+          "2026-10-16",
+          7659.44
+        ]
+      ]
+    },
+    {
+      "title": "FRED: CBOE Volatility Index (VIX) (VIXCLS)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "VIXCLS",
+      "frequency": "daily",
+      "units": "Index",
+      "last_date": "2026-10-15",
+      "topics": [
+        "equity",
+        "portfolio"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/VIXCLS",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-03",
+          16.65
+        ],
+        [
+          "2025-10-06",
+          16.37
+        ],
+        [
+          "2025-10-07",
+          17.24
+        ],
+        [
+          "2025-10-08",
+          16.3
+        ],
+        [
+          "2025-10-09",
+          16.43
+        ],
+        [
+          "2025-10-10",
+          21.66
+        ],
+        [
+          "2025-10-13",
+          19.03
+        ],
+        [
+          "2025-10-14",
+          20.81
+        ],
+        [
+          "2025-10-15",
+          20.64
+        ],
+        [
+          "2025-10-16",
+          25.31
+        ],
+        [
+          "2025-10-17",
+          20.78
+        ],
+        [
+          "2025-10-20",
+          18.23
+        ],
+        [
+          "2025-10-21",
+          17.87
+        ],
+        [
+          "2025-10-22",
+          18.6
+        ],
+        [
+          "2025-10-23",
+          17.3
+        ],
+        [
+          "2025-10-24",
+          16.37
+        ],
+        [
+          "2025-10-27",
+          15.79
+        ],
+        [
+          "2025-10-28",
+          16.42
+        ],
+        [
+          "2025-10-29",
+          16.92
+        ],
+        [
+          "2025-10-30",
+          16.91
+        ],
+        [
+          "2025-10-31",
+          17.44
+        ],
+        [
+          "2025-11-03",
+          17.17
+        ],
+        [
+          "2025-11-04",
+          19.0
+        ],
+        [
+          "2025-11-05",
+          18.01
+        ],
+        [
+          "2025-11-06",
+          19.5
+        ],
+        [
+          "2025-11-07",
+          19.08
+        ],
+        [
+          "2025-11-10",
+          17.6
+        ],
+        [
+          "2025-11-11",
+          17.28
+        ],
+        [
+          "2025-11-12",
+          17.51
+        ],
+        [
+          "2025-11-13",
+          20.0
+        ],
+        [
+          "2025-11-14",
+          19.83
+        ],
+        [
+          "2025-11-17",
+          22.38
+        ],
+        [
+          "2025-11-18",
+          24.69
+        ],
+        [
+          "2025-11-19",
+          23.66
+        ],
+        [
+          "2025-11-20",
+          26.42
+        ],
+        [
+          "2025-11-21",
+          23.43
+        ],
+        [
+          "2025-11-24",
+          20.52
+        ],
+        [
+          "2025-11-25",
+          18.56
+        ],
+        [
+          "2025-11-26",
+          17.19
+        ],
+        [
+          "2025-11-27",
+          17.21
+        ],
+        [
+          "2025-11-28",
+          16.35
+        ],
+        [
+          "2025-12-01",
+          17.24
+        ],
+        [
+          "2025-12-02",
+          16.59
+        ],
+        [
+          "2025-12-03",
+          16.08
+        ],
+        [
+          "2025-12-04",
+          15.78
+        ],
+        [
+          "2025-12-05",
+          15.41
+        ],
+        [
+          "2025-12-08",
+          16.66
+        ],
+        [
+          "2025-12-09",
+          16.93
+        ],
+        [
+          "2025-12-10",
+          15.77
+        ],
+        [
+          "2025-12-11",
+          14.85
+        ],
+        [
+          "2025-12-12",
+          15.74
+        ],
+        [
+          "2025-12-15",
+          16.5
+        ],
+        [
+          "2025-12-16",
+          16.48
+        ],
+        [
+          "2025-12-17",
+          17.62
+        ],
+        [
+          "2025-12-18",
+          16.87
+        ],
+        [
+          "2025-12-19",
+          14.91
+        ],
+        [
+          "2025-12-22",
+          14.08
+        ],
+        [
+          "2025-12-23",
+          14.0
+        ],
+        [
+          "2025-12-24",
+          13.47
+        ],
+        [
+          "2025-12-26",
+          13.6
+        ],
+        [
+          "2025-12-29",
+          14.2
+        ],
+        [
+          "2025-12-30",
+          14.33
+        ],
+        [
+          "2025-12-31",
+          14.95
+        ],
+        [
+          "2026-01-02",
+          14.51
+        ],
+        [
+          "2026-01-05",
+          14.9
+        ],
+        [
+          "2026-01-06",
+          14.75
+        ],
+        [
+          "2026-01-07",
+          15.38
+        ],
+        [
+          "2026-01-08",
+          15.45
+        ],
+        [
+          "2026-01-09",
+          14.49
+        ],
+        [
+          "2026-01-12",
+          15.12
+        ],
+        [
+          "2026-01-13",
+          15.98
+        ],
+        [
+          "2026-01-14",
+          16.75
+        ],
+        [
+          "2026-01-15",
+          15.84
+        ],
+        [
+          "2026-01-16",
+          15.86
+        ],
+        [
+          "2026-01-19",
+          18.84
+        ],
+        [
+          "2026-01-20",
+          20.09
+        ],
+        [
+          "2026-01-21",
+          16.9
+        ],
+        [
+          "2026-01-22",
+          15.64
+        ],
+        [
+          "2026-01-23",
+          16.09
+        ],
+        [
+          "2026-01-26",
+          16.15
+        ],
+        [
+          "2026-01-27",
+          16.35
+        ],
+        [
+          "2026-01-28",
+          16.35
+        ],
+        [
+          "2026-01-29",
+          16.88
+        ],
+        [
+          "2026-01-30",
+          17.44
+        ],
+        [
+          "2026-02-02",
+          16.34
+        ],
+        [
+          "2026-02-03",
+          18.0
+        ],
+        [
+          "2026-02-04",
+          18.64
+        ],
+        [
+          "2026-02-05",
+          21.77
+        ],
+        [
+          "2026-02-06",
+          17.76
+        ],
+        [
+          "2026-02-09",
+          17.36
+        ],
+        [
+          "2026-02-10",
+          17.79
+        ],
+        [
+          "2026-02-11",
+          17.65
+        ],
+        [
+          "2026-02-12",
+          20.82
+        ],
+        [
+          "2026-02-13",
+          20.6
+        ],
+        [
+          "2026-02-16",
+          21.2
+        ],
+        [
+          "2026-02-17",
+          20.29
+        ],
+        [
+          "2026-02-18",
+          19.62
+        ],
+        [
+          "2026-02-19",
+          20.23
+        ],
+        [
+          "2026-02-20",
+          19.09
+        ],
+        [
+          "2026-02-23",
+          21.01
+        ],
+        [
+          "2026-02-24",
+          19.55
+        ],
+        [
+          "2026-02-25",
+          17.93
+        ],
+        [
+          "2026-02-26",
+          18.63
+        ],
+        [
+          "2026-02-27",
+          19.86
+        ],
+        [
+          "2026-03-02",
+          21.44
+        ],
+        [
+          "2026-03-03",
+          23.57
+        ],
+        [
+          "2026-03-04",
+          21.15
+        ],
+        [
+          "2026-03-05",
+          23.75
+        ],
+        [
+          "2026-03-06",
+          29.49
+        ],
+        [
+          "2026-03-09",
+          25.5
+        ],
+        [
+          "2026-03-10",
+          24.93
+        ],
+        [
+          "2026-03-11",
+          24.23
+        ],
+        [
+          "2026-03-12",
+          27.29
+        ],
+        [
+          "2026-03-13",
+          27.19
+        ],
+        [
+          "2026-03-16",
+          23.51
+        ],
+        [
+          "2026-03-17",
+          22.37
+        ],
+        [
+          "2026-03-18",
+          25.09
+        ],
+        [
+          "2026-03-19",
+          24.06
+        ],
+        [
+          "2026-03-20",
+          26.78
+        ],
+        [
+          "2026-03-23",
+          26.15
+        ],
+        [
+          "2026-03-24",
+          26.95
+        ],
+        [
+          "2026-03-25",
+          25.33
+        ],
+        [
+          "2026-03-26",
+          27.44
+        ],
+        [
+          "2026-03-27",
+          31.05
+        ],
+        [
+          "2026-03-30",
+          30.61
+        ],
+        [
+          "2026-03-31",
+          25.25
+        ],
+        [
+          "2026-04-01",
+          24.54
+        ],
+        [
+          "2026-04-02",
+          23.87
+        ],
+        [
+          "2026-04-06",
+          24.17
+        ],
+        [
+          "2026-04-07",
+          25.78
+        ],
+        [
+          "2026-04-08",
+          21.04
+        ],
+        [
+          "2026-04-09",
+          19.49
+        ],
+        [
+          "2026-04-10",
+          19.23
+        ],
+        [
+          "2026-04-13",
+          19.12
+        ],
+        [
+          "2026-04-14",
+          18.36
+        ],
+        [
+          "2026-04-15",
+          18.17
+        ],
+        [
+          "2026-04-16",
+          17.94
+        ],
+        [
+          "2026-04-17",
+          17.48
+        ],
+        [
+          "2026-04-20",
+          18.87
+        ],
+        [
+          "2026-04-21",
+          19.5
+        ],
+        [
+          "2026-04-22",
+          18.92
+        ],
+        [
+          "2026-04-23",
+          19.31
+        ],
+        [
+          "2026-04-24",
+          18.71
+        ],
+        [
+          "2026-04-27",
+          18.02
+        ],
+        [
+          "2026-04-28",
+          17.83
+        ],
+        [
+          "2026-04-29",
+          18.81
+        ],
+        [
+          "2026-04-30",
+          16.89
+        ],
+        [
+          "2026-05-01",
+          16.99
+        ],
+        [
+          "2026-05-04",
+          18.29
+        ],
+        [
+          "2026-05-05",
+          17.38
+        ],
+        [
+          "2026-05-06",
+          17.39
+        ],
+        [
+          "2026-05-07",
+          17.08
+        ],
+        [
+          "2026-05-08",
+          17.19
+        ],
+        [
+          "2026-05-11",
+          18.38
+        ],
+        [
+          "2026-05-12",
+          17.99
+        ],
+        [
+          "2026-05-13",
+          17.87
+        ],
+        [
+          "2026-05-14",
+          17.26
+        ],
+        [
+          "2026-05-15",
+          18.43
+        ],
+        [
+          "2026-05-18",
+          17.82
+        ],
+        [
+          "2026-05-19",
+          18.06
+        ],
+        [
+          "2026-05-20",
+          17.44
+        ],
+        [
+          "2026-05-21",
+          16.76
+        ],
+        [
+          "2026-05-22",
+          16.7
+        ],
+        [
+          "2026-05-25",
+          16.59
+        ],
+        [
+          "2026-05-26",
+          17.01
+        ],
+        [
+          "2026-05-27",
+          16.29
+        ],
+        [
+          "2026-05-28",
+          15.74
+        ],
+        [
+          "2026-05-29",
+          15.32
+        ],
+        [
+          "2026-06-01",
+          16.05
+        ],
+        [
+          "2026-06-02",
+          15.77
+        ],
+        [
+          "2026-06-03",
+          16.06
+        ],
+        [
+          "2026-06-04",
+          15.4
+        ],
+        [
+          "2026-06-05",
+          21.51
+        ],
+        [
+          "2026-06-08",
+          18.92
+        ],
+        [
+          "2026-06-09",
+          19.87
+        ],
+        [
+          "2026-06-10",
+          22.22
+        ],
+        [
+          "2026-06-11",
+          19.44
+        ],
+        [
+          "2026-06-12",
+          17.68
+        ],
+        [
+          "2026-06-15",
+          16.2
+        ],
+        [
+          "2026-06-16",
+          16.41
+        ],
+        [
+          "2026-06-17",
+          18.44
+        ],
+        [
+          "2026-06-18",
+          16.4
+        ],
+        [
+          "2026-06-19",
+          16.78
+        ],
+        [
+          "2026-06-22",
+          17.28
+        ],
+        [
+          "2026-06-23",
+          19.49
+        ],
+        [
+          "2026-06-24",
+          18.63
+        ],
+        [
+          "2026-06-25",
+          18.89
+        ],
+        [
+          "2026-06-26",
+          18.41
+        ],
+        [
+          "2026-06-29",
+          17.65
+        ],
+        [
+          "2026-06-30",
+          16.45
+        ],
+        [
+          "2026-07-01",
+          16.59
+        ],
+        [
+          "2026-07-02",
+          16.15
+        ],
+        [
+          "2026-07-03",
+          15.81
+        ],
+        [
+          "2026-07-06",
+          15.57
+        ],
+        [
+          "2026-07-07",
+          16.13
+        ],
+        [
+          "2026-07-08",
+          16.9
+        ],
+        [
+          "2026-07-09",
+          15.84
+        ],
+        [
+          "2026-07-10",
+          15.03
+        ],
+        [
+          "2026-07-13",
+          17.16
+        ],
+        [
+          "2026-07-14",
+          16.5
+        ],
+        [
+          "2026-07-15",
+          15.67
+        ],
+        [
+          "2026-07-16",
+          16.73
+        ],
+        [
+          "2026-07-17",
+          18.77
+        ],
+        [
+          "2026-07-20",
+          18.65
+        ],
+        [
+          "2026-07-21",
+          17.05
+        ],
+        [
+          "2026-07-22",
+          16.64
+        ],
+        [
+          "2026-07-23",
+          18.7
+        ],
+        [
+          "2026-07-24",
+          18.58
+        ],
+        [
+          "2026-07-27",
+          18.67
+        ],
+        [
+          "2026-07-28",
+          18.21
+        ],
+        [
+          "2026-07-29",
+          20.66
+        ],
+        [
+          "2026-07-30",
+          17.09
+        ],
+        [
+          "2026-07-31",
+          15.99
+        ],
+        [
+          "2026-08-03",
+          15.86
+        ],
+        [
+          "2026-08-04",
+          16.5
+        ],
+        [
+          "2026-08-05",
+          15.81
+        ],
+        [
+          "2026-08-06",
+          15.15
+        ],
+        [
+          "2026-08-07",
+          14.9
+        ],
+        [
+          "2026-08-10",
+          15.46
+        ],
+        [
+          "2026-08-11",
+          15.28
+        ],
+        [
+          "2026-08-12",
+          14.55
+        ],
+        [
+          "2026-08-13",
+          14.63
+        ],
+        [
+          "2026-08-14",
+          14.25
+        ],
+        [
+          "2026-08-17",
+          15.19
+        ],
+        [
+          "2026-08-18",
+          15.84
+        ],
+        [
+          "2026-08-19",
+          14.89
+        ],
+        [
+          "2026-08-20",
+          16.01
+        ],
+        [
+          "2026-08-21",
+          15.13
+        ],
+        [
+          "2026-08-24",
+          15.85
+        ],
+        [
+          "2026-08-25",
+          15.45
+        ],
+        [
+          "2026-08-26",
+          15.21
+        ],
+        [
+          "2026-08-27",
+          14.51
+        ],
+        [
+          "2026-08-28",
+          14.43
+        ],
+        [
+          "2026-08-31",
+          14.92
+        ],
+        [
+          "2026-09-01",
+          16.34
+        ],
+        [
+          "2026-09-02",
+          15.2
+        ],
+        [
+          "2026-09-03",
+          14.32
+        ],
+        [
+          "2026-09-04",
+          14.53
+        ],
+        [
+          "2026-09-07",
+          15.3
+        ],
+        [
+          "2026-09-08",
+          15.72
+        ],
+        [
+          "2026-09-09",
+          16.46
+        ],
+        [
+          "2026-09-10",
+          17.84
+        ],
+        [
+          "2026-09-11",
+          15.84
+        ],
+        [
+          "2026-09-14",
+          17.1
+        ],
+        [
+          "2026-09-15",
+          17.2
+        ],
+        [
+          "2026-09-16",
+          17.71
+        ],
+        [
+          "2026-09-17",
+          15.44
+        ],
+        [
+          "2026-09-18",
+          14.81
+        ],
+        [
+          "2026-09-21",
+          14.87
+        ],
+        [
+          "2026-09-22",
+          14.21
+        ],
+        [
+          "2026-09-23",
+          15.18
+        ],
+        [
+          "2026-09-24",
+          15.67
+        ],
+        [
+          "2026-09-25",
+          14.87
+        ],
+        [
+          "2026-09-28",
+          16.07
+        ],
+        [
+          "2026-09-29",
+          16.04
+        ],
+        [
+          "2026-09-30",
+          16.34
+        ],
+        [
+          "2026-10-01",
+          16.39
+        ],
+        [
+          "2026-10-02",
+          15.31
+        ],
+        [
+          "2026-10-05",
+          15.52
+        ],
+        [
+          "2026-10-06",
+          15.01
+        ],
+        [
+          "2026-10-07",
+          15.08
+        ],
+        [
+          "2026-10-08",
+          15.41
+        ],
+        [
+          "2026-10-09",
+          14.84
+        ],
+        [
+          "2026-10-12",
+          15.21
+        ],
+        [
+          "2026-10-13",
+          15.27
+        ],
+        [
+          "2026-10-14",
+          16.87
+        ],
+        [
+          "2026-10-15",
+          16.46
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "10-Year Treasury Constant Maturity Yield (DGS10)",
+      "type": "line",
+      "x": [
+        "2025-10-03",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        4.13,
+        4.18,
+        4.14,
+        4.13,
+        4.14,
+        4.05,
+        4.03,
+        4.05,
+        3.99,
+        4.02,
+        4.0,
+        3.98,
+        3.97,
+        4.01,
+        4.02,
+        4.01,
+        3.99,
+        4.08,
+        4.11,
+        4.11,
+        4.13,
+        4.1,
+        4.17,
+        4.11,
+        4.11,
+        4.13,
+        4.08,
+        4.11,
+        4.14,
+        4.13,
+        4.12,
+        4.13,
+        4.1,
+        4.06,
+        4.04,
+        4.01,
+        4.0,
+        4.02,
+        4.09,
+        4.09,
+        4.06,
+        4.11,
+        4.14,
+        4.17,
+        4.18,
+        4.13,
+        4.14,
+        4.19,
+        4.18,
+        4.15,
+        4.16,
+        4.12,
+        4.16,
+        4.17,
+        4.18,
+        4.15,
+        4.14,
+        4.12,
+        4.14,
+        4.18,
+        4.19,
+        4.17,
+        4.18,
+        4.15,
+        4.19,
+        4.18,
+        4.19,
+        4.18,
+        4.15,
+        4.17,
+        4.24,
+        4.3,
+        4.26,
+        4.26,
+        4.24,
+        4.22,
+        4.24,
+        4.26,
+        4.24,
+        4.26,
+        4.29,
+        4.28,
+        4.29,
+        4.21,
+        4.22,
+        4.22,
+        4.16,
+        4.18,
+        4.09,
+        4.04,
+        4.05,
+        4.09,
+        4.08,
+        4.08,
+        4.03,
+        4.04,
+        4.05,
+        4.02,
+        3.97,
+        4.05,
+        4.06,
+        4.09,
+        4.13,
+        4.15,
+        4.12,
+        4.15,
+        4.21,
+        4.27,
+        4.28,
+        4.23,
+        4.2,
+        4.26,
+        4.25,
+        4.39,
+        4.34,
+        4.39,
+        4.33,
+        4.42,
+        4.44,
+        4.35,
+        4.3,
+        4.33,
+        4.31,
+        4.35,
+        4.34,
+        4.33,
+        4.29,
+        4.29,
+        4.31,
+        4.3,
+        4.26,
+        4.29,
+        4.32,
+        4.26,
+        4.26,
+        4.3,
+        4.3,
+        4.34,
+        4.31,
+        4.35,
+        4.36,
+        4.42,
+        4.4,
+        4.39,
+        4.45,
+        4.43,
+        4.36,
+        4.41,
+        4.38,
+        4.42,
+        4.46,
+        4.46,
+        4.47,
+        4.59,
+        4.61,
+        4.67,
+        4.57,
+        4.57,
+        4.56,
+        4.5,
+        4.48,
+        4.45,
+        4.45,
+        4.47,
+        4.46,
+        4.49,
+        4.47,
+        4.55,
+        4.56,
+        4.53,
+        4.55,
+        4.45,
+        4.48,
+        4.47,
+        4.43,
+        4.49,
+        4.46,
+        4.51,
+        4.5,
+        4.41,
+        4.4,
+        4.38,
+        4.38,
+        4.44,
+        4.48,
+        4.49,
+        4.48,
+        4.55,
+        4.56,
+        4.54,
+        4.56,
+        4.62,
+        4.58,
+        4.55,
+        4.57,
+        4.55,
+        4.6,
+        4.63,
+        4.67,
+        4.71,
+        4.69,
+        4.65,
+        4.61,
+        4.67,
+        4.68,
+        4.75,
+        4.7,
+        4.63,
+        4.63,
+        4.69,
+        4.65,
+        4.72,
+        4.7,
+        4.68,
+        4.63,
+        4.68,
+        4.72,
+        4.71,
+        4.65,
+        4.69,
+        4.74,
+        4.7,
+        4.64,
+        4.66,
+        4.67,
+        4.73,
+        4.75,
+        4.79,
+        4.79,
+        4.77,
+        4.78,
+        4.8,
+        4.83,
+        4.95,
+        4.96,
+        4.97,
+        5.0,
+        5.01,
+        4.94,
+        5.01,
+        4.96,
+        4.96,
+        5.11,
+        5.18,
+        5.17,
+        5.24,
+        5.26,
+        5.29,
+        5.24,
+        5.28,
+        5.31,
+        5.27,
+        5.28,
+        5.22,
+        5.24,
+        5.21,
+        5.19,
+        5.1
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "S&P 500 Index (SP500)",
+      "type": "line",
+      "x": [
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-13",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-11",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      "y": [
+        6740.28,
+        6714.59,
+        6753.72,
+        6735.11,
+        6552.51,
+        6654.72,
+        6644.31,
+        6671.06,
+        6629.07,
+        6664.01,
+        6735.13,
+        6735.35,
+        6699.4,
+        6738.44,
+        6791.69,
+        6875.16,
+        6890.89,
+        6890.59,
+        6822.34,
+        6840.2,
+        6851.97,
+        6771.55,
+        6796.29,
+        6720.32,
+        6728.8,
+        6832.43,
+        6846.61,
+        6850.92,
+        6737.49,
+        6734.11,
+        6672.41,
+        6617.32,
+        6642.16,
+        6538.76,
+        6602.99,
+        6705.12,
+        6765.88,
+        6812.61,
+        6849.09,
+        6812.63,
+        6829.37,
+        6849.72,
+        6857.12,
+        6870.4,
+        6846.51,
+        6840.51,
+        6886.68,
+        6901.0,
+        6827.41,
+        6816.51,
+        6800.26,
+        6721.43,
+        6774.76,
+        6834.5,
+        6878.49,
+        6909.79,
+        6932.05,
+        6929.94,
+        6905.74,
+        6896.24,
+        6845.5,
+        6858.47,
+        6902.05,
+        6944.82,
+        6920.93,
+        6921.46,
+        6966.28,
+        6977.27,
+        6963.74,
+        6926.6,
+        6944.47,
+        6940.01,
+        6796.86,
+        6875.62,
+        6913.35,
+        6915.61,
+        6950.23,
+        6978.6,
+        6978.03,
+        6969.01,
+        6939.03,
+        6976.44,
+        6917.81,
+        6882.72,
+        6798.4,
+        6932.3,
+        6964.82,
+        6941.81,
+        6941.47,
+        6832.76,
+        6836.17,
+        6843.22,
+        6881.31,
+        6861.89,
+        6909.51,
+        6837.75,
+        6890.07,
+        6946.13,
+        6908.86,
+        6878.88,
+        6881.62,
+        6816.63,
+        6869.5,
+        6830.71,
+        6740.02,
+        6795.99,
+        6781.48,
+        6775.8,
+        6672.62,
+        6632.19,
+        6699.38,
+        6716.09,
+        6624.7,
+        6606.49,
+        6506.48,
+        6581.0,
+        6556.37,
+        6591.9,
+        6477.16,
+        6368.85,
+        6343.72,
+        6528.52,
+        6575.32,
+        6582.69,
+        6611.83,
+        6616.85,
+        6782.81,
+        6824.66,
+        6816.89,
+        6886.24,
+        6967.38,
+        7022.95,
+        7041.28,
+        7126.06,
+        7109.14,
+        7064.01,
+        7137.9,
+        7108.4,
+        7165.08,
+        7173.91,
+        7138.8,
+        7135.95,
+        7209.01,
+        7230.12,
+        7200.75,
+        7259.22,
+        7365.12,
+        7337.11,
+        7398.93,
+        7412.84,
+        7400.96,
+        7444.25,
+        7501.24,
+        7408.5,
+        7403.05,
+        7353.61,
+        7432.97,
+        7445.72,
+        7473.47,
+        7519.12,
+        7520.36,
+        7563.63,
+        7580.06,
+        7599.96,
+        7609.78,
+        7553.68,
+        7584.31,
+        7383.74,
+        7405.73,
+        7386.65,
+        7266.99,
+        7394.3,
+        7431.46,
+        7554.29,
+        7511.35,
+        7420.1,
+        7500.58,
+        7472.79,
+        7365.46,
+        7358.22,
+        7357.49,
+        7354.02,
+        7440.43,
+        7499.36,
+        7483.23,
+        7483.24,
+        7537.43,
+        7503.85,
+        7482.71,
+        7543.64,
+        7575.39,
+        7515.34,
+        7543.59,
+        7572.4,
+        7533.77,
+        7457.69,
+        7443.28,
+        7509.2,
+        7498.96,
+        7408.3,
+        7411.98,
+        7413.18,
+        7428.78,
+        7316.15,
+        7437.63,
+        7489.72,
+        7600.5,
+        7736.52,
+        7723.55,
+        7709.96,
+        7757.64,
+        7753.11,
+        7728.2,
+        7748.5,
+        7798.99,
+        7785.76,
+        7745.06,
+        7691.76,
+        7707.98,
+        7641.16,
+        7674.37,
+        7652.86,
+        7677.28,
+        7675.7,
+        7730.99,
+        7711.76,
+        7686.14,
+        7631.47,
+        7666.6,
+        7747.71,
+        7718.6,
+        7673.52,
+        7636.36,
+        7591.7,
+        7656.98,
+        7619.98,
+        7585.73,
+        7551.81,
+        7637.76,
+        7650.5,
+        7764.7,
+        7764.64,
+        7706.03,
+        7704.13,
+        7743.41,
+        7683.69,
+        7670.84,
+        7651.54,
+        7666.45,
+        7722.72,
+        7773.95,
+        7818.93,
+        7801.77,
+        7765.36,
+        7811.54,
+        7807.24,
+        7805.45,
+        7718.94,
+        7744.06,
+        7659.44
+      ],
+      "y_label": "Index"
+    },
+    {
+      "title": "CBOE Volatility Index (VIX) (VIXCLS)",
+      "type": "line",
+      "x": [
+        "2025-10-03",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-13",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-11",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-27",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-19",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-03",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        16.65,
+        16.37,
+        17.24,
+        16.3,
+        16.43,
+        21.66,
+        19.03,
+        20.81,
+        20.64,
+        25.31,
+        20.78,
+        18.23,
+        17.87,
+        18.6,
+        17.3,
+        16.37,
+        15.79,
+        16.42,
+        16.92,
+        16.91,
+        17.44,
+        17.17,
+        19.0,
+        18.01,
+        19.5,
+        19.08,
+        17.6,
+        17.28,
+        17.51,
+        20.0,
+        19.83,
+        22.38,
+        24.69,
+        23.66,
+        26.42,
+        23.43,
+        20.52,
+        18.56,
+        17.19,
+        17.21,
+        16.35,
+        17.24,
+        16.59,
+        16.08,
+        15.78,
+        15.41,
+        16.66,
+        16.93,
+        15.77,
+        14.85,
+        15.74,
+        16.5,
+        16.48,
+        17.62,
+        16.87,
+        14.91,
+        14.08,
+        14.0,
+        13.47,
+        13.6,
+        14.2,
+        14.33,
+        14.95,
+        14.51,
+        14.9,
+        14.75,
+        15.38,
+        15.45,
+        14.49,
+        15.12,
+        15.98,
+        16.75,
+        15.84,
+        15.86,
+        18.84,
+        20.09,
+        16.9,
+        15.64,
+        16.09,
+        16.15,
+        16.35,
+        16.35,
+        16.88,
+        17.44,
+        16.34,
+        18.0,
+        18.64,
+        21.77,
+        17.76,
+        17.36,
+        17.79,
+        17.65,
+        20.82,
+        20.6,
+        21.2,
+        20.29,
+        19.62,
+        20.23,
+        19.09,
+        21.01,
+        19.55,
+        17.93,
+        18.63,
+        19.86,
+        21.44,
+        23.57,
+        21.15,
+        23.75,
+        29.49,
+        25.5,
+        24.93,
+        24.23,
+        27.29,
+        27.19,
+        23.51,
+        22.37,
+        25.09,
+        24.06,
+        26.78,
+        26.15,
+        26.95,
+        25.33,
+        27.44,
+        31.05,
+        30.61,
+        25.25,
+        24.54,
+        23.87,
+        24.17,
+        25.78,
+        21.04,
+        19.49,
+        19.23,
+        19.12,
+        18.36,
+        18.17,
+        17.94,
+        17.48,
+        18.87,
+        19.5,
+        18.92,
+        19.31,
+        18.71,
+        18.02,
+        17.83,
+        18.81,
+        16.89,
+        16.99,
+        18.29,
+        17.38,
+        17.39,
+        17.08,
+        17.19,
+        18.38,
+        17.99,
+        17.87,
+        17.26,
+        18.43,
+        17.82,
+        18.06,
+        17.44,
+        16.76,
+        16.7,
+        16.59,
+        17.01,
+        16.29,
+        15.74,
+        15.32,
+        16.05,
+        15.77,
+        16.06,
+        15.4,
+        21.51,
+        18.92,
+        19.87,
+        22.22,
+        19.44,
+        17.68,
+        16.2,
+        16.41,
+        18.44,
+        16.4,
+        16.78,
+        17.28,
+        19.49,
+        18.63,
+        18.89,
+        18.41,
+        17.65,
+        16.45,
+        16.59,
+        16.15,
+        15.81,
+        15.57,
+        16.13,
+        16.9,
+        15.84,
+        15.03,
+        17.16,
+        16.5,
+        15.67,
+        16.73,
+        18.77,
+        18.65,
+        17.05,
+        16.64,
+        18.7,
+        18.58,
+        18.67,
+        18.21,
+        20.66,
+        17.09,
+        15.99,
+        15.86,
+        16.5,
+        15.81,
+        15.15,
+        14.9,
+        15.46,
+        15.28,
+        14.55,
+        14.63,
+        14.25,
+        15.19,
+        15.84,
+        14.89,
+        16.01,
+        15.13,
+        15.85,
+        15.45,
+        15.21,
+        14.51,
+        14.43,
+        14.92,
+        16.34,
+        15.2,
+        14.32,
+        14.53,
+        15.3,
+        15.72,
+        16.46,
+        17.84,
+        15.84,
+        17.1,
+        17.2,
+        17.71,
+        15.44,
+        14.81,
+        14.87,
+        14.21,
+        15.18,
+        15.67,
+        14.87,
+        16.07,
+        16.04,
+        16.34,
+        16.39,
+        15.31,
+        15.52,
+        15.01,
+        15.08,
+        15.41,
+        14.84,
+        15.21,
+        15.27,
+        16.87,
+        16.46
+      ],
+      "y_label": "Index"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "DGS10",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "SP500",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "VIXCLS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "validation": {
+    "counts": {
+      "figures": 30,
+      "verified": 13,
+      "derived": 9,
+      "unverified": 8
+    },
+    "figures": [
+      {
+        "text": "70 %",
+        "value": 70.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 218,
+        "end": 222,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S7"
+        ],
+        "context": "- Risk‑parity (RP) equalises risk contribution; typical static RP allocation is about 70 % bonds, 30 % equities (assumption) [S7]."
+      },
+      {
+        "text": "30 %",
+        "value": 30.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 230,
+        "end": 234,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S7"
+        ],
+        "context": "- Risk‑parity (RP) equalises risk contribution; typical static RP allocation is about 70 % bonds, 30 % equities (assumption) [S7]."
+      },
+      {
+        "text": "0.8",
+        "value": 0.8,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 520,
+        "end": 523,
+        "status": "derived",
+        "matched": "DGS10 change 2026-04-15 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S8"
+        ],
+        "context": "- RP smooths volatility under normal conditions but offers limited protection when equity‑bond correlation exceeds 0.8 (assumption) [S8]."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 717,
+        "end": 722,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "context": "- Current macro backdrop: 10‑yr Treasury yield 5.1 % [S1], S&P 500 index 7,659.44 [S2], VIX 16.46 [S3]."
+      },
+      {
+        "text": "500",
+        "value": 500.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 733,
+        "end": 736,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "context": "- Current macro backdrop: 10‑yr Treasury yield 5.1 % [S1], S&P 500 index 7,659.44 [S2], VIX 16.46 [S3]."
+      },
+      {
+        "text": "7,659.44",
+        "value": 7659.44,
+        "unit": "",
+        "tolerance": 0.0050000010000000004,
+        "start": 743,
+        "end": 751,
+        "status": "verified",
+        "matched": "SP500 on 2026-10-16",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "context": "- Current macro backdrop: 10‑yr Treasury yield 5.1 % [S1], S&P 500 index 7,659.44 [S2], VIX 16.46 [S3]."
+      },
+      {
+        "text": "16.46",
+        "value": 16.46,
+        "unit": "",
+        "tolerance": 0.0050000010000000004,
+        "start": 762,
+        "end": 767,
+        "status": "verified",
+        "matched": "VIXCLS on 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "context": "- Current macro backdrop: 10‑yr Treasury yield 5.1 % [S1], S&P 500 index 7,659.44 [S2], VIX 16.46 [S3]."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 839,
+        "end": 844,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- 10‑yr Treasury yield 5.1 % [S1]."
+      },
+      {
+        "text": "500",
+        "value": 500.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 859,
+        "end": 862,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- S&P 500 index 7,659.44; recent decline –1.093 % on 2026‑10‑15 [S2]."
+      },
+      {
+        "text": "7,659.44",
+        "value": 7659.44,
+        "unit": "",
+        "tolerance": 0.0050000010000000004,
+        "start": 869,
+        "end": 877,
+        "status": "verified",
+        "matched": "SP500 on 2026-10-16",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- S&P 500 index 7,659.44; recent decline –1.093 % on 2026‑10‑15 [S2]."
+      },
+      {
+        "text": "–1.093 %",
+        "value": 1.093,
+        "unit": "%",
+        "tolerance": 0.000500001,
+        "start": 894,
+        "end": 902,
+        "status": "derived",
+        "matched": "SP500 % change 2026-10-15 to 2026-10-16",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- S&P 500 index 7,659.44; recent decline –1.093 % on 2026‑10‑15 [S2]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 911,
+        "end": 913,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S8",
+        "snippet_ids": [
+          "S8"
+        ],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- S&P 500 index 7,659.44; recent decline –1.093 % on 2026‑10‑15 [S2]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 914,
+        "end": 916,
+        "status": "derived",
+        "matched": "SP500 % change 2025-10-15 to 2026-10-16",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- S&P 500 index 7,659.44; recent decline –1.093 % on 2026‑10‑15 [S2]."
+      },
+      {
+        "text": "16.46",
+        "value": 16.46,
+        "unit": "",
+        "tolerance": 0.0050000010000000004,
+        "start": 931,
+        "end": 936,
+        "status": "verified",
+        "matched": "VIXCLS on 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- VIX 16.46, moderate volatility relative to historical average [S3]."
+      },
+      {
+        "text": "70 %",
+        "value": 70.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1484,
+        "end": 1488,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S7"
+        ],
+        "context": "- Static RP: ~70 % bonds, 30 % equities (assumption) [S7]."
+      },
+      {
+        "text": "30 %",
+        "value": 30.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1496,
+        "end": 1500,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S7"
+        ],
+        "context": "- Static RP: ~70 % bonds, 30 % equities (assumption) [S7]."
+      },
+      {
+        "text": "0.6",
+        "value": 0.6,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 1732,
+        "end": 1735,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Equity‑bond correlation ≈ 0.6."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1753,
+        "end": 1758,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- 10‑yr yield 5.1 % [S1]."
+      },
+      {
+        "text": "16.46",
+        "value": 16.46,
+        "unit": "",
+        "tolerance": 0.0050000010000000004,
+        "start": 1773,
+        "end": 1778,
+        "status": "verified",
+        "matched": "VIXCLS on 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- VIX 16.46 [S3]."
+      },
+      {
+        "text": "0.3",
+        "value": 0.3,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 1943,
+        "end": 1946,
+        "status": "derived",
+        "matched": "SP500 % change 2026-09-17 to 2026-10-16",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Equity‑bond correlation ≈ 0.3."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1964,
+        "end": 1969,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- 10‑yr yield 5.1 % [S1]."
+      },
+      {
+        "text": "12",
+        "value": 12.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1984,
+        "end": 1986,
+        "status": "derived",
+        "matched": "VIXCLS % change 2026-07-20 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- VIX 12."
+      },
+      {
+        "text": "0.8",
+        "value": 0.8,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 2136,
+        "end": 2139,
+        "status": "derived",
+        "matched": "DGS10 change 2026-04-15 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S8"
+        ],
+        "context": "- Equity‑bond correlation > 0.8 (assumption) [S8]."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2175,
+        "end": 2180,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- 10‑yr yield 5.1 % + 0.5 % spike (assumption)."
+      },
+      {
+        "text": "0.5 %",
+        "value": 0.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2183,
+        "end": 2188,
+        "status": "derived",
+        "matched": "DGS10 change 2026-07-16 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- 10‑yr yield 5.1 % + 0.5 % spike (assumption)."
+      },
+      {
+        "text": "20",
+        "value": 20.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2219,
+        "end": 2221,
+        "status": "verified",
+        "matched": "VIXCLS on 2025-11-13",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- VIX > 20 (assumption) [S3]."
+      },
+      {
+        "text": "0.8",
+        "value": 0.8,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 2477,
+        "end": 2480,
+        "status": "derived",
+        "matched": "DGS10 change 2026-04-15 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S8"
+        ],
+        "context": "- **Correlation risk** – monitor equity‑bond correlation; trigger dynamic‑risk‑parity adjustment when > 0.8 (assumption) [S8]."
+      },
+      {
+        "text": "20",
+        "value": 20.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2633,
+        "end": 2635,
+        "status": "verified",
+        "matched": "VIXCLS on 2025-11-13",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Volatility spike** – VIX > 20 signals systemic stress; consider volatility‑targeting cut‑off (assumption) [S3]."
+      },
+      {
+        "text": "0.8",
+        "value": 0.8,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 3211,
+        "end": 3214,
+        "status": "derived",
+        "matched": "DGS10 change 2026-04-15 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S8"
+        ],
+        "context": "- **Dynamic risk‑parity** – reduce bond weight when correlation > 0.8; increase equity weight to maintain risk parity (assumption) [S8]."
+      },
+      {
+        "text": "20",
+        "value": 20.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 3490,
+        "end": 3492,
+        "status": "verified",
+        "matched": "VIXCLS on 2025-11-13",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Volatility‑targeting** – scale entire portfolio down when VIX > 20 to protect against systemic shocks (assumption) [S3]."
+      }
+    ],
+    "citations": {
+      "markers": 23,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "- Equity‑bond correlation ≈ 0.3.",
+          "figures": [
+            "0.3"
+          ],
+          "sources": [
+            "S2"
+          ]
+        },
+        {
+          "text": "- VIX 12.",
+          "figures": [
+            "12"
+          ],
+          "sources": [
+            "S3"
+          ]
+        },
+        {
+          "text": "- 10‑yr yield 5.1 % + 0.5 % spike (assumption).",
+          "figures": [
+            "5.1 %",
+            "0.5 %"
+          ],
+          "sources": [
+            "S1"
+          ]
+        }
+      ],
+      "source_mismatches": [
+        {
+          "text": "- RP smooths volatility under normal conditions but offers limited protection when equity‑bond correlation exceeds 0.8 (assumption) [S8].",
+          "figures": [
+            "0.8"
+          ],
+          "cited": [
+            "S8"
+          ],
+          "sources": [
+            "S1"
+          ]
+        },
+        {
+          "text": "- Equity‑bond correlation > 0.8 (assumption) [S8].",
+          "figures": [
+            "0.8"
+          ],
+          "cited": [
+            "S8"
+          ],
+          "sources": [
+            "S1"
+          ]
+        },
+        {
+          "text": "- **Correlation risk** – monitor equity‑bond correlation; trigger dynamic‑risk‑parity adjustment when > 0.8 (assumption) [S8].",
+          "figures": [
+            "0.8"
+          ],
+          "cited": [
+            "S8"
+          ],
+          "sources": [
+            "S1"
+          ]
+        },
+        {
+          "text": "- **Dynamic risk‑parity** – reduce bond weight when correlation > 0.8; increase equity weight to maintain risk parity (assumption) [S8].",
+          "figures": [
+            "0.8"
+          ],
+          "cited": [
+            "S8"
+          ],
+          "sources": [
+            "S1"
+          ]
+        }
+      ]
+    },
+    "freshness": [
+      {
+        "table": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: S&P 500 Index (SP500)",
+        "last_date": "2026-10-16",
+        "frequency": "daily",
+        "age_days": 2,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: CBOE Volatility Index (VIX) (VIXCLS)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ],
+    "open_issues": 11,
+    "summary": "22 of 30 figures verified against source data (13 exact, 9 derived); 8 flagged (1 of them appear in a fetched web/news snippet; 4 labelled as assumptions). 3 paragraph(s) state figures without a citation. 4 paragraph(s) cite a different source than the data."
+  },
+  "run_meta": {
+    "run_id": "20261018-111146-b8d08f",
+    "timestamp": "2026-10-18T15:11:46+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}

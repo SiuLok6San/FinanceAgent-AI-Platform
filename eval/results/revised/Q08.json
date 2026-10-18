@@ -1,0 +1,3238 @@
+{
+  "id": "Q08",
+  "category": "rates",
+  "question": "How would a Fed rate cut cycle affect 10-year Treasury yields and mortgage rates?",
+  "ticker": null,
+  "expected_tags": [
+    "rates"
+  ],
+  "pipeline": "revised",
+  "run_utc": "2026-10-18T14:52:40+00:00",
+  "elapsed_sec": 101.3,
+  "router_tags": [
+    "rates"
+  ],
+  "tier2": {
+    "rates": "fed_cut_cycle"
+  },
+  "error": false,
+  "report_text": "**Institutional Research Report – Fed Rate‑Cut Cycle Impact on 10‑Year Treasury Yields & Mortgage Rates**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].  \n- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].  \n- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].  \n- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3].  \n- Mortgage rates track the 10‑yr Treasury yield, not the Fed funds rate [S5].  \n- A Fed cut cycle does **not** guarantee lower long‑term yields or mortgage rates; risk‑premium dynamics dominate the transmission.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure.  \n- **Yield curve**: Despite lower policy rates, the 10‑yr yield has risen, indicating expectations of higher inflation or weaker growth.  \n- **Risk‑premium**: Widening spreads suggest market‑imposed risk premiums have offset the downward pressure from the Fed cut.  \n\n#### Sector (Fixed‑Income)  \n- **Treasuries**: Long‑term Treasury yields are driven by expectations of future inflation and risk‑premia; the current rise aligns with a higher term premium.  \n- **Mortgage‑Backed Securities (MBS)**: Rising mortgage rates increase pre‑payment risk and compress MBS spreads.  \n\n#### Credit  \n- **Investment‑Grade (IG)**: IG spreads may widen modestly if credit risk perception rises, but the easing stance can still lower IG yields.  \n- **High‑Yield (HY)**: HY spreads are more sensitive to risk‑premium changes; a Fed cut cycle that raises long‑term yields can widen HY spreads further.  \n\n#### Portfolio  \n- **Duration exposure**: Long‑term Treasuries may underperform if yields rise; consider duration‑hedged or laddered strategies.  \n- **MBS & Real Estate**: Rising mortgage rates dampen housing demand and reduce MBS cash flows; monitor pre‑payment models.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Fed Cut Path | 10‑yr Yield Impact | Mortgage Rate Impact | Assumption |\n|----------|--------------|--------------------|----------------------|------------|\n| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |\n| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |\n| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |\n\n*See Table 1 for yield‑curve shift data.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Risk‑premium volatility** – sudden geopolitical or commodity shocks can widen spreads (see [S7]).  \n- **Inflation expectations** – higher inflation erodes real returns and pushes long‑term yields up.  \n- **Market sentiment** – if investors perceive the Fed cut as “soft,” long‑term rates may rise despite lower policy rates (see [S8], [S9]).  \n- **Pre‑payment behavior** – rising mortgage rates may accelerate pre‑payments, affecting MBS cash flows.  \n\n*Monitoring tools:*  \n- Fed minutes & forward guidance (Chart 1).  \n- 10‑yr Treasury yield trend (Chart 2).  \n- Mortgage rate trend (Chart 3).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Fixed‑Income Allocation** – shift modestly toward shorter maturities or use duration‑hedged instruments to mitigate potential yield rises.  \n- **MBS Exposure** – consider tightening spread requirements and enhancing pre‑payment risk models.  \n- **Credit Strategy** – maintain a focus on credit quality; HY portfolios may need tighter liquidity buffers.  \n- **Hedging** – interest‑rate swaps or futures can lock in favorable duration profiles.  \n\n---\n\n### 6. Conclusion  \n\nA Fed rate‑cut cycle does **not** automatically translate into lower 10‑year Treasury yields or mortgage rates. Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations. Portfolio managers should therefore focus on monitoring risk‑premium dynamics, spread behavior, and credit quality rather than assuming a simple inverse relationship between Fed policy and long‑term rates.  \n\n---",
+  "report_text_annotated": "> **Validation:** 27 of 38 figures verified against source data (7 exact, 20 derived); 11 flagged (4 labelled as assumptions). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.\n\n**Institutional Research Report – Fed Rate‑Cut Cycle Impact on 10‑Year Treasury Yields & Mortgage Rates**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].  \n- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].  \n- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].  \n- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3].  \n- Mortgage rates track the 10‑yr Treasury yield, not the Fed funds rate [S5].  \n- A Fed cut cycle does **not** guarantee lower long‑term yields or mortgage rates; risk‑premium dynamics dominate the transmission.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure.  \n- **Yield curve**: Despite lower policy rates, the 10‑yr yield has risen, indicating expectations of higher inflation or weaker growth.  \n- **Risk‑premium**: Widening spreads suggest market‑imposed risk premiums have offset the downward pressure from the Fed cut.  \n\n#### Sector (Fixed‑Income)  \n- **Treasuries**: Long‑term Treasury yields are driven by expectations of future inflation and risk‑premia; the current rise aligns with a higher term premium.  \n- **Mortgage‑Backed Securities (MBS)**: Rising mortgage rates increase pre‑payment risk and compress MBS spreads.  \n\n#### Credit  \n- **Investment‑Grade (IG)**: IG spreads may widen modestly if credit risk perception rises, but the easing stance can still lower IG yields.  \n- **High‑Yield (HY)**: HY spreads are more sensitive to risk‑premium changes; a Fed cut cycle that raises long‑term yields can widen HY spreads further.  \n\n#### Portfolio  \n- **Duration exposure**: Long‑term Treasuries may underperform if yields rise; consider duration‑hedged or laddered strategies.  \n- **MBS & Real Estate**: Rising mortgage rates dampen housing demand and reduce MBS cash flows; monitor pre‑payment models.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Fed Cut Path | 10‑yr Yield Impact | Mortgage Rate Impact | Assumption |\n|----------|--------------|--------------------|----------------------|------------|\n| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |\n| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |\n| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |\n\n*See Table 1 for yield‑curve shift data.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Risk‑premium volatility** – sudden geopolitical or commodity shocks can widen spreads (see [S7]).  \n- **Inflation expectations** – higher inflation erodes real returns and pushes long‑term yields up.  \n- **Market sentiment** – if investors perceive the Fed cut as “soft,” long‑term rates may rise despite lower policy rates (see [S8], [S9]).  \n- **Pre‑payment behavior** – rising mortgage rates may accelerate pre‑payments, affecting MBS cash flows.  \n\n*Monitoring tools:*  \n- Fed minutes & forward guidance (Chart 1).  \n- 10‑yr Treasury yield trend (Chart 2).  \n- Mortgage rate trend (Chart 3).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Fixed‑Income Allocation** – shift modestly toward shorter maturities or use duration‑hedged instruments to mitigate potential yield rises.  \n- **MBS Exposure** – consider tightening spread requirements and enhancing pre‑payment risk models.  \n- **Credit Strategy** – maintain a focus on credit quality; HY portfolios may need tighter liquidity buffers.  \n- **Hedging** – interest‑rate swaps or futures can lock in favorable duration profiles.  \n\n---\n\n### 6. Conclusion  \n\nA Fed rate‑cut cycle does **not** automatically translate into lower 10‑year Treasury yields or mortgage rates. Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations. Portfolio managers should therefore focus on monitoring risk‑premium dynamics, spread behavior, and credit quality rather than assuming a simple inverse relationship between Fed policy and long‑term rates.  \n\n---",
+  "draft_report_text": "**Institutional Research Report – Fed Rate‑Cut Cycle Impact on 10‑Year Treasury Yields & Mortgage Rates**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].  \n- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].  \n- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].  \n- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3].  \n- Mortgage rates track the 10‑yr Treasury yield, not the Fed funds rate [S5].  \n- A Fed cut cycle does **not** guarantee lower long‑term yields or mortgage rates; risk‑premium dynamics dominate the transmission.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure.  \n- **Yield curve**: Despite lower policy rates, the 10‑yr yield has risen, indicating expectations of higher inflation or weaker growth.  \n- **Risk‑premium**: Widening spreads suggest market‑imposed risk premiums have offset the downward pressure from the Fed cut.  \n\n#### Sector (Fixed‑Income)  \n- **Treasuries**: Long‑term Treasury yields are driven by expectations of future inflation and risk‑premia; the current rise aligns with a higher term premium.  \n- **Mortgage‑Backed Securities (MBS)**: Rising mortgage rates increase pre‑payment risk and compress MBS spreads.  \n\n#### Credit  \n- **Investment‑Grade (IG)**: IG spreads may widen modestly if credit risk perception rises, but the easing stance can still lower IG yields.  \n- **High‑Yield (HY)**: HY spreads are more sensitive to risk‑premium changes; a Fed cut cycle that raises long‑term yields can widen HY spreads further.  \n\n#### Portfolio  \n- **Duration exposure**: Long‑term Treasuries may underperform if yields rise; consider duration‑hedged or laddered strategies.  \n- **MBS & Real Estate**: Rising mortgage rates dampen housing demand and reduce MBS cash flows; monitor pre‑payment models.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Fed Cut Path | 10‑yr Yield Impact | Mortgage Rate Impact | Assumption |\n|----------|--------------|--------------------|----------------------|------------|\n| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |\n| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |\n| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |\n\n*See Table 1 for yield‑curve shift data.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Risk‑premium volatility** – sudden geopolitical or commodity shocks can widen spreads (see [S7]).  \n- **Inflation expectations** – higher inflation erodes real returns and pushes long‑term yields up.  \n- **Market sentiment** – if investors perceive the Fed cut as “soft,” long‑term rates may rise despite lower policy rates (see [S8], [S9]).  \n- **Pre‑payment behavior** – rising mortgage rates may accelerate pre‑payments, affecting MBS cash flows.  \n\n*Monitoring tools:*  \n- Fed minutes & forward guidance (Chart 1).  \n- 10‑yr Treasury yield trend (Chart 2).  \n- Mortgage rate trend (Chart 3).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Fixed‑Income Allocation** – shift modestly toward shorter maturities or use duration‑hedged instruments to mitigate potential yield rises.  \n- **MBS Exposure** – consider tightening spread requirements and enhancing pre‑payment risk models.  \n- **Credit Strategy** – maintain a focus on credit quality; HY portfolios may need tighter liquidity buffers.  \n- **Hedging** – interest‑rate swaps or futures can lock in favorable duration profiles.  \n\n---\n\n### 6. Conclusion  \n\nA Fed rate‑cut cycle does **not** automatically translate into lower 10‑year Treasury yields or mortgage rates. Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations. Portfolio managers should therefore focus on monitoring risk‑premium dynamics, spread behavior, and credit quality rather than assuming a simple inverse relationship between Fed policy and long‑term rates.  \n\n---",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"18 Oct 2026\" in: \"*Prepared for B17 Institutional Research – 18 Oct 2026*\" — this date is not in the fetched data; use a date from KEY DATA or remove it.\n2. \"09\" in: \"- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n3. \"09\" in: \"- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n4. \"10\" in: \"- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n5. \"15\" in: \"- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n6. \"10\" in: \"- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n7. \"15\" in: \"- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n8. Add a citation to: \"- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3].\" — its figures –1.35 pp, –3.65 pp, –2.30 pp come from [S1], [S2], [S3].\n9. Add a citation to: \"- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure.\" — its figures 47 bp come from [S1].\n10. Add a citation to: \"| Scenario | Fed Cut Path | 10‑yr Yield Impact | Mortgage Rate Impact | Assumption |\n|----------|--------------|--------------------|----------------------|----\" — its figures 4, 1 %, 0.5 pp, 0.4 pp, 4, 2 %, 1.0 pp, 0.8 pp, 4, 0.5 pp, 0.5 pp come from [S2], [S3].\n11. Add a citation to: \"A Fed rate‑cut cycle does **not** automatically translate into lower 10‑year Treasury yields or mortgage rates. Current data show that, even after a 47 bp cut, \" — its figures 47 bp, 1.05 pp, 1.13 pp come from [S1], [S2], [S3].\n12. \"- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].\" cites S1, but figures 4.22 %, 01, 01 come from [S1], [S2].",
+        "open_issues_before": 12,
+        "summary_before": "27 of 38 figures verified against source data (7 exact, 20 derived); 11 flagged (4 labelled as assumptions). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.",
+        "accepted": false,
+        "open_issues_after": 15,
+        "summary_after": "27 of 37 figures verified against source data (7 exact, 20 derived); 10 flagged (4 labelled as assumptions). 8 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.",
+        "revised_report_text": "**Institutional Research Report – Fed Rate‑Cut Cycle Impact on 10‑Year Treasury Yields & Mortgage Rates**  \n*Prepared for B17 Institutional Research*\n\n---\n\n### 1. Executive Summary  \n- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].  \n- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2].  \n- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3].  \n- Fed‑10‑yr spread widened to –1.35 pp [S1,S2]; Fed‑mortgage spread to –3.65 pp [S1,S3]; 10‑yr‑mortgage spread to –2.30 pp [S2,S3].  \n- Mortgage rates track the 10‑yr Treasury yield, not the Fed funds rate [S5].  \n- A Fed cut cycle does **not** guarantee lower long‑term yields or mortgage rates; risk‑premium dynamics dominate the transmission.\n\n---\n\n### 2. Core Analysis  \n\n**Macro**  \n- Fed policy shift: 47 bp cut indicates accommodative stance [S1].  \n- Yield curve: 10‑yr Treasury yield has risen despite lower policy rates, suggesting expectations of higher inflation or weaker growth.  \n- Risk‑premium: Widening spreads imply market‑imposed risk premiums offsetting Fed‑driven downward pressure.\n\n**Sector (Fixed‑Income)**  \n- Treasuries: Long‑term yields driven by inflation expectations and term premium; current rise aligns with higher term premium.  \n- Mortgage‑Backed Securities (MBS): Rising mortgage rates increase pre‑payment risk and compress MBS spreads.\n\n**Credit**  \n- Investment‑Grade (IG): Spreads may widen modestly if credit risk perception rises (likely).  \n- High‑Yield (HY): Spreads more sensitive to risk‑premium changes; a Fed cut cycle that raises long‑term yields could widen HY spreads further (likely).\n\n**Portfolio**  \n- Duration exposure: Long‑term Treasuries may underperform if yields rise; consider duration‑hedged or laddered strategies (likely).  \n- MBS & Real Estate: Rising mortgage rates dampen housing demand and reduce MBS cash flows; monitor pre‑payment models (likely).\n\n---\n\n### 3. Scenarios  \n\n- **Base** – 25 bp cuts each quarter for 4 qtrs (total 1 %) (assumption).  \n  - 10‑yr yield falls 0.5 pp (assumption).  \n  - Mortgage rate falls 0.4 pp (assumption).  \n\n- **Upside** – 50 bp cuts each quarter for 4 qtrs (total 2 %) (assumption).  \n  - 10‑yr yield falls 1.0 pp (assumption).  \n  - Mortgage rate falls 0.8 pp (assumption).  \n\n- **Downside** – 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp (assumption).  \n  - 10‑yr yield rises 0.5 pp (assumption).  \n  - Mortgage rate rises 0.3 pp (assumption).  \n\n*See Table 1 for yield‑curve shift data.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Risk‑premium volatility** – sudden geopolitical or commodity shocks can widen spreads (see [S7]).  \n- **Inflation expectations** – higher inflation erodes real returns and pushes long‑term yields up (likely).  \n- **Market sentiment** – if investors view the Fed cut as “soft,” long‑term rates may rise despite lower policy rates (see [S8], [S9]).  \n- **Pre‑payment behavior** – rising mortgage rates may accelerate pre‑payments, affecting MBS cash flows (likely).  \n\n*Monitoring tools:*  \n- Fed minutes & forward guidance (Chart 1).  \n- 10‑yr Treasury yield trend (Chart 2).  \n- Mortgage rate trend (Chart 3).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Fixed‑Income Allocation** – shift modestly toward shorter maturities or use duration‑hedged instruments to mitigate potential yield rises (likely).  \n- **MBS Exposure** – tighten spread requirements and enhance pre‑payment risk models (likely).  \n- **Credit Strategy** – maintain focus on credit quality; HY portfolios may need tighter liquidity buffers (likely).  \n- **Hedging** – interest‑rate swaps or futures can lock in favorable duration profiles (likely).  \n\n---\n\n### 6. Conclusion  \n\nCurrent data show that, even after a 47 bp Fed cut, the 10‑yr Treasury yield rose 1.05 pp and mortgage rates rose 1.13 pp [S1,S2,S3]. Mortgage rates track the 10‑yr Treasury yield, not the Fed funds rate [S5], and Fed cuts can raise long‑term yields due to risk‑premium dynamics [S7]. Portfolio managers should therefore focus on monitoring risk‑premium dynamics, spread behavior, and credit quality rather than assuming a simple inverse relationship between Fed policy and long‑term rates."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FRED series FEDFUNDS: Effective Federal Funds Rate",
+      "url": "https://fred.stlouisfed.org/series/FEDFUNDS",
+      "source": "FRED",
+      "snippet": "Monthly series in Percent; latest observation 3.75 on 2026-09-01.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series DGS10: 10-Year Treasury Constant Maturity Yield",
+      "url": "https://fred.stlouisfed.org/series/DGS10",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 5.1 on 2026-10-15.",
+      "id": "S2"
+    },
+    {
+      "title": "FRED series MORTGAGE30US: 30-Year Fixed Rate Mortgage Average",
+      "url": "https://fred.stlouisfed.org/series/MORTGAGE30US",
+      "source": "FRED",
+      "snippet": "Weekly series in Percent; latest observation 7.4 on 2026-10-15.",
+      "id": "S3"
+    },
+    {
+      "title": "Fed Rate Cuts Don’t Always Mean Lower Mortgage Rates | Investing.com Canada",
+      "url": "https://ca.investing.com/analysis/fed-rate-cuts-dont-always-mean-lower-mortgage-rates-200618656",
+      "source": "web (Tavily)",
+      "snippet": "The fundamental disconnect comes down to a simple fact: mortgage rates do not follow the federal funds rate. Instead, they track the 10-year treasury yield, which reflects long-term economic expectations rather than short-term policy changes.  > \"Since 1970, the 10-year Treasury yield has increased in the month followi",
+      "id": "S4"
+    },
+    {
+      "title": "Which impacts mortgage interest rates more: the Fed or the 10-year Treasury yield? Experts weigh in - CBS News",
+      "url": "https://www.cbsnews.com/news/which-impacts-mortgage-rates-more-the-fed-or-10-year-treasury-yield-experts-weigh-in",
+      "source": "web (Tavily)",
+      "snippet": "\"The 10-year Treasury has the biggest impact on mortgage rates because its maturity is closer to the average life of a 30-year mortgage,\" says Heather Long, chief economist at Navy Federal Credit Union. \"The Fed rate mainly affects short-term borrowing costs and overall economic sentiment, which can indirectly influenc",
+      "id": "S5"
+    },
+    {
+      "title": "How does the Federal Reserve affect mortgages?",
+      "url": "https://www.bankrate.com/mortgages/federal-reserve-and-mortgage-rates",
+      "source": "web (Tavily)",
+      "snippet": "The war in Iran constricted the world’s oil supply and drove up prices for fuel and other goods. The resulting inflation increased bond yields, including that of the 10-year Treasury bond — and mortgage rates.  The FOMC’s next meeting is July 28-29.  ## How does a Fed rate cut affect mortgages? [...] That’s because fix",
+      "id": "S6"
+    },
+    {
+      "title": "If the Fed Is Cutting Interest Rates, Why Are 10-Year Treasury Yields Rising? How Does It Affect You?",
+      "url": "https://finance.yahoo.com/news/fed-cutting-interest-rates-why-180802072.html",
+      "source": "web (Tavily)",
+      "snippet": "Treasury yields ticked up to a three-month high on Wednesday morning despite near certainty on Wall Street that the Federal Reserve was hours away from cutting interest rates. The 10-year Treasury yield, which influences interest rates on a variety of consumer loans including mortgages, rose Wednesday morning to 4.21%,",
+      "id": "S7"
+    },
+    {
+      "title": "What a Fed rate cut means for Treasury yields, mortgage rates",
+      "url": "https://ca.finance.yahoo.com/video/fed-rate-cut-means-treasury-110008376.html",
+      "source": "web (Tavily)",
+      "snippet": "Schwab Center for Financial Research fixed income strategist Collin Martin weighs in on how the Fed's monetary policy could affect Treasury yields (^TYX, ^TNX, ^FVX) and the broader bond market, mortgage rates, and shares his thoughts on bond and fixed income ETFs.  Also catch Collin Martin's thoughts on whether Kevin ",
+      "id": "S8"
+    },
+    {
+      "title": "What a Fed rate cut means for Treasury yields, mortgage rates",
+      "url": "https://finance.yahoo.com/video/fed-rate-cut-means-treasury-110008376.html?fr=sycsrp_catchall",
+      "source": "web (Tavily)",
+      "snippet": "Schwab Center for Financial Research fixed income strategist Collin Martin weighs in on how the Fed's monetary policy could affect Treasury yields (^TYX, ^TNX, ^FVX) and the broader bond market, mortgage rates, and shares his thoughts on bond and fixed income ETFs.  Also catch Collin Martin's thoughts on whether Kevin ",
+      "id": "S9"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S5",
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Effective Federal Funds Rate (FEDFUNDS)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "FEDFUNDS",
+      "frequency": "monthly",
+      "units": "Percent",
+      "last_date": "2026-09-01",
+      "topics": [
+        "rates"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/FEDFUNDS",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2024-04-01",
+          5.33
+        ],
+        [
+          "2024-05-01",
+          5.33
+        ],
+        [
+          "2024-06-01",
+          5.33
+        ],
+        [
+          "2024-07-01",
+          5.33
+        ],
+        [
+          "2024-08-01",
+          5.33
+        ],
+        [
+          "2024-09-01",
+          5.13
+        ],
+        [
+          "2024-10-01",
+          4.83
+        ],
+        [
+          "2024-11-01",
+          4.64
+        ],
+        [
+          "2024-12-01",
+          4.48
+        ],
+        [
+          "2025-01-01",
+          4.33
+        ],
+        [
+          "2025-02-01",
+          4.33
+        ],
+        [
+          "2025-03-01",
+          4.33
+        ],
+        [
+          "2025-04-01",
+          4.33
+        ],
+        [
+          "2025-05-01",
+          4.33
+        ],
+        [
+          "2025-06-01",
+          4.33
+        ],
+        [
+          "2025-07-01",
+          4.33
+        ],
+        [
+          "2025-08-01",
+          4.33
+        ],
+        [
+          "2025-09-01",
+          4.22
+        ],
+        [
+          "2025-10-01",
+          4.09
+        ],
+        [
+          "2025-11-01",
+          3.88
+        ],
+        [
+          "2025-12-01",
+          3.72
+        ],
+        [
+          "2026-01-01",
+          3.64
+        ],
+        [
+          "2026-02-01",
+          3.64
+        ],
+        [
+          "2026-03-01",
+          3.64
+        ],
+        [
+          "2026-04-01",
+          3.64
+        ],
+        [
+          "2026-05-01",
+          3.63
+        ],
+        [
+          "2026-06-01",
+          3.63
+        ],
+        [
+          "2026-07-01",
+          3.63
+        ],
+        [
+          "2026-08-01",
+          3.63
+        ],
+        [
+          "2026-09-01",
+          3.75
+        ]
+      ]
+    },
+    {
+      "title": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "DGS10",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "rates"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/DGS10",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-03",
+          4.13
+        ],
+        [
+          "2025-10-06",
+          4.18
+        ],
+        [
+          "2025-10-07",
+          4.14
+        ],
+        [
+          "2025-10-08",
+          4.13
+        ],
+        [
+          "2025-10-09",
+          4.14
+        ],
+        [
+          "2025-10-10",
+          4.05
+        ],
+        [
+          "2025-10-14",
+          4.03
+        ],
+        [
+          "2025-10-15",
+          4.05
+        ],
+        [
+          "2025-10-16",
+          3.99
+        ],
+        [
+          "2025-10-17",
+          4.02
+        ],
+        [
+          "2025-10-20",
+          4.0
+        ],
+        [
+          "2025-10-21",
+          3.98
+        ],
+        [
+          "2025-10-22",
+          3.97
+        ],
+        [
+          "2025-10-23",
+          4.01
+        ],
+        [
+          "2025-10-24",
+          4.02
+        ],
+        [
+          "2025-10-27",
+          4.01
+        ],
+        [
+          "2025-10-28",
+          3.99
+        ],
+        [
+          "2025-10-29",
+          4.08
+        ],
+        [
+          "2025-10-30",
+          4.11
+        ],
+        [
+          "2025-10-31",
+          4.11
+        ],
+        [
+          "2025-11-03",
+          4.13
+        ],
+        [
+          "2025-11-04",
+          4.1
+        ],
+        [
+          "2025-11-05",
+          4.17
+        ],
+        [
+          "2025-11-06",
+          4.11
+        ],
+        [
+          "2025-11-07",
+          4.11
+        ],
+        [
+          "2025-11-10",
+          4.13
+        ],
+        [
+          "2025-11-12",
+          4.08
+        ],
+        [
+          "2025-11-13",
+          4.11
+        ],
+        [
+          "2025-11-14",
+          4.14
+        ],
+        [
+          "2025-11-17",
+          4.13
+        ],
+        [
+          "2025-11-18",
+          4.12
+        ],
+        [
+          "2025-11-19",
+          4.13
+        ],
+        [
+          "2025-11-20",
+          4.1
+        ],
+        [
+          "2025-11-21",
+          4.06
+        ],
+        [
+          "2025-11-24",
+          4.04
+        ],
+        [
+          "2025-11-25",
+          4.01
+        ],
+        [
+          "2025-11-26",
+          4.0
+        ],
+        [
+          "2025-11-28",
+          4.02
+        ],
+        [
+          "2025-12-01",
+          4.09
+        ],
+        [
+          "2025-12-02",
+          4.09
+        ],
+        [
+          "2025-12-03",
+          4.06
+        ],
+        [
+          "2025-12-04",
+          4.11
+        ],
+        [
+          "2025-12-05",
+          4.14
+        ],
+        [
+          "2025-12-08",
+          4.17
+        ],
+        [
+          "2025-12-09",
+          4.18
+        ],
+        [
+          "2025-12-10",
+          4.13
+        ],
+        [
+          "2025-12-11",
+          4.14
+        ],
+        [
+          "2025-12-12",
+          4.19
+        ],
+        [
+          "2025-12-15",
+          4.18
+        ],
+        [
+          "2025-12-16",
+          4.15
+        ],
+        [
+          "2025-12-17",
+          4.16
+        ],
+        [
+          "2025-12-18",
+          4.12
+        ],
+        [
+          "2025-12-19",
+          4.16
+        ],
+        [
+          "2025-12-22",
+          4.17
+        ],
+        [
+          "2025-12-23",
+          4.18
+        ],
+        [
+          "2025-12-24",
+          4.15
+        ],
+        [
+          "2025-12-26",
+          4.14
+        ],
+        [
+          "2025-12-29",
+          4.12
+        ],
+        [
+          "2025-12-30",
+          4.14
+        ],
+        [
+          "2025-12-31",
+          4.18
+        ],
+        [
+          "2026-01-02",
+          4.19
+        ],
+        [
+          "2026-01-05",
+          4.17
+        ],
+        [
+          "2026-01-06",
+          4.18
+        ],
+        [
+          "2026-01-07",
+          4.15
+        ],
+        [
+          "2026-01-08",
+          4.19
+        ],
+        [
+          "2026-01-09",
+          4.18
+        ],
+        [
+          "2026-01-12",
+          4.19
+        ],
+        [
+          "2026-01-13",
+          4.18
+        ],
+        [
+          "2026-01-14",
+          4.15
+        ],
+        [
+          "2026-01-15",
+          4.17
+        ],
+        [
+          "2026-01-16",
+          4.24
+        ],
+        [
+          "2026-01-20",
+          4.3
+        ],
+        [
+          "2026-01-21",
+          4.26
+        ],
+        [
+          "2026-01-22",
+          4.26
+        ],
+        [
+          "2026-01-23",
+          4.24
+        ],
+        [
+          "2026-01-26",
+          4.22
+        ],
+        [
+          "2026-01-27",
+          4.24
+        ],
+        [
+          "2026-01-28",
+          4.26
+        ],
+        [
+          "2026-01-29",
+          4.24
+        ],
+        [
+          "2026-01-30",
+          4.26
+        ],
+        [
+          "2026-02-02",
+          4.29
+        ],
+        [
+          "2026-02-03",
+          4.28
+        ],
+        [
+          "2026-02-04",
+          4.29
+        ],
+        [
+          "2026-02-05",
+          4.21
+        ],
+        [
+          "2026-02-06",
+          4.22
+        ],
+        [
+          "2026-02-09",
+          4.22
+        ],
+        [
+          "2026-02-10",
+          4.16
+        ],
+        [
+          "2026-02-11",
+          4.18
+        ],
+        [
+          "2026-02-12",
+          4.09
+        ],
+        [
+          "2026-02-13",
+          4.04
+        ],
+        [
+          "2026-02-17",
+          4.05
+        ],
+        [
+          "2026-02-18",
+          4.09
+        ],
+        [
+          "2026-02-19",
+          4.08
+        ],
+        [
+          "2026-02-20",
+          4.08
+        ],
+        [
+          "2026-02-23",
+          4.03
+        ],
+        [
+          "2026-02-24",
+          4.04
+        ],
+        [
+          "2026-02-25",
+          4.05
+        ],
+        [
+          "2026-02-26",
+          4.02
+        ],
+        [
+          "2026-02-27",
+          3.97
+        ],
+        [
+          "2026-03-02",
+          4.05
+        ],
+        [
+          "2026-03-03",
+          4.06
+        ],
+        [
+          "2026-03-04",
+          4.09
+        ],
+        [
+          "2026-03-05",
+          4.13
+        ],
+        [
+          "2026-03-06",
+          4.15
+        ],
+        [
+          "2026-03-09",
+          4.12
+        ],
+        [
+          "2026-03-10",
+          4.15
+        ],
+        [
+          "2026-03-11",
+          4.21
+        ],
+        [
+          "2026-03-12",
+          4.27
+        ],
+        [
+          "2026-03-13",
+          4.28
+        ],
+        [
+          "2026-03-16",
+          4.23
+        ],
+        [
+          "2026-03-17",
+          4.2
+        ],
+        [
+          "2026-03-18",
+          4.26
+        ],
+        [
+          "2026-03-19",
+          4.25
+        ],
+        [
+          "2026-03-20",
+          4.39
+        ],
+        [
+          "2026-03-23",
+          4.34
+        ],
+        [
+          "2026-03-24",
+          4.39
+        ],
+        [
+          "2026-03-25",
+          4.33
+        ],
+        [
+          "2026-03-26",
+          4.42
+        ],
+        [
+          "2026-03-27",
+          4.44
+        ],
+        [
+          "2026-03-30",
+          4.35
+        ],
+        [
+          "2026-03-31",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.33
+        ],
+        [
+          "2026-04-02",
+          4.31
+        ],
+        [
+          "2026-04-03",
+          4.35
+        ],
+        [
+          "2026-04-06",
+          4.34
+        ],
+        [
+          "2026-04-07",
+          4.33
+        ],
+        [
+          "2026-04-08",
+          4.29
+        ],
+        [
+          "2026-04-09",
+          4.29
+        ],
+        [
+          "2026-04-10",
+          4.31
+        ],
+        [
+          "2026-04-13",
+          4.3
+        ],
+        [
+          "2026-04-14",
+          4.26
+        ],
+        [
+          "2026-04-15",
+          4.29
+        ],
+        [
+          "2026-04-16",
+          4.32
+        ],
+        [
+          "2026-04-17",
+          4.26
+        ],
+        [
+          "2026-04-20",
+          4.26
+        ],
+        [
+          "2026-04-21",
+          4.3
+        ],
+        [
+          "2026-04-22",
+          4.3
+        ],
+        [
+          "2026-04-23",
+          4.34
+        ],
+        [
+          "2026-04-24",
+          4.31
+        ],
+        [
+          "2026-04-27",
+          4.35
+        ],
+        [
+          "2026-04-28",
+          4.36
+        ],
+        [
+          "2026-04-29",
+          4.42
+        ],
+        [
+          "2026-04-30",
+          4.4
+        ],
+        [
+          "2026-05-01",
+          4.39
+        ],
+        [
+          "2026-05-04",
+          4.45
+        ],
+        [
+          "2026-05-05",
+          4.43
+        ],
+        [
+          "2026-05-06",
+          4.36
+        ],
+        [
+          "2026-05-07",
+          4.41
+        ],
+        [
+          "2026-05-08",
+          4.38
+        ],
+        [
+          "2026-05-11",
+          4.42
+        ],
+        [
+          "2026-05-12",
+          4.46
+        ],
+        [
+          "2026-05-13",
+          4.46
+        ],
+        [
+          "2026-05-14",
+          4.47
+        ],
+        [
+          "2026-05-15",
+          4.59
+        ],
+        [
+          "2026-05-18",
+          4.61
+        ],
+        [
+          "2026-05-19",
+          4.67
+        ],
+        [
+          "2026-05-20",
+          4.57
+        ],
+        [
+          "2026-05-21",
+          4.57
+        ],
+        [
+          "2026-05-22",
+          4.56
+        ],
+        [
+          "2026-05-26",
+          4.5
+        ],
+        [
+          "2026-05-27",
+          4.48
+        ],
+        [
+          "2026-05-28",
+          4.45
+        ],
+        [
+          "2026-05-29",
+          4.45
+        ],
+        [
+          "2026-06-01",
+          4.47
+        ],
+        [
+          "2026-06-02",
+          4.46
+        ],
+        [
+          "2026-06-03",
+          4.49
+        ],
+        [
+          "2026-06-04",
+          4.47
+        ],
+        [
+          "2026-06-05",
+          4.55
+        ],
+        [
+          "2026-06-08",
+          4.56
+        ],
+        [
+          "2026-06-09",
+          4.53
+        ],
+        [
+          "2026-06-10",
+          4.55
+        ],
+        [
+          "2026-06-11",
+          4.45
+        ],
+        [
+          "2026-06-12",
+          4.48
+        ],
+        [
+          "2026-06-15",
+          4.47
+        ],
+        [
+          "2026-06-16",
+          4.43
+        ],
+        [
+          "2026-06-17",
+          4.49
+        ],
+        [
+          "2026-06-18",
+          4.46
+        ],
+        [
+          "2026-06-22",
+          4.51
+        ],
+        [
+          "2026-06-23",
+          4.5
+        ],
+        [
+          "2026-06-24",
+          4.41
+        ],
+        [
+          "2026-06-25",
+          4.4
+        ],
+        [
+          "2026-06-26",
+          4.38
+        ],
+        [
+          "2026-06-29",
+          4.38
+        ],
+        [
+          "2026-06-30",
+          4.44
+        ],
+        [
+          "2026-07-01",
+          4.48
+        ],
+        [
+          "2026-07-02",
+          4.49
+        ],
+        [
+          "2026-07-06",
+          4.48
+        ],
+        [
+          "2026-07-07",
+          4.55
+        ],
+        [
+          "2026-07-08",
+          4.56
+        ],
+        [
+          "2026-07-09",
+          4.54
+        ],
+        [
+          "2026-07-10",
+          4.56
+        ],
+        [
+          "2026-07-13",
+          4.62
+        ],
+        [
+          "2026-07-14",
+          4.58
+        ],
+        [
+          "2026-07-15",
+          4.55
+        ],
+        [
+          "2026-07-16",
+          4.57
+        ],
+        [
+          "2026-07-17",
+          4.55
+        ],
+        [
+          "2026-07-20",
+          4.6
+        ],
+        [
+          "2026-07-21",
+          4.63
+        ],
+        [
+          "2026-07-22",
+          4.67
+        ],
+        [
+          "2026-07-23",
+          4.71
+        ],
+        [
+          "2026-07-24",
+          4.69
+        ],
+        [
+          "2026-07-27",
+          4.65
+        ],
+        [
+          "2026-07-28",
+          4.61
+        ],
+        [
+          "2026-07-29",
+          4.67
+        ],
+        [
+          "2026-07-30",
+          4.68
+        ],
+        [
+          "2026-07-31",
+          4.75
+        ],
+        [
+          "2026-08-03",
+          4.7
+        ],
+        [
+          "2026-08-04",
+          4.63
+        ],
+        [
+          "2026-08-05",
+          4.63
+        ],
+        [
+          "2026-08-06",
+          4.69
+        ],
+        [
+          "2026-08-07",
+          4.65
+        ],
+        [
+          "2026-08-10",
+          4.72
+        ],
+        [
+          "2026-08-11",
+          4.7
+        ],
+        [
+          "2026-08-12",
+          4.68
+        ],
+        [
+          "2026-08-13",
+          4.63
+        ],
+        [
+          "2026-08-14",
+          4.68
+        ],
+        [
+          "2026-08-17",
+          4.72
+        ],
+        [
+          "2026-08-18",
+          4.71
+        ],
+        [
+          "2026-08-19",
+          4.65
+        ],
+        [
+          "2026-08-20",
+          4.69
+        ],
+        [
+          "2026-08-21",
+          4.74
+        ],
+        [
+          "2026-08-24",
+          4.7
+        ],
+        [
+          "2026-08-25",
+          4.64
+        ],
+        [
+          "2026-08-26",
+          4.66
+        ],
+        [
+          "2026-08-27",
+          4.67
+        ],
+        [
+          "2026-08-28",
+          4.73
+        ],
+        [
+          "2026-08-31",
+          4.75
+        ],
+        [
+          "2026-09-01",
+          4.79
+        ],
+        [
+          "2026-09-02",
+          4.79
+        ],
+        [
+          "2026-09-03",
+          4.77
+        ],
+        [
+          "2026-09-04",
+          4.78
+        ],
+        [
+          "2026-09-08",
+          4.8
+        ],
+        [
+          "2026-09-09",
+          4.83
+        ],
+        [
+          "2026-09-10",
+          4.95
+        ],
+        [
+          "2026-09-11",
+          4.96
+        ],
+        [
+          "2026-09-14",
+          4.97
+        ],
+        [
+          "2026-09-15",
+          5.0
+        ],
+        [
+          "2026-09-16",
+          5.01
+        ],
+        [
+          "2026-09-17",
+          4.94
+        ],
+        [
+          "2026-09-18",
+          5.01
+        ],
+        [
+          "2026-09-21",
+          4.96
+        ],
+        [
+          "2026-09-22",
+          4.96
+        ],
+        [
+          "2026-09-23",
+          5.11
+        ],
+        [
+          "2026-09-24",
+          5.18
+        ],
+        [
+          "2026-09-25",
+          5.17
+        ],
+        [
+          "2026-09-28",
+          5.24
+        ],
+        [
+          "2026-09-29",
+          5.26
+        ],
+        [
+          "2026-09-30",
+          5.29
+        ],
+        [
+          "2026-10-01",
+          5.24
+        ],
+        [
+          "2026-10-02",
+          5.28
+        ],
+        [
+          "2026-10-05",
+          5.31
+        ],
+        [
+          "2026-10-06",
+          5.27
+        ],
+        [
+          "2026-10-07",
+          5.28
+        ],
+        [
+          "2026-10-08",
+          5.22
+        ],
+        [
+          "2026-10-09",
+          5.24
+        ],
+        [
+          "2026-10-13",
+          5.21
+        ],
+        [
+          "2026-10-14",
+          5.19
+        ],
+        [
+          "2026-10-15",
+          5.1
+        ]
+      ]
+    },
+    {
+      "title": "FRED: 30-Year Fixed Rate Mortgage Average (MORTGAGE30US)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "MORTGAGE30US",
+      "frequency": "weekly",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "rates",
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/MORTGAGE30US",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-08-28",
+          6.56
+        ],
+        [
+          "2025-09-04",
+          6.5
+        ],
+        [
+          "2025-09-11",
+          6.35
+        ],
+        [
+          "2025-09-18",
+          6.26
+        ],
+        [
+          "2025-09-25",
+          6.3
+        ],
+        [
+          "2025-10-02",
+          6.34
+        ],
+        [
+          "2025-10-09",
+          6.3
+        ],
+        [
+          "2025-10-16",
+          6.27
+        ],
+        [
+          "2025-10-23",
+          6.19
+        ],
+        [
+          "2025-10-30",
+          6.17
+        ],
+        [
+          "2025-11-06",
+          6.22
+        ],
+        [
+          "2025-11-13",
+          6.24
+        ],
+        [
+          "2025-11-20",
+          6.26
+        ],
+        [
+          "2025-11-26",
+          6.23
+        ],
+        [
+          "2025-12-04",
+          6.19
+        ],
+        [
+          "2025-12-11",
+          6.22
+        ],
+        [
+          "2025-12-18",
+          6.21
+        ],
+        [
+          "2025-12-24",
+          6.18
+        ],
+        [
+          "2025-12-31",
+          6.15
+        ],
+        [
+          "2026-01-08",
+          6.16
+        ],
+        [
+          "2026-01-15",
+          6.06
+        ],
+        [
+          "2026-01-22",
+          6.09
+        ],
+        [
+          "2026-01-29",
+          6.1
+        ],
+        [
+          "2026-02-05",
+          6.11
+        ],
+        [
+          "2026-02-12",
+          6.09
+        ],
+        [
+          "2026-02-19",
+          6.01
+        ],
+        [
+          "2026-02-26",
+          5.98
+        ],
+        [
+          "2026-03-05",
+          6.0
+        ],
+        [
+          "2026-03-12",
+          6.11
+        ],
+        [
+          "2026-03-19",
+          6.22
+        ],
+        [
+          "2026-03-26",
+          6.38
+        ],
+        [
+          "2026-04-02",
+          6.46
+        ],
+        [
+          "2026-04-09",
+          6.37
+        ],
+        [
+          "2026-04-16",
+          6.3
+        ],
+        [
+          "2026-04-23",
+          6.23
+        ],
+        [
+          "2026-04-30",
+          6.3
+        ],
+        [
+          "2026-05-07",
+          6.37
+        ],
+        [
+          "2026-05-14",
+          6.36
+        ],
+        [
+          "2026-05-21",
+          6.51
+        ],
+        [
+          "2026-05-28",
+          6.53
+        ],
+        [
+          "2026-06-04",
+          6.48
+        ],
+        [
+          "2026-06-11",
+          6.52
+        ],
+        [
+          "2026-06-18",
+          6.47
+        ],
+        [
+          "2026-06-25",
+          6.49
+        ],
+        [
+          "2026-07-02",
+          6.43
+        ],
+        [
+          "2026-07-09",
+          6.49
+        ],
+        [
+          "2026-07-16",
+          6.55
+        ],
+        [
+          "2026-07-23",
+          6.58
+        ],
+        [
+          "2026-07-30",
+          6.66
+        ],
+        [
+          "2026-08-06",
+          6.69
+        ],
+        [
+          "2026-08-13",
+          6.67
+        ],
+        [
+          "2026-08-20",
+          6.65
+        ],
+        [
+          "2026-08-27",
+          6.66
+        ],
+        [
+          "2026-09-03",
+          6.71
+        ],
+        [
+          "2026-09-10",
+          6.76
+        ],
+        [
+          "2026-09-17",
+          6.95
+        ],
+        [
+          "2026-09-24",
+          7.03
+        ],
+        [
+          "2026-10-01",
+          7.28
+        ],
+        [
+          "2026-10-08",
+          7.4
+        ],
+        [
+          "2026-10-15",
+          7.4
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Effective Federal Funds Rate (FEDFUNDS)",
+      "type": "line",
+      "x": [
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-10-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        5.33,
+        5.33,
+        5.33,
+        5.33,
+        5.33,
+        5.13,
+        4.83,
+        4.64,
+        4.48,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.22,
+        4.09,
+        3.88,
+        3.72,
+        3.64,
+        3.64,
+        3.64,
+        3.64,
+        3.63,
+        3.63,
+        3.63,
+        3.63,
+        3.75
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "10-Year Treasury Constant Maturity Yield (DGS10)",
+      "type": "line",
+      "x": [
+        "2025-10-03",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        4.13,
+        4.18,
+        4.14,
+        4.13,
+        4.14,
+        4.05,
+        4.03,
+        4.05,
+        3.99,
+        4.02,
+        4.0,
+        3.98,
+        3.97,
+        4.01,
+        4.02,
+        4.01,
+        3.99,
+        4.08,
+        4.11,
+        4.11,
+        4.13,
+        4.1,
+        4.17,
+        4.11,
+        4.11,
+        4.13,
+        4.08,
+        4.11,
+        4.14,
+        4.13,
+        4.12,
+        4.13,
+        4.1,
+        4.06,
+        4.04,
+        4.01,
+        4.0,
+        4.02,
+        4.09,
+        4.09,
+        4.06,
+        4.11,
+        4.14,
+        4.17,
+        4.18,
+        4.13,
+        4.14,
+        4.19,
+        4.18,
+        4.15,
+        4.16,
+        4.12,
+        4.16,
+        4.17,
+        4.18,
+        4.15,
+        4.14,
+        4.12,
+        4.14,
+        4.18,
+        4.19,
+        4.17,
+        4.18,
+        4.15,
+        4.19,
+        4.18,
+        4.19,
+        4.18,
+        4.15,
+        4.17,
+        4.24,
+        4.3,
+        4.26,
+        4.26,
+        4.24,
+        4.22,
+        4.24,
+        4.26,
+        4.24,
+        4.26,
+        4.29,
+        4.28,
+        4.29,
+        4.21,
+        4.22,
+        4.22,
+        4.16,
+        4.18,
+        4.09,
+        4.04,
+        4.05,
+        4.09,
+        4.08,
+        4.08,
+        4.03,
+        4.04,
+        4.05,
+        4.02,
+        3.97,
+        4.05,
+        4.06,
+        4.09,
+        4.13,
+        4.15,
+        4.12,
+        4.15,
+        4.21,
+        4.27,
+        4.28,
+        4.23,
+        4.2,
+        4.26,
+        4.25,
+        4.39,
+        4.34,
+        4.39,
+        4.33,
+        4.42,
+        4.44,
+        4.35,
+        4.3,
+        4.33,
+        4.31,
+        4.35,
+        4.34,
+        4.33,
+        4.29,
+        4.29,
+        4.31,
+        4.3,
+        4.26,
+        4.29,
+        4.32,
+        4.26,
+        4.26,
+        4.3,
+        4.3,
+        4.34,
+        4.31,
+        4.35,
+        4.36,
+        4.42,
+        4.4,
+        4.39,
+        4.45,
+        4.43,
+        4.36,
+        4.41,
+        4.38,
+        4.42,
+        4.46,
+        4.46,
+        4.47,
+        4.59,
+        4.61,
+        4.67,
+        4.57,
+        4.57,
+        4.56,
+        4.5,
+        4.48,
+        4.45,
+        4.45,
+        4.47,
+        4.46,
+        4.49,
+        4.47,
+        4.55,
+        4.56,
+        4.53,
+        4.55,
+        4.45,
+        4.48,
+        4.47,
+        4.43,
+        4.49,
+        4.46,
+        4.51,
+        4.5,
+        4.41,
+        4.4,
+        4.38,
+        4.38,
+        4.44,
+        4.48,
+        4.49,
+        4.48,
+        4.55,
+        4.56,
+        4.54,
+        4.56,
+        4.62,
+        4.58,
+        4.55,
+        4.57,
+        4.55,
+        4.6,
+        4.63,
+        4.67,
+        4.71,
+        4.69,
+        4.65,
+        4.61,
+        4.67,
+        4.68,
+        4.75,
+        4.7,
+        4.63,
+        4.63,
+        4.69,
+        4.65,
+        4.72,
+        4.7,
+        4.68,
+        4.63,
+        4.68,
+        4.72,
+        4.71,
+        4.65,
+        4.69,
+        4.74,
+        4.7,
+        4.64,
+        4.66,
+        4.67,
+        4.73,
+        4.75,
+        4.79,
+        4.79,
+        4.77,
+        4.78,
+        4.8,
+        4.83,
+        4.95,
+        4.96,
+        4.97,
+        5.0,
+        5.01,
+        4.94,
+        5.01,
+        4.96,
+        4.96,
+        5.11,
+        5.18,
+        5.17,
+        5.24,
+        5.26,
+        5.29,
+        5.24,
+        5.28,
+        5.31,
+        5.27,
+        5.28,
+        5.22,
+        5.24,
+        5.21,
+        5.19,
+        5.1
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "30-Year Fixed Rate Mortgage Average (MORTGAGE30US)",
+      "type": "line",
+      "x": [
+        "2025-08-28",
+        "2025-09-04",
+        "2025-09-11",
+        "2025-09-18",
+        "2025-09-25",
+        "2025-10-02",
+        "2025-10-09",
+        "2025-10-16",
+        "2025-10-23",
+        "2025-10-30",
+        "2025-11-06",
+        "2025-11-13",
+        "2025-11-20",
+        "2025-11-26",
+        "2025-12-04",
+        "2025-12-11",
+        "2025-12-18",
+        "2025-12-24",
+        "2025-12-31",
+        "2026-01-08",
+        "2026-01-15",
+        "2026-01-22",
+        "2026-01-29",
+        "2026-02-05",
+        "2026-02-12",
+        "2026-02-19",
+        "2026-02-26",
+        "2026-03-05",
+        "2026-03-12",
+        "2026-03-19",
+        "2026-03-26",
+        "2026-04-02",
+        "2026-04-09",
+        "2026-04-16",
+        "2026-04-23",
+        "2026-04-30",
+        "2026-05-07",
+        "2026-05-14",
+        "2026-05-21",
+        "2026-05-28",
+        "2026-06-04",
+        "2026-06-11",
+        "2026-06-18",
+        "2026-06-25",
+        "2026-07-02",
+        "2026-07-09",
+        "2026-07-16",
+        "2026-07-23",
+        "2026-07-30",
+        "2026-08-06",
+        "2026-08-13",
+        "2026-08-20",
+        "2026-08-27",
+        "2026-09-03",
+        "2026-09-10",
+        "2026-09-17",
+        "2026-09-24",
+        "2026-10-01",
+        "2026-10-08",
+        "2026-10-15"
+      ],
+      "y": [
+        6.56,
+        6.5,
+        6.35,
+        6.26,
+        6.3,
+        6.34,
+        6.3,
+        6.27,
+        6.19,
+        6.17,
+        6.22,
+        6.24,
+        6.26,
+        6.23,
+        6.19,
+        6.22,
+        6.21,
+        6.18,
+        6.15,
+        6.16,
+        6.06,
+        6.09,
+        6.1,
+        6.11,
+        6.09,
+        6.01,
+        5.98,
+        6.0,
+        6.11,
+        6.22,
+        6.38,
+        6.46,
+        6.37,
+        6.3,
+        6.23,
+        6.3,
+        6.37,
+        6.36,
+        6.51,
+        6.53,
+        6.48,
+        6.52,
+        6.47,
+        6.49,
+        6.43,
+        6.49,
+        6.55,
+        6.58,
+        6.66,
+        6.69,
+        6.67,
+        6.65,
+        6.66,
+        6.71,
+        6.76,
+        6.95,
+        7.03,
+        7.28,
+        7.4,
+        7.4
+      ],
+      "y_label": "Percent"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "FEDFUNDS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "DGS10",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "MORTGAGE30US",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "validation": {
+    "counts": {
+      "figures": 38,
+      "verified": 7,
+      "derived": 20,
+      "unverified": 11
+    },
+    "figures": [
+      {
+        "text": "18 Oct 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 151,
+        "end": 162,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "*Prepared for B17 Institutional Research – 18 Oct 2026*"
+      },
+      {
+        "text": "47 bp",
+        "value": 47.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 221,
+        "end": 226,
+        "status": "derived",
+        "matched": "FEDFUNDS change 2025-09-01 to 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "4.22 %",
+        "value": 4.22,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 232,
+        "end": 238,
+        "status": "verified",
+        "matched": "DGS10 on 2026-02-09",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "09",
+        "value": 9.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 245,
+        "end": 247,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "01",
+        "value": 1.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 248,
+        "end": 250,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "3.75 %",
+        "value": 3.75,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 255,
+        "end": 261,
+        "status": "verified",
+        "matched": "FEDFUNDS on 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "09",
+        "value": 9.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 268,
+        "end": 270,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "01",
+        "value": 1.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 271,
+        "end": 273,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1]."
+      },
+      {
+        "text": "1.05 pp",
+        "value": 1.05,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 311,
+        "end": 318,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2]."
+      },
+      {
+        "text": "5.10 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 322,
+        "end": 328,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 335,
+        "end": 337,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 338,
+        "end": 340,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- 10‑yr Treasury yield rose 1.05 pp to 5.10 % (2026‑10‑15) [S2]."
+      },
+      {
+        "text": "1.13 pp",
+        "value": 1.13,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 394,
+        "end": 401,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2025-10-16 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3]."
+      },
+      {
+        "text": "7.40 %",
+        "value": 7.4,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 405,
+        "end": 411,
+        "status": "verified",
+        "matched": "MORTGAGE30US on 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 418,
+        "end": 420,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 421,
+        "end": 423,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- 30‑yr fixed‑rate mortgage average climbed 1.13 pp to 7.40 % (2026‑10‑15) [S3]."
+      },
+      {
+        "text": "–1.35 pp",
+        "value": 1.35,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 463,
+        "end": 471,
+        "status": "derived",
+        "matched": "FEDFUNDS minus DGS10 (latest: 2026-09-01, 2026-10-15)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3]."
+      },
+      {
+        "text": "–3.65 pp",
+        "value": 3.65,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 496,
+        "end": 504,
+        "status": "derived",
+        "matched": "FEDFUNDS minus MORTGAGE30US (latest: 2026-09-01, 2026-10-15)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1",
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3]."
+      },
+      {
+        "text": "–2.30 pp",
+        "value": 2.3,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 531,
+        "end": 539,
+        "status": "derived",
+        "matched": "DGS10 minus MORTGAGE30US (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2",
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3]."
+      },
+      {
+        "text": "47 bp",
+        "value": 47.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 828,
+        "end": 833,
+        "status": "derived",
+        "matched": "FEDFUNDS change 2025-09-01 to 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure."
+      },
+      {
+        "text": "25 bp",
+        "value": 25.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2323,
+        "end": 2328,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |"
+      },
+      {
+        "text": "4",
+        "value": 4.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2351,
+        "end": 2352,
+        "status": "verified",
+        "matched": "DGS10 on 2025-11-26",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |"
+      },
+      {
+        "text": "1 %",
+        "value": 1.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2365,
+        "end": 2368,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-04-16 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |"
+      },
+      {
+        "text": "0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2390,
+        "end": 2396,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-09-17 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |"
+      },
+      {
+        "text": "0.4 pp",
+        "value": 0.4,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2419,
+        "end": 2425,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-09-17 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | 25 bp cuts each quarter for 4 qtrs (total 1 %) | 10‑yr yield falls 0.5 pp | Mortgage rate falls 0.4 pp | (assumption) |"
+      },
+      {
+        "text": "50 bp",
+        "value": 50.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2458,
+        "end": 2463,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |"
+      },
+      {
+        "text": "4",
+        "value": 4.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2486,
+        "end": 2487,
+        "status": "verified",
+        "matched": "DGS10 on 2025-11-26",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |"
+      },
+      {
+        "text": "2 %",
+        "value": 2.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2500,
+        "end": 2503,
+        "status": "derived",
+        "matched": "DGS10 minus MORTGAGE30US (latest: 2026-10-15, 2026-10-15)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2",
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |"
+      },
+      {
+        "text": "1.0 pp",
+        "value": 1.0,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2525,
+        "end": 2531,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |"
+      },
+      {
+        "text": "0.8 pp",
+        "value": 0.8,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2554,
+        "end": 2560,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-07-16 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | 50 bp cuts each quarter for 4 qtrs (total 2 %) | 10‑yr yield falls 1.0 pp | Mortgage rate falls 0.8 pp | (assumption) |"
+      },
+      {
+        "text": "25 bp",
+        "value": 25.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2595,
+        "end": 2600,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |"
+      },
+      {
+        "text": "4",
+        "value": 4.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2623,
+        "end": 2624,
+        "status": "verified",
+        "matched": "DGS10 on 2025-11-26",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |"
+      },
+      {
+        "text": "0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2655,
+        "end": 2661,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-09-17 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |"
+      },
+      {
+        "text": "0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2682,
+        "end": 2688,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2026-09-17 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |"
+      },
+      {
+        "text": "0.3 pp",
+        "value": 0.3,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2711,
+        "end": 2717,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Downside** | 25 bp cuts each quarter for 4 qtrs, but risk‑premium widens 0.5 pp | 10‑yr yield rises 0.5 pp | Mortgage rate rises 0.3 pp | (assumption) |"
+      },
+      {
+        "text": "47 bp",
+        "value": 47.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 4096,
+        "end": 4101,
+        "status": "derived",
+        "matched": "FEDFUNDS change 2025-09-01 to 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations."
+      },
+      {
+        "text": "1.05 pp",
+        "value": 1.05,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 4133,
+        "end": 4140,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations."
+      },
+      {
+        "text": "1.13 pp",
+        "value": 1.13,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 4171,
+        "end": 4178,
+        "status": "derived",
+        "matched": "MORTGAGE30US change 2025-10-16 to 2026-10-15",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mortgage rates have risen 1.13 pp, driven by heightened risk‑premia and inflation expectations."
+      }
+    ],
+    "citations": {
+      "markers": 7,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "- Fed‑10‑yr spread widened to –1.35 pp; Fed‑mortgage spread to –3.65 pp; 10‑yr‑mortgage spread to –2.30 pp [S1‑S3].",
+          "figures": [
+            "–1.35 pp",
+            "–3.65 pp",
+            "–2.30 pp"
+          ],
+          "sources": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        },
+        {
+          "text": "- **Fed policy**: The 47 bp cut reflects a shift toward accommodative policy, but short‑term rates are only one component of the term structure.",
+          "figures": [
+            "47 bp"
+          ],
+          "sources": [
+            "S1"
+          ]
+        },
+        {
+          "text": "| Scenario | Fed Cut Path | 10‑yr Yield Impact | Mortgage Rate Impact | Assumption |\n|----------|--------------|--------------------|----------------------|------------|\n| **Base** | 25 bp cuts each q",
+          "figures": [
+            "4",
+            "1 %",
+            "0.5 pp",
+            "0.4 pp",
+            "4",
+            "2 %",
+            "1.0 pp",
+            "0.8 pp",
+            "4",
+            "0.5 pp",
+            "0.5 pp"
+          ],
+          "sources": [
+            "S2",
+            "S3"
+          ]
+        },
+        {
+          "text": "A Fed rate‑cut cycle does **not** automatically translate into lower 10‑year Treasury yields or mortgage rates. Current data show that, even after a 47 bp cut, the 10‑yr yield has risen 1.05 pp and mo",
+          "figures": [
+            "47 bp",
+            "1.05 pp",
+            "1.13 pp"
+          ],
+          "sources": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      ],
+      "source_mismatches": [
+        {
+          "text": "- Fed funds rate fell 47 bp from 4.22 % (2025‑09‑01) to 3.75 % (2026‑09‑01) [S1].",
+          "figures": [
+            "4.22 %",
+            "01",
+            "01"
+          ],
+          "cited": [
+            "S1"
+          ],
+          "sources": [
+            "S1",
+            "S2"
+          ]
+        }
+      ]
+    },
+    "freshness": [
+      {
+        "table": "FRED: Effective Federal Funds Rate (FEDFUNDS)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: 30-Year Fixed Rate Mortgage Average (MORTGAGE30US)",
+        "last_date": "2026-10-15",
+        "frequency": "weekly",
+        "age_days": 3,
+        "max_age_days": 14,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ],
+    "open_issues": 12,
+    "summary": "27 of 38 figures verified against source data (7 exact, 20 derived); 11 flagged (4 labelled as assumptions). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
+  },
+  "run_meta": {
+    "run_id": "20261018-105058-632e10",
+    "timestamp": "2026-10-18T14:50:58+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}
