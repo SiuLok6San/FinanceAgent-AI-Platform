@@ -173,21 +173,22 @@ def _snapshot_table(title: str, df: pd.DataFrame, ticker: str, url: str,
 
 
 def _field_table(data: Dict[str, Any], fields: Dict[str, Any]) -> pd.DataFrame:
-    """Long-format (field, value) table for the configured fields that are present.
+    """Long-format (field, value, unit, id) table for the configured fields that are present.
 
-    A field spec is either a label or [label, scale]; numbers are multiplied by
-    scale so the table holds plain units (e.g. market cap in USD, not USD millions).
+    Each field spec has a label, a fact id and a unit (config/data_sources.toml);
+    numbers are multiplied by the optional scale so the table holds plain units
+    (e.g. market cap in USD, not USD millions).
     """
     rows = []
     for key, spec in fields.items():
-        label, scale = (spec, 1) if isinstance(spec, str) else spec
         value = data.get(key)
         if value in (None, ""):
             continue
-        if isinstance(value, (int, float)) and scale != 1:
+        scale = spec.get("scale", 1)
+        if isinstance(value, (int, float)) and not isinstance(value, bool) and scale != 1:
             value = value * scale
-        rows.append({"field": label, "value": value})
-    return pd.DataFrame(rows, columns=["field", "value"])
+        rows.append({"field": spec["label"], "value": value, "unit": spec["unit"], "id": spec["id"]})
+    return pd.DataFrame(rows, columns=["field", "value", "unit", "id"])
 
 
 def _source(title: str, url: str, snippet: str = "") -> Dict[str, Any]:

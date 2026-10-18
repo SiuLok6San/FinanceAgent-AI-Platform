@@ -4,21 +4,37 @@
 http_timeout_sec = 25   # env: HTTP_TIMEOUT
 
 # ---------------------------------------------------------------------------
-# FRED: series are picked by keywords in the question (same whole-word
-# matching as routing). At most max_series are fetched, in the order below.
+# FRED: the Planner picks series from this catalog; if it cannot, they are
+# picked by keywords in the question (same whole-word matching as routing).
+# At most max_series are fetched.
+#
+# Per series: alias (prefix of its fact IDs, e.g. HY_OAS.latest),
+# change_unit ("bp" | "pp" for rates and spreads, "pct" for % changes of a
+# level, "pts" for index points plus % changes) and level_format
+# ("percent" | "index" | "usd" | "bn_usd").
 # ---------------------------------------------------------------------------
 [fred]
-max_series = 5
+max_series = 6
 
-# Observations fetched per series: enough history for 1-year changes.
+# Observations fetched per series: long enough to say where today's value
+# sits in its own history (min / max / average / percentile).
 [fred.observations]
-daily = 270
-weekly = 60
-monthly = 30
-quarterly = 24
+daily = 1300      # ~5 years of trading days
+weekly = 262      # ~5 years
+monthly = 121     # ~10 years
+quarterly = 41    # ~10 years
+
+[fred.history_label]
+daily = "5y"
+weekly = "5y"
+monthly = "10y"
+quarterly = "10y"
 
 [[fred.series]]
 id = "FEDFUNDS"
+alias = "FEDFUNDS"
+change_unit = "bp"
+level_format = "percent"
 title = "Effective Federal Funds Rate"
 units = "Percent"
 frequency = "monthly"
@@ -27,6 +43,9 @@ keywords = ["fed funds", "federal funds", "policy rate", "fed rate", "rate cut",
 
 [[fred.series]]
 id = "T10Y2Y"
+alias = "CURVE_10Y2Y"
+change_unit = "bp"
+level_format = "percent"
 title = "10-Year Treasury Minus 2-Year Treasury"
 units = "Percent"
 frequency = "daily"
@@ -35,6 +54,9 @@ keywords = ["yield curve", "curve", "inversion", "inverted", "10s2s", "2s10s"]
 
 [[fred.series]]
 id = "DGS10"
+alias = "UST10Y"
+change_unit = "bp"
+level_format = "percent"
 title = "10-Year Treasury Constant Maturity Yield"
 units = "Percent"
 frequency = "daily"
@@ -43,6 +65,9 @@ keywords = ["10 year", "treasury", "treasuries", "yield curve", "bond yield", "d
 
 [[fred.series]]
 id = "DGS2"
+alias = "UST2Y"
+change_unit = "bp"
+level_format = "percent"
 title = "2-Year Treasury Constant Maturity Yield"
 units = "Percent"
 frequency = "daily"
@@ -51,6 +76,9 @@ keywords = ["2 year", "yield curve", "short end"]
 
 [[fred.series]]
 id = "MORTGAGE30US"
+alias = "MORTGAGE30"
+change_unit = "bp"
+level_format = "percent"
 title = "30-Year Fixed Rate Mortgage Average"
 units = "Percent"
 frequency = "weekly"
@@ -59,6 +87,9 @@ keywords = ["mortgage", "housing"]
 
 [[fred.series]]
 id = "BAMLH0A0HYM2"
+alias = "HY_OAS"
+change_unit = "bp"
+level_format = "percent"
 title = "ICE BofA US High Yield Option-Adjusted Spread"
 units = "Percent"
 frequency = "daily"
@@ -67,6 +98,9 @@ keywords = ["high yield", "hy", "junk bond", "credit spread", "spread", "default
 
 [[fred.series]]
 id = "BAMLC0A0CM"
+alias = "IG_OAS"
+change_unit = "bp"
+level_format = "percent"
 title = "ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread"
 units = "Percent"
 frequency = "daily"
@@ -75,6 +109,9 @@ keywords = ["investment grade", "ig", "corporate bond", "credit spread", "spread
 
 [[fred.series]]
 id = "CPIAUCSL"
+alias = "CPI"
+change_unit = "pct"
+level_format = "index"
 title = "CPI for All Urban Consumers (All Items)"
 units = "Index 1982-1984=100"
 frequency = "monthly"
@@ -83,6 +120,9 @@ keywords = ["inflation", "cpi", "disinflation"]
 
 [[fred.series]]
 id = "PCEPI"
+alias = "PCE"
+change_unit = "pct"
+level_format = "index"
 title = "PCE Price Index"
 units = "Index 2017=100"
 frequency = "monthly"
@@ -91,6 +131,9 @@ keywords = ["pce", "core pce"]
 
 [[fred.series]]
 id = "UNRATE"
+alias = "UNRATE"
+change_unit = "pp"
+level_format = "percent"
 title = "Unemployment Rate"
 units = "Percent"
 frequency = "monthly"
@@ -99,6 +142,9 @@ keywords = ["unemployment", "jobless", "labor market", "labor", "employment", "p
 
 [[fred.series]]
 id = "SAHMREALTIME"
+alias = "SAHM"
+change_unit = "pp"
+level_format = "percent"
 title = "Real-time Sahm Rule Recession Indicator"
 units = "Percentage Points"
 frequency = "monthly"
@@ -107,6 +153,9 @@ keywords = ["recession", "hard landing", "soft landing"]
 
 [[fred.series]]
 id = "GDPC1"
+alias = "GDP"
+change_unit = "pct"
+level_format = "bn_usd"
 title = "Real Gross Domestic Product"
 units = "Billions of Chained 2017 Dollars"
 frequency = "quarterly"
@@ -115,6 +164,9 @@ keywords = ["gdp", "growth", "economy", "recession", "soft landing", "hard landi
 
 [[fred.series]]
 id = "SP500"
+alias = "SP500"
+change_unit = "pct"
+level_format = "index"
 title = "S&P 500 Index"
 units = "Index"
 frequency = "daily"
@@ -123,6 +175,9 @@ keywords = ["s&p 500", "stock market", "equity market", "equity portfolio", "dra
 
 [[fred.series]]
 id = "VIXCLS"
+alias = "VIX"
+change_unit = "pts"
+level_format = "index"
 title = "CBOE Volatility Index (VIX)"
 units = "Index"
 frequency = "daily"
@@ -131,6 +186,9 @@ keywords = ["vix", "volatility", "hedge", "hedging", "drawdown", "risk parity"]
 
 [[fred.series]]
 id = "DCOILWTICO"
+alias = "WTI"
+change_unit = "pct"
+level_format = "usd"
 title = "Crude Oil Prices: West Texas Intermediate (WTI)"
 units = "Dollars per Barrel"
 frequency = "daily"
@@ -145,43 +203,54 @@ news_days_back = 30
 news_max_items = 6
 recommendation_periods = 4
 
-# /quote fields -> label (units are the stock's trading currency)
+# Field specs: label (shown in tables), id (fact ID suffix, e.g. JPM.pe_ttm),
+# unit ("usd" | "pct" | "x" | "ratio" | "count" | "text" | "date") and an
+# optional scale that converts the API value to plain units.
+
+# /quote
 [finnhub.quote_fields]
-c = "Current price"
-d = "Change"
-dp = "Percent change (%)"
-o = "Open"
-h = "Day high"
-l = "Day low"
-pc = "Previous close"
+c = { label = "Current price", id = "price", unit = "usd" }
+d = { label = "Change", id = "change", unit = "usd" }
+dp = { label = "Percent change (%)", id = "change_pct", unit = "pct" }
+o = { label = "Open", id = "open", unit = "usd" }
+h = { label = "Day high", id = "day_high", unit = "usd" }
+l = { label = "Day low", id = "day_low", unit = "usd" }
+pc = { label = "Previous close", id = "prev_close", unit = "usd" }
 
-# /stock/profile2 fields -> [label, scale]; values are multiplied by scale
-# so tables hold plain units
+# /stock/profile2
 [finnhub.profile_fields]
-name = ["Company", 1]
-exchange = ["Exchange", 1]
-finnhubIndustry = ["Industry", 1]
-country = ["Country", 1]
-currency = ["Currency", 1]
-ipo = ["IPO date", 1]
-marketCapitalization = ["Market capitalization (USD)", 1e6]   # API reports USD millions
-shareOutstanding = ["Shares outstanding", 1e6]               # API reports millions
+name = { label = "Company", id = "name", unit = "text" }
+exchange = { label = "Exchange", id = "exchange", unit = "text" }
+finnhubIndustry = { label = "Industry", id = "industry", unit = "text" }
+country = { label = "Country", id = "country", unit = "text" }
+currency = { label = "Currency", id = "currency", unit = "text" }
+ipo = { label = "IPO date", id = "ipo_date", unit = "date" }
+marketCapitalization = { label = "Market capitalization (USD)", id = "market_cap", unit = "usd", scale = 1e6 }  # API: USD millions
+shareOutstanding = { label = "Shares outstanding", id = "shares_out", unit = "count", scale = 1e6 }          # API: millions
 
-# /stock/metric?metric=all keys -> [label, scale]
+# /stock/metric?metric=all
 [finnhub.metric_fields]
-peTTM = ["P/E (TTM)", 1]
-pbQuarterly = ["P/B (quarterly)", 1]
-psTTM = ["P/S (TTM)", 1]
-epsTTM = ["EPS (TTM)", 1]
-epsGrowthTTMYoy = ["EPS growth TTM YoY (%)", 1]
-revenueGrowthTTMYoy = ["Revenue growth TTM YoY (%)", 1]
-roeTTM = ["ROE TTM (%)", 1]
-netProfitMarginTTM = ["Net profit margin TTM (%)", 1]
-dividendYieldIndicatedAnnual = ["Dividend yield, indicated annual (%)", 1]
-beta = ["Beta", 1]
-"52WeekHigh" = ["52-week high", 1]
-"52WeekLow" = ["52-week low", 1]
-"52WeekPriceReturnDaily" = ["52-week price return (%)", 1]
+peTTM = { label = "P/E (TTM)", id = "pe_ttm", unit = "x" }
+pbQuarterly = { label = "P/B (quarterly)", id = "pb", unit = "x" }
+psTTM = { label = "P/S (TTM)", id = "ps_ttm", unit = "x" }
+epsTTM = { label = "EPS (TTM)", id = "eps_ttm", unit = "usd" }
+epsGrowthTTMYoy = { label = "EPS growth TTM YoY (%)", id = "eps_growth_yoy", unit = "pct" }
+revenueGrowthTTMYoy = { label = "Revenue growth TTM YoY (%)", id = "revenue_growth_yoy", unit = "pct" }
+roeTTM = { label = "ROE TTM (%)", id = "roe", unit = "pct" }
+netProfitMarginTTM = { label = "Net profit margin TTM (%)", id = "net_margin", unit = "pct" }
+dividendYieldIndicatedAnnual = { label = "Dividend yield, indicated annual (%)", id = "div_yield", unit = "pct" }
+beta = { label = "Beta", id = "beta", unit = "ratio" }
+"52WeekHigh" = { label = "52-week high", id = "high_52w", unit = "usd" }
+"52WeekLow" = { label = "52-week low", id = "low_52w", unit = "usd" }
+"52WeekPriceReturnDaily" = { label = "52-week price return (%)", id = "return_52w", unit = "pct" }
+
+# /stock/recommendation (latest period): column -> fact id
+[finnhub.recommendation_ids]
+strongBuy = "rec_strong_buy"
+buy = "rec_buy"
+hold = "rec_hold"
+sell = "rec_sell"
+strongSell = "rec_strong_sell"
 
 # ---------------------------------------------------------------------------
 # Tavily web search
