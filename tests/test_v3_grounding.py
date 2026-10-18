@@ -73,7 +73,24 @@ def test_placeholder_figures_are_grounded_exactly_and_typed_numbers_are_issues()
     assert res["open_issues"] == 2
     assert "2 figure(s) inserted from the fact table, 0 quoted from web sources, 1 typed directly." in res["summary"]
     fb = v.feedback_for_writer(res)
-    assert '"0.84%"' in fb and "write it as the matching {{ID}}" in fb
+    assert '"0.84%"' in fb and "so write the matching {{ID}}" in fb
+
+
+def test_assumption_label_on_a_number_from_a_cited_source_is_an_issue():
+    news = {"id": "S5", "url": "https://example.com/nyfed", "title": "NY Fed", "source": "web",
+            "snippet": "The New York Fed model puts the chance of a recession at 25.2%."}
+    tpl = ("- The NY Fed model gives {{assume: 25.2%}} [S5].\n"      # S5's figure, labelled an assumption
+           "- A cash buffer of {{assume: 10-15%}} is prudent [S5].\n"  # a real assumption
+           "- The NY Fed model gives 25.2%.\n")                         # typed, uncited, in S5's text
+    text, refs = render(tpl, STORE, SOURCES + [news])
+    res = v.validate_report(text, "q", TABLES, SOURCES + [news], ["credit"], today=date(2026, 10, 17), refs=refs)
+    assumed = [f for f in res["figures"] if f["origin"] == "assumption"]
+    assert [v.mislabelled_assumption(f) for f in assumed] == ["S5", None, None]
+    assert res["open_issues"] == 2  # the mislabelled assumption and the typed number
+    assert "1 of those labels on a number from a source the line cites" in res["summary"]
+    fb = v.feedback_for_writer(res)
+    assert "labelled as an assumption, but it is in the text of [S5]" in fb and "{{S5: 25.2%}}" in fb
+    assert "it appears in the text of [S5], so quote it as {{S5: 25.2%}}" in fb
 
 
 def test_direction_check_on_placeholders():

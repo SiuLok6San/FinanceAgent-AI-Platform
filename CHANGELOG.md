@@ -15,10 +15,26 @@ Added
 - Direction check: a change described with the wrong word ("narrowed" next to a widening) is flagged and sent
   back to the Writer. It also runs on free-text reports, so all versions can be compared.
 - Quoted web numbers must appear in the text of the source they name.
+- Comparison check: "A is above B" between two facts is checked against their values, and a comparison
+  between different units (a P/E multiple against an index level) is flagged.
+- Wording checks: history words ("near five-year lows", "tight relative to history") are checked against the
+  fact's percentile in the fetched window, and trend words ("widening", "rising") against its recent change.
+  Like the direction and comparison checks, their findings go back to the Writer in the feedback loop.
+- A number labelled "(assumption)" that is written the same way in a source the line cites counts as an open
+  issue (it is that source's figure). A revision could otherwise clear typed numbers by relabelling them; the
+  feedback now says to quote such numbers as `{{S#: …}}` and names the fact a typed number matches.
 - UI: hover any number to see the fact it came from; colours mark data, quotes, assumptions and typed numbers;
-  the Planner's choices and the full fact table are shown.
-- Evaluation of original, v2 and v3 on 20 development and 10 held-out questions (frozen before v3 was built).
+  lines with no checked figure are shown in italics as interpretation (the model's reading, not checked); the
+  Planner's choices and the full fact table are shown.
+- Evaluation of original, v2 and v3 on 20 development questions, 10 held-out questions (frozen before v3 was
+  built) and 10 fresh questions (frozen later, never run before the final runs).
 - Tags `v1.0-course` and `v2.0-validation` mark the earlier versions.
+
+Fixed
+- The hosted Ollama free tier allows one request at a time: an HTTP 429 now waits for the server's
+  `Retry-After`, and evaluation runs go one question at a time.
+- An LLM call may take up to 300 s (was 180 s): long revision calls timed out on every attempt. Each failed
+  attempt is logged.
 
 ## Oct 2026 — public demo
 

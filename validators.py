@@ -163,6 +163,7 @@ class Figure:
     in_source_text: Optional[str] = None  # S# of a snippet that contains the same number
     snippet_ids: Tuple[str, ...] = ()     # every snippet that contains the same number
     assumption: bool = False              # the report labels this number as its own assumption
+    written_in: Tuple[str, ...] = ()      # labelled assumptions: snippets with the same number and unit, as written
     cited: Tuple[str, ...] = ()           # citation ids in the same bullet / paragraph
     context: str = ""
     origin: str = "free"                  # "fact" (inserted from {{ID}}), "assumption" ({{assume: …}}) or "free" (typed)
@@ -310,16 +311,17 @@ def check_numeric_grounding(
             figures.append(fig)
             continue
         if ref is not None and ref.kind == "assumption":
+            # kept as the writer's assumption, but a number that is in the text of a source the line
+            # cites is that source's figure, not an assumption (checked in _needs_attention)
             fig.origin, fig.assumption = "assumption", True
+            fig.written_in = _written_in(fig, snippet_figures)
             figures.append(fig)
             continue
         if ref is not None and ref.kind == "quote":
             # quoted from a web/news source: stays "unverified" (not in the data tables), but must
             # appear in the text of the source it is attributed to
             fig.origin = "quote"
-            fig.snippet_ids = tuple(sid for sid, sf in snippet_figures if sid == ref.source_id
-                                    and (sf.unit == fig.unit or "" in (sf.unit, fig.unit))
-                                    and abs(sf.value - fig.value) <= max(sf.tolerance, fig.tolerance))[:1]
+            fig.snippet_ids = _in_snippets(fig, snippet_figures, only=ref.source_id)[:1]
             fig.in_source_text = fig.snippet_ids[0] if fig.snippet_ids else None
             fig.matched = f"quoted from {ref.source_id}" + ("" if fig.snippet_ids else " (not found in its text)")
             figures.append(fig)
@@ -354,21 +356,39 @@ def check_numeric_grounding(
             if " change " in fact.label or "annualized growth" in fact.label:
                 fig.change_sign = _sign(fact.value)
         else:
-            fig.snippet_ids = tuple(dict.fromkeys(
-                sid for sid, sf in snippet_figures
-                if (sf.unit == fig.unit or "" in (sf.unit, fig.unit))
-                and abs(sf.value - fig.value) <= max(sf.tolerance, fig.tolerance)))
+            fig.snippet_ids = _in_snippets(fig, snippet_figures)
             fig.in_source_text = fig.snippet_ids[0] if fig.snippet_ids else None
             fig.assumption = _is_assumption(report, fig)
+            if _labelled_assumption(report, fig):
+                fig.written_in = _written_in(fig, snippet_figures)
         figures.append(fig)
     return figures
 
 
+def _in_snippets(fig: Figure, snippet_figures: List[Tuple[str, Figure]], only: Optional[str] = None) -> Tuple[str, ...]:
+    """Ids of the fetched web/news snippets that contain the same number (optionally one source only)."""
+    return tuple(dict.fromkeys(
+        sid for sid, sf in snippet_figures
+        if (only is None or sid == only)
+        and (sf.unit == fig.unit or "" in (sf.unit, fig.unit))
+        and abs(sf.value - fig.value) <= max(sf.tolerance, fig.tolerance)))
+
+
+def _written_in(fig: Figure, snippet_figures: List[Tuple[str, Figure]]) -> Tuple[str, ...]:
+    """Snippets containing this exact number with the same unit (stricter than _in_snippets)."""
+    return tuple(dict.fromkeys(sid for sid, sf in snippet_figures
+                               if sf.unit == fig.unit and abs(sf.value - fig.value) <= 1e-9 * max(1.0, abs(fig.value))))
+
+
+def _labelled_assumption(report: str, fig: Figure) -> bool:
+    """The number itself is followed by "(assumption)" ("16× (assumption)")."""
+    return bool(re.match(r"\W{0,3}\(\s*assumption", report[fig.end:fig.end + 40], re.I))
+
+
 def _is_assumption(report: str, fig: Figure) -> bool:
     """The number is marked as the report's own assumption ("16× (assumption)") or its sentence says so."""
-    after = report[fig.end:fig.end + 40]
     patterns = _cfg()["assumptions"]["patterns"]
-    return bool(re.match(r"\W{0,3}\(\s*assumption", after, re.I)) or any(re.search(p, fig.context, re.I) for p in patterns)
+    return _labelled_assumption(report, fig) or any(re.search(p, fig.context, re.I) for p in patterns)
 
 
 # ---------------------------------------------------------------------------
@@ -745,7 +765,9 @@ def _needs_attention(f: Dict[str, Any], placeholders: bool = False) -> bool:
     snippet the paragraph cites. Placeholder mode: also any number typed
     directly instead of being written as {{ID}} (dates excepted).
     """
-    if f["assumption"] or f.get("origin") == "fact":
+    if f["assumption"]:
+        return bool(mislabelled_assumption(f))
+    if f.get("origin") == "fact":
         return False
     if f.get("origin") == "quote":
         return not f["snippet_ids"]  # a quote must be found in the source it names
@@ -754,6 +776,17 @@ def _needs_attention(f: Dict[str, Any], placeholders: bool = False) -> bool:
     if f["status"] != "unverified":
         return False
     return not set(f["snippet_ids"]) & set(f["cited"])
+
+
+def mislabelled_assumption(f: Dict[str, Any]) -> Optional[str]:
+    """The cited source whose text contains a number labelled as the writer's assumption, if any.
+
+    "New York Fed: 25.2% (assumption) [S4]" with 25.2% in S4's text is S4's figure, and labelling it
+    an assumption would let a revision clear a typed number without grounding it.
+    """
+    if not f.get("assumption"):
+        return None
+    return next((sid for sid in f.get("written_in", ()) if sid in f.get("cited", ())), None)
 
 
 def open_issues(v: Dict[str, Any]) -> int:
@@ -790,12 +823,24 @@ def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
         if not _needs_attention(f, ph):
             continue
         where = f'"{f["text"]}" in: "{f["context"][:160]}"'
-        if f.get("origin") == "quote":
+        sid = mislabelled_assumption(f)
+        if sid:
+            fix = f"quote it as {{{{{sid}: {f['text']}}}}}" if ph else f"drop the \"(assumption)\" label and keep [{sid}]"
+            items.append(f"{where} — labelled as an assumption, but it is in the text of [{sid}], which this "
+                         f"line cites; {fix}.")
+        elif f.get("origin") == "quote":
             items.append(f"{where} — quoted from a source whose text does not contain it; fix the number or "
                          "the source, or drop it.")
+        elif ph and f["snippet_ids"]:
+            sid = f["snippet_ids"][0]
+            items.append(f"{where} — typed directly; it appears in the text of [{sid}], so quote it as "
+                         f"{{{{{sid}: {f['text']}}}}}. Use {{{{assume: …}}}} only for your own estimates.")
+        elif ph and f["status"] != "unverified":
+            items.append(f"{where} — typed directly; it matches \"{f['matched']}\", so write the matching "
+                         "{{ID}} from the FACT TABLE.")
         elif ph:
-            items.append(f"{where} — typed directly; write it as the matching {{{{ID}}}} from the FACT TABLE, "
-                         "or as {{assume: …}} if it is your own estimate.")
+            items.append(f"{where} — typed directly and not in the FACT TABLE or any source text; remove it, or "
+                         "write it as {{assume: …}} only if it is your own estimate.")
         elif f["snippet_ids"]:
             items.append(f"{where} — this number appears in source [{f['snippet_ids'][0]}]; cite it in that sentence.")
         elif f["unit"] == "date":
@@ -828,8 +873,10 @@ def summary_line(v: Dict[str, Any]) -> str:
     if c["figures"]:
         in_snippets = sum(f["status"] == "unverified" and bool(f["in_source_text"]) for f in v["figures"])
         assumed = sum(f["status"] == "unverified" and f["assumption"] for f in v["figures"])
+        mislabelled = sum(bool(mislabelled_assumption(f)) for f in v["figures"])
         notes = [f"{in_snippets} of them appear in a fetched web/news snippet" if in_snippets else "",
-                 f"{assumed} labelled as assumptions" if assumed else ""]
+                 f"{assumed} labelled as assumptions" if assumed else "",
+                 f"{mislabelled} of those labels on a number from a source the line cites" if mislabelled else ""]
         notes = [n for n in notes if n]
         note = f" ({'; '.join(notes)})" if notes else ""
         parts = [f"{c['verified'] + c['derived']} of {c['figures']} figures verified against source data "

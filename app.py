@@ -9,6 +9,7 @@ from agents import run_multiagent_pipeline
 from demo import demo_runs, load_demo_result
 from llm import llm_settings
 from settings import env
+from validators import mislabelled_assumption
 
 # Set APP_PASSWORD (env var or Streamlit secret) on a public deployment so that
 # only people with the password can start live runs, which spend API quota.
@@ -125,8 +126,13 @@ def decorate_report(report: str, figures: list, refs: list = None, facts: dict =
         events.append((start, 1, f'<span class="{cls}" title="{html.escape(title, quote=True)}">'))
         events.append((end, 0, "</span>"))
 
+    mislabelled = {f["start"]: sid for f in figures if (sid := mislabelled_assumption(f))}
     for r in refs or []:
-        if r["kind"] == "fact":
+        sid = next((s for pos, s in mislabelled.items() if r["start"] <= pos < r["end"]), None)
+        if r["kind"] == "assumption" and sid:
+            mark(r["start"], r["end"], "b17-flag-snippet",
+                 f"Labelled as an assumption, but it is in the text of source {sid}, which this line cites")
+        elif r["kind"] == "fact":
             f = facts.get(r["fact_id"], {})
             mark(r["start"], r["end"], "b17-fact", f"{r['fact_id']}: {f.get('label', '')}")
         elif r["kind"] == "quote":

@@ -38,7 +38,7 @@ from fact_store import build_fact_store  # noqa: E402
 from render import render  # noqa: E402
 from router import route_question as route_current  # noqa: E402
 from settings import load_config  # noqa: E402
-from validators import validate_report  # noqa: E402
+from validators import mislabelled_assumption, validate_report  # noqa: E402
 
 SETS = ["fresh", "heldout", "dev"]
 SET_TITLES = {"fresh": "Fresh held-out questions (10, never used during development)",
@@ -178,12 +178,16 @@ def report_metrics(records: List[Dict[str, Any]], vals: List[Dict[str, Any]]) ->
         "traceable": len(grounded),
         "in_source_text": sum(f["status"] == "unverified" and not f["assumption"] and bool(f["snippet_ids"]) for f in num),
         "assumptions": sum(f["status"] == "unverified" and f["assumption"] for f in num),
+        "assumptions_from_cited_source": sum(bool(mislabelled_assumption(f)) for f in num),
         "untraceable": sum(_untraceable(f) for f in num),
         "from_facts": sum(f.get("origin") == "fact" for f in num),
         "typed": sum(f.get("origin") == "free" for f in num),
         "placeholder_mode": bool(vals) and all(v.get("placeholders") for v in vals),
         "grounded_low_precision": sum(f["tolerance"] >= 0.5 and f.get("origin") != "fact" for f in grounded),
         "direction_errors": sum(len(v.get("directions", [])) for v in vals),
+        "comparison_errors": sum(len(v.get("comparisons", [])) for v in vals),
+        "history_wording_errors": sum(len((v.get("wording") or {}).get("history", [])) for v in vals),
+        "trend_wording_errors": sum(len((v.get("wording") or {}).get("trend", [])) for v in vals),
         "reports_with_direction_errors": sum(bool(v.get("directions")) for v in vals),
         "citation_markers": sum(v["citations"]["markers"] for v in vals),
         "dangling_ids": sum(len(v["citations"]["dangling"]) for v in vals),
@@ -309,11 +313,17 @@ def _metrics_table(scores: Dict[str, Any], which_set: str) -> List[str]:
     row("… traceable to fetched data (exact or derived)", lambda x: _pct(x["traceable"], x["numbers"]))
     row("… found in a fetched web/news source text", lambda x: _pct(x["in_source_text"], x["numbers"]))
     row("… labelled as the writer's assumption", lambda x: _pct(x["assumptions"], x["numbers"]))
+    row("… assumption labels on a number in the text of a source the line cites",
+        lambda x: str(x["assumptions_from_cited_source"]))
     row("… **untraceable** (none of the above)", lambda x: _pct(x["untraceable"], x["numbers"]))
     row("Numbers inserted from the fact table / typed by the model",
         lambda x: f"{x['from_facts']} / {x['typed']}" if x["placeholder_mode"] else "— / all")
     row("Change figures described in the wrong direction (reports)",
         lambda x: f"{x['direction_errors']} ({x['reports_with_direction_errors']})")
+    row("Comparisons contradicted by the two facts' values or units", lambda x: str(x["comparison_errors"]))
+    row("History wording contradicted by the percentile (\"near lows\", \"tight\")",
+        lambda x: str(x["history_wording_errors"]))
+    row("Trend wording contradicted by the recent change (\"widening\")", lambda x: str(x["trend_wording_errors"]))
     row("Paragraphs with grounded figures but no citation", lambda x: str(x["uncited_paragraphs"]))
     row("Paragraphs citing a different source than the data", lambda x: str(x["source_mismatches"]))
     row("Dangling citation ids", lambda x: str(x["dangling_ids"]))

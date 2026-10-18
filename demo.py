@@ -23,7 +23,8 @@ from validators import annotate_report, validate_report
 
 # saved runs of the current pipeline (falls back to the older free-text runs if none exist)
 DEMO_DIR = next((d for d in (ROOT / "eval" / "results" / "v3", ROOT / "eval" / "results" / "v2",
-                             ROOT / "eval" / "results" / "revised") if d.exists()), ROOT / "eval" / "results" / "v3")
+                             ROOT / "eval" / "results" / "revised") if any(d.glob("Q*.json"))),
+                ROOT / "eval" / "results" / "v3")
 
 _spec = importlib.util.spec_from_file_location("eval_common", ROOT / "eval" / "common.py")
 _common = importlib.util.module_from_spec(_spec)
