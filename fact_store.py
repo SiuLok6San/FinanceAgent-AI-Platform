@@ -208,17 +208,19 @@ def _series_facts(t: Dict[str, Any]) -> List[FactEntry]:
 
 
 def _spread_facts(tables: List[Dict[str, Any]]) -> List[FactEntry]:
-    """Latest value of one percent series minus another (e.g. HY OAS minus IG OAS)."""
+    """Latest value of one series minus another of the same kind (e.g. HY OAS minus IG OAS, 10Y minus Fed funds)."""
     pcts = []
     for t in tables:
         if t.get("kind") != "timeseries" or t["data"].empty:
             continue
         meta = _series_meta(t)
-        if meta["level_format"] == "percent":
+        if meta.get("spread_group"):
             s = series_frame(t)
             pcts.append((t, meta, float(s["value"].iloc[-1]), _decimals(s["value"])))
     out = []
     for a, b in combinations(pcts, 2):
+        if a[1]["spread_group"] != b[1]["spread_group"]:
+            continue
         # larger minus smaller, so the spread reads naturally (HY_OAS_minus_IG_OAS, not IG minus HY)
         (ta, ma, va, da), (tb, mb, vb, db) = (a, b) if a[2] >= b[2] else (b, a)
         unit = "bp" if ma["change_unit"] == "bp" and mb["change_unit"] == "bp" else "pp"

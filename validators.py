@@ -111,7 +111,9 @@ def _without_labels(text: str) -> str:
     """Also blank out dates and label phrases such as "S&P 500"."""
     spans = [m.span() for m in _DATE_RE.finditer(text)]
     for phrase in _cfg()["extraction"]["label_phrases"]:
-        spans += [m.span() for m in re.finditer(re.escape(phrase), text, re.I)]
+        # any whitespace between words (models often write "S&P\u00a0500")
+        pattern = r"\s+".join(re.escape(w) for w in phrase.split())
+        spans += [m.span() for m in re.finditer(pattern, text, re.I)]
     return _mask(text, spans)
 
 
@@ -487,7 +489,9 @@ def check_no_data(report: str, tags: List[str], tables: List[Dict[str, Any]], fi
 # 5) Direction of change
 # ---------------------------------------------------------------------------
 
-_CLAUSE_END = re.compile(r"[.!?](?=\s|$)|[;\n|]")
+# clause boundaries for the direction check: sentence ends (not decimal points), commas, ";",
+# line breaks, table cells. "+12 bp, narrowing the differential" talks about two things.
+_CLAUSE_END = re.compile(r"[.!?,](?=\s|$)|[;\n|]")
 
 
 def check_directions(report: str, figures: List[Figure]) -> List[Dict[str, Any]]:

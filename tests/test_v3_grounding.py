@@ -132,3 +132,20 @@ def test_spreads_are_larger_minus_smaller():
 def test_writer_citation_right_after_a_placeholder_is_not_doubled():
     text, _ = render("- IG is {{IG_OAS.latest}} [S2]; spread {{HY_OAS_minus_IG_OAS}} [S1,S2].", STORE, SOURCES)
     assert text == "- IG is 0.84% [S2]; spread +239 bp [S1,S2]."
+
+
+def test_spreads_only_within_the_same_group():
+    ust = fred("DGS10", [4.0] * (len(DAYS) - 1) + [5.10], DAYS, topics=("rates",))
+    ff = fred("FEDFUNDS", [3.75] * 13, MONTHS, frequency="monthly", topics=("rates",))
+    store = build_fact_store([HY, IG, ust, ff])
+    assert "HY_OAS_minus_IG_OAS" in store and "UST10Y_minus_FEDFUNDS" in store
+    assert not any(k in store for k in ("UST10Y_minus_HY_OAS", "FEDFUNDS_minus_IG_OAS", "HY_OAS_minus_FEDFUNDS"))
+
+
+def test_direction_check_stops_at_commas():
+    res = _validate("- HY OAS moved {{HY_OAS.chg_1y}}, narrowing the gap to IG.\n")
+    assert res["directions"] == []
+
+
+def test_label_phrases_allow_any_whitespace():
+    assert [f.text for f in v.extract_figures("Relative to the S&P\u00a0500 and the S&P  500 index")] == []
