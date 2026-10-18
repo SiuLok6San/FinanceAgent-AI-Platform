@@ -204,3 +204,41 @@ def test_key_data_block_cites_sources_and_shows_changes():
     assert "latest 4.3 (2026-09-01)" in block
     assert "BAMLH0A0HYM2 minus BAMLC0A0CM: +2.45" in block
     assert any(f.kind == "derived" for f in all_facts([UNRATE]))
+
+
+# --- formats seen in real gpt-oss output (Oct 2026 eval run) ------------------------
+
+def test_fullwidth_citation_brackets():
+    report = "Headline CPI rose 3.0% year over year 【S4】【S9】. Unemployment is 4.3%【S1†L3-L5】."
+    figs = v.check_numeric_grounding(report, "q", TABLES, SOURCES)
+    c = v.check_citations(report, SOURCES, figs)
+    assert c["markers"] == 3
+    assert c["dangling"] == ["S9"]
+    assert c["uncited_paragraphs"] == []
+
+
+def test_non_breaking_hyphens_and_spaces():
+    figs = v.extract_figures("**U.S. Inflation – 12‑Month Trend** – a 0.5‑pp decline to 3.7 % on 18 Oct 2026")
+    got = [(f.text, f.unit) for f in figs]
+    assert ("12", "") not in got                      # "12‑Month" is a label
+    assert ("0.5‑pp", "pp") in got               # unit after a non-breaking hyphen
+    assert ("3.7 %", "%") in got
+    assert ("18 Oct 2026", "date") in got and ("18", "") not in got
+
+
+def test_year_over_year_uses_calendar_months_when_a_month_is_missing():
+    # October 2025 was never published; 12 observations back would be August 2025 (13 months).
+    dates = ["2025-08-01", "2025-09-01", "2025-11-01", "2025-12-01"] + [f"2026-{m:02d}-01" for m in range(1, 10)]
+    values = [300.0, 303.0] + [305.0] * 10 + [312.09]
+    cpi = fred_table("CPIAUCSL", values, dates, units="Index 1982-1984=100")
+    labels = {f.label: f.value for f in all_facts([cpi]) if "% change" in f.label}
+    assert labels["CPIAUCSL % change 2025-09-01 to 2026-09-01"] == pytest.approx(3.0)
+    assert not any("2025-08-01 to 2026-09-01" in k for k in labels)
+    assert statuses("CPI rose 3.0% year over year [S1].", tables=[cpi], sources=[source(1, "CPIAUCSL")])["3.0%"] == "derived"
+
+
+def test_snippet_match_allows_missing_unit_and_is_summarised():
+    sources = SOURCES + [source(5, url="https://news/x", snippet="Core CPI was 2.39% in September.")]
+    res = v.validate_report("Core CPI is running at 2.39 [S5].", "q", TABLES, sources, ["macro"], today=date(2026, 10, 17))
+    assert res["figures"][0]["in_source_text"] == "S5"
+    assert "1 flagged (1 of them appear in a fetched web/news snippet)" in res["summary"]

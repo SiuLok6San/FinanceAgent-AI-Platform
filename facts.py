@@ -81,6 +81,29 @@ def table_frequency(table: Dict[str, Any]) -> Optional[str]:
     return None
 
 
+_PERIOD = {
+    "weekly": lambda k: pd.DateOffset(weeks=k),
+    "monthly": lambda k: pd.DateOffset(months=k),
+    "quarterly": lambda k: pd.DateOffset(months=3 * k),
+}
+
+
+def lagged(s: pd.DataFrame, frequency: Optional[str], lag: int) -> Optional[Tuple[float, pd.Timestamp]]:
+    """Value and date `lag` periods before the latest observation, or None if missing.
+
+    Weekly/monthly/quarterly lags are calendar-based, so a gap in the data
+    (e.g. a month that was never published) does not shift a 12-month
+    comparison to 13 months. Daily lags count observations (trading days).
+    """
+    if frequency in _PERIOD:
+        target = s["date"].iloc[-1] - _PERIOD[frequency](lag)
+        hit = s.index[s["date"] == target]
+        return (s["value"].iloc[hit[0]], target) if len(hit) else None
+    if len(s) > lag:
+        return s["value"].iloc[-1 - lag], s["date"].iloc[-1 - lag]
+    return None
+
+
 def _timeseries(tables: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return [t for t in tables if t.get("kind") == "timeseries" and not t["data"].empty]
 
@@ -146,9 +169,10 @@ def derived_facts(tables: List[Dict[str, Any]]) -> List[Fact]:
 
         freq = table_frequency(t)
         for lag in lags_cfg.get(freq, []):
-            if len(s) <= lag:
-                break
-            prev_v, prev_d = s["value"].iloc[-1 - lag], s["date"].iloc[-1 - lag].strftime("%Y-%m-%d")
+            prev = lagged(s, freq, lag)
+            if prev is None:
+                continue
+            prev_v, prev_d = prev[0], prev[1].strftime("%Y-%m-%d")
             facts.append(Fact(last_v - prev_v, "derived", f"{sid} change {prev_d} to {last_d}", pct, url, t.get("series_id"), last_d, topics))
             if prev_v:
                 facts.append(Fact((last_v / prev_v - 1) * 100, "derived", f"{sid} % change {prev_d} to {last_d}", True, url, t.get("series_id"), last_d, topics))
@@ -224,9 +248,10 @@ def key_data_block(tables: List[Dict[str, Any]], sources: List[Dict[str, Any]]) 
             last_v, last_d = s["value"].iloc[-1], s["date"].iloc[-1].strftime("%Y-%m-%d")
             parts = [f"latest {fmt_number(last_v)} ({last_d})"]
             for lag in _cfg()["derived"]["lags"].get(freq, [])[:6]:
-                if len(s) <= lag:
-                    break
-                pv, pd_ = s["value"].iloc[-1 - lag], s["date"].iloc[-1 - lag].strftime("%Y-%m-%d")
+                prev = lagged(s, freq, lag)
+                if prev is None:
+                    continue
+                pv, pd_ = prev[0], prev[1].strftime("%Y-%m-%d")
                 change = f"change {fmt_number(last_v - pv, signed=True)}" + ("" if pct else f", {fmt_number((last_v / pv - 1) * 100, signed=True)}%" if pv else "")
                 parts.append(f"{pd_}: {fmt_number(pv)} ({change})")
             lines.append("  " + "; ".join(parts))

@@ -48,8 +48,10 @@ _MAGNITUDE = {
     "billion": 1e9, "bn": 1e9, "b": 1e9, "trillion": 1e12, "tn": 1e12, "t": 1e12,
 }
 
+_HYPHENS = "-\u2010\u2011\u2012"  # ASCII hyphen, hyphen, non-breaking hyphen, figure dash
+
 _NUMBER_RE = re.compile(r"""
-    (?<![\w.,/$])(?<![A-Za-z]-)                 # not inside a word, decimal, ratio or code (COVID-19)
+    (?<![\w.,/$])(?<![A-Za-z][-\u2010\u2011\u2012])   # not inside a word, decimal, ratio or code (COVID-19)
     (?P<sign>[-+−–])?
     (?P<dollar>US\$|\$)?
     (?P<num>\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?)
@@ -58,7 +60,7 @@ _NUMBER_RE = re.compile(r"""
       | (?P<magl>[tbmk])(?![\w])
     )?
     (?:
-        \s?(?P<unit>%|percent(?:age)?\s+points?|percent|ppts?|pp|bps|bp|basis\s+points?|pts?|points?)(?![\w])
+        (?:\s|[-\u2010\u2011])?(?P<unit>%|percent(?:age)?\s+points?|percent|ppts?|pp|bps|bp|basis\s+points?|pts?|points?)(?![\w])
       | (?P<times>x)(?![\w])
     )?
     (?![\w/]|[.,]\d)
@@ -68,7 +70,8 @@ _MONTHS = ("jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug
            "|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?")
 _DATE_RE = re.compile(
     rf"\b(?:(?P<iso>(?:19|20)\d{{2}}-\d{{2}}-\d{{2}})"
-    rf"|(?P<mon>{_MONTHS})\.?\s+(?:(?P<day>\d{{1,2}}),?\s+)?(?P<year>(?:19|20)\d{{2}}))\b",
+    rf"|(?P<mon>{_MONTHS})\.?\s+(?:(?P<day>\d{{1,2}}),?\s+)?(?P<year>(?:19|20)\d{{2}})"
+    rf"|(?P<day2>\d{{1,2}})\s+(?P<mon2>{_MONTHS})\.?,?\s+(?P<year2>(?:19|20)\d{{2}}))\b",
     re.I,
 )
 _MONTH_NUM = {m: i for i, m in enumerate(
@@ -126,8 +129,8 @@ def _is_label(text: str, m: re.Match, cfg: Dict[str, Any]) -> bool:
     words = "|".join(map(re.escape, cfg["label_words"]))
     if re.search(rf"\b(?:{words})\.?\s*$", before, re.I):
         return True
-    # compound labels: "10-year", "3-month", "10-K"
-    if re.match(r"-[A-Za-z]", after):
+    # compound labels: "10-year", "3-month", "10-K" (any hyphen character)
+    if not has_unit and re.match(rf"[{_HYPHENS}][A-Za-z]", after):
         return True
     # time spans: "12 months", "6 weeks"
     units = "|".join(map(re.escape, cfg["time_units"]))
@@ -190,10 +193,11 @@ def _parse_date(text: str) -> Tuple[Optional[str], Optional[Tuple[int, int]]]:
     if m.group("iso"):
         iso = m.group("iso")
         return iso, (int(iso[:4]), int(iso[5:7]))
-    month = _MONTH_NUM[m.group("mon")[:3].lower()]
-    year = int(m.group("year"))
-    if m.group("day"):
-        return f"{year:04d}-{month:02d}-{int(m.group('day')):02d}", (year, month)
+    month = _MONTH_NUM[(m.group("mon") or m.group("mon2"))[:3].lower()]
+    year = int(m.group("year") or m.group("year2"))
+    day = m.group("day") or m.group("day2")
+    if day:
+        return f"{year:04d}-{month:02d}-{int(day):02d}", (year, month)
     return None, (year, month)
 
 
@@ -285,7 +289,8 @@ def check_numeric_grounding(
             fig.topic_match = best[0][0] == 0
         else:
             for sid, sf in snippet_figures:
-                if sf.unit == fig.unit and abs(sf.value - fig.value) <= max(sf.tolerance, fig.tolerance):
+                same_unit = sf.unit == fig.unit or "" in (sf.unit, fig.unit)
+                if same_unit and abs(sf.value - fig.value) <= max(sf.tolerance, fig.tolerance):
                     fig.in_source_text = sid
                     break
         figures.append(fig)
@@ -423,8 +428,10 @@ def validate_report(
 def summary_line(v: Dict[str, Any]) -> str:
     c = v["counts"]
     if c["figures"]:
+        in_snippets = sum(f["status"] == "unverified" and bool(f["in_source_text"]) for f in v["figures"])
+        note = f" ({in_snippets} of them appear in a fetched web/news snippet)" if in_snippets else ""
         parts = [f"{c['verified'] + c['derived']} of {c['figures']} figures verified against source data "
-                 f"({c['verified']} exact, {c['derived']} derived); {c['unverified']} flagged."]
+                 f"({c['verified']} exact, {c['derived']} derived); {c['unverified']} flagged{note}."]
     else:
         parts = ["No figures to verify."]
     cit = v["citations"]

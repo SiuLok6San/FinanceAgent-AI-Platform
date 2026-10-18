@@ -5,7 +5,8 @@ percent_units = ["Percent", "Percentage Points"]
 
 # ---------------------------------------------------------------------------
 # Derived values: simple arithmetic on fetched data that a report may quote.
-# Changes are latest value vs. the value N observations earlier.
+# Changes are latest value vs. the value N periods earlier: by calendar for
+# weekly/monthly/quarterly series, by observation (trading day) for daily.
 # ---------------------------------------------------------------------------
 [derived.lags]
 daily = [1, 5, 21, 63, 126, 252]   # ~1 day, 1 week, 1/3/6/12 months

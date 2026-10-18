@@ -90,8 +90,10 @@ def build_sources_block(sources: List[Dict[str, Any]]) -> str:
     return "\n".join(lines)
 
 
-# [S1], [S1, S3], [S1; S2], [S1-S3] / [S1–3]
-_CITATION_RE = re.compile(r"\[\s*(S\d+(?:\s*(?:[,;]|[-\u2013])\s*S?\d+)*)\s*\]")
+# [S1], [S1, S3], [S1; S2], [S1-S3] / [S1–3]; some models write 【S1】 or 【S1†L4-L9】
+_CITATION_RE = re.compile(
+    r"[\[\u3010]\s*(S\d+(?:\s*(?:[,;]|[-\u2013])\s*S?\d+)*)\s*(?:\u2020[^\]\u3011]*)?[\]\u3011]"
+)
 
 
 def parse_citation_markers(text: str) -> List[Dict[str, Any]]:

@@ -85,12 +85,15 @@ def escape_md(text: str) -> str:
 
 
 def highlight_flagged(report: str, figures: list) -> str:
-    """Wrap unverified figures in an orange highlight; nothing is removed."""
+    """Highlight unverified figures (orange: found nowhere; blue: only in a web/news snippet). Nothing is removed."""
     flagged = sorted((f for f in figures if f["status"] == "unverified"), key=lambda f: f["start"], reverse=True)
     for f in flagged:
-        report = report[:f["start"]] + "\u2063HL_START" + report[f["start"]:f["end"]] + "\u2063HL_END" + report[f["end"]:]
+        tag = "\u2063HL_SNIPPET" if f.get("in_source_text") else "\u2063HL_NONE"
+        report = report[:f["start"]] + tag + report[f["start"]:f["end"]] + "\u2063HL_END" + report[f["end"]:]
     report = escape_md(report)
-    return report.replace("\u2063HL_START", ":orange-background[").replace("\u2063HL_END", "]")
+    return (report.replace("\u2063HL_NONE", ":orange-background[")
+                  .replace("\u2063HL_SNIPPET", ":blue-background[")
+                  .replace("\u2063HL_END", "]"))
 
 
 def render_validation_panel(validation: dict, result: dict) -> None:
@@ -203,7 +206,8 @@ with right:
                     (st.warning if flagged else st.success)(f"**Validation:** {escape_md(validation['summary'])}")
                 st.markdown(highlight_flagged(result.get("report_text_raw", result["report_text"]), figures))
                 st.caption(
-                    "Highlighted figures could not be matched to the fetched data. "
+                    "Highlighted figures could not be matched to the fetched data tables "
+                    "(blue: the number appears in a fetched web/news snippet; orange: found nowhere). "
                     f"Model: {result['run_meta']['model']} · seed {result['run_meta']['seed']} · "
                     f"run {result['run_meta']['run_id']}"
                 )
