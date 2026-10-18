@@ -1,5 +1,11 @@
 # Changelog
 
+## Oct 2026 — public demo
+
+- Public site on Streamlit Community Cloud: <https://financeagent-ai-platform.streamlit.app>. It opens on the 20
+  saved evaluation runs (re-checked by the current validator, no API calls). Live analysis needs an LLM endpoint
+  in the deployment's secrets and, when `APP_PASSWORD` is set, the password; the public site has none configured.
+
 ## Oct 2026 — validator feedback loop (`validation-feedback-loop` branch)
 
 Added

@@ -4,6 +4,8 @@
 
 A multi-agent research assistant that answers investor questions with live FRED, Finnhub and Tavily data — and checks every number and citation in its own reports with a deterministic validation layer.
 
+**Live demo: [financeagent-ai-platform.streamlit.app](https://financeagent-ai-platform.streamlit.app)** — browse the 20 saved evaluation runs (real outputs, no API calls). Live analysis is turned off on the public site; run it locally with your own keys (see *How to run*).
+
 ## Context
 
 - **Columbia University industry-sponsored course project with [Boosted.ai](https://boosted.ai)**, Oct–Dec 2025. Team project.
@@ -108,6 +110,8 @@ Start the app:
 ```bash
 streamlit run app.py
 ```
+
+The app opens on **Example runs** (the saved evaluation outputs, no API calls); switch to **Live analysis** to run the pipeline. To deploy it (e.g. Streamlit Community Cloud), put the same keys in the app's secrets and also set `APP_PASSWORD`: live runs then need that password, so visitors cannot spend your API quota. Without an LLM endpoint configured, a deployment shows only the example runs.
 
 Run the tests (no API keys or LLM needed; everything external is mocked):
 

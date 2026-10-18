@@ -11,6 +11,9 @@ from settings import env
 # Set APP_PASSWORD (env var or Streamlit secret) on a public deployment so that
 # only people with the password can start live runs, which spend API quota.
 APP_PASSWORD = env("APP_PASSWORD")
+# Live runs need an LLM endpoint configured explicitly (.env locally, secrets on a deployment);
+# a deployment without one only shows the example runs.
+LIVE_CONFIGURED = bool(env("LLM_API_BASE") or env("OLLAMA_API_KEY"))
 EXAMPLE_MODE = "Example runs (saved, no API calls)"
 LIVE_MODE = "Live analysis"
 
@@ -77,10 +80,9 @@ textarea, input {
 # Title
 # -------------------------------------------------------
 st.markdown('<div class="b17-title">B17 Finance Multi-Agent</div>', unsafe_allow_html=True)
-_llm = llm_settings()
 st.markdown(
     '<div class="b17-caption">Institutional-grade macro, credit, and portfolio intelligence — '
-    f'LLM via Ollama ({_llm["model"]}) + live FRED, Finnhub and Tavily data, '
+    'multi-agent LLM pipeline (Ollama) + live FRED, Finnhub and Tavily data, '
     'with deterministic validation of every report.</div>',
     unsafe_allow_html=True,
 )
@@ -282,8 +284,11 @@ with left:
             placeholder="e.g., JPM"
         )
 
-        unlocked = True
-        if APP_PASSWORD:
+        unlocked = LIVE_CONFIGURED
+        if not LIVE_CONFIGURED:
+            st.warning("Live analysis is not configured on this deployment (no LLM endpoint or API keys). "
+                       "The example runs show real outputs; to run it yourself, see *How to run* in the README.")
+        elif APP_PASSWORD:
             entered = st.text_input("Password for live runs", type="password",
                                     help="Live runs call the LLM and data APIs, which have usage limits.")
             unlocked = hmac.compare_digest(entered.encode(), APP_PASSWORD.encode())
@@ -291,7 +296,10 @@ with left:
                 st.error("Wrong password.")
 
         run_button = st.button("Run Institutional Analysis", disabled=not unlocked)
-        if not unlocked:
+        if LIVE_CONFIGURED:
+            _llm = llm_settings()
+            st.caption(f"Model: {_llm['model']} via {_llm['api_base']}")
+        if LIVE_CONFIGURED and not unlocked:
             st.caption("Live analysis is password-protected on the public site. The example runs show real outputs.")
 
 
