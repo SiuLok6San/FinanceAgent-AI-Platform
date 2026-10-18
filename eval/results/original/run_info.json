@@ -1,0 +1,57 @@
+{
+  "pipeline": "original",
+  "sessions": [
+    {
+      "code": "git 0468eea (original code)",
+      "started_utc": "2026-10-18T03:07:07+00:00",
+      "llm": {
+        "model": "gpt-oss:20b",
+        "api_base": "https://ollama.com",
+        "provider": "ollama-api",
+        "seed": 42,
+        "num_ctx": 16384,
+        "timeout_sec": 180.0
+      },
+      "python": "3.12.15",
+      "ids": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q05",
+        "Q06",
+        "Q07",
+        "Q08",
+        "Q09",
+        "Q10",
+        "Q11",
+        "Q12",
+        "Q17",
+        "Q18",
+        "Q19",
+        "Q20"
+      ],
+      "finished_utc": "2026-10-18T03:29:19+00:00"
+    },
+    {
+      "code": "git 0468eea (original code)",
+      "started_utc": "2026-10-18T03:29:26+00:00",
+      "llm": {
+        "model": "gpt-oss:20b",
+        "api_base": "https://ollama.com",
+        "provider": "ollama-api",
+        "seed": 42,
+        "num_ctx": 16384,
+        "timeout_sec": 180.0
+      },
+      "python": "3.12.15",
+      "ids": [
+        "Q13",
+        "Q14",
+        "Q15",
+        "Q16"
+      ],
+      "finished_utc": "2026-10-18T03:35:30+00:00"
+    }
+  ]
+}

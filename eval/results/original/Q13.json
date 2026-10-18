@@ -1,0 +1,280 @@
+{
+  "id": "Q13",
+  "category": "equity",
+  "question": "Is JPMorgan's valuation attractive relative to its earnings?",
+  "ticker": "JPM",
+  "expected_tags": [
+    "equity"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:30:45+00:00",
+  "elapsed_sec": 78.8,
+  "router_tags": [
+    "equity"
+  ],
+  "tier2": {
+    "equity": "valuation_pressure"
+  },
+  "error": false,
+  "report_text": "**JPMorgan Chase & Co. – Valuation vs. Earnings**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- **Current multiples**: Trailing P/E ≈ 12.5×, forward P/E ≈ 11.8×, EV/EBITDA ≈ 7.2×, P/B ≈ 1.4× – all below peer medians and 10‑yr averages【S2】【S9】.  \n- **Earnings outlook**: Q2 2026 EPS growth 35% YoY; consensus 12‑month EPS growth 8.5% – above 10‑yr trend【S8】【S3】.  \n- **Valuation stance**: Trading >20 % below future‑cash‑flow value, yet recent analyst cuts cite valuation concerns, indicating a modest discount that may still be attractive【S9】【S6】.  \n- **Risk profile**: AAA‑rated debt, strong capital buffers, but sensitive to rate hikes and credit tightening.  \n- **Portfolio implication**: 3–5 % equity allocation in a diversified bank‑heavy portfolio; consider adding senior unsecured notes for IG exposure.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro & Market Context  \n- **Interest‑rate environment**: Fed target 5.25 % likely to persist → supports net‑interest margin (NIM) growth.  \n- **Credit conditions**: Moderate tightening; JPM’s diversified asset mix mitigates concentration risk.  \n- **Regulatory landscape**: No material capital add‑on expected; ongoing mortgage‑related scrutiny but no immediate earnings impact.\n\n#### Valuation Metrics (vs. peers)  \n- **P/E**: 12.5× (trailing) vs. peer median 13.2×; 11.8× (forward) vs. peer median 12.0×【S2】【S9】.  \n- **EV/EBITDA**: 7.2× vs. peer median 7.8×【S9】.  \n- **P/B**: 1.4× vs. peer median 1.5×【S9】.  \n- **Future‑cash‑flow value**: Trading >20 % below estimate【S9】.\n\n#### Earnings & Growth  \n- **Q2 2026**: Revenue +35% YoY; EPS (core) growth 35% YoY【S8】.  \n- **Consensus**: 12‑month EPS growth 8.5% (vs. 10‑yr avg 7.2%)【S3】.  \n- **3‑yr CAGR forecast**: ~9.8% (driven by fee income and NIM expansion)【S4】.  \n- **Credit quality**: AAA‑rated debt; IG‑only balance sheet【S4】.\n\n#### Peer Comparison  \n- **Bank of America**: P/E 13.2×, EV/EBITDA 7.8×.  \n- **Citigroup**: P/E 12.0×, EV/EBITDA 6.9×.  \n- **Goldman Sachs**: P/E 15.5×, EV/EBITDA 8.5×.  \n- **JPM** sits near the lower‑mid‑range of peers, implying a modest discount【S9】.\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Assumptions | Valuation Impact | Earnings Impact |\n|----------|-------------|------------------|-----------------|\n| **Base** | Current multiples maintained; 12‑month EPS growth 8.5%; NIM stable | P/E 12.5×, EV/EBITDA 7.2× | EPS CAGR 9.8% |\n| **Upside** | Fed rates plateau; NIM expands 0.5‑0.7 bp; earnings growth 10% | P/E rises to 13.0×; EV/EBITDA 7.5× | EPS CAGR 11.5% |\n| **Downside** | 25‑bp Fed hike; credit tightening; earnings growth slows to 5% | P/E falls to 11.5×; EV/EBITDA 6.8× | EPS CAGR 7.0% |\n\n*All scenarios assume no material regulatory changes or litigation shocks.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Interest‑rate risk**: Rate hikes compress NIM; monitor Fed policy and NIM trend.  \n- **Credit risk**: Rising default rates in commercial or consumer segments; track loan loss provisions.  \n- **Regulatory risk**: Potential capital add‑ons or mortgage‑related scrutiny; watch regulatory filings.  \n- **Valuation risk**: Market sentiment may shift; monitor analyst coverage and price‑target revisions.  \n- **Liquidity risk**: Ensure senior unsecured notes remain highly liquid; monitor market depth.\n\n**Monitoring cadence**: Quarterly earnings releases, semi‑annual capital reports, and monthly Fed minutes.\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Equity**: Allocate 3–5 % of a diversified bank‑heavy portfolio to JPM; benefits from modest discount and solid earnings growth.  \n- **Fixed‑income**: Add JPM senior unsecured notes to an IG ladder; yields (~2.5–3.0%) competitive with peers, credit risk negligible.  \n- **Risk‑adjusted return**: Expected equity return ≈ 8–10 % (based on earnings growth and valuation) with low default risk.  \n- **Strategic fit**: JPM’s diversified business model and strong capital position align with a defensive, income‑focused mandate.\n\n---\n\n### 6. Conclusion  \n\nJPMorgan Chase trades at a modest discount to peers and its 10‑yr averages, while its earnings trajectory remains robust and above long‑term averages. The bank’s valuation is attractive relative to its earnings outlook, but investors should remain vigilant to valuation concerns highlighted by recent analyst cuts and the potential impact of interest‑rate movements. A balanced allocation to JPM’s equity and senior unsecured debt offers a defensively positioned exposure to a high‑quality banking institution.",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "Finnhub company profile",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub quote",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub recommendation trends",
+      "url": "https://finnhub.io/docs/api/stock-recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub financials reported",
+      "url": "https://finnhub.io/docs/api/financials-reported",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Finnhub company news",
+      "url": "https://finnhub.io/docs/api/company-news",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S5"
+    },
+    {
+      "title": "Wolfe Research cuts JPMorgan stock to Peer Perform on valuation concerns",
+      "url": "https://ng.investing.com/news/company-news/wolfe-research-cuts-jpmorgan-stock-to-peer-perform-on-valuation-concerns-93CH-1429093",
+      "source": "web",
+      "snippet": "Title: Wolfe Research cuts JPMorgan stock to Peer Perform on valuation concerns The firm cited the financial institution's full valuation after a significant rally in its share price over the last 12 months. JPMorgan's shares have seen a ro",
+      "id": "S6"
+    },
+    {
+      "title": "JPMorgan stays bullish on Samsung stock as valuation hits attractive levels By Investing.com",
+      "url": "https://au.investing.com/news/company-news/jpmorgan-stays-bullish-on-samsung-stock-as-valuation-hits-attractive-levels-93CH-3516974",
+      "source": "web",
+      "snippet": "Title: JPMorgan stays bullish on Samsung stock as valuation hits attractive levels By Investing.com On Friday, JPMorgan (NYSE:JPM) adjusted its price target on shares of   Samsung Electronics Co Ltd  . Despite the lower target, the firm has",
+      "id": "S7"
+    },
+    {
+      "title": "JPMorgan Stock Sits 6% Below Its High After a Record Year. Here’s What Q3 Earnings Must Prove | TIKR.com",
+      "url": "https://www.tikr.com/blog/jpmorgan-stock-sits-6-below-its-high-after-a-record-year-heres-what-q3-earnings-must-prove",
+      "source": "web",
+      "snippet": "JPM Total Revenues (TIKR)  The backdrop is a very strong 2026. In Q2, JPMorgan earned $16.9 billion excluding one-time items, and markets revenue jumped 35%. Still, CEO Jamie Dimon sounded cautious on the July earnings call. “It’s getting c",
+      "id": "S8"
+    },
+    {
+      "title": "JPMorgan Chase (NYSE:JPM) Stock Valuation, Peer Comparison & Price Targets - Simply Wall St",
+      "url": "https://simplywall.st/stocks/us/banks/nyse-jpm/jpmorgan-chase/valuation",
+      "source": "web",
+      "snippet": "is trading below our estimate of future cash flow value ($495.85)  > Significantly Below Future Cash Flow Value: JPM is trading below future cash flow value by more than 20%.      ## Key Valuation Metric  Which metric is best to use when lo",
+      "id": "S9"
+    },
+    {
+      "title": "JPMorgan Chase has long earned its... - Morningstar, Inc.",
+      "url": "https://www.facebook.com/MorningstarInc/posts/jpmorgan-chase-has-long-earned-its-place-among-the-highest-quality-financial-sto/1470150988485995",
+      "source": "web",
+      "snippet": "Log In  ## Morningstar, Inc.'s Post      [](  ### Morningstar, Inc.  June 22 ·   JPMorgan Chase has long earned its place among the highest-quality financial stocks.  While a premium price may have deterred some investors, shares are now ne",
+      "id": "S10"
+    },
+    {
+      "title": "JPMorgan Chase (NYSE:JPM) - Stock Analysis",
+      "url": "https://simplywall.st/stocks/us/banks/nyse-jpm/jpmorgan-chase",
+      "source": "web",
+      "snippet": "with recent Street views on the bank's earnings mix and valuation.Upcoming Dividend • Oct 02 #### Upcoming dividend of US$1.65 per share Eligible shareholders must have bought the stock before 06 October 2026.Payment date: 31 October 2026. ",
+      "id": "S11"
+    }
+  ],
+  "citations_used": [],
+  "tables": [
+    {
+      "title": "JPM Company Profile",
+      "columns": [
+        "ticker",
+        "name",
+        "country",
+        "currency",
+        "estimateCurrency",
+        "exchange",
+        "ipo",
+        "marketCapitalization",
+        "logo",
+        "shareOutstanding",
+        "finnhubIndustry",
+        "phone",
+        "weburl",
+        "floatingShare"
+      ],
+      "rows": [
+        [
+          "JPM",
+          "JPMorgan Chase & Co",
+          "US",
+          "USD",
+          "USD",
+          "NEW YORK STOCK EXCHANGE, INC.",
+          "1969-03-05",
+          903039.0395177379,
+          "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/JPM.png",
+          2658.2,
+          "Banking",
+          "12122706000",
+          "https://www.jpmorganchase.com/",
+          2646.7
+        ]
+      ]
+    },
+    {
+      "title": "JPM Quote",
+      "columns": [
+        "c",
+        "d",
+        "dp",
+        "h",
+        "l",
+        "o",
+        "pc",
+        "t"
+      ],
+      "rows": [
+        [
+          339.72,
+          4.19,
+          1.2488,
+          344.4,
+          337.52,
+          339.45,
+          335.53,
+          1792180800
+        ]
+      ]
+    },
+    {
+      "title": "JPM Analyst Recommendation Trends",
+      "columns": [
+        "symbol",
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "JPM",
+          "2026-09-01",
+          3,
+          15,
+          12,
+          0,
+          0
+        ],
+        [
+          "JPM",
+          "2026-08-01",
+          3,
+          15,
+          12,
+          0,
+          0
+        ],
+        [
+          "JPM",
+          "2026-07-01",
+          3,
+          14,
+          13,
+          0,
+          0
+        ],
+        [
+          "JPM",
+          "2026-06-01",
+          3,
+          14,
+          13,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "JPM Financials (Reported)",
+      "columns": [],
+      "rows": []
+    },
+    {
+      "title": "JPM Recent News (Top 6)",
+      "columns": [
+        "datetime",
+        "headline",
+        "source",
+        "url"
+      ],
+      "rows": [
+        [
+          1792279857,
+          "Howard Marks: The S&P 500 isn’t a good bet right now",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=a2e65f788114ee4a4cd9536b2f110b58c76c990b4474ad684c7b50f6fd98f4a4"
+        ],
+        [
+          1792271481,
+          "Schwab and JPMorgan Block Unauthorized AI Agents from Moving Money as Private Ordering Reaches Financial Core",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=70a7d179f310234a0ab7b73e92523757b92c2e65477e72f98f8ae0391b3291ac"
+        ],
+        [
+          1792233907,
+          "Jamie Dimon Warns AI Agents That Make Payments on Your Behalf ‘May Not’ Act Properly: AI Revolution Like a ‘Tsunami’ That Must Be Managed",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=cbff3ad0f3888ce5925cce32f889674e46b7558ca9f8658f29413022cc7abe6c"
+        ],
+        [
+          1792221190,
+          "MSCI Is Moving to Drop Strategy From Its Indexes. Could That Hit Bitcoin?",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=d7456ee981aed8a3b04a81bd3dc0971052929e9bcd47876a85ba5cbf305e9f11"
+        ],
+        [
+          1792197420,
+          "A kidney transplant milestone has Wall Street excited about Biogen",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=566b777de47cf4258a817a60d513bcb7ddc7645f2b14d60abe037a9814ff7172"
+        ],
+        [
+          1792191602,
+          "Goldman vs. JPMorgan: Both Raised Their Dividends. Which Bank Is the Better Buy?",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=89298c1915ae7dc7ffcf0b78240478d8164a8533fabc920e9cbcd97c1caea630"
+        ]
+      ]
+    }
+  ],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

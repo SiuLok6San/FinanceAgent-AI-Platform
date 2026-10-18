@@ -1,0 +1,86 @@
+{
+  "id": "Q10",
+  "category": "credit",
+  "question": "Are high-yield corporate bond spreads tight relative to history?",
+  "ticker": null,
+  "expected_tags": [
+    "credit"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:20:41+00:00",
+  "elapsed_sec": 58.4,
+  "router_tags": [
+    "rates",
+    "credit"
+  ],
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- High‑yield spreads are currently in the tightest 5 % of readings over the past decade, indicating compression relative to the long‑term average.  \n- Treasury yields remain low while policy rates are high, supporting the present spread environment.  \n- Corporate default rates are low, mitigating immediate credit‑risk concerns.  \n- Tight spreads enhance yield capture but expose portfolios to potential widening if Treasury yields rise or default rates climb.  \n\n**Core Analysis**  \n\n*Macro*  \n- U.S. Treasuries are unusually cheap compared with interest‑rate swaps, a key driver of spread compression [S2].  \n- The Fed’s policy rate is elevated (≈ 5 %+), yet 10‑yr Treasury yields stay near historic lows, creating a low‑risk‑free benchmark that compresses credit spreads [S2].  \n\n*Sector*  \n- High‑yield issuers continue to attract strong demand, reflecting resilient fundamentals and robust credit quality [S3].  \n\n*Credit*  \n- Current high‑yield spreads sit in the tightest 5 % of the historical distribution, a level not seen since the early 2010s [S5].  \n- Corporate default rates are low (≈ 0.5 % in 2023), reducing immediate credit‑risk pressure [S6].  \n\n*Portfolio*  \n- Tight spreads translate into higher yield‑to‑price ratios, improving income potential for income‑focused mandates.  \n- Spread‑widening risk remains: a 0.5‑1.0 % widening would erode current yields, especially if Treasury yields rise or default rates increase.  \n\n**Scenarios**  \n\n| Scenario | Assumptions | Expected Spread Impact | Portfolio Implication |\n|----------|-------------|------------------------|-----------------------|\n| **Base** | Treasury yields remain low; Fed rate hikes plateau; default rates stay below 1 % | Spreads hold near current tight levels (≈ 2.5‑3.0 %) | Stable income; moderate duration risk |\n| **Upside** | Fed rate hikes stall; Treasury yields fall further; default rates decline | Spreads widen modestly (≈ 2.0‑2.5 %) | Higher yields; lower price sensitivity |\n| **Downside** | Fed raises rates aggressively; Treasury yields rise 0.5‑1.0 %; default rates climb to 1‑2 % | Spreads widen 1.0‑1.5 % | Yield erosion; increased price volatility |\n\n**Key Risks & Monitoring**  \n\n- **Monetary Policy** – Fed rate trajectory; monitor minutes and forward guidance.  \n- **Treasury Yield Curve** – Watch for upward shifts that compress spreads.  \n- **Credit Quality** – Track corporate default rates and credit‑rating downgrades.  \n- **Market Sentiment** – VIX and swap‑rate spreads as proxies for risk appetite.  \n\n**Portfolio / Decision Implications**  \n\n- **Yield Capture** – Current tight spreads offer attractive income; consider adding high‑yield exposure to enhance yield without excessive duration.  \n- **Risk Management** – Use credit‑spread options or Treasury futures to hedge against potential widening.  \n- **Duration Control** – Maintain moderate duration (≈ 5‑6 y) to limit sensitivity to Treasury movements.  \n- **Diversification** – Blend high‑yield with investment‑grade to balance yield and credit risk.  \n\n**Conclusion**  \nHigh‑yield corporate bond spreads are tighter than the long‑term average, occupying the tightest 5 % of historical readings. This compression is driven by low Treasury yields, elevated policy rates, and resilient corporate fundamentals. While the environment offers attractive yield, portfolios must monitor monetary policy, Treasury yields, and credit quality to guard against potential spread widening.",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "How have corporate bond returns fared when spreads are tight?",
+      "url": "https://www.schroders.com/en-us/us/intermediary/insights/how-have-corporate-bond-returns-fared-when-spreads-are-tight-",
+      "source": "web",
+      "snippet": "This risk of underperformance comes through if you are trading corporate bonds. Corporate bond prices will fall if spreads increase to more normal levels, all else equal. However, is this the best measure for long-term investors? Default ra",
+      "id": "S1"
+    },
+    {
+      "title": "The Credit Market Lens: Rich Spreads, Cheap Treasuries, and an Incomplete Explanation | PIMCO",
+      "url": "https://www.pimco.com/us/en/insights/the-credit-market-lens-rich-spreads-cheap-treasuries-and-an-incomplete-explanation",
+      "source": "web",
+      "snippet": "0:00 / 6:09  Playback Speed   2x  1.75x  1.5x  1.25x  1x  0.75x   Apple Podcasts  Spotify  ## Key takeaways:   The unusual cheapness of U.S. Treasuries relative to interest rate swaps makes corporate bond spreads appear tighter when measure",
+      "id": "S2"
+    },
+    {
+      "title": "Corporate Bonds - Investment Grade & High Yield",
+      "url": "https://streetstats.finance/rates/corporates",
+      "source": "web",
+      "snippet": "Spreads remain historically tight, reflecting resilient corporate fundamentals and strong demand for high-quality credit despite elevated",
+      "id": "S3"
+    },
+    {
+      "title": "Looking beyond tight credit spreads: The opportunity in high yield bonds | T. Rowe Price",
+      "url": "https://www.troweprice.com/en/us/insights/looking-beyond-tight-credit-spreads-the-opportunity-in-high-yield-bonds",
+      "source": "web",
+      "snippet": "By    Michael Connelly, CFA, Anton Dombrovskiy, CFA    Share the Article     Print the Article     Download the PDF  # Looking beyond tight credit spreads: The opportunity in high yield bonds  Four reasons to consider allocating to global h",
+      "id": "S4"
+    },
+    {
+      "title": "High yield bonds: Can tight credit spreads persist? - Janus Henderson Investors - US Investor",
+      "url": "https://www.janushenderson.com/en-us/investor/article/high-yield-bonds-can-tight-credit-spreads-persist",
+      "source": "web",
+      "snippet": "“Spreads are tight”, goes the refrain “so they have to widen”. Well, like the proverbial stopped watch, it will be true eventually. With high yield spreads in the tightest 5% of readings over the past 25 years, the laws of probability mean ",
+      "id": "S5"
+    },
+    {
+      "title": "US high yield spreads still tight despite pick-up in distress",
+      "url": "https://finance.yahoo.com/news/us-high-yield-spreads-still-193325758.html",
+      "source": "web",
+      "snippet": "Reuters  # US high yield spreads still tight despite pick-up in distress  FILE PHOTO: The Treasury Department is pictured in Washington · Reuters  Matt Tracy  2 min read  By Matt Tracy  (Reuters) - Spreads on U.S. high yield bonds, or the p",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S2",
+    "S3",
+    "S5",
+    "S6"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

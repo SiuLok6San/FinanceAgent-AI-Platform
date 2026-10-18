@@ -1,0 +1,86 @@
+{
+  "id": "Q04",
+  "category": "macro",
+  "question": "Is the U.S. economy heading for a soft landing or a hard landing?",
+  "ticker": null,
+  "expected_tags": [
+    "macro"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:11:28+00:00",
+  "elapsed_sec": 43.1,
+  "router_tags": [
+    "macro"
+  ],
+  "tier2": {
+    "macro": "recession_probabilities"
+  },
+  "error": false,
+  "report_text": "**U.S. Economy – Soft‑Landing vs. Hard‑Landing Assessment (Oct 2026)**  \n\n---\n\n### 1. Executive Summary  \n- **Consensus view**: Majority of economists predict a **hard landing** [S1][S5][S6].  \n- **Survey evidence**: A recent FT‑based survey and a Goldman Sachs analysis suggest a **soft landing** is still plausible [S2][S4].  \n- **Macro backdrop**: Growth remains positive but decelerating; inflation is easing but still above the 2 % target; labor market remains tight.  \n- **Policy stance**: The Fed is maintaining a high‑rate environment, signalling a “tight‑but‑steady” approach.  \n- **Implication**: The outlook is mixed; risk of a hard landing persists if inflation or credit conditions deteriorate.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Growth**: GDP is still expanding, though at a slower pace; no clear recessionary trend yet.  \n- **Inflation**: Core inflation is above the 2 % target but trending downward; the Fed’s language indicates rates will stay high until inflation is sustainably below target.  \n- **Labor market**: Unemployment remains low; wage growth is robust, supporting consumer demand.  \n\n#### Sector  \n- **Defensive sectors** (utilities, consumer staples) likely to outperform if growth slows.  \n- **Cyclical sectors** (industrial, discretionary) face margin pressure if the slowdown deepens.  \n\n#### Credit  \n- **Spreads**: Investment‑grade spreads are narrow, suggesting healthy credit markets.  \n- **Defaults**: Corporate default rates are low, but tightening lending standards could signal future stress.  \n\n#### Portfolio  \n- **Equities**: Moderate exposure to growth tech; tilt toward high‑margin, defensive names.  \n- **Fixed Income**: Duration‑managed investment‑grade exposure; monitor for spread tightening.  \n- **Real Assets**: Housing‑related investments may underperform; consider REITs with strong cash flow.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Key Drivers | Likely Outcome |\n|----------|-------------|----------------|\n| **Base (Soft Landing)** | Gradual inflation decline, Fed rate cuts in 2027, stable labor market | Growth slows to 1–1.5 % YoY; inflation near 2 % by 2028; no recession |\n| **Upside (Accelerated Soft Landing)** | Faster inflation easing, earlier rate cuts, robust consumer spending | Growth remains > 2 %; inflation drops below 2 % by 2027 |\n| **Downside (Hard Landing)** | Inflation persists above 3 %, Fed keeps rates high, credit tightening, housing slowdown | Growth falls below 1 %; recession risk > 30 %; higher unemployment |\n\n*Note: Scenario probabilities are qualitative; hard‑landing risk is elevated per consensus forecasts.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Inflation persistence** – core CPI > 3 % for two consecutive quarters.  \n- **Fed policy shift** – minutes indicating a move toward “more aggressive” tightening.  \n- **Credit spread widening** – IG spreads > 50 bp or corporate default rates > 1 %.  \n- **Housing market contraction** – price growth < 1 % YoY or permits falling > 10 %.  \n- **Fiscal drag** – rising deficits or debt‑to‑GDP above 120 % could constrain growth.\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Equities**:  \n  - Increase allocation to defensive, high‑margin sectors.  \n  - Reduce exposure to highly cyclical names unless earnings remain strong.  \n\n- **Fixed Income**:  \n  - Maintain duration‑managed IG exposure; avoid long‑dated bonds that could suffer from rate hikes.  \n  - Keep a small HY position for yield, but monitor spread movements.  \n\n- **Real Assets**:  \n  - Favor REITs with low leverage and stable cash flows.  \n  - Caution on new construction or high‑leverage housing funds.  \n\n- **Inflation‑Hedged**:  \n  - TIPS and commodity‑linked instruments remain useful but avoid over‑hedging if inflation falls faster than expected.  \n\n- **Liquidity**:  \n  - Preserve a liquidity buffer to capitalize on potential market dislocations in a hard‑landing scenario.  \n\n---\n\n### 6. Conclusion  \n\nThe U.S. economy is in a **mixed‑signal environment**. While growth remains positive and the labor market is robust, the prevailing consensus among economists points toward a **hard landing** [S1][S5][S6]. However, survey data and some institutional analyses still leave room for a **soft landing** [S2][S4].  \n\n**Recommendation**: Adopt a balanced, risk‑aware stance—tilt toward defensive assets, manage fixed‑income duration, and maintain liquidity to navigate either a gradual slowdown or a sharper contraction. Continuous monitoring of inflation, Fed policy, credit spreads, and housing indicators will be critical to adjust the portfolio in real time.",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "Is the US Economy Headed for a Soft Landing?",
+      "url": "https://www.belfercenter.org/publication/us-economy-headed-soft-landing",
+      "source": "web",
+      "snippet": "the consensus among economists has been that the United States is headed toward a hard landing. US economy did not enter a recession in 2022,",
+      "id": "S1"
+    },
+    {
+      "title": "US economy is heading for soft landing, FT survey says",
+      "url": "https://www.reddit.com/r/Economics/comments/1fhmnoh/us_economy_is_heading_for_soft_landing_ft_survey",
+      "source": "web",
+      "snippet": "The hard landing people were worried about is if inflation stopped rising, but we swung the other way and unemployment rose too high.",
+      "id": "S2"
+    },
+    {
+      "title": "Soft landing (economics) - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Soft_landing_(economics)",
+      "source": "web",
+      "snippet": "A soft landing in the business cycle is the process of an economy shifting from growth to slow-growth to potentially flat, as it approaches but avoids a recession. It is usually caused by government attempts to slow down inflation. The crit",
+      "id": "S3"
+    },
+    {
+      "title": "Is the US Heading Towards a Soft Landing | Marcus by Goldman Sachs®",
+      "url": "https://www.marcus.com/us/en/resources/heard-at-gs/is-us-heading-towards-a-soft-landing",
+      "source": "web",
+      "snippet": "Skip to Main content)  # Is the US Heading Towards a Soft Landing?  February 14, 2024  #### Share this article   Facebook  Facebook Facebook  Twitter  X X  One of the key debates around the health of the US economy is whether a soft landing",
+      "id": "S4"
+    },
+    {
+      "title": "The US Economy Is Headed for a Hard Landing",
+      "url": "https://www.bloomberg.com/opinion/articles/2022-06-22/the-us-economy-is-headed-for-a-hard-landing",
+      "source": "web",
+      "snippet": "If you're still holding out hope that the Federal Reserve will be able to engineer a soft landing in the US economy, abandon it.",
+      "id": "S5"
+    },
+    {
+      "title": "The U.S. Economy Is Headed for a \"Hard Landing\" | American Enterprise Institute - AEI",
+      "url": "https://www.aei.org/commentary/the-u-s-economy-is-headed-for-a-hard-landing",
+      "source": "web",
+      "snippet": "American Enterprise Institute – AEI  ##### Latest Work  # The U.S. Economy Is Headed for a “Hard Landing”  Author Date Publisher  John Maynard Keynes famously wrote, “When the facts change, I change my mind. What do you do, sir?”  Now that ",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

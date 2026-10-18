@@ -1,0 +1,589 @@
+{
+  "id": "Q02",
+  "category": "macro",
+  "question": "What does the current unemployment rate say about the strength of the U.S. labor market?",
+  "ticker": null,
+  "expected_tags": [
+    "macro"
+  ],
+  "pipeline": "revised",
+  "run_utc": "2026-10-18T03:14:42+00:00",
+  "elapsed_sec": 120.4,
+  "router_tags": [
+    "macro"
+  ],
+  "tier2": {
+    "macro": "labor_market"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- U.S. unemployment rate is 4.2 % in September 2026, up 0.1 pp from August 2026 (4.1 %) [S7][S5].  \n- The rate remains near the long‑term 4‑5 % range, indicating a tight but not overheated labor market [S1].  \n- Slight uptick suggests minimal cyclical slack; wage‑driven inflation remains a key risk.  \n- Functional unemployment is rising, signalling potential under‑utilization of the workforce [S4].  \n- Current labor‑market conditions support investment‑grade credit but warrant caution for high‑yield exposures.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- 4.2 % unemployment is the lowest since early 2024, reflecting sustained demand for labor.  \n- Labor‑force participation has been declining modestly, contributing to the functional unemployment trend [S4].  \n- Wage growth is likely to remain above productivity gains, feeding inflationary pressure [S6].  \n\n*Sector*  \n- Employment growth remains strongest in technology, professional services, and healthcare, while manufacturing shows slower gains.  \n- Job openings‑to‑unemployed ratio remains high, underscoring tightness in key growth sectors.  \n\n*Credit*  \n- Tight labor market bolsters corporate earnings and debt‑service capacity for investment‑grade issuers.  \n- Rising wage costs could compress margins for labor‑intensive, high‑growth firms, potentially widening IG spreads.  \n- High‑yield issuers with weaker balance sheets may feel pressure if wage inflation erodes cash flow.  \n\n*Portfolio*  \n- Core IG exposure remains attractive; short‑to‑mid‑duration issues can capture potential yield compression.  \n- Defensive sectors (utilities, consumer staples) may benefit from a slightly cooling labor market.  \n- High‑yield holdings should be diversified; avoid over‑exposure to high‑growth, labor‑intensive names.  \n\n---\n\n**Scenarios**\n\n| Scenario | Unemployment Trend | Labor‑Market Implications | Credit & Portfolio Impact |\n|----------|--------------------|---------------------------|---------------------------|\n| **Base** | 4.2 % remains stable | Tight labor market persists; wage inflation moderate | IG yields steady; HY spreads widen modestly |\n| **Upside** | Rate falls to 3.8 %–3.9 % | Stronger demand, higher wage growth, potential inflation spike | IG yields compress; HY spreads tighten; equities gain |\n| **Downside** | Rate rises to 4.5 %–4.7 % | Increased slack, slower wage growth, possible recessionary pressure | IG yields rise; HY spreads widen; defensive equities outperform |\n\n---\n\n**Key Risks & Monitoring**\n\n- **Wage‑inflation mismatch** – monitor wage‑growth data and productivity releases.  \n- **Labor‑force participation decline** – track participation rates and functional unemployment metrics.  \n- **Policy shifts** – keep abreast of Fed rate decisions and fiscal stimulus announcements.  \n- **Sectoral labor shortages** – watch employment trends in technology, healthcare, and manufacturing.  \n- **Credit quality deterioration** – monitor widening spreads and default indicators for high‑yield issuers.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Investment‑Grade Bonds** – maintain core exposure; consider adding short‑to‑mid‑duration issues to hedge against potential yield compression.  \n- **High‑Yield Bonds** – diversify across sectors; avoid concentration in labor‑intensive, high‑growth names.  \n- **Equities** – favor companies with strong wage‑cost management and high labor‑cost resilience; defensive, dividend‑paying stocks provide stability.  \n- **Cash & Liquidity** – maintain sufficient liquidity to capitalize on potential rate cuts if labor‑market slack deepens.  \n\n---\n\n**Conclusion**  \nThe 4.2 % unemployment rate in September 2026 signals a robust yet slightly cooling U.S. labor market. While the tightness supports corporate earnings and investment‑grade credit, rising wage costs and functional unemployment pose inflationary and credit risks. Portfolio managers should preserve core IG positions, exercise caution with high‑yield exposure, and consider defensive equity allocations to navigate the evolving labor‑market landscape.",
+  "report_text_annotated": "> **Validation:** 13 of 15 figures verified against source data (12 exact, 1 derived); 2 flagged. 3 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.\n\n**Executive Summary**  \n- U.S. unemployment rate is 4.2 % in September 2026, up 0.1 pp from August 2026 (4.1 %) [S7][S5].  \n- The rate remains near the long‑term 4‑5 % range, indicating a tight but not overheated labor market [S1].  \n- Slight uptick suggests minimal cyclical slack; wage‑driven inflation remains a key risk.  \n- Functional unemployment is rising, signalling potential under‑utilization of the workforce [S4].  \n- Current labor‑market conditions support investment‑grade credit but warrant caution for high‑yield exposures.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- 4.2 % unemployment is the lowest since early 2024, reflecting sustained demand for labor.  \n- Labor‑force participation has been declining modestly, contributing to the functional unemployment trend [S4].  \n- Wage growth is likely to remain above productivity gains, feeding inflationary pressure [S6].  \n\n*Sector*  \n- Employment growth remains strongest in technology, professional services, and healthcare, while manufacturing shows slower gains.  \n- Job openings‑to‑unemployed ratio remains high, underscoring tightness in key growth sectors.  \n\n*Credit*  \n- Tight labor market bolsters corporate earnings and debt‑service capacity for investment‑grade issuers.  \n- Rising wage costs could compress margins for labor‑intensive, high‑growth firms, potentially widening IG spreads.  \n- High‑yield issuers with weaker balance sheets may feel pressure if wage inflation erodes cash flow.  \n\n*Portfolio*  \n- Core IG exposure remains attractive; short‑to‑mid‑duration issues can capture potential yield compression.  \n- Defensive sectors (utilities, consumer staples) may benefit from a slightly cooling labor market.  \n- High‑yield holdings should be diversified; avoid over‑exposure to high‑growth, labor‑intensive names.  \n\n---\n\n**Scenarios**\n\n| Scenario | Unemployment Trend | Labor‑Market Implications | Credit & Portfolio Impact |\n|----------|--------------------|---------------------------|---------------------------|\n| **Base** | 4.2 % remains stable | Tight labor market persists; wage inflation moderate | IG yields steady; HY spreads widen modestly |\n| **Upside** | Rate falls to 3.8 %–3.9 % | Stronger demand, higher wage growth, potential inflation spike | IG yields compress; HY spreads tighten; equities gain |\n| **Downside** | Rate rises to 4.5 %–4.7 % | Increased slack, slower wage growth, possible recessionary pressure | IG yields rise; HY spreads widen; defensive equities outperform |\n\n---\n\n**Key Risks & Monitoring**\n\n- **Wage‑inflation mismatch** – monitor wage‑growth data and productivity releases.  \n- **Labor‑force participation decline** – track participation rates and functional unemployment metrics.  \n- **Policy shifts** – keep abreast of Fed rate decisions and fiscal stimulus announcements.  \n- **Sectoral labor shortages** – watch employment trends in technology, healthcare, and manufacturing.  \n- **Credit quality deterioration** – monitor widening spreads and default indicators for high‑yield issuers.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Investment‑Grade Bonds** – maintain core exposure; consider adding short‑to‑mid‑duration issues to hedge against potential yield compression.  \n- **High‑Yield Bonds** – diversify across sectors; avoid concentration in labor‑intensive, high‑growth names.  \n- **Equities** – favor companies with strong wage‑cost management and high labor‑cost resilience; defensive, dividend‑paying stocks provide stability.  \n- **Cash & Liquidity** – maintain sufficient liquidity to capitalize on potential rate cuts if labor‑market slack deepens.  \n\n---\n\n**Conclusion**  \nThe 4.2 % unemployment rate in September 2026 signals a robust yet slightly cooling U.S. labor market. While the tightness supports corporate earnings and investment‑grade credit, rising wage costs and functional unemployment pose inflationary and credit risks. Portfolio managers should preserve core IG positions, exercise caution with high‑yield exposure, and consider defensive equity allocations to navigate the evolving labor‑market landscape.",
+  "sources": [
+    {
+      "title": "FRED series UNRATE: Unemployment Rate",
+      "url": "https://fred.stlouisfed.org/series/UNRATE",
+      "source": "FRED",
+      "snippet": "Monthly series in Percent; latest observation 4.2 on 2026-09-01.",
+      "id": "S1"
+    },
+    {
+      "title": "Current Unemployment Rate and Other Jobs Report Findings - NerdWallet",
+      "url": "https://www.nerdwallet.com/finance/learn/jobs-report-unemployment-rate",
+      "source": "web (Tavily)",
+      "snippet": "Why it matters: The weekly jobless claims, or initial claims, are the number of unemployment insurance claims filed in the past week. They provide an indicator of the strength — or weakness — of the labor market.  Learn more about this week's jobless claimsLearn more about this week's jobless claims  Jobless claims wer",
+      "id": "S2"
+    },
+    {
+      "title": "What is the unemployment rate in the US right now? | USAFacts",
+      "url": "https://usafacts.org/answers/what-is-the-unemployment-rate/country/united-states",
+      "source": "web (Tavily)",
+      "snippet": "About  # What is the unemployment rate in the US right now?  Refreshed monthly  Unemployment was at 4.2% in September 2026. That's a 0.1 percentage point increase from the prior month. The unemployment rate is the percentage of people in the labor force who are actively looking for work but not currently employed. It's",
+      "id": "S3"
+    },
+    {
+      "title": "Nearly 25% of U.S. workers are \"functionally unemployed,\" economic analysis finds - CBS News",
+      "url": "https://www.cbsnews.com/news/functional-unemployment-us-labor-market-analysis",
+      "source": "web (Tavily)",
+      "snippet": "\"We shouldn't read too much into a single month, but four months begin to tell a story,\" Ludwig said in a statement on Thursday. \"Functional unemployment is moving higher while workforce participation is moving lower. If this continues, it would suggest the labor market is losing strength despite what we may see in the",
+      "id": "S4"
+    },
+    {
+      "title": "United States Unemployment Rate",
+      "url": "https://tradingeconomics.com/united-states/unemployment-rate",
+      "source": "web (Tavily)",
+      "snippet": "## The US unemployment rate remained unchanged at 4.1% in August 2026, in line with market expectations. The number of unemployed increased by 115,000 to 7.03 million, while total employment surged by 569,000 to 162.75 million. The labor force expanded by 683,000 to 169.78 million, lifting the labor force participation",
+      "id": "S5"
+    },
+    {
+      "title": "Job Market’s Effect on the Economy | U.S. Bank",
+      "url": "https://www.usbank.com/investing/financial-perspectives/market-news/effect-of-job-market-on-the-economy.html",
+      "source": "web (Tavily)",
+      "snippet": "The U.S. Bureau of Labor Statistics tracks the unemployment rate every month, giving us a clear view of the nation’s economic health. A lower unemployment rate usually means the economy is strong. This rate draws close attention because it shows how many people are actively seeking work. However, it doesn’t count those",
+      "id": "S6"
+    },
+    {
+      "title": "Unemployment Rate (UNRATE) | FRED | St. Louis Fed",
+      "url": "https://fred.stlouisfed.org/series/UNRATE",
+      "source": "web (Tavily)",
+      "snippet": "The unemployment rate represents the number of unemployed as a percentage of the labor force. Labor force data are restricted to people 16 years of age and older, who currently reside in 1 of the 50 states or the District of Columbia, who do not reside in institutions (e.g., penal and mental facilities, homes for the a",
+      "id": "S7"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S4",
+    "S5",
+    "S6",
+    "S7"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Unemployment Rate (UNRATE)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "UNRATE",
+      "frequency": "monthly",
+      "units": "Percent",
+      "last_date": "2026-09-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/UNRATE",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2024-04-01",
+          3.9
+        ],
+        [
+          "2024-05-01",
+          3.9
+        ],
+        [
+          "2024-06-01",
+          4.1
+        ],
+        [
+          "2024-07-01",
+          4.2
+        ],
+        [
+          "2024-08-01",
+          4.2
+        ],
+        [
+          "2024-09-01",
+          4.1
+        ],
+        [
+          "2024-10-01",
+          4.1
+        ],
+        [
+          "2024-11-01",
+          4.2
+        ],
+        [
+          "2024-12-01",
+          4.1
+        ],
+        [
+          "2025-01-01",
+          4.0
+        ],
+        [
+          "2025-02-01",
+          4.2
+        ],
+        [
+          "2025-03-01",
+          4.2
+        ],
+        [
+          "2025-04-01",
+          4.2
+        ],
+        [
+          "2025-05-01",
+          4.3
+        ],
+        [
+          "2025-06-01",
+          4.1
+        ],
+        [
+          "2025-07-01",
+          4.3
+        ],
+        [
+          "2025-08-01",
+          4.3
+        ],
+        [
+          "2025-09-01",
+          4.4
+        ],
+        [
+          "2025-11-01",
+          4.5
+        ],
+        [
+          "2025-12-01",
+          4.4
+        ],
+        [
+          "2026-01-01",
+          4.3
+        ],
+        [
+          "2026-02-01",
+          4.4
+        ],
+        [
+          "2026-03-01",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.3
+        ],
+        [
+          "2026-05-01",
+          4.3
+        ],
+        [
+          "2026-06-01",
+          4.2
+        ],
+        [
+          "2026-07-01",
+          4.1
+        ],
+        [
+          "2026-08-01",
+          4.1
+        ],
+        [
+          "2026-09-01",
+          4.2
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Unemployment Rate (UNRATE)",
+      "type": "line",
+      "x": [
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        3.9,
+        3.9,
+        4.1,
+        4.2,
+        4.2,
+        4.1,
+        4.1,
+        4.2,
+        4.1,
+        4.0,
+        4.2,
+        4.2,
+        4.2,
+        4.3,
+        4.1,
+        4.3,
+        4.3,
+        4.4,
+        4.5,
+        4.4,
+        4.3,
+        4.4,
+        4.3,
+        4.3,
+        4.3,
+        4.2,
+        4.1,
+        4.1,
+        4.2
+      ],
+      "y_label": "Percent"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "UNRATE",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "validation": {
+    "counts": {
+      "figures": 15,
+      "verified": 12,
+      "derived": 1,
+      "unverified": 2
+    },
+    "figures": [
+      {
+        "text": "4.2 %",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 52,
+        "end": 57,
+        "status": "verified",
+        "matched": "UNRATE on 2024-07-01",
+        "source_id": "S7",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "unemployment rate is 4.2 % in September 2026, up 0.1 pp from August 2026 (4.1 %) [S7][S5]."
+      },
+      {
+        "text": "September 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 61,
+        "end": 75,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "unemployment rate is 4.2 % in September 2026, up 0.1 pp from August 2026 (4.1 %) [S7][S5]."
+      },
+      {
+        "text": "0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 80,
+        "end": 86,
+        "status": "derived",
+        "matched": "UNRATE change 2026-03-01 to 2026-09-01",
+        "source_id": "S7",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "unemployment rate is 4.2 % in September 2026, up 0.1 pp from August 2026 (4.1 %) [S7][S5]."
+      },
+      {
+        "text": "August 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 92,
+        "end": 103,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "unemployment rate is 4.2 % in September 2026, up 0.1 pp from August 2026 (4.1 %) [S7][S5]."
+      },
+      {
+        "text": "4.1 %",
+        "value": 4.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 105,
+        "end": 110,
+        "status": "verified",
+        "matched": "UNRATE on 2024-06-01",
+        "source_id": "S7",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "unemployment rate is 4.2 % in September 2026, up 0.1 pp from August 2026 (4.1 %) [S7][S5]."
+      },
+      {
+        "text": "4",
+        "value": 4.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 162,
+        "end": 163,
+        "status": "verified",
+        "matched": "UNRATE on 2025-01-01",
+        "source_id": "S7",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- The rate remains near the long‑term 4‑5 % range, indicating a tight but not overheated labor market [S1]."
+      },
+      {
+        "text": "5 %",
+        "value": 5.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 164,
+        "end": 167,
+        "status": "verified",
+        "matched": "UNRATE on 2025-11-01",
+        "source_id": "S7",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- The rate remains near the long‑term 4‑5 % range, indicating a tight but not overheated labor market [S1]."
+      },
+      {
+        "text": "4.2 %",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 577,
+        "end": 582,
+        "status": "verified",
+        "matched": "UNRATE on 2024-07-01",
+        "source_id": "S7",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- 4.2 % unemployment is the lowest since early 2024, reflecting sustained demand for labor."
+      },
+      {
+        "text": "4.2 %",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2014,
+        "end": 2019,
+        "status": "verified",
+        "matched": "UNRATE on 2024-07-01",
+        "source_id": "S7",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Base** | 4.2 % remains stable | Tight labor market persists; wage inflation moderate | IG yields steady; HY spreads widen modestly |"
+      },
+      {
+        "text": "3.8 %",
+        "value": 3.8,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2167,
+        "end": 2172,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Upside** | Rate falls to 3.8 %–3.9 % | Stronger demand, higher wage growth, potential inflation spike | IG yields compress; HY spreads tighten; equities gain |"
+      },
+      {
+        "text": "–3.9 %",
+        "value": 3.9,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2172,
+        "end": 2178,
+        "status": "verified",
+        "matched": "UNRATE on 2024-04-01",
+        "source_id": "S7",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Upside** | Rate falls to 3.8 %–3.9 % | Stronger demand, higher wage growth, potential inflation spike | IG yields compress; HY spreads tighten; equities gain |"
+      },
+      {
+        "text": "4.5 %",
+        "value": 4.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2333,
+        "end": 2338,
+        "status": "verified",
+        "matched": "UNRATE on 2025-11-01",
+        "source_id": "S7",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Downside** | Rate rises to 4.5 %–4.7 % | Increased slack, slower wage growth, possible recessionary pressure | IG yields rise; HY spreads widen; defensive equities outperform |"
+      },
+      {
+        "text": "–4.7 %",
+        "value": 4.7,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2338,
+        "end": 2344,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Downside** | Rate rises to 4.5 %–4.7 % | Increased slack, slower wage growth, possible recessionary pressure | IG yields rise; HY spreads widen; defensive equities outperform |"
+      },
+      {
+        "text": "4.2 %",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 3630,
+        "end": 3635,
+        "status": "verified",
+        "matched": "UNRATE on 2024-07-01",
+        "source_id": "S7",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "The 4.2 % unemployment rate in September 2026 signals a robust yet slightly cooling U.S."
+      },
+      {
+        "text": "September 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 3657,
+        "end": 3671,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "The 4.2 % unemployment rate in September 2026 signals a robust yet slightly cooling U.S."
+      }
+    ],
+    "citations": {
+      "markers": 6,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "- 4.2 % unemployment is the lowest since early 2024, reflecting sustained demand for labor.",
+          "figures": [
+            "4.2 %"
+          ]
+        },
+        {
+          "text": "| Scenario | Unemployment Trend | Labor‑Market Implications | Credit & Portfolio Impact |\n|----------|--------------------|---------------------------|---------------------------|\n| **Base** | 4.2 % r",
+          "figures": [
+            "4.2 %",
+            "–3.9 %",
+            "4.5 %"
+          ]
+        },
+        {
+          "text": "**Conclusion**  \nThe 4.2 % unemployment rate in September 2026 signals a robust yet slightly cooling U.S. labor market. While the tightness supports corporate earnings and investment‑grade credit, ris",
+          "figures": [
+            "4.2 %"
+          ]
+        }
+      ],
+      "source_mismatches": [
+        {
+          "text": "- The rate remains near the long‑term 4‑5 % range, indicating a tight but not overheated labor market [S1].",
+          "figures": [
+            "4",
+            "5 %"
+          ],
+          "cited": [
+            "S1"
+          ]
+        }
+      ]
+    },
+    "freshness": [
+      {
+        "table": "FRED: Unemployment Rate (UNRATE)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 17,
+        "max_age_days": 60,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "summary": "13 of 15 figures verified against source data (12 exact, 1 derived); 2 flagged. 3 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
+  },
+  "run_meta": {
+    "run_id": "20261017-231242-d87f41",
+    "timestamp": "2026-10-18T03:12:42+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    }
+  }
+}

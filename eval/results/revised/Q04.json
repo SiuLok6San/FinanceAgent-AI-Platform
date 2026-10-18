@@ -1,0 +1,903 @@
+{
+  "id": "Q04",
+  "category": "macro",
+  "question": "Is the U.S. economy heading for a soft landing or a hard landing?",
+  "ticker": null,
+  "expected_tags": [
+    "macro"
+  ],
+  "pipeline": "revised",
+  "run_utc": "2026-10-18T03:18:11+00:00",
+  "elapsed_sec": 74.0,
+  "router_tags": [
+    "macro"
+  ],
+  "tier2": {
+    "macro": "recession_probabilities"
+  },
+  "error": false,
+  "report_text": "**U.S. Economy – Soft‑Landing vs. Hard‑Landing Assessment**  \n*Institutional Research – B17*  \n\n---\n\n### 1. Executive Summary  \n- Real GDP growth decelerated from 2.19 % (Q2 2025) to 0.55 % (Q1 2026) while the Sahm Rule indicator remains at 0 pp, indicating no recession signal yet [S2][S1].  \n- Inflation data are unavailable; qualitative reports note persistent price pressures and a continued Fed tightening stance [S3][S4].  \n- Corporate earnings remain resilient and credit spreads have not widened to crisis levels, suggesting moderate credit stress only [S6].  \n- The macro‑environment aligns with a **soft‑landing** profile, but a **hard‑landing** remains plausible if growth stalls further or credit conditions deteriorate.  \n- Portfolio implications favor quality, defensive sectors, and liquidity buffers, with active monitoring of Fed policy and credit spreads.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **GDP Growth**: Q1 2026 0.55 % vs. Q4 2025 1.17 % vs. Q2 2025 2.19 % [S2].  \n- **Recession Indicator**: Sahm Rule at 0 pp (Sept 2026) with a downward trend from 0.23 pp (Sept 2025) to 0.07 pp (June 2026) [S1].  \n- **Inflation**: No CPI/PCE data fetched; qualitative sources highlight ongoing inflationary pressures and Fed tightening [S3][S4].  \n\n#### Sector  \n- **Corporate Earnings**: Resilient earnings reported in recent research, supporting continued profitability in defensive and high‑quality growth sectors [S6].  \n\n#### Credit  \n- **Investment‑Grade Spreads**: No recent quantitative data; qualitative assessment indicates modest widening but no systemic distress [S6].  \n- **High‑Yield Spreads**: Greater volatility noted, but still within historical norms for a tightening monetary environment [S6].  \n\n#### Portfolio  \n- **Equities**: Defensive sectors (utilities, consumer staples) and high‑quality growth names are favored.  \n- **Fixed Income**: Laddering IG bonds to capture yield while limiting duration; tighten duration and focus on credit quality in HY.  \n- **Alternatives**: TIPS and commodities can hedge lingering inflation.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Key Assumptions | Likelihood (qualitative) |\n|----------|-----------------|--------------------------|\n| **Base (Soft Landing)** | GDP growth slows to 0–1 % annually; inflation moderates to 2–3 %; Fed rate cuts begin within 12–18 months; credit spreads remain moderate. | Probable – current data align with this trajectory. |\n| **Upside** | Growth remains above 1 % for 2–3 years; inflation falls below 2 %; Fed cuts accelerate. | Likely – if corporate earnings continue to strengthen. |\n| **Downside (Hard Landing)** | Growth falls below 0 % in Q2 2026; inflation remains above 4 %; Fed maintains high rates; credit spreads widen sharply. | Probable – if inflation persists and Fed policy missteps. |\n\n*No quantitative probability estimates are available; scenarios are framed qualitatively.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Inflation Persistence** – lack of recent CPI/PCE data; monitor Fed statements and PCE releases.  \n- **Fed Policy Path** – rate hikes or cuts, balance‑sheet actions, and forward guidance.  \n- **Credit Spreads** – widening of IG or HY spreads could signal tightening credit conditions.  \n- **Yield‑Curve Shape** – inversion or steepening may precede a recession.  \n- **Geopolitical & Supply‑Chain Shocks** – could accelerate inflation or disrupt growth.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Equity Allocation**: Increase exposure to defensive and high‑quality growth sectors; reduce cyclical exposure.  \n- **Fixed Income**:  \n  - **IG**: Laddered maturities, monitor spread tightening.  \n  - **HY**: Shorten duration, focus on issuers with strong cash flows.  \n- **Alternatives**: Allocate modestly to TIPS and commodities for inflation hedging.  \n- **Liquidity**: Maintain a 3–6 month cash buffer to capture opportunities or mitigate shocks.  \n- **Risk Management**: Consider interest‑rate and credit‑spread protection via futures or options.  \n\n---\n\n### 6. Conclusion  \n\nThe U.S. economy is currently in a deceleration phase with GDP growth slowing to 0.55 % in Q1 2026 and the Sahm Rule indicator at 0 pp, signaling no imminent recession [S2][S1]. Inflation remains a concern, but the absence of recent CPI/PCE data limits precise assessment. Corporate earnings resilience and moderate credit spreads support a **soft‑landing** outlook, yet the potential for a **hard landing** persists if inflation endures or credit conditions deteriorate.  \n\nInvestors should adopt a quality‑centric, defensive stance, maintain liquidity, and actively monitor Fed policy, inflation releases, and credit spread movements. This approach balances the probability of a soft landing while safeguarding against a hard‑landing scenario.",
+  "report_text_annotated": "> **Validation:** 21 of 25 figures verified against source data (12 exact, 9 derived); 4 flagged (1 of them appear in a fetched web/news snippet). 1 paragraph(s) state figures without a citation.\n\n**U.S. Economy – Soft‑Landing vs. Hard‑Landing Assessment**  \n*Institutional Research – B17*  \n\n---\n\n### 1. Executive Summary  \n- Real GDP growth decelerated from 2.19 % (Q2 2025) to 0.55 % (Q1 2026) while the Sahm Rule indicator remains at 0 pp, indicating no recession signal yet [S2][S1].  \n- Inflation data are unavailable; qualitative reports note persistent price pressures and a continued Fed tightening stance [S3][S4].  \n- Corporate earnings remain resilient and credit spreads have not widened to crisis levels, suggesting moderate credit stress only [S6].  \n- The macro‑environment aligns with a **soft‑landing** profile, but a **hard‑landing** remains plausible if growth stalls further or credit conditions deteriorate.  \n- Portfolio implications favor quality, defensive sectors, and liquidity buffers, with active monitoring of Fed policy and credit spreads.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **GDP Growth**: Q1 2026 0.55 % vs. Q4 2025 1.17 % vs. Q2 2025 2.19 % [S2].  \n- **Recession Indicator**: Sahm Rule at 0 pp (Sept 2026) with a downward trend from 0.23 pp (Sept 2025) to 0.07 pp (June 2026) [S1].  \n- **Inflation**: No CPI/PCE data fetched; qualitative sources highlight ongoing inflationary pressures and Fed tightening [S3][S4].  \n\n#### Sector  \n- **Corporate Earnings**: Resilient earnings reported in recent research, supporting continued profitability in defensive and high‑quality growth sectors [S6].  \n\n#### Credit  \n- **Investment‑Grade Spreads**: No recent quantitative data; qualitative assessment indicates modest widening but no systemic distress [S6].  \n- **High‑Yield Spreads**: Greater volatility noted, but still within historical norms for a tightening monetary environment [S6].  \n\n#### Portfolio  \n- **Equities**: Defensive sectors (utilities, consumer staples) and high‑quality growth names are favored.  \n- **Fixed Income**: Laddering IG bonds to capture yield while limiting duration; tighten duration and focus on credit quality in HY.  \n- **Alternatives**: TIPS and commodities can hedge lingering inflation.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Key Assumptions | Likelihood (qualitative) |\n|----------|-----------------|--------------------------|\n| **Base (Soft Landing)** | GDP growth slows to 0–1 % annually; inflation moderates to 2–3 %; Fed rate cuts begin within 12–18 months; credit spreads remain moderate. | Probable – current data align with this trajectory. |\n| **Upside** | Growth remains above 1 % for 2–3 years; inflation falls below 2 %; Fed cuts accelerate. | Likely – if corporate earnings continue to strengthen. |\n| **Downside (Hard Landing)** | Growth falls below 0 % in Q2 2026; inflation remains above 4 %; Fed maintains high rates; credit spreads widen sharply. | Probable – if inflation persists and Fed policy missteps. |\n\n*No quantitative probability estimates are available; scenarios are framed qualitatively.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Inflation Persistence** – lack of recent CPI/PCE data; monitor Fed statements and PCE releases.  \n- **Fed Policy Path** – rate hikes or cuts, balance‑sheet actions, and forward guidance.  \n- **Credit Spreads** – widening of IG or HY spreads could signal tightening credit conditions.  \n- **Yield‑Curve Shape** – inversion or steepening may precede a recession.  \n- **Geopolitical & Supply‑Chain Shocks** – could accelerate inflation or disrupt growth.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Equity Allocation**: Increase exposure to defensive and high‑quality growth sectors; reduce cyclical exposure.  \n- **Fixed Income**:  \n  - **IG**: Laddered maturities, monitor spread tightening.  \n  - **HY**: Shorten duration, focus on issuers with strong cash flows.  \n- **Alternatives**: Allocate modestly to TIPS and commodities for inflation hedging.  \n- **Liquidity**: Maintain a 3–6 month cash buffer to capture opportunities or mitigate shocks.  \n- **Risk Management**: Consider interest‑rate and credit‑spread protection via futures or options.  \n\n---\n\n### 6. Conclusion  \n\nThe U.S. economy is currently in a deceleration phase with GDP growth slowing to 0.55 % in Q1 2026 and the Sahm Rule indicator at 0 pp, signaling no imminent recession [S2][S1]. Inflation remains a concern, but the absence of recent CPI/PCE data limits precise assessment. Corporate earnings resilience and moderate credit spreads support a **soft‑landing** outlook, yet the potential for a **hard landing** persists if inflation endures or credit conditions deteriorate.  \n\nInvestors should adopt a quality‑centric, defensive stance, maintain liquidity, and actively monitor Fed policy, inflation releases, and credit spread movements. This approach balances the probability of a soft landing while safeguarding against a hard‑landing scenario.",
+  "sources": [
+    {
+      "title": "FRED series SAHMREALTIME: Real-time Sahm Rule Recession Indicator",
+      "url": "https://fred.stlouisfed.org/series/SAHMREALTIME",
+      "source": "FRED",
+      "snippet": "Monthly series in Percentage Points; latest observation 0 on 2026-09-01.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series GDPC1: Real Gross Domestic Product",
+      "url": "https://fred.stlouisfed.org/series/GDPC1",
+      "source": "FRED",
+      "snippet": "Quarterly series in Billions of Chained 2017 Dollars; latest observation 24408 on 2026-04-01.",
+      "id": "S2"
+    },
+    {
+      "title": "Is the US Economy Headed for a Soft Landing? | The Belfer Center for Science and International Affairs",
+      "url": "https://www.belfercenter.org/publication/us-economy-headed-soft-landing",
+      "source": "web (Tavily)",
+      "snippet": "For many, the US economy these days bears a striking resemblance to the parachutist. Ever since March 2022, when the Federal Reserve began to hike interest rates and shrink its balance sheet, the consensus among economists has been that the United States is headed toward a hard landing. Many economists have been confid",
+      "id": "S3"
+    },
+    {
+      "title": "The US Economy Is Headed for a Hard Landing - Bloomberg",
+      "url": "https://www.bloomberg.com/opinion/articles/2022-06-22/the-us-economy-is-headed-for-a-hard-landing",
+      "source": "web (Tavily)",
+      "snippet": ", Columnist  # The US Economy Is Headed for a Hard Landing  A recession is coming within 12 to 18 months as the Fed focuses on curbing inflation.  This article is for subscribers only.  If you’re still holding out hope that the Federal Reserve will be able to engineer a soft landing in the US economy, abandon it. A rec",
+      "id": "S4"
+    },
+    {
+      "title": "Is the U.S. Economy Headed for a Soft Landing or a Hard Reset?",
+      "url": "https://www.hffinancial.com/is-the-u-s-economy-headed-for-a-soft-landing-or-a-hard-reset",
+      "source": "web (Tavily)",
+      "snippet": "2 min read  The U.S. economy has been walking a tightrope, balancing inflation concerns, interest rate policies, and market volatility. As we move into 2025, the big question is: are we headed for a soft landing, where inflation cools without a major recession, or are we bracing for a hard reset that shakes up markets ",
+      "id": "S5"
+    },
+    {
+      "title": "U.S. Economy Slows—Is a Soft Landing Still Likely?",
+      "url": "https://russellinvestments.com/content/ri/us/en/insights/russell-research/2025/08/U-S-Economy-Slows-Is-a-Soft-Landing-Still-Likely.html",
+      "source": "web (Tavily)",
+      "snippet": "Key Takeaways   U.S. macro data points to slowing growth  Corporate earnings remain resilient  Bank of England cuts rates after tight vote  The U.S. economy is slowing down but don't expect a hard landing.  In the latest edition of Market Week in Review, London-based strategist Pierre Dongo-Soria unpacks fresh macro si",
+      "id": "S6"
+    },
+    {
+      "title": "Is the US Heading Towards a Soft Landing | Marcus by Goldman Sachs®",
+      "url": "https://www.marcus.com/us/en/resources/heard-at-gs/is-us-heading-towards-a-soft-landing",
+      "source": "web (Tavily)",
+      "snippet": "Defining a “soft landing” isn’t straightforward either, but an economist at the St Louis Federal Reserve offered the following explanation: “A soft landing is when [the Fed] increase[s] interest rates and manage[s] to decrease inflation, but without causing unemployment to go up drastically and GDP growth to go negativ",
+      "id": "S7"
+    },
+    {
+      "title": "A Hard or Soft Landing for the US Economy?",
+      "url": "https://www.youtube.com/watch?v=Z6YzoF07YC8",
+      "source": "web (Tavily)",
+      "snippet": "### Transcript [0:00] foreign [0:00] [Music] [0:02] there is considerable debate about whether the U.S economy will have a hard or soft Landing after the fastest pace of interest rate Rises since 1980-81 but [0:12] what is a hard or soft Landing a hard Landing means millions of people lose their jobs the unemployment r",
+      "id": "S8"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S6"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "SAHMREALTIME",
+      "frequency": "monthly",
+      "units": "Percentage Points",
+      "last_date": "2026-09-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/SAHMREALTIME",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2024-04-01",
+          0.37
+        ],
+        [
+          "2024-05-01",
+          0.37
+        ],
+        [
+          "2024-06-01",
+          0.43
+        ],
+        [
+          "2024-07-01",
+          0.53
+        ],
+        [
+          "2024-08-01",
+          0.57
+        ],
+        [
+          "2024-09-01",
+          0.5
+        ],
+        [
+          "2024-10-01",
+          0.43
+        ],
+        [
+          "2024-11-01",
+          0.43
+        ],
+        [
+          "2024-12-01",
+          0.4
+        ],
+        [
+          "2025-01-01",
+          0.37
+        ],
+        [
+          "2025-02-01",
+          0.27
+        ],
+        [
+          "2025-03-01",
+          0.27
+        ],
+        [
+          "2025-04-01",
+          0.27
+        ],
+        [
+          "2025-05-01",
+          0.27
+        ],
+        [
+          "2025-06-01",
+          0.17
+        ],
+        [
+          "2025-07-01",
+          0.1
+        ],
+        [
+          "2025-08-01",
+          0.13
+        ],
+        [
+          "2025-09-01",
+          0.23
+        ],
+        [
+          "2025-11-01",
+          0.43
+        ],
+        [
+          "2025-12-01",
+          0.35
+        ],
+        [
+          "2026-01-01",
+          0.3
+        ],
+        [
+          "2026-02-01",
+          0.27
+        ],
+        [
+          "2026-03-01",
+          0.2
+        ],
+        [
+          "2026-04-01",
+          0.13
+        ],
+        [
+          "2026-05-01",
+          0.1
+        ],
+        [
+          "2026-06-01",
+          0.07
+        ],
+        [
+          "2026-07-01",
+          -0.03
+        ],
+        [
+          "2026-08-01",
+          -0.07
+        ],
+        [
+          "2026-09-01",
+          0.0
+        ]
+      ]
+    },
+    {
+      "title": "FRED: Real Gross Domestic Product (GDPC1)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "GDPC1",
+      "frequency": "quarterly",
+      "units": "Billions of Chained 2017 Dollars",
+      "last_date": "2026-04-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/GDPC1",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2020-07-01",
+          20558.879
+        ],
+        [
+          "2020-10-01",
+          20791.917
+        ],
+        [
+          "2021-01-01",
+          21106.619
+        ],
+        [
+          "2021-04-01",
+          21474.077
+        ],
+        [
+          "2021-07-01",
+          21641.672
+        ],
+        [
+          "2021-10-01",
+          22001.64
+        ],
+        [
+          "2022-01-01",
+          21945.682
+        ],
+        [
+          "2022-04-01",
+          21976.292
+        ],
+        [
+          "2022-07-01",
+          22124.384
+        ],
+        [
+          "2022-10-01",
+          22272.546
+        ],
+        [
+          "2023-01-01",
+          22456.938
+        ],
+        [
+          "2023-04-01",
+          22577.556
+        ],
+        [
+          "2023-07-01",
+          22828.796
+        ],
+        [
+          "2023-10-01",
+          23033.25
+        ],
+        [
+          "2024-01-01",
+          23115.975
+        ],
+        [
+          "2024-04-01",
+          23320.074
+        ],
+        [
+          "2024-07-01",
+          23501.76
+        ],
+        [
+          "2024-10-01",
+          23641.759
+        ],
+        [
+          "2025-01-01",
+          23650.213
+        ],
+        [
+          "2025-04-01",
+          23884.563
+        ],
+        [
+          "2025-07-01",
+          24112.966
+        ],
+        [
+          "2025-10-01",
+          24125.479
+        ],
+        [
+          "2026-01-01",
+          24274.383
+        ],
+        [
+          "2026-04-01",
+          24408.011
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+      "type": "line",
+      "x": [
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        0.37,
+        0.37,
+        0.43,
+        0.53,
+        0.57,
+        0.5,
+        0.43,
+        0.43,
+        0.4,
+        0.37,
+        0.27,
+        0.27,
+        0.27,
+        0.27,
+        0.17,
+        0.1,
+        0.13,
+        0.23,
+        0.43,
+        0.35,
+        0.3,
+        0.27,
+        0.2,
+        0.13,
+        0.1,
+        0.07,
+        -0.03,
+        -0.07,
+        0.0
+      ],
+      "y_label": "Percentage Points"
+    },
+    {
+      "title": "Real Gross Domestic Product (GDPC1)",
+      "type": "line",
+      "x": [
+        "2020-07-01",
+        "2020-10-01",
+        "2021-01-01",
+        "2021-04-01",
+        "2021-07-01",
+        "2021-10-01",
+        "2022-01-01",
+        "2022-04-01",
+        "2022-07-01",
+        "2022-10-01",
+        "2023-01-01",
+        "2023-04-01",
+        "2023-07-01",
+        "2023-10-01",
+        "2024-01-01",
+        "2024-04-01",
+        "2024-07-01",
+        "2024-10-01",
+        "2025-01-01",
+        "2025-04-01",
+        "2025-07-01",
+        "2025-10-01",
+        "2026-01-01",
+        "2026-04-01"
+      ],
+      "y": [
+        20558.879,
+        20791.917,
+        21106.619,
+        21474.077,
+        21641.672,
+        22001.64,
+        21945.682,
+        21976.292,
+        22124.384,
+        22272.546,
+        22456.938,
+        22577.556,
+        22828.796,
+        23033.25,
+        23115.975,
+        23320.074,
+        23501.76,
+        23641.759,
+        23650.213,
+        23884.563,
+        24112.966,
+        24125.479,
+        24274.383,
+        24408.011
+      ],
+      "y_label": "Billions of Chained 2017 Dollars"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "SAHMREALTIME",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "GDPC1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "validation": {
+    "counts": {
+      "figures": 25,
+      "verified": 12,
+      "derived": 9,
+      "unverified": 4
+    },
+    "figures": [
+      {
+        "text": "2.19 %",
+        "value": 2.19,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 163,
+        "end": 169,
+        "status": "derived",
+        "matched": "GDPC1 % change 2025-04-01 to 2026-04-01",
+        "source_id": "S2",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- Real GDP growth decelerated from 2.19 % (Q2 2025) to 0.55 % (Q1 2026) while the Sahm Rule indicator remains at 0 pp, indicating no recession signal yet [S2][S1]."
+      },
+      {
+        "text": "0.55 %",
+        "value": 0.55,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 183,
+        "end": 189,
+        "status": "derived",
+        "matched": "GDPC1 % change 2026-01-01 to 2026-04-01",
+        "source_id": "S2",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- Real GDP growth decelerated from 2.19 % (Q2 2025) to 0.55 % (Q1 2026) while the Sahm Rule indicator remains at 0 pp, indicating no recession signal yet [S2][S1]."
+      },
+      {
+        "text": "0 pp",
+        "value": 0.0,
+        "unit": "pp",
+        "tolerance": 0.500000001,
+        "start": 241,
+        "end": 245,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2026-09-01",
+        "source_id": "S1",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- Real GDP growth decelerated from 2.19 % (Q2 2025) to 0.55 % (Q1 2026) while the Sahm Rule indicator remains at 0 pp, indicating no recession signal yet [S2][S1]."
+      },
+      {
+        "text": "0.55 %",
+        "value": 0.55,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 943,
+        "end": 949,
+        "status": "derived",
+        "matched": "GDPC1 % change 2026-01-01 to 2026-04-01",
+        "source_id": "S2",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- **GDP Growth**: Q1 2026 0.55 % vs."
+      },
+      {
+        "text": "1.17 %",
+        "value": 1.17,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 962,
+        "end": 968,
+        "status": "derived",
+        "matched": "GDPC1 % change 2025-10-01 to 2026-04-01",
+        "source_id": "S2",
+        "topic_match": false,
+        "in_source_text": null,
+        "context": "Q4 2025 1.17 % vs."
+      },
+      {
+        "text": "2.19 %",
+        "value": 2.19,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 981,
+        "end": 987,
+        "status": "derived",
+        "matched": "GDPC1 % change 2025-04-01 to 2026-04-01",
+        "source_id": "S2",
+        "topic_match": false,
+        "in_source_text": null,
+        "context": "Q2 2025 2.19 % [S2]."
+      },
+      {
+        "text": "0 pp",
+        "value": 0.0,
+        "unit": "pp",
+        "tolerance": 0.500000001,
+        "start": 1036,
+        "end": 1040,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2026-09-01",
+        "source_id": "S1",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- **Recession Indicator**: Sahm Rule at 0 pp (Sept 2026) with a downward trend from 0.23 pp (Sept 2025) to 0.07 pp (June 2026) [S1]."
+      },
+      {
+        "text": "Sept 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 1042,
+        "end": 1051,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "- **Recession Indicator**: Sahm Rule at 0 pp (Sept 2026) with a downward trend from 0.23 pp (Sept 2025) to 0.07 pp (June 2026) [S1]."
+      },
+      {
+        "text": "0.23 pp",
+        "value": 0.23,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 1080,
+        "end": 1087,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2025-09-01",
+        "source_id": "S1",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- **Recession Indicator**: Sahm Rule at 0 pp (Sept 2026) with a downward trend from 0.23 pp (Sept 2025) to 0.07 pp (June 2026) [S1]."
+      },
+      {
+        "text": "Sept 2025",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 1089,
+        "end": 1098,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "- **Recession Indicator**: Sahm Rule at 0 pp (Sept 2026) with a downward trend from 0.23 pp (Sept 2025) to 0.07 pp (June 2026) [S1]."
+      },
+      {
+        "text": "0.07 pp",
+        "value": 0.07,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 1103,
+        "end": 1110,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2026-06-01",
+        "source_id": "S1",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- **Recession Indicator**: Sahm Rule at 0 pp (Sept 2026) with a downward trend from 0.23 pp (Sept 2025) to 0.07 pp (June 2026) [S1]."
+      },
+      {
+        "text": "June 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 1112,
+        "end": 1121,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "- **Recession Indicator**: Sahm Rule at 0 pp (Sept 2026) with a downward trend from 0.23 pp (Sept 2025) to 0.07 pp (June 2026) [S1]."
+      },
+      {
+        "text": "0",
+        "value": 0.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2258,
+        "end": 2259,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2026-09-01",
+        "source_id": "S1",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Base (Soft Landing)** | GDP growth slows to 0–1 % annually; inflation moderates to 2–3 %; Fed rate cuts begin within 12–18 months; credit spreads remain moderate."
+      },
+      {
+        "text": "1 %",
+        "value": 1.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2260,
+        "end": 2263,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-08-01",
+        "source_id": "S1",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Base (Soft Landing)** | GDP growth slows to 0–1 % annually; inflation moderates to 2–3 %; Fed rate cuts begin within 12–18 months; credit spreads remain moderate."
+      },
+      {
+        "text": "2",
+        "value": 2.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2297,
+        "end": 2298,
+        "status": "derived",
+        "matched": "GDPC1 % change 2025-04-01 to 2026-04-01",
+        "source_id": "S2",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Base (Soft Landing)** | GDP growth slows to 0–1 % annually; inflation moderates to 2–3 %; Fed rate cuts begin within 12–18 months; credit spreads remain moderate."
+      },
+      {
+        "text": "3 %",
+        "value": 3.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2299,
+        "end": 2302,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Base (Soft Landing)** | GDP growth slows to 0–1 % annually; inflation moderates to 2–3 %; Fed rate cuts begin within 12–18 months; credit spreads remain moderate."
+      },
+      {
+        "text": "12",
+        "value": 12.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2331,
+        "end": 2333,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": "S4",
+        "context": "| **Base (Soft Landing)** | GDP growth slows to 0–1 % annually; inflation moderates to 2–3 %; Fed rate cuts begin within 12–18 months; credit spreads remain moderate."
+      },
+      {
+        "text": "1 %",
+        "value": 1.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2469,
+        "end": 2472,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-08-01",
+        "source_id": "S1",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Upside** | Growth remains above 1 % for 2–3 years; inflation falls below 2 %; Fed cuts accelerate."
+      },
+      {
+        "text": "2",
+        "value": 2.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2477,
+        "end": 2478,
+        "status": "derived",
+        "matched": "GDPC1 % change 2025-04-01 to 2026-04-01",
+        "source_id": "S2",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Upside** | Growth remains above 1 % for 2–3 years; inflation falls below 2 %; Fed cuts accelerate."
+      },
+      {
+        "text": "2 %",
+        "value": 2.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2510,
+        "end": 2513,
+        "status": "derived",
+        "matched": "GDPC1 % change 2025-04-01 to 2026-04-01",
+        "source_id": "S2",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Upside** | Growth remains above 1 % for 2–3 years; inflation falls below 2 %; Fed cuts accelerate."
+      },
+      {
+        "text": "0 %",
+        "value": 0.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2646,
+        "end": 2649,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2026-09-01",
+        "source_id": "S1",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Downside (Hard Landing)** | Growth falls below 0 % in Q2 2026; inflation remains above 4 %; Fed maintains high rates; credit spreads widen sharply."
+      },
+      {
+        "text": "4 %",
+        "value": 4.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2686,
+        "end": 2689,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Downside (Hard Landing)** | Growth falls below 0 % in Q2 2026; inflation remains above 4 %; Fed maintains high rates; credit spreads widen sharply."
+      },
+      {
+        "text": "3",
+        "value": 3.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 3837,
+        "end": 3838,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "- **Liquidity**: Maintain a 3–6 month cash buffer to capture opportunities or mitigate shocks."
+      },
+      {
+        "text": "0.55 %",
+        "value": 0.55,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 4115,
+        "end": 4121,
+        "status": "derived",
+        "matched": "GDPC1 % change 2026-01-01 to 2026-04-01",
+        "source_id": "S2",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "economy is currently in a deceleration phase with GDP growth slowing to 0.55 % in Q1 2026 and the Sahm Rule indicator at 0 pp, signaling no imminent recession [S2][S1]."
+      },
+      {
+        "text": "0 pp",
+        "value": 0.0,
+        "unit": "pp",
+        "tolerance": 0.500000001,
+        "start": 4164,
+        "end": 4168,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2026-09-01",
+        "source_id": "S1",
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "economy is currently in a deceleration phase with GDP growth slowing to 0.55 % in Q1 2026 and the Sahm Rule indicator at 0 pp, signaling no imminent recession [S2][S1]."
+      }
+    ],
+    "citations": {
+      "markers": 14,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "| Scenario | Key Assumptions | Likelihood (qualitative) |\n|----------|-----------------|--------------------------|\n| **Base (Soft Landing)** | GDP growth slows to 0–1 % annually; inflation moderates ",
+          "figures": [
+            "0",
+            "1 %",
+            "2",
+            "1 %",
+            "2",
+            "2 %",
+            "0 %"
+          ]
+        }
+      ],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 17,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: Real Gross Domestic Product (GDPC1)",
+        "last_date": "2026-04-01",
+        "frequency": "quarterly",
+        "age_days": 109,
+        "max_age_days": 135,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "summary": "21 of 25 figures verified against source data (12 exact, 9 derived); 4 flagged (1 of them appear in a fetched web/news snippet). 1 paragraph(s) state figures without a citation."
+  },
+  "run_meta": {
+    "run_id": "20261017-231657-92f18e",
+    "timestamp": "2026-10-18T03:16:57+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    }
+  }
+}

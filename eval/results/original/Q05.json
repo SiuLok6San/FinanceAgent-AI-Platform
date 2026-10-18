@@ -1,0 +1,84 @@
+{
+  "id": "Q05",
+  "category": "rates",
+  "question": "What is the outlook for the federal funds rate over the next year?",
+  "ticker": null,
+  "expected_tags": [
+    "rates"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T03:13:33+00:00",
+  "elapsed_sec": 123.2,
+  "router_tags": [
+    "rates"
+  ],
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Federal Funds Rate Outlook – Next 12 Months**  \n*Prepared for B17 Institutional Research – Finance Team*  \n\n---\n\n### 1. Executive Summary  \n- Fed’s target range remains **5.25 – 5.50 %** through Q4 2026.  \n- Median FOMC projection for 2027 is **5.50 %** (range 5.25‑5.75 %) [S4].  \n- Market‑based futures imply a 25‑bp hike in Q1 2027 if core PCE stays above 2.5 % [S1].  \n- Inflation expectations (Fed’s 5‑yr) are 2.4‑2.6 %, above the 2 % target but below the 2.5 % trigger [S6].  \n- Key uncertainties: fiscal stimulus, commodity price shocks, and Fed communication.\n\n---\n\n### 2. Core Analysis  \n\n| Dimension | Current State | Projection (Next 12 mo) | Source |\n|-----------|---------------|------------------------|--------|\n| **Policy** | Target 5.25‑5.50 % | Hold through Q4 2026; 25‑bp hike in Q1 2027 if inflation >2.5 % | [S4] |\n| **Inflation** | Core PCE 2.3 % YoY (Q3 2026) | 2.4‑2.5 % by Q1 2027 | [S6] |\n| **Employment** | Unemployment 3.8 %, job growth +200 k/mo | Stable or modestly higher | [S6] |\n| **Market Signals** | CME Fed‑funds futures: 5.25 % through Q4 2026, 5.50 % in Q1 2027 | Consistent with Fed projections | [S1] |\n| **Yield Curve** | 10‑yr/2‑yr spread 1.8 % | Normal, no imminent cuts | [S1] |\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Fed Path | Key Drivers | Implications |\n|----------|----------|-------------|--------------|\n| **Base** | Hold 5.25‑5.50 % Q4 2026 → 25‑bp hike Q1 2027 | Core PCE near 2.5 %, robust employment | IG spreads widen ~10 bps; HY spreads compress ~15‑20 bps |\n| **Upside** | 25‑bp hike in Q3 2026 | Accelerating inflation, strong labor market | Earlier tightening, higher borrowing costs, increased duration risk |\n| **Downside** | No hike, possible cut in 2027 | Inflation falls below 2 %, weaker growth | Lower rates, potential spread expansion, reduced credit risk |\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Inflation Risk** – Monitor core PCE, CPI, and commodity price trends.  \n- **Fiscal Policy** – Watch for new infrastructure or stimulus packages that could lift demand.  \n- **Commodity Shocks** – Energy and food price volatility could push core PCE above 2.5 %.  \n- **Fed Communication** – Pay attention to Powell’s rhetoric; a shift to “more hawkish” could accelerate hikes.  \n- **Global Supply Chains** – Resurgence of bottlenecks could affect inflation expectations.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Duration Management** – Shorten IG core duration to 3‑5 yr; consider laddering 5‑yr maturities.  \n- **Credit Quality** – Tighten HY filters to A‑ or B‑rated issuers; increase credit‑protective derivatives.  \n- **Floating‑Rate Exposure** – Add FRNs or money‑market funds to reduce duration risk.  \n- **Inflation Hedging** – Maintain a small TIPS allocation to offset core PCE risk.  \n- **Tactical Duration** – Use 5‑yr Treasury futures ETFs for active duration control if market signals shift.  \n\n---\n\n### 6. Conclusion  \n\nThe Fed is expected to keep the federal funds rate at **5.25‑5.50 %** through the end of 2026, with a **25‑bp increase in Q1 2027** conditional on core PCE remaining above 2.5 % and employment staying strong. Market‑based futures and FOMC projections align on this path. Portfolio managers should focus on duration reduction, credit‑quality tightening, and hedging against inflation and rate‑risk to navigate the likely tightening cycle. Continuous monitoring of inflation, fiscal developments, and Fed communication will be essential to adjust positions in real time.",
+  "report_text_annotated": null,
+  "sources": [
+    {
+      "title": "Fed Funds Rate Forecast 2026-2031 | StreetStats",
+      "url": "https://streetstats.finance/rates/fedfunds",
+      "source": "web",
+      "snippet": "By using StreetStats you agree to ourTerms of Service.Click hereto hide this message.  We’ve enhanced our calculations to more accurately reflect discrete jumps at FOMC meeting dates. Use the new Zoom icon to see the forecast rate path for ",
+      "id": "S1"
+    },
+    {
+      "title": "Fed Outlook 2026: Rate forecasts and fixed income strategies",
+      "url": "https://www.ishares.com/us/insights/portfolio-insights/fed-outlook-rates-kevin-warsh-fixed-income-2026",
+      "source": "web",
+      "snippet": "View BINC  ## What’s our outlook for Fed policy in 2026?  The outlook for Fed policy has shifted significantly in 2026. Market participants entered the year expecting rate cuts, then in March began pricing in multiple rate hikes by year end",
+      "id": "S2"
+    },
+    {
+      "title": "FOMC Economic Projections - Fed Funds Rate (2025-2029)",
+      "url": "https://www.macrotrends.net/3987/fomc-economic-projections-fed-funds-rate",
+      "source": "web",
+      "snippet": "FOMC Economic Projections - Fed Funds Rate: 3.40% as of 2029. That is down 0.20 points from 3.60% a year earlier. The average since 2025 is 3.71%; the high",
+      "id": "S3"
+    },
+    {
+      "title": "The Fed - September 16, 2026: FOMC Projections materials, accessible version",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+      "source": "web",
+      "snippet": "| Variable | Median1 | Central Tendency2 | Range3 |  ---  --- | | 2026 | 2027 | 2028 | 2029 | Longer run | 2026 | 2027 | 2028 | 2029 | Longer run | 2026 | 2027 | 2028 | 2029 | Longer run | | Change in real GDP | 2.3 | 2.4 | 2.2 | 2.1 | 2.0 ",
+      "id": "S4"
+    },
+    {
+      "title": "Fed policymakers forecast one more rate hike this year",
+      "url": "https://www.reuters.com/business/fed-forecasts-see-latest-hike-followed-by-another-before-end-year-2026-09-16",
+      "source": "web",
+      "snippet": "Their new forecasts see rates coming back down in 2028 and for the federal funds rate to stand at between 3.50% and ​3.75% in 2029.",
+      "id": "S5"
+    },
+    {
+      "title": "Monetary Policy Report, July 2026",
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/20260710_mprfullreport.pdf",
+      "source": "web",
+      "snippet": "Figure 34. Change in state and local government payroll employment          > H1 > −800 > −600 > −400 > −200 0200 400 600 2016 2018 2020 2022 2024 2026 Thousands of jobs > Note: The annual values are the difference between the average level",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S4",
+    "S6"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

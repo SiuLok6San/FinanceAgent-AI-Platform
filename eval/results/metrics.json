@@ -1,0 +1,1084 @@
+{
+  "routing": {
+    "original": {
+      "n": 20,
+      "exact": 12,
+      "primary": 20,
+      "precision": 0.75,
+      "recall": 0.9230769230769231,
+      "rows": [
+        {
+          "id": "Q01",
+          "expected": [
+            "macro"
+          ],
+          "got": [
+            "macro"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q02",
+          "expected": [
+            "macro"
+          ],
+          "got": [
+            "macro",
+            "rates"
+          ],
+          "exact": false,
+          "primary": true
+        },
+        {
+          "id": "Q03",
+          "expected": [
+            "macro"
+          ],
+          "got": [
+            "macro"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q04",
+          "expected": [
+            "macro"
+          ],
+          "got": [
+            "macro"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q05",
+          "expected": [
+            "rates"
+          ],
+          "got": [
+            "rates"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q06",
+          "expected": [
+            "rates"
+          ],
+          "got": [
+            "credit",
+            "equity",
+            "rates"
+          ],
+          "exact": false,
+          "primary": true
+        },
+        {
+          "id": "Q07",
+          "expected": [
+            "portfolio",
+            "rates"
+          ],
+          "got": [
+            "rates"
+          ],
+          "exact": false,
+          "primary": true
+        },
+        {
+          "id": "Q08",
+          "expected": [
+            "rates"
+          ],
+          "got": [
+            "rates"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q09",
+          "expected": [
+            "credit",
+            "rates"
+          ],
+          "got": [
+            "credit",
+            "rates"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q10",
+          "expected": [
+            "credit"
+          ],
+          "got": [
+            "credit",
+            "rates"
+          ],
+          "exact": false,
+          "primary": true
+        },
+        {
+          "id": "Q11",
+          "expected": [
+            "credit"
+          ],
+          "got": [
+            "credit",
+            "rates"
+          ],
+          "exact": false,
+          "primary": true
+        },
+        {
+          "id": "Q12",
+          "expected": [
+            "credit"
+          ],
+          "got": [
+            "credit",
+            "rates"
+          ],
+          "exact": false,
+          "primary": true
+        },
+        {
+          "id": "Q13",
+          "expected": [
+            "equity"
+          ],
+          "got": [
+            "equity"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q14",
+          "expected": [
+            "equity"
+          ],
+          "got": [
+            "equity"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q15",
+          "expected": [
+            "equity"
+          ],
+          "got": [
+            "equity"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q16",
+          "expected": [
+            "equity"
+          ],
+          "got": [
+            "equity"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q17",
+          "expected": [
+            "macro",
+            "portfolio"
+          ],
+          "got": [
+            "macro",
+            "portfolio"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q18",
+          "expected": [
+            "equity",
+            "portfolio"
+          ],
+          "got": [
+            "equity",
+            "portfolio"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q19",
+          "expected": [
+            "portfolio"
+          ],
+          "got": [
+            "equity",
+            "portfolio",
+            "rates"
+          ],
+          "exact": false,
+          "primary": true
+        },
+        {
+          "id": "Q20",
+          "expected": [
+            "credit",
+            "portfolio",
+            "rates"
+          ],
+          "got": [
+            "credit",
+            "portfolio"
+          ],
+          "exact": false,
+          "primary": true
+        }
+      ]
+    },
+    "revised": {
+      "n": 20,
+      "exact": 17,
+      "primary": 20,
+      "precision": 0.8928571428571429,
+      "recall": 0.9615384615384616,
+      "rows": [
+        {
+          "id": "Q01",
+          "expected": [
+            "macro"
+          ],
+          "got": [
+            "macro"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q02",
+          "expected": [
+            "macro"
+          ],
+          "got": [
+            "macro"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q03",
+          "expected": [
+            "macro"
+          ],
+          "got": [
+            "macro"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q04",
+          "expected": [
+            "macro"
+          ],
+          "got": [
+            "macro"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q05",
+          "expected": [
+            "rates"
+          ],
+          "got": [
+            "rates"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q06",
+          "expected": [
+            "rates"
+          ],
+          "got": [
+            "rates"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q07",
+          "expected": [
+            "portfolio",
+            "rates"
+          ],
+          "got": [
+            "rates"
+          ],
+          "exact": false,
+          "primary": true
+        },
+        {
+          "id": "Q08",
+          "expected": [
+            "rates"
+          ],
+          "got": [
+            "rates"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q09",
+          "expected": [
+            "credit",
+            "rates"
+          ],
+          "got": [
+            "credit",
+            "rates"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q10",
+          "expected": [
+            "credit"
+          ],
+          "got": [
+            "credit"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q11",
+          "expected": [
+            "credit"
+          ],
+          "got": [
+            "credit",
+            "rates"
+          ],
+          "exact": false,
+          "primary": true
+        },
+        {
+          "id": "Q12",
+          "expected": [
+            "credit"
+          ],
+          "got": [
+            "credit"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q13",
+          "expected": [
+            "equity"
+          ],
+          "got": [
+            "equity"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q14",
+          "expected": [
+            "equity"
+          ],
+          "got": [
+            "equity"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q15",
+          "expected": [
+            "equity"
+          ],
+          "got": [
+            "equity"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q16",
+          "expected": [
+            "equity"
+          ],
+          "got": [
+            "equity"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q17",
+          "expected": [
+            "macro",
+            "portfolio"
+          ],
+          "got": [
+            "macro",
+            "portfolio"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q18",
+          "expected": [
+            "equity",
+            "portfolio"
+          ],
+          "got": [
+            "equity",
+            "portfolio"
+          ],
+          "exact": true,
+          "primary": true
+        },
+        {
+          "id": "Q19",
+          "expected": [
+            "portfolio"
+          ],
+          "got": [
+            "equity",
+            "portfolio",
+            "rates"
+          ],
+          "exact": false,
+          "primary": true
+        },
+        {
+          "id": "Q20",
+          "expected": [
+            "credit",
+            "portfolio",
+            "rates"
+          ],
+          "got": [
+            "credit",
+            "portfolio",
+            "rates"
+          ],
+          "exact": true,
+          "primary": true
+        }
+      ]
+    }
+  },
+  "validation": {
+    "original": {
+      "questions": 20,
+      "errors": 0,
+      "error_ids": [],
+      "reports_with_data": 9,
+      "tables": 26,
+      "figures": 549,
+      "verified": 36,
+      "derived": 18,
+      "unverified": 495,
+      "numbers": 527,
+      "numbers_verified": 28,
+      "numbers_derived": 18,
+      "numbers_unverified": 481,
+      "dates": 22,
+      "dates_verified": 8,
+      "grounded_same_topic": 35,
+      "grounded_low_precision": 26,
+      "unverified_in_snippets": 144,
+      "citation_markers": 143,
+      "dangling_ids": 0,
+      "reports_with_dangling": 0,
+      "uncited_paragraphs": 19,
+      "source_mismatches": 3,
+      "stale_series": 0,
+      "reports_with_no_data_topics": 13,
+      "no_data_topics": 23,
+      "no_data_undisclosed": 23,
+      "no_data_unverified_figures": 318,
+      "reports_with_no_data_issue": 13,
+      "mean_elapsed_sec": 82.8,
+      "per_question": [
+        {
+          "id": "Q01",
+          "category": "macro",
+          "tables": 1,
+          "figures": 38,
+          "verified": 4,
+          "derived": 7,
+          "unverified": 27,
+          "dangling": 0,
+          "uncited": 5,
+          "no_data_issue": false,
+          "summary": "11 of 38 figures verified against source data (4 exact, 7 derived); 27 flagged (23 of them appear in a fetched web/news snippet). 5 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
+        },
+        {
+          "id": "Q02",
+          "category": "macro",
+          "tables": 1,
+          "figures": 32,
+          "verified": 22,
+          "derived": 0,
+          "unverified": 10,
+          "dangling": 0,
+          "uncited": 3,
+          "no_data_issue": true,
+          "summary": "22 of 32 figures verified against source data (22 exact, 0 derived); 10 flagged (3 of them appear in a fetched web/news snippet). 3 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data. No data was fetched for rates, and the report does not say so. 2 unverified figure(s) on rates, which has no data."
+        },
+        {
+          "id": "Q03",
+          "category": "macro",
+          "tables": 2,
+          "figures": 32,
+          "verified": 0,
+          "derived": 1,
+          "unverified": 31,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": false,
+          "summary": "1 of 32 figures verified against source data (0 exact, 1 derived); 31 flagged (5 of them appear in a fetched web/news snippet)."
+        },
+        {
+          "id": "Q04",
+          "category": "macro",
+          "tables": 0,
+          "figures": 17,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 17,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": true,
+          "summary": "0 of 17 figures verified against source data (0 exact, 0 derived); 17 flagged. No data was fetched for macro, and the report does not say so. 14 unverified figure(s) on macro, which has no data."
+        },
+        {
+          "id": "Q05",
+          "category": "rates",
+          "tables": 0,
+          "figures": 38,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 38,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": true,
+          "summary": "0 of 38 figures verified against source data (0 exact, 0 derived); 38 flagged (8 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 19 unverified figure(s) on rates, which has no data."
+        },
+        {
+          "id": "Q06",
+          "category": "rates",
+          "tables": 0,
+          "figures": 12,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 12,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": true,
+          "summary": "0 of 12 figures verified against source data (0 exact, 0 derived); 12 flagged (5 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 6 unverified figure(s) on rates, which has no data. No data was fetched for credit, and the report does not say so. 2 unverified figure(s) on credit, which has no data. No data was fetched for equity, and the report does not say so."
+        },
+        {
+          "id": "Q07",
+          "category": "rates",
+          "tables": 0,
+          "figures": 22,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 22,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": true,
+          "summary": "0 of 22 figures verified against source data (0 exact, 0 derived); 22 flagged (9 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 22 unverified figure(s) on rates, which has no data."
+        },
+        {
+          "id": "Q08",
+          "category": "rates",
+          "tables": 1,
+          "figures": 10,
+          "verified": 5,
+          "derived": 0,
+          "unverified": 5,
+          "dangling": 0,
+          "uncited": 1,
+          "no_data_issue": false,
+          "summary": "5 of 10 figures verified against source data (5 exact, 0 derived); 5 flagged. 1 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q09",
+          "category": "credit",
+          "tables": 0,
+          "figures": 24,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 24,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": true,
+          "summary": "0 of 24 figures verified against source data (0 exact, 0 derived); 24 flagged (4 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 16 unverified figure(s) on rates, which has no data. No data was fetched for credit, and the report does not say so. 13 unverified figure(s) on credit, which has no data."
+        },
+        {
+          "id": "Q10",
+          "category": "credit",
+          "tables": 0,
+          "figures": 20,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 20,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": true,
+          "summary": "0 of 20 figures verified against source data (0 exact, 0 derived); 20 flagged (16 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 19 unverified figure(s) on rates, which has no data. No data was fetched for credit, and the report does not say so. 18 unverified figure(s) on credit, which has no data."
+        },
+        {
+          "id": "Q11",
+          "category": "credit",
+          "tables": 0,
+          "figures": 27,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 27,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": true,
+          "summary": "0 of 27 figures verified against source data (0 exact, 0 derived); 27 flagged (16 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 19 unverified figure(s) on rates, which has no data. No data was fetched for credit, and the report does not say so. 27 unverified figure(s) on credit, which has no data."
+        },
+        {
+          "id": "Q12",
+          "category": "credit",
+          "tables": 0,
+          "figures": 33,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 33,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": true,
+          "summary": "0 of 33 figures verified against source data (0 exact, 0 derived); 33 flagged (10 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 13 unverified figure(s) on rates, which has no data. No data was fetched for credit, and the report does not say so. 25 unverified figure(s) on credit, which has no data."
+        },
+        {
+          "id": "Q13",
+          "category": "equity",
+          "tables": 5,
+          "figures": 52,
+          "verified": 5,
+          "derived": 0,
+          "unverified": 47,
+          "dangling": 0,
+          "uncited": 4,
+          "no_data_issue": false,
+          "summary": "5 of 52 figures verified against source data (5 exact, 0 derived); 47 flagged (7 of them appear in a fetched web/news snippet). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
+        },
+        {
+          "id": "Q14",
+          "category": "equity",
+          "tables": 5,
+          "figures": 26,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 26,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": false,
+          "summary": "0 of 26 figures verified against source data (0 exact, 0 derived); 26 flagged (9 of them appear in a fetched web/news snippet)."
+        },
+        {
+          "id": "Q15",
+          "category": "equity",
+          "tables": 5,
+          "figures": 17,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 17,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": false,
+          "summary": "0 of 17 figures verified against source data (0 exact, 0 derived); 17 flagged (9 of them appear in a fetched web/news snippet)."
+        },
+        {
+          "id": "Q16",
+          "category": "equity",
+          "tables": 5,
+          "figures": 39,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 39,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": false,
+          "summary": "0 of 39 figures verified against source data (0 exact, 0 derived); 39 flagged (2 of them appear in a fetched web/news snippet)."
+        },
+        {
+          "id": "Q17",
+          "category": "portfolio",
+          "tables": 1,
+          "figures": 39,
+          "verified": 0,
+          "derived": 10,
+          "unverified": 29,
+          "dangling": 0,
+          "uncited": 6,
+          "no_data_issue": true,
+          "summary": "10 of 39 figures verified against source data (0 exact, 10 derived); 29 flagged (3 of them appear in a fetched web/news snippet). 6 paragraph(s) state figures without a citation. No data was fetched for portfolio, and the report does not say so. 21 unverified figure(s) on portfolio, which has no data."
+        },
+        {
+          "id": "Q18",
+          "category": "portfolio",
+          "tables": 0,
+          "figures": 21,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 21,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": true,
+          "summary": "0 of 21 figures verified against source data (0 exact, 0 derived); 21 flagged (4 of them appear in a fetched web/news snippet). No data was fetched for portfolio, and the report does not say so. 16 unverified figure(s) on portfolio, which has no data. No data was fetched for equity, and the report does not say so. 3 unverified figure(s) on equity, which has no data."
+        },
+        {
+          "id": "Q19",
+          "category": "portfolio",
+          "tables": 0,
+          "figures": 8,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 8,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": true,
+          "summary": "0 of 8 figures verified against source data (0 exact, 0 derived); 8 flagged (4 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 4 unverified figure(s) on rates, which has no data. No data was fetched for portfolio, and the report does not say so. 3 unverified figure(s) on portfolio, which has no data. No data was fetched for equity, and the report does not say so. 5 unverified figure(s) on equity, which has no data."
+        },
+        {
+          "id": "Q20",
+          "category": "portfolio",
+          "tables": 0,
+          "figures": 42,
+          "verified": 0,
+          "derived": 0,
+          "unverified": 42,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": true,
+          "summary": "0 of 42 figures verified against source data (0 exact, 0 derived); 42 flagged (7 of them appear in a fetched web/news snippet). No data was fetched for credit, and the report does not say so. 36 unverified figure(s) on credit, which has no data. No data was fetched for portfolio, and the report does not say so. 15 unverified figure(s) on portfolio, which has no data."
+        }
+      ]
+    },
+    "revised": {
+      "questions": 20,
+      "errors": 0,
+      "error_ids": [],
+      "reports_with_data": 20,
+      "tables": 56,
+      "figures": 552,
+      "verified": 226,
+      "derived": 103,
+      "unverified": 223,
+      "numbers": 517,
+      "numbers_verified": 200,
+      "numbers_derived": 103,
+      "numbers_unverified": 214,
+      "dates": 35,
+      "dates_verified": 26,
+      "grounded_same_topic": 246,
+      "grounded_low_precision": 111,
+      "unverified_in_snippets": 95,
+      "citation_markers": 221,
+      "dangling_ids": 0,
+      "reports_with_dangling": 0,
+      "uncited_paragraphs": 65,
+      "source_mismatches": 9,
+      "stale_series": 0,
+      "reports_with_no_data_topics": 2,
+      "no_data_topics": 2,
+      "no_data_undisclosed": 0,
+      "no_data_unverified_figures": 11,
+      "reports_with_no_data_issue": 2,
+      "mean_elapsed_sec": 80.3,
+      "per_question": [
+        {
+          "id": "Q01",
+          "category": "macro",
+          "tables": 1,
+          "figures": 45,
+          "verified": 12,
+          "derived": 15,
+          "unverified": 18,
+          "dangling": 0,
+          "uncited": 5,
+          "no_data_issue": false,
+          "summary": "27 of 45 figures verified against source data (12 exact, 15 derived); 18 flagged (14 of them appear in a fetched web/news snippet). 5 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q02",
+          "category": "macro",
+          "tables": 1,
+          "figures": 15,
+          "verified": 12,
+          "derived": 1,
+          "unverified": 2,
+          "dangling": 0,
+          "uncited": 3,
+          "no_data_issue": false,
+          "summary": "13 of 15 figures verified against source data (12 exact, 1 derived); 2 flagged. 3 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
+        },
+        {
+          "id": "Q03",
+          "category": "macro",
+          "tables": 3,
+          "figures": 28,
+          "verified": 8,
+          "derived": 6,
+          "unverified": 14,
+          "dangling": 0,
+          "uncited": 2,
+          "no_data_issue": false,
+          "summary": "14 of 28 figures verified against source data (8 exact, 6 derived); 14 flagged (11 of them appear in a fetched web/news snippet). 2 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
+        },
+        {
+          "id": "Q04",
+          "category": "macro",
+          "tables": 2,
+          "figures": 25,
+          "verified": 12,
+          "derived": 9,
+          "unverified": 4,
+          "dangling": 0,
+          "uncited": 1,
+          "no_data_issue": false,
+          "summary": "21 of 25 figures verified against source data (12 exact, 9 derived); 4 flagged (1 of them appear in a fetched web/news snippet). 1 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q05",
+          "category": "rates",
+          "tables": 1,
+          "figures": 30,
+          "verified": 8,
+          "derived": 0,
+          "unverified": 22,
+          "dangling": 0,
+          "uncited": 1,
+          "no_data_issue": false,
+          "summary": "8 of 30 figures verified against source data (8 exact, 0 derived); 22 flagged (19 of them appear in a fetched web/news snippet). 1 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q06",
+          "category": "rates",
+          "tables": 3,
+          "figures": 15,
+          "verified": 12,
+          "derived": 2,
+          "unverified": 1,
+          "dangling": 0,
+          "uncited": 9,
+          "no_data_issue": false,
+          "summary": "14 of 15 figures verified against source data (12 exact, 2 derived); 1 flagged (1 of them appear in a fetched web/news snippet). 9 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q07",
+          "category": "rates",
+          "tables": 1,
+          "figures": 15,
+          "verified": 5,
+          "derived": 2,
+          "unverified": 8,
+          "dangling": 0,
+          "uncited": 1,
+          "no_data_issue": false,
+          "summary": "7 of 15 figures verified against source data (5 exact, 2 derived); 8 flagged (1 of them appear in a fetched web/news snippet). 1 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q08",
+          "category": "rates",
+          "tables": 3,
+          "figures": 17,
+          "verified": 4,
+          "derived": 5,
+          "unverified": 8,
+          "dangling": 0,
+          "uncited": 2,
+          "no_data_issue": false,
+          "summary": "9 of 17 figures verified against source data (4 exact, 5 derived); 8 flagged. 2 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q09",
+          "category": "credit",
+          "tables": 4,
+          "figures": 45,
+          "verified": 17,
+          "derived": 14,
+          "unverified": 14,
+          "dangling": 0,
+          "uncited": 3,
+          "no_data_issue": false,
+          "summary": "31 of 45 figures verified against source data (17 exact, 14 derived); 14 flagged (1 of them appear in a fetched web/news snippet). 3 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q10",
+          "category": "credit",
+          "tables": 2,
+          "figures": 16,
+          "verified": 10,
+          "derived": 2,
+          "unverified": 4,
+          "dangling": 0,
+          "uncited": 2,
+          "no_data_issue": false,
+          "summary": "12 of 16 figures verified against source data (10 exact, 2 derived); 4 flagged. 2 paragraph(s) state figures without a citation. 4 paragraph(s) cite a different source than the data."
+        },
+        {
+          "id": "Q11",
+          "category": "credit",
+          "tables": 1,
+          "figures": 18,
+          "verified": 12,
+          "derived": 0,
+          "unverified": 6,
+          "dangling": 0,
+          "uncited": 2,
+          "no_data_issue": true,
+          "summary": "12 of 18 figures verified against source data (12 exact, 0 derived); 6 flagged. 2 paragraph(s) state figures without a citation. 4 unverified figure(s) on rates, which has no data."
+        },
+        {
+          "id": "Q12",
+          "category": "credit",
+          "tables": 2,
+          "figures": 44,
+          "verified": 10,
+          "derived": 8,
+          "unverified": 26,
+          "dangling": 0,
+          "uncited": 3,
+          "no_data_issue": false,
+          "summary": "18 of 44 figures verified against source data (10 exact, 8 derived); 26 flagged (1 of them appear in a fetched web/news snippet). 3 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q13",
+          "category": "equity",
+          "tables": 5,
+          "figures": 16,
+          "verified": 14,
+          "derived": 0,
+          "unverified": 2,
+          "dangling": 0,
+          "uncited": 6,
+          "no_data_issue": false,
+          "summary": "14 of 16 figures verified against source data (14 exact, 0 derived); 2 flagged (1 of them appear in a fetched web/news snippet). 6 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q14",
+          "category": "equity",
+          "tables": 5,
+          "figures": 13,
+          "verified": 10,
+          "derived": 0,
+          "unverified": 3,
+          "dangling": 0,
+          "uncited": 0,
+          "no_data_issue": false,
+          "summary": "10 of 13 figures verified against source data (10 exact, 0 derived); 3 flagged (2 of them appear in a fetched web/news snippet)."
+        },
+        {
+          "id": "Q15",
+          "category": "equity",
+          "tables": 5,
+          "figures": 25,
+          "verified": 11,
+          "derived": 0,
+          "unverified": 14,
+          "dangling": 0,
+          "uncited": 1,
+          "no_data_issue": false,
+          "summary": "11 of 25 figures verified against source data (11 exact, 0 derived); 14 flagged (3 of them appear in a fetched web/news snippet). 1 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q16",
+          "category": "equity",
+          "tables": 6,
+          "figures": 46,
+          "verified": 28,
+          "derived": 1,
+          "unverified": 17,
+          "dangling": 0,
+          "uncited": 2,
+          "no_data_issue": false,
+          "summary": "29 of 46 figures verified against source data (28 exact, 1 derived); 17 flagged (12 of them appear in a fetched web/news snippet). 2 paragraph(s) state figures without a citation. 2 paragraph(s) cite a different source than the data."
+        },
+        {
+          "id": "Q17",
+          "category": "portfolio",
+          "tables": 3,
+          "figures": 39,
+          "verified": 16,
+          "derived": 10,
+          "unverified": 13,
+          "dangling": 0,
+          "uncited": 6,
+          "no_data_issue": false,
+          "summary": "26 of 39 figures verified against source data (16 exact, 10 derived); 13 flagged (4 of them appear in a fetched web/news snippet). 6 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
+        },
+        {
+          "id": "Q18",
+          "category": "portfolio",
+          "tables": 2,
+          "figures": 42,
+          "verified": 7,
+          "derived": 16,
+          "unverified": 19,
+          "dangling": 0,
+          "uncited": 11,
+          "no_data_issue": false,
+          "summary": "23 of 42 figures verified against source data (7 exact, 16 derived); 19 flagged (9 of them appear in a fetched web/news snippet). 11 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q19",
+          "category": "portfolio",
+          "tables": 3,
+          "figures": 31,
+          "verified": 7,
+          "derived": 8,
+          "unverified": 16,
+          "dangling": 0,
+          "uncited": 1,
+          "no_data_issue": false,
+          "summary": "15 of 31 figures verified against source data (7 exact, 8 derived); 16 flagged (5 of them appear in a fetched web/news snippet). 1 paragraph(s) state figures without a citation."
+        },
+        {
+          "id": "Q20",
+          "category": "portfolio",
+          "tables": 3,
+          "figures": 27,
+          "verified": 11,
+          "derived": 4,
+          "unverified": 12,
+          "dangling": 0,
+          "uncited": 4,
+          "no_data_issue": true,
+          "summary": "15 of 27 figures verified against source data (11 exact, 4 derived); 12 flagged (10 of them appear in a fetched web/news snippet). 4 paragraph(s) state figures without a citation. 7 unverified figure(s) on portfolio, which has no data."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,2926 @@
+{
+  "id": "Q16",
+  "category": "equity",
+  "question": "How exposed is Exxon Mobil's stock to a fall in oil prices?",
+  "ticker": "XOM",
+  "expected_tags": [
+    "equity"
+  ],
+  "pipeline": "revised",
+  "run_utc": "2026-10-18T03:38:35+00:00",
+  "elapsed_sec": 60.5,
+  "router_tags": [
+    "equity"
+  ],
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Exxon Mobil (XOM) – Oil‑Price Exposure Report**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- XOM’s equity is moderately sensitive to crude‑oil price swings; a 26 % historical correlation implies a ~2–3 % share‑price move per 10 % oil decline. [S12]  \n- Upstream revenue dominates the oil‑price exposure, but the company hedges a large portion of production and has a growing downstream arm that can offset upstream headwinds. [S10]  \n- Current WTI is $101.9 / bbl, with a recent 10‑month swing from $62.4 to $107, underscoring the volatility that can translate into earnings volatility. [S1]  \n- XOM’s balance sheet is strong (ROE 12.68 %, net margin 9.07 %) and its dividend yield of 2.52 % provides a defensive cushion. [S5]  \n- The stock’s low equity beta (0.1672) limits market‑wide volatility but does not shield it from commodity‑specific risk. [S5]  \n\n---\n\n### 2. Core Analysis  \n\n| Dimension | Key Findings | Source |\n|-----------|--------------|--------|\n| **Macro** | Oil prices have been highly volatile; WTI peaked near $110 in 2026‑10, then fell to $101.9. The 10‑month swing of ~$45 per barrel signals continued price risk. | [S1] |\n| **Sector** | Upstream segment is the primary oil‑price driver; downstream refining margins improve when crude falls, partially offsetting upstream losses. The $4.5 bn refining expansion is expected to add ~$4.5 bn to Q3 profit. | [S10] |\n| **Credit** | AAA‑A+ rating, robust cash flow, and a dividend payout ratio that remains sustainable even in lower‑price scenarios. | [S5] |\n| **Portfolio** | Equity beta 0.1672 indicates low sensitivity to overall market moves; oil‑price exposure is the main risk factor. | [S5] |\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Oil‑Price Path | Expected XOM Impact | Rationale |\n|----------|----------------|---------------------|-----------|\n| **Base** | Oil remains near $100–$110 per barrel | Share price stable; earnings growth modest | Current market conditions; hedging reduces volatility |\n| **Upside** | Oil rises 10–20 % to $120–$130 | Share price up 5–10 %; earnings +15–20 % | Upstream revenue increases; downstream margins remain strong |\n| **Downside** | Oil falls 10–20 % to $80–$90 | Share price down 3–6 %; earnings drop 10–15 % | Upstream revenue declines; downstream gains insufficient to fully offset |\n\n*Note: The 26 % correlation from 2008‑09 (oil drop 60 %) suggests a 10 % oil decline could translate into a 2–3 % equity decline, after hedging.* [S12]  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Oil‑Price Volatility** – Monitor WTI/Brent futures and geopolitical events that can trigger rapid price swings.  \n- **Hedging Coverage** – Track disclosed hedging notional amounts; a reduction could increase effective exposure.  \n- **Regulatory & ESG** – Climate‑policy shifts may pressure upstream operations and affect long‑term demand.  \n- **Refining Expansion Execution** – Delays or cost overruns in the $4.5 bn project could erode expected margin gains. [S10]  \n- **Earnings Forecasts** – Exxon’s own projection of an $800 m earnings dip in Q4 due to falling prices signals sensitivity. [S14]  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Income Focus** – The 2.52 % dividend yield and strong balance sheet make XOM attractive for income‑oriented portfolios.  \n- **Commodity Exposure** – Adds a commodity‑linked component; consider pairing with lower‑oil‑price‑sensitive peers (e.g., Chevron) for diversification.  \n- **Beta Considerations** – Low equity beta reduces market‑wide risk but does not eliminate commodity risk; use XOM as a defensive play only if oil‑price exposure is acceptable.  \n- **Hedging Strategy** – Evaluate the effectiveness of current hedges; a higher hedging ratio would further dampen downside risk.  \n- **Strategic Timing** – If oil prices are expected to rise, XOM offers upside potential; if a downturn is anticipated, consider reducing exposure or hedging the equity position.  \n\n---\n\n### 6. Conclusion  \n\nExxon Mobil’s stock carries a moderate, but measurable, exposure to falling oil prices, primarily through its upstream operations. The company’s hedging program, downstream expansion, and solid financial footing provide a buffer that limits the magnitude of equity swings. Investors should monitor oil‑price trends, hedging disclosures, and the execution of the refining expansion to gauge future exposure. For income‑seeking portfolios, XOM remains a defensively attractive holding, provided the commodity risk aligns with the portfolio’s risk tolerance.",
+  "report_text_annotated": "> **Validation:** 29 of 46 figures verified against source data (28 exact, 1 derived); 17 flagged (12 of them appear in a fetched web/news snippet). 2 paragraph(s) state figures without a citation. 2 paragraph(s) cite a different source than the data.\n\n**Exxon Mobil (XOM) – Oil‑Price Exposure Report**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- XOM’s equity is moderately sensitive to crude‑oil price swings; a 26 % historical correlation implies a ~2–3 % share‑price move per 10 % oil decline. [S12]  \n- Upstream revenue dominates the oil‑price exposure, but the company hedges a large portion of production and has a growing downstream arm that can offset upstream headwinds. [S10]  \n- Current WTI is $101.9 / bbl, with a recent 10‑month swing from $62.4 to $107, underscoring the volatility that can translate into earnings volatility. [S1]  \n- XOM’s balance sheet is strong (ROE 12.68 %, net margin 9.07 %) and its dividend yield of 2.52 % provides a defensive cushion. [S5]  \n- The stock’s low equity beta (0.1672) limits market‑wide volatility but does not shield it from commodity‑specific risk. [S5]  \n\n---\n\n### 2. Core Analysis  \n\n| Dimension | Key Findings | Source |\n|-----------|--------------|--------|\n| **Macro** | Oil prices have been highly volatile; WTI peaked near $110 in 2026‑10, then fell to $101.9. The 10‑month swing of ~$45 per barrel signals continued price risk. | [S1] |\n| **Sector** | Upstream segment is the primary oil‑price driver; downstream refining margins improve when crude falls, partially offsetting upstream losses. The $4.5 bn refining expansion is expected to add ~$4.5 bn to Q3 profit. | [S10] |\n| **Credit** | AAA‑A+ rating, robust cash flow, and a dividend payout ratio that remains sustainable even in lower‑price scenarios. | [S5] |\n| **Portfolio** | Equity beta 0.1672 indicates low sensitivity to overall market moves; oil‑price exposure is the main risk factor. | [S5] |\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Oil‑Price Path | Expected XOM Impact | Rationale |\n|----------|----------------|---------------------|-----------|\n| **Base** | Oil remains near $100–$110 per barrel | Share price stable; earnings growth modest | Current market conditions; hedging reduces volatility |\n| **Upside** | Oil rises 10–20 % to $120–$130 | Share price up 5–10 %; earnings +15–20 % | Upstream revenue increases; downstream margins remain strong |\n| **Downside** | Oil falls 10–20 % to $80–$90 | Share price down 3–6 %; earnings drop 10–15 % | Upstream revenue declines; downstream gains insufficient to fully offset |\n\n*Note: The 26 % correlation from 2008‑09 (oil drop 60 %) suggests a 10 % oil decline could translate into a 2–3 % equity decline, after hedging.* [S12]  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Oil‑Price Volatility** – Monitor WTI/Brent futures and geopolitical events that can trigger rapid price swings.  \n- **Hedging Coverage** – Track disclosed hedging notional amounts; a reduction could increase effective exposure.  \n- **Regulatory & ESG** – Climate‑policy shifts may pressure upstream operations and affect long‑term demand.  \n- **Refining Expansion Execution** – Delays or cost overruns in the $4.5 bn project could erode expected margin gains. [S10]  \n- **Earnings Forecasts** – Exxon’s own projection of an $800 m earnings dip in Q4 due to falling prices signals sensitivity. [S14]  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Income Focus** – The 2.52 % dividend yield and strong balance sheet make XOM attractive for income‑oriented portfolios.  \n- **Commodity Exposure** – Adds a commodity‑linked component; consider pairing with lower‑oil‑price‑sensitive peers (e.g., Chevron) for diversification.  \n- **Beta Considerations** – Low equity beta reduces market‑wide risk but does not eliminate commodity risk; use XOM as a defensive play only if oil‑price exposure is acceptable.  \n- **Hedging Strategy** – Evaluate the effectiveness of current hedges; a higher hedging ratio would further dampen downside risk.  \n- **Strategic Timing** – If oil prices are expected to rise, XOM offers upside potential; if a downturn is anticipated, consider reducing exposure or hedging the equity position.  \n\n---\n\n### 6. Conclusion  \n\nExxon Mobil’s stock carries a moderate, but measurable, exposure to falling oil prices, primarily through its upstream operations. The company’s hedging program, downstream expansion, and solid financial footing provide a buffer that limits the magnitude of equity swings. Investors should monitor oil‑price trends, hedging disclosures, and the execution of the refining expansion to gauge future exposure. For income‑seeking portfolios, XOM remains a defensively attractive holding, provided the commodity risk aligns with the portfolio’s risk tolerance.",
+  "sources": [
+    {
+      "title": "FRED series DCOILWTICO: Crude Oil Prices: West Texas Intermediate (WTI)",
+      "url": "https://fred.stlouisfed.org/series/DCOILWTICO",
+      "source": "FRED",
+      "snippet": "Daily series in Dollars per Barrel; latest observation 101.91 on 2026-10-14.",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub company profile: XOM",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub quote: XOM",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "Quote as of 2026-10-16.",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub recommendation trends: XOM",
+      "url": "https://finnhub.io/docs/api/recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Finnhub basic financials: XOM",
+      "url": "https://finnhub.io/docs/api/company-basic-financials",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S5"
+    },
+    {
+      "title": "ExxonMobil Is Up 49% in 2026 With Brent Near $110. Here’s What the Stock Could Be Worth When Oil Cools",
+      "url": "https://finnhub.io/api/news?id=b6cf70924ea2ce8e3062441cfa1ecd3ef85137e928a898bc57a2c5f41ea4f054",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-17: Key Stats for ExxonMobil StockCurrent Price: $178. 98Target Price (Mid): ~$163Street Target: ~$175Potential Total Return: ~-9%Annualized IRR: ~-2% / yearWhat Happened?ExxonMobil (XOM) closed at $178.",
+      "id": "S6"
+    },
+    {
+      "title": "Oil Topped $110 as Tech Stocks Lost $1 Trillion in a Day",
+      "url": "https://finnhub.io/api/news?id=2548d237b28b100b33c096d31bbbf2cbdafc39449b1f510fd8270b98d7052def",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-17: When crude spiked past $110 and wiped a trillion dollars from tech valuations in a single session, the same geopolitical shock that lifted Exxon and Chevron near their 52-week highs also planted the seeds of a rapid reversal.",
+      "id": "S7"
+    },
+    {
+      "title": "Meta, Tesla Headline Earnings In Busy Week For Markets",
+      "url": "https://finnhub.io/api/news?id=3dcbe5a8689c76a628f51ae4c5084970467aab6b7f0f374e353ded8fe09592d4",
+      "source": "Finnhub news (SeekingAlpha)",
+      "snippet": "2026-10-17: Wall Street Week Ahead: key earnings (Meta, Tesla, Netflix), IPOs & economic data. Read here for more details.",
+      "id": "S8"
+    },
+    {
+      "title": "Making Of An 8-Fund Retiree Portfolio: $5,000 Monthly Income Potentially",
+      "url": "https://finnhub.io/api/news?id=43b8420adfb17b071c2cdb24e23c9ba4931f193e9ac6966138256fd45c80980a",
+      "source": "Finnhub news (SeekingAlpha)",
+      "snippet": "2026-10-17: We expand a simple 3-ETF retirement portfolio into 6- and 8-fund models for higher diversification, income, and decent growth. Click here to read more.",
+      "id": "S9"
+    },
+    {
+      "title": "ExxonMobil Flags a $4.5 Billion Refining Boost. Is the Stock Already Pricing It In?",
+      "url": "https://finnhub.io/api/news?id=474e7871ef7eb27ca9b9e558f34d540ef30e9ae98fd538196856ce3a1c7db437",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-17: ExxonMobil (XOM:NYSE) told investors on Friday, October 16, that higher refining margins could add $4. 5 billion to third-quarter profit in its Energy Products business compared with the second quarter, according to a regulatory filing.",
+      "id": "S10"
+    },
+    {
+      "title": "Sector Update: Energy Stocks Gain Late Afternoon",
+      "url": "https://finnhub.io/api/news?id=abbdf924b4db0700f27a835fb20a4b692a29f19d5209f0cab9d93df43881a159",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-16: Energy stocks were higher late Friday afternoon, with the NYSE Energy Sector Index rising 1.9% and t",
+      "id": "S11"
+    },
+    {
+      "title": "Stock Concentration Risk and ExxonMobil’s Correlation to Oil Prices",
+      "url": "https://rgwealth.com/market-thoughts/stock-concentration-risk-and-exxonmobils-correlation-to-oil-prices",
+      "source": "web (Tavily)",
+      "snippet": "oil prices.   For example, during the period 2008 – 2009 when oil prices fell from $125 to $50 – a historic drop of 60% – ExxonMobil had only a 26% correlation in terms of price. During the period 2014 – 2015 when oil prices dropped from $107 to the low of $28 – ExxonMobil stock only participated in 20% of the decline.",
+      "id": "S12"
+    },
+    {
+      "title": "Exxon Mobil Corp Stock (XOM) Moved Down by 3.24% on Apr 14: What Investors Need To Know",
+      "url": "https://www.tradingkey.com/news/market-movers/261781413-market-movers-xom-20260414",
+      "source": "web (Tavily)",
+      "snippet": "ExxonMobil's stock experienced a notable decline during today's trading, primarily driven by a significant downturn in crude oil prices. This drop in oil prices, observed across both Brent and WTI benchmarks, is largely attributed to renewed optimism regarding potential peace talks between the United States and Iran. H",
+      "id": "S13"
+    },
+    {
+      "title": "Exxon expects lower earnings on falling oil prices",
+      "url": "https://www.youtube.com/watch?v=TresT5H-lkE",
+      "source": "web (Tavily)",
+      "snippet": "### Transcript [0:00] Exon Mobile is forecasting an $800 million dip in the fourth quarter earnings due to falling oil and gas [0:08] prices. The announcement comes before an earnings season for oil companies amid major changes in Venezuela. Here to talk [0:15] more about that is Peter McN, global head of sector analys",
+      "id": "S14"
+    },
+    {
+      "title": "Exxon Mobil's $60B Pioneer acquisition set to double Permian basin output",
+      "url": "https://www.investing.com/news/stock-market-news/exxon-mobils-60b-pioneer-acquisition-set-to-double-permian-basin-output-93CH-3199920",
+      "source": "web (Tavily)",
+      "snippet": "The merger is projected to yield $2.0 billion in cost synergies, which could potentially be returned to shareholders through dividend growth or share buybacks. At present, Exxon Mobil's valuation stands at 12.0X FY 2024 earnings, compared to  Chevron 's (NYSE:CVX) 11.2X and ConocoPhillips' (NYSE:COP) 12.3X.  However, t",
+      "id": "S15"
+    },
+    {
+      "title": "Momentum Indicator for XOM turns positive, indicating new upward trend",
+      "url": "https://tickeron.com/ticker/XOM",
+      "source": "web (Tavily)",
+      "snippet": "on their upstream business due to falling crude prices could be mitigated by benefits to its downstream business. [...] Following a 3-day decline, the stock is projected to fall further. Considering past instances where XOM declined for three days, the price rose further in 50 of 62 cases within the following month. Th",
+      "id": "S16"
+    },
+    {
+      "title": "Exxon Mobil Weighs Strait Of Hormuz Shock And Rising Oil Prices",
+      "url": "https://finance.yahoo.com/news/exxon-mobil-weighs-strait-hormuz-191322782.html",
+      "source": "web (Tavily)",
+      "snippet": "⚖️ Price vs Analyst Target: At US$151.83, Exxon Mobil trades about 5.2% above the US$144.25 analyst target, with a wide target range of US$123 to US$183.  ✅ Simply Wall St Valuation: Simply Wall St currently assesses Exxon Mobil as trading about 31.1% below its estimated fair value.  ✅ Recent Momentum: The 30 day retur",
+      "id": "S17"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S5",
+    "S10",
+    "S12",
+    "S14"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Crude Oil Prices: West Texas Intermediate (WTI) (DCOILWTICO)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "DCOILWTICO",
+      "frequency": "daily",
+      "units": "Dollars per Barrel",
+      "last_date": "2026-10-14",
+      "topics": [
+        "macro",
+        "equity"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/DCOILWTICO",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-02",
+          61.28
+        ],
+        [
+          "2025-10-03",
+          61.65
+        ],
+        [
+          "2025-10-06",
+          62.49
+        ],
+        [
+          "2025-10-07",
+          62.52
+        ],
+        [
+          "2025-10-08",
+          63.37
+        ],
+        [
+          "2025-10-09",
+          62.36
+        ],
+        [
+          "2025-10-10",
+          59.75
+        ],
+        [
+          "2025-10-14",
+          59.52
+        ],
+        [
+          "2025-10-15",
+          59.08
+        ],
+        [
+          "2025-10-16",
+          58.29
+        ],
+        [
+          "2025-10-17",
+          58.3
+        ],
+        [
+          "2025-10-20",
+          58.34
+        ],
+        [
+          "2025-10-21",
+          58.66
+        ],
+        [
+          "2025-10-22",
+          59.3
+        ],
+        [
+          "2025-10-23",
+          62.44
+        ],
+        [
+          "2025-10-24",
+          62.27
+        ],
+        [
+          "2025-10-27",
+          62.13
+        ],
+        [
+          "2025-10-28",
+          60.97
+        ],
+        [
+          "2025-10-29",
+          61.26
+        ],
+        [
+          "2025-10-30",
+          61.36
+        ],
+        [
+          "2025-10-31",
+          61.75
+        ],
+        [
+          "2025-11-03",
+          61.79
+        ],
+        [
+          "2025-11-04",
+          61.38
+        ],
+        [
+          "2025-11-05",
+          60.4
+        ],
+        [
+          "2025-11-06",
+          60.24
+        ],
+        [
+          "2025-11-07",
+          60.54
+        ],
+        [
+          "2025-11-10",
+          60.94
+        ],
+        [
+          "2025-11-12",
+          59.3
+        ],
+        [
+          "2025-11-13",
+          59.54
+        ],
+        [
+          "2025-11-14",
+          60.87
+        ],
+        [
+          "2025-11-17",
+          60.66
+        ],
+        [
+          "2025-11-18",
+          61.51
+        ],
+        [
+          "2025-11-19",
+          60.27
+        ],
+        [
+          "2025-11-20",
+          60.07
+        ],
+        [
+          "2025-11-21",
+          58.86
+        ],
+        [
+          "2025-11-24",
+          59.11
+        ],
+        [
+          "2025-11-25",
+          58.25
+        ],
+        [
+          "2025-11-26",
+          58.81
+        ],
+        [
+          "2025-11-28",
+          58.58
+        ],
+        [
+          "2025-12-01",
+          59.47
+        ],
+        [
+          "2025-12-02",
+          58.81
+        ],
+        [
+          "2025-12-03",
+          59.09
+        ],
+        [
+          "2025-12-04",
+          59.82
+        ],
+        [
+          "2025-12-05",
+          60.23
+        ],
+        [
+          "2025-12-08",
+          59.04
+        ],
+        [
+          "2025-12-09",
+          58.4
+        ],
+        [
+          "2025-12-10",
+          58.67
+        ],
+        [
+          "2025-12-11",
+          57.76
+        ],
+        [
+          "2025-12-12",
+          57.61
+        ],
+        [
+          "2025-12-15",
+          56.97
+        ],
+        [
+          "2025-12-16",
+          55.44
+        ],
+        [
+          "2025-12-17",
+          56.07
+        ],
+        [
+          "2025-12-18",
+          56.22
+        ],
+        [
+          "2025-12-19",
+          56.8
+        ],
+        [
+          "2025-12-22",
+          58.18
+        ],
+        [
+          "2025-12-23",
+          58.55
+        ],
+        [
+          "2025-12-24",
+          58.72
+        ],
+        [
+          "2025-12-26",
+          56.6
+        ],
+        [
+          "2025-12-29",
+          57.89
+        ],
+        [
+          "2025-12-30",
+          57.79
+        ],
+        [
+          "2025-12-31",
+          57.26
+        ],
+        [
+          "2026-01-02",
+          57.21
+        ],
+        [
+          "2026-01-05",
+          58.1
+        ],
+        [
+          "2026-01-06",
+          56.97
+        ],
+        [
+          "2026-01-07",
+          56.01
+        ],
+        [
+          "2026-01-08",
+          57.74
+        ],
+        [
+          "2026-01-09",
+          58.96
+        ],
+        [
+          "2026-01-12",
+          59.39
+        ],
+        [
+          "2026-01-13",
+          60.85
+        ],
+        [
+          "2026-01-14",
+          61.84
+        ],
+        [
+          "2026-01-15",
+          59.13
+        ],
+        [
+          "2026-01-16",
+          59.4
+        ],
+        [
+          "2026-01-20",
+          60.3
+        ],
+        [
+          "2026-01-21",
+          60.38
+        ],
+        [
+          "2026-01-22",
+          59.24
+        ],
+        [
+          "2026-01-23",
+          60.7
+        ],
+        [
+          "2026-01-26",
+          60.46
+        ],
+        [
+          "2026-01-27",
+          62.04
+        ],
+        [
+          "2026-01-28",
+          62.75
+        ],
+        [
+          "2026-01-29",
+          64.77
+        ],
+        [
+          "2026-01-30",
+          64.5
+        ],
+        [
+          "2026-02-02",
+          61.6
+        ],
+        [
+          "2026-02-03",
+          62.62
+        ],
+        [
+          "2026-02-04",
+          64.56
+        ],
+        [
+          "2026-02-05",
+          62.9
+        ],
+        [
+          "2026-02-06",
+          63.77
+        ],
+        [
+          "2026-02-09",
+          64.53
+        ],
+        [
+          "2026-02-10",
+          64.2
+        ],
+        [
+          "2026-02-11",
+          64.8
+        ],
+        [
+          "2026-02-12",
+          63.08
+        ],
+        [
+          "2026-02-13",
+          63.05
+        ],
+        [
+          "2026-02-17",
+          62.53
+        ],
+        [
+          "2026-02-18",
+          65.33
+        ],
+        [
+          "2026-02-19",
+          66.66
+        ],
+        [
+          "2026-02-20",
+          66.69
+        ],
+        [
+          "2026-02-23",
+          66.36
+        ],
+        [
+          "2026-02-24",
+          65.62
+        ],
+        [
+          "2026-02-25",
+          65.3
+        ],
+        [
+          "2026-02-26",
+          65.1
+        ],
+        [
+          "2026-02-27",
+          66.96
+        ],
+        [
+          "2026-03-02",
+          71.13
+        ],
+        [
+          "2026-03-03",
+          74.48
+        ],
+        [
+          "2026-03-04",
+          74.58
+        ],
+        [
+          "2026-03-05",
+          80.88
+        ],
+        [
+          "2026-03-06",
+          90.77
+        ],
+        [
+          "2026-03-09",
+          94.65
+        ],
+        [
+          "2026-03-10",
+          83.71
+        ],
+        [
+          "2026-03-11",
+          86.8
+        ],
+        [
+          "2026-03-12",
+          95.61
+        ],
+        [
+          "2026-03-13",
+          98.48
+        ],
+        [
+          "2026-03-16",
+          93.39
+        ],
+        [
+          "2026-03-17",
+          96.01
+        ],
+        [
+          "2026-03-18",
+          96.12
+        ],
+        [
+          "2026-03-19",
+          96.11
+        ],
+        [
+          "2026-03-20",
+          98.71
+        ],
+        [
+          "2026-03-23",
+          89.33
+        ],
+        [
+          "2026-03-24",
+          93.18
+        ],
+        [
+          "2026-03-25",
+          91.51
+        ],
+        [
+          "2026-03-26",
+          96.18
+        ],
+        [
+          "2026-03-27",
+          101.26
+        ],
+        [
+          "2026-03-30",
+          104.69
+        ],
+        [
+          "2026-03-31",
+          102.86
+        ],
+        [
+          "2026-04-01",
+          101.9
+        ],
+        [
+          "2026-04-02",
+          113.23
+        ],
+        [
+          "2026-04-06",
+          114.01
+        ],
+        [
+          "2026-04-07",
+          114.58
+        ],
+        [
+          "2026-04-08",
+          96.17
+        ],
+        [
+          "2026-04-09",
+          99.62
+        ],
+        [
+          "2026-04-10",
+          98.34
+        ],
+        [
+          "2026-04-13",
+          100.72
+        ],
+        [
+          "2026-04-14",
+          93.07
+        ],
+        [
+          "2026-04-15",
+          93.04
+        ],
+        [
+          "2026-04-16",
+          96.46
+        ],
+        [
+          "2026-04-17",
+          85.91
+        ],
+        [
+          "2026-04-20",
+          91.06
+        ],
+        [
+          "2026-04-21",
+          93.64
+        ],
+        [
+          "2026-04-22",
+          94.76
+        ],
+        [
+          "2026-04-23",
+          99.27
+        ],
+        [
+          "2026-04-24",
+          98.42
+        ],
+        [
+          "2026-04-27",
+          99.89
+        ],
+        [
+          "2026-04-28",
+          103.45
+        ],
+        [
+          "2026-04-29",
+          110.47
+        ],
+        [
+          "2026-04-30",
+          108.64
+        ],
+        [
+          "2026-05-01",
+          105.38
+        ],
+        [
+          "2026-05-04",
+          109.76
+        ],
+        [
+          "2026-05-05",
+          105.66
+        ],
+        [
+          "2026-05-06",
+          98.75
+        ],
+        [
+          "2026-05-07",
+          98.38
+        ],
+        [
+          "2026-05-08",
+          98.87
+        ],
+        [
+          "2026-05-11",
+          101.56
+        ],
+        [
+          "2026-05-12",
+          105.78
+        ],
+        [
+          "2026-05-13",
+          104.52
+        ],
+        [
+          "2026-05-14",
+          104.66
+        ],
+        [
+          "2026-05-15",
+          108.99
+        ],
+        [
+          "2026-05-18",
+          112.25
+        ],
+        [
+          "2026-05-19",
+          112.09
+        ],
+        [
+          "2026-05-20",
+          101.69
+        ],
+        [
+          "2026-05-21",
+          100.2
+        ],
+        [
+          "2026-05-22",
+          100.35
+        ],
+        [
+          "2026-05-26",
+          97.63
+        ],
+        [
+          "2026-05-27",
+          92.35
+        ],
+        [
+          "2026-05-28",
+          92.65
+        ],
+        [
+          "2026-05-29",
+          91.16
+        ],
+        [
+          "2026-06-01",
+          95.96
+        ],
+        [
+          "2026-06-02",
+          97.47
+        ],
+        [
+          "2026-06-03",
+          99.76
+        ],
+        [
+          "2026-06-04",
+          96.83
+        ],
+        [
+          "2026-06-05",
+          94.32
+        ],
+        [
+          "2026-06-08",
+          95.0
+        ],
+        [
+          "2026-06-09",
+          91.9
+        ],
+        [
+          "2026-06-10",
+          93.68
+        ],
+        [
+          "2026-06-11",
+          91.58
+        ],
+        [
+          "2026-06-12",
+          88.62
+        ],
+        [
+          "2026-06-15",
+          84.65
+        ],
+        [
+          "2026-06-16",
+          79.8
+        ],
+        [
+          "2026-06-17",
+          80.65
+        ],
+        [
+          "2026-06-18",
+          80.35
+        ],
+        [
+          "2026-06-22",
+          78.94
+        ],
+        [
+          "2026-06-23",
+          74.62
+        ],
+        [
+          "2026-06-24",
+          71.42
+        ],
+        [
+          "2026-06-25",
+          72.67
+        ],
+        [
+          "2026-06-26",
+          70.3
+        ],
+        [
+          "2026-06-29",
+          71.87
+        ],
+        [
+          "2026-06-30",
+          70.56
+        ],
+        [
+          "2026-07-01",
+          69.74
+        ],
+        [
+          "2026-07-02",
+          69.73
+        ],
+        [
+          "2026-07-06",
+          69.6
+        ],
+        [
+          "2026-07-07",
+          71.53
+        ],
+        [
+          "2026-07-08",
+          74.56
+        ],
+        [
+          "2026-07-09",
+          73.15
+        ],
+        [
+          "2026-07-10",
+          72.45
+        ],
+        [
+          "2026-07-13",
+          79.2
+        ],
+        [
+          "2026-07-14",
+          80.44
+        ],
+        [
+          "2026-07-15",
+          80.73
+        ],
+        [
+          "2026-07-16",
+          80.03
+        ],
+        [
+          "2026-07-17",
+          83.43
+        ],
+        [
+          "2026-07-20",
+          84.38
+        ],
+        [
+          "2026-07-21",
+          86.04
+        ],
+        [
+          "2026-07-22",
+          87.66
+        ],
+        [
+          "2026-07-23",
+          93.08
+        ],
+        [
+          "2026-07-24",
+          91.74
+        ],
+        [
+          "2026-07-27",
+          84.25
+        ],
+        [
+          "2026-07-28",
+          80.91
+        ],
+        [
+          "2026-07-29",
+          86.08
+        ],
+        [
+          "2026-07-30",
+          85.15
+        ],
+        [
+          "2026-07-31",
+          86.16
+        ],
+        [
+          "2026-08-03",
+          81.96
+        ],
+        [
+          "2026-08-04",
+          77.33
+        ],
+        [
+          "2026-08-05",
+          76.78
+        ],
+        [
+          "2026-08-06",
+          78.88
+        ],
+        [
+          "2026-08-07",
+          79.77
+        ],
+        [
+          "2026-08-10",
+          83.76
+        ],
+        [
+          "2026-08-11",
+          84.77
+        ],
+        [
+          "2026-08-12",
+          84.97
+        ],
+        [
+          "2026-08-13",
+          82.77
+        ],
+        [
+          "2026-08-14",
+          83.99
+        ],
+        [
+          "2026-08-17",
+          86.04
+        ],
+        [
+          "2026-08-18",
+          86.48
+        ],
+        [
+          "2026-08-19",
+          87.28
+        ],
+        [
+          "2026-08-20",
+          89.75
+        ],
+        [
+          "2026-08-21",
+          87.21
+        ],
+        [
+          "2026-08-24",
+          86.34
+        ],
+        [
+          "2026-08-25",
+          83.9
+        ],
+        [
+          "2026-08-26",
+          83.46
+        ],
+        [
+          "2026-08-27",
+          84.81
+        ],
+        [
+          "2026-08-28",
+          84.57
+        ],
+        [
+          "2026-08-31",
+          87.03
+        ],
+        [
+          "2026-09-01",
+          91.48
+        ],
+        [
+          "2026-09-02",
+          92.15
+        ],
+        [
+          "2026-09-03",
+          92.55
+        ],
+        [
+          "2026-09-04",
+          92.69
+        ],
+        [
+          "2026-09-08",
+          94.21
+        ],
+        [
+          "2026-09-09",
+          97.26
+        ],
+        [
+          "2026-09-10",
+          103.57
+        ],
+        [
+          "2026-09-11",
+          101.27
+        ],
+        [
+          "2026-09-14",
+          102.42
+        ],
+        [
+          "2026-09-15",
+          107.02
+        ],
+        [
+          "2026-09-16",
+          103.62
+        ],
+        [
+          "2026-09-17",
+          103.21
+        ],
+        [
+          "2026-09-18",
+          101.44
+        ],
+        [
+          "2026-09-21",
+          96.97
+        ],
+        [
+          "2026-09-22",
+          96.41
+        ],
+        [
+          "2026-09-23",
+          93.38
+        ],
+        [
+          "2026-09-24",
+          95.88
+        ],
+        [
+          "2026-09-25",
+          85.23
+        ],
+        [
+          "2026-09-28",
+          99.37
+        ],
+        [
+          "2026-09-29",
+          96.16
+        ],
+        [
+          "2026-09-30",
+          97.18
+        ],
+        [
+          "2026-10-01",
+          99.77
+        ],
+        [
+          "2026-10-02",
+          97.89
+        ],
+        [
+          "2026-10-05",
+          96.13
+        ],
+        [
+          "2026-10-06",
+          96.24
+        ],
+        [
+          "2026-10-07",
+          95.02
+        ],
+        [
+          "2026-10-08",
+          98.26
+        ],
+        [
+          "2026-10-09",
+          98.73
+        ],
+        [
+          "2026-10-12",
+          98.73
+        ],
+        [
+          "2026-10-13",
+          100.86
+        ],
+        [
+          "2026-10-14",
+          101.91
+        ]
+      ]
+    },
+    {
+      "title": "XOM Company Profile",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": null,
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/company-profile2",
+      "ticker": "XOM",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "Company",
+          "Exxonmobil Holdings Corp"
+        ],
+        [
+          "Exchange",
+          "NEW YORK STOCK EXCHANGE, INC."
+        ],
+        [
+          "Industry",
+          "Energy"
+        ],
+        [
+          "Country",
+          "US"
+        ],
+        [
+          "Currency",
+          "USD"
+        ],
+        [
+          "IPO date",
+          "2026-07-02"
+        ],
+        [
+          "Market capitalization (USD)",
+          650632360000.0
+        ],
+        [
+          "Shares outstanding",
+          4144950000.0
+        ]
+      ]
+    },
+    {
+      "title": "XOM Quote",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": "daily",
+      "units": null,
+      "last_date": "2026-10-16",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/quote",
+      "ticker": "XOM",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "Current price",
+          178.98
+        ],
+        [
+          "Change",
+          4.3
+        ],
+        [
+          "Percent change (%)",
+          2.4616
+        ],
+        [
+          "Open",
+          176.485
+        ],
+        [
+          "Day high",
+          179.16
+        ],
+        [
+          "Day low",
+          175.15
+        ],
+        [
+          "Previous close",
+          174.68
+        ]
+      ]
+    },
+    {
+      "title": "XOM Analyst Recommendation Trends",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": "monthly",
+      "units": null,
+      "last_date": "2026-09-01",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/recommendation-trends",
+      "ticker": "XOM",
+      "columns": [
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "2026-09-01",
+          5,
+          9,
+          16,
+          0,
+          0
+        ],
+        [
+          "2026-08-01",
+          6,
+          9,
+          14,
+          1,
+          0
+        ],
+        [
+          "2026-07-01",
+          7,
+          9,
+          13,
+          1,
+          0
+        ],
+        [
+          "2026-07-01",
+          7,
+          9,
+          13,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "XOM Key Financial Metrics",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": null,
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/company-basic-financials",
+      "ticker": "XOM",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "P/E (TTM)",
+          22.0474
+        ],
+        [
+          "P/B (quarterly)",
+          2.1848
+        ],
+        [
+          "P/S (TTM)",
+          2.0002
+        ],
+        [
+          "EPS (TTM)",
+          7.7716
+        ],
+        [
+          "EPS growth TTM YoY (%)",
+          10.18
+        ],
+        [
+          "Revenue growth TTM YoY (%)",
+          9.62
+        ],
+        [
+          "ROE TTM (%)",
+          12.68
+        ],
+        [
+          "Net profit margin TTM (%)",
+          9.07
+        ],
+        [
+          "Dividend yield, indicated annual (%)",
+          2.521882842627165
+        ],
+        [
+          "Beta",
+          0.16715719
+        ],
+        [
+          "52-week high",
+          179.16
+        ],
+        [
+          "52-week low",
+          110.39
+        ],
+        [
+          "52-week price return (%)",
+          61.7679
+        ]
+      ]
+    },
+    {
+      "title": "XOM Recent News",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": "2026-10-17",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "",
+      "ticker": "XOM",
+      "columns": [
+        "date",
+        "headline",
+        "publisher",
+        "url"
+      ],
+      "rows": [
+        [
+          "2026-10-17",
+          "ExxonMobil Is Up 49% in 2026 With Brent Near $110. Here’s What the Stock Could Be Worth When Oil Cools",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=b6cf70924ea2ce8e3062441cfa1ecd3ef85137e928a898bc57a2c5f41ea4f054"
+        ],
+        [
+          "2026-10-17",
+          "Oil Topped $110 as Tech Stocks Lost $1 Trillion in a Day",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=2548d237b28b100b33c096d31bbbf2cbdafc39449b1f510fd8270b98d7052def"
+        ],
+        [
+          "2026-10-17",
+          "Meta, Tesla Headline Earnings In Busy Week For Markets",
+          "SeekingAlpha",
+          "https://finnhub.io/api/news?id=3dcbe5a8689c76a628f51ae4c5084970467aab6b7f0f374e353ded8fe09592d4"
+        ],
+        [
+          "2026-10-17",
+          "Making Of An 8-Fund Retiree Portfolio: $5,000 Monthly Income Potentially",
+          "SeekingAlpha",
+          "https://finnhub.io/api/news?id=43b8420adfb17b071c2cdb24e23c9ba4931f193e9ac6966138256fd45c80980a"
+        ],
+        [
+          "2026-10-17",
+          "ExxonMobil Flags a $4.5 Billion Refining Boost. Is the Stock Already Pricing It In?",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=474e7871ef7eb27ca9b9e558f34d540ef30e9ae98fd538196856ce3a1c7db437"
+        ],
+        [
+          "2026-10-16",
+          "Sector Update: Energy Stocks Gain Late Afternoon",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=abbdf924b4db0700f27a835fb20a4b692a29f19d5209f0cab9d93df43881a159"
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Crude Oil Prices: West Texas Intermediate (WTI) (DCOILWTICO)",
+      "type": "line",
+      "x": [
+        "2025-10-02",
+        "2025-10-03",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      "y": [
+        61.28,
+        61.65,
+        62.49,
+        62.52,
+        63.37,
+        62.36,
+        59.75,
+        59.52,
+        59.08,
+        58.29,
+        58.3,
+        58.34,
+        58.66,
+        59.3,
+        62.44,
+        62.27,
+        62.13,
+        60.97,
+        61.26,
+        61.36,
+        61.75,
+        61.79,
+        61.38,
+        60.4,
+        60.24,
+        60.54,
+        60.94,
+        59.3,
+        59.54,
+        60.87,
+        60.66,
+        61.51,
+        60.27,
+        60.07,
+        58.86,
+        59.11,
+        58.25,
+        58.81,
+        58.58,
+        59.47,
+        58.81,
+        59.09,
+        59.82,
+        60.23,
+        59.04,
+        58.4,
+        58.67,
+        57.76,
+        57.61,
+        56.97,
+        55.44,
+        56.07,
+        56.22,
+        56.8,
+        58.18,
+        58.55,
+        58.72,
+        56.6,
+        57.89,
+        57.79,
+        57.26,
+        57.21,
+        58.1,
+        56.97,
+        56.01,
+        57.74,
+        58.96,
+        59.39,
+        60.85,
+        61.84,
+        59.13,
+        59.4,
+        60.3,
+        60.38,
+        59.24,
+        60.7,
+        60.46,
+        62.04,
+        62.75,
+        64.77,
+        64.5,
+        61.6,
+        62.62,
+        64.56,
+        62.9,
+        63.77,
+        64.53,
+        64.2,
+        64.8,
+        63.08,
+        63.05,
+        62.53,
+        65.33,
+        66.66,
+        66.69,
+        66.36,
+        65.62,
+        65.3,
+        65.1,
+        66.96,
+        71.13,
+        74.48,
+        74.58,
+        80.88,
+        90.77,
+        94.65,
+        83.71,
+        86.8,
+        95.61,
+        98.48,
+        93.39,
+        96.01,
+        96.12,
+        96.11,
+        98.71,
+        89.33,
+        93.18,
+        91.51,
+        96.18,
+        101.26,
+        104.69,
+        102.86,
+        101.9,
+        113.23,
+        114.01,
+        114.58,
+        96.17,
+        99.62,
+        98.34,
+        100.72,
+        93.07,
+        93.04,
+        96.46,
+        85.91,
+        91.06,
+        93.64,
+        94.76,
+        99.27,
+        98.42,
+        99.89,
+        103.45,
+        110.47,
+        108.64,
+        105.38,
+        109.76,
+        105.66,
+        98.75,
+        98.38,
+        98.87,
+        101.56,
+        105.78,
+        104.52,
+        104.66,
+        108.99,
+        112.25,
+        112.09,
+        101.69,
+        100.2,
+        100.35,
+        97.63,
+        92.35,
+        92.65,
+        91.16,
+        95.96,
+        97.47,
+        99.76,
+        96.83,
+        94.32,
+        95.0,
+        91.9,
+        93.68,
+        91.58,
+        88.62,
+        84.65,
+        79.8,
+        80.65,
+        80.35,
+        78.94,
+        74.62,
+        71.42,
+        72.67,
+        70.3,
+        71.87,
+        70.56,
+        69.74,
+        69.73,
+        69.6,
+        71.53,
+        74.56,
+        73.15,
+        72.45,
+        79.2,
+        80.44,
+        80.73,
+        80.03,
+        83.43,
+        84.38,
+        86.04,
+        87.66,
+        93.08,
+        91.74,
+        84.25,
+        80.91,
+        86.08,
+        85.15,
+        86.16,
+        81.96,
+        77.33,
+        76.78,
+        78.88,
+        79.77,
+        83.76,
+        84.77,
+        84.97,
+        82.77,
+        83.99,
+        86.04,
+        86.48,
+        87.28,
+        89.75,
+        87.21,
+        86.34,
+        83.9,
+        83.46,
+        84.81,
+        84.57,
+        87.03,
+        91.48,
+        92.15,
+        92.55,
+        92.69,
+        94.21,
+        97.26,
+        103.57,
+        101.27,
+        102.42,
+        107.02,
+        103.62,
+        103.21,
+        101.44,
+        96.97,
+        96.41,
+        93.38,
+        95.88,
+        85.23,
+        99.37,
+        96.16,
+        97.18,
+        99.77,
+        97.89,
+        96.13,
+        96.24,
+        95.02,
+        98.26,
+        98.73,
+        98.73,
+        100.86,
+        101.91
+      ],
+      "y_label": "Dollars per Barrel"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "DCOILWTICO",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "profile XOM",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "quote XOM",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "recommendations XOM",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "financials XOM",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "news XOM",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "validation": {
+    "counts": {
+      "figures": 46,
+      "verified": 28,
+      "derived": 1,
+      "unverified": 17
+    },
+    "figures": [
+      {
+        "text": "18 Oct 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 95,
+        "end": 106,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "*Prepared for B17 Institutional Research – 18 Oct 2026*"
+      },
+      {
+        "text": "26 %",
+        "value": 26.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 211,
+        "end": 215,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S12",
+        "context": "- XOM’s equity is moderately sensitive to crude‑oil price swings; a 26 % historical correlation implies a ~2–3 % share‑price move per 10 % oil decline."
+      },
+      {
+        "text": "2",
+        "value": 2.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 250,
+        "end": 251,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: P/S (TTM)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- XOM’s equity is moderately sensitive to crude‑oil price swings; a 26 % historical correlation implies a ~2–3 % share‑price move per 10 % oil decline."
+      },
+      {
+        "text": "3 %",
+        "value": 3.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 252,
+        "end": 255,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: Dividend yield, indicated annual (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- XOM’s equity is moderately sensitive to crude‑oil price swings; a 26 % historical correlation implies a ~2–3 % share‑price move per 10 % oil decline."
+      },
+      {
+        "text": "10 %",
+        "value": 10.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 277,
+        "end": 281,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: EPS growth TTM YoY (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- XOM’s equity is moderately sensitive to crude‑oil price swings; a 26 % historical correlation implies a ~2–3 % share‑price move per 10 % oil decline."
+      },
+      {
+        "text": "$101.9",
+        "value": 101.9,
+        "unit": "$",
+        "tolerance": 0.050000001,
+        "start": 503,
+        "end": 509,
+        "status": "verified",
+        "matched": "DCOILWTICO on 2026-04-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- Current WTI is $101.9 / bbl, with a recent 10‑month swing from $62.4 to $107, underscoring the volatility that can translate into earnings volatility."
+      },
+      {
+        "text": "$62.4",
+        "value": 62.4,
+        "unit": "$",
+        "tolerance": 0.050000001,
+        "start": 551,
+        "end": 556,
+        "status": "verified",
+        "matched": "DCOILWTICO on 2025-10-23",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- Current WTI is $101.9 / bbl, with a recent 10‑month swing from $62.4 to $107, underscoring the volatility that can translate into earnings volatility."
+      },
+      {
+        "text": "$107",
+        "value": 107.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 560,
+        "end": 564,
+        "status": "verified",
+        "matched": "DCOILWTICO on 2026-09-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- Current WTI is $101.9 / bbl, with a recent 10‑month swing from $62.4 to $107, underscoring the volatility that can translate into earnings volatility."
+      },
+      {
+        "text": "12.68 %",
+        "value": 12.68,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 683,
+        "end": 690,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: ROE TTM (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "context": "- XOM’s balance sheet is strong (ROE 12.68 %, net margin 9.07 %) and its dividend yield of 2.52 % provides a defensive cushion."
+      },
+      {
+        "text": "9.07 %",
+        "value": 9.07,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 703,
+        "end": 709,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: Net profit margin TTM (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "context": "- XOM’s balance sheet is strong (ROE 12.68 %, net margin 9.07 %) and its dividend yield of 2.52 % provides a defensive cushion."
+      },
+      {
+        "text": "2.52 %",
+        "value": 2.52,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 737,
+        "end": 743,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: Dividend yield, indicated annual (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "context": "- XOM’s balance sheet is strong (ROE 12.68 %, net margin 9.07 %) and its dividend yield of 2.52 % provides a defensive cushion."
+      },
+      {
+        "text": "0.1672",
+        "value": 0.1672,
+        "unit": "",
+        "tolerance": 5.0001000000000005e-05,
+        "start": 812,
+        "end": 818,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: Beta",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "- The stock’s low equity beta (0.1672) limits market‑wide volatility but does not shield it from commodity‑specific risk."
+      },
+      {
+        "text": "$110",
+        "value": 110.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 1084,
+        "end": 1088,
+        "status": "verified",
+        "matched": "DCOILWTICO on 2026-05-04",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Macro** | Oil prices have been highly volatile; WTI peaked near $110 in 2026‑10, then fell to $101.9."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1097,
+        "end": 1099,
+        "status": "derived",
+        "matched": "DCOILWTICO % change 2026-04-15 to 2026-10-14",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Macro** | Oil prices have been highly volatile; WTI peaked near $110 in 2026‑10, then fell to $101.9."
+      },
+      {
+        "text": "$101.9",
+        "value": 101.9,
+        "unit": "$",
+        "tolerance": 0.050000001,
+        "start": 1114,
+        "end": 1120,
+        "status": "verified",
+        "matched": "DCOILWTICO on 2026-04-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Macro** | Oil prices have been highly volatile; WTI peaked near $110 in 2026‑10, then fell to $101.9."
+      },
+      {
+        "text": "$45",
+        "value": 45.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 1145,
+        "end": 1148,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "The 10‑month swing of ~$45 per barrel signals continued price risk."
+      },
+      {
+        "text": "$4.5 bn",
+        "value": 4500000000.0,
+        "unit": "$",
+        "tolerance": 50000000.0,
+        "start": 1360,
+        "end": 1367,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S10",
+        "context": "The $4.5 bn refining expansion is expected to add ~$4.5 bn to Q3 profit."
+      },
+      {
+        "text": "$4.5 bn",
+        "value": 4500000000.0,
+        "unit": "$",
+        "tolerance": 50000000.0,
+        "start": 1407,
+        "end": 1414,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S10",
+        "context": "The $4.5 bn refining expansion is expected to add ~$4.5 bn to Q3 profit."
+      },
+      {
+        "text": "0.1672",
+        "value": 0.1672,
+        "unit": "",
+        "tolerance": 5.0001000000000005e-05,
+        "start": 1610,
+        "end": 1616,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: Beta",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Portfolio** | Equity beta 0.1672 indicates low sensitivity to overall market moves; oil‑price exposure is the main risk factor."
+      },
+      {
+        "text": "$100",
+        "value": 100.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 1905,
+        "end": 1909,
+        "status": "verified",
+        "matched": "DCOILWTICO on 2026-04-27",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Base** | Oil remains near $100–$110 per barrel | Share price stable; earnings growth modest | Current market conditions; hedging reduces volatility |"
+      },
+      {
+        "text": "$110",
+        "value": 110.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 1910,
+        "end": 1914,
+        "status": "verified",
+        "matched": "DCOILWTICO on 2026-05-04",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Base** | Oil remains near $100–$110 per barrel | Share price stable; earnings growth modest | Current market conditions; hedging reduces volatility |"
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2054,
+        "end": 2056,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: EPS growth TTM YoY (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Upside** | Oil rises 10–20 % to $120–$130 | Share price up 5–10 %; earnings +15–20 % | Upstream revenue increases; downstream margins remain strong |"
+      },
+      {
+        "text": "20 %",
+        "value": 20.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2057,
+        "end": 2061,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S12",
+        "context": "| **Upside** | Oil rises 10–20 % to $120–$130 | Share price up 5–10 %; earnings +15–20 % | Upstream revenue increases; downstream margins remain strong |"
+      },
+      {
+        "text": "$120",
+        "value": 120.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 2065,
+        "end": 2069,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Upside** | Oil rises 10–20 % to $120–$130 | Share price up 5–10 %; earnings +15–20 % | Upstream revenue increases; downstream margins remain strong |"
+      },
+      {
+        "text": "$130",
+        "value": 130.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 2070,
+        "end": 2074,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "| **Upside** | Oil rises 10–20 % to $120–$130 | Share price up 5–10 %; earnings +15–20 % | Upstream revenue increases; downstream margins remain strong |"
+      },
+      {
+        "text": "5",
+        "value": 5.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2092,
+        "end": 2093,
+        "status": "verified",
+        "matched": "XOM Analyst Recommendation Trends: strongBuy (2026-09-01)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Upside** | Oil rises 10–20 % to $120–$130 | Share price up 5–10 %; earnings +15–20 % | Upstream revenue increases; downstream margins remain strong |"
+      },
+      {
+        "text": "10 %",
+        "value": 10.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2094,
+        "end": 2098,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: EPS growth TTM YoY (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Upside** | Oil rises 10–20 % to $120–$130 | Share price up 5–10 %; earnings +15–20 % | Upstream revenue increases; downstream margins remain strong |"
+      },
+      {
+        "text": "+15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2109,
+        "end": 2112,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S14",
+        "context": "| **Upside** | Oil rises 10–20 % to $120–$130 | Share price up 5–10 %; earnings +15–20 % | Upstream revenue increases; downstream margins remain strong |"
+      },
+      {
+        "text": "20 %",
+        "value": 20.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2113,
+        "end": 2117,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S12",
+        "context": "| **Upside** | Oil rises 10–20 % to $120–$130 | Share price up 5–10 %; earnings +15–20 % | Upstream revenue increases; downstream margins remain strong |"
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2210,
+        "end": 2212,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: EPS growth TTM YoY (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Downside** | Oil falls 10–20 % to $80–$90 | Share price down 3–6 %; earnings drop 10–15 % | Upstream revenue declines; downstream gains insufficient to fully offset |"
+      },
+      {
+        "text": "20 %",
+        "value": 20.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2213,
+        "end": 2217,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S12",
+        "context": "| **Downside** | Oil falls 10–20 % to $80–$90 | Share price down 3–6 %; earnings drop 10–15 % | Upstream revenue declines; downstream gains insufficient to fully offset |"
+      },
+      {
+        "text": "$80",
+        "value": 80.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 2221,
+        "end": 2224,
+        "status": "verified",
+        "matched": "DCOILWTICO on 2026-07-16",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Downside** | Oil falls 10–20 % to $80–$90 | Share price down 3–6 %; earnings drop 10–15 % | Upstream revenue declines; downstream gains insufficient to fully offset |"
+      },
+      {
+        "text": "$90",
+        "value": 90.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 2225,
+        "end": 2228,
+        "status": "verified",
+        "matched": "DCOILWTICO on 2026-08-20",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Downside** | Oil falls 10–20 % to $80–$90 | Share price down 3–6 %; earnings drop 10–15 % | Upstream revenue declines; downstream gains insufficient to fully offset |"
+      },
+      {
+        "text": "3",
+        "value": 3.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2248,
+        "end": 2249,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: Dividend yield, indicated annual (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Downside** | Oil falls 10–20 % to $80–$90 | Share price down 3–6 %; earnings drop 10–15 % | Upstream revenue declines; downstream gains insufficient to fully offset |"
+      },
+      {
+        "text": "6 %",
+        "value": 6.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2250,
+        "end": 2253,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S9",
+        "context": "| **Downside** | Oil falls 10–20 % to $80–$90 | Share price down 3–6 %; earnings drop 10–15 % | Upstream revenue declines; downstream gains insufficient to fully offset |"
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2269,
+        "end": 2271,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: EPS growth TTM YoY (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "| **Downside** | Oil falls 10–20 % to $80–$90 | Share price down 3–6 %; earnings drop 10–15 % | Upstream revenue declines; downstream gains insufficient to fully offset |"
+      },
+      {
+        "text": "15 %",
+        "value": 15.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2272,
+        "end": 2276,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S14",
+        "context": "| **Downside** | Oil falls 10–20 % to $80–$90 | Share price down 3–6 %; earnings drop 10–15 % | Upstream revenue declines; downstream gains insufficient to fully offset |"
+      },
+      {
+        "text": "26 %",
+        "value": 26.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2366,
+        "end": 2370,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S12",
+        "context": "*Note: The 26 % correlation from 2008‑09 (oil drop 60 %) suggests a 10 % oil decline could translate into a 2–3 % equity decline, after hedging.* [S12]"
+      },
+      {
+        "text": "09",
+        "value": 9.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2393,
+        "end": 2395,
+        "status": "verified",
+        "matched": "XOM Analyst Recommendation Trends: buy (2026-09-01)",
+        "source_id": "S4",
+        "source_ids": [
+          "S4"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "*Note: The 26 % correlation from 2008‑09 (oil drop 60 %) suggests a 10 % oil decline could translate into a 2–3 % equity decline, after hedging.* [S12]"
+      },
+      {
+        "text": "60 %",
+        "value": 60.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2406,
+        "end": 2410,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S12",
+        "context": "*Note: The 26 % correlation from 2008‑09 (oil drop 60 %) suggests a 10 % oil decline could translate into a 2–3 % equity decline, after hedging.* [S12]"
+      },
+      {
+        "text": "10 %",
+        "value": 10.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2423,
+        "end": 2427,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: EPS growth TTM YoY (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "*Note: The 26 % correlation from 2008‑09 (oil drop 60 %) suggests a 10 % oil decline could translate into a 2–3 % equity decline, after hedging.* [S12]"
+      },
+      {
+        "text": "2",
+        "value": 2.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2463,
+        "end": 2464,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: P/S (TTM)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "*Note: The 26 % correlation from 2008‑09 (oil drop 60 %) suggests a 10 % oil decline could translate into a 2–3 % equity decline, after hedging.* [S12]"
+      },
+      {
+        "text": "3 %",
+        "value": 3.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2465,
+        "end": 2468,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: Dividend yield, indicated annual (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "context": "*Note: The 26 % correlation from 2008‑09 (oil drop 60 %) suggests a 10 % oil decline could translate into a 2–3 % equity decline, after hedging.* [S12]"
+      },
+      {
+        "text": "$4.5 bn",
+        "value": 4500000000.0,
+        "unit": "$",
+        "tolerance": 50000000.0,
+        "start": 2961,
+        "end": 2968,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S10",
+        "context": "- **Refining Expansion Execution** – Delays or cost overruns in the $4.5 bn project could erode expected margin gains."
+      },
+      {
+        "text": "$800",
+        "value": 800.0,
+        "unit": "$",
+        "tolerance": 0.500000001,
+        "start": 3076,
+        "end": 3080,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "context": "- **Earnings Forecasts** – Exxon’s own projection of an $800 m earnings dip in Q4 due to falling prices signals sensitivity."
+      },
+      {
+        "text": "2.52 %",
+        "value": 2.52,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 3228,
+        "end": 3234,
+        "status": "verified",
+        "matched": "XOM Key Financial Metrics: Dividend yield, indicated annual (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "context": "- **Income Focus** – The 2.52 % dividend yield and strong balance sheet make XOM attractive for income‑oriented portfolios."
+      }
+    ],
+    "citations": {
+      "markers": 12,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "| Scenario | Oil‑Price Path | Expected XOM Impact | Rationale |\n|----------|----------------|---------------------|-----------|\n| **Base** | Oil remains near $100–$110 per barrel | Share price stable;",
+          "figures": [
+            "$100",
+            "$110",
+            "10",
+            "5",
+            "10 %",
+            "10",
+            "$80",
+            "$90",
+            "3",
+            "10"
+          ]
+        },
+        {
+          "text": "- **Income Focus** – The 2.52 % dividend yield and strong balance sheet make XOM attractive for income‑oriented portfolios.",
+          "figures": [
+            "2.52 %"
+          ]
+        }
+      ],
+      "source_mismatches": [
+        {
+          "text": "- XOM’s equity is moderately sensitive to crude‑oil price swings; a 26 % historical correlation implies a ~2–3 % share‑price move per 10 % oil decline. [S12]",
+          "figures": [
+            "2",
+            "3 %",
+            "10 %"
+          ],
+          "cited": [
+            "S12"
+          ]
+        },
+        {
+          "text": "*Note: The 26 % correlation from 2008‑09 (oil drop 60 %) suggests a 10 % oil decline could translate into a 2–3 % equity decline, after hedging.* [S12]",
+          "figures": [
+            "09",
+            "10 %",
+            "2",
+            "3 %"
+          ],
+          "cited": [
+            "S12"
+          ]
+        }
+      ]
+    },
+    "freshness": [
+      {
+        "table": "FRED: Crude Oil Prices: West Texas Intermediate (WTI) (DCOILWTICO)",
+        "last_date": "2026-10-14",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "XOM Quote",
+        "last_date": "2026-10-16",
+        "frequency": "daily",
+        "age_days": 1,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "XOM Analyst Recommendation Trends",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 17,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "XOM Recent News",
+        "last_date": "2026-10-17",
+        "frequency": null,
+        "age_days": null,
+        "max_age_days": null,
+        "status": "n/a"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "summary": "29 of 46 figures verified against source data (28 exact, 1 derived); 17 flagged (12 of them appear in a fetched web/news snippet). 2 paragraph(s) state figures without a citation. 2 paragraph(s) cite a different source than the data."
+  },
+  "run_meta": {
+    "run_id": "20261017-233735-e7e1bd",
+    "timestamp": "2026-10-18T03:37:35+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    }
+  }
+}

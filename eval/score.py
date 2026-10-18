@@ -311,6 +311,10 @@ def write_results_md(routing: Dict[str, Any], metrics: Dict[str, Any], infos: Di
                   f"{determinism['seed']} and temperature {determinism['temperature']} on {determinism['date']}: "
                   f"{determinism['distinct_outputs']} distinct output(s)."]
 
+    notes = EVAL_DIR / "NOTES.md"
+    if notes.exists():
+        lines += ["", "## Notes on this run", "", notes.read_text().strip()]
+
     lines += [
         "",
         "## How to read these numbers",
