@@ -1,0 +1,142 @@
+# Rule-based question routing (router.py, router_tier2.py).
+#
+# Matching rules: case-insensitive, whole words only, hyphens count as
+# spaces, and a trailing "s"/"es" is allowed. So "spread" also matches
+# "spreads", "high yield" matches "high-yield", and "rate" does NOT match
+# "corporate". Phrases in exclude_phrases are removed from the question
+# before that tag's keywords are checked (e.g. "unemployment rate" is a
+# macro term, not a rates term).
+
+tag_order = ["macro", "rates", "credit", "portfolio", "equity"]
+fallback_tags = ["macro"]
+tier2_fallback = { general = "broad_financial_question" }
+
+# ---------------------------------------------------------------------------
+# Tier 1: high-level topic tags (a question can get several)
+# ---------------------------------------------------------------------------
+[tier1.macro]
+keywords = [
+    "inflation", "cpi", "ppi", "pce", "gdp", "growth", "economy", "labor",
+    "employment", "unemployment", "jobless", "payroll", "productivity",
+    "recession", "soft landing", "hard landing", "macro", "economic outlook",
+    "macro outlook",
+]
+exclude_phrases = ["earnings growth", "revenue growth", "dividend growth", "growth vs value"]
+
+[tier1.rates]
+keywords = [
+    "rate", "fed", "monetary policy", "yield", "curve", "yield curve", "bond",
+    "treasury", "treasuries", "duration", "higher for longer", "ffr",
+    "federal reserve", "federal funds", "fomc",
+]
+exclude_phrases = [
+    "unemployment rate", "inflation rate", "growth rate", "participation rate",
+    "default rate", "high yield", "dividend yield", "earnings yield",
+    "corporate bond", "junk bond",
+]
+
+[tier1.credit]
+keywords = [
+    "credit", "spread", "ig", "investment grade", "high yield", "hy",
+    "default", "default risk", "credit cycle", "credit spread",
+    "corporate bond", "junk bond", "oas", "leveraged loan", "downgrade",
+]
+exclude_phrases = ["credit card"]
+
+[tier1.portfolio]
+keywords = [
+    "portfolio", "allocation", "allocate", "diversification", "diversified",
+    "var", "sharpe", "risk parity", "asset mix", "hedge", "hedging",
+    "rebalance", "rebalanced", "rebalancing", "returns", "risk budgeting",
+]
+exclude_phrases = []
+
+[tier1.equity]
+keywords = [
+    "stock", "equity", "equities", "valuation", "eps", "earnings", "multiple",
+    "pe", "p/e", "pb", "p/b", "cash flow", "fundamental",
+]
+exclude_phrases = ["private equity", "home equity"]
+
+# ---------------------------------------------------------------------------
+# Tier 2: one specialization per tag; the first matching rule wins
+# ---------------------------------------------------------------------------
+[[tier2.rates]]
+label = "yield_curve_inversion"
+keywords = ["yield curve", "inversion", "inverted", "10s2s", "2s10s", "steepen", "steepening", "flatten", "flattening"]
+
+[[tier2.rates]]
+label = "fed_cut_cycle"
+keywords = ["fed cut", "rate cut", "cut cycle", "easing"]
+
+[[tier2.rates]]
+label = "fed_hike_cycle"
+keywords = ["fed hike", "rate hike", "tightening", "restrictive", "higher for longer"]
+
+[[tier2.rates]]
+label = "duration_volatility"
+keywords = ["duration", "treasury volatility", "bond volatility"]
+
+[[tier2.macro]]
+label = "inflation"
+keywords = ["inflation", "cpi", "ppi", "core pce", "pce", "disinflation"]
+
+[[tier2.macro]]
+label = "recession_probabilities"
+keywords = ["recession", "slowdown", "hard landing", "soft landing"]
+
+[[tier2.macro]]
+label = "growth_outlook"
+keywords = ["gdp", "growth", "economic expansion"]
+
+[[tier2.macro]]
+label = "labor_market"
+keywords = ["labor", "employment", "unemployment", "payroll"]
+
+[[tier2.credit]]
+label = "ig_vs_hy"
+keywords = ["ig vs hy", "ig vs. hy", "investment grade vs high yield"]
+
+[[tier2.credit]]
+label = "default_cycle"
+keywords = ["default cycle", "default risk", "default", "downgrade risk"]
+
+[[tier2.credit]]
+label = "spread_dynamics"
+keywords = ["spread widening", "spread tightening", "spread", "oas"]
+
+[[tier2.credit]]
+label = "leveraged_loans"
+keywords = ["leveraged loan", "clo"]
+
+[[tier2.portfolio]]
+label = "risk_parity"
+keywords = ["risk parity", "risk budgeting"]
+
+[[tier2.portfolio]]
+label = "allocation_framework"
+keywords = ["allocation", "allocate", "asset mix", "rebalance", "rebalanced", "rebalancing"]
+
+[[tier2.portfolio]]
+label = "hedging_strategies"
+keywords = ["hedge", "hedging"]
+
+[[tier2.portfolio]]
+label = "volatility_regime_shifts"
+keywords = ["volatility regime", "vol regime"]
+
+[[tier2.equity]]
+label = "valuation_pressure"
+keywords = ["valuation", "multiple", "pe", "p/e", "pb", "p/b", "cash flow"]
+
+[[tier2.equity]]
+label = "earnings_cycle"
+keywords = ["earnings", "eps", "rev growth", "revenue growth"]
+
+[[tier2.equity]]
+label = "sector_focus"
+keywords = ["tech sector", "financials", "energy sector"]
+
+[[tier2.equity]]
+label = "style_factor_analysis"
+keywords = ["mega cap", "small cap", "growth vs value"]

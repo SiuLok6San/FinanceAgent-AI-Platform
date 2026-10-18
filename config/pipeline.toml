@@ -1,0 +1,20 @@
+# Pipeline and LLM settings. Values here are defaults; the env vars named
+# below override them (see .env.example).
+
+[llm]
+api_base = "http://localhost:11434"   # env: LLM_API_BASE (https://ollama.com for the Ollama API)
+model = "llama3"                      # env: LLM_MODEL_NAME
+seed = 42                             # env: LLM_SEED
+timeout_sec = 180                     # env: LLM_TIMEOUT_SEC
+retries = 3                           # retries on timeouts, 429 and 5xx responses
+backoff_sec = 2.0                     # first retry wait; doubles each retry
+
+[temperatures]
+planner = 0.1
+analyst = 0.15
+reasoner = 0.15
+writer = 0.15
+
+[limits]
+max_prompt_chars = 12000   # user prompts are trimmed to this length
+max_note_chars = 2000      # each web-news note passed to the Analyst

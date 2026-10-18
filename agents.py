@@ -8,9 +8,10 @@ from pathlib import Path
 from typing import Any, Dict, Optional
 
 from llm import call_llm, LLMError, llm_settings
+from settings import load_config
 from router import route_question
 from router_tier2 import detect_tier2_specialization
-from answer_builder import build_answer, WRITER_TEMPERATURE
+from answer_builder import build_answer
 
 from data_providers import (
     resolve_fred_series,
@@ -24,9 +25,10 @@ from data_providers import (
 )
 
 
-PLANNER_TEMPERATURE = 0.1
-ANALYST_TEMPERATURE = 0.15
-REASONER_TEMPERATURE = 0.15
+_PIPELINE_CFG = load_config("pipeline")
+TEMPERATURES = _PIPELINE_CFG["temperatures"]
+MAX_PROMPT_CHARS = _PIPELINE_CFG["limits"]["max_prompt_chars"]
+MAX_NOTE_CHARS = _PIPELINE_CFG["limits"]["max_note_chars"]
 
 # --------------------------------------------------------------------------
 # Logging: tracebacks go to logs/pipeline.log, never into the report text
@@ -48,9 +50,10 @@ def _setup_logging() -> None:
 _setup_logging()
 
 LLM_UNAVAILABLE_MESSAGE = (
-    "The local language model could not be reached, so no report was generated. "
-    "Check that Ollama is running (`ollama serve`) and that the model has been pulled "
-    "(`ollama pull llama3`), then try again."
+    "The language model could not be reached, so no report was generated. "
+    "With a local model, check that Ollama is running and the model is pulled "
+    "(`ollama pull llama3`). With the Ollama API, check `OLLAMA_API_KEY` and "
+    "`LLM_MODEL_NAME` in `.env`. Then try again."
 )
 GENERIC_ERROR_MESSAGE = (
     "Something went wrong while generating the report. Please try again; "
@@ -63,14 +66,14 @@ GENERIC_ERROR_MESSAGE = (
 # --------------------------------------------------------------------------
 def ask_llm(system_prompt: str, user_prompt: str, temperature: float = 0.15) -> str:
     # trim to avoid Ollama slowdowns; LLMError propagates to run_multiagent_pipeline
-    user_prompt = (user_prompt or "")[:12000]
+    user_prompt = (user_prompt or "")[:MAX_PROMPT_CHARS]
     return call_llm(system_prompt, user_prompt, temperature=temperature)
 
 
 def run_planner(question: str) -> str:
     sys = "You are the Planner Agent. Produce a short step-by-step research plan."
     user = f"QUESTION:\n{question}\n\nReturn 4-6 bullets."
-    return ask_llm(sys, user, temperature=PLANNER_TEMPERATURE)
+    return ask_llm(sys, user, temperature=TEMPERATURES["planner"])
 
 
 def run_researcher(question: str, ticker: Optional[str]) -> Dict[str, Any]:
@@ -121,7 +124,7 @@ def run_researcher(question: str, ticker: Optional[str]) -> Dict[str, Any]:
         logger.warning("Web news fetch failed", exc_info=True)
 
     # keep notes compact
-    out["notes"] = [n[:2000] for n in out["notes"]]
+    out["notes"] = [n[:MAX_NOTE_CHARS] for n in out["notes"]]
     return out
 
 
@@ -136,13 +139,13 @@ def run_analyst(question: str, planner_steps: str, research_note: str) -> str:
         f"PLANNER STEPS:\n{planner_steps}\n\n"
         f"RESEARCH NOTES (may be partial):\n{research_note}"
     )
-    return ask_llm(sys, user, temperature=ANALYST_TEMPERATURE)
+    return ask_llm(sys, user, temperature=TEMPERATURES["analyst"])
 
 
 def run_reasoner(question: str, analyst_text: str) -> str:
     sys = "You are the Reasoner Agent. Remove weak claims and sharpen logic."
     user = f"QUESTION:\n{question}\n\nANALYST DRAFT:\n{analyst_text}"
-    return ask_llm(sys, user, temperature=REASONER_TEMPERATURE)
+    return ask_llm(sys, user, temperature=TEMPERATURES["reasoner"])
 
 
 # --------------------------------------------------------------------------
@@ -154,12 +157,7 @@ def _run_meta(run_id: str) -> Dict[str, Any]:
         "run_id": run_id,
         "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         **llm_settings(),
-        "temperatures": {
-            "planner": PLANNER_TEMPERATURE,
-            "analyst": ANALYST_TEMPERATURE,
-            "reasoner": REASONER_TEMPERATURE,
-            "writer": WRITER_TEMPERATURE,
-        },
+        "temperatures": dict(TEMPERATURES),
     }
 
 

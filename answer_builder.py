@@ -25,8 +25,9 @@ import textwrap
 from typing import Any, Dict, List, Optional
 
 from llm import call_llm
+from settings import load_config
 
-WRITER_TEMPERATURE = 0.2
+WRITER_TEMPERATURE = load_config("pipeline")["temperatures"]["writer"]
 
 
 # ---------------------------------------------------------------------
