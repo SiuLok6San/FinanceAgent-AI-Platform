@@ -14,6 +14,7 @@ APP = str(Path(__file__).resolve().parents[1] / "app.py")
 
 @pytest.fixture
 def mocked_pipeline(monkeypatch):
+    monkeypatch.setenv("LLM_API_BASE", "http://localhost:11434")  # live mode counts as configured
     table = pd.DataFrame({"date": pd.to_datetime(["2026-08-01", "2026-09-01"]), "value": [4.2, 4.3]})
     monkeypatch.setattr(agents, "resolve_fred_series", lambda q: ["UNRATE"])
     monkeypatch.setattr(agents, "fetch_fred_macro_timeseries", lambda ids: {
@@ -101,6 +102,7 @@ def test_report_validation_panel_and_highlight(mocked_pipeline):
 
 def test_pipeline_error_is_shown_as_message(monkeypatch):
     from llm import LLMError
+    monkeypatch.setenv("LLM_API_BASE", "http://localhost:11434")
 
     def broken(*a, **k):
         raise LLMError("connection refused")
@@ -108,3 +110,13 @@ def test_pipeline_error_is_shown_as_message(monkeypatch):
     at = _run("anything")
     assert not at.exception
     assert at.error and at.error[0].value.startswith("The language model could not be reached")
+
+
+def test_live_mode_without_llm_settings_is_disabled(monkeypatch):
+    # e.g. the public deployment with no secrets: only the example runs work
+    for k in ("LLM_API_BASE", "OLLAMA_API_KEY", "APP_PASSWORD"):
+        monkeypatch.setenv(k, "")
+    at = AppTest.from_file(APP, default_timeout=30).run()
+    at.radio[0].set_value(LIVE).run()
+    assert at.button[0].disabled is True
+    assert any("not configured on this deployment" in w.value for w in at.warning)
