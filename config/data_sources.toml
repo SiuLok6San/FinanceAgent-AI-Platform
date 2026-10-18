@@ -11,7 +11,9 @@ http_timeout_sec = 25   # env: HTTP_TIMEOUT
 # Per series: alias (prefix of its fact IDs, e.g. HY_OAS.latest),
 # change_unit ("bp" | "pp" for rates and spreads, "pct" for % changes of a
 # level, "pts" for index points plus % changes) and level_format
-# ("percent" | "index" | "usd" | "bn_usd").
+# ("percent" | "index" | "usd" | "bn_usd"). Spreads between two series are
+# only computed within the same spread_group ("yield" or "credit_spread"):
+# a Treasury yield minus a credit spread means nothing.
 # ---------------------------------------------------------------------------
 [fred]
 max_series = 6
@@ -33,6 +35,7 @@ quarterly = "10y"
 [[fred.series]]
 id = "FEDFUNDS"
 alias = "FEDFUNDS"
+spread_group = "yield"
 change_unit = "bp"
 level_format = "percent"
 title = "Effective Federal Funds Rate"
@@ -55,6 +58,7 @@ keywords = ["yield curve", "curve", "inversion", "inverted", "10s2s", "2s10s"]
 [[fred.series]]
 id = "DGS10"
 alias = "UST10Y"
+spread_group = "yield"
 change_unit = "bp"
 level_format = "percent"
 title = "10-Year Treasury Constant Maturity Yield"
@@ -66,6 +70,7 @@ keywords = ["10 year", "treasury", "treasuries", "yield curve", "bond yield", "d
 [[fred.series]]
 id = "DGS2"
 alias = "UST2Y"
+spread_group = "yield"
 change_unit = "bp"
 level_format = "percent"
 title = "2-Year Treasury Constant Maturity Yield"
@@ -77,6 +82,7 @@ keywords = ["2 year", "yield curve", "short end"]
 [[fred.series]]
 id = "MORTGAGE30US"
 alias = "MORTGAGE30"
+spread_group = "yield"
 change_unit = "bp"
 level_format = "percent"
 title = "30-Year Fixed Rate Mortgage Average"
@@ -88,6 +94,7 @@ keywords = ["mortgage", "housing"]
 [[fred.series]]
 id = "BAMLH0A0HYM2"
 alias = "HY_OAS"
+spread_group = "credit_spread"
 change_unit = "bp"
 level_format = "percent"
 title = "ICE BofA US High Yield Option-Adjusted Spread"
@@ -99,6 +106,7 @@ keywords = ["high yield", "hy", "junk bond", "credit spread", "spread", "default
 [[fred.series]]
 id = "BAMLC0A0CM"
 alias = "IG_OAS"
+spread_group = "credit_spread"
 change_unit = "bp"
 level_format = "percent"
 title = "ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread"
