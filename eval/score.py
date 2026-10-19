@@ -336,8 +336,8 @@ def _metrics_table(scores: Dict[str, Any], which_set: str) -> List[str]:
     row("Stale data series", lambda x: str(x["stale_series"]))
     row("Mean time per question (s)", lambda x: str(x["mean_elapsed_sec"]))
     lines += ["", "² Only for v3. The comparison check needs to know which fact each side of the comparison is "
-              "(a placeholder). History wording is judged against 5 years of daily or 10 years of monthly data; "
-              "original and v2 fetched 1–2.5 years, too short to judge \"five-year lows\". Trend and growth-rate "
+              "(a placeholder). History wording needs at least 3 years of fetched history (and five for \"five-year "
+              "lows\"); original and v2 fetched 1–2.5 years, so their history wording is not judged. Trend and growth-rate "
               "wording are checked for every version."]
     return lines
 

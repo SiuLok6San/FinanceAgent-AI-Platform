@@ -654,9 +654,9 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
     horizon_pat = _phrase_pattern(list(trend["horizons"]))
     horizons = {_norm_phrase(k): v for k, v in trend["horizons"].items()}
     groups = {s["alias"]: s.get("spread_group") for s in load_config("data_sources")["fred"]["series"]}
-    # history words are judged only against a full window ("5y", "10y"): a report built on one year
-    # of data cannot be told it is wrong about "five-year lows"
-    full_windows = {f"pctile_{w}" for w in load_config("data_sources")["fred"]["history_label"].values()}
+    # history words need enough history: a report built on one year of data cannot be told it is
+    # wrong about "historically tight", and "five-year lows" needs five years
+    phrase_years = {_norm_phrase(k): v for k, v in hist["phrase_years"].items()}
     rate = cfg["rate_trend"]
     rate_words = {_norm_phrase(w): 1 for w in rate["up"]} | {_norm_phrase(w): -1 for w in rate["down"]}
     rate_pat = _phrase_pattern(list(rate_words))
@@ -683,8 +683,9 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
                 if negated(m):
                     continue
                 alias = nearest(m.start())
-                key = next((k for k in store if k.startswith(f"{alias}.") and k.split(".", 1)[1] in full_windows), None)
-                if not key:
+                key = next((k for k in store if k.startswith(f"{alias}.pctile_")), None)
+                need = max([hist["min_years"]] + [y for p, y in phrase_years.items() if p in _norm_phrase(m.group(1))])
+                if not key or _window_years(key.split("pctile_", 1)[1]) < need - 0.05:
                     continue
                 pct = store[key].value
                 lo, hi = hist["middle_range"]
@@ -736,6 +737,14 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
                 rate_issues.append({"word": word, "says": "up" if rate_words[word] > 0 else "down", "series": alias,
                                     "evidence": found[1], "facts": found[2], "context": sentence.strip()[:200]})
     return {"history": history_issues, "trend": trend_issues, "rate": rate_issues}
+
+
+def _window_years(window: str) -> float:
+    """"5y" -> 5, "30m" -> 2.5 (fact_store.history_window labels)."""
+    m = re.fullmatch(r"(\d+)([ym])", window)
+    if not m:
+        return 0.0
+    return int(m.group(1)) / (1 if m.group(2) == "y" else 12)
 
 
 def _rate_direction(store, alias: str, gap: float) -> Optional[Tuple[int, str, List[str]]]:

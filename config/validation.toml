@@ -131,6 +131,10 @@ negations = ["not", "no", "no longer", "isn't", "aren't", "never", "hardly", "ra
 low_max_pctile = 33
 high_min_pctile = 67
 middle_range = [20, 80]
+# history needed to judge these words: at least min_years, and a phrase naming a horizon needs that
+# horizon (FRED's ICE credit spreads have 3 years: "historically tight" is checked, "five-year low" is not)
+min_years = 3
+phrase_years = { "five-year" = 5, "5-year" = 5, "ten-year" = 10, "10-year" = 10, "decade" = 10 }
 low = ["historically low", "historically tight", "near its lows", "near their lows", "near lows", "near the lows",
        "five-year low", "five-year lows", "5-year low", "5-year lows", "multi-year low", "record low", "near the bottom",
        "tight relative to history", "tight by historical standards", "compressed", "near historic lows"]

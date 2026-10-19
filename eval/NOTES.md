@@ -34,8 +34,10 @@ Hand-written context for these runs (the numbers above are computed by `eval/sco
      check flagged 15 statements, all of which contradicted the data;
   6. two scoring fixes found while checking item 4: a number counted as "in a source's text" on matches such
      as "0.8 pp" against the "1" in "## 1. Introduction" (now the source must show the same number at the
-     precision written, `ddc5b56`), and percentile facts labelled "5y" for tables covering one year, which
-     would have judged the original and v2 reports on "five-year lows" with one year of data (`d74f5ea`).
+     precision written, `ddc5b56`), and percentile facts labelled with the configured window ("5y") whatever
+     the data covered (`d74f5ea`). FRED serves only 3 years of the ICE credit spreads, so earlier v3 runs
+     called a 3-year percentile "5y"; the original and v2 tables cover 1–2.5 years. History wording now
+     needs at least 3 years, and "five-year" phrases five.
 
   All 40 v3 results in the tables come from one run of the final code; earlier v3 outputs are not used.
   The fixes in items 5 and 6 also change the original and v2 numbers, since every report is re-scored with

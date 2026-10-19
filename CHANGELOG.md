@@ -37,8 +37,9 @@ Added
 Fixed
 - A number counts as being in a web source's text only if the source shows it at the precision the report
   writes it ("0.8 pp" no longer matches the "1" of a section heading). This applies to quotes and to scoring.
-- Percentile, min, max and average facts are labelled by the history actually fetched ("1y" rather than
-  "5y" for a one-year table), and history wording is judged only on a full window.
+- Percentile, min, max and average facts are labelled by the history actually fetched: FRED serves only 3
+  years of the ICE credit spreads, which were labelled "5y". History wording needs at least 3 years of data,
+  and a phrase naming a horizon ("five-year lows") needs that horizon.
 - The hosted Ollama free tier allows one request at a time: an HTTP 429 now waits for the server's
   `Retry-After`, and evaluation runs go one question at a time.
 - An LLM call may take up to 300 s (was 180 s): long revision calls timed out on every attempt. Each failed

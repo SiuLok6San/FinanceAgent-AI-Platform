@@ -225,6 +225,14 @@ def test_short_history_is_labelled_by_its_span_and_not_judged():
     assert res["wording"]["history"] == []
 
 
+def test_three_years_judge_general_history_words_but_not_five_year_ones():
+    hy3 = dict(HY, data=HY["data"].assign(date=pd.to_datetime(["2023-10-16"] + DAYS)))  # FRED's ICE spreads: 3 years
+    assert "HY_OAS.pctile_3y" in build_fact_store([hy3])
+    res = _validate_with([hy3], "- HY spreads at {{HY_OAS.latest}} are historically tight.\n"
+                                "- HY spreads at {{HY_OAS.latest}} are near their five-year lows.\n")
+    assert [w["phrase"] for w in res["wording"]["history"]] == ["historically tight"]
+
+
 # 14 months of CPI: the 12-month rate goes from +3.4% (August) to +3.7% (September), and the last
 # three months run faster than that, so inflation is speeding up
 CPI_UP = fred("CPIAUCSL", [300.0, 301.0] + [303.0] * 9 + [308.0, 310.2, 312.1],
