@@ -294,6 +294,14 @@ def test_direction_check_with_placeholders_ignores_typed_numbers_and_hedges():
     assert hedged["directions"] == []
 
 
+def test_trend_word_uses_the_horizon_named_in_its_own_clause():
+    # in the fixture HY fell over the latest month and rose over six months
+    assert STORE["HY_OAS.chg_1m"].value < 0 < STORE["HY_OAS.chg_6m"].value
+    res = _validate("- HY spreads are narrowing over the past month while widening over the past 6 months.\n"
+                    "- HY spreads are narrowing over the past 6 months.\n")
+    assert [(w["word"], w["fact"]) for w in res["wording"]["trend"]] == [("narrowing", "HY_OAS.chg_6m")]
+
+
 def test_history_wording_skips_negations_and_scenarios():
     res = _validate("- HY spreads are not historically tight.\n"
                     "- If HY spreads return to five-year lows, cut risk.\n")

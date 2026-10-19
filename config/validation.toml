@@ -176,17 +176,26 @@ exclude = ["easing policy", "policy easing", "monetary easing", "easing cycle", 
 # the fetched series is headline CPI / PCE; a sentence about another measure is not checked
 other_measures = ["core", "components", "categories", "services inflation", "goods inflation", "wage", "wages"]
 
-# a horizon named in the sentence picks which change to compare with (default: the latest month)
+# the horizon named nearest to a trend word, in the same clause, picks which change to compare with
+# ("widening over the past month while narrowing over the past 6 months"); default: the latest month
 [wording.trend.horizons]
 "year" = "1y"
 "12-month" = "1y"
+"12 months" = "1y"
 "twelve months" = "1y"
 "annual" = "1y"
 "six months" = "6m"
+"6 months" = "6m"
 "6-month" = "6m"
+"six-month" = "6m"
 "quarter" = "3m"
 "three months" = "3m"
+"3 months" = "3m"
 "3-month" = "3m"
+"three-month" = "3m"
+"month" = "1m"
+"1 month" = "1m"
+"one month" = "1m"
 "week" = "1w"
 
 # names a sentence may use for a series (matched as whole words); a sentence is checked only if it

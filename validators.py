@@ -710,9 +710,13 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
                     history_issues.append({"phrase": m.group(1), "says": cls, "series": alias, "pctile": pct,
                                            "fact": key, "context": sentence.strip()[:200]})
 
-        h = horizon_pat.search(sentence)
-        horizon = horizons.get(_norm_phrase(h.group(1))) if h else None
+        clause_cuts = sorted({a, b} | {x.start() for x in _CLAUSE_JOIN.finditer(report, a, b)})
+        named = [(x.start(), horizons.get(_norm_phrase(x.group(1)))) for x in horizon_pat.finditer(report, a, b)]
         for m in trend_pat.finditer(report, a, b):
+            ca = max(c for c in clause_cuts if c <= m.start())
+            cb = min(c for c in clause_cuts if c > m.start())
+            near = [(abs(pos - m.start()), h) for pos, h in named if ca <= pos < cb and h]
+            horizon = min(near)[1] if near else None
             if negated(m):
                 continue
             word = _norm_phrase(m.group(1))
