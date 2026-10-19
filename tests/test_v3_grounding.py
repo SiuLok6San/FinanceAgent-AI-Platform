@@ -191,6 +191,12 @@ def test_comparison_check_units_and_order():
     assert units["open_issues"] == 1
     assert "compares with \"relative to\"" in v.feedback_for_writer(units)
     assert "1 comparison(s) between facts that do not hold." in units["summary"]
+    # valuation analysis across units is allowed with a neutral word (a final v3 report, H07)
+    peg = _validate("- JPM's P/E of {{JPM.pe_ttm}} is high relative to its dividend yield {{JPM.div_yield}}.\n")
+    assert peg["comparisons"] == []
+    # a change set against a level is a misread pairing, not a comparison (a final v3 report, Q07)
+    mixed = _validate("- A {{HY_OAS.chg_1m}} move keeps HY above IG by {{HY_OAS_minus_IG_OAS}}.\n")
+    assert mixed["comparisons"] == []
 
 
 def test_comparison_needs_facts_on_both_sides_in_one_sentence():
@@ -300,6 +306,35 @@ def test_trend_word_uses_the_horizon_named_in_its_own_clause():
     res = _validate("- HY spreads are narrowing over the past month while widening over the past 6 months.\n"
                     "- HY spreads are narrowing over the past 6 months.\n")
     assert [(w["word"], w["fact"]) for w in res["wording"]["trend"]] == [("narrowing", "HY_OAS.chg_6m")]
+
+
+def test_false_positives_found_in_the_final_v3_run_are_gone():
+    # quarterly rates quoted with the earlier quarter (F01, Q06): judged by the two rates
+    assert _validate_with([GDP_UP], "- Annualized growth rose from {{GDP.ann_growth_1q_prev}} to "
+                                    "{{GDP.ann_growth_1q}}.\n")["directions"] == []
+    wrong = _validate_with([GDP_UP], "- Annualized growth fell from {{GDP.ann_growth_1q_prev}} to {{GDP.ann_growth_1q}}.\n")
+    assert [d["word"] for d in wrong["directions"]] == ["fell"]
+    # the word's subject, not the nearest series (Q06, Q18)
+    assert _validate_with([CPI_UP, GDP_UP], "- Inflation is high and accelerating, while GDP is "
+                                            "{{GDP.latest}}.\n")["wording"]["rate"] == []
+    assert _validate("- Short HY at {{HY_OAS.latest}} to lock in the steepening curve.\n")["wording"]["trend"] == []
+    # IG widened over one and three months
+    ig_up = dict(IG, data=IG["data"].assign(value=[0.8] * (len(DAYS) - 1) + [0.86]))
+    flagged = _validate_with([ig_up], "- IG spreads are tightening at {{IG_OAS.latest}}.\n")
+    assert [w["word"] for w in flagged["wording"]["trend"]] == ["tightening"]
+    # "tightening credit conditions" is not spreads tightening (Q09)
+    assert _validate_with([ig_up], "- IG spreads at {{IG_OAS.latest}} mean tightening credit conditions.\n"
+                          )["wording"]["trend"] == []
+    # scenario sections and table rows are not claims about the data (H10, Q05)
+    text = ("**Scenarios**\n- IG spreads are tightening at {{IG_OAS.latest}}.\n| Base | IG spreads tightening |\n"
+            "**Conclusion**\n- IG spreads are tightening at {{IG_OAS.latest}}.\n")
+    assert [w["context"][:20] for w in _validate_with([ig_up], text)["wording"]["trend"]] == ["- IG spreads are tig"]
+    # no period named and the month and the quarter disagree (Q04, Q06): not judged
+    assert STORE["HY_OAS.chg_1m"].value < 0 < STORE["HY_OAS.chg_3m"].value
+    assert _validate("- HY spreads are widening at {{HY_OAS.latest}}.\n")["wording"]["trend"] == []
+    # "10-Year" is a maturity, not a horizon (Q05): HY rose over the year, so reading "year" would flag this
+    assert STORE["HY_OAS.chg_1y"].value > 0
+    assert _validate("- The 10-Year view: HY spreads are narrowing at {{HY_OAS.latest}}.\n")["wording"]["trend"] == []
 
 
 def test_history_wording_skips_negations_and_scenarios():

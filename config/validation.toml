@@ -100,6 +100,9 @@ down = [
 above = ["above", "higher than", "greater than", "more than", "exceeds", "exceeding"]
 below = ["below", "lower than", "less than", "under", "beneath"]
 neutral = ["relative to", "compared with", "compared to", "versus", "vs", "vs."]
+# unit families a neutral word may set side by side: a P/E "relative to earnings growth" or to bond
+# yields is valuation analysis, a P/E "relative to CPI" (an index level) is not
+analytic_pairs = [["multiple", "rate"]]
 
 [comparisons.unit_families]
 percent = "rate"
@@ -124,6 +127,8 @@ percentile = "percentile"
 # forecasts are not claims about the data.
 # ---------------------------------------------------------------------------
 [wording]
+# sections whose statements are scenarios or things to watch, not claims about the data (by heading)
+hypothetical_sections = ["scenario", "risk", "monitor", "watch"]
 skip_words = ["if", "could", "may", "might", "would", "should", "unless", "scenario", "assume", "assuming",
               "expect", "expected", "expects", "forecast", "likely", "will", "potential", "risk", "outlook",
               "monitor", "watch", "upside", "downside", "until"]
@@ -159,6 +164,10 @@ tightening = { credit_spread = "down", yield = "up" }
 # For price indexes and GDP, trend words describe the growth rate ("inflation is falling"), but the
 # fact store has the level's changes, which are almost always positive; these series are not checked.
 skip_series = ["CPI", "PCE", "GDP"]
+# phrases where a trend word does not describe the series: tighter credit conditions mean wider spreads
+exclude = ["tightening credit conditions", "tightening financial conditions", "credit tightening",
+           "financial tightening", "monetary tightening", "policy tightening", "tightening cycle",
+           "quantitative tightening", "tightening policy", "tightening monetary policy"]
 
 # For price indexes and GDP these words describe the growth rate, so they are checked against the
 # rate, not the level. A word is flagged only if both measures contradict it: the 12-month rate
@@ -179,7 +188,14 @@ other_measures = ["core", "components", "categories", "services inflation", "goo
 # the horizon named nearest to a trend word, in the same clause, picks which change to compare with
 # ("widening over the past month while narrowing over the past 6 months"); default: the latest month
 [wording.trend.horizons]
-"year" = "1y"
+# not a bare "year": "10-Year Treasury" names a maturity, not a period
+"past year" = "1y"
+"the year" = "1y"
+"a year" = "1y"
+"one year" = "1y"
+"year over year" = "1y"
+"year-on-year" = "1y"
+"yoy" = "1y"
 "12-month" = "1y"
 "12 months" = "1y"
 "twelve months" = "1y"

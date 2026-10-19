@@ -543,14 +543,19 @@ def check_directions(report: str, figures: List[Figure], placeholders: bool = Fa
         if not f.change_sign or (placeholders and f.origin != "fact"):
             continue
         # clause around the figure: stop at sentence ends (not decimal points), ";", line breaks and table cells
+        # (and, with placeholders, at "and" / "while" / ", " joins: "fell from X to Y and the rise in Z")
         cuts = [m.end() for m in _CLAUSE_END.finditer(report, 0, f.start)]
-        a = max([0, f.start - cfg["window_chars"]] + cuts[-1:])
-        nxt = _CLAUSE_END.search(report, f.end)
-        b = min(nxt.start() if nxt else len(report), f.end + cfg["window_chars"])
+        if placeholders:
+            cuts += [m.end() for m in _CLAUSE_JOIN.finditer(report, max(0, f.start - cfg["window_chars"]), f.start)]
+        a = max([0, f.start - cfg["window_chars"]] + sorted(cuts)[-1:])
+        ends = [m.start() for m in [_CLAUSE_END.search(report, f.end)] if m]
+        if placeholders:
+            ends += [m.start() for m in [_CLAUSE_JOIN.search(report, f.end, f.end + cfg["window_chars"])] if m]
+        b = min(ends + [len(report), f.end + cfg["window_chars"]])
         if hedge.search(report, a, b):
             continue
         change_sign, written_sign = f.change_sign, {"+": 1, "-": -1, "\u2212": -1}.get(f.text[:1])
-        if (f.fact_id or "").endswith(".pct_1y"):
+        if (f.fact_id or "").endswith((".pct_1y", ".ann_growth_1q")):
             # "inflation fell from {{CPI.pct_1y_prev}} to {{CPI.pct_1y}}": the word describes the rate
             prev = next((g for g in figures if g.fact_id == f.fact_id + "_prev" and a <= g.start < b), None)
             if prev is not None:
@@ -584,6 +589,10 @@ _SENTENCE_END = re.compile(r"[.!?](?=\s|$)|[;\n|]")
 _CLAUSE_JOIN = re.compile(r",\s|\s(?:or|and|but|while|whereas)\s", re.I)
 
 
+_KIND_GROUP = {"level": "level", "stat": "level", "spread": "level", "change": "change",
+               "pct_change": "change", "rate": "change", "percentile": "percentile"}
+
+
 def check_comparisons(report: str, refs: Optional[List[Any]]) -> List[Dict[str, Any]]:
     """"{{A}} is above {{B}}": A and B must have comparable units and the order must match the data."""
     facts = [r for r in refs or [] if r.kind == "fact" and isinstance(r.fact.value, (int, float))]
@@ -607,11 +616,11 @@ def check_comparisons(report: str, refs: Optional[List[Any]]) -> List[Dict[str, 
             continue
         a, b = before[-1].fact, after[0].fact
         fa, fb = families.get(a.unit), families.get(b.unit)
-        if not fa or not fb:
-            continue
+        if not fa or not fb or _KIND_GROUP.get(a.kind) != _KIND_GROUP.get(b.kind):
+            continue  # a change next to a level ("+12 bp rise keeps the 2-year above policy by +102 bp")
         context = report[lo:hi].strip()[:200]
         word = m.group(1).lower()
-        if fa != fb:
+        if fa != fb and not (words[word] == 0 and sorted([fa, fb]) in [sorted(p) for p in cfg["analytic_pairs"]]):
             issues.append({"kind": "units", "word": word, "a": a.id, "b": b.id, "context": context,
                            "detail": f"{a.id} ({a.unit}) and {b.id} ({b.unit}) are not comparable"})
             continue
@@ -644,14 +653,34 @@ def _sentences(report: str) -> List[Tuple[int, int]]:
 
 
 def _series_mentions(report: str, a: int, b: int, refs, store, names) -> List[Tuple[int, str]]:
-    """(position, series alias) for every series the sentence points to: a fact it quotes or a name."""
-    aliases = {k.split(".")[0] for k, e in store.items() if e.series_id}
+    """(position, series alias) for every series the sentence points to, in order: a fact it quotes or
+    a name. Names of series that were not fetched count too, so that "the steepening curve" is not
+    pinned on the fed funds rate when no curve data was fetched."""
     found = [(r.start, r.fact_id.split(".")[0]) for r in refs or []
              if r.kind == "fact" and a <= r.start < b and r.fact.series_id]
     for alias, pattern in names.items():
-        if alias in aliases:
-            found += [(m.start(), alias) for m in pattern.finditer(report, a, b)]
-    return found
+        found += [(m.start(), alias) for m in pattern.finditer(report, a, b)]
+    return sorted(found)
+
+
+def _hypothetical_spans(report: str, section_words: List[str]) -> List[Tuple[int, int]]:
+    """Spans of table rows and of sections headed "Scenarios", "Key Risks & Monitoring", ...: their
+    statements are scenarios or things to watch, not claims about the current data."""
+    spans, heading = [], re.compile(r"^\s*(?:#{1,6}\s+.+|\*\*[^*\n]+\*\*\s*:?\s*)$")
+    words = re.compile("|".join(map(re.escape, section_words)), re.I)
+    pos, start = 0, None
+    for line in report.splitlines(keepends=True):
+        text = line.strip()
+        if heading.match(line):
+            if start is not None:
+                spans.append((start, pos))
+            start = pos if words.search(text) else None
+        elif text.startswith("|"):
+            spans.append((pos, pos + len(line)))
+        pos += len(line)
+    if start is not None:
+        spans.append((start, pos))
+    return spans
 
 
 def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
@@ -676,27 +705,40 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
     rate_pat = _phrase_pattern(list(rate_words))
     rate_exclude = _phrase_pattern(rate["exclude"])
     rate_other = _phrase_pattern(rate["other_measures"])
+    trend_exclude = _phrase_pattern(trend["exclude"])
+    hypothetical = _hypothetical_spans(report, cfg["hypothetical_sections"])
+    aliases = {k.split(".")[0] for k, e in store.items() if e.series_id}
     history_issues, trend_issues, rate_issues = [], [], []
 
     for a, b in _sentences(report):
         sentence = report[a:b]
-        if skip.search(sentence):
-            continue  # hedged or conditional: a scenario, not a claim about the data
+        if skip.search(sentence) or any(s <= a < e for s, e in hypothetical):
+            continue  # hedged, conditional, a scenario or a table cell: not a claim about the data
         mentions = _series_mentions(report, a, b, refs, store, names)
         if not mentions:
             continue
+        cuts = sorted({a, b} | {x.start() for x in _CLAUSE_JOIN.finditer(report, a, b)})
 
-        def nearest(pos: int) -> str:
-            return min(mentions, key=lambda m: abs(m[0] - pos))[1]
+        def subject(m) -> Optional[str]:
+            """The series a word is about: a name right after it in its clause ("steepening curve"), else
+            the nearest before it in its clause, else before it in the sentence; None if unclear or not
+            fetched."""
+            ca = max(c for c in cuts if c <= m.start())
+            cb = min(c for c in cuts if c > m.start())
+            after = [x for x in mentions if m.end() <= x[0] < min(cb, m.end() + 15)]
+            before_clause = [x for x in mentions if ca <= x[0] < m.start()]
+            before = [x for x in mentions if a <= x[0] < m.start()]
+            pick = (after[:1] or before_clause[-1:] or before[-1:])
+            return pick[0][1] if pick and pick[0][1] in aliases else None
 
         def negated(m) -> bool:
             return bool(negation.search(report, max(a, m.start() - 25), m.start()))
 
         for cls, pattern in history_pat.items():
             for m in pattern.finditer(report, a, b):
-                if negated(m):
+                alias = subject(m)
+                if negated(m) or not alias:
                     continue
-                alias = nearest(m.start())
                 key = next((k for k in store if k.startswith(f"{alias}.pctile_")), None)
                 need = max([hist["min_years"]] + [y for p, y in phrase_years.items() if p in _norm_phrase(m.group(1))])
                 if not key or _window_years(key.split("pctile_", 1)[1]) < need - 0.05:
@@ -717,11 +759,11 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
             cb = min(c for c in clause_cuts if c > m.start())
             near = [(abs(pos - m.start()), h) for pos, h in named if ca <= pos < cb and h]
             horizon = min(near)[1] if near else None
-            if negated(m):
-                continue
             word = _norm_phrase(m.group(1))
-            alias = nearest(m.start())
-            if alias in trend["skip_series"]:
+            alias = subject(m)
+            if negated(m) or not alias or alias in trend["skip_series"]:
+                continue
+            if any(x.start() <= m.start() < x.end() for x in trend_exclude.finditer(report, a, b)):
                 continue
             says = trend_words.get(word, 0)
             if word == "tightening":
@@ -737,6 +779,11 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
                         if f"{alias}.{kind}_{sfx}" in store), None)
             if not key or not store[key].value:
                 continue
+            if not horizon:
+                # no period named: only judge when the last month and the last three months agree
+                longer = next((store[k] for k in (f"{alias}.chg_3m", f"{alias}.pct_3m") if k in store), None)
+                if longer is not None and (longer.value > 0) != (store[key].value > 0):
+                    continue
             if (store[key].value > 0) != (says > 0):
                 trend_issues.append({"word": word, "says": "up" if says > 0 else "down", "series": alias,
                                      "fact": key, "change": store[key].display, "context": sentence.strip()[:200]})
@@ -744,7 +791,7 @@ def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
         excluded = [x.span() for x in rate_exclude.finditer(report, a, b)]
         other_measure = bool(rate_other.search(report, a, b))
         for m in rate_pat.finditer(report, a, b):
-            alias = nearest(m.start())
+            alias = subject(m)
             if negated(m) or alias not in rate["series"] or other_measure:
                 continue
             if any(s <= m.start() < e for s, e in excluded):
