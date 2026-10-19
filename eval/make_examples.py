@@ -18,6 +18,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import REPO, RESULTS_DIR, read_json  # noqa: E402
+
+sys.path.insert(0, str(REPO))
 from fact_store import build_fact_store  # noqa: E402
 from render import render  # noqa: E402
 from score import table_from_json, validate_record  # noqa: E402

@@ -381,8 +381,9 @@ with left:
         labels = {r["id"]: f"{r['id']} · {r['category']} · {r['question']}" + (f" ({r['ticker']})" if r["ticker"] else "")
                   for r in runs}
         chosen = st.selectbox("Saved evaluation run", list(labels), format_func=labels.get)
-        st.caption("Real outputs of the revised pipeline on the 20 evaluation questions, saved in "
-                   "`eval/results/` and re-checked by the current validator. Nothing is fetched or generated now.")
+        st.caption("Real outputs of the current version on the evaluation questions (Q: development, F: fresh, "
+                   "H: held-out), saved in `eval/results/` and re-checked by the current validator. Nothing is "
+                   "fetched or generated now.")
         run_button = False
     else:
         question = st.text_area(

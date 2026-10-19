@@ -37,9 +37,10 @@ def _read(qid: str) -> Dict[str, Any]:
 
 @lru_cache(maxsize=None)
 def demo_runs() -> List[Dict[str, Any]]:
-    """[{"id", "category", "question", "ticker", "run_utc"}] for every saved run without a pipeline error."""
+    """[{"id", "category", "question", "ticker", "run_utc"}] for every saved run without a pipeline error:
+    development questions (Q), then fresh (F) and held-out (H) ones."""
     runs = []
-    for path in sorted(DEMO_DIR.glob("Q*.json")):
+    for path in [p for prefix in "QFH" for p in sorted(DEMO_DIR.glob(f"{prefix}[0-9]*.json"))]:
         rec = json.loads(path.read_text())
         if not rec["error"]:
             runs.append({k: rec[k] for k in ("id", "category", "question", "ticker", "run_utc")})
