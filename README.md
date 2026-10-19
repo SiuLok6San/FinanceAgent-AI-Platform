@@ -8,10 +8,11 @@ A multi-agent research assistant that answers investor questions on macro, rates
 
 ## Context
 
-- **Columbia University industry-sponsored course project with [Boosted.ai](https://boosted.ai)**, Oct–Dec 2025. Team project.
-- **Roles in this repository**
-  - **Yuechen** ([@SiuLok6San](https://github.com/SiuLok6San)): designed the multi-agent pipeline (Planner → Researcher → Analyst → Reasoner → Writer) and the two-tier, rule-based routing across macro, rates, credit, equity and portfolio questions; integrated a locally hosted Llama 3 model (via Ollama) with live data from FRED, Finnhub and Tavily, and built the Streamlit interface using AI coding tools; defined the institutional-style report format with source citations and a review step for weak claims; presented the solution and its business use cases to Boosted.ai stakeholders.
-  - **Yuqing** ([@yuqingtao1103](https://github.com/yuqingtao1103)): built the data layer that connects the analysis to external market-data APIs; presented the final findings and recommendations to Boosted.ai stakeholders.
+- **Columbia University industry-sponsored course project with [Boosted.ai](https://boosted.ai)**, Oct–Dec 2025, built by a two-person team, Yuechen and Yuqing. We designed and built the system together and presented it together to Boosted.ai stakeholders: the solution and its business use cases, and the final findings and recommendations.
+- **Who led which part**
+  - **Yuechen** ([@SiuLok6San](https://github.com/SiuLok6San)): the multi-agent pipeline (Planner → Researcher → Analyst → Reasoner → Writer) and the two-tier, rule-based routing across macro, rates, credit, equity and portfolio questions; the integration of a locally hosted Llama 3 model (via Ollama) with live data from FRED, Finnhub and Tavily, and the Streamlit interface, built using AI coding tools; the institutional-style report format with source citations and a review step for weak claims.
+  - **Yuqing** ([@yuqingtao1103](https://github.com/yuqingtao1103)): the data layer of the system, connecting document retrieval with the external market-data APIs the agents work from.
+- **Reading the git history.** The course code was uploaded in a single commit in Feb 2026 (`0468eea`), so the history does not show who wrote which part of it. The Oct 2026 revision (v2, v3) was made with AI coding tools; its commits are attributed by area of the code, with the data layer under Yuqing's account.
 - **Versions** (git tags; nothing in the history was rewritten):
   - `v1.0-course`: the code as submitted in Dec 2025.
   - `v2.0-validation` (Oct 2026): a deterministic validator on the model's free-text reports, plus one feedback round.
