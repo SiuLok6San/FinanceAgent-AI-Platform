@@ -1,12 +1,13 @@
 """
-Turn saved revised-pipeline runs into readable examples/ pages.
+Turn saved v3 runs into readable examples/ pages.
 
     python eval/make_examples.py                 # Q01 (macro), Q09 (credit), Q13 (equity)
     python eval/make_examples.py --ids Q02,Q10,Q15
 
 Each page shows the question, the run settings, the validation summary,
-the report exactly as the model wrote it (unverified figures wrapped in
-<mark>), the figure-by-figure check and the sources. Nothing is edited.
+the report as rendered from the model's template (numbers the model typed
+that are not in the data are wrapped in <mark>), where every number came
+from, and the sources. Nothing is edited.
 """
 
 from __future__ import annotations
@@ -17,13 +18,21 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import REPO, RESULTS_DIR, read_json  # noqa: E402
-from score import validate_record  # noqa: E402
+
+sys.path.insert(0, str(REPO))
+from fact_store import build_fact_store  # noqa: E402
+from render import render  # noqa: E402
+from score import table_from_json, validate_record  # noqa: E402
 
 EXAMPLES_DIR = REPO / "examples"
 
 
+PIPELINE = "v3"
+
+
 def _mark_unverified(report: str, figures) -> str:
-    for f in sorted((f for f in figures if f["status"] == "unverified"), key=lambda f: f["start"], reverse=True):
+    flagged = (f for f in figures if f["status"] == "unverified" and not f["assumption"] and f.get("origin") != "quote")
+    for f in sorted(flagged, key=lambda f: f["start"], reverse=True):
         report = report[:f["start"]] + "<mark>" + report[f["start"]:f["end"]] + "</mark>" + report[f["end"]:]
     return report
 
@@ -37,6 +46,10 @@ def _repair_lines(rec) -> list:
     if not rounds:
         return []
     r = rounds[0]
+    draft = rec.get("draft_report_text")
+    if rec.get("draft_report_template"):
+        tables = [table_from_json(t) for t in rec["tables"]]
+        draft = render(rec["draft_report_template"], build_fact_store(tables), rec["sources"])[0]
     if r.get("error"):
         outcome = "the revision call failed, so the first draft is shown"
     elif r["accepted"]:
@@ -51,7 +64,7 @@ def _repair_lines(rec) -> list:
         "",
         f"**First draft validation:** {r['summary_before']}",
         "",
-        rec["draft_report_text"],
+        draft,
         "",
         "**Feedback sent to the Writer:**",
         "",
@@ -64,15 +77,20 @@ def _repair_lines(rec) -> list:
     ]
 
 
-def render(rec) -> str:
-    v = validate_record(rec)
+def render_page(rec) -> str:
+    v = validate_record(rec, PIPELINE)
+    text = rec["report_text"]
+    if rec.get("report_template"):
+        text = render(rec["report_template"], build_fact_store([table_from_json(t) for t in rec["tables"]]),
+                      rec["sources"])[0]
     meta = rec["run_meta"]
     lines = [
         f"# {rec['question']}",
         "",
         f"- **Category:** {rec['category']}" + (f" · **Ticker:** {rec['ticker']}" if rec["ticker"] else ""),
-        f"- **Routed topics (rule-based):** {', '.join(rec['router_tags'])} · **Tier 2:** "
-        + ", ".join(f"{k}: {val}" for k, val in rec["tier2"].items()),
+        f"- **Planner:** {(rec.get('plan') or {}).get('source', 'n/a')} · topics "
+        f"{', '.join(rec.get('tags') or rec['router_tags'])} · FRED series "
+        f"{', '.join((rec.get('plan') or {}).get('series') or []) or 'none'}",
         f"- **Run:** {rec['run_utc']} · model `{meta['model']}` via {meta['api_base']} · seed {meta['seed']} · "
         f"{rec['elapsed_sec']} s",
         f"- **Data fetched:** {len(rec['tables'])} table(s): " + ("; ".join(t["title"] for t in rec["tables"]) or "none"),
@@ -80,19 +98,20 @@ def render(rec) -> str:
         f"> **Validation:** {v['summary']}",
         "",
         *_repair_lines(rec),
-        "## Report (unedited model output; <mark>highlighted</mark> figures could not be matched to fetched data)",
+        "## Report (the model's template, rendered; <mark>highlighted</mark> numbers were typed by the model and are not in the data)",
         "",
-        _mark_unverified(rec["report_text"], v["figures"]),
+        _mark_unverified(text, v["figures"]),
         "",
         "## Figure-by-figure check",
         "",
-        "| Figure | Status | Matched data | Source | Same topic |",
+        "| Figure | Origin | Fact / match | Source | Status |",
         "|---|---|---|---|---|",
     ]
     for f in v["figures"]:
-        src = f["source_id"] or (f"(in snippet {f['in_source_text']})" if f["in_source_text"] else "")
-        topic = "" if f["topic_match"] is None else ("yes" if f["topic_match"] else "no")
-        lines.append(f"| {_cell(f['text'])} | {f['status']} | {_cell(f['matched'])} | {src} | {topic} |")
+        src = ", ".join(f["source_ids"]) or (f"(in {f['in_source_text']})" if f["in_source_text"] else "")
+        origin = {"fact": "fact table", "quote": "quoted", "assumption": "assumption", "free": "typed"}.get(f.get("origin"), "")
+        what = f.get("fact_id") or f["matched"] or ""
+        lines.append(f"| {_cell(f['text'])} | {origin} | {_cell(what)} | {src} | {f['status']} |")
     cit = v["citations"]
     lines += [
         "",
@@ -116,12 +135,12 @@ def main() -> None:
     args = ap.parse_args()
     EXAMPLES_DIR.mkdir(exist_ok=True)
     for qid in args.ids.split(","):
-        rec = read_json(RESULTS_DIR / "revised" / f"{qid}.json")
+        rec = read_json(RESULTS_DIR / PIPELINE / f"{qid}.json")
         if rec["error"]:
             print(f"{qid}: pipeline error in saved run, skipped")
             continue
         path = EXAMPLES_DIR / f"{qid}-{rec['category']}.md"
-        path.write_text(render(rec))
+        path.write_text(render_page(rec))
         print(f"wrote {path.relative_to(REPO)}")
 
 

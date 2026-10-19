@@ -1,9 +1,16 @@
 """
 Shared helpers for the evaluation scripts.
 
-- ORIGINAL_COMMIT: the Dec 2025 course version, used as the "before" pipeline
-- extract_original_code(): checks that commit's files out into eval/.original/
-  (gitignored) with `git archive`, so the baseline really runs the old code
+- PIPELINES: which code each evaluated pipeline runs
+    original  tag v1.0-course     (Dec 2025 course version)
+    v2        tag v2.0-validation (Oct 2026: validation layer + feedback loop)
+    v3        the working tree     (fact placeholders)
+- extract_code(): checks a commit's files out into eval/.versions/<commit>/
+  (gitignored) with `git archive`, so old versions really run their old code
+- question sets: dev (questions.csv, also used while developing), heldout
+  (questions_heldout.csv, frozen before v3 was built; H05 and H10 were once
+  used in a manual Planner test) and fresh (questions_fresh.csv, frozen
+  later and never shown to any pipeline during development)
 - table (de)serialization for saving pipeline outputs as JSON
 """
 
@@ -22,16 +29,30 @@ import pandas as pd
 REPO = Path(__file__).resolve().parents[1]
 EVAL_DIR = REPO / "eval"
 RESULTS_DIR = EVAL_DIR / "results"
-ORIGINAL_DIR = EVAL_DIR / ".original"
-ORIGINAL_COMMIT = "0468eea"  # "Add files via upload", Feb 2026 upload of the Dec 2025 course code
+VERSIONS_DIR = EVAL_DIR / ".versions"
+ORIGINAL_COMMIT = "0468eea"  # tag v1.0-course: Feb 2026 upload of the Dec 2025 course code
+V2_COMMIT = "faf19bc"        # tag v2.0-validation
+
+# pipeline -> (commit to run, or None for the working tree; inject the current llm.py?)
+PIPELINES = {
+    "original": (ORIGINAL_COMMIT, True),   # its llm.py cannot call the hosted API
+    "v2": (V2_COMMIT, False),
+    "v3": (None, False),
+}
+QUESTION_FILES = {"dev": "questions.csv", "heldout": "questions_heldout.csv", "fresh": "questions_fresh.csv"}
 
 
-def load_questions() -> List[Dict[str, str]]:
-    with open(EVAL_DIR / "questions.csv", newline="") as f:
-        rows = list(csv.DictReader(f))
-    for r in rows:
-        r["expected_tags"] = [t for t in r["expected_tags"].split(";") if t]
-        r["ticker"] = r["ticker"].strip() or None
+def load_questions(which: str = "dev") -> List[Dict[str, str]]:
+    """Questions of one set ("dev", "heldout") or both ("all"), each tagged with its set."""
+    sets = list(QUESTION_FILES) if which == "all" else [which]
+    rows = []
+    for name in sets:
+        with open(EVAL_DIR / QUESTION_FILES[name], newline="") as f:
+            for r in csv.DictReader(f):
+                r["expected_tags"] = [t for t in r["expected_tags"].split(";") if t]
+                r["ticker"] = r["ticker"].strip() or None
+                r["set"] = name
+                rows.append(r)
     return rows
 
 
@@ -43,17 +64,22 @@ def git_commit() -> str:
     return out.stdout.strip() + ("+uncommitted" if dirty.stdout.strip() else "")
 
 
-def extract_original_code() -> Path:
-    """Write the original commit's files to eval/.original/ (idempotent)."""
-    marker = ORIGINAL_DIR / ".commit"
-    if marker.exists() and marker.read_text() == ORIGINAL_COMMIT:
-        return ORIGINAL_DIR
-    archive = subprocess.run(["git", "archive", "--format=tar", ORIGINAL_COMMIT], cwd=REPO, capture_output=True, check=True).stdout
-    ORIGINAL_DIR.mkdir(parents=True, exist_ok=True)
+def extract_code(commit: str) -> Path:
+    """Write a commit's files to eval/.versions/<commit>/ (idempotent)."""
+    target = VERSIONS_DIR / commit
+    marker = target / ".commit"
+    if marker.exists() and marker.read_text() == commit:
+        return target
+    archive = subprocess.run(["git", "archive", "--format=tar", commit], cwd=REPO, capture_output=True, check=True).stdout
+    target.mkdir(parents=True, exist_ok=True)
     with tarfile.open(fileobj=io.BytesIO(archive)) as tar:
-        tar.extractall(ORIGINAL_DIR, filter="data")
-    marker.write_text(ORIGINAL_COMMIT)
-    return ORIGINAL_DIR
+        tar.extractall(target, filter="data")
+    marker.write_text(commit)
+    return target
+
+
+def extract_original_code() -> Path:
+    return extract_code(ORIGINAL_COMMIT)
 
 
 # ---------------------------------------------------------------------------

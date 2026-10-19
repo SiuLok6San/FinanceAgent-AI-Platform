@@ -1,0 +1,1271 @@
+{
+  "id": "H01",
+  "set": "heldout",
+  "category": "macro",
+  "question": "Is core PCE inflation moving toward the Fed's 2% goal?",
+  "ticker": null,
+  "expected_tags": [
+    "macro"
+  ],
+  "pipeline": "v2",
+  "run_utc": "2026-10-18T21:42:57+00:00",
+  "elapsed_sec": 127.2,
+  "router_tags": [
+    "macro",
+    "rates"
+  ],
+  "tags": [
+    "macro",
+    "rates"
+  ],
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "macro": "inflation"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Core PCE inflation is 2.7 % for the 12‑month period ending Aug 2025, above the Fed’s 2 % target [S6].  \n- The effective federal‑funds rate sits at 3.75 %, reflecting an ongoing tightening stance [S1].  \n- Headline CPI (336.3) and PCEPI (131.6) indices remain above 2 % inflationary pressure [S2], [S3].  \n- No recent core PCE release; the trend toward the target is unclear [S6].  \n- Fed policy is likely to stay restrictive until core PCE shows sustained decline [S1], [S8].\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed funds rate: 3.75 % [S1].  \n- CPI index: 336.3 (YoY +0.65 % in Aug 2026) [S2].  \n- PCEPI index: 131.6 (YoY +0.26 % in May 2026, +0.31 % in Jul 2026) [S3].  \n- Core PCE: 2.7 % for 12‑month period ending Aug 2025 [S6].  \n- Fed’s long‑run target: 2 % [S8], [S9].\n\n*Sector*  \n- Inflationary pressures weigh on discretionary spending; defensive sectors (utilities, consumer staples) may outperform [S2], [S3].\n\n*Credit*  \n- IG spreads likely to widen modestly as higher rates increase default risk [S1].  \n- HY spreads more sensitive; potential further widening [S1].\n\n*Portfolio*  \n- Fixed income: shorten duration; consider TIPS if core PCE remains above 2 % [S6].  \n- Equities: tilt to defensive sectors [S2], [S3].  \n- Alternatives: real assets as hedge [S2], [S3].\n\n---\n\n**Scenarios**  \n- **Base (assumption)**: core PCE declines to 2.3 % by end‑2026 (assumption).  \n- **Upside (assumption)**: core PCE falls to 1.9 % by mid‑2027 (assumption).  \n- **Downside (assumption)**: core PCE rises to 3.2 % by end‑2026 (assumption).\n\n---\n\n**Key Risks & Monitoring**  \n- Core PCE staying above 2 % longer than expected [S6].  \n- Fed rate hikes exceeding market expectations [S1].  \n- Supply‑chain disruptions or commodity price spikes [S2], [S3].  \n- Monitoring: core PCE releases, Fed minutes, CPI, PCEPI, wage growth, employment data [S1], [S2], [S3].\n\n---\n\n**Portfolio / Decision Implications**  \n- **Duration**: shorten duration to mitigate rate risk [S1].  \n- **TIPS**: increase allocation if core PCE remains above 2 % [S6].  \n- **Credit**: favor issuers with strong balance sheets; monitor spread movements [S1].  \n- **Equities**: defensive tilt; watch valuation compression in growth sectors [S2], [S3].  \n- **Alternatives**: increase real‑asset exposure if core PCE stays elevated [S2], [S3].\n\n---\n\n**Conclusion**  \nCore PCE inflation remains above the Fed’s 2 % target at 2.7 % for the latest available period [S6]. The absence of a clear downward trend and the high federal‑funds rate suggest that the Fed will likely maintain a restrictive stance until core PCE shows sustained decline [S1]. Portfolio managers should keep a cautious stance, focus on duration and credit quality, and monitor forthcoming core PCE releases for any shift toward the target [S1], [S6].",
+  "report_template": null,
+  "draft_report_text": "**Executive Summary**  \n- Core PCE inflation is 2.7 % for the 12‑month period ending Aug 2025, above the Fed’s 2 % target [S6].  \n- The effective federal‑funds rate sits at 3.75 %, reflecting an ongoing tightening stance [S1].  \n- Headline CPI (336.3) and PCEPI (131.6) indices remain above 2 % inflationary pressure [S2], [S3].  \n- No recent core PCE release; the trend toward the target is unclear [S6].  \n- Fed policy is likely to stay restrictive until core PCE shows sustained decline [S1], [S8].\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed funds rate: 3.75 % [S1].  \n- CPI index: 336.3 (YoY +0.65 % in Aug 2026) [S2].  \n- PCEPI index: 131.6 (YoY +0.26 % in May 2026, +0.31 % in Jul 2026) [S3].  \n- Core PCE: 2.7 % for 12‑month period ending Aug 2025 [S6].  \n- Fed’s long‑run target: 2 % [S8], [S9].\n\n*Sector*  \n- Inflationary pressures weigh on discretionary spending; defensive sectors (utilities, consumer staples) may outperform [S2], [S3].\n\n*Credit*  \n- IG spreads likely to widen modestly as higher rates increase default risk [S1].  \n- HY spreads more sensitive; potential further widening [S1].\n\n*Portfolio*  \n- Fixed income: shorten duration; consider TIPS if core PCE remains above 2 % [S6].  \n- Equities: tilt to defensive sectors [S2], [S3].  \n- Alternatives: real assets as hedge [S2], [S3].\n\n---\n\n**Scenarios**  \n- **Base (assumption)**: core PCE declines to 2.3 % by end‑2026 (assumption).  \n- **Upside (assumption)**: core PCE falls to 1.9 % by mid‑2027 (assumption).  \n- **Downside (assumption)**: core PCE rises to 3.2 % by end‑2026 (assumption).\n\n---\n\n**Key Risks & Monitoring**  \n- Core PCE staying above 2 % longer than expected [S6].  \n- Fed rate hikes exceeding market expectations [S1].  \n- Supply‑chain disruptions or commodity price spikes [S2], [S3].  \n- Monitoring: core PCE releases, Fed minutes, CPI, PCEPI, wage growth, employment data [S1], [S2], [S3].\n\n---\n\n**Portfolio / Decision Implications**  \n- **Duration**: shorten duration to mitigate rate risk [S1].  \n- **TIPS**: increase allocation if core PCE remains above 2 % [S6].  \n- **Credit**: favor issuers with strong balance sheets; monitor spread movements [S1].  \n- **Equities**: defensive tilt; watch valuation compression in growth sectors [S2], [S3].  \n- **Alternatives**: increase real‑asset exposure if core PCE stays elevated [S2], [S3].\n\n---\n\n**Conclusion**  \nCore PCE inflation remains above the Fed’s 2 % target at 2.7 % for the latest available period [S6]. The absence of a clear downward trend and the high federal‑funds rate suggest that the Fed will likely maintain a restrictive stance until core PCE shows sustained decline [S1]. Portfolio managers should keep a cautious stance, focus on duration and credit quality, and monitor forthcoming core PCE releases for any shift toward the target [S1], [S6].",
+  "draft_report_template": null,
+  "repair": {
+    "enabled": true,
+    "rounds": []
+  },
+  "sources": [
+    {
+      "title": "FRED series FEDFUNDS: Effective Federal Funds Rate",
+      "url": "https://fred.stlouisfed.org/series/FEDFUNDS",
+      "source": "FRED",
+      "snippet": "Monthly series in Percent; latest observation 3.75 on 2026-09-01.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series CPIAUCSL: CPI for All Urban Consumers (All Items)",
+      "url": "https://fred.stlouisfed.org/series/CPIAUCSL",
+      "source": "FRED",
+      "snippet": "Monthly series in Index 1982-1984=100; latest observation 336.298 on 2026-09-01.",
+      "id": "S2"
+    },
+    {
+      "title": "FRED series PCEPI: PCE Price Index",
+      "url": "https://fred.stlouisfed.org/series/PCEPI",
+      "source": "FRED",
+      "snippet": "Monthly series in Index 2017=100; latest observation 131.579 on 2026-08-01.",
+      "id": "S3"
+    },
+    {
+      "title": "How to Trade PCE: Nowcast Core From CPI & PPI | Newsquawk",
+      "url": "https://www.newsquawk.com/how-to-trade/pce",
+      "source": "web (Tavily)",
+      "snippet": "The Fed has preferred PCE as its inflation measure since 2000 (Federal Reserve, Cleveland Fed), largely because it covers a wide range of household spending (Federal Reserve), and when it set its 2% goal in 2012 it defined the target as the annual change in the PCE price index (Federal Reserve). FOMC participants' econ",
+      "id": "S4"
+    },
+    {
+      "title": "United States Core PCE Price Index Annual Change",
+      "url": "https://tradingeconomics.com/united-states/core-pce-price-index-annual-change",
+      "source": "web (Tavily)",
+      "snippet": "monthly and yearly readings, underlying price pressures remain above the Federal Reserve’s 2% inflation target. The data therefore provided some evidence of moderation in inflation, although the annual rate indicates that price growth has not yet returned to the central bank’s objective. source: U.S. Bureau of Economic",
+      "id": "S5"
+    },
+    {
+      "title": "What is keeping core inflation above 2 percent? - Dallasfed.org",
+      "url": "https://www.dallasfed.org/research/economics/2025/0923",
+      "source": "web (Tavily)",
+      "snippet": "September 23, 2025  Personal consumption expenditures (PCE) inflation is expected to be 2.7 percent over the 12 months ended in August 2025 and has been above the Federal Open Market Committee’s 2 percent target since early 2021. (We estimate August PCE inflation using the August Consumer Price Index and producer price",
+      "id": "S6"
+    },
+    {
+      "title": "SEP by SEP: How the Fed Walks Inflation Back to 2%",
+      "url": "https://www.richmondfed.org/research/national_economy/macro_minute/2026/sep_by_sep_how_fed_walks_inflation_back_to_2_percent",
+      "source": "web (Tavily)",
+      "snippet": "In September's Federal Open Market Committee (FOMC) meeting, Fed policymakers once again released their Summary of Economic Projections (SEP). The median projection for headline PCE inflation in 2026 rose to 3.7 percent year over year compared to 3.6 percent in the June SEP. The median projection for core PCE inflation",
+      "id": "S7"
+    },
+    {
+      "title": "What Is PCE? Explaining the Fed's Preferred Inflation Measure - Federal Reserve Bank of Atlanta",
+      "url": "https://www.atlantafed.org/what-we-study/inflation/2026/05/20/what-is-pce-explaining-the-feds-preferred-inflation-measure",
+      "source": "web (Tavily)",
+      "snippet": "The Fed moved away from the CPI informally around 2000 and officially adopted a longer-run target of 2 percent for PCE inflation beginning in 2012. The shift from CPI to PCE was announced in February 2000, as part of then Fed chair Alan Greenspan's routine testimony to Congress. Greenspan presented a report that contai",
+      "id": "S8"
+    },
+    {
+      "title": "The Fed - Inflation (PCE)",
+      "url": "https://www.federalreserve.gov/economy-at-a-glance-inflation-pce.htm",
+      "source": "web (Tavily)",
+      "snippet": "The Federal Reserve seeks to achieve inflation at the rate of 2 percent over the longer run as measured by the annual change in the price index for personal consumption expenditures (PCE).  ### Why does the Fed target PCE inflation instead of the CPI? [...] ### How does the inflation rate factor into the Fed's policy d",
+      "id": "S9"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S6",
+    "S8",
+    "S9"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Effective Federal Funds Rate (FEDFUNDS)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "FEDFUNDS",
+      "frequency": "monthly",
+      "units": "Percent",
+      "last_date": "2026-09-01",
+      "topics": [
+        "rates"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/FEDFUNDS",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2024-04-01",
+          5.33
+        ],
+        [
+          "2024-05-01",
+          5.33
+        ],
+        [
+          "2024-06-01",
+          5.33
+        ],
+        [
+          "2024-07-01",
+          5.33
+        ],
+        [
+          "2024-08-01",
+          5.33
+        ],
+        [
+          "2024-09-01",
+          5.13
+        ],
+        [
+          "2024-10-01",
+          4.83
+        ],
+        [
+          "2024-11-01",
+          4.64
+        ],
+        [
+          "2024-12-01",
+          4.48
+        ],
+        [
+          "2025-01-01",
+          4.33
+        ],
+        [
+          "2025-02-01",
+          4.33
+        ],
+        [
+          "2025-03-01",
+          4.33
+        ],
+        [
+          "2025-04-01",
+          4.33
+        ],
+        [
+          "2025-05-01",
+          4.33
+        ],
+        [
+          "2025-06-01",
+          4.33
+        ],
+        [
+          "2025-07-01",
+          4.33
+        ],
+        [
+          "2025-08-01",
+          4.33
+        ],
+        [
+          "2025-09-01",
+          4.22
+        ],
+        [
+          "2025-10-01",
+          4.09
+        ],
+        [
+          "2025-11-01",
+          3.88
+        ],
+        [
+          "2025-12-01",
+          3.72
+        ],
+        [
+          "2026-01-01",
+          3.64
+        ],
+        [
+          "2026-02-01",
+          3.64
+        ],
+        [
+          "2026-03-01",
+          3.64
+        ],
+        [
+          "2026-04-01",
+          3.64
+        ],
+        [
+          "2026-05-01",
+          3.63
+        ],
+        [
+          "2026-06-01",
+          3.63
+        ],
+        [
+          "2026-07-01",
+          3.63
+        ],
+        [
+          "2026-08-01",
+          3.63
+        ],
+        [
+          "2026-09-01",
+          3.75
+        ]
+      ]
+    },
+    {
+      "title": "FRED: CPI for All Urban Consumers (All Items) (CPIAUCSL)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "CPIAUCSL",
+      "frequency": "monthly",
+      "units": "Index 1982-1984=100",
+      "last_date": "2026-09-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/CPIAUCSL",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2024-04-01",
+          313.023
+        ],
+        [
+          "2024-05-01",
+          313.175
+        ],
+        [
+          "2024-06-01",
+          313.044
+        ],
+        [
+          "2024-07-01",
+          313.569
+        ],
+        [
+          "2024-08-01",
+          314.062
+        ],
+        [
+          "2024-09-01",
+          314.732
+        ],
+        [
+          "2024-10-01",
+          315.631
+        ],
+        [
+          "2024-11-01",
+          316.528
+        ],
+        [
+          "2024-12-01",
+          317.604
+        ],
+        [
+          "2025-01-01",
+          318.961
+        ],
+        [
+          "2025-02-01",
+          319.679
+        ],
+        [
+          "2025-03-01",
+          319.785
+        ],
+        [
+          "2025-04-01",
+          320.302
+        ],
+        [
+          "2025-05-01",
+          320.62
+        ],
+        [
+          "2025-06-01",
+          321.435
+        ],
+        [
+          "2025-07-01",
+          322.169
+        ],
+        [
+          "2025-08-01",
+          323.291
+        ],
+        [
+          "2025-09-01",
+          324.245
+        ],
+        [
+          "2025-11-01",
+          325.063
+        ],
+        [
+          "2025-12-01",
+          326.031
+        ],
+        [
+          "2026-01-01",
+          326.588
+        ],
+        [
+          "2026-02-01",
+          327.46
+        ],
+        [
+          "2026-03-01",
+          330.293
+        ],
+        [
+          "2026-04-01",
+          332.407
+        ],
+        [
+          "2026-05-01",
+          333.979
+        ],
+        [
+          "2026-06-01",
+          332.568
+        ],
+        [
+          "2026-07-01",
+          332.813
+        ],
+        [
+          "2026-08-01",
+          334.131
+        ],
+        [
+          "2026-09-01",
+          336.298
+        ]
+      ]
+    },
+    {
+      "title": "FRED: PCE Price Index (PCEPI)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "PCEPI",
+      "frequency": "monthly",
+      "units": "Index 2017=100",
+      "last_date": "2026-08-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/PCEPI",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2024-03-01",
+          123.093
+        ],
+        [
+          "2024-04-01",
+          123.289
+        ],
+        [
+          "2024-05-01",
+          123.369
+        ],
+        [
+          "2024-06-01",
+          123.504
+        ],
+        [
+          "2024-07-01",
+          123.701
+        ],
+        [
+          "2024-08-01",
+          123.891
+        ],
+        [
+          "2024-09-01",
+          124.146
+        ],
+        [
+          "2024-10-01",
+          124.482
+        ],
+        [
+          "2024-11-01",
+          124.666
+        ],
+        [
+          "2024-12-01",
+          124.984
+        ],
+        [
+          "2025-01-01",
+          125.423
+        ],
+        [
+          "2025-02-01",
+          125.77
+        ],
+        [
+          "2025-03-01",
+          125.869
+        ],
+        [
+          "2025-04-01",
+          126.163
+        ],
+        [
+          "2025-05-01",
+          126.408
+        ],
+        [
+          "2025-06-01",
+          126.73
+        ],
+        [
+          "2025-07-01",
+          126.906
+        ],
+        [
+          "2025-08-01",
+          127.229
+        ],
+        [
+          "2025-09-01",
+          127.601
+        ],
+        [
+          "2025-10-01",
+          127.79
+        ],
+        [
+          "2025-11-01",
+          128.045
+        ],
+        [
+          "2025-12-01",
+          128.455
+        ],
+        [
+          "2026-01-01",
+          128.845
+        ],
+        [
+          "2026-02-01",
+          129.293
+        ],
+        [
+          "2026-03-01",
+          130.105
+        ],
+        [
+          "2026-04-01",
+          130.672
+        ],
+        [
+          "2026-05-01",
+          131.241
+        ],
+        [
+          "2026-06-01",
+          131.106
+        ],
+        [
+          "2026-07-01",
+          131.172
+        ],
+        [
+          "2026-08-01",
+          131.579
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Effective Federal Funds Rate (FEDFUNDS)",
+      "type": "line",
+      "x": [
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-10-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        5.33,
+        5.33,
+        5.33,
+        5.33,
+        5.33,
+        5.13,
+        4.83,
+        4.64,
+        4.48,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.33,
+        4.22,
+        4.09,
+        3.88,
+        3.72,
+        3.64,
+        3.64,
+        3.64,
+        3.64,
+        3.63,
+        3.63,
+        3.63,
+        3.63,
+        3.75
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "CPI for All Urban Consumers (All Items) (CPIAUCSL)",
+      "type": "line",
+      "x": [
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        313.023,
+        313.175,
+        313.044,
+        313.569,
+        314.062,
+        314.732,
+        315.631,
+        316.528,
+        317.604,
+        318.961,
+        319.679,
+        319.785,
+        320.302,
+        320.62,
+        321.435,
+        322.169,
+        323.291,
+        324.245,
+        325.063,
+        326.031,
+        326.588,
+        327.46,
+        330.293,
+        332.407,
+        333.979,
+        332.568,
+        332.813,
+        334.131,
+        336.298
+      ],
+      "y_label": "Index 1982-1984=100"
+    },
+    {
+      "title": "PCE Price Index (PCEPI)",
+      "type": "line",
+      "x": [
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-10-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01"
+      ],
+      "y": [
+        123.093,
+        123.289,
+        123.369,
+        123.504,
+        123.701,
+        123.891,
+        124.146,
+        124.482,
+        124.666,
+        124.984,
+        125.423,
+        125.77,
+        125.869,
+        126.163,
+        126.408,
+        126.73,
+        126.906,
+        127.229,
+        127.601,
+        127.79,
+        128.045,
+        128.455,
+        128.845,
+        129.293,
+        130.105,
+        130.672,
+        131.241,
+        131.106,
+        131.172,
+        131.579
+      ],
+      "y_label": "Index 2017=100"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "FEDFUNDS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "CPIAUCSL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "PCEPI",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": null,
+  "validation": {
+    "counts": {
+      "figures": 20,
+      "verified": 11,
+      "derived": 3,
+      "unverified": 6
+    },
+    "figures": [
+      {
+        "text": "2.7 %",
+        "value": 2.7,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 48,
+        "end": 53,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": false,
+        "cited": [
+          "S6"
+        ],
+        "context": "- Core PCE inflation is 2.7 % for the 12‑month period ending Aug 2025, above the Fed’s 2 % target [S6]."
+      },
+      {
+        "text": "Aug 2025",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 85,
+        "end": 93,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S6"
+        ],
+        "context": "- Core PCE inflation is 2.7 % for the 12‑month period ending Aug 2025, above the Fed’s 2 % target [S6]."
+      },
+      {
+        "text": "3.75 %",
+        "value": 3.75,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 173,
+        "end": 179,
+        "status": "verified",
+        "matched": "FEDFUNDS on 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- The effective federal‑funds rate sits at 3.75 %, reflecting an ongoing tightening stance [S1]."
+      },
+      {
+        "text": "336.3",
+        "value": 336.3,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 245,
+        "end": 250,
+        "status": "verified",
+        "matched": "CPIAUCSL on 2026-09-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S3"
+        ],
+        "context": "- Headline CPI (336.3) and PCEPI (131.6) indices remain above 2 % inflationary pressure [S2], [S3]."
+      },
+      {
+        "text": "131.6",
+        "value": 131.6,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 263,
+        "end": 268,
+        "status": "verified",
+        "matched": "PCEPI on 2026-08-01",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S3"
+        ],
+        "context": "- Headline CPI (336.3) and PCEPI (131.6) indices remain above 2 % inflationary pressure [S2], [S3]."
+      },
+      {
+        "text": "3.75 %",
+        "value": 3.75,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 555,
+        "end": 561,
+        "status": "verified",
+        "matched": "FEDFUNDS on 2026-09-01",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Fed funds rate: 3.75 % [S1]."
+      },
+      {
+        "text": "336.3",
+        "value": 336.3,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 583,
+        "end": 588,
+        "status": "verified",
+        "matched": "CPIAUCSL on 2026-09-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- CPI index: 336.3 (YoY +0.65 % in Aug 2026) [S2]."
+      },
+      {
+        "text": "+0.65 %",
+        "value": 0.65,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 594,
+        "end": 601,
+        "status": "derived",
+        "matched": "CPIAUCSL % change 2026-08-01 to 2026-09-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- CPI index: 336.3 (YoY +0.65 % in Aug 2026) [S2]."
+      },
+      {
+        "text": "Aug 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 605,
+        "end": 613,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- CPI index: 336.3 (YoY +0.65 % in Aug 2026) [S2]."
+      },
+      {
+        "text": "131.6",
+        "value": 131.6,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 638,
+        "end": 643,
+        "status": "verified",
+        "matched": "PCEPI on 2026-08-01",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- PCEPI index: 131.6 (YoY +0.26 % in May 2026, +0.31 % in Jul 2026) [S3]."
+      },
+      {
+        "text": "+0.26 %",
+        "value": 0.26,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 649,
+        "end": 656,
+        "status": "derived",
+        "matched": "PCEPI % change 2026-05-01 to 2026-08-01",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- PCEPI index: 131.6 (YoY +0.26 % in May 2026, +0.31 % in Jul 2026) [S3]."
+      },
+      {
+        "text": "May 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 660,
+        "end": 668,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- PCEPI index: 131.6 (YoY +0.26 % in May 2026, +0.31 % in Jul 2026) [S3]."
+      },
+      {
+        "text": "+0.31 %",
+        "value": 0.31,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 670,
+        "end": 677,
+        "status": "derived",
+        "matched": "PCEPI % change 2026-07-01 to 2026-08-01",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- PCEPI index: 131.6 (YoY +0.26 % in May 2026, +0.31 % in Jul 2026) [S3]."
+      },
+      {
+        "text": "Jul 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 681,
+        "end": 689,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3"
+        ],
+        "context": "- PCEPI index: 131.6 (YoY +0.26 % in May 2026, +0.31 % in Jul 2026) [S3]."
+      },
+      {
+        "text": "2.7 %",
+        "value": 2.7,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 711,
+        "end": 716,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": false,
+        "cited": [
+          "S6"
+        ],
+        "context": "- Core PCE: 2.7 % for 12‑month period ending Aug 2025 [S6]."
+      },
+      {
+        "text": "Aug 2025",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 744,
+        "end": 752,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S6"
+        ],
+        "context": "- Core PCE: 2.7 % for 12‑month period ending Aug 2025 [S6]."
+      },
+      {
+        "text": "2.3 %",
+        "value": 2.3,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1375,
+        "end": 1380,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S5",
+          "S6",
+          "S8",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Base (assumption)**: core PCE declines to 2.3 % by end‑2026 (assumption)."
+      },
+      {
+        "text": "1.9 %",
+        "value": 1.9,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1454,
+        "end": 1459,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4",
+          "S5",
+          "S6",
+          "S8",
+          "S9"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Upside (assumption)**: core PCE falls to 1.9 % by mid‑2027 (assumption)."
+      },
+      {
+        "text": "3.2 %",
+        "value": 3.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1535,
+        "end": 1540,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Downside (assumption)**: core PCE rises to 3.2 % by end‑2026 (assumption)."
+      },
+      {
+        "text": "2.7 %",
+        "value": 2.7,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2415,
+        "end": 2420,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S6"
+        ],
+        "context": "Core PCE inflation remains above the Fed’s 2 % target at 2.7 % for the latest available period [S6]."
+      }
+    ],
+    "citations": {
+      "markers": 40,
+      "dangling": [],
+      "uncited_paragraphs": [],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: Effective Federal Funds Rate (FEDFUNDS)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: CPI for All Urban Consumers (All Items) (CPIAUCSL)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: PCE Price Index (PCEPI)",
+        "last_date": "2026-08-01",
+        "frequency": "monthly",
+        "age_days": 48,
+        "max_age_days": 60,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ],
+    "open_issues": 0,
+    "summary": "14 of 20 figures verified against source data (11 exact, 3 derived); 6 flagged (5 of them appear in a fetched web/news snippet; 3 labelled as assumptions)."
+  },
+  "run_meta": {
+    "run_id": "20261018-174050-54cf13",
+    "timestamp": "2026-10-18T21:40:50+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}

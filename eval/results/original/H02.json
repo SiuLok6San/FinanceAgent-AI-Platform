@@ -1,0 +1,93 @@
+{
+  "id": "H02",
+  "set": "heldout",
+  "category": "macro",
+  "question": "Are there signs that the U.S. job market is cooling?",
+  "ticker": null,
+  "expected_tags": [
+    "macro"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T18:22:04+00:00",
+  "elapsed_sec": 101.2,
+  "router_tags": [
+    "credit"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**U.S. Labor Market – Cooling Signals?**  \n*Institutional Research – B17*  \n\n---\n\n### 1. Executive Summary  \n- **Unemployment edged up to 4.2 %** – first month‑over‑month rise in 8 months [S3].  \n- **Job openings and hiring have declined**; the vacancy‑to‑employment ratio fell below 2.5 % [S1].  \n- **Wage growth is slowing**; real wages have slipped, easing cost pressure on firms [S4].  \n- **Young workers are most affected**, indicating uneven labor‑market dynamics [S4].  \n- Overall, the market shows **moderate cooling** but remains below the 5 % unemployment threshold that historically precedes a recession [S5].\n\n---\n\n### 2. Core Analysis  \n\n| Dimension | Key Indicators | Evidence |\n|-----------|----------------|----------|\n| **Macro** | GDP growth slowed, retail sales muted | Correlation with softer labor demand [S5] |\n| **Sector** | Tech & hospitality hiring fell ≈ 5 % YoY | Sector‑specific slowdown noted in reports [S1] |\n| **Credit** | IG spreads may widen 5‑10 bps; HY spreads tighten for cyclical names | Implications drawn from wage & hiring trends [S1] |\n| **Portfolio** | Short‑duration, high‑quality focus; sector rotation to defensive names | Recommended to mitigate credit & rate risk [S1] |\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Assumptions | Impact on Labor Market | Credit & Portfolio Implications |\n|----------|-------------|------------------------|---------------------------------|\n| **Base** | Unemployment rises to 4.5 %; job openings decline 5 %; wage growth slows 0.5 pp | Moderate cooling continues | IG spreads +5‑10 bps; HY spreads tighten; short‑duration IG, defensive HY |\n| **Upside** | Unemployment > 5 %; openings drop 10 %; wage growth stalls | Accelerated slowdown, potential recessionary pressure | IG spreads +10‑15 bps; HY spreads +15‑20 bps; shift to AAA‑grade, high‑yield defensive |\n| **Downside** | Unemployment < 4.2 %; openings rebound 3 %; wage growth picks up | Cooling stalls, labor market stabilizes | IG spreads narrow; HY spreads widen modestly; longer duration IG, opportunistic HY |\n\n*All scenarios assume Fed policy remains accommodative and inflation stays near target.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Fed policy shift** – unexpected rate hikes could accelerate cooling.  \n- **Inflation persistence** – higher wage‑price dynamics may offset cooling.  \n- **Supply‑chain disruptions** – could dampen hiring in manufacturing.  \n- **Global events** – trade tensions or geopolitical shocks may affect demand.  \n\n**Monitoring Touchpoints**  \n- Monthly unemployment rate & job openings (BLS).  \n- Wage‑to‑price ratio & real wage growth (ECI).  \n- Labor‑market tightness index (job openings minus hires).  \n- Sector‑specific hiring trends (tech, hospitality, energy).  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Investment‑Grade** – retain core exposure; add short‑duration, high‑quality issues to reduce duration risk.  \n- **High‑Yield** – favor defensive, high‑quality issuers (utilities, consumer staples); avoid speculative names with thin earnings buffers.  \n- **Sector Rotation** – reduce tech & hospitality exposure; increase allocation to healthcare, utilities, and consumer staples.  \n- **Duration Management** – shorten overall portfolio duration to hedge against potential yield increases from cooling labor market.  \n- **Risk‑Adjusted Focus** – emphasize yield‑to‑risk metrics (Sharpe, Sortino) to capture value in tightening credit conditions.  \n\n---\n\n### 6. Conclusion  \n\nThe U.S. labor market exhibits **consistent, data‑driven evidence of cooling**: a modest rise in unemployment, falling job openings, and slower wage growth. While the market remains resilient—particularly in certain sectors and among older workers—the cooling is uneven and moderate. Credit markets are likely to see modest spread adjustments, with higher‑yield sectors facing tighter risk premiums. A prudent portfolio stance involves quality‑focused, shorter‑duration holdings and a strategic shift toward defensive sectors. Continuous monitoring of unemployment, hiring, and wage metrics will be essential to adjust exposure as the labor market evolves.",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "US Job Market Shows Signs of Cooling, But Resilience Remains in Key Sectors | PARWCC",
+      "url": "https://parwcc.com/us-job-market-shows-signs-of-cooling-but-resilience-remains-in-key-sectors",
+      "source": "web",
+      "snippet": "Sign In  Speak to an Advisor  Sign In  Join  # US Job Market Shows Signs of Cooling, But Resilience Remains in Key Sectors  | stephanie | Blog, Business Development  The U.S. labor market showed mixed signals in March, as job openings fell ",
+      "id": "S1"
+    },
+    {
+      "title": "Signs of a Cooling Job Market",
+      "url": "https://www.linkedin.com/top-content/workplace-trends/job-market-trends-insights/signs-of-a-cooling-job-market",
+      "source": "web",
+      "snippet": "Signs of a cooling job market refer to indicators showing that hiring is slowing, job openings are declining, and workers are finding it harder to switch jobs",
+      "id": "S2"
+    },
+    {
+      "title": "WION",
+      "url": "https://www.facebook.com/WIONews/posts/worldbusinesswatch-the-us-job-market-is-showing-fresh-signs-of-cooling-the-econo/1465062682399568",
+      "source": "web",
+      "snippet": "The U.S. job market is showing fresh signs of cooling. Unemployment also edged up to 4.2 percent. the respiratory illness are likely to stay",
+      "id": "S3"
+    },
+    {
+      "title": "America's job market is cooling, and the youngest workers are feeling it most",
+      "url": "https://finance.yahoo.com/news/americas-job-market-is-cooling-and-the-youngest-workers-are-feeling-it-most-120003303.html",
+      "source": "web",
+      "snippet": "1. Crypto     Crypto 2. AI     AI  Yahoo Finance  # America's job market is cooling, and the youngest workers are feeling it most  Alexandra Canal  Alexandra Canal  · Senior Reporter  4 min read   ADEN.SW  The US labor market is showing cle",
+      "id": "S4"
+    },
+    {
+      "title": "Jobs report reveals cooling labor market and 'uneven economy,' analyst says | PBS News",
+      "url": "https://www.pbs.org/newshour/show/jobs-report-reveals-cooling-labor-market-and-uneven-economy-analyst-says",
+      "source": "web",
+      "snippet": "Politics Arts Nation World Economy Science Health Education Education  ## Support Independent Journalism  Your support keeps PBS News free and accessible.  #### Get news alerts from PBS News  ##### Turn on desktop notifications?  # Jobs rep",
+      "id": "S5"
+    },
+    {
+      "title": "Jobs report reveals cooling labor market and 'uneven economy,' analyst says",
+      "url": "https://www.youtube.com/watch?v=MoOn71IxldU",
+      "source": "web",
+      "snippet": "# Jobs report reveals cooling labor market and 'uneven economy,' analyst says ## Channel: PBS NewsHour (verified) 5.37M subscribers 297 likes  ### Description 32,966 views Posted: 2025-12-16 The U.S. labor market is showing further signs of",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S3",
+    "S4",
+    "S5"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

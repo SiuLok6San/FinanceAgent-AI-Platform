@@ -1,4 +1,6 @@
 import hmac
+import html
+import re
 
 import pandas as pd
 import streamlit as st
@@ -7,6 +9,7 @@ from agents import run_multiagent_pipeline
 from demo import demo_runs, load_demo_result
 from llm import llm_settings
 from settings import env
+from validators import mislabelled_assumption
 
 # Set APP_PASSWORD (env var or Streamlit secret) on a public deployment so that
 # only people with the password can start live runs, which spend API quota.
@@ -73,6 +76,13 @@ textarea, input {
 }
 
 
+/* Report figures: hover a number to see where it comes from */
+.b17-fact { border-bottom: 1px dotted rgba(0, 89, 179, 0.7); cursor: help; }
+.b17-quote { border-bottom: 1px dotted rgba(46, 125, 50, 0.8); cursor: help; }
+.b17-assume { background: rgba(128, 128, 128, 0.18); border-radius: 3px; padding: 0 2px; cursor: help; }
+.b17-flag { background: rgba(255, 152, 0, 0.32); border-radius: 3px; padding: 0 2px; cursor: help; }
+.b17-flag-snippet { background: rgba(33, 150, 243, 0.25); border-radius: 3px; padding: 0 2px; cursor: help; }
+.b17-interp { font-style: italic; opacity: 0.85; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -81,9 +91,9 @@ textarea, input {
 # -------------------------------------------------------
 st.markdown('<div class="b17-title">B17 Finance Multi-Agent</div>', unsafe_allow_html=True)
 st.markdown(
-    '<div class="b17-caption">Institutional-grade macro, credit, and portfolio intelligence — '
-    'multi-agent LLM pipeline (Ollama) + live FRED, Finnhub and Tavily data, '
-    'with deterministic validation of every report.</div>',
+    '<div class="b17-caption">Institutional-grade macro, credit, and portfolio research — '
+    'the LLM agents write the analysis, code inserts every number from live FRED, Finnhub and Tavily data '
+    'with its source, and a deterministic validator checks the result.</div>',
     unsafe_allow_html=True,
 )
 st.markdown('<div class="b17-divider"></div>', unsafe_allow_html=True)
@@ -96,16 +106,71 @@ def escape_md(text: str) -> str:
     return (text or "").replace("$", "\\$")
 
 
-def highlight_flagged(report: str, figures: list) -> str:
-    """Highlight unverified figures (orange: found nowhere; blue: only in a web/news snippet). Nothing is removed."""
-    flagged = sorted((f for f in figures if f["status"] == "unverified"), key=lambda f: f["start"], reverse=True)
-    for f in flagged:
-        tag = "\u2063HL_SNIPPET" if f.get("in_source_text") else "\u2063HL_NONE"
-        report = report[:f["start"]] + tag + report[f["start"]:f["end"]] + "\u2063HL_END" + report[f["end"]:]
-    report = escape_md(report)
-    return (report.replace("\u2063HL_NONE", ":orange-background[")
-                  .replace("\u2063HL_SNIPPET", ":blue-background[")
-                  .replace("\u2063HL_END", "]"))
+def _span(cls: str, title: str, inner: str) -> str:
+    return f'<span class="{cls}" title="{html.escape(title, quote=True)}">{inner}</span>'
+
+
+def decorate_report(report: str, figures: list, refs: list = None, facts: dict = None, lines: list = None) -> str:
+    """Report as markdown with every number marked; hover shows where it comes from. Nothing is removed.
+
+    Values inserted from the fact table get a dotted underline, quotes from web sources a green
+    one, the writer's assumptions a grey background; numbers typed by the model that are not in
+    the data are orange (blue if they at least appear in a fetched web/news snippet). Lines with
+    no figure from the data are shown in italics as interpretation.
+    """
+    facts = facts or {}
+    events = []  # (position, 0 = close / 1 = open, html)
+    covered = set()
+
+    def mark(start, end, cls, title):
+        events.append((start, 1, f'<span class="{cls}" title="{html.escape(title, quote=True)}">'))
+        events.append((end, 0, "</span>"))
+
+    mislabelled = {f["start"]: sid for f in figures if (sid := mislabelled_assumption(f))}
+    for r in refs or []:
+        sid = next((s for pos, s in mislabelled.items() if r["start"] <= pos < r["end"]), None)
+        if r["kind"] == "assumption" and sid:
+            mark(r["start"], r["end"], "b17-flag-snippet",
+                 f"Labelled as an assumption, but it is in the text of source {sid}, which this line cites")
+        elif r["kind"] == "fact":
+            f = facts.get(r["fact_id"], {})
+            mark(r["start"], r["end"], "b17-fact", f"{r['fact_id']}: {f.get('label', '')}")
+        elif r["kind"] == "quote":
+            mark(r["start"], r["end"], "b17-quote", f"Quoted from source {r['source_id']}")
+        elif r["kind"] == "assumption":
+            mark(r["start"], r["end"], "b17-assume", "The writer's own assumption, not data")
+        covered.update(range(r["start"], r["end"]))
+    for f in figures:
+        if f["start"] in covered or f["status"] != "unverified" or f.get("assumption"):
+            continue
+        if f.get("in_source_text"):
+            mark(f["start"], f["end"], "b17-flag-snippet", f"Not in the data tables; appears in source {f['in_source_text']}")
+        else:
+            mark(f["start"], f["end"], "b17-flag", "Not found in the fetched data")
+    for line in lines or []:
+        if line["kind"] != "interpretation":
+            continue
+        text = report[line["start"]:line["end"]]
+        if text.lstrip().startswith("|"):
+            continue  # tables keep their syntax
+        lead = re.match(r"\s*(?:[-*\u2022]|\d+[.)])?\s*", text).end()
+        body_end = line["start"] + len(text.rstrip())
+        if line["start"] + lead < body_end:
+            mark(line["start"] + lead, body_end, "b17-interp", "Interpretation: no figure from the data in this line")
+
+    out, pos = [], 0
+    for at, _, tag in sorted(events, key=lambda e: (e[0], e[1])):
+        out.append(escape_md(report[pos:at]).replace("\\$", "&#36;"))
+        out.append(tag)
+        pos = at
+    out.append(escape_md(report[pos:]).replace("\\$", "&#36;"))
+    return "".join(out)
+
+
+LEGEND = ("Hover a number to see where it comes from. Dotted underline: value from the data (blue) or quoted "
+          "from a web source (green); grey: the writer's own assumption; orange: typed by the model and not "
+          "found in the data; light blue: not in the data tables but in a fetched web/news snippet. "
+          "Lines in italics contain no figure from the data: they are the writer's interpretation.")
 
 
 def render_repair_note(result: dict) -> None:
@@ -124,7 +189,9 @@ def render_repair_note(result: dict) -> None:
                    f"{last['open_issues_after']}); showing the first draft.")
     with st.expander("First draft and the feedback it received"):
         st.markdown(f"**Validation of the first draft:** {escape_md(result['draft_validation']['summary'])}")
-        st.markdown(highlight_flagged(result["draft_report_text"], result["draft_validation"]["figures"]))
+        st.markdown(decorate_report(result["draft_report_text"], result["draft_validation"]["figures"],
+                                    result.get("draft_refs"), result.get("facts"),
+                                    result["draft_validation"].get("lines")), unsafe_allow_html=True)
         st.markdown("**Feedback sent to the Writer:**")
         st.code(rounds[0]["feedback"], language=None)
 
@@ -137,11 +204,50 @@ def render_validation_panel(validation: dict, result: dict) -> None:
 
     with box:
         c1, c2, c3, c4, c5 = st.columns(5)
-        c1.metric("Verified", counts["verified"])
-        c2.metric("Derived", counts["derived"])
-        c3.metric("Unverified", counts["unverified"])
-        c4.metric("Open issues", validation.get("open_issues", 0))
-        c5.metric("Dangling citations", len(cit["dangling"]))
+        if validation.get("placeholders"):
+            figs = [f for f in validation["figures"] if f["unit"] != "date"]
+            c1.metric("From the data", sum(f.get("origin") == "fact" for f in figs))
+            c2.metric("Quoted from sources", sum(f.get("origin") == "quote" for f in figs))
+            c3.metric("Assumptions", sum(f.get("origin") == "assumption" for f in figs))
+            c4.metric("Typed by the model", sum(f.get("origin") == "free" for f in figs))
+        else:
+            c1.metric("Verified", counts["verified"])
+            c2.metric("Derived", counts["derived"])
+            c3.metric("Unverified", counts["unverified"])
+            c4.metric("Dangling citations", len(cit["dangling"]))
+        c5.metric("Open issues", validation.get("open_issues", 0))
+
+        plan = result.get("plan")
+        if plan:
+            series = ", ".join(plan.get("series") or []) or "none"
+            st.caption(f"Planner ({'LLM' if plan.get('source') == 'planner' else 'rule-based fallback'}): "
+                       f"topics {', '.join(plan.get('topics') or [])} · FRED series {series}")
+
+        lines = validation.get("lines") or []
+        if lines:
+            n_data = sum(l["kind"] == "data" for l in lines)
+            st.caption(f"Lines backed by data: {n_data} · interpretation (no figure from the data): {len(lines) - n_data}")
+
+        wording = validation.get("wording") or {}
+        wording_issues = ([w for x in wording.values() for w in x]) + validation.get("comparisons", [])
+        if wording_issues:
+            with st.expander(f"Wording vs. data: {len(wording_issues)} problem(s)", expanded=True):
+                for w in wording.get("history", []):
+                    st.warning(f"\"{escape_md(w['context'])}\" says *{w['phrase']}*, but {w['series']} is at the "
+                               f"{w['pctile']}th percentile of its history.")
+                for w in wording.get("trend", []):
+                    st.warning(f"\"{escape_md(w['context'])}\" says *{w['word']}*, but {w['series']} moved {w['change']}.")
+                for w in wording.get("rate", []):
+                    st.warning(f"\"{escape_md(w['context'])}\" says *{w['word']}*, but for {w['series']} "
+                               f"{escape_md(w['evidence'])}.")
+                for c in validation.get("comparisons", []):
+                    st.warning(f"\"{escape_md(c['context'])}\" — {c['detail']}.")
+
+        if validation.get("directions"):
+            with st.expander(f"Direction check: {len(validation['directions'])} problem(s)", expanded=True):
+                for d in validation["directions"]:
+                    st.warning(f"\"{escape_md(d['context'])}\" says *{d['word']}* ({d['says']}), "
+                               f"but {d['fact']} went {d['data']}.")
 
         if validation["figures"]:
             with st.expander("Figures in the report", expanded=counts["unverified"] > 0):
@@ -150,6 +256,7 @@ def render_validation_panel(validation: dict, result: dict) -> None:
                     "status": f["status"],
                     "matched data": f["matched"] or "",
                     "source": f["source_id"] or (f"in snippet {f['in_source_text']}" if f["in_source_text"] else ""),
+                "origin": f.get("origin", ""),
                 "assumption": "yes" if f.get("assumption") else "",
                     "same topic": "" if f["topic_match"] is None else ("yes" if f["topic_match"] else "no"),
                     "context": f["context"],
@@ -182,6 +289,11 @@ def render_validation_panel(validation: dict, result: dict) -> None:
                     msg += f"; unverified figures: {', '.join(t['unverified_figures'])}"
                 (st.warning if (not t["disclosed"] or t["unverified_figures"]) else st.write)(escape_md(msg))
 
+        if result.get("facts"):
+            with st.expander(f"Fact table ({len(result['facts'])} facts the writer could use)"):
+                st.dataframe(pd.DataFrame([{"id": k, "value": f["display"], "meaning": f["label"]}
+                                           for k, f in result["facts"].items()]), hide_index=True)
+
         if validation["data_status"]:
             with st.expander("Data source problems"):
                 for s in validation["data_status"]:
@@ -203,11 +315,11 @@ def render_result(result: dict) -> None:
                 validation["citations"]["dangling"] or validation["citations"]["uncited_paragraphs"]
             (st.warning if flagged else st.success)(f"**Validation:** {escape_md(validation['summary'])}")
         render_repair_note(result)
-        st.markdown(highlight_flagged(result.get("report_text_raw", result["report_text"]), figures))
+        st.markdown(decorate_report(result.get("report_text_raw", result["report_text"]), figures,
+                                    result.get("refs"), result.get("facts"), validation.get("lines")),
+                    unsafe_allow_html=True)
         st.caption(
-            "Highlighted figures could not be matched to the fetched data tables "
-            "(blue: the number appears in a fetched web/news snippet; orange: found nowhere). "
-            f"Model: {result['run_meta']['model']} · seed {result['run_meta']['seed']} · "
+            f"{LEGEND} Model: {result['run_meta']['model']} · seed {result['run_meta']['seed']} · "
             f"run {result['run_meta']['run_id']}"
         )
 
@@ -269,8 +381,9 @@ with left:
         labels = {r["id"]: f"{r['id']} · {r['category']} · {r['question']}" + (f" ({r['ticker']})" if r["ticker"] else "")
                   for r in runs}
         chosen = st.selectbox("Saved evaluation run", list(labels), format_func=labels.get)
-        st.caption("Real outputs of the revised pipeline on the 20 evaluation questions, saved in "
-                   "`eval/results/` and re-checked by the current validator. Nothing is fetched or generated now.")
+        st.caption("Real outputs of the current version on the evaluation questions (Q: development, F: fresh, "
+                   "H: held-out), saved in `eval/results/` and re-checked by the current validator. Nothing is "
+                   "fetched or generated now.")
         run_button = False
     else:
         question = st.text_area(

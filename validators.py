@@ -30,6 +30,7 @@ from typing import Any, Dict, Iterable, List, Optional, Set, Tuple
 import pandas as pd
 
 from answer_builder import find_dangling_citations, parse_citation_markers
+from fact_store import build_fact_store
 from facts import Fact, all_facts, observation_dates, table_frequency, topics_with_data
 from router import matches_any, topics_in
 from settings import load_config
@@ -111,7 +112,9 @@ def _without_labels(text: str) -> str:
     """Also blank out dates and label phrases such as "S&P 500"."""
     spans = [m.span() for m in _DATE_RE.finditer(text)]
     for phrase in _cfg()["extraction"]["label_phrases"]:
-        spans += [m.span() for m in re.finditer(re.escape(phrase), text, re.I)]
+        # any whitespace between words (models often write "S&P\u00a0500")
+        pattern = r"\s+".join(re.escape(w) for w in phrase.split())
+        spans += [m.span() for m in re.finditer(pattern, text, re.I)]
     return _mask(text, spans)
 
 
@@ -160,8 +163,12 @@ class Figure:
     in_source_text: Optional[str] = None  # S# of a snippet that contains the same number
     snippet_ids: Tuple[str, ...] = ()     # every snippet that contains the same number
     assumption: bool = False              # the report labels this number as its own assumption
+    written_in: Tuple[str, ...] = ()      # snippets with the same number and unit, as written
     cited: Tuple[str, ...] = ()           # citation ids in the same bullet / paragraph
     context: str = ""
+    origin: str = "free"                  # "fact" (inserted from {{ID}}), "assumption" ({{assume: …}}) or "free" (typed)
+    fact_id: Optional[str] = None         # the fact a placeholder pointed to
+    change_sign: Optional[int] = None     # +1 / -1 if the matched fact is a change, for the direction check
 
 
 def extract_figures(text: str) -> List[Figure]:
@@ -249,12 +256,24 @@ def _topic_match(sentence: str, fact: Fact, sentence_topics: Set[str], series_ke
     return bool(sentence_topics & set(fact.topics))
 
 
+_STATUS_BY_KIND = {"level": "verified", "stat": "verified", "date": "verified", "text": "verified",
+                   "change": "derived", "pct_change": "derived", "spread": "derived", "percentile": "derived",
+                   "rate": "derived"}
+
+
+def _sign(v: float) -> Optional[int]:
+    return None if not v else (1 if v > 0 else -1)
+
+
 def check_numeric_grounding(
     report: str,
     question: str,
     tables: List[Dict[str, Any]],
     sources: List[Dict[str, Any]],
+    refs: Optional[List[Any]] = None,
 ) -> List[Figure]:
+    """Classify every figure; refs (from render.py) say which spans were inserted from facts."""
+    refs = refs or []
     facts = all_facts(tables)
     url_to_id = {s["url"]: s["id"] for s in sources if s.get("url")}
     dates = observation_dates(tables)
@@ -272,9 +291,40 @@ def check_numeric_grounding(
         fig.context = sentence[:300]
 
         if fig.unit == "date":
+            if any(r.kind == "fact" and r.start <= fig.start < r.end for r in refs):
+                fig.origin, fig.status, fig.matched = "fact", "verified", "date from the fact table"
+                figures.append(fig)
+                continue
             iso, ym = _parse_date(fig.text)
             if (iso and iso in dates) or (not iso and ym in months):
                 fig.status, fig.matched = "verified", "observation / as-of date in fetched data"
+            figures.append(fig)
+            continue
+
+        ref = next((r for r in refs if r.start <= fig.start < r.end), None)
+        if ref is not None and ref.kind == "fact":
+            f = ref.fact
+            fig.origin, fig.fact_id = "fact", f.id
+            fig.status, fig.matched, fig.topic_match = _STATUS_BY_KIND.get(f.kind, "verified"), f.label, True
+            fig.source_ids = tuple(url_to_id[u] for u in f.source_urls if u in url_to_id)
+            fig.source_id = fig.source_ids[0] if fig.source_ids else None
+            fig.change_sign = _sign(f.value) if f.is_change else None
+            figures.append(fig)
+            continue
+        if ref is not None and ref.kind == "assumption":
+            # kept as the writer's assumption, but a number that is in the text of a source the line
+            # cites is that source's figure, not an assumption (checked in _needs_attention)
+            fig.origin, fig.assumption = "assumption", True
+            fig.written_in = _written_in(fig, snippet_figures)
+            figures.append(fig)
+            continue
+        if ref is not None and ref.kind == "quote":
+            # quoted from a web/news source: stays "unverified" (not in the data tables), but must
+            # appear in the text of the source it is attributed to
+            fig.origin = "quote"
+            fig.snippet_ids = _in_snippets(fig, snippet_figures, only=ref.source_id)[:1]
+            fig.in_source_text = fig.snippet_ids[0] if fig.snippet_ids else None
+            fig.matched = f"quoted from {ref.source_id}" + ("" if fig.snippet_ids else " (not found in its text)")
             figures.append(fig)
             continue
 
@@ -304,22 +354,45 @@ def check_numeric_grounding(
             fig.source_id = url_to_id.get(fact.source_url)
             fig.source_ids = tuple(url_to_id[u] for u in (fact.source_url, *fact.other_source_urls) if u in url_to_id)
             fig.topic_match = best[0][0] == 0
+            if " change " in fact.label or "annualized growth" in fact.label:
+                fig.change_sign = _sign(fact.value)
         else:
-            fig.snippet_ids = tuple(dict.fromkeys(
-                sid for sid, sf in snippet_figures
-                if (sf.unit == fig.unit or "" in (sf.unit, fig.unit))
-                and abs(sf.value - fig.value) <= max(sf.tolerance, fig.tolerance)))
+            fig.snippet_ids = _in_snippets(fig, snippet_figures)
             fig.in_source_text = fig.snippet_ids[0] if fig.snippet_ids else None
             fig.assumption = _is_assumption(report, fig)
+            fig.written_in = _written_in(fig, snippet_figures)
         figures.append(fig)
     return figures
 
 
+def _in_snippets(fig: Figure, snippet_figures: List[Tuple[str, Figure]], only: Optional[str] = None) -> Tuple[str, ...]:
+    """Ids of the fetched web/news snippets that contain the same number (optionally one source only).
+
+    Same at the precision the report writes it: "4%" matches a source's "4.2%", but "0.8 pp" does not
+    match the "1" in "1 of the 50 states".
+    """
+    return tuple(dict.fromkeys(
+        sid for sid, sf in snippet_figures
+        if (only is None or sid == only)
+        and (sf.unit == fig.unit or "" in (sf.unit, fig.unit))
+        and abs(sf.value - fig.value) <= fig.tolerance))
+
+
+def _written_in(fig: Figure, snippet_figures: List[Tuple[str, Figure]]) -> Tuple[str, ...]:
+    """Snippets containing this exact number with the same unit (stricter than _in_snippets)."""
+    return tuple(dict.fromkeys(sid for sid, sf in snippet_figures
+                               if sf.unit == fig.unit and abs(sf.value - fig.value) <= 1e-9 * max(1.0, abs(fig.value))))
+
+
+def _labelled_assumption(report: str, fig: Figure) -> bool:
+    """The number itself is followed by "(assumption)" ("16× (assumption)")."""
+    return bool(re.match(r"\W{0,3}\(\s*assumption", report[fig.end:fig.end + 40], re.I))
+
+
 def _is_assumption(report: str, fig: Figure) -> bool:
     """The number is marked as the report's own assumption ("16× (assumption)") or its sentence says so."""
-    after = report[fig.end:fig.end + 40]
     patterns = _cfg()["assumptions"]["patterns"]
-    return bool(re.match(r"\W{0,3}\(\s*assumption", after, re.I)) or any(re.search(p, fig.context, re.I) for p in patterns)
+    return _labelled_assumption(report, fig) or any(re.search(p, fig.context, re.I) for p in patterns)
 
 
 # ---------------------------------------------------------------------------
@@ -351,7 +424,13 @@ def _in_snippet(fig: Figure, snippet_figs: List[Figure]) -> bool:
                for sf in snippet_figs)
 
 
-def check_citations(report: str, sources: List[Dict[str, Any]], figures: List[Figure]) -> Dict[str, Any]:
+def check_citations(report: str, sources: List[Dict[str, Any]], figures: List[Figure],
+                    placeholders: bool = False) -> Dict[str, Any]:
+    """Every [S#] exists; paragraphs with figures from the data cite them, and cite the right source.
+
+    With placeholders the renderer cites inserted facts, and typed numbers are open issues of their own,
+    so a typed number that matches the data by value does not ask for a citation.
+    """
     markers = parse_citation_markers(report)
     snippet_figs = {s["id"]: [f for f in extract_figures(s.get("snippet") or "") if f.unit != "date"] for s in sources}
     uncited, mismatched = [], []
@@ -360,7 +439,8 @@ def check_citations(report: str, sources: List[Dict[str, Any]], figures: List[Fi
         for f in figures:
             if a <= f.start < b:
                 f.cited = tuple(sorted(cited, key=lambda i: int(i[1:])))
-        grounded = [f for f in figures if a <= f.start < b and f.status in ("verified", "derived") and f.unit != "date"]
+        grounded = [f for f in figures if a <= f.start < b and f.status in ("verified", "derived") and f.unit != "date"
+                    and (not placeholders or f.origin == "fact")]
         if not grounded:
             continue
         snippet = report[a:b].strip()[:200]
@@ -438,6 +518,338 @@ def check_no_data(report: str, tags: List[str], tables: List[Dict[str, Any]], fi
 
 
 # ---------------------------------------------------------------------------
+# 5) Direction of change
+# ---------------------------------------------------------------------------
+
+# clause boundaries for the direction check: sentence ends (not decimal points), commas, ";",
+# line breaks, table cells. "+12 bp, narrowing the differential" talks about two things.
+_CLAUSE_END = re.compile(r"[.!?,](?=\s|$)|[;\n|]")
+
+
+def check_directions(report: str, figures: List[Figure], placeholders: bool = False) -> List[Dict[str, Any]]:
+    """Change figures next to a word saying the opposite ("rose" next to a fall), or with the wrong sign.
+
+    With placeholders only facts inserted from the fact table are checked: a typed number matched to
+    the data by value ("20 bp" against a -0.2 pp unemployment change) is a coincidence as often as not,
+    and sending it back to the writer turned a correct "spreads could widen" into "narrow".
+    """
+    cfg = _cfg()["directions"]
+    words = {w: 1 for w in cfg["up"]} | {w: -1 for w in cfg["down"]}
+    pattern = re.compile(r"\b(" + "|".join(sorted(map(re.escape, words), key=len, reverse=True)) + r")\b", re.I)
+    hedge = _phrase_pattern(cfg["skip_words"])
+    errors = []
+    signed = lambda g: -g.value if g.text[:1] in "-\u2212" else g.value  # noqa: E731
+    for f in figures:
+        if not f.change_sign or (placeholders and f.origin != "fact"):
+            continue
+        # clause around the figure: stop at sentence ends (not decimal points), ";", line breaks and table cells
+        # (and, with placeholders, at "and" / "while" / ", " joins: "fell from X to Y and the rise in Z")
+        cuts = [m.end() for m in _CLAUSE_END.finditer(report, 0, f.start)]
+        if placeholders:
+            cuts += [m.end() for m in _CLAUSE_JOIN.finditer(report, max(0, f.start - cfg["window_chars"]), f.start)]
+        a = max([0, f.start - cfg["window_chars"]] + sorted(cuts)[-1:])
+        ends = [m.start() for m in [_CLAUSE_END.search(report, f.end)] if m]
+        if placeholders:
+            ends += [m.start() for m in [_CLAUSE_JOIN.search(report, f.end, f.end + cfg["window_chars"])] if m]
+        b = min(ends + [len(report), f.end + cfg["window_chars"]])
+        if hedge.search(report, a, b):
+            continue
+        change_sign, written_sign = f.change_sign, {"+": 1, "-": -1, "\u2212": -1}.get(f.text[:1])
+        if (f.fact_id or "").endswith((".pct_1y", ".ann_growth_1q")):
+            # "inflation fell from {{CPI.pct_1y_prev}} to {{CPI.pct_1y}}": the word describes the rate
+            prev = next((g for g in figures if g.fact_id == f.fact_id + "_prev" and a <= g.start < b), None)
+            if prev is not None:
+                d = signed(f) - signed(prev)
+                change_sign, written_sign = (1 if d > 0 else -1 if d < 0 else 0), None
+                if not change_sign:
+                    continue
+        best = None
+        for m in pattern.finditer(report, a, b):
+            dist = f.start - m.end() if m.end() <= f.start else m.start() - f.end
+            if best is None or dist < best[0]:
+                best = (dist, m.group(1), words[m.group(1).lower()])
+        says = best[2] if best else written_sign
+        if says is not None and says != change_sign:
+            errors.append({
+                "figure": f.text,
+                "says": "up" if says > 0 else "down",
+                "data": "up" if change_sign > 0 else "down",
+                "word": best[1] if best else f.text[:1],
+                "fact": f.fact_id or f.matched,
+                "context": f.context[:200],
+            })
+    return errors
+
+
+# ---------------------------------------------------------------------------
+# 6) Comparisons between facts (placeholder reports only)
+# ---------------------------------------------------------------------------
+
+_SENTENCE_END = re.compile(r"[.!?](?=\s|$)|[;\n|]")
+_CLAUSE_JOIN = re.compile(r",\s|\s(?:or|and|but|while|whereas)\s", re.I)
+
+
+_KIND_GROUP = {"level": "level", "stat": "level", "spread": "level", "change": "change",
+               "pct_change": "change", "rate": "change", "percentile": "percentile"}
+
+
+def check_comparisons(report: str, refs: Optional[List[Any]]) -> List[Dict[str, Any]]:
+    """"{{A}} is above {{B}}": A and B must have comparable units and the order must match the data."""
+    facts = [r for r in refs or [] if r.kind == "fact" and isinstance(r.fact.value, (int, float))]
+    if len(facts) < 2:
+        return []
+    cfg = _cfg()["comparisons"]
+    families = cfg["unit_families"]
+    words = {w: 1 for w in cfg["above"]} | {w: -1 for w in cfg["below"]} | {w: 0 for w in cfg["neutral"]}
+    pattern = re.compile(r"(?<![\w])(" + "|".join(sorted(map(re.escape, words), key=len, reverse=True)) + r")(?![\w])", re.I)
+    # both sides must sit in the same clause as the comparison word: "beta exceeds X or VIX rises
+    # above Y" compares beta with X and VIX with Y, never X with Y
+    bounds = sorted({0, len(report)} | {m.end() for m in _SENTENCE_END.finditer(report)}
+                    | {m.start() for m in _CLAUSE_JOIN.finditer(report)} | {m.end() for m in _CLAUSE_JOIN.finditer(report)})
+    issues = []
+    for m in pattern.finditer(report):
+        lo = max(b for b in bounds if b <= m.start())
+        hi = min(b for b in bounds if b >= m.end())
+        before = [r for r in facts if lo <= r.start and r.end <= m.start()]
+        after = [r for r in facts if m.end() <= r.start and r.end <= hi]
+        if not before or not after:
+            continue
+        a, b = before[-1].fact, after[0].fact
+        fa, fb = families.get(a.unit), families.get(b.unit)
+        if not fa or not fb or _KIND_GROUP.get(a.kind) != _KIND_GROUP.get(b.kind):
+            continue  # a change next to a level ("+12 bp rise keeps the 2-year above policy by +102 bp")
+        context = report[lo:hi].strip()[:200]
+        word = m.group(1).lower()
+        if fa != fb and not (words[word] == 0 and sorted([fa, fb]) in [sorted(p) for p in cfg["analytic_pairs"]]):
+            issues.append({"kind": "units", "word": word, "a": a.id, "b": b.id, "context": context,
+                           "detail": f"{a.id} ({a.unit}) and {b.id} ({b.unit}) are not comparable"})
+            continue
+        claim = words[word]
+        if claim and a.value != b.value and (a.value > b.value) != (claim > 0):
+            issues.append({"kind": "order", "word": word, "a": a.id, "b": b.id, "context": context,
+                           "detail": f"{a.id} = {a.display} is {'below' if claim > 0 else 'above'} {b.id} = {b.display}"})
+    return issues
+
+
+# ---------------------------------------------------------------------------
+# 7) Wording: where a series sits in its history, and which way it is moving
+# ---------------------------------------------------------------------------
+
+def _phrase_pattern(phrases: List[str]) -> re.Pattern:
+    """Whole-word match for phrases, with any whitespace or hyphen between words."""
+    def one(p: str) -> str:
+        return r"[\s\-\u2010\u2011]+".join(re.escape(w) for w in re.split(r"[\s\-]+", p.strip()))
+    alts = sorted(phrases, key=len, reverse=True)
+    return re.compile(r"(?<![\w])(" + "|".join(one(p) for p in alts) + r")(?![\w])", re.I)
+
+
+def _norm_phrase(text: str) -> str:
+    return re.sub(r"[\s\-\u2010\u2011]+", " ", text.strip().lower())
+
+
+def _sentences(report: str) -> List[Tuple[int, int]]:
+    cuts = [0] + [m.end() for m in _SENTENCE_END.finditer(report)] + [len(report)]
+    return [(a, b) for a, b in zip(cuts, cuts[1:]) if report[a:b].strip()]
+
+
+def _series_mentions(report: str, a: int, b: int, refs, store, names) -> List[Tuple[int, str]]:
+    """(position, series alias) for every series the sentence points to, in order: a fact it quotes or
+    a name. Names of series that were not fetched count too, so that "the steepening curve" is not
+    pinned on the fed funds rate when no curve data was fetched."""
+    found = [(r.start, r.fact_id.split(".")[0]) for r in refs or []
+             if r.kind == "fact" and a <= r.start < b and r.fact.series_id]
+    for alias, pattern in names.items():
+        found += [(m.start(), alias) for m in pattern.finditer(report, a, b)]
+    return sorted(found)
+
+
+def _hypothetical_spans(report: str, section_words: List[str]) -> List[Tuple[int, int]]:
+    """Spans of table rows and of sections headed "Scenarios", "Key Risks & Monitoring", ...: their
+    statements are scenarios or things to watch, not claims about the current data."""
+    spans, heading = [], re.compile(r"^\s*(?:#{1,6}\s+.+|\*\*[^*\n]+\*\*\s*:?\s*)$")
+    words = re.compile("|".join(map(re.escape, section_words)), re.I)
+    pos, start = 0, None
+    for line in report.splitlines(keepends=True):
+        text = line.strip()
+        if heading.match(line):
+            if start is not None:
+                spans.append((start, pos))
+            start = pos if words.search(text) else None
+        elif text.startswith("|"):
+            spans.append((pos, pos + len(line)))
+        pos += len(line)
+    if start is not None:
+        spans.append((start, pos))
+    return spans
+
+
+def check_wording(report: str, refs, store) -> Dict[str, List[Dict[str, Any]]]:
+    cfg = _cfg()["wording"]
+    skip = _phrase_pattern(cfg["skip_words"])
+    negation = _phrase_pattern(cfg["negations"])
+    names = {alias: _phrase_pattern(n) for alias, n in cfg["series_names"].items()}
+    hist = cfg["history"]
+    history_pat = {c: _phrase_pattern(hist[c]) for c in ("low", "high", "middle")}
+    trend = cfg["trend"]
+    trend_words = ({_norm_phrase(w): 1 for w in trend["up"]} | {_norm_phrase(w): -1 for w in trend["down"]}
+                   | {"tightening": 0})
+    trend_pat = _phrase_pattern(list(trend_words))
+    horizon_pat = _phrase_pattern(list(trend["horizons"]))
+    horizons = {_norm_phrase(k): v for k, v in trend["horizons"].items()}
+    groups = {s["alias"]: s.get("spread_group") for s in load_config("data_sources")["fred"]["series"]}
+    # history words need enough history: a report built on one year of data cannot be told it is
+    # wrong about "historically tight", and "five-year lows" needs five years
+    phrase_years = {_norm_phrase(k): v for k, v in hist["phrase_years"].items()}
+    rate = cfg["rate_trend"]
+    rate_words = {_norm_phrase(w): 1 for w in rate["up"]} | {_norm_phrase(w): -1 for w in rate["down"]}
+    rate_pat = _phrase_pattern(list(rate_words))
+    rate_exclude = _phrase_pattern(rate["exclude"])
+    rate_other = _phrase_pattern(rate["other_measures"])
+    trend_exclude = _phrase_pattern(trend["exclude"])
+    hypothetical = _hypothetical_spans(report, cfg["hypothetical_sections"])
+    aliases = {k.split(".")[0] for k, e in store.items() if e.series_id}
+    history_issues, trend_issues, rate_issues = [], [], []
+
+    for a, b in _sentences(report):
+        sentence = report[a:b]
+        if skip.search(sentence) or any(s <= a < e for s, e in hypothetical):
+            continue  # hedged, conditional, a scenario or a table cell: not a claim about the data
+        mentions = _series_mentions(report, a, b, refs, store, names)
+        if not mentions:
+            continue
+        cuts = sorted({a, b} | {x.start() for x in _CLAUSE_JOIN.finditer(report, a, b)})
+
+        def subject(m) -> Optional[str]:
+            """The series a word is about: a name right after it in its clause ("steepening curve"), else
+            the nearest before it in its clause, else before it in the sentence; None if unclear or not
+            fetched."""
+            ca = max(c for c in cuts if c <= m.start())
+            cb = min(c for c in cuts if c > m.start())
+            after = [x for x in mentions if m.end() <= x[0] < min(cb, m.end() + 15)]
+            before_clause = [x for x in mentions if ca <= x[0] < m.start()]
+            before = [x for x in mentions if a <= x[0] < m.start()]
+            pick = (after[:1] or before_clause[-1:] or before[-1:])
+            return pick[0][1] if pick and pick[0][1] in aliases else None
+
+        def negated(m) -> bool:
+            return bool(negation.search(report, max(a, m.start() - 25), m.start()))
+
+        for cls, pattern in history_pat.items():
+            for m in pattern.finditer(report, a, b):
+                alias = subject(m)
+                if negated(m) or not alias:
+                    continue
+                key = next((k for k in store if k.startswith(f"{alias}.pctile_")), None)
+                need = max([hist["min_years"]] + [y for p, y in phrase_years.items() if p in _norm_phrase(m.group(1))])
+                if not key or _window_years(key.split("pctile_", 1)[1]) < need - 0.05:
+                    continue
+                pct = store[key].value
+                lo, hi = hist["middle_range"]
+                wrong = ((cls == "low" and pct > hist["low_max_pctile"])
+                         or (cls == "high" and pct < hist["high_min_pctile"])
+                         or (cls == "middle" and not lo <= pct <= hi))
+                if wrong:
+                    history_issues.append({"phrase": m.group(1), "says": cls, "series": alias, "pctile": pct,
+                                           "fact": key, "context": sentence.strip()[:200]})
+
+        clause_cuts = sorted({a, b} | {x.start() for x in _CLAUSE_JOIN.finditer(report, a, b)})
+        named = [(x.start(), horizons.get(_norm_phrase(x.group(1)))) for x in horizon_pat.finditer(report, a, b)]
+        for m in trend_pat.finditer(report, a, b):
+            ca = max(c for c in clause_cuts if c <= m.start())
+            cb = min(c for c in clause_cuts if c > m.start())
+            near = [(abs(pos - m.start()), h) for pos, h in named if ca <= pos < cb and h]
+            horizon = min(near)[1] if near else None
+            word = _norm_phrase(m.group(1))
+            alias = subject(m)
+            if negated(m) or not alias or alias in trend["skip_series"]:
+                continue
+            if any(x.start() <= m.start() < x.end() for x in trend_exclude.finditer(report, a, b)):
+                continue
+            says = trend_words.get(word, 0)
+            if word == "tightening":
+                says = {"up": 1, "down": -1}.get(trend["tightening"].get(groups.get(alias) or "", ""), 0)
+            if not says:
+                continue
+            # a sentence that quotes a change of this series is covered by the direction check
+            if any(r.kind == "fact" and a <= r.start < b and r.fact_id.startswith(f"{alias}.")
+                   and r.fact.is_change for r in refs or []):
+                continue
+            suffixes = [horizon] if horizon else ["1m", "1q", "1w"]
+            key = next((f"{alias}.{kind}_{sfx}" for sfx in suffixes for kind in ("chg", "pct")
+                        if f"{alias}.{kind}_{sfx}" in store), None)
+            if not key or not store[key].value:
+                continue
+            if not horizon:
+                # no period named: only judge when the last month and the last three months agree
+                longer = next((store[k] for k in (f"{alias}.chg_3m", f"{alias}.pct_3m") if k in store), None)
+                if longer is not None and (longer.value > 0) != (store[key].value > 0):
+                    continue
+            if (store[key].value > 0) != (says > 0):
+                trend_issues.append({"word": word, "says": "up" if says > 0 else "down", "series": alias,
+                                     "fact": key, "change": store[key].display, "context": sentence.strip()[:200]})
+
+        excluded = [x.span() for x in rate_exclude.finditer(report, a, b)]
+        other_measure = bool(rate_other.search(report, a, b))
+        for m in rate_pat.finditer(report, a, b):
+            alias = subject(m)
+            if negated(m) or alias not in rate["series"] or other_measure:
+                continue
+            if any(s <= m.start() < e for s, e in excluded):
+                continue
+            word = _norm_phrase(m.group(1))
+            found = _rate_direction(store, alias, rate["min_gap"])
+            if found and found[0] != rate_words[word]:
+                rate_issues.append({"word": word, "says": "up" if rate_words[word] > 0 else "down", "series": alias,
+                                    "evidence": found[1], "facts": found[2], "context": sentence.strip()[:200]})
+    return {"history": history_issues, "trend": trend_issues, "rate": rate_issues}
+
+
+def _window_years(window: str) -> float:
+    """"5y" -> 5, "30m" -> 2.5 (fact_store.history_window labels)."""
+    m = re.fullmatch(r"(\d+)([ym])", window)
+    if not m:
+        return 0.0
+    return int(m.group(1)) / (1 if m.group(2) == "y" else 12)
+
+
+def _rate_direction(store, alias: str, gap: float) -> Optional[Tuple[int, str, List[str]]]:
+    """(+1 speeding up / -1 slowing down, evidence, fact ids) when both rate measures agree, else None."""
+    ids = {k: f"{alias}.{k}" for k in ("pct_1y", "pct_1y_prev", "ann_3m", "ann_growth_1q", "ann_growth_1q_prev")}
+    got = {k: store[i] for k, i in ids.items() if i in store}
+    if "pct_1y" not in got or "pct_1y_prev" not in got:
+        return None
+    yoy, prev = got["pct_1y"], got["pct_1y_prev"]
+    if "ann_3m" in got:
+        pace, against = got["ann_3m"], yoy
+        pace_text = f"the last 3 months ran at {pace.display} annualized"
+    elif "ann_growth_1q" in got and "ann_growth_1q_prev" in got:
+        pace, against = got["ann_growth_1q"], got["ann_growth_1q_prev"]
+        pace_text = f"the latest quarter grew {pace.display} annualized after {against.display}"
+    else:
+        return None
+    sign = lambda d: 1 if d > gap else -1 if d < -gap else 0  # noqa: E731
+    a, b = sign(yoy.value - prev.value), sign(pace.value - against.value)
+    if not a or a != b:
+        return None
+    evidence = f"its 12-month rate went from {prev.display} to {yoy.display} and {pace_text}"
+    return a, evidence, [prev.id, yoy.id, pace.id]
+
+
+def classify_lines(report: str, figures: List[Figure]) -> List[Dict[str, Any]]:
+    """Each bullet / paragraph: "data" if it states a figure from the data or a quoted source, else
+    "interpretation" (headings and very short lines are left out)."""
+    out = []
+    for a, b in _units(report):
+        text = report[a:b].strip()
+        if len(text.split()) < 4 or set(text) <= set("|-: "):
+            continue
+        backed = any(a <= f.start < b and (f.status in ("verified", "derived") or f.origin in ("fact", "quote"))
+                     for f in figures)
+        out.append({"start": a, "end": b, "kind": "data" if backed else "interpretation"})
+    return out
+
+
+# ---------------------------------------------------------------------------
 # Orchestration
 # ---------------------------------------------------------------------------
 
@@ -449,10 +861,15 @@ def validate_report(
     tags: List[str],
     data_status: Optional[List[Dict[str, Any]]] = None,
     today: Optional[date] = None,
+    refs: Optional[List[Any]] = None,
 ) -> Dict[str, Any]:
-    """Run all checks; the result is JSON-serializable and stored with the report."""
-    figures = check_numeric_grounding(report, question, tables, sources)
-    citations = check_citations(report, sources, figures)
+    """Run all checks; the result is JSON-serializable and stored with the report.
+
+    refs come from render.py when the report was written with fact placeholders;
+    then numbers typed directly by the model ("free" numbers) are open issues too.
+    """
+    figures = check_numeric_grounding(report, question, tables, sources, refs)
+    citations = check_citations(report, sources, figures, placeholders=refs is not None)
     counts = {k: sum(f.status == k for f in figures) for k in ("verified", "derived", "unverified")}
     result = {
         "counts": {"figures": len(figures), **counts},
@@ -462,35 +879,107 @@ def validate_report(
         "no_data": check_no_data(report, tags, tables, figures),
         "data_status": [s for s in (data_status or []) if not s.get("ok")],
         "valid_source_ids": [s["id"] for s in sources],
+        "directions": check_directions(report, figures, placeholders=refs is not None),
+        "comparisons": check_comparisons(report, refs),
+        "wording": check_wording(report, refs, build_fact_store(tables)),
+        "lines": classify_lines(report, figures),
+        "placeholders": refs is not None,
+        "unknown_facts": [r.fact_id for r in (refs or []) if r.kind == "unknown"],
     }
     result["open_issues"] = open_issues(result)
     result["summary"] = summary_line(result)
     return result
 
 
-def _needs_attention(f: Dict[str, Any]) -> bool:
-    """Unverified, not labelled as an assumption, and not backed by a snippet the paragraph cites."""
-    if f["status"] != "unverified" or f["assumption"]:
+def _needs_attention(f: Dict[str, Any], placeholders: bool = False) -> bool:
+    """A figure the writer should fix.
+
+    Free text: unverified, not labelled as an assumption, and not backed by a
+    snippet the paragraph cites. Placeholder mode: also any number typed
+    directly instead of being written as {{ID}} (dates excepted).
+    """
+    if f["assumption"]:
+        return bool(mislabelled_assumption(f))
+    if f.get("origin") == "fact":
+        return False
+    if f.get("origin") == "quote":
+        return not f["snippet_ids"]  # a quote must be found in the source it names
+    if placeholders and f["unit"] != "date":
+        return True
+    if f["status"] != "unverified":
         return False
     return not set(f["snippet_ids"]) & set(f["cited"])
+
+
+def mislabelled_assumption(f: Dict[str, Any]) -> Optional[str]:
+    """The cited source whose text contains a number labelled as the writer's assumption, if any.
+
+    "New York Fed: 25.2% (assumption) [S4]" with 25.2% in S4's text is S4's figure, and labelling it
+    an assumption would let a revision clear a typed number without grounding it.
+    """
+    if not f.get("assumption"):
+        return None
+    return next((sid for sid in f.get("written_in", ()) if sid in f.get("cited", ())), None)
 
 
 def open_issues(v: Dict[str, Any]) -> int:
     """Problems a writer can fix: used to decide whether a revision is better than the draft."""
     cit = v["citations"]
-    return (sum(_needs_attention(f) for f in v["figures"])
+    ph = v.get("placeholders", False)
+    return (sum(_needs_attention(f, ph) for f in v["figures"])
             + len(cit["uncited_paragraphs"]) + len(cit["source_mismatches"]) + len(cit["dangling"])
-            + sum(not t["disclosed"] for t in v["no_data"]["topics_without_data"]))
+            + sum(not t["disclosed"] for t in v["no_data"]["topics_without_data"])
+            + len(v.get("directions", [])) + len(v.get("unknown_facts", [])) + len(v.get("comparisons", []))
+            + sum(len(x) for x in (v.get("wording") or {}).values()))
 
 
 def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
     """The validator's findings as concrete instructions for a revision pass ("" if nothing to fix)."""
     items: List[str] = []
+    ph = v.get("placeholders", False)
+    for fid in v.get("unknown_facts", []):
+        items.append(f"{{{{{fid}}}}} is not in the FACT TABLE; use an ID from the table or rewrite without it.")
+    wording = v.get("wording") or {}
+    for w in wording.get("history", []):
+        items.append(f'"{w["context"][:160]}" says "{w["phrase"]}", but {w["series"]} sits at the '
+                     f'{w["pctile"]}th percentile of its history ({{{{{w["fact"]}}}}}); fix the wording.')
+    for w in wording.get("trend", []):
+        items.append(f'"{w["context"][:160]}" says "{w["word"]}", but {w["series"]} moved {w["change"]} '
+                     f'({{{{{w["fact"]}}}}}); fix the wording or name the period you mean.')
+    for w in wording.get("rate", []):
+        ids = ", ".join(f"{{{{{i}}}}}" for i in w["facts"])
+        items.append(f'"{w["context"][:160]}" says "{w["word"]}", but {w["series"]} is '
+                     f'{"speeding up" if w["says"] == "down" else "slowing down"}: {w["evidence"]} ({ids}); '
+                     "fix the wording.")
+    for c in v.get("comparisons", []):
+        items.append(f'"{c["context"][:160]}" compares with "{c["word"]}", but {c["detail"]}; '
+                     "fix or drop the comparison.")
+    for d in v.get("directions", []):
+        items.append(f'"{d["context"][:160]}" says "{d["word"]}" ({d["says"]}), but {d["fact"]} went {d["data"]}; '
+                     "fix the wording.")
     for f in v["figures"]:
-        if not _needs_attention(f):
+        if not _needs_attention(f, ph):
             continue
         where = f'"{f["text"]}" in: "{f["context"][:160]}"'
-        if f["snippet_ids"]:
+        sid = mislabelled_assumption(f)
+        if sid:
+            fix = f"quote it as {{{{{sid}: {f['text']}}}}}" if ph else f"drop the \"(assumption)\" label and keep [{sid}]"
+            items.append(f"{where} — labelled as an assumption, but it is in the text of [{sid}], which this "
+                         f"line cites; {fix}.")
+        elif f.get("origin") == "quote":
+            items.append(f"{where} — quoted from a source whose text does not contain it; fix the number or "
+                         "the source, or drop it.")
+        elif ph and f.get("written_in"):
+            sid = f["written_in"][0]
+            items.append(f"{where} — typed directly; [{sid}] writes the same number, so if it comes from there "
+                         f"quote it as {{{{{sid}: {f['text']}}}}}; if it is a target, threshold or your own estimate, "
+                         "write {{assume: …}}.")
+        elif ph:
+            # a value match is not named: "2% target" matches some old policy-rate reading by coincidence
+            items.append(f"{where} — typed directly; if it is a value from the data, write its {{{{ID}}}} from the "
+                         "FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; "
+                         "otherwise remove it.")
+        elif f["snippet_ids"]:
             items.append(f"{where} — this number appears in source [{f['snippet_ids'][0]}]; cite it in that sentence.")
         elif f["unit"] == "date":
             items.append(f"{where} — this date is not in the fetched data; use a date from KEY DATA or remove it.")
@@ -522,14 +1011,32 @@ def summary_line(v: Dict[str, Any]) -> str:
     if c["figures"]:
         in_snippets = sum(f["status"] == "unverified" and bool(f["in_source_text"]) for f in v["figures"])
         assumed = sum(f["status"] == "unverified" and f["assumption"] for f in v["figures"])
+        mislabelled = sum(bool(mislabelled_assumption(f)) for f in v["figures"])
         notes = [f"{in_snippets} of them appear in a fetched web/news snippet" if in_snippets else "",
-                 f"{assumed} labelled as assumptions" if assumed else ""]
+                 f"{assumed} labelled as assumptions" if assumed else "",
+                 f"{mislabelled} of those labels on a number from a source the line cites" if mislabelled else ""]
         notes = [n for n in notes if n]
         note = f" ({'; '.join(notes)})" if notes else ""
         parts = [f"{c['verified'] + c['derived']} of {c['figures']} figures verified against source data "
                  f"({c['verified']} exact, {c['derived']} derived); {c['unverified']} flagged{note}."]
     else:
         parts = ["No figures to verify."]
+    if v.get("placeholders"):
+        typed = sum(f.get("origin") == "free" and f["unit"] != "date" for f in v["figures"])
+        from_facts = sum(f.get("origin") == "fact" for f in v["figures"])
+        quoted = sum(f.get("origin") == "quote" for f in v["figures"])
+        parts.append(f"{from_facts} figure(s) inserted from the fact table, {quoted} quoted from web sources, "
+                     f"{typed} typed directly.")
+    if v.get("directions"):
+        parts.append(f"{len(v['directions'])} change figure(s) described in the wrong direction.")
+    if v.get("comparisons"):
+        parts.append(f"{len(v['comparisons'])} comparison(s) between facts that do not hold.")
+    wording = v.get("wording") or {}
+    n_wording = sum(len(x) for x in wording.values())
+    if n_wording:
+        parts.append(f"{n_wording} statement(s) about history or trend that the data contradicts.")
+    if v.get("unknown_facts"):
+        parts.append(f"{len(v['unknown_facts'])} unknown fact reference(s).")
     cit = v["citations"]
     if cit["dangling"]:
         parts.append(f"{len(cit['dangling'])} citation(s) point to no source ({', '.join(cit['dangling'])}).")

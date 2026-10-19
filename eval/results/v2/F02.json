@@ -1,0 +1,1182 @@
+{
+  "id": "F02",
+  "set": "fresh",
+  "category": "macro",
+  "question": "Does the Sahm rule indicator point to a recession right now?",
+  "ticker": null,
+  "expected_tags": [
+    "macro"
+  ],
+  "pipeline": "v2",
+  "run_utc": "2026-10-18T21:57:27+00:00",
+  "elapsed_sec": 163.3,
+  "router_tags": [
+    "macro"
+  ],
+  "tags": [
+    "macro"
+  ],
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "macro": "recession_probabilities"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Real‑time Sahm Rule indicator is 0.00 pp (2026‑09‑01) – below the 0.50 pp threshold for a recession [S7].  \n- GDP rose from 24,274.4 to 24,408.0, a 0.55 % increase in Q1 2026 [S2].  \n- Unemployment at 4.3 % (3‑month average 4.30) is only 0.13 pp above its 12‑month low, far from the 0.50 pp rise needed to trigger the rule [S3], [S7].  \n- No recession signal currently; economy remains in modest expansion.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Sahm Rule: 0.00 pp vs 0.50 pp threshold – no recession signal [S7].  \n- GDP: 24,274.4 → 24,408.0, +0.55 % growth [S2].  \n- Unemployment: 4.3 % (3‑month average 4.30) – 0.13 pp above 12‑month low [S3], [S7].\n\n*Sector*  \n- Not applicable – the Sahm Rule is a macro‑level indicator.\n\n*Credit*  \n- No recent credit‑market data were retrieved; therefore no sector‑specific credit assessment can be made.\n\n*Portfolio*  \n- Current exposure aligns with a non‑recession environment; no immediate rebalancing required.\n\n---\n\n**Scenarios**\n\n| Scenario | Key Driver | Expected Impact | Assumptions |\n|----------|------------|-----------------|-------------|\n| **Base** | Unemployment remains <0.5 pp above 12‑month low | No recession signal; GDP growth continues modestly | Current data unchanged |\n| **Upside** | Unemployment rises >0.5 pp above 12‑month low (e.g., 4.8 %) | Sahm Rule triggers recession signal; potential GDP slowdown | Unemployment spike (assumption) |\n| **Downside** | Unemployment rises >0.5 pp and GDP growth turns negative | Recession confirmed; credit spreads widen, equity valuations compress | Recession onset (assumption) |\n\n*All scenarios reference the 0.50 pp threshold from the Sahm Rule [S7].*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Data Revision Risk** – Unemployment figures may be revised; monitor FRED updates [S7].  \n- **Lag Risk** – Sahm Rule signals a month after the unemployment rise; early warning may be delayed.  \n- **Complementary Indicators** – ISM manufacturing, PMI, and NBER recession calendar should be tracked for corroboration.  \n- **Credit Market Sensitivity** – In the event of a sudden unemployment spike, IG/HY spreads could widen rapidly.  \n- **Risk Management** – Continue monitoring the Sahm Rule and unemployment releases; adjust hedging strategies if the indicator crosses 0.50 pp [S7].\n\n---\n\n**Portfolio / Decision Implications**\n\n- **Equities** – Maintain current allocation; increase liquidity buffer if unemployment data show a sharp rise.  \n- **Fixed Income** – Short‑to‑mid‑term bonds remain attractive; avoid premature duration compression until a recession signal materializes.  \n- **Credit** – IG and HY portfolios can stay on current risk‑return profile; implement stress‑tests for a sudden unemployment uptick.  \n- **Risk Management** – Continue monitoring the Sahm Rule and unemployment releases; adjust hedging strategies if the indicator crosses 0.50 pp [S7].\n\n---\n\n**Conclusion**  \nThe real‑time Sahm Rule indicator is currently at 0.00 pp, well below the 0.50 pp threshold required to signal a recession [S7]. Coupled with positive Q1 2026 GDP growth [S2] and unemployment near its 12‑month low [S3], the macro environment does not indicate an imminent recession. Investors should remain vigilant for any sharp uptick in unemployment that could trigger the rule and adjust credit exposures accordingly.\n\n*See Table 1 for Sahm Rule values and Table 2 for GDP figures.*",
+  "report_template": null,
+  "draft_report_text": "**Executive Summary**  \n- Real‑time Sahm Rule indicator is 0.00 pp (2026‑09‑01) – well below the 0.50 pp trigger for a recession [S7].  \n- Q1 2026 GDP grew 0.55 % YoY (24 408 bn vs 24 274.4 bn) – positive growth trend [S2].  \n- Current unemployment rate (4.3 %) is only 0.13 pp above its 12‑month low, far from the 0.5 pp rise needed to signal a recession [S3].  \n- No immediate recession signal; economy remains in a modest expansionary phase.  \n\n---\n\n**Core Analysis**  \n\n*Macro*  \n- Sahm Rule: 0.00 pp vs 0.50 pp threshold → no recession signal [S7].  \n- GDP: +0.55 % YoY in Q1 2026, indicating continued growth [S2].  \n- Unemployment: 4.3 % (3‑month average 4.30) – 0.13 pp above 12‑month low [S3].  \n\n*Sector*  \n- Not applicable – the Sahm Rule is a macro‑level indicator.  \n\n*Credit*  \n- No recent credit‑market data were retrieved; therefore no sector‑specific credit assessment can be made.  \n\n*Portfolio*  \n- Current exposure aligns with a non‑recession environment; no immediate rebalancing required.  \n\n---\n\n**Scenarios**  \n\n| Scenario | Key Driver | Expected Impact | Assumptions |\n|----------|------------|-----------------|-------------|\n| **Base** | Unemployment remains <0.5 pp above 12‑month low | No recession signal; GDP growth continues modestly | Current data unchanged |\n| **Upside** | Unemployment rises >0.5 pp above 12‑month low (e.g., 4.8 %) | Sahm Rule triggers recession signal; potential GDP slowdown | Unemployment spike (assumption) |\n| **Downside** | Unemployment rises >0.5 pp and GDP growth turns negative | Recession confirmed; credit spreads widen, equity valuations compress | Recession onset (assumption) |\n\n---\n\n**Key Risks & Monitoring**  \n\n- **Data Revision Risk** – Unemployment figures may be revised; monitor FRED updates [S7].  \n- **Lag Risk** – Sahm Rule signals a month after the unemployment rise; early warning may be delayed.  \n- **Complementary Indicators** – ISM manufacturing, PMI, and NBER recession calendar should be tracked for corroboration.  \n- **Credit Market Sensitivity** – In the event of a sudden unemployment spike, IG/HY spreads could widen rapidly.  \n\n---\n\n**Portfolio / Decision Implications**  \n\n- **Equities** – Maintain current allocation; increase liquidity buffer if unemployment data show a sharp rise.  \n- **Fixed Income** – Short‑to‑mid‑term bonds remain attractive; avoid premature duration compression until a recession signal materializes.  \n- **Credit** – IG and HY portfolios can stay on current risk‑return profile; implement stress‑tests for a sudden unemployment uptick.  \n- **Risk Management** – Continue monitoring the Sahm Rule and unemployment releases; adjust hedging strategies if the indicator crosses 0.50 pp.  \n\n---\n\n**Conclusion**  \nThe real‑time Sahm Rule indicator is currently at 0.00 pp, far below the 0.50 pp threshold required to signal a recession [S7]. Coupled with positive Q1 2026 GDP growth [S2] and unemployment near its 12‑month low [S3], the macro environment does not indicate an imminent recession. Investors should remain vigilant for any sharp uptick in unemployment that could trigger the rule and adjust credit exposures accordingly.  \n\n*See Table 1 for detailed Sahm Rule values and Table 2 for GDP figures.*",
+  "draft_report_template": null,
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"24\" in: \"- Q1 2026 GDP grew 0.55 % YoY (24 408 bn vs 24 274.4 bn) – positive growth trend [S2].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n2. \"408 bn\" in: \"- Q1 2026 GDP grew 0.55 % YoY (24 408 bn vs 24 274.4 bn) – positive growth trend [S2].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n3. \"24\" in: \"- Q1 2026 GDP grew 0.55 % YoY (24 408 bn vs 24 274.4 bn) – positive growth trend [S2].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n4. \"274.4 bn\" in: \"- Q1 2026 GDP grew 0.55 % YoY (24 408 bn vs 24 274.4 bn) – positive growth trend [S2].\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n5. Add a citation to: \"| Scenario | Key Driver | Expected Impact | Assumptions |\n|----------|------------|-----------------|-------------|\n| **Base** | Unemployment remains <0.5 pp ab\" — its figures 0.5 pp, 0.5 pp, 0.5 pp come from [S7].\n6. Add a citation to: \"- **Risk Management** – Continue monitoring the Sahm Rule and unemployment releases; adjust hedging strategies if the indicator crosses 0.50 pp.\" — its figures 0.50 pp come from [S7].\n7. \"- Current unemployment rate (4.3 %) is only 0.13 pp above its 12‑month low, far from the 0.5 pp rise needed to signal a recession [S3].\" cites S3, but figures 0.13 pp, 0.5 pp come from [S7].\n8. \"- Unemployment: 4.3 % (3‑month average 4.30) – 0.13 pp above 12‑month low [S3].\" cites S3, but figures 0.13 pp come from [S7].",
+        "open_issues_before": 8,
+        "summary_before": "16 of 24 figures verified against source data (14 exact, 2 derived); 8 flagged (3 of them appear in a fetched web/news snippet; 1 labelled as assumptions). 2 paragraph(s) state figures without a citation. 2 paragraph(s) cite a different source than the data.",
+        "accepted": true,
+        "open_issues_after": 1,
+        "summary_after": "22 of 27 figures verified against source data (20 exact, 2 derived); 5 flagged (4 of them appear in a fetched web/news snippet; 1 labelled as assumptions). 1 paragraph(s) state figures without a citation.",
+        "revised_report_text": "**Executive Summary**  \n- Real‑time Sahm Rule indicator is 0.00 pp (2026‑09‑01) – below the 0.50 pp threshold for a recession [S7].  \n- GDP rose from 24,274.4 to 24,408.0, a 0.55 % increase in Q1 2026 [S2].  \n- Unemployment at 4.3 % (3‑month average 4.30) is only 0.13 pp above its 12‑month low, far from the 0.50 pp rise needed to trigger the rule [S3], [S7].  \n- No recession signal currently; economy remains in modest expansion.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Sahm Rule: 0.00 pp vs 0.50 pp threshold – no recession signal [S7].  \n- GDP: 24,274.4 → 24,408.0, +0.55 % growth [S2].  \n- Unemployment: 4.3 % (3‑month average 4.30) – 0.13 pp above 12‑month low [S3], [S7].\n\n*Sector*  \n- Not applicable – the Sahm Rule is a macro‑level indicator.\n\n*Credit*  \n- No recent credit‑market data were retrieved; therefore no sector‑specific credit assessment can be made.\n\n*Portfolio*  \n- Current exposure aligns with a non‑recession environment; no immediate rebalancing required.\n\n---\n\n**Scenarios**\n\n| Scenario | Key Driver | Expected Impact | Assumptions |\n|----------|------------|-----------------|-------------|\n| **Base** | Unemployment remains <0.5 pp above 12‑month low | No recession signal; GDP growth continues modestly | Current data unchanged |\n| **Upside** | Unemployment rises >0.5 pp above 12‑month low (e.g., 4.8 %) | Sahm Rule triggers recession signal; potential GDP slowdown | Unemployment spike (assumption) |\n| **Downside** | Unemployment rises >0.5 pp and GDP growth turns negative | Recession confirmed; credit spreads widen, equity valuations compress | Recession onset (assumption) |\n\n*All scenarios reference the 0.50 pp threshold from the Sahm Rule [S7].*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Data Revision Risk** – Unemployment figures may be revised; monitor FRED updates [S7].  \n- **Lag Risk** – Sahm Rule signals a month after the unemployment rise; early warning may be delayed.  \n- **Complementary Indicators** – ISM manufacturing, PMI, and NBER recession calendar should be tracked for corroboration.  \n- **Credit Market Sensitivity** – In the event of a sudden unemployment spike, IG/HY spreads could widen rapidly.  \n- **Risk Management** – Continue monitoring the Sahm Rule and unemployment releases; adjust hedging strategies if the indicator crosses 0.50 pp [S7].\n\n---\n\n**Portfolio / Decision Implications**\n\n- **Equities** – Maintain current allocation; increase liquidity buffer if unemployment data show a sharp rise.  \n- **Fixed Income** – Short‑to‑mid‑term bonds remain attractive; avoid premature duration compression until a recession signal materializes.  \n- **Credit** – IG and HY portfolios can stay on current risk‑return profile; implement stress‑tests for a sudden unemployment uptick.  \n- **Risk Management** – Continue monitoring the Sahm Rule and unemployment releases; adjust hedging strategies if the indicator crosses 0.50 pp [S7].\n\n---\n\n**Conclusion**  \nThe real‑time Sahm Rule indicator is currently at 0.00 pp, well below the 0.50 pp threshold required to signal a recession [S7]. Coupled with positive Q1 2026 GDP growth [S2] and unemployment near its 12‑month low [S3], the macro environment does not indicate an imminent recession. Investors should remain vigilant for any sharp uptick in unemployment that could trigger the rule and adjust credit exposures accordingly.\n\n*See Table 1 for Sahm Rule values and Table 2 for GDP figures.*"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FRED series SAHMREALTIME: Real-time Sahm Rule Recession Indicator",
+      "url": "https://fred.stlouisfed.org/series/SAHMREALTIME",
+      "source": "FRED",
+      "snippet": "Monthly series in Percentage Points; latest observation 0 on 2026-09-01.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series GDPC1: Real Gross Domestic Product",
+      "url": "https://fred.stlouisfed.org/series/GDPC1",
+      "source": "FRED",
+      "snippet": "Quarterly series in Billions of Chained 2017 Dollars; latest observation 24408 on 2026-04-01.",
+      "id": "S2"
+    },
+    {
+      "title": "Sahm Rule Recession Indicator | Current Market Valuation",
+      "url": "https://www.currentmarketvaluation.com/models/sahm-rule.php",
+      "source": "web (Tavily)",
+      "snippet": "Most recently, (as of May 31, 2026) US unemployment is at 4.3%, with a three-month average of 4.30. This is 0.13% above its low for the previous 12 months. Therefore, the Sahm Rule indicates a Normal risk that we are currently in a recession.  The chart below shows the Sahm Rule indicator over time, as well as each sub",
+      "id": "S3"
+    },
+    {
+      "title": "Sahm rule - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sahm_rule",
+      "source": "web (Tavily)",
+      "snippet": "In macroeconomics, the Sahm rule, or Sahm rule recession indicator, is a heuristic measure by the United States' Federal Reserve for determining when an economy has entered a recession. It is useful in real-time evaluation of the business cycle and relies on monthly unemployment data from the Bureau of Labor Statistics",
+      "id": "S4"
+    },
+    {
+      "title": "Sahm Rule Recession Indicator",
+      "url": "https://www.youtube.com/watch?v=uYuzoaP9B5I",
+      "source": "web (Tavily)",
+      "snippet": "The Sahm Rule is a recession indicator that was developed by economist Claudia Sahm. It is based on the idea that changes in the unemployment rate can be used to identify the onset of a recession. The rule states that if the three-month moving average of the unemployment rate increases by 0.5 percentage points or more ",
+      "id": "S5"
+    },
+    {
+      "title": "Works like a Sahm: Recession indicators and the Sahm rule",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0165176524003628",
+      "source": "web (Tavily)",
+      "snippet": "Even if unintentional, the Sahm rule is now being used as a recession predictor, thus how well it performs in such a role has become an important question. In this paper we ask if the Sahm rule indeed predicts or indicates recessions as implied by Economic commentators (Krugman, 2023, Summers, 2022). We begin with a si",
+      "id": "S6"
+    },
+    {
+      "title": "Real-time Sahm Rule Recession Indicator (SAHMREALTIME) | FRED | St. Louis Fed",
+      "url": "https://fred.stlouisfed.org/series/SAHMREALTIME",
+      "source": "web (Tavily)",
+      "snippet": "Sahm Recession Indicator signals the start of a recession when the three-month moving average of the national unemployment rate (U3) rises by 0.50 percentage points or more relative to the minimum of the three-month averages from the previous 12 months. [...] Sahm Recession Indicator signals the start of a recession wh",
+      "id": "S7"
+    },
+    {
+      "title": "Sahm-thing more on the Sahm rule - by Claudia Sahm",
+      "url": "https://stayathomemacro.substack.com/p/sahm-thing-more-on-the-sahm-rule",
+      "source": "web (Tavily)",
+      "snippet": "The Sahm rule is a recession indicator, not a recession forecast. Applied to historical data, as it was available in real-time, it has been triggered early in every recession since 1970. It had only two false positives since 1959—when the rule hit 0.50 or more, but the economy was not a recession. [...] That would almo",
+      "id": "S8"
+    }
+  ],
+  "citations_used": [
+    "S2",
+    "S3",
+    "S7"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "SAHMREALTIME",
+      "frequency": "monthly",
+      "units": "Percentage Points",
+      "last_date": "2026-09-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/SAHMREALTIME",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2024-04-01",
+          0.37
+        ],
+        [
+          "2024-05-01",
+          0.37
+        ],
+        [
+          "2024-06-01",
+          0.43
+        ],
+        [
+          "2024-07-01",
+          0.53
+        ],
+        [
+          "2024-08-01",
+          0.57
+        ],
+        [
+          "2024-09-01",
+          0.5
+        ],
+        [
+          "2024-10-01",
+          0.43
+        ],
+        [
+          "2024-11-01",
+          0.43
+        ],
+        [
+          "2024-12-01",
+          0.4
+        ],
+        [
+          "2025-01-01",
+          0.37
+        ],
+        [
+          "2025-02-01",
+          0.27
+        ],
+        [
+          "2025-03-01",
+          0.27
+        ],
+        [
+          "2025-04-01",
+          0.27
+        ],
+        [
+          "2025-05-01",
+          0.27
+        ],
+        [
+          "2025-06-01",
+          0.17
+        ],
+        [
+          "2025-07-01",
+          0.1
+        ],
+        [
+          "2025-08-01",
+          0.13
+        ],
+        [
+          "2025-09-01",
+          0.23
+        ],
+        [
+          "2025-11-01",
+          0.43
+        ],
+        [
+          "2025-12-01",
+          0.35
+        ],
+        [
+          "2026-01-01",
+          0.3
+        ],
+        [
+          "2026-02-01",
+          0.27
+        ],
+        [
+          "2026-03-01",
+          0.2
+        ],
+        [
+          "2026-04-01",
+          0.13
+        ],
+        [
+          "2026-05-01",
+          0.1
+        ],
+        [
+          "2026-06-01",
+          0.07
+        ],
+        [
+          "2026-07-01",
+          -0.03
+        ],
+        [
+          "2026-08-01",
+          -0.07
+        ],
+        [
+          "2026-09-01",
+          0.0
+        ]
+      ]
+    },
+    {
+      "title": "FRED: Real Gross Domestic Product (GDPC1)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "GDPC1",
+      "frequency": "quarterly",
+      "units": "Billions of Chained 2017 Dollars",
+      "last_date": "2026-04-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/GDPC1",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2020-07-01",
+          20558.879
+        ],
+        [
+          "2020-10-01",
+          20791.917
+        ],
+        [
+          "2021-01-01",
+          21106.619
+        ],
+        [
+          "2021-04-01",
+          21474.077
+        ],
+        [
+          "2021-07-01",
+          21641.672
+        ],
+        [
+          "2021-10-01",
+          22001.64
+        ],
+        [
+          "2022-01-01",
+          21945.682
+        ],
+        [
+          "2022-04-01",
+          21976.292
+        ],
+        [
+          "2022-07-01",
+          22124.384
+        ],
+        [
+          "2022-10-01",
+          22272.546
+        ],
+        [
+          "2023-01-01",
+          22456.938
+        ],
+        [
+          "2023-04-01",
+          22577.556
+        ],
+        [
+          "2023-07-01",
+          22828.796
+        ],
+        [
+          "2023-10-01",
+          23033.25
+        ],
+        [
+          "2024-01-01",
+          23115.975
+        ],
+        [
+          "2024-04-01",
+          23320.074
+        ],
+        [
+          "2024-07-01",
+          23501.76
+        ],
+        [
+          "2024-10-01",
+          23641.759
+        ],
+        [
+          "2025-01-01",
+          23650.213
+        ],
+        [
+          "2025-04-01",
+          23884.563
+        ],
+        [
+          "2025-07-01",
+          24112.966
+        ],
+        [
+          "2025-10-01",
+          24125.479
+        ],
+        [
+          "2026-01-01",
+          24274.383
+        ],
+        [
+          "2026-04-01",
+          24408.011
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+      "type": "line",
+      "x": [
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        0.37,
+        0.37,
+        0.43,
+        0.53,
+        0.57,
+        0.5,
+        0.43,
+        0.43,
+        0.4,
+        0.37,
+        0.27,
+        0.27,
+        0.27,
+        0.27,
+        0.17,
+        0.1,
+        0.13,
+        0.23,
+        0.43,
+        0.35,
+        0.3,
+        0.27,
+        0.2,
+        0.13,
+        0.1,
+        0.07,
+        -0.03,
+        -0.07,
+        0.0
+      ],
+      "y_label": "Percentage Points"
+    },
+    {
+      "title": "Real Gross Domestic Product (GDPC1)",
+      "type": "line",
+      "x": [
+        "2020-07-01",
+        "2020-10-01",
+        "2021-01-01",
+        "2021-04-01",
+        "2021-07-01",
+        "2021-10-01",
+        "2022-01-01",
+        "2022-04-01",
+        "2022-07-01",
+        "2022-10-01",
+        "2023-01-01",
+        "2023-04-01",
+        "2023-07-01",
+        "2023-10-01",
+        "2024-01-01",
+        "2024-04-01",
+        "2024-07-01",
+        "2024-10-01",
+        "2025-01-01",
+        "2025-04-01",
+        "2025-07-01",
+        "2025-10-01",
+        "2026-01-01",
+        "2026-04-01"
+      ],
+      "y": [
+        20558.879,
+        20791.917,
+        21106.619,
+        21474.077,
+        21641.672,
+        22001.64,
+        21945.682,
+        21976.292,
+        22124.384,
+        22272.546,
+        22456.938,
+        22577.556,
+        22828.796,
+        23033.25,
+        23115.975,
+        23320.074,
+        23501.76,
+        23641.759,
+        23650.213,
+        23884.563,
+        24112.966,
+        24125.479,
+        24274.383,
+        24408.011
+      ],
+      "y_label": "Billions of Chained 2017 Dollars"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "SAHMREALTIME",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "GDPC1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": null,
+  "validation": {
+    "counts": {
+      "figures": 27,
+      "verified": 20,
+      "derived": 2,
+      "unverified": 5
+    },
+    "figures": [
+      {
+        "text": "0.00 pp",
+        "value": 0.0,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 59,
+        "end": 66,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2026-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S7"
+        ],
+        "context": "- Real‑time Sahm Rule indicator is 0.00 pp (2026‑09‑01) – below the 0.50 pp threshold for a recession [S7]."
+      },
+      {
+        "text": "2026‑09‑01",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 68,
+        "end": 78,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S7"
+        ],
+        "context": "- Real‑time Sahm Rule indicator is 0.00 pp (2026‑09‑01) – below the 0.50 pp threshold for a recession [S7]."
+      },
+      {
+        "text": "0.50 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 92,
+        "end": 99,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S7"
+        ],
+        "context": "- Real‑time Sahm Rule indicator is 0.00 pp (2026‑09‑01) – below the 0.50 pp threshold for a recession [S7]."
+      },
+      {
+        "text": "24,274.4",
+        "value": 24274.4,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 150,
+        "end": 158,
+        "status": "verified",
+        "matched": "GDPC1 on 2026-01-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- GDP rose from 24,274.4 to 24,408.0, a 0.55 % increase in Q1 2026 [S2]."
+      },
+      {
+        "text": "24,408.0",
+        "value": 24408.0,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 162,
+        "end": 170,
+        "status": "verified",
+        "matched": "GDPC1 on 2026-04-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- GDP rose from 24,274.4 to 24,408.0, a 0.55 % increase in Q1 2026 [S2]."
+      },
+      {
+        "text": "0.55 %",
+        "value": 0.55,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 174,
+        "end": 180,
+        "status": "derived",
+        "matched": "GDPC1 % change 2026-01-01 to 2026-04-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- GDP rose from 24,274.4 to 24,408.0, a 0.55 % increase in Q1 2026 [S2]."
+      },
+      {
+        "text": "4.3 %",
+        "value": 4.3,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 227,
+        "end": 232,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S7"
+        ],
+        "context": "- Unemployment at 4.3 % (3‑month average 4.30) is only 0.13 pp above its 12‑month low, far from the 0.50 pp rise needed to trigger the rule [S3], [S7]."
+      },
+      {
+        "text": "4.30",
+        "value": 4.3,
+        "unit": "",
+        "tolerance": 0.0050000010000000004,
+        "start": 250,
+        "end": 254,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S7"
+        ],
+        "context": "- Unemployment at 4.3 % (3‑month average 4.30) is only 0.13 pp above its 12‑month low, far from the 0.50 pp rise needed to trigger the rule [S3], [S7]."
+      },
+      {
+        "text": "0.13 pp",
+        "value": 0.13,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 264,
+        "end": 271,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2026-04-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S7"
+        ],
+        "context": "- Unemployment at 4.3 % (3‑month average 4.30) is only 0.13 pp above its 12‑month low, far from the 0.50 pp rise needed to trigger the rule [S3], [S7]."
+      },
+      {
+        "text": "0.50 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 309,
+        "end": 316,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S7"
+        ],
+        "context": "- Unemployment at 4.3 % (3‑month average 4.30) is only 0.13 pp above its 12‑month low, far from the 0.50 pp rise needed to trigger the rule [S3], [S7]."
+      },
+      {
+        "text": "0.00 pp",
+        "value": 0.0,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 481,
+        "end": 488,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2026-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S7"
+        ],
+        "context": "- Sahm Rule: 0.00 pp vs 0.50 pp threshold – no recession signal [S7]."
+      },
+      {
+        "text": "0.50 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 492,
+        "end": 499,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S7"
+        ],
+        "context": "- Sahm Rule: 0.00 pp vs 0.50 pp threshold – no recession signal [S7]."
+      },
+      {
+        "text": "24,274.4",
+        "value": 24274.4,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 547,
+        "end": 555,
+        "status": "verified",
+        "matched": "GDPC1 on 2026-01-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- GDP: 24,274.4 → 24,408.0, +0.55 % growth [S2]."
+      },
+      {
+        "text": "24,408.0",
+        "value": 24408.0,
+        "unit": "",
+        "tolerance": 0.050000001,
+        "start": 558,
+        "end": 566,
+        "status": "verified",
+        "matched": "GDPC1 on 2026-04-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- GDP: 24,274.4 → 24,408.0, +0.55 % growth [S2]."
+      },
+      {
+        "text": "+0.55 %",
+        "value": 0.55,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 568,
+        "end": 575,
+        "status": "derived",
+        "matched": "GDPC1 % change 2026-01-01 to 2026-04-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- GDP: 24,274.4 → 24,408.0, +0.55 % growth [S2]."
+      },
+      {
+        "text": "4.3 %",
+        "value": 4.3,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 607,
+        "end": 612,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S7"
+        ],
+        "context": "- Unemployment: 4.3 % (3‑month average 4.30) – 0.13 pp above 12‑month low [S3], [S7]."
+      },
+      {
+        "text": "4.30",
+        "value": 4.3,
+        "unit": "",
+        "tolerance": 0.0050000010000000004,
+        "start": 630,
+        "end": 634,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S7"
+        ],
+        "context": "- Unemployment: 4.3 % (3‑month average 4.30) – 0.13 pp above 12‑month low [S3], [S7]."
+      },
+      {
+        "text": "0.13 pp",
+        "value": 0.13,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 638,
+        "end": 645,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2026-04-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S3",
+          "S7"
+        ],
+        "context": "- Unemployment: 4.3 % (3‑month average 4.30) – 0.13 pp above 12‑month low [S3], [S7]."
+      },
+      {
+        "text": "0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1151,
+        "end": 1157,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | Unemployment remains <0.5 pp above 12‑month low | No recession signal; GDP growth continues modestly | Current data unchanged |"
+      },
+      {
+        "text": "0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1292,
+        "end": 1298,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | Unemployment rises >0.5 pp above 12‑month low (e.g., 4.8 %) | Sahm Rule triggers recession signal; potential GDP slowdown | Unemployment spike (assumption) |"
+      },
+      {
+        "text": "4.8 %",
+        "value": 4.8,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1325,
+        "end": 1330,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "| **Upside** | Unemployment rises >0.5 pp above 12‑month low (e.g., 4.8 %) | Sahm Rule triggers recession signal; potential GDP slowdown | Unemployment spike (assumption) |"
+      },
+      {
+        "text": "0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1467,
+        "end": 1473,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | Unemployment rises >0.5 pp and GDP growth turns negative | Recession confirmed; credit spreads widen, equity valuations compress | Recession onset (assumption) |"
+      },
+      {
+        "text": "0.50 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 1639,
+        "end": 1646,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S7"
+        ],
+        "context": "*All scenarios reference the 0.50 pp threshold from the Sahm Rule [S7].*"
+      },
+      {
+        "text": "0.50 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 2290,
+        "end": 2297,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S7"
+        ],
+        "context": "- **Risk Management** – Continue monitoring the Sahm Rule and unemployment releases; adjust hedging strategies if the indicator crosses 0.50 pp [S7]."
+      },
+      {
+        "text": "0.50 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 2877,
+        "end": 2884,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S7"
+        ],
+        "context": "- **Risk Management** – Continue monitoring the Sahm Rule and unemployment releases; adjust hedging strategies if the indicator crosses 0.50 pp [S7]."
+      },
+      {
+        "text": "0.00 pp",
+        "value": 0.0,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 2964,
+        "end": 2971,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2026-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S3",
+          "S7"
+        ],
+        "context": "The real‑time Sahm Rule indicator is currently at 0.00 pp, well below the 0.50 pp threshold required to signal a recession [S7]."
+      },
+      {
+        "text": "0.50 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 2988,
+        "end": 2995,
+        "status": "verified",
+        "matched": "SAHMREALTIME on 2024-09-01",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2",
+          "S3",
+          "S7"
+        ],
+        "context": "The real‑time Sahm Rule indicator is currently at 0.00 pp, well below the 0.50 pp threshold required to signal a recession [S7]."
+      }
+    ],
+    "citations": {
+      "markers": 15,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "| Scenario | Key Driver | Expected Impact | Assumptions |\n|----------|------------|-----------------|-------------|\n| **Base** | Unemployment remains <0.5 pp above 12‑month low | No recession signal; ",
+          "figures": [
+            "0.5 pp",
+            "0.5 pp",
+            "0.5 pp"
+          ],
+          "sources": [
+            "S7"
+          ]
+        }
+      ],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: Real Gross Domestic Product (GDPC1)",
+        "last_date": "2026-04-01",
+        "frequency": "quarterly",
+        "age_days": 110,
+        "max_age_days": 135,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "open_issues": 1,
+    "summary": "22 of 27 figures verified against source data (20 exact, 2 derived); 5 flagged (4 of them appear in a fetched web/news snippet; 1 labelled as assumptions). 1 paragraph(s) state figures without a citation."
+  },
+  "run_meta": {
+    "run_id": "20261018-175443-1848e5",
+    "timestamp": "2026-10-18T21:54:43+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}

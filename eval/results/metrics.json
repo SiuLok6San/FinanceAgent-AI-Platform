@@ -1,1393 +1,4540 @@
 {
   "routing": {
-    "original": {
-      "n": 20,
-      "exact": 12,
-      "primary": 20,
-      "precision": 0.75,
-      "recall": 0.9230769230769231,
-      "rows": [
-        {
-          "id": "Q01",
-          "expected": [
-            "macro"
-          ],
-          "got": [
-            "macro"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q02",
-          "expected": [
-            "macro"
-          ],
-          "got": [
-            "macro",
-            "rates"
-          ],
-          "exact": false,
-          "primary": true
-        },
-        {
-          "id": "Q03",
-          "expected": [
-            "macro"
-          ],
-          "got": [
-            "macro"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q04",
-          "expected": [
-            "macro"
-          ],
-          "got": [
-            "macro"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q05",
-          "expected": [
-            "rates"
-          ],
-          "got": [
-            "rates"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q06",
-          "expected": [
-            "rates"
-          ],
-          "got": [
-            "credit",
-            "equity",
-            "rates"
-          ],
-          "exact": false,
-          "primary": true
-        },
-        {
-          "id": "Q07",
-          "expected": [
-            "portfolio",
-            "rates"
-          ],
-          "got": [
-            "rates"
-          ],
-          "exact": false,
-          "primary": true
-        },
-        {
-          "id": "Q08",
-          "expected": [
-            "rates"
-          ],
-          "got": [
-            "rates"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q09",
-          "expected": [
-            "credit",
-            "rates"
-          ],
-          "got": [
-            "credit",
-            "rates"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q10",
-          "expected": [
-            "credit"
-          ],
-          "got": [
-            "credit",
-            "rates"
-          ],
-          "exact": false,
-          "primary": true
-        },
-        {
-          "id": "Q11",
-          "expected": [
-            "credit"
-          ],
-          "got": [
-            "credit",
-            "rates"
-          ],
-          "exact": false,
-          "primary": true
-        },
-        {
-          "id": "Q12",
-          "expected": [
-            "credit"
-          ],
-          "got": [
-            "credit",
-            "rates"
-          ],
-          "exact": false,
-          "primary": true
-        },
-        {
-          "id": "Q13",
-          "expected": [
-            "equity"
-          ],
-          "got": [
-            "equity"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q14",
-          "expected": [
-            "equity"
-          ],
-          "got": [
-            "equity"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q15",
-          "expected": [
-            "equity"
-          ],
-          "got": [
-            "equity"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q16",
-          "expected": [
-            "equity"
-          ],
-          "got": [
-            "equity"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q17",
-          "expected": [
-            "macro",
-            "portfolio"
-          ],
-          "got": [
-            "macro",
-            "portfolio"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q18",
-          "expected": [
-            "equity",
-            "portfolio"
-          ],
-          "got": [
-            "equity",
-            "portfolio"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q19",
-          "expected": [
-            "portfolio"
-          ],
-          "got": [
-            "equity",
-            "portfolio",
-            "rates"
-          ],
-          "exact": false,
-          "primary": true
-        },
-        {
-          "id": "Q20",
-          "expected": [
-            "credit",
-            "portfolio",
-            "rates"
-          ],
-          "got": [
-            "credit",
-            "portfolio"
-          ],
-          "exact": false,
-          "primary": true
-        }
-      ]
+    "rules_original": {
+      "fresh": {
+        "n": 10,
+        "exact": 5,
+        "primary": 8,
+        "precision": 0.7857142857142857,
+        "recall": 0.7857142857142857,
+        "rows": [
+          {
+            "id": "F01",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F02",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "credit",
+              "macro"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "F03",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F04",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "credit",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "F05",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "F06",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F07",
+            "expected": [
+              "equity",
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": false,
+            "primary": false
+          },
+          {
+            "id": "F08",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F09",
+            "expected": [
+              "equity",
+              "portfolio"
+            ],
+            "got": [
+              "equity",
+              "portfolio"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F10",
+            "expected": [
+              "credit",
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": false,
+            "primary": false
+          }
+        ]
+      },
+      "heldout": {
+        "n": 10,
+        "exact": 4,
+        "primary": 8,
+        "precision": 0.625,
+        "recall": 0.8333333333333334,
+        "rows": [
+          {
+            "id": "H01",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "H02",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": false,
+            "primary": false
+          },
+          {
+            "id": "H03",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H04",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H05",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H06",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "H07",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity",
+              "macro"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "H08",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": false,
+            "primary": false
+          },
+          {
+            "id": "H09",
+            "expected": [
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "equity",
+              "portfolio",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "H10",
+            "expected": [
+              "macro",
+              "portfolio"
+            ],
+            "got": [
+              "macro",
+              "portfolio"
+            ],
+            "exact": true,
+            "primary": true
+          }
+        ]
+      },
+      "dev": {
+        "n": 20,
+        "exact": 12,
+        "primary": 20,
+        "precision": 0.75,
+        "recall": 0.9230769230769231,
+        "rows": [
+          {
+            "id": "Q01",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q02",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q03",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q04",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q05",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q06",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "credit",
+              "equity",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q07",
+            "expected": [
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q08",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q09",
+            "expected": [
+              "credit",
+              "rates"
+            ],
+            "got": [
+              "credit",
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q10",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q11",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q12",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q13",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q14",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q15",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q16",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q17",
+            "expected": [
+              "macro",
+              "portfolio"
+            ],
+            "got": [
+              "macro",
+              "portfolio"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q18",
+            "expected": [
+              "equity",
+              "portfolio"
+            ],
+            "got": [
+              "equity",
+              "portfolio"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q19",
+            "expected": [
+              "portfolio"
+            ],
+            "got": [
+              "equity",
+              "portfolio",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q20",
+            "expected": [
+              "credit",
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "credit",
+              "portfolio"
+            ],
+            "exact": false,
+            "primary": true
+          }
+        ]
+      }
     },
-    "revised": {
-      "n": 20,
-      "exact": 17,
-      "primary": 20,
-      "precision": 0.8928571428571429,
-      "recall": 0.9615384615384616,
-      "rows": [
-        {
-          "id": "Q01",
-          "expected": [
-            "macro"
-          ],
-          "got": [
-            "macro"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q02",
-          "expected": [
-            "macro"
-          ],
-          "got": [
-            "macro"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q03",
-          "expected": [
-            "macro"
-          ],
-          "got": [
-            "macro"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q04",
-          "expected": [
-            "macro"
-          ],
-          "got": [
-            "macro"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q05",
-          "expected": [
-            "rates"
-          ],
-          "got": [
-            "rates"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q06",
-          "expected": [
-            "rates"
-          ],
-          "got": [
-            "rates"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q07",
-          "expected": [
-            "portfolio",
-            "rates"
-          ],
-          "got": [
-            "rates"
-          ],
-          "exact": false,
-          "primary": true
-        },
-        {
-          "id": "Q08",
-          "expected": [
-            "rates"
-          ],
-          "got": [
-            "rates"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q09",
-          "expected": [
-            "credit",
-            "rates"
-          ],
-          "got": [
-            "credit",
-            "rates"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q10",
-          "expected": [
-            "credit"
-          ],
-          "got": [
-            "credit"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q11",
-          "expected": [
-            "credit"
-          ],
-          "got": [
-            "credit",
-            "rates"
-          ],
-          "exact": false,
-          "primary": true
-        },
-        {
-          "id": "Q12",
-          "expected": [
-            "credit"
-          ],
-          "got": [
-            "credit"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q13",
-          "expected": [
-            "equity"
-          ],
-          "got": [
-            "equity"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q14",
-          "expected": [
-            "equity"
-          ],
-          "got": [
-            "equity"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q15",
-          "expected": [
-            "equity"
-          ],
-          "got": [
-            "equity"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q16",
-          "expected": [
-            "equity"
-          ],
-          "got": [
-            "equity"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q17",
-          "expected": [
-            "macro",
-            "portfolio"
-          ],
-          "got": [
-            "macro",
-            "portfolio"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q18",
-          "expected": [
-            "equity",
-            "portfolio"
-          ],
-          "got": [
-            "equity",
-            "portfolio"
-          ],
-          "exact": true,
-          "primary": true
-        },
-        {
-          "id": "Q19",
-          "expected": [
-            "portfolio"
-          ],
-          "got": [
-            "equity",
-            "portfolio",
-            "rates"
-          ],
-          "exact": false,
-          "primary": true
-        },
-        {
-          "id": "Q20",
-          "expected": [
-            "credit",
-            "portfolio",
-            "rates"
-          ],
-          "got": [
-            "credit",
-            "portfolio",
-            "rates"
-          ],
-          "exact": true,
-          "primary": true
-        }
-      ]
+    "rules_current": {
+      "fresh": {
+        "n": 10,
+        "exact": 8,
+        "primary": 8,
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "rows": [
+          {
+            "id": "F01",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F02",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F03",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F04",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F05",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F06",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F07",
+            "expected": [
+              "equity",
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": false,
+            "primary": false
+          },
+          {
+            "id": "F08",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F09",
+            "expected": [
+              "equity",
+              "portfolio"
+            ],
+            "got": [
+              "equity",
+              "portfolio"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F10",
+            "expected": [
+              "credit",
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "credit",
+              "rates"
+            ],
+            "exact": false,
+            "primary": false
+          }
+        ]
+      },
+      "heldout": {
+        "n": 10,
+        "exact": 8,
+        "primary": 9,
+        "precision": 0.8461538461538461,
+        "recall": 0.9166666666666666,
+        "rows": [
+          {
+            "id": "H01",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "H02",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H03",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H04",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H05",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H06",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H07",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H08",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": false,
+            "primary": false
+          },
+          {
+            "id": "H09",
+            "expected": [
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "portfolio",
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H10",
+            "expected": [
+              "macro",
+              "portfolio"
+            ],
+            "got": [
+              "macro",
+              "portfolio"
+            ],
+            "exact": true,
+            "primary": true
+          }
+        ]
+      },
+      "dev": {
+        "n": 20,
+        "exact": 17,
+        "primary": 20,
+        "precision": 0.8928571428571429,
+        "recall": 0.9615384615384616,
+        "rows": [
+          {
+            "id": "Q01",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q02",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q03",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q04",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q05",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q06",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q07",
+            "expected": [
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q08",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q09",
+            "expected": [
+              "credit",
+              "rates"
+            ],
+            "got": [
+              "credit",
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q10",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q11",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q12",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q13",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q14",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q15",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q16",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q17",
+            "expected": [
+              "macro",
+              "portfolio"
+            ],
+            "got": [
+              "macro",
+              "portfolio"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q18",
+            "expected": [
+              "equity",
+              "portfolio"
+            ],
+            "got": [
+              "equity",
+              "portfolio"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q19",
+            "expected": [
+              "portfolio"
+            ],
+            "got": [
+              "equity",
+              "portfolio",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q20",
+            "expected": [
+              "credit",
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "credit",
+              "portfolio",
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          }
+        ]
+      }
+    },
+    "planner": {
+      "fresh": {
+        "n": 10,
+        "exact": 8,
+        "primary": 9,
+        "precision": 0.8666666666666667,
+        "recall": 0.9285714285714286,
+        "rows": [
+          {
+            "id": "F01",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F02",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F03",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F04",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F05",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F06",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F07",
+            "expected": [
+              "equity",
+              "rates"
+            ],
+            "got": [
+              "equity",
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F08",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity",
+              "portfolio"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "F09",
+            "expected": [
+              "equity",
+              "portfolio"
+            ],
+            "got": [
+              "equity",
+              "portfolio"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "F10",
+            "expected": [
+              "credit",
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "credit",
+              "macro",
+              "rates"
+            ],
+            "exact": false,
+            "primary": false
+          }
+        ]
+      },
+      "heldout": {
+        "n": 10,
+        "exact": 4,
+        "primary": 8,
+        "precision": 0.625,
+        "recall": 0.8333333333333334,
+        "rows": [
+          {
+            "id": "H01",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H02",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H03",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "macro",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "H04",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "macro",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "H05",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H06",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "H07",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity",
+              "portfolio"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "H08",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity",
+              "macro"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "H09",
+            "expected": [
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "macro",
+              "rates"
+            ],
+            "exact": false,
+            "primary": false
+          },
+          {
+            "id": "H10",
+            "expected": [
+              "macro",
+              "portfolio"
+            ],
+            "got": [
+              "equity",
+              "macro"
+            ],
+            "exact": false,
+            "primary": false
+          }
+        ]
+      },
+      "dev": {
+        "n": 20,
+        "exact": 11,
+        "primary": 20,
+        "precision": 0.6578947368421053,
+        "recall": 0.9615384615384616,
+        "rows": [
+          {
+            "id": "Q01",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q02",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q03",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q04",
+            "expected": [
+              "macro"
+            ],
+            "got": [
+              "macro",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q05",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q06",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "macro",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q07",
+            "expected": [
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "macro",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q08",
+            "expected": [
+              "rates"
+            ],
+            "got": [
+              "macro",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q09",
+            "expected": [
+              "credit",
+              "rates"
+            ],
+            "got": [
+              "credit",
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q10",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q11",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit",
+              "macro"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q12",
+            "expected": [
+              "credit"
+            ],
+            "got": [
+              "credit"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q13",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q14",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity",
+              "macro",
+              "portfolio"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q15",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q16",
+            "expected": [
+              "equity"
+            ],
+            "got": [
+              "equity",
+              "macro"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q17",
+            "expected": [
+              "macro",
+              "portfolio"
+            ],
+            "got": [
+              "macro",
+              "portfolio"
+            ],
+            "exact": true,
+            "primary": true
+          },
+          {
+            "id": "Q18",
+            "expected": [
+              "equity",
+              "portfolio"
+            ],
+            "got": [
+              "equity",
+              "macro",
+              "portfolio",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q19",
+            "expected": [
+              "portfolio"
+            ],
+            "got": [
+              "equity",
+              "macro",
+              "portfolio",
+              "rates"
+            ],
+            "exact": false,
+            "primary": true
+          },
+          {
+            "id": "Q20",
+            "expected": [
+              "credit",
+              "portfolio",
+              "rates"
+            ],
+            "got": [
+              "credit",
+              "portfolio",
+              "rates"
+            ],
+            "exact": true,
+            "primary": true
+          }
+        ]
+      }
     }
   },
-  "validation": {
+  "scores": {
     "original": {
-      "questions": 20,
-      "errors": 0,
-      "error_ids": [],
-      "reports_with_data": 9,
-      "tables": 26,
-      "figures": 549,
-      "verified": 36,
-      "derived": 18,
-      "unverified": 495,
-      "numbers": 527,
-      "numbers_verified": 28,
-      "numbers_derived": 18,
-      "numbers_unverified": 481,
-      "dates": 22,
-      "dates_verified": 8,
-      "grounded_same_topic": 35,
-      "grounded_low_precision": 26,
-      "unverified_in_snippets": 144,
-      "citation_markers": 148,
-      "dangling_ids": 0,
-      "reports_with_dangling": 0,
-      "uncited_paragraphs": 19,
-      "source_mismatches": 3,
-      "stale_series": 0,
-      "reports_with_no_data_topics": 13,
-      "no_data_topics": 23,
-      "no_data_undisclosed": 23,
-      "no_data_unverified_figures": 318,
-      "reports_with_no_data_issue": 13,
-      "open_issues": 509,
-      "assumptions": 0,
-      "mean_elapsed_sec": 82.8,
-      "per_question": [
-        {
-          "id": "Q01",
-          "category": "macro",
-          "tables": 1,
-          "figures": 38,
-          "verified": 4,
-          "derived": 7,
-          "unverified": 27,
-          "dangling": 0,
-          "uncited": 5,
-          "no_data_issue": false,
-          "summary": "11 of 38 figures verified against source data (4 exact, 7 derived); 27 flagged (23 of them appear in a fetched web/news snippet). 5 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
+      "errors": [],
+      "sets": {
+        "fresh": {
+          "report": {
+            "questions": 10,
+            "reports": 10,
+            "reports_with_data": 5,
+            "numbers": 198,
+            "traceable": 12,
+            "in_source_text": 56,
+            "assumptions": 0,
+            "assumptions_from_cited_source": 0,
+            "untraceable": 130,
+            "from_facts": 0,
+            "typed": 198,
+            "placeholder_mode": false,
+            "grounded_low_precision": 10,
+            "direction_errors": 0,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 1,
+            "rate_wording_errors": 0,
+            "reports_with_direction_errors": 0,
+            "citation_markers": 61,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 6,
+            "source_mismatches": 3,
+            "stale_series": 0,
+            "no_data_topics": 10,
+            "no_data_undisclosed": 10,
+            "reports_with_no_data_issue": 7,
+            "open_issues": 200,
+            "mean_elapsed_sec": 36.1,
+            "per_question": [
+              {
+                "id": "F01",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 28,
+                "traceable": 1,
+                "untraceable": 15,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 27
+              },
+              {
+                "id": "F02",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 12,
+                "traceable": 0,
+                "untraceable": 6,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 8
+              },
+              {
+                "id": "F03",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 19,
+                "traceable": 6,
+                "untraceable": 8,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 17
+              },
+              {
+                "id": "F04",
+                "category": "rates",
+                "tables": 0,
+                "numbers": 23,
+                "traceable": 0,
+                "untraceable": 21,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 30
+              },
+              {
+                "id": "F05",
+                "category": "credit",
+                "tables": 0,
+                "numbers": 20,
+                "traceable": 0,
+                "untraceable": 16,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 25
+              },
+              {
+                "id": "F06",
+                "category": "credit",
+                "tables": 0,
+                "numbers": 21,
+                "traceable": 0,
+                "untraceable": 21,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 24
+              },
+              {
+                "id": "F07",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 15,
+                "traceable": 0,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 9
+              },
+              {
+                "id": "F08",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 20,
+                "traceable": 5,
+                "untraceable": 11,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 19
+              },
+              {
+                "id": "F09",
+                "category": "portfolio",
+                "tables": 0,
+                "numbers": 10,
+                "traceable": 0,
+                "untraceable": 8,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 12
+              },
+              {
+                "id": "F10",
+                "category": "portfolio",
+                "tables": 0,
+                "numbers": 30,
+                "traceable": 0,
+                "untraceable": 22,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 29
+              }
+            ]
+          },
+          "loop": {
+            "questions": 10,
+            "attempted": 0,
+            "kept": 0,
+            "rejected": 0,
+            "failed": 0
+          },
+          "planner": {
+            "runs": 0,
+            "usable": 0
+          }
         },
-        {
-          "id": "Q02",
-          "category": "macro",
-          "tables": 1,
-          "figures": 32,
-          "verified": 22,
-          "derived": 0,
-          "unverified": 10,
-          "dangling": 0,
-          "uncited": 3,
-          "no_data_issue": true,
-          "summary": "22 of 32 figures verified against source data (22 exact, 0 derived); 10 flagged (3 of them appear in a fetched web/news snippet). 3 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data. No data was fetched for rates, and the report does not say so. 2 unverified figure(s) on rates, which has no data."
+        "heldout": {
+          "report": {
+            "questions": 10,
+            "reports": 10,
+            "reports_with_data": 4,
+            "numbers": 210,
+            "traceable": 14,
+            "in_source_text": 26,
+            "assumptions": 0,
+            "assumptions_from_cited_source": 0,
+            "untraceable": 170,
+            "from_facts": 0,
+            "typed": 210,
+            "placeholder_mode": false,
+            "grounded_low_precision": 12,
+            "direction_errors": 2,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 0,
+            "reports_with_direction_errors": 2,
+            "citation_markers": 68,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 7,
+            "source_mismatches": 1,
+            "stale_series": 0,
+            "no_data_topics": 12,
+            "no_data_undisclosed": 12,
+            "reports_with_no_data_issue": 9,
+            "open_issues": 213,
+            "mean_elapsed_sec": 95.6,
+            "per_question": [
+              {
+                "id": "H01",
+                "category": "macro",
+                "tables": 2,
+                "numbers": 24,
+                "traceable": 1,
+                "untraceable": 23,
+                "directions": 1,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 26
+              },
+              {
+                "id": "H02",
+                "category": "macro",
+                "tables": 0,
+                "numbers": 19,
+                "traceable": 0,
+                "untraceable": 17,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 19
+              },
+              {
+                "id": "H03",
+                "category": "rates",
+                "tables": 0,
+                "numbers": 16,
+                "traceable": 0,
+                "untraceable": 16,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 17
+              },
+              {
+                "id": "H04",
+                "category": "rates",
+                "tables": 0,
+                "numbers": 16,
+                "traceable": 0,
+                "untraceable": 9,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 14
+              },
+              {
+                "id": "H05",
+                "category": "credit",
+                "tables": 0,
+                "numbers": 28,
+                "traceable": 0,
+                "untraceable": 27,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 29
+              },
+              {
+                "id": "H06",
+                "category": "credit",
+                "tables": 0,
+                "numbers": 28,
+                "traceable": 0,
+                "untraceable": 28,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 31
+              },
+              {
+                "id": "H07",
+                "category": "equity",
+                "tables": 6,
+                "numbers": 23,
+                "traceable": 2,
+                "untraceable": 16,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 20
+              },
+              {
+                "id": "H08",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 22,
+                "traceable": 2,
+                "untraceable": 15,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": true,
+                "open_issues": 22
+              },
+              {
+                "id": "H09",
+                "category": "portfolio",
+                "tables": 0,
+                "numbers": 14,
+                "traceable": 0,
+                "untraceable": 8,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 16
+              },
+              {
+                "id": "H10",
+                "category": "portfolio",
+                "tables": 1,
+                "numbers": 20,
+                "traceable": 9,
+                "untraceable": 11,
+                "directions": 1,
+                "uncited": 5,
+                "no_data_issue": true,
+                "open_issues": 19
+              }
+            ]
+          },
+          "loop": {
+            "questions": 10,
+            "attempted": 0,
+            "kept": 0,
+            "rejected": 0,
+            "failed": 0
+          },
+          "planner": {
+            "runs": 0,
+            "usable": 0
+          }
         },
-        {
-          "id": "Q03",
-          "category": "macro",
-          "tables": 2,
-          "figures": 32,
-          "verified": 0,
-          "derived": 1,
-          "unverified": 31,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "1 of 32 figures verified against source data (0 exact, 1 derived); 31 flagged (5 of them appear in a fetched web/news snippet)."
-        },
-        {
-          "id": "Q04",
-          "category": "macro",
-          "tables": 0,
-          "figures": 17,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 17,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": true,
-          "summary": "0 of 17 figures verified against source data (0 exact, 0 derived); 17 flagged. No data was fetched for macro, and the report does not say so. 14 unverified figure(s) on macro, which has no data."
-        },
-        {
-          "id": "Q05",
-          "category": "rates",
-          "tables": 0,
-          "figures": 38,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 38,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": true,
-          "summary": "0 of 38 figures verified against source data (0 exact, 0 derived); 38 flagged (8 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 19 unverified figure(s) on rates, which has no data."
-        },
-        {
-          "id": "Q06",
-          "category": "rates",
-          "tables": 0,
-          "figures": 12,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 12,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": true,
-          "summary": "0 of 12 figures verified against source data (0 exact, 0 derived); 12 flagged (5 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 6 unverified figure(s) on rates, which has no data. No data was fetched for credit, and the report does not say so. 2 unverified figure(s) on credit, which has no data. No data was fetched for equity, and the report does not say so."
-        },
-        {
-          "id": "Q07",
-          "category": "rates",
-          "tables": 0,
-          "figures": 22,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 22,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": true,
-          "summary": "0 of 22 figures verified against source data (0 exact, 0 derived); 22 flagged (9 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 22 unverified figure(s) on rates, which has no data."
-        },
-        {
-          "id": "Q08",
-          "category": "rates",
-          "tables": 1,
-          "figures": 10,
-          "verified": 5,
-          "derived": 0,
-          "unverified": 5,
-          "dangling": 0,
-          "uncited": 1,
-          "no_data_issue": false,
-          "summary": "5 of 10 figures verified against source data (5 exact, 0 derived); 5 flagged. 1 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q09",
-          "category": "credit",
-          "tables": 0,
-          "figures": 24,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 24,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": true,
-          "summary": "0 of 24 figures verified against source data (0 exact, 0 derived); 24 flagged (4 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 16 unverified figure(s) on rates, which has no data. No data was fetched for credit, and the report does not say so. 13 unverified figure(s) on credit, which has no data."
-        },
-        {
-          "id": "Q10",
-          "category": "credit",
-          "tables": 0,
-          "figures": 20,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 20,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": true,
-          "summary": "0 of 20 figures verified against source data (0 exact, 0 derived); 20 flagged (16 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 19 unverified figure(s) on rates, which has no data. No data was fetched for credit, and the report does not say so. 18 unverified figure(s) on credit, which has no data."
-        },
-        {
-          "id": "Q11",
-          "category": "credit",
-          "tables": 0,
-          "figures": 27,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 27,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": true,
-          "summary": "0 of 27 figures verified against source data (0 exact, 0 derived); 27 flagged (16 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 19 unverified figure(s) on rates, which has no data. No data was fetched for credit, and the report does not say so. 27 unverified figure(s) on credit, which has no data."
-        },
-        {
-          "id": "Q12",
-          "category": "credit",
-          "tables": 0,
-          "figures": 33,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 33,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": true,
-          "summary": "0 of 33 figures verified against source data (0 exact, 0 derived); 33 flagged (10 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 13 unverified figure(s) on rates, which has no data. No data was fetched for credit, and the report does not say so. 25 unverified figure(s) on credit, which has no data."
-        },
-        {
-          "id": "Q13",
-          "category": "equity",
-          "tables": 5,
-          "figures": 52,
-          "verified": 5,
-          "derived": 0,
-          "unverified": 47,
-          "dangling": 0,
-          "uncited": 4,
-          "no_data_issue": false,
-          "summary": "5 of 52 figures verified against source data (5 exact, 0 derived); 47 flagged (7 of them appear in a fetched web/news snippet). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q14",
-          "category": "equity",
-          "tables": 5,
-          "figures": 26,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 26,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "0 of 26 figures verified against source data (0 exact, 0 derived); 26 flagged (9 of them appear in a fetched web/news snippet)."
-        },
-        {
-          "id": "Q15",
-          "category": "equity",
-          "tables": 5,
-          "figures": 17,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 17,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "0 of 17 figures verified against source data (0 exact, 0 derived); 17 flagged (9 of them appear in a fetched web/news snippet)."
-        },
-        {
-          "id": "Q16",
-          "category": "equity",
-          "tables": 5,
-          "figures": 39,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 39,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "0 of 39 figures verified against source data (0 exact, 0 derived); 39 flagged (2 of them appear in a fetched web/news snippet)."
-        },
-        {
-          "id": "Q17",
-          "category": "portfolio",
-          "tables": 1,
-          "figures": 39,
-          "verified": 0,
-          "derived": 10,
-          "unverified": 29,
-          "dangling": 0,
-          "uncited": 6,
-          "no_data_issue": true,
-          "summary": "10 of 39 figures verified against source data (0 exact, 10 derived); 29 flagged (3 of them appear in a fetched web/news snippet). 6 paragraph(s) state figures without a citation. No data was fetched for portfolio, and the report does not say so. 21 unverified figure(s) on portfolio, which has no data."
-        },
-        {
-          "id": "Q18",
-          "category": "portfolio",
-          "tables": 0,
-          "figures": 21,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 21,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": true,
-          "summary": "0 of 21 figures verified against source data (0 exact, 0 derived); 21 flagged (4 of them appear in a fetched web/news snippet). No data was fetched for portfolio, and the report does not say so. 16 unverified figure(s) on portfolio, which has no data. No data was fetched for equity, and the report does not say so. 3 unverified figure(s) on equity, which has no data."
-        },
-        {
-          "id": "Q19",
-          "category": "portfolio",
-          "tables": 0,
-          "figures": 8,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 8,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": true,
-          "summary": "0 of 8 figures verified against source data (0 exact, 0 derived); 8 flagged (4 of them appear in a fetched web/news snippet). No data was fetched for rates, and the report does not say so. 4 unverified figure(s) on rates, which has no data. No data was fetched for portfolio, and the report does not say so. 3 unverified figure(s) on portfolio, which has no data. No data was fetched for equity, and the report does not say so. 5 unverified figure(s) on equity, which has no data."
-        },
-        {
-          "id": "Q20",
-          "category": "portfolio",
-          "tables": 0,
-          "figures": 42,
-          "verified": 0,
-          "derived": 0,
-          "unverified": 42,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": true,
-          "summary": "0 of 42 figures verified against source data (0 exact, 0 derived); 42 flagged (7 of them appear in a fetched web/news snippet). No data was fetched for credit, and the report does not say so. 36 unverified figure(s) on credit, which has no data. No data was fetched for portfolio, and the report does not say so. 15 unverified figure(s) on portfolio, which has no data."
+        "dev": {
+          "report": {
+            "questions": 20,
+            "reports": 20,
+            "reports_with_data": 9,
+            "numbers": 524,
+            "traceable": 46,
+            "in_source_text": 108,
+            "assumptions": 0,
+            "assumptions_from_cited_source": 0,
+            "untraceable": 370,
+            "from_facts": 0,
+            "typed": 524,
+            "placeholder_mode": false,
+            "grounded_low_precision": 26,
+            "direction_errors": 3,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 0,
+            "reports_with_direction_errors": 1,
+            "citation_markers": 148,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 19,
+            "source_mismatches": 3,
+            "stale_series": 0,
+            "no_data_topics": 23,
+            "no_data_undisclosed": 23,
+            "reports_with_no_data_issue": 13,
+            "open_issues": 512,
+            "mean_elapsed_sec": 82.8,
+            "per_question": [
+              {
+                "id": "Q01",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 33,
+                "traceable": 7,
+                "untraceable": 13,
+                "directions": 3,
+                "uncited": 5,
+                "no_data_issue": false,
+                "open_issues": 32
+              },
+              {
+                "id": "Q02",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 28,
+                "traceable": 18,
+                "untraceable": 7,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": true,
+                "open_issues": 13
+              },
+              {
+                "id": "Q03",
+                "category": "macro",
+                "tables": 2,
+                "numbers": 31,
+                "traceable": 1,
+                "untraceable": 28,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 31
+              },
+              {
+                "id": "Q04",
+                "category": "macro",
+                "tables": 0,
+                "numbers": 16,
+                "traceable": 0,
+                "untraceable": 16,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 18
+              },
+              {
+                "id": "Q05",
+                "category": "rates",
+                "tables": 0,
+                "numbers": 38,
+                "traceable": 0,
+                "untraceable": 30,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 36
+              },
+              {
+                "id": "Q06",
+                "category": "rates",
+                "tables": 0,
+                "numbers": 12,
+                "traceable": 0,
+                "untraceable": 7,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 15
+              },
+              {
+                "id": "Q07",
+                "category": "rates",
+                "tables": 0,
+                "numbers": 22,
+                "traceable": 0,
+                "untraceable": 14,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 21
+              },
+              {
+                "id": "Q08",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 10,
+                "traceable": 5,
+                "untraceable": 5,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 6
+              },
+              {
+                "id": "Q09",
+                "category": "credit",
+                "tables": 0,
+                "numbers": 24,
+                "traceable": 0,
+                "untraceable": 20,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 26
+              },
+              {
+                "id": "Q10",
+                "category": "credit",
+                "tables": 0,
+                "numbers": 20,
+                "traceable": 0,
+                "untraceable": 10,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 21
+              },
+              {
+                "id": "Q11",
+                "category": "credit",
+                "tables": 0,
+                "numbers": 27,
+                "traceable": 0,
+                "untraceable": 11,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 29
+              },
+              {
+                "id": "Q12",
+                "category": "credit",
+                "tables": 0,
+                "numbers": 25,
+                "traceable": 0,
+                "untraceable": 17,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 31
+              },
+              {
+                "id": "Q13",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 51,
+                "traceable": 5,
+                "untraceable": 41,
+                "directions": 0,
+                "uncited": 4,
+                "no_data_issue": false,
+                "open_issues": 47
+              },
+              {
+                "id": "Q14",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 26,
+                "traceable": 0,
+                "untraceable": 19,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 22
+              },
+              {
+                "id": "Q15",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 16,
+                "traceable": 0,
+                "untraceable": 7,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 14
+              },
+              {
+                "id": "Q16",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 39,
+                "traceable": 0,
+                "untraceable": 37,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 39
+              },
+              {
+                "id": "Q17",
+                "category": "portfolio",
+                "tables": 1,
+                "numbers": 39,
+                "traceable": 10,
+                "untraceable": 26,
+                "directions": 0,
+                "uncited": 6,
+                "no_data_issue": true,
+                "open_issues": 36
+              },
+              {
+                "id": "Q18",
+                "category": "portfolio",
+                "tables": 0,
+                "numbers": 18,
+                "traceable": 0,
+                "untraceable": 17,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 20
+              },
+              {
+                "id": "Q19",
+                "category": "portfolio",
+                "tables": 0,
+                "numbers": 8,
+                "traceable": 0,
+                "untraceable": 8,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 11
+              },
+              {
+                "id": "Q20",
+                "category": "portfolio",
+                "tables": 0,
+                "numbers": 41,
+                "traceable": 0,
+                "untraceable": 37,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 44
+              }
+            ]
+          },
+          "loop": {
+            "questions": 20,
+            "attempted": 0,
+            "kept": 0,
+            "rejected": 0,
+            "failed": 0
+          },
+          "planner": {
+            "runs": 0,
+            "usable": 0
+          }
         }
-      ]
+      }
     },
-    "revised": {
-      "questions": 20,
-      "errors": 0,
-      "error_ids": [],
-      "reports_with_data": 20,
-      "tables": 56,
-      "figures": 561,
-      "verified": 276,
-      "derived": 96,
-      "unverified": 189,
-      "numbers": 514,
-      "numbers_verified": 233,
-      "numbers_derived": 96,
-      "numbers_unverified": 185,
-      "dates": 47,
-      "dates_verified": 43,
-      "grounded_same_topic": 273,
-      "grounded_low_precision": 95,
-      "unverified_in_snippets": 95,
-      "citation_markers": 335,
-      "dangling_ids": 0,
-      "reports_with_dangling": 0,
-      "uncited_paragraphs": 26,
-      "source_mismatches": 16,
-      "stale_series": 0,
-      "reports_with_no_data_topics": 2,
-      "no_data_topics": 2,
-      "no_data_undisclosed": 0,
-      "no_data_unverified_figures": 4,
-      "reports_with_no_data_issue": 1,
-      "open_issues": 69,
-      "assumptions": 124,
-      "mean_elapsed_sec": 92.3,
-      "per_question": [
-        {
-          "id": "Q01",
-          "category": "macro",
-          "tables": 1,
-          "figures": 33,
-          "verified": 13,
-          "derived": 6,
-          "unverified": 14,
-          "dangling": 0,
-          "uncited": 4,
-          "no_data_issue": false,
-          "summary": "19 of 33 figures verified against source data (13 exact, 6 derived); 14 flagged (12 of them appear in a fetched web/news snippet; 4 labelled as assumptions). 4 paragraph(s) state figures without a citation. 2 paragraph(s) cite a different source than the data."
+    "v2": {
+      "errors": [],
+      "sets": {
+        "fresh": {
+          "report": {
+            "questions": 10,
+            "reports": 10,
+            "reports_with_data": 10,
+            "numbers": 205,
+            "traceable": 130,
+            "in_source_text": 12,
+            "assumptions": 56,
+            "assumptions_from_cited_source": 9,
+            "untraceable": 7,
+            "from_facts": 0,
+            "typed": 205,
+            "placeholder_mode": false,
+            "grounded_low_precision": 25,
+            "direction_errors": 2,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 1,
+            "reports_with_direction_errors": 1,
+            "citation_markers": 114,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 12,
+            "source_mismatches": 1,
+            "stale_series": 0,
+            "no_data_topics": 0,
+            "no_data_undisclosed": 0,
+            "reports_with_no_data_issue": 0,
+            "open_issues": 33,
+            "mean_elapsed_sec": 132.2,
+            "per_question": [
+              {
+                "id": "F01",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 12,
+                "traceable": 10,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "F02",
+                "category": "macro",
+                "tables": 2,
+                "numbers": 26,
+                "traceable": 21,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "F03",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 10,
+                "traceable": 5,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F04",
+                "category": "rates",
+                "tables": 2,
+                "numbers": 23,
+                "traceable": 19,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "F05",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 29,
+                "traceable": 20,
+                "untraceable": 4,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 7
+              },
+              {
+                "id": "F06",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 9,
+                "traceable": 6,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F07",
+                "category": "equity",
+                "tables": 6,
+                "numbers": 21,
+                "traceable": 12,
+                "untraceable": 3,
+                "directions": 2,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 8
+              },
+              {
+                "id": "F08",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 22,
+                "traceable": 18,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F09",
+                "category": "portfolio",
+                "tables": 1,
+                "numbers": 16,
+                "traceable": 8,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "F10",
+                "category": "portfolio",
+                "tables": 2,
+                "numbers": 37,
+                "traceable": 11,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 4,
+                "no_data_issue": false,
+                "open_issues": 14
+              }
+            ]
+          },
+          "draft": {
+            "questions": 10,
+            "reports": 10,
+            "reports_with_data": 10,
+            "numbers": 207,
+            "traceable": 123,
+            "in_source_text": 20,
+            "assumptions": 22,
+            "assumptions_from_cited_source": 0,
+            "untraceable": 42,
+            "from_facts": 0,
+            "typed": 207,
+            "placeholder_mode": false,
+            "grounded_low_precision": 25,
+            "direction_errors": 2,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 1,
+            "reports_with_direction_errors": 1,
+            "citation_markers": 73,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 29,
+            "source_mismatches": 3,
+            "stale_series": 0,
+            "no_data_topics": 0,
+            "no_data_undisclosed": 0,
+            "reports_with_no_data_issue": 0,
+            "open_issues": 92,
+            "mean_elapsed_sec": 132.2,
+            "per_question": [
+              {
+                "id": "F01",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 12,
+                "traceable": 9,
+                "untraceable": 1,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "F02",
+                "category": "macro",
+                "tables": 2,
+                "numbers": 23,
+                "traceable": 15,
+                "untraceable": 4,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 8
+              },
+              {
+                "id": "F03",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 15,
+                "traceable": 5,
+                "untraceable": 8,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 11
+              },
+              {
+                "id": "F04",
+                "category": "rates",
+                "tables": 2,
+                "numbers": 22,
+                "traceable": 18,
+                "untraceable": 4,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 7
+              },
+              {
+                "id": "F05",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 31,
+                "traceable": 20,
+                "untraceable": 9,
+                "directions": 0,
+                "uncited": 5,
+                "no_data_issue": false,
+                "open_issues": 15
+              },
+              {
+                "id": "F06",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 10,
+                "traceable": 6,
+                "untraceable": 1,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 4
+              },
+              {
+                "id": "F07",
+                "category": "equity",
+                "tables": 6,
+                "numbers": 21,
+                "traceable": 12,
+                "untraceable": 3,
+                "directions": 2,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 8
+              },
+              {
+                "id": "F08",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 23,
+                "traceable": 18,
+                "untraceable": 3,
+                "directions": 0,
+                "uncited": 4,
+                "no_data_issue": false,
+                "open_issues": 9
+              },
+              {
+                "id": "F09",
+                "category": "portfolio",
+                "tables": 1,
+                "numbers": 18,
+                "traceable": 8,
+                "untraceable": 6,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 13
+              },
+              {
+                "id": "F10",
+                "category": "portfolio",
+                "tables": 2,
+                "numbers": 32,
+                "traceable": 12,
+                "untraceable": 3,
+                "directions": 0,
+                "uncited": 5,
+                "no_data_issue": false,
+                "open_issues": 14
+              }
+            ]
+          },
+          "loop": {
+            "questions": 10,
+            "attempted": 10,
+            "kept": 9,
+            "rejected": 1,
+            "failed": 0
+          },
+          "planner": {
+            "runs": 0,
+            "usable": 0
+          }
         },
-        {
-          "id": "Q02",
-          "category": "macro",
-          "tables": 1,
-          "figures": 18,
-          "verified": 14,
-          "derived": 1,
-          "unverified": 3,
-          "dangling": 0,
-          "uncited": 2,
-          "no_data_issue": false,
-          "summary": "15 of 18 figures verified against source data (14 exact, 1 derived); 3 flagged (2 labelled as assumptions). 2 paragraph(s) state figures without a citation."
+        "heldout": {
+          "report": {
+            "questions": 10,
+            "reports": 10,
+            "reports_with_data": 9,
+            "numbers": 217,
+            "traceable": 152,
+            "in_source_text": 12,
+            "assumptions": 48,
+            "assumptions_from_cited_source": 0,
+            "untraceable": 5,
+            "from_facts": 0,
+            "typed": 217,
+            "placeholder_mode": false,
+            "grounded_low_precision": 46,
+            "direction_errors": 2,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 0,
+            "reports_with_direction_errors": 2,
+            "citation_markers": 189,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 10,
+            "source_mismatches": 2,
+            "stale_series": 0,
+            "no_data_topics": 3,
+            "no_data_undisclosed": 2,
+            "reports_with_no_data_issue": 2,
+            "open_issues": 22,
+            "mean_elapsed_sec": 164.0,
+            "per_question": [
+              {
+                "id": "H01",
+                "category": "macro",
+                "tables": 3,
+                "numbers": 15,
+                "traceable": 9,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H02",
+                "category": "macro",
+                "tables": 0,
+                "numbers": 18,
+                "traceable": 0,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 1
+              },
+              {
+                "id": "H03",
+                "category": "rates",
+                "tables": 3,
+                "numbers": 25,
+                "traceable": 17,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "H04",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 17,
+                "traceable": 13,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "H05",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 22,
+                "traceable": 20,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 2
+              },
+              {
+                "id": "H06",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 22,
+                "traceable": 16,
+                "untraceable": 3,
+                "directions": 1,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 4
+              },
+              {
+                "id": "H07",
+                "category": "equity",
+                "tables": 6,
+                "numbers": 37,
+                "traceable": 27,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "H08",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 22,
+                "traceable": 16,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H09",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 17,
+                "traceable": 14,
+                "untraceable": 0,
+                "directions": 1,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 4
+              },
+              {
+                "id": "H10",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 22,
+                "traceable": 20,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 4,
+                "no_data_issue": false,
+                "open_issues": 4
+              }
+            ]
+          },
+          "draft": {
+            "questions": 10,
+            "reports": 10,
+            "reports_with_data": 9,
+            "numbers": 233,
+            "traceable": 157,
+            "in_source_text": 16,
+            "assumptions": 25,
+            "assumptions_from_cited_source": 0,
+            "untraceable": 35,
+            "from_facts": 0,
+            "typed": 233,
+            "placeholder_mode": false,
+            "grounded_low_precision": 50,
+            "direction_errors": 2,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 0,
+            "reports_with_direction_errors": 2,
+            "citation_markers": 141,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 27,
+            "source_mismatches": 1,
+            "stale_series": 0,
+            "no_data_topics": 3,
+            "no_data_undisclosed": 0,
+            "reports_with_no_data_issue": 2,
+            "open_issues": 74,
+            "mean_elapsed_sec": 164.0,
+            "per_question": [
+              {
+                "id": "H01",
+                "category": "macro",
+                "tables": 3,
+                "numbers": 15,
+                "traceable": 9,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H02",
+                "category": "macro",
+                "tables": 0,
+                "numbers": 17,
+                "traceable": 0,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 7
+              },
+              {
+                "id": "H03",
+                "category": "rates",
+                "tables": 3,
+                "numbers": 25,
+                "traceable": 17,
+                "untraceable": 7,
+                "directions": 0,
+                "uncited": 7,
+                "no_data_issue": false,
+                "open_issues": 15
+              },
+              {
+                "id": "H04",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 20,
+                "traceable": 13,
+                "untraceable": 5,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 9
+              },
+              {
+                "id": "H05",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 22,
+                "traceable": 20,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 4
+              },
+              {
+                "id": "H06",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 22,
+                "traceable": 16,
+                "untraceable": 6,
+                "directions": 1,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 8
+              },
+              {
+                "id": "H07",
+                "category": "equity",
+                "tables": 6,
+                "numbers": 45,
+                "traceable": 29,
+                "untraceable": 7,
+                "directions": 0,
+                "uncited": 4,
+                "no_data_issue": false,
+                "open_issues": 12
+              },
+              {
+                "id": "H08",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 26,
+                "traceable": 17,
+                "untraceable": 5,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 6
+              },
+              {
+                "id": "H09",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 19,
+                "traceable": 16,
+                "untraceable": 3,
+                "directions": 1,
+                "uncited": 5,
+                "no_data_issue": true,
+                "open_issues": 9
+              },
+              {
+                "id": "H10",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 22,
+                "traceable": 20,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 4,
+                "no_data_issue": false,
+                "open_issues": 4
+              }
+            ]
+          },
+          "loop": {
+            "questions": 10,
+            "attempted": 9,
+            "kept": 8,
+            "rejected": 1,
+            "failed": 0
+          },
+          "planner": {
+            "runs": 0,
+            "usable": 0
+          }
         },
-        {
-          "id": "Q03",
-          "category": "macro",
-          "tables": 3,
-          "figures": 34,
-          "verified": 16,
-          "derived": 4,
-          "unverified": 14,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "20 of 34 figures verified against source data (16 exact, 4 derived); 14 flagged (14 of them appear in a fetched web/news snippet; 1 labelled as assumptions)."
-        },
-        {
-          "id": "Q04",
-          "category": "macro",
-          "tables": 2,
-          "figures": 23,
-          "verified": 8,
-          "derived": 8,
-          "unverified": 7,
-          "dangling": 0,
-          "uncited": 1,
-          "no_data_issue": false,
-          "summary": "16 of 23 figures verified against source data (8 exact, 8 derived); 7 flagged (1 of them appear in a fetched web/news snippet; 7 labelled as assumptions). 1 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q05",
-          "category": "rates",
-          "tables": 1,
-          "figures": 16,
-          "verified": 9,
-          "derived": 0,
-          "unverified": 7,
-          "dangling": 0,
-          "uncited": 1,
-          "no_data_issue": false,
-          "summary": "9 of 16 figures verified against source data (9 exact, 0 derived); 7 flagged (7 of them appear in a fetched web/news snippet). 1 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q06",
-          "category": "rates",
-          "tables": 3,
-          "figures": 14,
-          "verified": 13,
-          "derived": 1,
-          "unverified": 0,
-          "dangling": 0,
-          "uncited": 1,
-          "no_data_issue": false,
-          "summary": "14 of 14 figures verified against source data (13 exact, 1 derived); 0 flagged. 1 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q07",
-          "category": "rates",
-          "tables": 1,
-          "figures": 34,
-          "verified": 16,
-          "derived": 5,
-          "unverified": 13,
-          "dangling": 0,
-          "uncited": 1,
-          "no_data_issue": false,
-          "summary": "21 of 34 figures verified against source data (16 exact, 5 derived); 13 flagged (3 of them appear in a fetched web/news snippet; 9 labelled as assumptions). 1 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q08",
-          "category": "rates",
-          "tables": 3,
-          "figures": 34,
-          "verified": 11,
-          "derived": 18,
-          "unverified": 5,
-          "dangling": 0,
-          "uncited": 4,
-          "no_data_issue": false,
-          "summary": "29 of 34 figures verified against source data (11 exact, 18 derived); 5 flagged (4 labelled as assumptions). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q09",
-          "category": "credit",
-          "tables": 4,
-          "figures": 37,
-          "verified": 14,
-          "derived": 13,
-          "unverified": 10,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "27 of 37 figures verified against source data (14 exact, 13 derived); 10 flagged (10 labelled as assumptions)."
-        },
-        {
-          "id": "Q10",
-          "category": "credit",
-          "tables": 2,
-          "figures": 20,
-          "verified": 8,
-          "derived": 6,
-          "unverified": 6,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "14 of 20 figures verified against source data (8 exact, 6 derived); 6 flagged (2 of them appear in a fetched web/news snippet; 4 labelled as assumptions)."
-        },
-        {
-          "id": "Q11",
-          "category": "credit",
-          "tables": 1,
-          "figures": 24,
-          "verified": 21,
-          "derived": 2,
-          "unverified": 1,
-          "dangling": 0,
-          "uncited": 2,
-          "no_data_issue": false,
-          "summary": "23 of 24 figures verified against source data (21 exact, 2 derived); 1 flagged. 2 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q12",
-          "category": "credit",
-          "tables": 2,
-          "figures": 26,
-          "verified": 15,
-          "derived": 9,
-          "unverified": 2,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "24 of 26 figures verified against source data (15 exact, 9 derived); 2 flagged (2 of them appear in a fetched web/news snippet)."
-        },
-        {
-          "id": "Q13",
-          "category": "equity",
-          "tables": 5,
-          "figures": 28,
-          "verified": 20,
-          "derived": 0,
-          "unverified": 8,
-          "dangling": 0,
-          "uncited": 2,
-          "no_data_issue": false,
-          "summary": "20 of 28 figures verified against source data (20 exact, 0 derived); 8 flagged (1 of them appear in a fetched web/news snippet; 6 labelled as assumptions). 2 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q14",
-          "category": "equity",
-          "tables": 5,
-          "figures": 26,
-          "verified": 16,
-          "derived": 0,
-          "unverified": 10,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "16 of 26 figures verified against source data (16 exact, 0 derived); 10 flagged (4 of them appear in a fetched web/news snippet; 7 labelled as assumptions)."
-        },
-        {
-          "id": "Q15",
-          "category": "equity",
-          "tables": 5,
-          "figures": 27,
-          "verified": 10,
-          "derived": 0,
-          "unverified": 17,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "10 of 27 figures verified against source data (10 exact, 0 derived); 17 flagged (5 of them appear in a fetched web/news snippet; 13 labelled as assumptions)."
-        },
-        {
-          "id": "Q16",
-          "category": "equity",
-          "tables": 6,
-          "figures": 44,
-          "verified": 32,
-          "derived": 1,
-          "unverified": 11,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "33 of 44 figures verified against source data (32 exact, 1 derived); 11 flagged (4 of them appear in a fetched web/news snippet; 8 labelled as assumptions). 4 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q17",
-          "category": "portfolio",
-          "tables": 3,
-          "figures": 32,
-          "verified": 13,
-          "derived": 9,
-          "unverified": 10,
-          "dangling": 0,
-          "uncited": 1,
-          "no_data_issue": false,
-          "summary": "22 of 32 figures verified against source data (13 exact, 9 derived); 10 flagged (2 of them appear in a fetched web/news snippet; 8 labelled as assumptions). 1 paragraph(s) state figures without a citation. 4 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q18",
-          "category": "portfolio",
-          "tables": 2,
-          "figures": 23,
-          "verified": 8,
-          "derived": 3,
-          "unverified": 12,
-          "dangling": 0,
-          "uncited": 2,
-          "no_data_issue": false,
-          "summary": "11 of 23 figures verified against source data (8 exact, 3 derived); 12 flagged (8 of them appear in a fetched web/news snippet; 9 labelled as assumptions). 2 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q19",
-          "category": "portfolio",
-          "tables": 3,
-          "figures": 29,
-          "verified": 14,
-          "derived": 8,
-          "unverified": 7,
-          "dangling": 0,
-          "uncited": 3,
-          "no_data_issue": false,
-          "summary": "22 of 29 figures verified against source data (14 exact, 8 derived); 7 flagged (4 labelled as assumptions). 3 paragraph(s) state figures without a citation. 4 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q20",
-          "category": "portfolio",
-          "tables": 3,
-          "figures": 39,
-          "verified": 5,
-          "derived": 2,
-          "unverified": 32,
-          "dangling": 0,
-          "uncited": 2,
-          "no_data_issue": true,
-          "summary": "7 of 39 figures verified against source data (5 exact, 2 derived); 32 flagged (30 of them appear in a fetched web/news snippet; 28 labelled as assumptions). 2 paragraph(s) state figures without a citation. 4 unverified figure(s) on portfolio, which has no data."
+        "dev": {
+          "report": {
+            "questions": 20,
+            "reports": 20,
+            "reports_with_data": 20,
+            "numbers": 505,
+            "traceable": 329,
+            "in_source_text": 44,
+            "assumptions": 123,
+            "assumptions_from_cited_source": 4,
+            "untraceable": 9,
+            "from_facts": 0,
+            "typed": 505,
+            "placeholder_mode": false,
+            "grounded_low_precision": 95,
+            "direction_errors": 7,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 2,
+            "reports_with_direction_errors": 3,
+            "citation_markers": 335,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 26,
+            "source_mismatches": 16,
+            "stale_series": 0,
+            "no_data_topics": 2,
+            "no_data_undisclosed": 0,
+            "reports_with_no_data_issue": 1,
+            "open_issues": 76,
+            "mean_elapsed_sec": 92.3,
+            "per_question": [
+              {
+                "id": "Q01",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 24,
+                "traceable": 10,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 4,
+                "no_data_issue": false,
+                "open_issues": 9
+              },
+              {
+                "id": "Q02",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 13,
+                "traceable": 10,
+                "untraceable": 1,
+                "directions": 1,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 4
+              },
+              {
+                "id": "Q03",
+                "category": "macro",
+                "tables": 3,
+                "numbers": 30,
+                "traceable": 16,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "Q04",
+                "category": "macro",
+                "tables": 2,
+                "numbers": 21,
+                "traceable": 14,
+                "untraceable": 0,
+                "directions": 2,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "Q05",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 16,
+                "traceable": 9,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 2
+              },
+              {
+                "id": "Q06",
+                "category": "rates",
+                "tables": 3,
+                "numbers": 14,
+                "traceable": 14,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "Q07",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 30,
+                "traceable": 18,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "Q08",
+                "category": "rates",
+                "tables": 3,
+                "numbers": 29,
+                "traceable": 25,
+                "untraceable": 0,
+                "directions": 4,
+                "uncited": 4,
+                "no_data_issue": false,
+                "open_issues": 10
+              },
+              {
+                "id": "Q09",
+                "category": "credit",
+                "tables": 4,
+                "numbers": 37,
+                "traceable": 27,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q10",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 20,
+                "traceable": 14,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q11",
+                "category": "credit",
+                "tables": 1,
+                "numbers": 14,
+                "traceable": 14,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "Q12",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 23,
+                "traceable": 21,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 2
+              },
+              {
+                "id": "Q13",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 28,
+                "traceable": 20,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 4
+              },
+              {
+                "id": "Q14",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 26,
+                "traceable": 16,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q15",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 25,
+                "traceable": 8,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "Q16",
+                "category": "equity",
+                "tables": 6,
+                "numbers": 41,
+                "traceable": 32,
+                "untraceable": 1,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 8
+              },
+              {
+                "id": "Q17",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 30,
+                "traceable": 22,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 5
+              },
+              {
+                "id": "Q18",
+                "category": "portfolio",
+                "tables": 2,
+                "numbers": 19,
+                "traceable": 11,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 2
+              },
+              {
+                "id": "Q19",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 26,
+                "traceable": 21,
+                "untraceable": 1,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 8
+              },
+              {
+                "id": "Q20",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 39,
+                "traceable": 7,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": true,
+                "open_issues": 6
+              }
+            ]
+          },
+          "draft": {
+            "questions": 20,
+            "reports": 20,
+            "reports_with_data": 20,
+            "numbers": 517,
+            "traceable": 320,
+            "in_source_text": 51,
+            "assumptions": 96,
+            "assumptions_from_cited_source": 0,
+            "untraceable": 50,
+            "from_facts": 0,
+            "typed": 517,
+            "placeholder_mode": false,
+            "grounded_low_precision": 107,
+            "direction_errors": 8,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 2,
+            "reports_with_direction_errors": 4,
+            "citation_markers": 219,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 60,
+            "source_mismatches": 16,
+            "stale_series": 0,
+            "no_data_topics": 2,
+            "no_data_undisclosed": 0,
+            "reports_with_no_data_issue": 1,
+            "open_issues": 170,
+            "mean_elapsed_sec": 92.3,
+            "per_question": [
+              {
+                "id": "Q01",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 24,
+                "traceable": 10,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 5,
+                "no_data_issue": false,
+                "open_issues": 14
+              },
+              {
+                "id": "Q02",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 13,
+                "traceable": 10,
+                "untraceable": 1,
+                "directions": 1,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 4
+              },
+              {
+                "id": "Q03",
+                "category": "macro",
+                "tables": 3,
+                "numbers": 24,
+                "traceable": 11,
+                "untraceable": 4,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 11
+              },
+              {
+                "id": "Q04",
+                "category": "macro",
+                "tables": 2,
+                "numbers": 21,
+                "traceable": 13,
+                "untraceable": 4,
+                "directions": 2,
+                "uncited": 5,
+                "no_data_issue": false,
+                "open_issues": 13
+              },
+              {
+                "id": "Q05",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 19,
+                "traceable": 4,
+                "untraceable": 1,
+                "directions": 0,
+                "uncited": 1,
+                "no_data_issue": false,
+                "open_issues": 7
+              },
+              {
+                "id": "Q06",
+                "category": "rates",
+                "tables": 3,
+                "numbers": 13,
+                "traceable": 13,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "Q07",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 33,
+                "traceable": 22,
+                "untraceable": 5,
+                "directions": 0,
+                "uncited": 5,
+                "no_data_issue": false,
+                "open_issues": 15
+              },
+              {
+                "id": "Q08",
+                "category": "rates",
+                "tables": 3,
+                "numbers": 29,
+                "traceable": 25,
+                "untraceable": 0,
+                "directions": 4,
+                "uncited": 4,
+                "no_data_issue": false,
+                "open_issues": 10
+              },
+              {
+                "id": "Q09",
+                "category": "credit",
+                "tables": 4,
+                "numbers": 41,
+                "traceable": 29,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 6
+              },
+              {
+                "id": "Q10",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 18,
+                "traceable": 12,
+                "untraceable": 4,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 7
+              },
+              {
+                "id": "Q11",
+                "category": "credit",
+                "tables": 1,
+                "numbers": 14,
+                "traceable": 14,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "Q12",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 19,
+                "traceable": 17,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 4,
+                "no_data_issue": false,
+                "open_issues": 6
+              },
+              {
+                "id": "Q13",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 30,
+                "traceable": 20,
+                "untraceable": 6,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 9
+              },
+              {
+                "id": "Q14",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 27,
+                "traceable": 15,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 4
+              },
+              {
+                "id": "Q15",
+                "category": "equity",
+                "tables": 5,
+                "numbers": 28,
+                "traceable": 7,
+                "untraceable": 3,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": false,
+                "open_issues": 8
+              },
+              {
+                "id": "Q16",
+                "category": "equity",
+                "tables": 6,
+                "numbers": 40,
+                "traceable": 30,
+                "untraceable": 7,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 16
+              },
+              {
+                "id": "Q17",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 35,
+                "traceable": 24,
+                "untraceable": 3,
+                "directions": 0,
+                "uncited": 7,
+                "no_data_issue": false,
+                "open_issues": 11
+              },
+              {
+                "id": "Q18",
+                "category": "portfolio",
+                "tables": 2,
+                "numbers": 25,
+                "traceable": 17,
+                "untraceable": 1,
+                "directions": 0,
+                "uncited": 3,
+                "no_data_issue": false,
+                "open_issues": 5
+              },
+              {
+                "id": "Q19",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 25,
+                "traceable": 20,
+                "untraceable": 5,
+                "directions": 1,
+                "uncited": 5,
+                "no_data_issue": false,
+                "open_issues": 12
+              },
+              {
+                "id": "Q20",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 39,
+                "traceable": 7,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 2,
+                "no_data_issue": true,
+                "open_issues": 6
+              }
+            ]
+          },
+          "loop": {
+            "questions": 20,
+            "attempted": 20,
+            "kept": 16,
+            "rejected": 4,
+            "failed": 0
+          },
+          "planner": {
+            "runs": 0,
+            "usable": 0
+          }
         }
-      ]
+      }
     },
-    "revised_draft": {
-      "questions": 20,
-      "errors": 0,
-      "error_ids": [],
-      "reports_with_data": 20,
-      "tables": 56,
-      "figures": 579,
-      "verified": 263,
-      "derived": 101,
-      "unverified": 215,
-      "numbers": 527,
-      "numbers_verified": 219,
-      "numbers_derived": 101,
-      "numbers_unverified": 207,
-      "dates": 52,
-      "dates_verified": 44,
-      "grounded_same_topic": 251,
-      "grounded_low_precision": 107,
-      "unverified_in_snippets": 102,
-      "citation_markers": 219,
-      "dangling_ids": 0,
-      "reports_with_dangling": 0,
-      "uncited_paragraphs": 60,
-      "source_mismatches": 16,
-      "stale_series": 0,
-      "reports_with_no_data_topics": 2,
-      "no_data_topics": 2,
-      "no_data_undisclosed": 0,
-      "no_data_unverified_figures": 4,
-      "reports_with_no_data_issue": 1,
-      "open_issues": 169,
-      "assumptions": 96,
-      "mean_elapsed_sec": 92.3,
-      "per_question": [
-        {
-          "id": "Q01",
-          "category": "macro",
-          "tables": 1,
-          "figures": 33,
-          "verified": 13,
-          "derived": 6,
-          "unverified": 14,
-          "dangling": 0,
-          "uncited": 5,
-          "no_data_issue": false,
-          "summary": "19 of 33 figures verified against source data (13 exact, 6 derived); 14 flagged (12 of them appear in a fetched web/news snippet; 4 labelled as assumptions). 5 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
+    "v3": {
+      "errors": [],
+      "sets": {
+        "fresh": {
+          "report": {
+            "questions": 10,
+            "reports": 10,
+            "reports_with_data": 10,
+            "numbers": 208,
+            "traceable": 138,
+            "in_source_text": 0,
+            "assumptions": 70,
+            "assumptions_from_cited_source": 0,
+            "untraceable": 0,
+            "from_facts": 138,
+            "typed": 0,
+            "placeholder_mode": true,
+            "grounded_low_precision": 0,
+            "direction_errors": 3,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 0,
+            "reports_with_direction_errors": 1,
+            "citation_markers": 174,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 0,
+            "source_mismatches": 0,
+            "stale_series": 0,
+            "no_data_topics": 0,
+            "no_data_undisclosed": 0,
+            "reports_with_no_data_issue": 0,
+            "open_issues": 3,
+            "mean_elapsed_sec": 96.4,
+            "per_question": [
+              {
+                "id": "F01",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 16,
+                "traceable": 14,
+                "untraceable": 0,
+                "directions": 3,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "F02",
+                "category": "macro",
+                "tables": 3,
+                "numbers": 21,
+                "traceable": 18,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F03",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 9,
+                "traceable": 9,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F04",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 7,
+                "traceable": 3,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F05",
+                "category": "credit",
+                "tables": 1,
+                "numbers": 15,
+                "traceable": 11,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F06",
+                "category": "credit",
+                "tables": 1,
+                "numbers": 11,
+                "traceable": 7,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F07",
+                "category": "equity",
+                "tables": 7,
+                "numbers": 26,
+                "traceable": 20,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F08",
+                "category": "equity",
+                "tables": 6,
+                "numbers": 30,
+                "traceable": 22,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F09",
+                "category": "portfolio",
+                "tables": 4,
+                "numbers": 22,
+                "traceable": 14,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F10",
+                "category": "portfolio",
+                "tables": 6,
+                "numbers": 51,
+                "traceable": 20,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              }
+            ]
+          },
+          "draft": {
+            "questions": 10,
+            "reports": 10,
+            "reports_with_data": 10,
+            "numbers": 212,
+            "traceable": 154,
+            "in_source_text": 1,
+            "assumptions": 50,
+            "assumptions_from_cited_source": 0,
+            "untraceable": 7,
+            "from_facts": 135,
+            "typed": 28,
+            "placeholder_mode": true,
+            "grounded_low_precision": 13,
+            "direction_errors": 1,
+            "comparison_errors": 0,
+            "history_wording_errors": 1,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 0,
+            "reports_with_direction_errors": 1,
+            "citation_markers": 141,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 0,
+            "source_mismatches": 0,
+            "stale_series": 0,
+            "no_data_topics": 0,
+            "no_data_undisclosed": 0,
+            "reports_with_no_data_issue": 0,
+            "open_issues": 29,
+            "mean_elapsed_sec": 96.4,
+            "per_question": [
+              {
+                "id": "F01",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 16,
+                "traceable": 14,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F02",
+                "category": "macro",
+                "tables": 3,
+                "numbers": 21,
+                "traceable": 21,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "F03",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 9,
+                "traceable": 9,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F04",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 7,
+                "traceable": 3,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F05",
+                "category": "credit",
+                "tables": 1,
+                "numbers": 15,
+                "traceable": 11,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F06",
+                "category": "credit",
+                "tables": 1,
+                "numbers": 14,
+                "traceable": 10,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "F07",
+                "category": "equity",
+                "tables": 7,
+                "numbers": 26,
+                "traceable": 20,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 2
+              },
+              {
+                "id": "F08",
+                "category": "equity",
+                "tables": 6,
+                "numbers": 30,
+                "traceable": 22,
+                "untraceable": 5,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 10
+              },
+              {
+                "id": "F09",
+                "category": "portfolio",
+                "tables": 4,
+                "numbers": 22,
+                "traceable": 17,
+                "untraceable": 0,
+                "directions": 1,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 6
+              },
+              {
+                "id": "F10",
+                "category": "portfolio",
+                "tables": 6,
+                "numbers": 52,
+                "traceable": 27,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 8
+              }
+            ]
+          },
+          "loop": {
+            "questions": 10,
+            "attempted": 7,
+            "kept": 7,
+            "rejected": 0,
+            "failed": 0
+          },
+          "planner": {
+            "runs": 10,
+            "usable": 10
+          }
         },
-        {
-          "id": "Q02",
-          "category": "macro",
-          "tables": 1,
-          "figures": 18,
-          "verified": 14,
-          "derived": 1,
-          "unverified": 3,
-          "dangling": 0,
-          "uncited": 2,
-          "no_data_issue": false,
-          "summary": "15 of 18 figures verified against source data (14 exact, 1 derived); 3 flagged (2 labelled as assumptions). 2 paragraph(s) state figures without a citation."
+        "heldout": {
+          "report": {
+            "questions": 10,
+            "reports": 10,
+            "reports_with_data": 10,
+            "numbers": 250,
+            "traceable": 195,
+            "in_source_text": 7,
+            "assumptions": 48,
+            "assumptions_from_cited_source": 0,
+            "untraceable": 0,
+            "from_facts": 193,
+            "typed": 6,
+            "placeholder_mode": true,
+            "grounded_low_precision": 2,
+            "direction_errors": 0,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 0,
+            "reports_with_direction_errors": 0,
+            "citation_markers": 191,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 0,
+            "source_mismatches": 0,
+            "stale_series": 0,
+            "no_data_topics": 0,
+            "no_data_undisclosed": 0,
+            "reports_with_no_data_issue": 0,
+            "open_issues": 3,
+            "mean_elapsed_sec": 83.0,
+            "per_question": [
+              {
+                "id": "H01",
+                "category": "macro",
+                "tables": 5,
+                "numbers": 29,
+                "traceable": 26,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H02",
+                "category": "macro",
+                "tables": 2,
+                "numbers": 23,
+                "traceable": 23,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H03",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 11,
+                "traceable": 11,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H04",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 10,
+                "traceable": 8,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "H05",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 23,
+                "traceable": 15,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H06",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 25,
+                "traceable": 17,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H07",
+                "category": "equity",
+                "tables": 7,
+                "numbers": 29,
+                "traceable": 20,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H08",
+                "category": "equity",
+                "tables": 11,
+                "numbers": 50,
+                "traceable": 36,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 2
+              },
+              {
+                "id": "H09",
+                "category": "portfolio",
+                "tables": 6,
+                "numbers": 29,
+                "traceable": 22,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H10",
+                "category": "portfolio",
+                "tables": 6,
+                "numbers": 21,
+                "traceable": 17,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              }
+            ]
+          },
+          "draft": {
+            "questions": 10,
+            "reports": 10,
+            "reports_with_data": 10,
+            "numbers": 271,
+            "traceable": 231,
+            "in_source_text": 1,
+            "assumptions": 33,
+            "assumptions_from_cited_source": 2,
+            "untraceable": 6,
+            "from_facts": 177,
+            "typed": 70,
+            "placeholder_mode": true,
+            "grounded_low_precision": 30,
+            "direction_errors": 0,
+            "comparison_errors": 0,
+            "history_wording_errors": 0,
+            "trend_wording_errors": 1,
+            "rate_wording_errors": 1,
+            "reports_with_direction_errors": 0,
+            "citation_markers": 183,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 0,
+            "source_mismatches": 0,
+            "stale_series": 0,
+            "no_data_topics": 0,
+            "no_data_undisclosed": 0,
+            "reports_with_no_data_issue": 0,
+            "open_issues": 66,
+            "mean_elapsed_sec": 83.0,
+            "per_question": [
+              {
+                "id": "H01",
+                "category": "macro",
+                "tables": 5,
+                "numbers": 29,
+                "traceable": 26,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H02",
+                "category": "macro",
+                "tables": 2,
+                "numbers": 23,
+                "traceable": 23,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H03",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 11,
+                "traceable": 11,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "H04",
+                "category": "rates",
+                "tables": 1,
+                "numbers": 13,
+                "traceable": 9,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 2
+              },
+              {
+                "id": "H05",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 23,
+                "traceable": 19,
+                "untraceable": 4,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 12
+              },
+              {
+                "id": "H06",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 25,
+                "traceable": 17,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "H07",
+                "category": "equity",
+                "tables": 7,
+                "numbers": 29,
+                "traceable": 21,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "H08",
+                "category": "equity",
+                "tables": 11,
+                "numbers": 62,
+                "traceable": 54,
+                "untraceable": 1,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 31
+              },
+              {
+                "id": "H09",
+                "category": "portfolio",
+                "tables": 6,
+                "numbers": 35,
+                "traceable": 34,
+                "untraceable": 1,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 17
+              },
+              {
+                "id": "H10",
+                "category": "portfolio",
+                "tables": 6,
+                "numbers": 21,
+                "traceable": 17,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              }
+            ]
+          },
+          "loop": {
+            "questions": 10,
+            "attempted": 7,
+            "kept": 7,
+            "rejected": 0,
+            "failed": 0
+          },
+          "planner": {
+            "runs": 10,
+            "usable": 9
+          }
         },
-        {
-          "id": "Q03",
-          "category": "macro",
-          "tables": 3,
-          "figures": 27,
-          "verified": 12,
-          "derived": 2,
-          "unverified": 13,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "14 of 27 figures verified against source data (12 exact, 2 derived); 13 flagged (9 of them appear in a fetched web/news snippet). 1 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q04",
-          "category": "macro",
-          "tables": 2,
-          "figures": 25,
-          "verified": 8,
-          "derived": 7,
-          "unverified": 10,
-          "dangling": 0,
-          "uncited": 5,
-          "no_data_issue": false,
-          "summary": "15 of 25 figures verified against source data (8 exact, 7 derived); 10 flagged (2 of them appear in a fetched web/news snippet; 4 labelled as assumptions). 5 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q05",
-          "category": "rates",
-          "tables": 1,
-          "figures": 22,
-          "verified": 6,
-          "derived": 0,
-          "unverified": 16,
-          "dangling": 0,
-          "uncited": 1,
-          "no_data_issue": false,
-          "summary": "6 of 22 figures verified against source data (6 exact, 0 derived); 16 flagged (14 of them appear in a fetched web/news snippet; 2 labelled as assumptions). 1 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q06",
-          "category": "rates",
-          "tables": 3,
-          "figures": 13,
-          "verified": 12,
-          "derived": 1,
-          "unverified": 0,
-          "dangling": 0,
-          "uncited": 3,
-          "no_data_issue": false,
-          "summary": "13 of 13 figures verified against source data (12 exact, 1 derived); 0 flagged. 3 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q07",
-          "category": "rates",
-          "tables": 1,
-          "figures": 37,
-          "verified": 19,
-          "derived": 5,
-          "unverified": 13,
-          "dangling": 0,
-          "uncited": 5,
-          "no_data_issue": false,
-          "summary": "24 of 37 figures verified against source data (19 exact, 5 derived); 13 flagged (2 of them appear in a fetched web/news snippet; 4 labelled as assumptions). 5 paragraph(s) state figures without a citation. 3 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q08",
-          "category": "rates",
-          "tables": 3,
-          "figures": 34,
-          "verified": 11,
-          "derived": 18,
-          "unverified": 5,
-          "dangling": 0,
-          "uncited": 4,
-          "no_data_issue": false,
-          "summary": "29 of 34 figures verified against source data (11 exact, 18 derived); 5 flagged (4 labelled as assumptions). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q09",
-          "category": "credit",
-          "tables": 4,
-          "figures": 42,
-          "verified": 15,
-          "derived": 15,
-          "unverified": 12,
-          "dangling": 0,
-          "uncited": 3,
-          "no_data_issue": false,
-          "summary": "30 of 42 figures verified against source data (15 exact, 15 derived); 12 flagged (10 labelled as assumptions). 3 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q10",
-          "category": "credit",
-          "tables": 2,
-          "figures": 18,
-          "verified": 6,
-          "derived": 6,
-          "unverified": 6,
-          "dangling": 0,
-          "uncited": 2,
-          "no_data_issue": false,
-          "summary": "12 of 18 figures verified against source data (6 exact, 6 derived); 6 flagged (2 of them appear in a fetched web/news snippet). 2 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q11",
-          "category": "credit",
-          "tables": 1,
-          "figures": 24,
-          "verified": 21,
-          "derived": 2,
-          "unverified": 1,
-          "dangling": 0,
-          "uncited": 2,
-          "no_data_issue": false,
-          "summary": "23 of 24 figures verified against source data (21 exact, 2 derived); 1 flagged. 2 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q12",
-          "category": "credit",
-          "tables": 2,
-          "figures": 22,
-          "verified": 11,
-          "derived": 9,
-          "unverified": 2,
-          "dangling": 0,
-          "uncited": 4,
-          "no_data_issue": false,
-          "summary": "20 of 22 figures verified against source data (11 exact, 9 derived); 2 flagged (2 of them appear in a fetched web/news snippet). 4 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q13",
-          "category": "equity",
-          "tables": 5,
-          "figures": 30,
-          "verified": 20,
-          "derived": 0,
-          "unverified": 10,
-          "dangling": 0,
-          "uncited": 2,
-          "no_data_issue": false,
-          "summary": "20 of 30 figures verified against source data (20 exact, 0 derived); 10 flagged (1 of them appear in a fetched web/news snippet; 4 labelled as assumptions). 2 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q14",
-          "category": "equity",
-          "tables": 5,
-          "figures": 27,
-          "verified": 15,
-          "derived": 0,
-          "unverified": 12,
-          "dangling": 0,
-          "uncited": 0,
-          "no_data_issue": false,
-          "summary": "15 of 27 figures verified against source data (15 exact, 0 derived); 12 flagged (5 of them appear in a fetched web/news snippet; 6 labelled as assumptions). 1 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q15",
-          "category": "equity",
-          "tables": 5,
-          "figures": 30,
-          "verified": 9,
-          "derived": 0,
-          "unverified": 21,
-          "dangling": 0,
-          "uncited": 2,
-          "no_data_issue": false,
-          "summary": "9 of 30 figures verified against source data (9 exact, 0 derived); 21 flagged (9 of them appear in a fetched web/news snippet; 13 labelled as assumptions). 2 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q16",
-          "category": "equity",
-          "tables": 6,
-          "figures": 43,
-          "verified": 28,
-          "derived": 3,
-          "unverified": 12,
-          "dangling": 0,
-          "uncited": 3,
-          "no_data_issue": false,
-          "summary": "31 of 43 figures verified against source data (28 exact, 3 derived); 12 flagged (4 of them appear in a fetched web/news snippet; 1 labelled as assumptions). 3 paragraph(s) state figures without a citation. 5 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q17",
-          "category": "portfolio",
-          "tables": 3,
-          "figures": 38,
-          "verified": 14,
-          "derived": 10,
-          "unverified": 14,
-          "dangling": 0,
-          "uncited": 7,
-          "no_data_issue": false,
-          "summary": "24 of 38 figures verified against source data (14 exact, 10 derived); 14 flagged (2 of them appear in a fetched web/news snippet; 8 labelled as assumptions). 7 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q18",
-          "category": "portfolio",
-          "tables": 2,
-          "figures": 29,
-          "verified": 12,
-          "derived": 5,
-          "unverified": 12,
-          "dangling": 0,
-          "uncited": 3,
-          "no_data_issue": false,
-          "summary": "17 of 29 figures verified against source data (12 exact, 5 derived); 12 flagged (8 of them appear in a fetched web/news snippet; 6 labelled as assumptions). 3 paragraph(s) state figures without a citation."
-        },
-        {
-          "id": "Q19",
-          "category": "portfolio",
-          "tables": 3,
-          "figures": 28,
-          "verified": 12,
-          "derived": 9,
-          "unverified": 7,
-          "dangling": 0,
-          "uncited": 5,
-          "no_data_issue": false,
-          "summary": "21 of 28 figures verified against source data (12 exact, 9 derived); 7 flagged. 5 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data."
-        },
-        {
-          "id": "Q20",
-          "category": "portfolio",
-          "tables": 3,
-          "figures": 39,
-          "verified": 5,
-          "derived": 2,
-          "unverified": 32,
-          "dangling": 0,
-          "uncited": 2,
-          "no_data_issue": true,
-          "summary": "7 of 39 figures verified against source data (5 exact, 2 derived); 32 flagged (30 of them appear in a fetched web/news snippet; 28 labelled as assumptions). 2 paragraph(s) state figures without a citation. 4 unverified figure(s) on portfolio, which has no data."
+        "dev": {
+          "report": {
+            "questions": 20,
+            "reports": 20,
+            "reports_with_data": 20,
+            "numbers": 675,
+            "traceable": 495,
+            "in_source_text": 16,
+            "assumptions": 162,
+            "assumptions_from_cited_source": 1,
+            "untraceable": 2,
+            "from_facts": 471,
+            "typed": 37,
+            "placeholder_mode": true,
+            "grounded_low_precision": 22,
+            "direction_errors": 1,
+            "comparison_errors": 1,
+            "history_wording_errors": 1,
+            "trend_wording_errors": 0,
+            "rate_wording_errors": 1,
+            "reports_with_direction_errors": 1,
+            "citation_markers": 429,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 0,
+            "source_mismatches": 0,
+            "stale_series": 0,
+            "no_data_topics": 1,
+            "no_data_undisclosed": 0,
+            "reports_with_no_data_issue": 0,
+            "open_issues": 38,
+            "mean_elapsed_sec": 135.5,
+            "per_question": [
+              {
+                "id": "Q01",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 18,
+                "traceable": 12,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q02",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 16,
+                "traceable": 16,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q03",
+                "category": "macro",
+                "tables": 2,
+                "numbers": 48,
+                "traceable": 32,
+                "untraceable": 2,
+                "directions": 1,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 14
+              },
+              {
+                "id": "Q04",
+                "category": "macro",
+                "tables": 6,
+                "numbers": 45,
+                "traceable": 37,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 7
+              },
+              {
+                "id": "Q05",
+                "category": "rates",
+                "tables": 6,
+                "numbers": 38,
+                "traceable": 24,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 2
+              },
+              {
+                "id": "Q06",
+                "category": "rates",
+                "tables": 6,
+                "numbers": 28,
+                "traceable": 26,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "Q07",
+                "category": "rates",
+                "tables": 6,
+                "numbers": 41,
+                "traceable": 31,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "Q08",
+                "category": "rates",
+                "tables": 6,
+                "numbers": 25,
+                "traceable": 13,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q09",
+                "category": "credit",
+                "tables": 6,
+                "numbers": 54,
+                "traceable": 42,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q10",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 17,
+                "traceable": 17,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "Q11",
+                "category": "credit",
+                "tables": 6,
+                "numbers": 25,
+                "traceable": 21,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q12",
+                "category": "credit",
+                "tables": 1,
+                "numbers": 23,
+                "traceable": 19,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q13",
+                "category": "equity",
+                "tables": 11,
+                "numbers": 44,
+                "traceable": 33,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q14",
+                "category": "equity",
+                "tables": 11,
+                "numbers": 31,
+                "traceable": 30,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q15",
+                "category": "equity",
+                "tables": 7,
+                "numbers": 34,
+                "traceable": 27,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 5
+              },
+              {
+                "id": "Q16",
+                "category": "equity",
+                "tables": 8,
+                "numbers": 51,
+                "traceable": 35,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 7
+              },
+              {
+                "id": "Q17",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 29,
+                "traceable": 17,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q18",
+                "category": "portfolio",
+                "tables": 6,
+                "numbers": 27,
+                "traceable": 22,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q19",
+                "category": "portfolio",
+                "tables": 6,
+                "numbers": 31,
+                "traceable": 26,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q20",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 50,
+                "traceable": 15,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              }
+            ]
+          },
+          "draft": {
+            "questions": 20,
+            "reports": 20,
+            "reports_with_data": 20,
+            "numbers": 674,
+            "traceable": 535,
+            "in_source_text": 21,
+            "assumptions": 109,
+            "assumptions_from_cited_source": 3,
+            "untraceable": 9,
+            "from_facts": 436,
+            "typed": 131,
+            "placeholder_mode": true,
+            "grounded_low_precision": 78,
+            "direction_errors": 3,
+            "comparison_errors": 1,
+            "history_wording_errors": 1,
+            "trend_wording_errors": 2,
+            "rate_wording_errors": 2,
+            "reports_with_direction_errors": 3,
+            "citation_markers": 414,
+            "dangling_ids": 0,
+            "uncited_paragraphs": 0,
+            "source_mismatches": 0,
+            "stale_series": 0,
+            "no_data_topics": 1,
+            "no_data_undisclosed": 0,
+            "reports_with_no_data_issue": 1,
+            "open_issues": 142,
+            "mean_elapsed_sec": 135.5,
+            "per_question": [
+              {
+                "id": "Q01",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 18,
+                "traceable": 12,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q02",
+                "category": "macro",
+                "tables": 1,
+                "numbers": 16,
+                "traceable": 16,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 0
+              },
+              {
+                "id": "Q03",
+                "category": "macro",
+                "tables": 2,
+                "numbers": 48,
+                "traceable": 32,
+                "untraceable": 2,
+                "directions": 1,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 20
+              },
+              {
+                "id": "Q04",
+                "category": "macro",
+                "tables": 6,
+                "numbers": 43,
+                "traceable": 37,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 9
+              },
+              {
+                "id": "Q05",
+                "category": "rates",
+                "tables": 6,
+                "numbers": 32,
+                "traceable": 23,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 10
+              },
+              {
+                "id": "Q06",
+                "category": "rates",
+                "tables": 6,
+                "numbers": 25,
+                "traceable": 25,
+                "untraceable": 0,
+                "directions": 1,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 7
+              },
+              {
+                "id": "Q07",
+                "category": "rates",
+                "tables": 6,
+                "numbers": 44,
+                "traceable": 35,
+                "untraceable": 1,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 7
+              },
+              {
+                "id": "Q08",
+                "category": "rates",
+                "tables": 6,
+                "numbers": 32,
+                "traceable": 19,
+                "untraceable": 1,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 7
+              },
+              {
+                "id": "Q09",
+                "category": "credit",
+                "tables": 6,
+                "numbers": 55,
+                "traceable": 49,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 6
+              },
+              {
+                "id": "Q10",
+                "category": "credit",
+                "tables": 2,
+                "numbers": 15,
+                "traceable": 15,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 3
+              },
+              {
+                "id": "Q11",
+                "category": "credit",
+                "tables": 6,
+                "numbers": 25,
+                "traceable": 23,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 2
+              },
+              {
+                "id": "Q12",
+                "category": "credit",
+                "tables": 1,
+                "numbers": 24,
+                "traceable": 20,
+                "untraceable": 0,
+                "directions": 1,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 1
+              },
+              {
+                "id": "Q13",
+                "category": "equity",
+                "tables": 11,
+                "numbers": 45,
+                "traceable": 34,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 5
+              },
+              {
+                "id": "Q14",
+                "category": "equity",
+                "tables": 11,
+                "numbers": 32,
+                "traceable": 31,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 9
+              },
+              {
+                "id": "Q15",
+                "category": "equity",
+                "tables": 7,
+                "numbers": 34,
+                "traceable": 29,
+                "untraceable": 1,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 15
+              },
+              {
+                "id": "Q16",
+                "category": "equity",
+                "tables": 8,
+                "numbers": 54,
+                "traceable": 42,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 20
+              },
+              {
+                "id": "Q17",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 23,
+                "traceable": 19,
+                "untraceable": 2,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 4
+              },
+              {
+                "id": "Q18",
+                "category": "portfolio",
+                "tables": 6,
+                "numbers": 27,
+                "traceable": 27,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 5
+              },
+              {
+                "id": "Q19",
+                "category": "portfolio",
+                "tables": 6,
+                "numbers": 32,
+                "traceable": 29,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": false,
+                "open_issues": 7
+              },
+              {
+                "id": "Q20",
+                "category": "portfolio",
+                "tables": 3,
+                "numbers": 50,
+                "traceable": 18,
+                "untraceable": 0,
+                "directions": 0,
+                "uncited": 0,
+                "no_data_issue": true,
+                "open_issues": 5
+              }
+            ]
+          },
+          "loop": {
+            "questions": 20,
+            "attempted": 18,
+            "kept": 18,
+            "rejected": 0,
+            "failed": 0
+          },
+          "planner": {
+            "runs": 20,
+            "usable": 17
+          }
         }
-      ]
+      }
     }
-  },
-  "repair": {
-    "questions": 20,
-    "attempted": 20,
-    "accepted": 16,
-    "rejected": 4,
-    "failed": 0,
-    "issues_before": 169,
-    "issues_after": 69
   }
 }

@@ -1,0 +1,777 @@
+{
+  "id": "H07",
+  "set": "heldout",
+  "category": "equity",
+  "question": "Is Microsoft expensive relative to its earnings growth?",
+  "ticker": "MSFT",
+  "expected_tags": [
+    "equity"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T18:29:24+00:00",
+  "elapsed_sec": 79.8,
+  "router_tags": [
+    "macro",
+    "equity"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "macro": "growth_outlook",
+    "equity": "valuation_pressure"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Microsoft’s trailing‑12‑month P/E ≈ 32.8×, above the broad‑tech cohort, and its PEG ratio is 1.65×, signalling a valuation premium over earnings‑growth expectations.  \n- EPS growth remains robust (≈ 19 % YoY) but forward guidance (~13 %) is modestly lower than recent years, tightening the growth‑adjusted valuation.  \n- Market sentiment is mixed: analysts view the stock as “just north of expensive” after earnings, and consensus price targets are close to the current level, implying limited near‑term upside.  \n- The company’s strong balance sheet and cash‑flow generation support dividend and share‑repurchase programs, but the premium is largely driven by its cloud/AI moat rather than credit risk.  \n- In a tightening‑rate environment, a valuation correction is plausible; a modest upside remains if growth accelerates or sentiment improves.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Rising U.S. rates and sector rotation have compressed tech valuations broadly. Microsoft’s premium is partly a residual of its defensive revenue mix (Office, LinkedIn) and cloud dominance.  \n- Interest‑rate sensitivity is moderate; a steepening yield curve could erode the high P/E.  \n\n*Sector*  \n- Microsoft’s P/E (~32.8×) exceeds the typical tech peer average (~28×) [S3].  \n- PEG of 1.65× indicates the market is pricing in growth at a higher discount rate than peers [S8].  \n- EPS growth (≈ 19 %) is above the sector median, yet the forward growth estimate (~13 %) is narrowing [S5].  \n\n*Credit*  \n- Microsoft maintains an investment‑grade rating and a strong liquidity buffer, supporting ongoing shareholder returns [S5].  \n- Credit risk is unlikely to justify the current valuation premium.  \n\n*Portfolio*  \n- The stock offers high‑quality exposure with a defensive cash‑flow profile but carries a growth‑premium that may erode in a rate‑tightening cycle.  \n\n---\n\n**Scenarios**\n\n| Scenario | Key Assumptions | Expected Impact |\n|----------|-----------------|-----------------|\n| **Base** | Current P/E 32.8×, PEG 1.65×, forward EPS growth 13 % | Stable valuation; modest upside if AI adoption accelerates. |\n| **Upside** | Growth accelerates to 15 %+; PEG falls to ~1.4× | 5–10 % upside in price; potential re‑pricing of cloud/AI moat. |\n| **Downside** | Growth slows to 10 %; PEG rises to 1.8–2.0×; rate hikes steepen | 10–15 % price correction; valuation aligns with peer averages. |\n\n---\n\n**Key Risks & Monitoring**\n\n- **Rate‑tightening**: Monitor 10‑yr Treasury yields; a steepening curve could compress P/E.  \n- **AI cost & adoption**: Track Azure AI revenue growth and cost structure.  \n- **Regulatory scrutiny**: Watch for antitrust actions that could impact licensing and cloud services.  \n- **Competitive dynamics**: Observe new entrants in cloud and AI that may erode market share.  \n- **Earnings guidance**: Re‑evaluate forward EPS estimates quarterly.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **High‑growth focus**: Allocate a smaller weight or enter on a dip; the premium may erode if growth decelerates.  \n- **Defensive, high‑quality tech**: Accept the premium; cash‑flow generation supports dividends and share‑repurchases.  \n- **Rate‑tightening outlook**: Monitor for a valuation correction; a PEG > 1.0 signals potential upside if sentiment improves.  \n- **Diversification**: Pair Microsoft with lower‑priced peers (e.g., Salesforce, Adobe) to balance the growth premium.  \n\n---\n\n**Conclusion**  \nMicrosoft trades at a valuation premium relative to its earnings‑growth profile, as evidenced by a PEG of 1.65× and a P/E above the tech cohort [S3][S8]. While its cloud and AI dominance, coupled with a strong balance sheet, justify part of the premium, the market remains cautious, reflected in near‑level price targets and limited upside [S12]. A tightening‑rate environment could trigger a correction, whereas accelerated growth or improved sentiment could support modest upside. Portfolio managers should weigh the growth premium against the potential for a valuation adjustment in the coming cycle.  \n\n*See Table 1 for yield‑curve shift data.*",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "FRED series GDPC1",
+      "url": "https://fred.stlouisfed.org/series/GDPC1",
+      "source": "FRED",
+      "snippet": "",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub company profile",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub quote",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub recommendation trends",
+      "url": "https://finnhub.io/docs/api/stock-recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Finnhub financials reported",
+      "url": "https://finnhub.io/docs/api/financials-reported",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S5"
+    },
+    {
+      "title": "Finnhub company news",
+      "url": "https://finnhub.io/docs/api/company-news",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S6"
+    },
+    {
+      "title": "Microsoft shares are 'just north' of expensive after earnings, Tim Seymour says",
+      "url": "https://www.cnbc.com/2023/01/24/microsoft-shares-are-just-north-of-expensive-after-earnings-tim-seymour-says.html",
+      "source": "web",
+      "snippet": "Investor Tim Seymour said Microsoft shares remain expensive after the tech giant reported its quarterly earnings. He shared his thoughts on the tech giant's latest quarterly results on CNBC's \" Fast Money \" Tuesday. The software giant beat ",
+      "id": "S7"
+    },
+    {
+      "title": "Microsoft (MSFT) Price To Earnings To Growth Analysis",
+      "url": "https://www.macroaxis.com/invest/ratio/MSFT/Price-To-Earnings-To-Growth",
+      "source": "web",
+      "snippet": "Microsoft's price/earnings-to-growth ratio is 1.65 X, compared with 34.0% for return on equity. The chart below places those reported periods side by side.",
+      "id": "S8"
+    },
+    {
+      "title": "Microsoft Stock Is Falling as Artificial Intelligence (AI) Growth Is Getting More Expensive",
+      "url": "https://finance.yahoo.com/news/microsoft-stock-falling-artificial-intelligence-091500528.html",
+      "source": "web",
+      "snippet": "1. Crypto     Crypto 2. AI     AI  Motley Fool  # Microsoft Stock Is Falling as Artificial Intelligence (AI) Growth Is Getting More Expensive  John Ballard, The Motley Fool  4 min read   MSFT    -1.93%  Share prices of Microsoft (NASDAQ: MS",
+      "id": "S9"
+    },
+    {
+      "title": "Valuing Microsoft: Attractive or Still Too Expensive?",
+      "url": "https://moatsmargins1.substack.com/p/valuing-microsoft-attractive-or-still",
+      "source": "web",
+      "snippet": "The recent market decline has brought the valuation down meaningfully from its all-time high. As a result, the stock may now be more attractively priced than it has been in recent years.  To answer that question properly, the valuation is b",
+      "id": "S10"
+    },
+    {
+      "title": "Should You Buy Microsoft Stock Now or Wait for a Dip?",
+      "url": "https://finance.yahoo.com/news/buy-microsoft-stock-now-wait-000000362.html",
+      "source": "web",
+      "snippet": "Motley Fool  # Should You Buy Microsoft Stock Now or Wait for a Dip?  David Jagielski, The Motley Fool  4 min read   MSFT    +2.19%  ## Key Points   Microsoft is trading at all-time highs and nearly 40 times its trailing earnings.  Its grow",
+      "id": "S11"
+    },
+    {
+      "title": "Microsoft (MSFT) Stock Price, News & Analysis",
+      "url": "https://www.marketbeat.com/stocks/NASDAQ/MSFT",
+      "source": "web",
+      "snippet": "#### Upside/Downside  The consensus price target for Microsoft is close to its current price, suggesting limited near-term upside or downside.  #### Amount of Analyst Coverage  Microsoft has been the subject of 36 research reports in the pa",
+      "id": "S12"
+    }
+  ],
+  "citations_used": [
+    "S12",
+    "S3",
+    "S5",
+    "S8"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Real GDP (GDPC1)",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2020-07-01",
+          20558.879
+        ],
+        [
+          "2020-10-01",
+          20791.917
+        ],
+        [
+          "2021-01-01",
+          21106.619
+        ],
+        [
+          "2021-04-01",
+          21474.077
+        ],
+        [
+          "2021-07-01",
+          21641.672
+        ],
+        [
+          "2021-10-01",
+          22001.64
+        ],
+        [
+          "2022-01-01",
+          21945.682
+        ],
+        [
+          "2022-04-01",
+          21976.292
+        ],
+        [
+          "2022-07-01",
+          22124.384
+        ],
+        [
+          "2022-10-01",
+          22272.546
+        ],
+        [
+          "2023-01-01",
+          22456.938
+        ],
+        [
+          "2023-04-01",
+          22577.556
+        ],
+        [
+          "2023-07-01",
+          22828.796
+        ],
+        [
+          "2023-10-01",
+          23033.25
+        ],
+        [
+          "2024-01-01",
+          23115.975
+        ],
+        [
+          "2024-04-01",
+          23320.074
+        ],
+        [
+          "2024-07-01",
+          23501.76
+        ],
+        [
+          "2024-10-01",
+          23641.759
+        ],
+        [
+          "2025-01-01",
+          23650.213
+        ],
+        [
+          "2025-04-01",
+          23884.563
+        ],
+        [
+          "2025-07-01",
+          24112.966
+        ],
+        [
+          "2025-10-01",
+          24125.479
+        ],
+        [
+          "2026-01-01",
+          24274.383
+        ],
+        [
+          "2026-04-01",
+          24408.011
+        ]
+      ]
+    },
+    {
+      "title": "MSFT Company Profile",
+      "columns": [
+        "ticker",
+        "name",
+        "country",
+        "currency",
+        "estimateCurrency",
+        "exchange",
+        "ipo",
+        "marketCapitalization",
+        "logo",
+        "shareOutstanding",
+        "finnhubIndustry",
+        "phone",
+        "weburl",
+        "floatingShare"
+      ],
+      "rows": [
+        [
+          "MSFT",
+          "Microsoft Corp",
+          "US",
+          "USD",
+          "USD",
+          "NASDAQ NMS - GLOBAL MARKET",
+          "1986-03-13",
+          3928484.8170223115,
+          "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/MSFT.png",
+          7425.55,
+          "Technology",
+          "14258828080",
+          "https://www.microsoft.com/en-in/",
+          7417.87
+        ]
+      ]
+    },
+    {
+      "title": "MSFT Quote",
+      "columns": [
+        "c",
+        "d",
+        "dp",
+        "h",
+        "l",
+        "o",
+        "pc",
+        "t"
+      ],
+      "rows": [
+        [
+          529.05,
+          -10.39,
+          -1.9261,
+          543.82,
+          524.43,
+          541.31,
+          539.44,
+          1792180800
+        ]
+      ]
+    },
+    {
+      "title": "MSFT Analyst Recommendation Trends",
+      "columns": [
+        "symbol",
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "MSFT",
+          "2026-09-01",
+          23,
+          41,
+          5,
+          0,
+          0
+        ],
+        [
+          "MSFT",
+          "2026-08-01",
+          23,
+          41,
+          5,
+          0,
+          0
+        ],
+        [
+          "MSFT",
+          "2026-07-01",
+          23,
+          40,
+          5,
+          0,
+          0
+        ],
+        [
+          "MSFT",
+          "2026-06-01",
+          23,
+          38,
+          5,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "MSFT Financials (Reported)",
+      "columns": [],
+      "rows": []
+    },
+    {
+      "title": "MSFT Recent News (Top 6)",
+      "columns": [
+        "datetime",
+        "headline",
+        "source",
+        "url"
+      ],
+      "rows": [
+        [
+          1792330080,
+          "Own VGT? Here's How Much of It Is Really Nvidia, Apple, Microsoft, and Broadcom.",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=997c82bec29b639e1cac57a3bdc3156b75a04e58d14b2b935bca4a0e3da0bab0"
+        ],
+        [
+          1792329011,
+          "Top 3 British Penny Stocks To Watch In October 2026",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=a01205eafd5fba1b3d6846ac6bd3d4e6f1b040800b43ca7cbf9bfdd804e7f01f"
+        ],
+        [
+          1792318285,
+          "3 UK Grid Stocks Retail Investors Are Watching for AI Data Centre Power",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=6b6c1704734a29d752cd6a9c72ca62e5bfcc3f298beb11af374bd4a1f9263af3"
+        ],
+        [
+          1792317173,
+          "Microsoft pulls out of UK data centre deal with Nscale, Telegraph reports",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=853494d3498dd63d09406def43814b44a1cf00dada6b2eac44b47d63a106b801"
+        ],
+        [
+          1792312981,
+          "Where Will Microsoft Stock Be in 2030?",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=2c6fb008f942f29ba72f6dac65494eff81cf93c36b5ffc0bf565ea99ee4ba5c8"
+        ],
+        [
+          1792312270,
+          "Microsoft Scraps UK Data Center Deal With Nscale, Telegraph Says",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=0404698d37ae0470876a3d08c806c15c45ff75be24b431f9bcc70a82954b7a1c"
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Real GDP (GDPC1)",
+      "type": "line",
+      "x": [
+        "1981-07-01",
+        "1981-10-01",
+        "1982-01-01",
+        "1982-04-01",
+        "1982-07-01",
+        "1982-10-01",
+        "1983-01-01",
+        "1983-04-01",
+        "1983-07-01",
+        "1983-10-01",
+        "1984-01-01",
+        "1984-04-01",
+        "1984-07-01",
+        "1984-10-01",
+        "1985-01-01",
+        "1985-04-01",
+        "1985-07-01",
+        "1985-10-01",
+        "1986-01-01",
+        "1986-04-01",
+        "1986-07-01",
+        "1986-10-01",
+        "1987-01-01",
+        "1987-04-01",
+        "1987-07-01",
+        "1987-10-01",
+        "1988-01-01",
+        "1988-04-01",
+        "1988-07-01",
+        "1988-10-01",
+        "1989-01-01",
+        "1989-04-01",
+        "1989-07-01",
+        "1989-10-01",
+        "1990-01-01",
+        "1990-04-01",
+        "1990-07-01",
+        "1990-10-01",
+        "1991-01-01",
+        "1991-04-01",
+        "1991-07-01",
+        "1991-10-01",
+        "1992-01-01",
+        "1992-04-01",
+        "1992-07-01",
+        "1992-10-01",
+        "1993-01-01",
+        "1993-04-01",
+        "1993-07-01",
+        "1993-10-01",
+        "1994-01-01",
+        "1994-04-01",
+        "1994-07-01",
+        "1994-10-01",
+        "1995-01-01",
+        "1995-04-01",
+        "1995-07-01",
+        "1995-10-01",
+        "1996-01-01",
+        "1996-04-01",
+        "1996-07-01",
+        "1996-10-01",
+        "1997-01-01",
+        "1997-04-01",
+        "1997-07-01",
+        "1997-10-01",
+        "1998-01-01",
+        "1998-04-01",
+        "1998-07-01",
+        "1998-10-01",
+        "1999-01-01",
+        "1999-04-01",
+        "1999-07-01",
+        "1999-10-01",
+        "2000-01-01",
+        "2000-04-01",
+        "2000-07-01",
+        "2000-10-01",
+        "2001-01-01",
+        "2001-04-01",
+        "2001-07-01",
+        "2001-10-01",
+        "2002-01-01",
+        "2002-04-01",
+        "2002-07-01",
+        "2002-10-01",
+        "2003-01-01",
+        "2003-04-01",
+        "2003-07-01",
+        "2003-10-01",
+        "2004-01-01",
+        "2004-04-01",
+        "2004-07-01",
+        "2004-10-01",
+        "2005-01-01",
+        "2005-04-01",
+        "2005-07-01",
+        "2005-10-01",
+        "2006-01-01",
+        "2006-04-01",
+        "2006-07-01",
+        "2006-10-01",
+        "2007-01-01",
+        "2007-04-01",
+        "2007-07-01",
+        "2007-10-01",
+        "2008-01-01",
+        "2008-04-01",
+        "2008-07-01",
+        "2008-10-01",
+        "2009-01-01",
+        "2009-04-01",
+        "2009-07-01",
+        "2009-10-01",
+        "2010-01-01",
+        "2010-04-01",
+        "2010-07-01",
+        "2010-10-01",
+        "2011-01-01",
+        "2011-04-01",
+        "2011-07-01",
+        "2011-10-01",
+        "2012-01-01",
+        "2012-04-01",
+        "2012-07-01",
+        "2012-10-01",
+        "2013-01-01",
+        "2013-04-01",
+        "2013-07-01",
+        "2013-10-01",
+        "2014-01-01",
+        "2014-04-01",
+        "2014-07-01",
+        "2014-10-01",
+        "2015-01-01",
+        "2015-04-01",
+        "2015-07-01",
+        "2015-10-01",
+        "2016-01-01",
+        "2016-04-01",
+        "2016-07-01",
+        "2016-10-01",
+        "2017-01-01",
+        "2017-04-01",
+        "2017-07-01",
+        "2017-10-01",
+        "2018-01-01",
+        "2018-04-01",
+        "2018-07-01",
+        "2018-10-01",
+        "2019-01-01",
+        "2019-04-01",
+        "2019-07-01",
+        "2019-10-01",
+        "2020-01-01",
+        "2020-04-01",
+        "2020-07-01",
+        "2020-10-01",
+        "2021-01-01",
+        "2021-04-01",
+        "2021-07-01",
+        "2021-10-01",
+        "2022-01-01",
+        "2022-04-01",
+        "2022-07-01",
+        "2022-10-01",
+        "2023-01-01",
+        "2023-04-01",
+        "2023-07-01",
+        "2023-10-01",
+        "2024-01-01",
+        "2024-04-01",
+        "2024-07-01",
+        "2024-10-01",
+        "2025-01-01",
+        "2025-04-01",
+        "2025-07-01",
+        "2025-10-01",
+        "2026-01-01",
+        "2026-04-01"
+      ],
+      "y": [
+        7492.405,
+        7410.768,
+        7295.631,
+        7328.912,
+        7300.896,
+        7303.817,
+        7400.066,
+        7568.456,
+        7719.746,
+        7880.794,
+        8034.847,
+        8173.67,
+        8252.465,
+        8320.199,
+        8400.82,
+        8474.787,
+        8604.22,
+        8668.188,
+        8749.127,
+        8788.524,
+        8872.601,
+        8920.193,
+        8986.367,
+        9083.256,
+        9162.024,
+        9319.332,
+        9367.502,
+        9490.594,
+        9546.206,
+        9673.405,
+        9771.725,
+        9846.293,
+        9919.228,
+        9938.767,
+        10047.386,
+        10083.855,
+        10090.569,
+        9998.704,
+        9951.916,
+        10029.51,
+        10080.195,
+        10115.329,
+        10236.435,
+        10347.429,
+        10449.673,
+        10558.648,
+        10576.275,
+        10637.847,
+        10688.606,
+        10833.987,
+        10939.116,
+        11087.361,
+        11152.176,
+        11279.932,
+        11319.951,
+        11353.721,
+        11450.31,
+        11528.067,
+        11614.418,
+        11808.14,
+        11914.063,
+        12037.775,
+        12115.472,
+        12317.221,
+        12471.01,
+        12577.495,
+        12703.742,
+        12821.339,
+        12982.752,
+        13191.67,
+        13315.597,
+        13426.748,
+        13604.771,
+        13827.98,
+        13878.147,
+        14130.908,
+        14145.312,
+        14229.765,
+        14183.12,
+        14271.694,
+        14214.516,
+        14253.574,
+        14372.785,
+        14460.848,
+        14519.633,
+        14537.58,
+        14614.141,
+        14743.567,
+        14988.782,
+        15162.76,
+        15248.68,
+        15366.85,
+        15512.619,
+        15670.88,
+        15844.727,
+        15922.782,
+        16047.587,
+        16136.734,
+        16353.835,
+        16396.151,
+        16420.738,
+        16561.866,
+        16611.69,
+        16713.314,
+        16809.587,
+        16915.191,
+        16843.003,
+        16943.291,
+        16854.295,
+        16485.35,
+        16298.262,
+        16269.145,
+        16326.281,
+        16502.754,
+        16582.71,
+        16743.162,
+        16872.266,
+        16960.864,
+        16920.632,
+        17035.114,
+        17031.313,
+        17222.583,
+        17367.01,
+        17444.525,
+        17469.65,
+        17489.852,
+        17662.4,
+        17709.671,
+        17860.45,
+        18016.147,
+        17953.974,
+        18185.911,
+        18406.941,
+        18500.031,
+        18666.621,
+        18782.243,
+        18857.418,
+        18892.206,
+        19001.69,
+        19062.709,
+        19197.938,
+        19304.352,
+        19398.343,
+        19506.949,
+        19660.766,
+        19882.352,
+        20044.077,
+        20150.476,
+        20276.154,
+        20304.874,
+        20431.641,
+        20602.275,
+        20843.322,
+        20985.448,
+        20709.212,
+        19077.992,
+        20558.879,
+        20791.917,
+        21106.619,
+        21474.077,
+        21641.672,
+        22001.64,
+        21945.682,
+        21976.292,
+        22124.384,
+        22272.546,
+        22456.938,
+        22577.556,
+        22828.796,
+        23033.25,
+        23115.975,
+        23320.074,
+        23501.76,
+        23641.759,
+        23650.213,
+        23884.563,
+        24112.966,
+        24125.479,
+        24274.383,
+        24408.011
+      ],
+      "y_label": "Real GDP"
+    }
+  ],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

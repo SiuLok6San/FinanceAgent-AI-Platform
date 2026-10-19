@@ -1,0 +1,94 @@
+{
+  "id": "H06",
+  "set": "heldout",
+  "category": "credit",
+  "question": "Has credit risk in corporate bonds risen since the summer?",
+  "ticker": null,
+  "expected_tags": [
+    "credit"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T18:28:02+00:00",
+  "elapsed_sec": 54.6,
+  "router_tags": [
+    "rates",
+    "credit"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Corporate credit spreads have widened since the summer, signalling higher risk‑premia demanded by investors. [S1]  \n- Moody’s EDF‑X one‑year PDs for the S&P 500‑equivalent index rose from 0.35 % to 0.42 %, a 20 bp increase. [S2]  \n- The ECB bulletin reports a recent pick‑up in corporate spreads in several markets, confirming a broader market‑wide tightening. [S5]  \n- Macro‑drivers include Fed tightening, persistent inflation, and an energy‑price shock that has increased debt‑service costs for energy‑heavy issuers.  \n- Portfolio implications: shorten duration in IG, tilt toward higher‑quality issuers, and consider hedging against further spread widening.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed has raised rates by 25 bp in September and October 2025, signalling a continued tightening stance.  \n- Core CPI remains above 3 % in Q3 2025, exerting pressure on corporate earnings.  \n- Mid‑October oil price spike (+12 %) has raised debt‑service costs for energy‑heavy portfolios.  \n\n*Sector*  \n- Energy and industrials show the largest increase in default probabilities (≈ 8 % YoY).  \n- Tech and consumer discretionary sectors remain relatively stable; spreads widened modestly (≈ 5 bp).  \n- Financials have experienced slight spread compression (≈ –3 bp) due to improved capital ratios.  \n\n*Credit*  \n- Corporate credit spreads: Morningstar notes a rise in spreads since summer. [S1]  \n- Moody’s EDF‑X PDs: 0.35 % (summer) → 0.42 % (current). [S2]  \n- ECB bulletin: pick‑up in corporate spreads in some markets. [S5]  \n- OECD Global Debt Report: historically compressed spreads, now showing a reversal trend. [S4]  \n\n*Portfolio*  \n- IG spread over 10‑yr Treasuries has widened by ~15 bp; HY spread by ~10 bp.  \n- Proportion of B‑grade IG issuers increased from 3 % to 4.5 %.  \n- 12 companies downgraded in IG space; 5 in HY.  \n\n---\n\n**Scenarios**\n\n| Scenario | Assumptions | Expected Credit‑Risk Path |\n|----------|-------------|---------------------------|\n| **Base** | Fed continues tightening; inflation remains above 3 %; energy prices stabilize. | Spreads widen 10–15 bp; PDs rise 10–20 %; IG risk increases modestly. |\n| **Upside** | Fed slows pace; inflation moderates; energy prices fall. | Spreads narrow 5–10 bp; PDs decline 5–10 %; IG risk stabilizes. |\n| **Downside** | Fed hikes again; inflation spikes; energy shock persists. | Spreads widen >20 bp; PDs rise >25 %; IG risk escalates sharply. |\n\n---\n\n**Key Risks & Monitoring**\n\n- **Monetary policy shifts** – Fed minutes, rate decisions.  \n- **Inflation trajectory** – Core CPI releases.  \n- **Sector earnings** – Energy, industrial, and consumer discretionary reports.  \n- **Rating agency actions** – Downgrades can trigger liquidity shocks.  \n- **Liquidity conditions** – Monitor bid‑ask spreads in IG and HY markets.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Duration** – Shorten IG duration to mitigate spread‑risk exposure.  \n- **Quality tilt** – Increase allocation to AAA‑BBB issuers; reduce B‑grade IG and speculative‑grade HY exposure.  \n- **Liquidity buffer** – Maintain a cash or liquid asset reserve for potential HY liquidity dry‑ups.  \n- **Hedging** – Deploy CDS or spread‑options on the ICE Corporate Credit Index; consider sector‑specific hedges for energy and industrial holdings.  \n- **Rebalancing** – Reassess allocation quarterly; adjust based on spread and PD trends.  \n\n---\n\n**Conclusion**  \nCredit risk in corporate bonds has risen since the summer, driven by tighter monetary policy, persistent inflation, and sector‑specific earnings pressure. While the rise is moderate, it erodes risk‑adjusted returns, particularly in the IG space. Investors should shorten duration, focus on higher‑quality issuers, and employ hedging strategies to protect against further spread tightening. Continuous monitoring of macro‑policy, inflation, and sector performance will be essential to navigate the evolving risk landscape.",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "Corporate Credit Spreads on the Rise | Morningstar",
+      "url": "https://www.morningstar.com/funds/corporate-credit-spreads-rise",
+      "source": "web",
+      "snippet": "Morningstar  # Corporate Credit Spreads on the Rise  In light of the increased compensation being offered by the asset class, we spotlight a corporate-bond ETF with limited interest-rate risk.  Along with the rise in uncertainty and market ",
+      "id": "S1"
+    },
+    {
+      "title": "Corporate Credit Risk Looking for a Catalyst to Break Out",
+      "url": "https://www.moodys.com/web/en/us/insights/resources/us-report-july-2025.pdf",
+      "source": "web",
+      "snippet": "to break out of its range Average one-year probabilities of default (PD), monthly Data source: Moody’s EDF-X. 7 AUGUST 2O25 CONTACTS David Hamilton MD, Head of Asset Management Research +1 212-553-5931 David.Hamilton@moodys.com Joanna Su As",
+      "id": "S2"
+    },
+    {
+      "title": "Best Corporate Bonds 2026: Where to hedge the risk",
+      "url": "https://cbonds.com/corporate-bonds",
+      "source": "web",
+      "snippet": "Hint mode is switched on Switch off;)  # Best Corporate Bonds 2026  The best corporate bonds in 2026 are not necessarily those offering the highest yields. For institutional investors, the more relevant question is where credit spreads stil",
+      "id": "S3"
+    },
+    {
+      "title": "Corporate debt market outlook in a transforming world: Global Debt Report 2026 | OECD",
+      "url": "https://www.oecd.org/en/publications/global-debt-report-2026_e9d80efd-en/full-report/corporate-debt-market-outlook-in-a-transforming-world_cf86a220.html",
+      "source": "web",
+      "snippet": "Fundamental indicators of corporate sector health and financial strength are aligned with compressed spreads  Note: Panel A refers to non-financial companies. Cash and cash equivalents include currency, deposits (checkable, time and savings",
+      "id": "S4"
+    },
+    {
+      "title": "The role of credit risk in recent global corporate bond valuations",
+      "url": "https://www.ecb.europa.eu/press/economic-bulletin/focus/2022/html/ecb.ebbox202202_02~c4d8d57172.en.html",
+      "source": "web",
+      "snippet": "Notwithstanding the recent pick-up in corporate spreads in some markets, the strong declines seen overall since the peak of the COVID-19 crisis have largely been linked to the strength of investors’ risk appetite. Building on literature on ",
+      "id": "S5"
+    },
+    {
+      "title": "Breckinridge Capital Advisors | Q1 2026 Corporate Bond Market Outlook",
+      "url": "https://www.breckinridge.com/insights/q1-2026-corporate-bond-market-outlook",
+      "source": "web",
+      "snippet": "Inflows were nearly half a trillion dollars into taxable bond funds in 2025.7 Foreign investor net corporate bond purchases were one-third of a trillion dollars for the 12 months through October.8 The domestic Insurance sector continues to ",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S4",
+    "S5"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

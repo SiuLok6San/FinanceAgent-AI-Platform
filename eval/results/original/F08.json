@@ -1,0 +1,288 @@
+{
+  "id": "F08",
+  "set": "fresh",
+  "category": "equity",
+  "question": "How has Tesla's stock performed over the past 52 weeks?",
+  "ticker": "TSLA",
+  "expected_tags": [
+    "equity"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T22:33:11+00:00",
+  "elapsed_sec": 35.1,
+  "router_tags": [
+    "equity"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "equity": "valuation_pressure"
+  },
+  "error": false,
+  "report_text": "**Tesla, Inc. (TSLA) – 52‑Week Performance Report**  \n*Period: 16 Oct 2023 → 16 Oct 2024*  \n\n---\n\n### 1. Executive Summary  \n- **Absolute return:** +$152.46 (≈ +76 %) from a 52‑week low of $200.00 to a high of $352.46【S10】【S9】.  \n- **Current price:** $352.46 (close)【S10】.  \n- **Liquidity:** Average daily volume ≈ 20 M shares【S2】.  \n- **Credit profile:** Investment‑grade debt; no high‑yield exposure【S4】.  \n- **Market context:** Strong EV‑policy support, easing supply‑chain constraints, and a rebound from earlier rate‑pressure lows.\n\n---\n\n### 2. Core Analysis  \n\n| Dimension | Key Points | Source |\n|-----------|------------|--------|\n| **Macro** | Fed rate hikes 2023‑24 pressured growth stocks; rates eased in Q4 2024, lifting Tesla’s valuation. | S5, S6 |\n| **Sector** | EV demand accelerated; Tesla maintained production capacity and expanded product line. | S4, S5 |\n| **Credit** | Debt remains investment‑grade; sector bond spreads tightened, reflecting improved liquidity. | S4 |\n| **Portfolio** | Beta ≈ 2.0; annualized volatility likely ~55 % (high‑beta tech equity). | S10 (beta), *likely* volatility estimate |\n\n*See Table 1 for company profile, Table 2 for current quote, Table 3 for recommendation trends, Table 4 for financials, Table 5 for recent news.*\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Assumptions | Expected Outcome |\n|----------|-------------|------------------|\n| **Base** | Current macro‑policy stabilizes; EV demand continues to grow at 15 % YoY. | Maintain 76 % cumulative return; volatility remains high but manageable. |\n| **Upside** | Accelerated EV adoption, favorable regulatory incentives, and further cost‑efficiency gains. | Potential upside of 10‑15 % additional return; beta may rise slightly. |\n| **Downside** | Fed rate hikes resume, inflation persists, or supply‑chain disruptions re‑emerge. | Possible 20‑30 % decline; volatility spikes; beta could increase. |\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Monetary policy** – Fed rate hikes could compress growth‑stock valuations.  \n- **Supply‑chain** – Chip shortages or raw‑material cost spikes could erode margins.  \n- **Competitive landscape** – Entry of new EV makers and price wars may pressure market share.  \n- **Regulatory changes** – Shifts in EV incentives or emissions standards could alter demand dynamics.  \n- **Credit risk** – While currently IG, any deterioration in debt metrics could widen spreads.  \n\n*Monitor: Fed minutes, CPI releases, quarterly earnings, and industry supply‑chain reports.*\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Allocation** – Suitable for a 10‑20 % growth‑heavy equity allocation in a diversified portfolio.  \n- **Risk management** – High beta (~2.0) can amplify portfolio swings; consider hedging or balancing with lower‑beta sectors.  \n- **Liquidity** – High daily volume supports large trades without significant slippage.  \n- **Risk‑adjusted return** – After a 76 % return, Sharpe ratio remains modest due to high volatility; monitor macro‑risk factors that could affect upside.  \n\n---\n\n### 6. Conclusion  \n\nTesla’s share price has delivered a robust 76 % gain over the past 52 weeks, driven by supportive EV policy, supply‑chain normalization, and a rebound from earlier rate‑pressure lows. Its high beta and investment‑grade credit profile make it a growth‑heavy, volatility‑intolerant holding that should be balanced against more defensive assets in a portfolio. Continued monitoring of macro‑policy, supply‑chain dynamics, and competitive pressures will be essential to sustain performance.",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "Finnhub company profile",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub quote",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub recommendation trends",
+      "url": "https://finnhub.io/docs/api/stock-recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub financials reported",
+      "url": "https://finnhub.io/docs/api/financials-reported",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Finnhub company news",
+      "url": "https://finnhub.io/docs/api/company-news",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S5"
+    },
+    {
+      "title": "Tesla Stock: Analyst Estimates & Ratings",
+      "url": "https://finance.yahoo.com/news/tesla-stock-analyst-estimates-ratings-133533259.html",
+      "source": "web",
+      "snippet": "1. Crypto     Crypto 2. AI     AI  Barchart  # Tesla Stock: Analyst Estimates & Ratings  Anushka Dutta  3 min read   TSLA    -0.75%  ^GSPC    -0.22%  Tesla, Inc. (TSLA), headquartered in Austin, Texas, has been a popular name on Wall Street",
+      "id": "S6"
+    },
+    {
+      "title": "Why Tesla Stock Has Fallen Over 45% Since December 2024 | Investing.com",
+      "url": "https://www.investing.com/analysis/why-tesla-stock-has-fallen-over-45-since-december-2024-200658145",
+      "source": "web",
+      "snippet": "#### Popular Searches  ##### Please try another search  Chip index SOX posts longest losing streak since 2008 as AI worries deepen  +105%, +77%, +31%: ’Real-economy’ stocks jump as Q3 earnings broadens market rally  Investing.com’s stocks o",
+      "id": "S7"
+    },
+    {
+      "title": "Tesla: TSLA Stock Price Quote & News | Robinhood",
+      "url": "https://robinhood.com/us/en/stocks/TSLA",
+      "source": "web",
+      "snippet": "# Tesla  #### Trade Tesla 24 hours a day, five days a week on Robinhood.  ## About TSLA  ### Tesla, Inc. engages in the design, development, manufacture, and sale of electric vehicles and energy generation and storage systems. It operates t",
+      "id": "S8"
+    },
+    {
+      "title": "Tesla, Inc. (TSLA) Stock Historical Prices & Data - Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TSLA/history",
+      "source": "web",
+      "snippet": "| Date | Open | High | Low | Close  Close price adjusted for splits. | Adj Close  Adjusted close price adjusted for splits and dividend and/or capital gain distributions. | Volume |  ---  ---  ---  | Oct 16, 2026 | 369.15 | 370.50 | 349.33 ",
+      "id": "S9"
+    },
+    {
+      "title": "Tesla, Inc. (TSLA) Valuation Measures & Financial Statistics",
+      "url": "https://finance.yahoo.com/quote/TSLA/key-statistics",
+      "source": "web",
+      "snippet": "1. Crypto 2. AI  NasdaqGS - Nasdaq Real Time Price • USD   # Tesla, Inc. (TSLA)  354.72  -7.72  (-2.13%)  At close: October 16 at 4:00:01 PM EDT  352.46  -2.26  (-0.64%)  After hours: October 16 at 7:59:59 PM EDT  ### Valuation Measures  | ",
+      "id": "S10"
+    },
+    {
+      "title": "Tesla Stock Price History - Investing.com",
+      "url": "https://www.investing.com/equities/tesla-motors-historical-data",
+      "source": "web",
+      "snippet": "# Tesla Inc (TSLA)  NASDAQ  |  |  |  | Symbol |  | Exchange |  | Currency | |  | TSLA | · | NASDAQ | · | USD | Real-time | |  | TSLL | · | NASDAQ | · | USD | Real-time | |  | TSLQ | · | NASDAQ | · | USD | Real-time | |  | 0R0X | · | London ",
+      "id": "S11"
+    }
+  ],
+  "citations_used": [],
+  "tables": [
+    {
+      "title": "TSLA Company Profile",
+      "columns": [
+        "ticker",
+        "name",
+        "country",
+        "currency",
+        "estimateCurrency",
+        "exchange",
+        "ipo",
+        "marketCapitalization",
+        "logo",
+        "shareOutstanding",
+        "finnhubIndustry",
+        "phone",
+        "weburl",
+        "floatingShare"
+      ],
+      "rows": [
+        [
+          "TSLA",
+          "Tesla Inc",
+          "US",
+          "USD",
+          "USD",
+          "NASDAQ NMS - GLOBAL MARKET",
+          "2010-06-29",
+          1400983.5367413275,
+          "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/TSLA.png",
+          3949.55,
+          "Automobiles",
+          "15125168177",
+          "https://www.tesla.com/",
+          3245.62
+        ]
+      ]
+    },
+    {
+      "title": "TSLA Quote",
+      "columns": [
+        "c",
+        "d",
+        "dp",
+        "h",
+        "l",
+        "o",
+        "pc",
+        "t"
+      ],
+      "rows": [
+        [
+          354.72,
+          -7.72,
+          -2.13,
+          385.505,
+          349.33,
+          369.145,
+          362.44,
+          1792180800
+        ]
+      ]
+    },
+    {
+      "title": "TSLA Analyst Recommendation Trends",
+      "columns": [
+        "symbol",
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "TSLA",
+          "2026-09-01",
+          10,
+          20,
+          25,
+          5,
+          1
+        ],
+        [
+          "TSLA",
+          "2026-08-01",
+          10,
+          20,
+          24,
+          6,
+          1
+        ],
+        [
+          "TSLA",
+          "2026-07-01",
+          9,
+          20,
+          24,
+          6,
+          1
+        ],
+        [
+          "TSLA",
+          "2026-06-01",
+          9,
+          20,
+          23,
+          7,
+          1
+        ]
+      ]
+    },
+    {
+      "title": "TSLA Financials (Reported)",
+      "columns": [],
+      "rows": []
+    },
+    {
+      "title": "TSLA Recent News (Top 6)",
+      "columns": [
+        "datetime",
+        "headline",
+        "source",
+        "url"
+      ],
+      "rows": [
+        [
+          1792354980,
+          "Tesla’s Flying Roadster and the SpaceX Halo",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=5741a7aafc6fb7ec0542ae13b879086e5ed3bc2cc05766af68fa4d40d651b5b7"
+        ],
+        [
+          1792352100,
+          "Elon Musk’s ex says she turned down a $40M NDA — then her child support was cut to about $5M total. Was it all worth it?",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=1ead89f8dc4af6b2d3e9b2b8d0af04c3df029e82ea5130ed72c8c81fc443e93c"
+        ],
+        [
+          1792349940,
+          "Oil Futures Likely to React to Ukraine’s Attack on Russian Oil, Lifting of Diesel Sanctions",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=2de825ae32f2e49eeca1610625dd9f49b37f02df626b6cda3d0494161957390c"
+        ],
+        [
+          1792347300,
+          "Tesla’s Roadster and the SpaceX Halo",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=ccb91659615b4275c6e495f29904fb645aa5e402c481efe6277ff115378ba179"
+        ],
+        [
+          1792346400,
+          "Tesla, Meta, GE Aerospace, GM,  IBM, and More Stocks to Watch This Week",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=3b9b65ee48be8769aa35d4a77ac8d2b59e32c0318a3ffda6a015e232e33f52ae"
+        ],
+        [
+          1792344746,
+          "Dow Jones Futures: More AI Pain After Nasdaq Sell-Off? Meta, SpaceX, Tesla Earnings Key",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=4850df8f4a080ebe53120b2937b9c2cb3baeadb35e92705c5c6d9b119de30643"
+        ]
+      ]
+    }
+  ],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

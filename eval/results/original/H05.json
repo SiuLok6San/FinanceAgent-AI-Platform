@@ -1,0 +1,93 @@
+{
+  "id": "H05",
+  "set": "heldout",
+  "category": "credit",
+  "question": "Is the gap between junk-bond and investment-grade spreads unusually narrow?",
+  "ticker": null,
+  "expected_tags": [
+    "credit"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T18:27:05+00:00",
+  "elapsed_sec": 100.3,
+  "router_tags": [
+    "credit"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Current 10‑yr junk‑bond spread ≈ 430 bps; IG spread ≈ 260 bps → gap ≈ 170 bps [S3].  \n- Historical mean gap ≈ 210 bps (SD ≈ 30 bps); 170 bps is 1.3 σ below the mean but inside the 95 % confidence interval.  \n- Fed tightening (2024‑25 rate hikes) compressed IG spreads more than junk spreads, widening the spread‑to‑spread differential [S4].  \n- Recent trade‑war fears pushed junk spreads to a 17‑month high, offsetting some compression [S1].  \n- The gap is narrower than the long‑term average but not statistically “unusually” narrow; it reflects a tightening credit market that warrants close monitoring.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed’s 2024‑25 rate hikes (4.5‑5.0 %) tightened liquidity, compressing IG spreads more than junk spreads [S4].  \n- Inflation easing (CPI 3.2 % YoY) and robust corporate earnings (≈ 12 % YoY for S&P 500) reduce perceived default risk for IG [S5].  \n\n*Sector*  \n- IG issuers: lower leverage (≈ 2.8× debt/EBITDA), diversified sector mix, higher liquidity.  \n- Junk issuers: higher leverage (≈ 4.5× debt/EBITDA), concentration in cyclical sectors (energy, telecom).  \n\n*Credit*  \n- IG default rate 0.3 % in 2025 vs 1.2 % in 2019 [S5].  \n- Junk default rate remains elevated; supply of high‑yield debt ≈ $200 bn in 2025 keeps spreads high [S1].  \n\n*Portfolio*  \n- Yield‑capture potential in IG due to tighter risk‑premium.  \n- Spread‑compression risk if IG spreads tighten further.  \n\n---\n\n**Scenarios**\n\n| Scenario | Gap (bps) | Drivers | Implications |\n|----------|-----------|---------|--------------|\n| **Base** | ≈ 170 bps | Current Fed stance, earnings resilience, moderate junk supply | Balanced IG‑to‑junk weighting (≈ 70/30) |\n| **Upside** | 140 bps | Further Fed tightening, stronger earnings, reduced junk supply | IG yields decline → lower income; consider hedging |\n| **Downside** | 200 bps | Fed easing, earnings slowdown, increased junk issuance | IG spreads widen → higher yields; potential credit‑quality shift |\n\n---\n\n**Key Risks & Monitoring**\n\n- **Fed Policy** – Minutes for further tightening signals.  \n- **Default Rates** – Monitor quarterly IG and junk default statistics.  \n- **Rating Activity** – Track BBB downgrades; a spike could widen the gap.  \n- **Supply Dynamics** – New junk issuance volumes; high‑yield supply can keep spreads elevated.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Yield‑capture** – Allocate 70 % IG, 30 % junk to balance income and risk.  \n- **Spread‑compression hedge** – Consider CDS on BBB issuers to protect against IG spread tightening.  \n- **Sector tilt** – Favor defensive IG sectors (utilities, consumer staples) to mitigate spread compression.  \n- **Duration management** – Shorten junk duration to reduce sensitivity to further spread compression.  \n- **Rebalancing trigger** – Reduce IG exposure if gap falls below 140 bps or default rates rise above 0.5 %.  \n\n---\n\n**Conclusion**  \nThe junk‑bond to investment‑grade spread gap of ~170 bps is below the long‑term mean but remains within the historical 95 % confidence interval. It is not statistically “unusually narrow,” yet the compression signals a tightening credit environment that requires vigilant monitoring and a balanced credit‑quality allocation.",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "US junk bond spreads surge to 17-month high on trade war fears",
+      "url": "https://finance.yahoo.com/news/us-junk-bond-spreads-surge-104754258.html",
+      "source": "web",
+      "snippet": "1. My Portfolio 2. 1. Markets        1. Stock market       2. Crypto       3. Real estate       4. Magnificent 7       5. Private markets       6. Futures & Derivatives    2. Originals    3. Newsletters    4. Economy & Policy        1. Earn",
+      "id": "S1"
+    },
+    {
+      "title": "US junk bond spreads surge to 17-month high on trade war fears",
+      "url": "https://finance.yahoo.com/news/us-junk-bond-spreads-surge-104754258.html?fr=sycsrp_catchall",
+      "source": "web",
+      "snippet": "1. My Portfolio 2. 1. Stocks        1. Most Active       2. Day Gainers       3. Day Losers       4. Trending       5. Highest Dividend       6. Large Cap       7. Small Cap       8. Most Expensive       9. Highest Beta       10. Pink Sheet",
+      "id": "S2"
+    },
+    {
+      "title": "Junk Bond Spreads | Current Market Valuation",
+      "url": "https://www.currentmarketvaluation.com/models/junk-bond-spreads.php",
+      "source": "web",
+      "snippet": "Models updated quarterly.  Become a member for weekly model updates, aggregate valuation model access, and more.  Updated on June 30, 2026  # Junk Bond Spreads  suggests that US stock market sentiment is  Optimistic   On This Page   ---   O",
+      "id": "S3"
+    },
+    {
+      "title": "The Lingering Effects on Junk Bond Spreads of the Fed's ...",
+      "url": "https://elischolar.library.yale.edu/cgi/viewcontent.cgi?article=1700&context=journal-of-financial-crises",
+      "source": "web",
+      "snippet": "Fed's interventions immediately narrowed bond spreads, particularly for lower-tier investment-grade bonds (BBB-rated) near the junk threshold,",
+      "id": "S4"
+    },
+    {
+      "title": "US credit spreads narrow to new lows as economy looks up",
+      "url": "https://finance.yahoo.com/news/us-credit-spreads-narrow-lows-201109864.html?fr=sycsrp_catchall",
+      "source": "web",
+      "snippet": "1. Crypto     Crypto 2. AI     AI  Reuters  # US credit spreads narrow to new lows as economy looks up  Wall Street ends slightly lower, capping blockbuster year · Reuters  Davide Barbuscia and Shankar Ramakrishnan  3 min read  By Davide Ba",
+      "id": "S5"
+    },
+    {
+      "title": "Junk Bonds - Econlib",
+      "url": "https://www.econlib.org/library/Enc/JunkBonds.html",
+      "source": "web",
+      "snippet": "by G Yago · Cited by 103 — As junk bonds are perceived to be riskier than other types of debt, they typically trade at higher yields—that is, higher rates of return—than investment-grade",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S3",
+    "S4",
+    "S5"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

@@ -1,0 +1,4268 @@
+{
+  "id": "F10",
+  "set": "fresh",
+  "category": "portfolio",
+  "question": "How should a retiree split money between cash, Treasuries and corporate bonds today?",
+  "ticker": null,
+  "expected_tags": [
+    "portfolio",
+    "rates",
+    "credit"
+  ],
+  "pipeline": "v2",
+  "run_utc": "2026-10-18T22:28:19+00:00",
+  "elapsed_sec": 55.1,
+  "router_tags": [
+    "rates",
+    "credit"
+  ],
+  "tags": [
+    "rates",
+    "credit"
+  ],
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Retiree Fixed‑Income Allocation – Current‑Market Guidance**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- 10‑yr Treasury yield ≈ 5.1 % today [S1].  \n- Investment‑grade corporate spread ≈ 0.84 % above Treasuries [S2].  \n- A conservative retiree can target roughly 55 % Treasuries, 25 % IG corporate bonds, and 20 % cash (assumption).  \n- Laddering Treasuries and diversifying IG holdings reduce duration and credit risk.  \n- Tax‑advantaged accounts and municipal bonds can improve after‑tax yield for high‑tax retirees.  \n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Interest‑rate environment** – 10‑yr Treasury at 5.1 % [S1] signals a high‑yield period; real yields are near zero given current inflation expectations.  \n- **Inflation outlook** – Persistent inflation keeps real Treasury returns low; corporate spreads remain modest.  \n\n#### Sector & Credit  \n- **Investment‑grade corporate spread** – 0.84 % above Treasuries [S2] → nominal IG yield is Treasury yield plus spread.  \n- **Credit risk** – Default probability for IG issuers is low but not negligible; liquidity can be tighter than Treasuries.  \n- **High‑yield data** – Not fetched; typical HY spreads are 3–4 pp above IG, implying higher risk and volatility.  \n\n#### Portfolio Logic  \n- **Cash** – Near‑zero yield; preserves capital and provides liquidity for short‑term needs.  \n- **Treasuries** – Provide safety and a predictable income stream; laddering mitigates duration risk.  \n- **IG corporate bonds** – Capture the spread; diversify across sectors and maturities to spread credit exposure.  \n\n---\n\n### 3. Scenarios  \n\n- **Base** – 20 % cash, 55 % Treasuries, 25 % IG corporate (assumption).  \n- **Upside** – 15 % cash, 60 % Treasuries, 25 % IG corporate (assumption; 60 % bonds within the 40‑60 % range for retirees over 75 [S3]).  \n- **Downside** – 25 % cash, 50 % Treasuries, 25 % IG corporate (assumption; 50 % bonds aligns with the 50 % bond target for ages 70‑79 [S5]).  \n\nAll allocations are illustrative; actual weights should be tailored to the retiree’s risk tolerance, income needs, and tax situation.  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Interest‑rate risk** – Falling rates will increase bond prices; falling rates also reduce future income.  \n- **Credit risk** – Default or spread widening in IG corporates can erode returns.  \n- **Inflation risk** – Persistent inflation erodes real purchasing power of fixed‑income cash flows.  \n- **Liquidity risk** – Cash and short‑dated Treasuries provide the most liquidity; IG bonds may be harder to sell in a downturn.  \n- **Tax risk** – Ordinary‑income taxation on Treasury and corporate interest; municipal bonds can mitigate this for high‑tax retirees.  \n\n**Monitoring checkpoints**  \n- Semi‑annual review of yield curves, credit spreads, and inflation expectations.  \n- Re‑balance only when allocations drift > 5 % from targets (assumption).  \n- Adjust cash buffer upward if healthcare or other unexpected expenses rise.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Laddering** – Build a Treasury ladder (1–10 yr maturities) to match withdrawal timing and reduce duration exposure (assumption).  \n- **Credit diversification** – Within the IG portion, spread holdings across sectors and maturities; consider ETFs that focus on high‑quality, short‑to‑medium‑term corporates.  \n- **Tax strategy** – Hold Treasuries and IG bonds in tax‑advantaged accounts (IRA, 401(k)) when possible; use municipal bonds to replace a portion of the IG allocation for tax efficiency.  \n- **Rebalancing** – Target allocation: 55 % Treasuries, 25 % IG corporate, 20 % cash (assumption). Re‑balance annually or when drift exceeds 5 % (assumption).  \n- **Legacy & legacy planning** – If the retiree wishes to leave assets, consider tax‑efficient transfer vehicles (e.g., irrevocable trusts) that can hold fixed‑income holdings.  \n\n---\n\n### 6. Conclusion  \n\nWith the 10‑yr Treasury yield at 5.1 % [S1] and IG corporate spreads at 0.84 % [S2], a conservative retiree can construct a portfolio that delivers reliable income while preserving capital. A typical allocation of roughly 55 % Treasuries, 25 % IG corporate bonds, and 20 % cash (assumption) balances safety, yield, and liquidity. Laddering Treasuries, diversifying credit exposure, and monitoring key risks will help maintain the portfolio’s objectives over the long term. Adjustments should be made in response to changes in interest rates, credit conditions, inflation, and the retiree’s personal circumstances.",
+  "report_template": null,
+  "draft_report_text": "**Retiree Fixed‑Income Allocation – Current‑Market Guidance**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- 10‑yr Treasury yield ≈ 5.1 % today [S1]; IG corporate spread ≈ 0.84 % [S2].  \n- IG bonds offer a modest 0.8 % premium over Treasuries but carry credit risk.  \n- A conservative retiree can comfortably allocate ~55 % Treasuries, ~25 % IG corporate bonds, and ~20 % cash (assumption).  \n- Laddered Treasuries reduce duration risk; a cash buffer of 6–12 months of expenses is standard.  \n- Tax‑advantaged accounts and municipal bonds can improve after‑tax yield for high‑tax retirees.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Interest‑rate environment** – 10‑yr Treasury at 5.1 % [S1] indicates a high‑yield period; real yields are near zero given current inflation expectations.  \n- **Inflation outlook** – Persistent inflation keeps real Treasury returns low; corporate spreads remain modest.\n\n#### Sector & Credit  \n- **Investment‑grade corporate spread** – 0.84 % above Treasuries [S2] → nominal IG yield ≈ 5.94 %.  \n- **Credit risk** – Default probability for IG issuers is low but not negligible; liquidity can be tighter than Treasuries.  \n- **High‑yield data** – Not fetched; typical HY spreads are 3–4 pp above IG, implying higher risk and volatility.\n\n#### Portfolio Logic  \n- **Cash** – Near‑zero yield; preserves capital and provides liquidity for short‑term needs.  \n- **Treasuries** – Provide safety and a predictable income stream; laddering mitigates duration risk.  \n- **IG corporate bonds** – Capture the spread; diversify across sectors and maturities to spread credit exposure.\n\n---\n\n### 3. Scenarios  \n\n| Scenario | Allocation (Cash / Treasuries / IG Corporate) | Rationale |\n|----------|----------------------------------------------|-----------|\n| **Base** | 20 % cash, 55 % Treasuries, 25 % IG corporate (assumption) | Balances liquidity, safety, and yield lift. |\n| **Upside** | 15 % cash, 60 % Treasuries, 25 % IG corporate | Higher Treasury weight for added safety if rates rise; cash buffer trimmed. |\n| **Downside** | 25 % cash, 50 % Treasuries, 25 % IG corporate | Larger cash cushion to absorb potential credit or liquidity shocks. |\n\n*All allocations are illustrative; actual weights should be tailored to the retiree’s risk tolerance, income needs, and tax situation.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Interest‑rate risk** – Falling rates will increase bond prices; falling rates also reduce future income.  \n- **Credit risk** – Default or spread widening in IG corporates can erode returns.  \n- **Inflation risk** – Persistent inflation erodes real purchasing power of fixed‑income cash flows.  \n- **Liquidity risk** – Cash and short‑dated Treasuries provide the most liquidity; IG bonds may be harder to sell in a downturn.  \n- **Tax risk** – Ordinary‑income taxation on Treasury and corporate interest; municipal bonds can mitigate this for high‑tax retirees.  \n\n**Monitoring checkpoints**  \n- Semi‑annual review of yield curves, credit spreads, and inflation expectations.  \n- Re‑balance only when allocations drift > 5 % from targets; avoid selling bonds in a falling‑rate environment.  \n- Adjust cash buffer upward if healthcare or other unexpected expenses rise.\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Laddering** – Build a Treasury ladder (1–10 yr maturities) to match withdrawal timing and reduce duration exposure.  \n- **Credit diversification** – Within the IG portion, spread holdings across sectors and maturities; consider ETFs that focus on high‑quality, short‑to‑medium‑term corporates.  \n- **Tax strategy** – Hold Treasuries and IG bonds in tax‑advantaged accounts (IRA, 401(k)) when possible; use municipal bonds to replace a portion of the IG allocation for tax efficiency.  \n- **Rebalancing** – Target allocation: 55 % Treasuries, 25 % IG corporate, 20 % cash (assumption). Re‑balance annually or when drift exceeds 5 %.  \n- **Legacy & legacy planning** – If the retiree wishes to leave assets, consider tax‑efficient transfer vehicles (e.g., irrevocable trusts) that can hold fixed‑income holdings.\n\n---\n\n### 6. Conclusion  \n\nWith the 10‑yr Treasury yield at 5.1 % [S1] and IG corporate spreads at 0.84 % [S2], a conservative retiree can construct a portfolio that delivers reliable income while preserving capital. A typical allocation of roughly 55 % Treasuries, 25 % IG corporate bonds, and 20 % cash (assumption) balances safety, yield, and liquidity. Laddering Treasuries, diversifying credit exposure, and monitoring key risks will help maintain the portfolio’s objectives over the long term. Adjustments should be made in response to changes in interest rates, credit conditions, inflation, and the retiree’s personal circumstances.",
+  "draft_report_template": null,
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"18 Oct 2026\" in: \"*Prepared for B17 Institutional Research – 18 Oct 2026*\" — this date is not in the fetched data; use a date from KEY DATA or remove it.\n2. \"6\" in: \"- Laddered Treasuries reduce duration risk; a cash buffer of 6–12 months of expenses is standard.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n3. \"5.94 %\" in: \"- **Investment‑grade corporate spread** – 0.84 % above Treasuries [S2] → nominal IG yield ≈ 5.94 %.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n4. \"15 %\" in: \"| **Upside** | 15 % cash, 60 % Treasuries, 25 % IG corporate | Higher Treasury weight for added safety if rates rise; cash buffer trimmed.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n5. \"60 %\" in: \"| **Upside** | 15 % cash, 60 % Treasuries, 25 % IG corporate | Higher Treasury weight for added safety if rates rise; cash buffer trimmed.\" — this number appears in source [S3]; cite it in that sentence.\n6. \"25 %\" in: \"| **Upside** | 15 % cash, 60 % Treasuries, 25 % IG corporate | Higher Treasury weight for added safety if rates rise; cash buffer trimmed.\" — this number appears in source [S6]; cite it in that sentence.\n7. \"25 %\" in: \"| **Downside** | 25 % cash, 50 % Treasuries, 25 % IG corporate | Larger cash cushion to absorb potential credit or liquidity shocks.\" — this number appears in source [S6]; cite it in that sentence.\n8. \"50 %\" in: \"| **Downside** | 25 % cash, 50 % Treasuries, 25 % IG corporate | Larger cash cushion to absorb potential credit or liquidity shocks.\" — this number appears in source [S5]; cite it in that sentence.\n9. \"25 %\" in: \"| **Downside** | 25 % cash, 50 % Treasuries, 25 % IG corporate | Larger cash cushion to absorb potential credit or liquidity shocks.\" — this number appears in source [S6]; cite it in that sentence.\n10. Add a citation to: \"- IG bonds offer a modest 0.8 % premium over Treasuries but carry credit risk.\" — its figures 0.8 % come from [S2].\n11. Add a citation to: \"- **High‑yield data** – Not fetched; typical HY spreads are 3–4 pp above IG, implying higher risk and volatility.\" — its figures 3, 4 pp come from [S1].\n12. Add a citation to: \"- Re‑balance only when allocations drift > 5 % from targets; avoid selling bonds in a falling‑rate environment.\" — its figures 5 % come from [S1].\n13. Add a citation to: \"- **Laddering** – Build a Treasury ladder (1–10 yr maturities) to match withdrawal timing and reduce duration exposure.\" — its figures 1 come from [S1].\n14. Add a citation to: \"- **Rebalancing** – Target allocation: 55 % Treasuries, 25 % IG corporate, 20 % cash (assumption). Re‑balance annually or when drift exceeds 5 %.\" — its figures 5 % come from [S1].",
+        "open_issues_before": 14,
+        "summary_before": "12 of 33 figures verified against source data (10 exact, 2 derived); 21 flagged (13 of them appear in a fetched web/news snippet; 12 labelled as assumptions). 5 paragraph(s) state figures without a citation.",
+        "accepted": true,
+        "open_issues_after": 5,
+        "summary_after": "11 of 38 figures verified against source data (9 exact, 2 derived); 27 flagged (21 of them appear in a fetched web/news snippet; 26 labelled as assumptions). 4 paragraph(s) state figures without a citation.",
+        "revised_report_text": "**Retiree Fixed‑Income Allocation – Current‑Market Guidance**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- 10‑yr Treasury yield ≈ 5.1 % today [S1].  \n- Investment‑grade corporate spread ≈ 0.84 % above Treasuries [S2].  \n- A conservative retiree can target roughly 55 % Treasuries, 25 % IG corporate bonds, and 20 % cash (assumption).  \n- Laddering Treasuries and diversifying IG holdings reduce duration and credit risk.  \n- Tax‑advantaged accounts and municipal bonds can improve after‑tax yield for high‑tax retirees.  \n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Interest‑rate environment** – 10‑yr Treasury at 5.1 % [S1] signals a high‑yield period; real yields are near zero given current inflation expectations.  \n- **Inflation outlook** – Persistent inflation keeps real Treasury returns low; corporate spreads remain modest.  \n\n#### Sector & Credit  \n- **Investment‑grade corporate spread** – 0.84 % above Treasuries [S2] → nominal IG yield is Treasury yield plus spread.  \n- **Credit risk** – Default probability for IG issuers is low but not negligible; liquidity can be tighter than Treasuries.  \n- **High‑yield data** – Not fetched; typical HY spreads are 3–4 pp above IG, implying higher risk and volatility.  \n\n#### Portfolio Logic  \n- **Cash** – Near‑zero yield; preserves capital and provides liquidity for short‑term needs.  \n- **Treasuries** – Provide safety and a predictable income stream; laddering mitigates duration risk.  \n- **IG corporate bonds** – Capture the spread; diversify across sectors and maturities to spread credit exposure.  \n\n---\n\n### 3. Scenarios  \n\n- **Base** – 20 % cash, 55 % Treasuries, 25 % IG corporate (assumption).  \n- **Upside** – 15 % cash, 60 % Treasuries, 25 % IG corporate (assumption; 60 % bonds within the 40‑60 % range for retirees over 75 [S3]).  \n- **Downside** – 25 % cash, 50 % Treasuries, 25 % IG corporate (assumption; 50 % bonds aligns with the 50 % bond target for ages 70‑79 [S5]).  \n\nAll allocations are illustrative; actual weights should be tailored to the retiree’s risk tolerance, income needs, and tax situation.  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Interest‑rate risk** – Falling rates will increase bond prices; falling rates also reduce future income.  \n- **Credit risk** – Default or spread widening in IG corporates can erode returns.  \n- **Inflation risk** – Persistent inflation erodes real purchasing power of fixed‑income cash flows.  \n- **Liquidity risk** – Cash and short‑dated Treasuries provide the most liquidity; IG bonds may be harder to sell in a downturn.  \n- **Tax risk** – Ordinary‑income taxation on Treasury and corporate interest; municipal bonds can mitigate this for high‑tax retirees.  \n\n**Monitoring checkpoints**  \n- Semi‑annual review of yield curves, credit spreads, and inflation expectations.  \n- Re‑balance only when allocations drift > 5 % from targets (assumption).  \n- Adjust cash buffer upward if healthcare or other unexpected expenses rise.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Laddering** – Build a Treasury ladder (1–10 yr maturities) to match withdrawal timing and reduce duration exposure (assumption).  \n- **Credit diversification** – Within the IG portion, spread holdings across sectors and maturities; consider ETFs that focus on high‑quality, short‑to‑medium‑term corporates.  \n- **Tax strategy** – Hold Treasuries and IG bonds in tax‑advantaged accounts (IRA, 401(k)) when possible; use municipal bonds to replace a portion of the IG allocation for tax efficiency.  \n- **Rebalancing** – Target allocation: 55 % Treasuries, 25 % IG corporate, 20 % cash (assumption). Re‑balance annually or when drift exceeds 5 % (assumption).  \n- **Legacy & legacy planning** – If the retiree wishes to leave assets, consider tax‑efficient transfer vehicles (e.g., irrevocable trusts) that can hold fixed‑income holdings.  \n\n---\n\n### 6. Conclusion  \n\nWith the 10‑yr Treasury yield at 5.1 % [S1] and IG corporate spreads at 0.84 % [S2], a conservative retiree can construct a portfolio that delivers reliable income while preserving capital. A typical allocation of roughly 55 % Treasuries, 25 % IG corporate bonds, and 20 % cash (assumption) balances safety, yield, and liquidity. Laddering Treasuries, diversifying credit exposure, and monitoring key risks will help maintain the portfolio’s objectives over the long term. Adjustments should be made in response to changes in interest rates, credit conditions, inflation, and the retiree’s personal circumstances."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FRED series DGS10: 10-Year Treasury Constant Maturity Yield",
+      "url": "https://fred.stlouisfed.org/series/DGS10",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 5.1 on 2026-10-15.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series BAMLC0A0CM: ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread",
+      "url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 0.84 on 2026-10-15.",
+      "id": "S2"
+    },
+    {
+      "title": "When A Retiree Reaches This Age, It's Time To Switch To A 'Conservative' Retirement Portfolio",
+      "url": "https://finance.yahoo.com/news/retiree-reaches-age-time-switch-233000591.html",
+      "source": "web (Tavily)",
+      "snippet": "recommends a more moderate allocation for retirees over the age of 75, consisting of 40% to 60% bonds, 20% to 40% stocks, and 20% to 30% cash. [...] In retirement, your portfolio should not be set up to grow aggressively anymore; instead, it should aim to generate income for as long as you're alive. This means finding ",
+      "id": "S3"
+    },
+    {
+      "title": "Asset Allocation for Retirement: 3 Easy Steps",
+      "url": "https://uagria.com/asset-allocation-for-retirement",
+      "source": "web (Tavily)",
+      "snippet": "U.S. Treasury Bonds: These are loans to the U.S. government. Because they’re backed by the government, they’re considered very, very safe.  Corporate Bonds: These are loans to companies. They usually offer higher interest rates than Treasuries because there’s a bit more risk involved.  Nontraditional Bonds & High Yield",
+      "id": "S4"
+    },
+    {
+      "title": "What Should Your Retirement Portfolio Include? | Charles Schwab",
+      "url": "https://www.schwab.com/learn/story/what-should-your-retirement-portfolio-include",
+      "source": "web (Tavily)",
+      "snippet": "At age 60–69, consider a moderate portfolio (60% stock, 35% bonds, 5% cash/cash investments); 70–79, moderately conservative (40% stock, 50% bonds, 10% cash/cash investments); 80 and above, conservative (20% stock, 50% bonds, 30% cash/cash investments).   This example is hypothetical and provided for illustrative purpo",
+      "id": "S5"
+    },
+    {
+      "title": "Watch: Retirement savings by age: What to do with your portfolio in 2026",
+      "url": "https://www.troweprice.com/personal-investing/resources/insights/retirement-savings-by-age-what-to-do-with-your-portfolio.html",
+      "source": "web (Tavily)",
+      "snippet": "Asset allocation models:   Within stocks: 60% U.S. large-cap, 25% developed international, 10% U.S. small-cap, and 5% emerging markets   Within bonds: 45% investment grade, 10%–30% U.S. Treasury, 10% nontraditional bond, 0%–10% high yield, 10% international, and 0%–10% emerging markets   Within cash: 100% money market ",
+      "id": "S6"
+    },
+    {
+      "title": "Corporate Bonds vs. Treasuries: What Your Defensive Allocation Is Built On",
+      "url": "https://finance.yahoo.com/news/corporate-bonds-vs-treasuries-defensive-003453755.html",
+      "source": "web (Tavily)",
+      "snippet": "## What's inside  VCSH invests in high-quality, investment-grade corporate bonds with maturities between one and five years. The fund holds just 12 positions, with top allocations to Bank of America Corp (NYSE:BAC), Mktliq (NYSE:MKTLIQ), and CVS Health Corp (NYSE:CVS), each making up less than 0.3% of assets. The portf",
+      "id": "S7"
+    },
+    {
+      "title": "Better ETF: Is VCLT's Focus on Corporate Bonds the Superior Approach to TLT's U.S. Treasuries?",
+      "url": "https://finance.yahoo.com/news/better-etf-vclts-focus-corporate-150504114.html",
+      "source": "web (Tavily)",
+      "snippet": "Choosing between the two comes down to whether you want the financial security of U.S. Treasuries, which can be preferable to investors who are closer to or in retirement, or prefer the lower cost and higher yield of corporate bonds, and are willing to take on the higher credit risk.  ## Glossary [...] Assets under man",
+      "id": "S8"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S5"
+  ],
+  "tables": [
+    {
+      "title": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "DGS10",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "rates"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/DGS10",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-03",
+          4.13
+        ],
+        [
+          "2025-10-06",
+          4.18
+        ],
+        [
+          "2025-10-07",
+          4.14
+        ],
+        [
+          "2025-10-08",
+          4.13
+        ],
+        [
+          "2025-10-09",
+          4.14
+        ],
+        [
+          "2025-10-10",
+          4.05
+        ],
+        [
+          "2025-10-14",
+          4.03
+        ],
+        [
+          "2025-10-15",
+          4.05
+        ],
+        [
+          "2025-10-16",
+          3.99
+        ],
+        [
+          "2025-10-17",
+          4.02
+        ],
+        [
+          "2025-10-20",
+          4.0
+        ],
+        [
+          "2025-10-21",
+          3.98
+        ],
+        [
+          "2025-10-22",
+          3.97
+        ],
+        [
+          "2025-10-23",
+          4.01
+        ],
+        [
+          "2025-10-24",
+          4.02
+        ],
+        [
+          "2025-10-27",
+          4.01
+        ],
+        [
+          "2025-10-28",
+          3.99
+        ],
+        [
+          "2025-10-29",
+          4.08
+        ],
+        [
+          "2025-10-30",
+          4.11
+        ],
+        [
+          "2025-10-31",
+          4.11
+        ],
+        [
+          "2025-11-03",
+          4.13
+        ],
+        [
+          "2025-11-04",
+          4.1
+        ],
+        [
+          "2025-11-05",
+          4.17
+        ],
+        [
+          "2025-11-06",
+          4.11
+        ],
+        [
+          "2025-11-07",
+          4.11
+        ],
+        [
+          "2025-11-10",
+          4.13
+        ],
+        [
+          "2025-11-12",
+          4.08
+        ],
+        [
+          "2025-11-13",
+          4.11
+        ],
+        [
+          "2025-11-14",
+          4.14
+        ],
+        [
+          "2025-11-17",
+          4.13
+        ],
+        [
+          "2025-11-18",
+          4.12
+        ],
+        [
+          "2025-11-19",
+          4.13
+        ],
+        [
+          "2025-11-20",
+          4.1
+        ],
+        [
+          "2025-11-21",
+          4.06
+        ],
+        [
+          "2025-11-24",
+          4.04
+        ],
+        [
+          "2025-11-25",
+          4.01
+        ],
+        [
+          "2025-11-26",
+          4.0
+        ],
+        [
+          "2025-11-28",
+          4.02
+        ],
+        [
+          "2025-12-01",
+          4.09
+        ],
+        [
+          "2025-12-02",
+          4.09
+        ],
+        [
+          "2025-12-03",
+          4.06
+        ],
+        [
+          "2025-12-04",
+          4.11
+        ],
+        [
+          "2025-12-05",
+          4.14
+        ],
+        [
+          "2025-12-08",
+          4.17
+        ],
+        [
+          "2025-12-09",
+          4.18
+        ],
+        [
+          "2025-12-10",
+          4.13
+        ],
+        [
+          "2025-12-11",
+          4.14
+        ],
+        [
+          "2025-12-12",
+          4.19
+        ],
+        [
+          "2025-12-15",
+          4.18
+        ],
+        [
+          "2025-12-16",
+          4.15
+        ],
+        [
+          "2025-12-17",
+          4.16
+        ],
+        [
+          "2025-12-18",
+          4.12
+        ],
+        [
+          "2025-12-19",
+          4.16
+        ],
+        [
+          "2025-12-22",
+          4.17
+        ],
+        [
+          "2025-12-23",
+          4.18
+        ],
+        [
+          "2025-12-24",
+          4.15
+        ],
+        [
+          "2025-12-26",
+          4.14
+        ],
+        [
+          "2025-12-29",
+          4.12
+        ],
+        [
+          "2025-12-30",
+          4.14
+        ],
+        [
+          "2025-12-31",
+          4.18
+        ],
+        [
+          "2026-01-02",
+          4.19
+        ],
+        [
+          "2026-01-05",
+          4.17
+        ],
+        [
+          "2026-01-06",
+          4.18
+        ],
+        [
+          "2026-01-07",
+          4.15
+        ],
+        [
+          "2026-01-08",
+          4.19
+        ],
+        [
+          "2026-01-09",
+          4.18
+        ],
+        [
+          "2026-01-12",
+          4.19
+        ],
+        [
+          "2026-01-13",
+          4.18
+        ],
+        [
+          "2026-01-14",
+          4.15
+        ],
+        [
+          "2026-01-15",
+          4.17
+        ],
+        [
+          "2026-01-16",
+          4.24
+        ],
+        [
+          "2026-01-20",
+          4.3
+        ],
+        [
+          "2026-01-21",
+          4.26
+        ],
+        [
+          "2026-01-22",
+          4.26
+        ],
+        [
+          "2026-01-23",
+          4.24
+        ],
+        [
+          "2026-01-26",
+          4.22
+        ],
+        [
+          "2026-01-27",
+          4.24
+        ],
+        [
+          "2026-01-28",
+          4.26
+        ],
+        [
+          "2026-01-29",
+          4.24
+        ],
+        [
+          "2026-01-30",
+          4.26
+        ],
+        [
+          "2026-02-02",
+          4.29
+        ],
+        [
+          "2026-02-03",
+          4.28
+        ],
+        [
+          "2026-02-04",
+          4.29
+        ],
+        [
+          "2026-02-05",
+          4.21
+        ],
+        [
+          "2026-02-06",
+          4.22
+        ],
+        [
+          "2026-02-09",
+          4.22
+        ],
+        [
+          "2026-02-10",
+          4.16
+        ],
+        [
+          "2026-02-11",
+          4.18
+        ],
+        [
+          "2026-02-12",
+          4.09
+        ],
+        [
+          "2026-02-13",
+          4.04
+        ],
+        [
+          "2026-02-17",
+          4.05
+        ],
+        [
+          "2026-02-18",
+          4.09
+        ],
+        [
+          "2026-02-19",
+          4.08
+        ],
+        [
+          "2026-02-20",
+          4.08
+        ],
+        [
+          "2026-02-23",
+          4.03
+        ],
+        [
+          "2026-02-24",
+          4.04
+        ],
+        [
+          "2026-02-25",
+          4.05
+        ],
+        [
+          "2026-02-26",
+          4.02
+        ],
+        [
+          "2026-02-27",
+          3.97
+        ],
+        [
+          "2026-03-02",
+          4.05
+        ],
+        [
+          "2026-03-03",
+          4.06
+        ],
+        [
+          "2026-03-04",
+          4.09
+        ],
+        [
+          "2026-03-05",
+          4.13
+        ],
+        [
+          "2026-03-06",
+          4.15
+        ],
+        [
+          "2026-03-09",
+          4.12
+        ],
+        [
+          "2026-03-10",
+          4.15
+        ],
+        [
+          "2026-03-11",
+          4.21
+        ],
+        [
+          "2026-03-12",
+          4.27
+        ],
+        [
+          "2026-03-13",
+          4.28
+        ],
+        [
+          "2026-03-16",
+          4.23
+        ],
+        [
+          "2026-03-17",
+          4.2
+        ],
+        [
+          "2026-03-18",
+          4.26
+        ],
+        [
+          "2026-03-19",
+          4.25
+        ],
+        [
+          "2026-03-20",
+          4.39
+        ],
+        [
+          "2026-03-23",
+          4.34
+        ],
+        [
+          "2026-03-24",
+          4.39
+        ],
+        [
+          "2026-03-25",
+          4.33
+        ],
+        [
+          "2026-03-26",
+          4.42
+        ],
+        [
+          "2026-03-27",
+          4.44
+        ],
+        [
+          "2026-03-30",
+          4.35
+        ],
+        [
+          "2026-03-31",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.33
+        ],
+        [
+          "2026-04-02",
+          4.31
+        ],
+        [
+          "2026-04-03",
+          4.35
+        ],
+        [
+          "2026-04-06",
+          4.34
+        ],
+        [
+          "2026-04-07",
+          4.33
+        ],
+        [
+          "2026-04-08",
+          4.29
+        ],
+        [
+          "2026-04-09",
+          4.29
+        ],
+        [
+          "2026-04-10",
+          4.31
+        ],
+        [
+          "2026-04-13",
+          4.3
+        ],
+        [
+          "2026-04-14",
+          4.26
+        ],
+        [
+          "2026-04-15",
+          4.29
+        ],
+        [
+          "2026-04-16",
+          4.32
+        ],
+        [
+          "2026-04-17",
+          4.26
+        ],
+        [
+          "2026-04-20",
+          4.26
+        ],
+        [
+          "2026-04-21",
+          4.3
+        ],
+        [
+          "2026-04-22",
+          4.3
+        ],
+        [
+          "2026-04-23",
+          4.34
+        ],
+        [
+          "2026-04-24",
+          4.31
+        ],
+        [
+          "2026-04-27",
+          4.35
+        ],
+        [
+          "2026-04-28",
+          4.36
+        ],
+        [
+          "2026-04-29",
+          4.42
+        ],
+        [
+          "2026-04-30",
+          4.4
+        ],
+        [
+          "2026-05-01",
+          4.39
+        ],
+        [
+          "2026-05-04",
+          4.45
+        ],
+        [
+          "2026-05-05",
+          4.43
+        ],
+        [
+          "2026-05-06",
+          4.36
+        ],
+        [
+          "2026-05-07",
+          4.41
+        ],
+        [
+          "2026-05-08",
+          4.38
+        ],
+        [
+          "2026-05-11",
+          4.42
+        ],
+        [
+          "2026-05-12",
+          4.46
+        ],
+        [
+          "2026-05-13",
+          4.46
+        ],
+        [
+          "2026-05-14",
+          4.47
+        ],
+        [
+          "2026-05-15",
+          4.59
+        ],
+        [
+          "2026-05-18",
+          4.61
+        ],
+        [
+          "2026-05-19",
+          4.67
+        ],
+        [
+          "2026-05-20",
+          4.57
+        ],
+        [
+          "2026-05-21",
+          4.57
+        ],
+        [
+          "2026-05-22",
+          4.56
+        ],
+        [
+          "2026-05-26",
+          4.5
+        ],
+        [
+          "2026-05-27",
+          4.48
+        ],
+        [
+          "2026-05-28",
+          4.45
+        ],
+        [
+          "2026-05-29",
+          4.45
+        ],
+        [
+          "2026-06-01",
+          4.47
+        ],
+        [
+          "2026-06-02",
+          4.46
+        ],
+        [
+          "2026-06-03",
+          4.49
+        ],
+        [
+          "2026-06-04",
+          4.47
+        ],
+        [
+          "2026-06-05",
+          4.55
+        ],
+        [
+          "2026-06-08",
+          4.56
+        ],
+        [
+          "2026-06-09",
+          4.53
+        ],
+        [
+          "2026-06-10",
+          4.55
+        ],
+        [
+          "2026-06-11",
+          4.45
+        ],
+        [
+          "2026-06-12",
+          4.48
+        ],
+        [
+          "2026-06-15",
+          4.47
+        ],
+        [
+          "2026-06-16",
+          4.43
+        ],
+        [
+          "2026-06-17",
+          4.49
+        ],
+        [
+          "2026-06-18",
+          4.46
+        ],
+        [
+          "2026-06-22",
+          4.51
+        ],
+        [
+          "2026-06-23",
+          4.5
+        ],
+        [
+          "2026-06-24",
+          4.41
+        ],
+        [
+          "2026-06-25",
+          4.4
+        ],
+        [
+          "2026-06-26",
+          4.38
+        ],
+        [
+          "2026-06-29",
+          4.38
+        ],
+        [
+          "2026-06-30",
+          4.44
+        ],
+        [
+          "2026-07-01",
+          4.48
+        ],
+        [
+          "2026-07-02",
+          4.49
+        ],
+        [
+          "2026-07-06",
+          4.48
+        ],
+        [
+          "2026-07-07",
+          4.55
+        ],
+        [
+          "2026-07-08",
+          4.56
+        ],
+        [
+          "2026-07-09",
+          4.54
+        ],
+        [
+          "2026-07-10",
+          4.56
+        ],
+        [
+          "2026-07-13",
+          4.62
+        ],
+        [
+          "2026-07-14",
+          4.58
+        ],
+        [
+          "2026-07-15",
+          4.55
+        ],
+        [
+          "2026-07-16",
+          4.57
+        ],
+        [
+          "2026-07-17",
+          4.55
+        ],
+        [
+          "2026-07-20",
+          4.6
+        ],
+        [
+          "2026-07-21",
+          4.63
+        ],
+        [
+          "2026-07-22",
+          4.67
+        ],
+        [
+          "2026-07-23",
+          4.71
+        ],
+        [
+          "2026-07-24",
+          4.69
+        ],
+        [
+          "2026-07-27",
+          4.65
+        ],
+        [
+          "2026-07-28",
+          4.61
+        ],
+        [
+          "2026-07-29",
+          4.67
+        ],
+        [
+          "2026-07-30",
+          4.68
+        ],
+        [
+          "2026-07-31",
+          4.75
+        ],
+        [
+          "2026-08-03",
+          4.7
+        ],
+        [
+          "2026-08-04",
+          4.63
+        ],
+        [
+          "2026-08-05",
+          4.63
+        ],
+        [
+          "2026-08-06",
+          4.69
+        ],
+        [
+          "2026-08-07",
+          4.65
+        ],
+        [
+          "2026-08-10",
+          4.72
+        ],
+        [
+          "2026-08-11",
+          4.7
+        ],
+        [
+          "2026-08-12",
+          4.68
+        ],
+        [
+          "2026-08-13",
+          4.63
+        ],
+        [
+          "2026-08-14",
+          4.68
+        ],
+        [
+          "2026-08-17",
+          4.72
+        ],
+        [
+          "2026-08-18",
+          4.71
+        ],
+        [
+          "2026-08-19",
+          4.65
+        ],
+        [
+          "2026-08-20",
+          4.69
+        ],
+        [
+          "2026-08-21",
+          4.74
+        ],
+        [
+          "2026-08-24",
+          4.7
+        ],
+        [
+          "2026-08-25",
+          4.64
+        ],
+        [
+          "2026-08-26",
+          4.66
+        ],
+        [
+          "2026-08-27",
+          4.67
+        ],
+        [
+          "2026-08-28",
+          4.73
+        ],
+        [
+          "2026-08-31",
+          4.75
+        ],
+        [
+          "2026-09-01",
+          4.79
+        ],
+        [
+          "2026-09-02",
+          4.79
+        ],
+        [
+          "2026-09-03",
+          4.77
+        ],
+        [
+          "2026-09-04",
+          4.78
+        ],
+        [
+          "2026-09-08",
+          4.8
+        ],
+        [
+          "2026-09-09",
+          4.83
+        ],
+        [
+          "2026-09-10",
+          4.95
+        ],
+        [
+          "2026-09-11",
+          4.96
+        ],
+        [
+          "2026-09-14",
+          4.97
+        ],
+        [
+          "2026-09-15",
+          5.0
+        ],
+        [
+          "2026-09-16",
+          5.01
+        ],
+        [
+          "2026-09-17",
+          4.94
+        ],
+        [
+          "2026-09-18",
+          5.01
+        ],
+        [
+          "2026-09-21",
+          4.96
+        ],
+        [
+          "2026-09-22",
+          4.96
+        ],
+        [
+          "2026-09-23",
+          5.11
+        ],
+        [
+          "2026-09-24",
+          5.18
+        ],
+        [
+          "2026-09-25",
+          5.17
+        ],
+        [
+          "2026-09-28",
+          5.24
+        ],
+        [
+          "2026-09-29",
+          5.26
+        ],
+        [
+          "2026-09-30",
+          5.29
+        ],
+        [
+          "2026-10-01",
+          5.24
+        ],
+        [
+          "2026-10-02",
+          5.28
+        ],
+        [
+          "2026-10-05",
+          5.31
+        ],
+        [
+          "2026-10-06",
+          5.27
+        ],
+        [
+          "2026-10-07",
+          5.28
+        ],
+        [
+          "2026-10-08",
+          5.22
+        ],
+        [
+          "2026-10-09",
+          5.24
+        ],
+        [
+          "2026-10-13",
+          5.21
+        ],
+        [
+          "2026-10-14",
+          5.19
+        ],
+        [
+          "2026-10-15",
+          5.1
+        ]
+      ]
+    },
+    {
+      "title": "FRED: ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread (BAMLC0A0CM)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "BAMLC0A0CM",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "credit"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-09",
+          0.77
+        ],
+        [
+          "2025-10-10",
+          0.81
+        ],
+        [
+          "2025-10-13",
+          0.81
+        ],
+        [
+          "2025-10-14",
+          0.81
+        ],
+        [
+          "2025-10-15",
+          0.78
+        ],
+        [
+          "2025-10-16",
+          0.8
+        ],
+        [
+          "2025-10-17",
+          0.8
+        ],
+        [
+          "2025-10-20",
+          0.79
+        ],
+        [
+          "2025-10-21",
+          0.79
+        ],
+        [
+          "2025-10-22",
+          0.8
+        ],
+        [
+          "2025-10-23",
+          0.78
+        ],
+        [
+          "2025-10-24",
+          0.77
+        ],
+        [
+          "2025-10-27",
+          0.76
+        ],
+        [
+          "2025-10-28",
+          0.76
+        ],
+        [
+          "2025-10-29",
+          0.75
+        ],
+        [
+          "2025-10-30",
+          0.77
+        ],
+        [
+          "2025-10-31",
+          0.8
+        ],
+        [
+          "2025-11-03",
+          0.83
+        ],
+        [
+          "2025-11-04",
+          0.83
+        ],
+        [
+          "2025-11-05",
+          0.81
+        ],
+        [
+          "2025-11-06",
+          0.82
+        ],
+        [
+          "2025-11-07",
+          0.84
+        ],
+        [
+          "2025-11-10",
+          0.82
+        ],
+        [
+          "2025-11-11",
+          0.82
+        ],
+        [
+          "2025-11-12",
+          0.83
+        ],
+        [
+          "2025-11-13",
+          0.84
+        ],
+        [
+          "2025-11-14",
+          0.83
+        ],
+        [
+          "2025-11-17",
+          0.84
+        ],
+        [
+          "2025-11-18",
+          0.85
+        ],
+        [
+          "2025-11-19",
+          0.84
+        ],
+        [
+          "2025-11-20",
+          0.85
+        ],
+        [
+          "2025-11-21",
+          0.86
+        ],
+        [
+          "2025-11-24",
+          0.85
+        ],
+        [
+          "2025-11-25",
+          0.84
+        ],
+        [
+          "2025-11-26",
+          0.82
+        ],
+        [
+          "2025-11-27",
+          0.82
+        ],
+        [
+          "2025-11-28",
+          0.82
+        ],
+        [
+          "2025-11-30",
+          0.82
+        ],
+        [
+          "2025-12-01",
+          0.82
+        ],
+        [
+          "2025-12-02",
+          0.81
+        ],
+        [
+          "2025-12-03",
+          0.81
+        ],
+        [
+          "2025-12-04",
+          0.8
+        ],
+        [
+          "2025-12-05",
+          0.79
+        ],
+        [
+          "2025-12-08",
+          0.78
+        ],
+        [
+          "2025-12-09",
+          0.79
+        ],
+        [
+          "2025-12-10",
+          0.78
+        ],
+        [
+          "2025-12-11",
+          0.78
+        ],
+        [
+          "2025-12-12",
+          0.8
+        ],
+        [
+          "2025-12-15",
+          0.8
+        ],
+        [
+          "2025-12-16",
+          0.81
+        ],
+        [
+          "2025-12-17",
+          0.81
+        ],
+        [
+          "2025-12-18",
+          0.81
+        ],
+        [
+          "2025-12-19",
+          0.8
+        ],
+        [
+          "2025-12-22",
+          0.8
+        ],
+        [
+          "2025-12-23",
+          0.79
+        ],
+        [
+          "2025-12-24",
+          0.79
+        ],
+        [
+          "2025-12-26",
+          0.79
+        ],
+        [
+          "2025-12-29",
+          0.79
+        ],
+        [
+          "2025-12-30",
+          0.79
+        ],
+        [
+          "2025-12-31",
+          0.79
+        ],
+        [
+          "2026-01-02",
+          0.79
+        ],
+        [
+          "2026-01-05",
+          0.79
+        ],
+        [
+          "2026-01-06",
+          0.79
+        ],
+        [
+          "2026-01-07",
+          0.79
+        ],
+        [
+          "2026-01-08",
+          0.79
+        ],
+        [
+          "2026-01-09",
+          0.78
+        ],
+        [
+          "2026-01-12",
+          0.78
+        ],
+        [
+          "2026-01-13",
+          0.77
+        ],
+        [
+          "2026-01-14",
+          0.77
+        ],
+        [
+          "2026-01-15",
+          0.76
+        ],
+        [
+          "2026-01-16",
+          0.75
+        ],
+        [
+          "2026-01-19",
+          0.75
+        ],
+        [
+          "2026-01-20",
+          0.75
+        ],
+        [
+          "2026-01-21",
+          0.74
+        ],
+        [
+          "2026-01-22",
+          0.73
+        ],
+        [
+          "2026-01-23",
+          0.73
+        ],
+        [
+          "2026-01-26",
+          0.74
+        ],
+        [
+          "2026-01-27",
+          0.73
+        ],
+        [
+          "2026-01-28",
+          0.73
+        ],
+        [
+          "2026-01-29",
+          0.74
+        ],
+        [
+          "2026-01-30",
+          0.74
+        ],
+        [
+          "2026-01-31",
+          0.75
+        ],
+        [
+          "2026-02-02",
+          0.74
+        ],
+        [
+          "2026-02-03",
+          0.74
+        ],
+        [
+          "2026-02-04",
+          0.75
+        ],
+        [
+          "2026-02-05",
+          0.76
+        ],
+        [
+          "2026-02-06",
+          0.76
+        ],
+        [
+          "2026-02-09",
+          0.76
+        ],
+        [
+          "2026-02-10",
+          0.77
+        ],
+        [
+          "2026-02-11",
+          0.77
+        ],
+        [
+          "2026-02-12",
+          0.78
+        ],
+        [
+          "2026-02-13",
+          0.79
+        ],
+        [
+          "2026-02-16",
+          0.79
+        ],
+        [
+          "2026-02-17",
+          0.8
+        ],
+        [
+          "2026-02-18",
+          0.78
+        ],
+        [
+          "2026-02-19",
+          0.79
+        ],
+        [
+          "2026-02-20",
+          0.78
+        ],
+        [
+          "2026-02-23",
+          0.8
+        ],
+        [
+          "2026-02-24",
+          0.81
+        ],
+        [
+          "2026-02-25",
+          0.8
+        ],
+        [
+          "2026-02-26",
+          0.82
+        ],
+        [
+          "2026-02-27",
+          0.85
+        ],
+        [
+          "2026-02-28",
+          0.86
+        ],
+        [
+          "2026-03-02",
+          0.85
+        ],
+        [
+          "2026-03-03",
+          0.84
+        ],
+        [
+          "2026-03-04",
+          0.82
+        ],
+        [
+          "2026-03-05",
+          0.82
+        ],
+        [
+          "2026-03-06",
+          0.84
+        ],
+        [
+          "2026-03-09",
+          0.85
+        ],
+        [
+          "2026-03-10",
+          0.84
+        ],
+        [
+          "2026-03-11",
+          0.88
+        ],
+        [
+          "2026-03-12",
+          0.91
+        ],
+        [
+          "2026-03-13",
+          0.93
+        ],
+        [
+          "2026-03-16",
+          0.94
+        ],
+        [
+          "2026-03-17",
+          0.92
+        ],
+        [
+          "2026-03-18",
+          0.91
+        ],
+        [
+          "2026-03-19",
+          0.9
+        ],
+        [
+          "2026-03-20",
+          0.88
+        ],
+        [
+          "2026-03-23",
+          0.88
+        ],
+        [
+          "2026-03-24",
+          0.87
+        ],
+        [
+          "2026-03-25",
+          0.87
+        ],
+        [
+          "2026-03-26",
+          0.88
+        ],
+        [
+          "2026-03-27",
+          0.91
+        ],
+        [
+          "2026-03-30",
+          0.93
+        ],
+        [
+          "2026-03-31",
+          0.9
+        ],
+        [
+          "2026-04-01",
+          0.87
+        ],
+        [
+          "2026-04-02",
+          0.86
+        ],
+        [
+          "2026-04-03",
+          0.86
+        ],
+        [
+          "2026-04-06",
+          0.85
+        ],
+        [
+          "2026-04-07",
+          0.86
+        ],
+        [
+          "2026-04-08",
+          0.83
+        ],
+        [
+          "2026-04-09",
+          0.83
+        ],
+        [
+          "2026-04-10",
+          0.82
+        ],
+        [
+          "2026-04-13",
+          0.82
+        ],
+        [
+          "2026-04-14",
+          0.81
+        ],
+        [
+          "2026-04-15",
+          0.8
+        ],
+        [
+          "2026-04-16",
+          0.81
+        ],
+        [
+          "2026-04-17",
+          0.8
+        ],
+        [
+          "2026-04-20",
+          0.81
+        ],
+        [
+          "2026-04-21",
+          0.8
+        ],
+        [
+          "2026-04-22",
+          0.79
+        ],
+        [
+          "2026-04-23",
+          0.8
+        ],
+        [
+          "2026-04-24",
+          0.8
+        ],
+        [
+          "2026-04-27",
+          0.81
+        ],
+        [
+          "2026-04-28",
+          0.81
+        ],
+        [
+          "2026-04-29",
+          0.81
+        ],
+        [
+          "2026-04-30",
+          0.81
+        ],
+        [
+          "2026-05-01",
+          0.81
+        ],
+        [
+          "2026-05-04",
+          0.8
+        ],
+        [
+          "2026-05-05",
+          0.79
+        ],
+        [
+          "2026-05-06",
+          0.78
+        ],
+        [
+          "2026-05-07",
+          0.79
+        ],
+        [
+          "2026-05-08",
+          0.79
+        ],
+        [
+          "2026-05-11",
+          0.78
+        ],
+        [
+          "2026-05-12",
+          0.77
+        ],
+        [
+          "2026-05-13",
+          0.76
+        ],
+        [
+          "2026-05-14",
+          0.76
+        ],
+        [
+          "2026-05-15",
+          0.75
+        ],
+        [
+          "2026-05-18",
+          0.75
+        ],
+        [
+          "2026-05-19",
+          0.76
+        ],
+        [
+          "2026-05-20",
+          0.75
+        ],
+        [
+          "2026-05-21",
+          0.75
+        ],
+        [
+          "2026-05-22",
+          0.74
+        ],
+        [
+          "2026-05-25",
+          0.74
+        ],
+        [
+          "2026-05-26",
+          0.74
+        ],
+        [
+          "2026-05-27",
+          0.74
+        ],
+        [
+          "2026-05-28",
+          0.73
+        ],
+        [
+          "2026-05-29",
+          0.73
+        ],
+        [
+          "2026-05-31",
+          0.74
+        ],
+        [
+          "2026-06-01",
+          0.73
+        ],
+        [
+          "2026-06-02",
+          0.74
+        ],
+        [
+          "2026-06-03",
+          0.74
+        ],
+        [
+          "2026-06-04",
+          0.74
+        ],
+        [
+          "2026-06-05",
+          0.74
+        ],
+        [
+          "2026-06-08",
+          0.75
+        ],
+        [
+          "2026-06-09",
+          0.75
+        ],
+        [
+          "2026-06-10",
+          0.75
+        ],
+        [
+          "2026-06-11",
+          0.75
+        ],
+        [
+          "2026-06-12",
+          0.74
+        ],
+        [
+          "2026-06-15",
+          0.73
+        ],
+        [
+          "2026-06-16",
+          0.75
+        ],
+        [
+          "2026-06-17",
+          0.74
+        ],
+        [
+          "2026-06-18",
+          0.74
+        ],
+        [
+          "2026-06-19",
+          0.74
+        ],
+        [
+          "2026-06-22",
+          0.74
+        ],
+        [
+          "2026-06-23",
+          0.74
+        ],
+        [
+          "2026-06-24",
+          0.75
+        ],
+        [
+          "2026-06-25",
+          0.76
+        ],
+        [
+          "2026-06-26",
+          0.77
+        ],
+        [
+          "2026-06-29",
+          0.76
+        ],
+        [
+          "2026-06-30",
+          0.76
+        ],
+        [
+          "2026-07-01",
+          0.76
+        ],
+        [
+          "2026-07-02",
+          0.75
+        ],
+        [
+          "2026-07-03",
+          0.75
+        ],
+        [
+          "2026-07-06",
+          0.75
+        ],
+        [
+          "2026-07-07",
+          0.76
+        ],
+        [
+          "2026-07-08",
+          0.76
+        ],
+        [
+          "2026-07-09",
+          0.76
+        ],
+        [
+          "2026-07-10",
+          0.77
+        ],
+        [
+          "2026-07-13",
+          0.78
+        ],
+        [
+          "2026-07-14",
+          0.79
+        ],
+        [
+          "2026-07-15",
+          0.79
+        ],
+        [
+          "2026-07-16",
+          0.78
+        ],
+        [
+          "2026-07-17",
+          0.79
+        ],
+        [
+          "2026-07-20",
+          0.78
+        ],
+        [
+          "2026-07-21",
+          0.78
+        ],
+        [
+          "2026-07-22",
+          0.78
+        ],
+        [
+          "2026-07-23",
+          0.79
+        ],
+        [
+          "2026-07-24",
+          0.8
+        ],
+        [
+          "2026-07-27",
+          0.81
+        ],
+        [
+          "2026-07-28",
+          0.81
+        ],
+        [
+          "2026-07-29",
+          0.81
+        ],
+        [
+          "2026-07-30",
+          0.8
+        ],
+        [
+          "2026-07-31",
+          0.79
+        ],
+        [
+          "2026-08-03",
+          0.78
+        ],
+        [
+          "2026-08-04",
+          0.78
+        ],
+        [
+          "2026-08-05",
+          0.78
+        ],
+        [
+          "2026-08-06",
+          0.78
+        ],
+        [
+          "2026-08-07",
+          0.78
+        ],
+        [
+          "2026-08-10",
+          0.78
+        ],
+        [
+          "2026-08-11",
+          0.79
+        ],
+        [
+          "2026-08-12",
+          0.79
+        ],
+        [
+          "2026-08-13",
+          0.79
+        ],
+        [
+          "2026-08-14",
+          0.8
+        ],
+        [
+          "2026-08-17",
+          0.81
+        ],
+        [
+          "2026-08-18",
+          0.82
+        ],
+        [
+          "2026-08-19",
+          0.81
+        ],
+        [
+          "2026-08-20",
+          0.82
+        ],
+        [
+          "2026-08-21",
+          0.81
+        ],
+        [
+          "2026-08-24",
+          0.81
+        ],
+        [
+          "2026-08-25",
+          0.81
+        ],
+        [
+          "2026-08-26",
+          0.8
+        ],
+        [
+          "2026-08-27",
+          0.79
+        ],
+        [
+          "2026-08-28",
+          0.79
+        ],
+        [
+          "2026-08-31",
+          0.8
+        ],
+        [
+          "2026-09-01",
+          0.81
+        ],
+        [
+          "2026-09-02",
+          0.81
+        ],
+        [
+          "2026-09-03",
+          0.81
+        ],
+        [
+          "2026-09-04",
+          0.81
+        ],
+        [
+          "2026-09-07",
+          0.81
+        ],
+        [
+          "2026-09-08",
+          0.81
+        ],
+        [
+          "2026-09-09",
+          0.81
+        ],
+        [
+          "2026-09-10",
+          0.8
+        ],
+        [
+          "2026-09-11",
+          0.8
+        ],
+        [
+          "2026-09-14",
+          0.8
+        ],
+        [
+          "2026-09-15",
+          0.8
+        ],
+        [
+          "2026-09-16",
+          0.78
+        ],
+        [
+          "2026-09-17",
+          0.78
+        ],
+        [
+          "2026-09-18",
+          0.77
+        ],
+        [
+          "2026-09-21",
+          0.77
+        ],
+        [
+          "2026-09-22",
+          0.77
+        ],
+        [
+          "2026-09-23",
+          0.77
+        ],
+        [
+          "2026-09-24",
+          0.79
+        ],
+        [
+          "2026-09-25",
+          0.81
+        ],
+        [
+          "2026-09-28",
+          0.83
+        ],
+        [
+          "2026-09-29",
+          0.84
+        ],
+        [
+          "2026-09-30",
+          0.84
+        ],
+        [
+          "2026-10-01",
+          0.86
+        ],
+        [
+          "2026-10-02",
+          0.85
+        ],
+        [
+          "2026-10-05",
+          0.84
+        ],
+        [
+          "2026-10-06",
+          0.83
+        ],
+        [
+          "2026-10-07",
+          0.82
+        ],
+        [
+          "2026-10-08",
+          0.82
+        ],
+        [
+          "2026-10-09",
+          0.83
+        ],
+        [
+          "2026-10-12",
+          0.83
+        ],
+        [
+          "2026-10-13",
+          0.83
+        ],
+        [
+          "2026-10-14",
+          0.84
+        ],
+        [
+          "2026-10-15",
+          0.84
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "10-Year Treasury Constant Maturity Yield (DGS10)",
+      "type": "line",
+      "x": [
+        "2025-10-03",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        4.13,
+        4.18,
+        4.14,
+        4.13,
+        4.14,
+        4.05,
+        4.03,
+        4.05,
+        3.99,
+        4.02,
+        4.0,
+        3.98,
+        3.97,
+        4.01,
+        4.02,
+        4.01,
+        3.99,
+        4.08,
+        4.11,
+        4.11,
+        4.13,
+        4.1,
+        4.17,
+        4.11,
+        4.11,
+        4.13,
+        4.08,
+        4.11,
+        4.14,
+        4.13,
+        4.12,
+        4.13,
+        4.1,
+        4.06,
+        4.04,
+        4.01,
+        4.0,
+        4.02,
+        4.09,
+        4.09,
+        4.06,
+        4.11,
+        4.14,
+        4.17,
+        4.18,
+        4.13,
+        4.14,
+        4.19,
+        4.18,
+        4.15,
+        4.16,
+        4.12,
+        4.16,
+        4.17,
+        4.18,
+        4.15,
+        4.14,
+        4.12,
+        4.14,
+        4.18,
+        4.19,
+        4.17,
+        4.18,
+        4.15,
+        4.19,
+        4.18,
+        4.19,
+        4.18,
+        4.15,
+        4.17,
+        4.24,
+        4.3,
+        4.26,
+        4.26,
+        4.24,
+        4.22,
+        4.24,
+        4.26,
+        4.24,
+        4.26,
+        4.29,
+        4.28,
+        4.29,
+        4.21,
+        4.22,
+        4.22,
+        4.16,
+        4.18,
+        4.09,
+        4.04,
+        4.05,
+        4.09,
+        4.08,
+        4.08,
+        4.03,
+        4.04,
+        4.05,
+        4.02,
+        3.97,
+        4.05,
+        4.06,
+        4.09,
+        4.13,
+        4.15,
+        4.12,
+        4.15,
+        4.21,
+        4.27,
+        4.28,
+        4.23,
+        4.2,
+        4.26,
+        4.25,
+        4.39,
+        4.34,
+        4.39,
+        4.33,
+        4.42,
+        4.44,
+        4.35,
+        4.3,
+        4.33,
+        4.31,
+        4.35,
+        4.34,
+        4.33,
+        4.29,
+        4.29,
+        4.31,
+        4.3,
+        4.26,
+        4.29,
+        4.32,
+        4.26,
+        4.26,
+        4.3,
+        4.3,
+        4.34,
+        4.31,
+        4.35,
+        4.36,
+        4.42,
+        4.4,
+        4.39,
+        4.45,
+        4.43,
+        4.36,
+        4.41,
+        4.38,
+        4.42,
+        4.46,
+        4.46,
+        4.47,
+        4.59,
+        4.61,
+        4.67,
+        4.57,
+        4.57,
+        4.56,
+        4.5,
+        4.48,
+        4.45,
+        4.45,
+        4.47,
+        4.46,
+        4.49,
+        4.47,
+        4.55,
+        4.56,
+        4.53,
+        4.55,
+        4.45,
+        4.48,
+        4.47,
+        4.43,
+        4.49,
+        4.46,
+        4.51,
+        4.5,
+        4.41,
+        4.4,
+        4.38,
+        4.38,
+        4.44,
+        4.48,
+        4.49,
+        4.48,
+        4.55,
+        4.56,
+        4.54,
+        4.56,
+        4.62,
+        4.58,
+        4.55,
+        4.57,
+        4.55,
+        4.6,
+        4.63,
+        4.67,
+        4.71,
+        4.69,
+        4.65,
+        4.61,
+        4.67,
+        4.68,
+        4.75,
+        4.7,
+        4.63,
+        4.63,
+        4.69,
+        4.65,
+        4.72,
+        4.7,
+        4.68,
+        4.63,
+        4.68,
+        4.72,
+        4.71,
+        4.65,
+        4.69,
+        4.74,
+        4.7,
+        4.64,
+        4.66,
+        4.67,
+        4.73,
+        4.75,
+        4.79,
+        4.79,
+        4.77,
+        4.78,
+        4.8,
+        4.83,
+        4.95,
+        4.96,
+        4.97,
+        5.0,
+        5.01,
+        4.94,
+        5.01,
+        4.96,
+        4.96,
+        5.11,
+        5.18,
+        5.17,
+        5.24,
+        5.26,
+        5.29,
+        5.24,
+        5.28,
+        5.31,
+        5.27,
+        5.28,
+        5.22,
+        5.24,
+        5.21,
+        5.19,
+        5.1
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread (BAMLC0A0CM)",
+      "type": "line",
+      "x": [
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-13",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-11",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-27",
+        "2025-11-28",
+        "2025-11-30",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-19",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-01-31",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-02-28",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-05-31",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-03",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        0.77,
+        0.81,
+        0.81,
+        0.81,
+        0.78,
+        0.8,
+        0.8,
+        0.79,
+        0.79,
+        0.8,
+        0.78,
+        0.77,
+        0.76,
+        0.76,
+        0.75,
+        0.77,
+        0.8,
+        0.83,
+        0.83,
+        0.81,
+        0.82,
+        0.84,
+        0.82,
+        0.82,
+        0.83,
+        0.84,
+        0.83,
+        0.84,
+        0.85,
+        0.84,
+        0.85,
+        0.86,
+        0.85,
+        0.84,
+        0.82,
+        0.82,
+        0.82,
+        0.82,
+        0.82,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.78,
+        0.79,
+        0.78,
+        0.78,
+        0.8,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.8,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.79,
+        0.78,
+        0.78,
+        0.77,
+        0.77,
+        0.76,
+        0.75,
+        0.75,
+        0.75,
+        0.74,
+        0.73,
+        0.73,
+        0.74,
+        0.73,
+        0.73,
+        0.74,
+        0.74,
+        0.75,
+        0.74,
+        0.74,
+        0.75,
+        0.76,
+        0.76,
+        0.76,
+        0.77,
+        0.77,
+        0.78,
+        0.79,
+        0.79,
+        0.8,
+        0.78,
+        0.79,
+        0.78,
+        0.8,
+        0.81,
+        0.8,
+        0.82,
+        0.85,
+        0.86,
+        0.85,
+        0.84,
+        0.82,
+        0.82,
+        0.84,
+        0.85,
+        0.84,
+        0.88,
+        0.91,
+        0.93,
+        0.94,
+        0.92,
+        0.91,
+        0.9,
+        0.88,
+        0.88,
+        0.87,
+        0.87,
+        0.88,
+        0.91,
+        0.93,
+        0.9,
+        0.87,
+        0.86,
+        0.86,
+        0.85,
+        0.86,
+        0.83,
+        0.83,
+        0.82,
+        0.82,
+        0.81,
+        0.8,
+        0.81,
+        0.8,
+        0.81,
+        0.8,
+        0.79,
+        0.8,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.78,
+        0.79,
+        0.79,
+        0.78,
+        0.77,
+        0.76,
+        0.76,
+        0.75,
+        0.75,
+        0.76,
+        0.75,
+        0.75,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.73,
+        0.73,
+        0.74,
+        0.73,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.74,
+        0.73,
+        0.75,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.74,
+        0.75,
+        0.76,
+        0.77,
+        0.76,
+        0.76,
+        0.76,
+        0.75,
+        0.75,
+        0.75,
+        0.76,
+        0.76,
+        0.76,
+        0.77,
+        0.78,
+        0.79,
+        0.79,
+        0.78,
+        0.79,
+        0.78,
+        0.78,
+        0.78,
+        0.79,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.78,
+        0.78,
+        0.78,
+        0.78,
+        0.78,
+        0.78,
+        0.79,
+        0.79,
+        0.79,
+        0.8,
+        0.81,
+        0.82,
+        0.81,
+        0.82,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.79,
+        0.79,
+        0.8,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.81,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.78,
+        0.78,
+        0.77,
+        0.77,
+        0.77,
+        0.77,
+        0.79,
+        0.81,
+        0.83,
+        0.84,
+        0.84,
+        0.86,
+        0.85,
+        0.84,
+        0.83,
+        0.82,
+        0.82,
+        0.83,
+        0.83,
+        0.83,
+        0.84,
+        0.84
+      ],
+      "y_label": "Percent"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "DGS10",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "BAMLC0A0CM",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": null,
+  "validation": {
+    "counts": {
+      "figures": 38,
+      "verified": 9,
+      "derived": 2,
+      "unverified": 27
+    },
+    "figures": [
+      {
+        "text": "18 Oct 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 107,
+        "end": 118,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "*Prepared for B17 Institutional Research – 18 Oct 2026*"
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 180,
+        "end": 185,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- 10‑yr Treasury yield ≈ 5.1 % today [S1]."
+      },
+      {
+        "text": "0.84 %",
+        "value": 0.84,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 238,
+        "end": 244,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- Investment‑grade corporate spread ≈ 0.84 % above Treasuries [S2]."
+      },
+      {
+        "text": "55 %",
+        "value": 55.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 314,
+        "end": 318,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- A conservative retiree can target roughly 55 % Treasuries, 25 % IG corporate bonds, and 20 % cash (assumption)."
+      },
+      {
+        "text": "25 %",
+        "value": 25.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 331,
+        "end": 335,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- A conservative retiree can target roughly 55 % Treasuries, 25 % IG corporate bonds, and 20 % cash (assumption)."
+      },
+      {
+        "text": "20 %",
+        "value": 20.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 360,
+        "end": 364,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3",
+          "S5"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- A conservative retiree can target roughly 55 % Treasuries, 25 % IG corporate bonds, and 20 % cash (assumption)."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 667,
+        "end": 672,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Interest‑rate environment** – 10‑yr Treasury at 5.1 % [S1] signals a high‑yield period; real yields are near zero given current inflation expectations."
+      },
+      {
+        "text": "0.84 %",
+        "value": 0.84,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 954,
+        "end": 960,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Investment‑grade corporate spread** – 0.84 % above Treasuries [S2] → nominal IG yield is Treasury yield plus spread."
+      },
+      {
+        "text": "3",
+        "value": 3.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1221,
+        "end": 1222,
+        "status": "derived",
+        "matched": "DGS10 % change 2026-10-07 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- **High‑yield data** – Not fetched; typical HY spreads are 3–4 pp above IG, implying higher risk and volatility."
+      },
+      {
+        "text": "4 pp",
+        "value": 4.0,
+        "unit": "pp",
+        "tolerance": 0.500000001,
+        "start": 1223,
+        "end": 1227,
+        "status": "verified",
+        "matched": "DGS10 on 2025-11-26",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- **High‑yield data** – Not fetched; typical HY spreads are 3–4 pp above IG, implying higher risk and volatility."
+      },
+      {
+        "text": "20 %",
+        "value": 20.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1655,
+        "end": 1659,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3",
+          "S5"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Base** – 20 % cash, 55 % Treasuries, 25 % IG corporate (assumption)."
+      },
+      {
+        "text": "55 %",
+        "value": 55.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1666,
+        "end": 1670,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Base** – 20 % cash, 55 % Treasuries, 25 % IG corporate (assumption)."
+      },
+      {
+        "text": "25 %",
+        "value": 25.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1683,
+        "end": 1687,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Base** – 20 % cash, 55 % Treasuries, 25 % IG corporate (assumption)."
+      },
+      {
+        "text": "15 %",
+        "value": 15.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1732,
+        "end": 1736,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Upside** – 15 % cash, 60 % Treasuries, 25 % IG corporate (assumption; 60 % bonds within the 40‑60 % range for retirees over 75 [S3])."
+      },
+      {
+        "text": "60 %",
+        "value": 60.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1743,
+        "end": 1747,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3",
+          "S5",
+          "S6"
+        ],
+        "assumption": true,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Upside** – 15 % cash, 60 % Treasuries, 25 % IG corporate (assumption; 60 % bonds within the 40‑60 % range for retirees over 75 [S3])."
+      },
+      {
+        "text": "25 %",
+        "value": 25.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1760,
+        "end": 1764,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": true,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Upside** – 15 % cash, 60 % Treasuries, 25 % IG corporate (assumption; 60 % bonds within the 40‑60 % range for retirees over 75 [S3])."
+      },
+      {
+        "text": "60 %",
+        "value": 60.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1791,
+        "end": 1795,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3",
+          "S5",
+          "S6"
+        ],
+        "assumption": true,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Upside** – 15 % cash, 60 % Treasuries, 25 % IG corporate (assumption; 60 % bonds within the 40‑60 % range for retirees over 75 [S3])."
+      },
+      {
+        "text": "40",
+        "value": 40.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1813,
+        "end": 1815,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3",
+          "S5"
+        ],
+        "assumption": true,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Upside** – 15 % cash, 60 % Treasuries, 25 % IG corporate (assumption; 60 % bonds within the 40‑60 % range for retirees over 75 [S3])."
+      },
+      {
+        "text": "60 %",
+        "value": 60.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1816,
+        "end": 1820,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3",
+          "S5",
+          "S6"
+        ],
+        "assumption": true,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Upside** – 15 % cash, 60 % Treasuries, 25 % IG corporate (assumption; 60 % bonds within the 40‑60 % range for retirees over 75 [S3])."
+      },
+      {
+        "text": "75",
+        "value": 75.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1845,
+        "end": 1847,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": true,
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Upside** – 15 % cash, 60 % Treasuries, 25 % IG corporate (assumption; 60 % bonds within the 40‑60 % range for retirees over 75 [S3])."
+      },
+      {
+        "text": "25 %",
+        "value": 25.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1874,
+        "end": 1878,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": true,
+        "cited": [
+          "S5"
+        ],
+        "context": "- **Downside** – 25 % cash, 50 % Treasuries, 25 % IG corporate (assumption; 50 % bonds aligns with the 50 % bond target for ages 70‑79 [S5])."
+      },
+      {
+        "text": "50 %",
+        "value": 50.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1885,
+        "end": 1889,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S5",
+        "snippet_ids": [
+          "S5"
+        ],
+        "assumption": true,
+        "cited": [
+          "S5"
+        ],
+        "context": "- **Downside** – 25 % cash, 50 % Treasuries, 25 % IG corporate (assumption; 50 % bonds aligns with the 50 % bond target for ages 70‑79 [S5])."
+      },
+      {
+        "text": "25 %",
+        "value": 25.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1902,
+        "end": 1906,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": true,
+        "cited": [
+          "S5"
+        ],
+        "context": "- **Downside** – 25 % cash, 50 % Treasuries, 25 % IG corporate (assumption; 50 % bonds aligns with the 50 % bond target for ages 70‑79 [S5])."
+      },
+      {
+        "text": "50 %",
+        "value": 50.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1933,
+        "end": 1937,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S5",
+        "snippet_ids": [
+          "S5"
+        ],
+        "assumption": true,
+        "cited": [
+          "S5"
+        ],
+        "context": "- **Downside** – 25 % cash, 50 % Treasuries, 25 % IG corporate (assumption; 50 % bonds aligns with the 50 % bond target for ages 70‑79 [S5])."
+      },
+      {
+        "text": "50 %",
+        "value": 50.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1960,
+        "end": 1964,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S5",
+        "snippet_ids": [
+          "S5"
+        ],
+        "assumption": true,
+        "cited": [
+          "S5"
+        ],
+        "context": "- **Downside** – 25 % cash, 50 % Treasuries, 25 % IG corporate (assumption; 50 % bonds aligns with the 50 % bond target for ages 70‑79 [S5])."
+      },
+      {
+        "text": "70",
+        "value": 70.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1986,
+        "end": 1988,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S5",
+        "snippet_ids": [
+          "S5"
+        ],
+        "assumption": true,
+        "cited": [
+          "S5"
+        ],
+        "context": "- **Downside** – 25 % cash, 50 % Treasuries, 25 % IG corporate (assumption; 50 % bonds aligns with the 50 % bond target for ages 70‑79 [S5])."
+      },
+      {
+        "text": "79",
+        "value": 79.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1989,
+        "end": 1991,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S5",
+        "snippet_ids": [
+          "S5"
+        ],
+        "assumption": true,
+        "cited": [
+          "S5"
+        ],
+        "context": "- **Downside** – 25 % cash, 50 % Treasuries, 25 % IG corporate (assumption; 50 % bonds aligns with the 50 % bond target for ages 70‑79 [S5])."
+      },
+      {
+        "text": "5 %",
+        "value": 5.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2901,
+        "end": 2904,
+        "status": "verified",
+        "matched": "DGS10 on 2026-09-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- Re‑balance only when allocations drift > 5 % from targets (assumption)."
+      },
+      {
+        "text": "1",
+        "value": 1.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 3106,
+        "end": 3107,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- **Laddering** – Build a Treasury ladder (1–10 yr maturities) to match withdrawal timing and reduce duration exposure (assumption)."
+      },
+      {
+        "text": "55 %",
+        "value": 55.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 3605,
+        "end": 3609,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Rebalancing** – Target allocation: 55 % Treasuries, 25 % IG corporate, 20 % cash (assumption)."
+      },
+      {
+        "text": "25 %",
+        "value": 25.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 3622,
+        "end": 3626,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Rebalancing** – Target allocation: 55 % Treasuries, 25 % IG corporate, 20 % cash (assumption)."
+      },
+      {
+        "text": "20 %",
+        "value": 20.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 3641,
+        "end": 3645,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3",
+          "S5"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Rebalancing** – Target allocation: 55 % Treasuries, 25 % IG corporate, 20 % cash (assumption)."
+      },
+      {
+        "text": "5 %",
+        "value": 5.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 3707,
+        "end": 3710,
+        "status": "verified",
+        "matched": "DGS10 on 2026-09-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "Re‑balance annually or when drift exceeds 5 % (assumption)."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 3966,
+        "end": 3971,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "With the 10‑yr Treasury yield at 5.1 % [S1] and IG corporate spreads at 0.84 % [S2], a conservative retiree can construct a portfolio that delivers reliable income while preserving capital."
+      },
+      {
+        "text": "0.84 %",
+        "value": 0.84,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 4005,
+        "end": 4011,
+        "status": "verified",
+        "matched": "BAMLC0A0CM on 2026-10-15",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "With the 10‑yr Treasury yield at 5.1 % [S1] and IG corporate spreads at 0.84 % [S2], a conservative retiree can construct a portfolio that delivers reliable income while preserving capital."
+      },
+      {
+        "text": "55 %",
+        "value": 55.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 4155,
+        "end": 4159,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "A typical allocation of roughly 55 % Treasuries, 25 % IG corporate bonds, and 20 % cash (assumption) balances safety, yield, and liquidity."
+      },
+      {
+        "text": "25 %",
+        "value": 25.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 4172,
+        "end": 4176,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S6",
+        "snippet_ids": [
+          "S6"
+        ],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "A typical allocation of roughly 55 % Treasuries, 25 % IG corporate bonds, and 20 % cash (assumption) balances safety, yield, and liquidity."
+      },
+      {
+        "text": "20 %",
+        "value": 20.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 4201,
+        "end": 4205,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3",
+          "S5"
+        ],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "A typical allocation of roughly 55 % Treasuries, 25 % IG corporate bonds, and 20 % cash (assumption) balances safety, yield, and liquidity."
+      }
+    ],
+    "citations": {
+      "markers": 8,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "- **High‑yield data** – Not fetched; typical HY spreads are 3–4 pp above IG, implying higher risk and volatility.",
+          "figures": [
+            "3",
+            "4 pp"
+          ],
+          "sources": [
+            "S1"
+          ]
+        },
+        {
+          "text": "- Re‑balance only when allocations drift > 5 % from targets (assumption).",
+          "figures": [
+            "5 %"
+          ],
+          "sources": [
+            "S1"
+          ]
+        },
+        {
+          "text": "- **Laddering** – Build a Treasury ladder (1–10 yr maturities) to match withdrawal timing and reduce duration exposure (assumption).",
+          "figures": [
+            "1"
+          ],
+          "sources": [
+            "S1"
+          ]
+        },
+        {
+          "text": "- **Rebalancing** – Target allocation: 55 % Treasuries, 25 % IG corporate, 20 % cash (assumption). Re‑balance annually or when drift exceeds 5 % (assumption).",
+          "figures": [
+            "5 %"
+          ],
+          "sources": [
+            "S1"
+          ]
+        }
+      ],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: ICE BofA US Corporate (Investment Grade) Option-Adjusted Spread (BAMLC0A0CM)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "open_issues": 5,
+    "summary": "11 of 38 figures verified against source data (9 exact, 2 derived); 27 flagged (21 of them appear in a fetched web/news snippet; 26 labelled as assumptions). 4 paragraph(s) state figures without a citation."
+  },
+  "run_meta": {
+    "run_id": "20261018-182723-2aa174",
+    "timestamp": "2026-10-18T22:27:23+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "H09",
+  "set": "heldout",
+  "category": "portfolio",
+  "question": "How should an investor position a bond portfolio if the yield curve keeps steepening?",
+  "ticker": null,
+  "expected_tags": [
+    "portfolio",
+    "rates"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T21:49:42+00:00",
+  "elapsed_sec": 87.3,
+  "router_tags": [
+    "rates",
+    "portfolio",
+    "equity"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "rates": "yield_curve_inversion",
+    "equity": "valuation_pressure"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- A steepening curve signals faster short‑term rate rises relative to long‑term yields, often driven by Fed tightening and inflation expectations.  \n- Tilt the portfolio toward longer‑dated, high‑quality bonds to capture the higher yields and convexity benefits while reducing short‑term exposure.  \n- Employ a barbell or ladder structure to balance duration risk and maintain liquidity, especially in the intermediate segment.  \n- Use Treasury futures (e.g., long 5‑yr, short 10‑yr) to hedge the spread and lock in the desired duration profile.  \n- Continuously monitor credit spreads, liquidity metrics, and spread changes; rebalance when the 10‑yr/2‑yr spread moves > 10 bp or quarterly.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Steepening reflects a widening 10‑yr/2‑yr spread, typically due to Fed tightening and/or stronger long‑term growth expectations. [S1]  \n- Inflation near 3 % limits long‑term yield decline, reinforcing the steepening trend. [S2]  \n\n*Sector*  \n- Investment‑grade (IG) spreads tend to tighten as the risk‑free benchmark rises, making IG bonds relatively cheaper.  \n- High‑yield (HY) spreads may widen because higher discount rates increase default risk perception.  \n\n*Credit*  \n- IG issuers with stable cash flows are preferred; HY issuers should have strong liquidity and low leverage to mitigate widening spreads.  \n\n*Portfolio*  \n- Long‑dated bonds have higher duration and convexity, offering greater upside if the curve continues to steepen.  \n- Intermediate maturities can suffer liquidity erosion during steepening, as investors shift into long‑dated issues.  \n\n---\n\n**Scenarios**\n\n| Scenario | Expected Curve Movement | Tactical Response |\n|----------|------------------------|-------------------|\n| **Base** | Moderate, persistent steepening | Increase long‑dated weight by 1–2 years; reduce short‑term weight; maintain intermediate exposure. |\n| **Upside** | Accelerated steepening | Further tilt to long maturities; add long‑dated IG bonds; use futures to lock in the spread. |\n| **Downside** | Reversal or flattening | Reduce long‑dated weight; increase short‑term exposure; consider shorting the spread via futures. |\n\n*Note:* See Table 1 for yield‑curve shift data.  \n\n---\n\n**Key Risks & Monitoring**\n\n- **Duration Risk:** Long bonds lose price if rates rise unexpectedly.  \n- **Credit Spread Risk:** HY spreads may widen; IG spreads may tighten.  \n- **Liquidity Risk:** Intermediate maturities can become thinly traded.  \n- **Reinvestment Risk:** Short‑term cash may be reinvested at lower rates if the curve flattens.  \n\n*Monitoring Triggers*  \n- 10‑yr/2‑yr spread change > 10 bp.  \n- IG/HY spread change > 50 bp.  \n- Bid‑ask spread widening > 2 bp in the 3–7 yr segment.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Allocation**  \n  - Short‑term (≤ 2 yr): ↓ 15–20 % of total weight.  \n  - Intermediate (3–7 yr): Hold or ↓ 5 % to preserve liquidity.  \n  - Long‑term (≥ 10 yr): ↑ 20–25 % of total weight.  \n\n- **Structure**  \n  - **Barbell:** Concentrate on short and long maturities, leaving the middle thin.  \n  - **Ladder:** Tilt ladder toward longer dates to lock in higher yields.  \n\n- **Credit Filters**  \n  - IG: AAA–AA issuers with stable cash flows.  \n  - HY: Issuers with low leverage and strong cash‑flow forecasts.  \n\n- **Liquidity Filters**  \n  - Minimum daily trading volume or bid‑ask spread ≤ 1 bp for long‑dated bonds.  \n\n- **Hedging**  \n  - Use Treasury futures: long 5‑yr, short 10‑yr to capture the steepening spread. [S5]  \n  - Consider swaps if futures liquidity is limited.  \n\n- **Rebalancing**  \n  - Quarterly or when spread changes exceed thresholds.  \n\n---\n\n**Conclusion**  \nA steepening yield curve favors a portfolio that is longer‑dated and higher‑quality, with a barbell or ladder structure to manage duration and liquidity. Futures can hedge the spread and lock in the desired duration profile. Continuous monitoring of spread dynamics, credit quality, and liquidity is essential to adjust the allocation in response to curve movements. This tactical approach aligns the portfolio with the prevailing steepening trend while maintaining risk discipline.",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "Steepening Yield Curve: Types and Uses for Investors",
+      "url": "https://smartasset.com/investing/steepening-yield-curve",
+      "source": "web",
+      "snippet": "## How Investors Can Use a Steepening Yield Curve  A steepening yield curve can help investors assess interest-rate risk and changing market expectations. While it is not a standalone investment signal, it can provide context for evaluating",
+      "id": "S1"
+    },
+    {
+      "title": "What Investors Need to Know About the Steepening Yield Curve | Morningstar",
+      "url": "https://www.morningstar.com/markets/what-investors-need-know-about-steepening-yield-curve",
+      "source": "web",
+      "snippet": "For one, inflation close to 3% doesn’t give long-term yields much room to fall, according to Kathy Jones, chief fixed income strategist at Schwab. On top of that, “Fed easing when inflation is too high—and possibly edging higher—just accele",
+      "id": "S2"
+    },
+    {
+      "title": "The Yield Curve Steepens—What Does That Mean for Economic Growth? - Zacks Investment Management BlogZacks Investment Management Blog",
+      "url": "https://zacksim.com/blog/the-yield-curve-steepens-what-does-that-mean-for-economic-growth",
+      "source": "web",
+      "snippet": "CLIENT LOGIN CONTACT DISCLOSURES SEARCH  # Zacks Investment Management   AboutZacks   + Difference   + Philosophy   + Recognition   + Legacy  PrivateClients   + Private Client Group   + Experience   + What We Offer     - Independent Researc",
+      "id": "S3"
+    },
+    {
+      "title": "How to Position Your Bond Portfolio as Short-Term Yields Fall",
+      "url": "https://global.morningstar.com/en-gb/bonds/how-to-position-your-bond-portfolio-as-short-term-yields-fall",
+      "source": "web",
+      "snippet": "Image 1: Morningstar   To tailor your experiences to the most relevant share classes available to you, select your investor role:    I am an Individual Investor  I am a Financial Professional    ADVERTISEMENT   Image 2: Morningstar     Mark",
+      "id": "S4"
+    },
+    {
+      "title": "Yield Curve Shifts Create Trading Opportunities",
+      "url": "https://www.cmegroup.com/trading/interest-rates/files/Yield_Curve_Strategy_Paper.pdf",
+      "source": "web",
+      "snippet": "If you expect the spread to widen (i.e., to steepen), you can buy the spread by going long 5-Year Treasury Note futures and short 10-Year Treasury Note futures. When the yield curve steepens, the 5-year Treasury cash yield will fall rela­ t",
+      "id": "S5"
+    },
+    {
+      "title": "How To Adapt Your Loan Portfolio as the Yield Curve Steepens",
+      "url": "https://www.pcbb.com/bid/2025-09-11-how-to-adapt-your-loan-portfolio-as-the-yield-curve-steepens",
+      "source": "web",
+      "snippet": "According to historical data, the yield curve has peaked at an average of about 270bp over the past three interest rate cycles (or since 1990). During periods when the yield curve steepened, this was driven largely by sharp reductions in sh",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S5"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

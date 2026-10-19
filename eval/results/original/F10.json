@@ -1,0 +1,90 @@
+{
+  "id": "F10",
+  "set": "fresh",
+  "category": "portfolio",
+  "question": "How should a retiree split money between cash, Treasuries and corporate bonds today?",
+  "ticker": null,
+  "expected_tags": [
+    "portfolio",
+    "rates",
+    "credit"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T22:34:40+00:00",
+  "elapsed_sec": 48.0,
+  "router_tags": [
+    "rates"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Retiree Asset‑Allocation Guidance – Cash, Treasuries & Corporate Bonds (Oct 2026)**  \n\n---\n\n### 1. Executive Summary  \n- **Cash**: Keep ~8 % of the portfolio in liquid, high‑yield money‑market or savings vehicles for the first two years of retirement.  \n- **U.S. Treasuries**: Allocate ~40 % to 10‑year Treasury bonds for tax‑efficient, low‑credit‑risk income.  \n- **Corporate Bonds**: Use the remaining ~52 % to add yield, splitting roughly evenly between investment‑grade and, if risk tolerance allows, a small high‑yield portion.  \n- **Laddering & Rebalancing**: Ladder maturities across 2‑5‑10 yr for Treasuries and 3‑7‑10 yr for corporate bonds; rebalance every 6–12 months or when credit spreads widen >300 bps.  \n- **Risk Management**: Maintain cash to avoid forced bond sales; monitor interest‑rate and credit‑spread movements closely.\n\n---\n\n### 2. Core Analysis  \n\n| Asset Class | Rationale (Sources) | Typical Allocation |\n|-------------|---------------------|--------------------|\n| **Cash / Money‑Market** | Keeps liquidity for short‑term needs; 8 % recommended for the first two years of retirement. | 8 % (S1) |\n| **U.S. Treasuries** | Zero credit risk, state‑tax exemption, and predictable income. 10‑yr bonds provide a core income base. | 40 % (S3) |\n| **Corporate Bonds** | Adds yield premium over Treasuries; investment‑grade bonds carry modest credit risk. A small high‑yield exposure may be considered if risk tolerance is higher. | ~52 % (remaining balance) |\n\n- **Macro Context**: Current U.S. rates remain elevated; inflation expectations are moderate. Treasuries offer a safe haven, while corporate bonds provide a yield lift.  \n- **Credit Landscape**: Investment‑grade spreads are tight (~200–250 bps above Treasuries). High‑yield spreads (~600–700 bps) carry higher default risk.  \n- **Risk Profile**: Older retirees typically shift to a conservative mix, emphasizing fixed income over equities (S4).  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Cash | Treasuries | Corporate Bonds | Notes |\n|----------|------|------------|-----------------|-------|\n| **Base** | 8 % | 40 % | 52 % | Balanced yield vs. safety; aligns with S1 & S3 guidance. |\n| **Upside** | 5 % | 35 % | 60 % | Higher corporate‑bond exposure for yield; acceptable if risk tolerance is moderate. |\n| **Downside** | 15 % | 45 % | 40 % | Greater liquidity cushion; lower yield but reduced reinvestment risk. |\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Interest‑Rate Risk**: Rising rates compress bond prices; laddering mitigates reinvestment risk.  \n- **Credit‑Spread Risk**: Widening spreads can erode corporate‑bond returns; monitor spread levels relative to historical norms.  \n- **Liquidity Risk**: Cash reserves prevent forced bond sales during market stress (S3).  \n- **Inflation Risk**: Real returns may decline if inflation outpaces nominal yields; consider TIPS if inflation expectations rise.  \n\n**Monitoring Cadence**  \n- Quarterly review of cash balances, bond maturities, and credit‑spread movements.  \n- Rebalance to target percentages every 6–12 months or after significant macro shifts.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Tax Efficiency**: Treasuries are state‑tax exempt; keep taxable corporate bonds in tax‑advantaged accounts when possible.  \n- **Liquidity Planning**: Ladder maturities to generate predictable cash flows for withdrawals.  \n- **Risk Tolerance Alignment**: Adjust the cash‑to‑bond ratio based on personal comfort with market volatility.  \n- **Legacy Considerations**: A conservative bond‑heavy mix preserves capital for estate planning.  \n\n---\n\n### 6. Conclusion  \n\nA retiree’s portfolio should prioritize liquidity, safety, and predictable income. Keeping ~8 % in cash for the first two years (S1) and allocating ~40 % to 10‑year Treasuries (S3) provides a solid foundation. The remaining ~52 % can be split between investment‑grade corporate bonds and, if appropriate, a modest high‑yield portion, with regular laddering and rebalancing to manage interest‑rate and credit‑spread risks. This structure aligns with conservative retirement guidance (S4) and age‑appropriate asset‑allocation principles (S5).",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "How Should Retirees Divide a Portfolio Among Stocks, Bonds and Cash?",
+      "url": "https://sg.finance.yahoo.com/news/heres-much-keep-stocks-bonds-205122372.html",
+      "source": "web",
+      "snippet": "Aggressive. Designed for a retirement that's expected to last more than 25 years, this is for investors with a high capacity for risk:   Cash: 8% of assets are kept in cash for years 1 and 2 of retirement  Bonds: 32% of assets are kept in b",
+      "id": "S1"
+    },
+    {
+      "title": "Should Cash Replace Bonds In A Retirement Portfolio?",
+      "url": "https://www.youtube.com/watch?v=IOQWOWjM_hQ",
+      "source": "web",
+      "snippet": "### Transcript [0:00] a viewer uh emailed me this week and he wanted to know he said Rob cash is paying a pretty good yield right now [0:07] should we sell our bonds that are in our portfolio and put that money in cash instead I think that'",
+      "id": "S2"
+    },
+    {
+      "title": "Wanting steady income in retirement makes sense. But putting 40% into 10 ...",
+      "url": "https://www.facebook.com/WellKeptWallet/posts/wanting-steady-income-in-retirement-makes-sense-but-putting-40-into-10-year-bond/1740019498124986",
+      "source": "web",
+      "snippet": "U.S. Treasuries and corporate bonds carry different risks. • Keep cash available. Selling a bond before maturity could mean taking a loss. •",
+      "id": "S3"
+    },
+    {
+      "title": "When A Retiree Reaches This Age, It's Time To Switch To A 'Conservative' Retirement Portfolio",
+      "url": "https://finance.yahoo.com/news/retiree-reaches-age-time-switch-233000591.html",
+      "source": "web",
+      "snippet": "## What a conservative portfolio typically looks like  Senior adding coins to piggy bank.  Senior adding coins to piggy bank. - chayanuphol/Shutterstock     In retirement, your portfolio should not be set up to grow aggressively anymore; in",
+      "id": "S4"
+    },
+    {
+      "title": "Asset Allocation by Age | WealthTrace",
+      "url": "https://www.mywealthtrace.com/blog/asset-allocation-by-age-be-wary-using-rules-of-thumb",
+      "source": "web",
+      "snippet": "## WealthTrace Financial Planning & Retirement Planning Blog  ## You're subscribed!  If you don’t see the first email soon, check Promotions/Spam and move it to Primary.  logo close logo  ## Do you want free tips on how to retire early?  ##",
+      "id": "S5"
+    },
+    {
+      "title": "How much money should Gerry, in his 70s, have in equities, bonds and cash?",
+      "url": "https://ca.finance.yahoo.com/news/much-money-gerry-70s-equities-100041696.html",
+      "source": "web",
+      "snippet": "Oops, something went wrong  Skip to navigation  Skip to right column   # Yahoo Finance Canada  Sign in  1. My Portfolio 2. 1. Housing    2. Technology 3. 1. Stocks: Most Actives    2. Stocks: Gainers    3. Stocks: Losers    4. Trending Tick",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

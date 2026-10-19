@@ -64,3 +64,171 @@ disclosure_patterns = [
 # ---------------------------------------------------------------------------
 [assumptions]
 patterns = ["\\(assumption\\)", "\\bassum(e|ed|es|ing|ption|ptions)\\b", "\\bhypothetical", "\\billustrative"]
+
+# ---------------------------------------------------------------------------
+# Direction check: a change figure (e.g. "+25 bp", or a number that matches a
+# change in the data) must not sit next to a word saying the opposite
+# ("rose" next to a fall). Only words with one clear direction are listed;
+# "tightening"/"easing" are left out because they mean opposite things for
+# spreads and for monetary policy.
+# ---------------------------------------------------------------------------
+[directions]
+window_chars = 60
+# a hedged or conditional clause ("spreads could widen 20 bp if ...") describes a scenario, not the data
+skip_words = ["if", "could", "may", "might", "would", "should", "unless", "scenario", "assume", "assuming",
+              "expect", "expected", "expects", "forecast", "likely", "will", "potential", "monitor", "watch"]
+up = [
+    "rose", "rise", "rises", "rising", "risen", "increase", "increased", "increases", "increasing",
+    "up", "higher", "widened", "widening", "widen", "widens", "climbed", "climbing", "gained", "jumped",
+    "surged", "accelerated", "rebounded", "steepened", "steepening", "grew", "expanded", "advanced",
+]
+down = [
+    "fell", "fall", "falls", "falling", "fallen", "decrease", "decreased", "decreases", "decreasing",
+    "down", "lower", "narrowed", "narrowing", "narrows", "declined", "decline", "declines", "declining",
+    "dropped", "drop", "slowed", "slowing", "cooled", "cooling", "softened", "plunged", "contracted",
+    "flattened", "flattening", "shrank", "slipped", "retreated",
+]
+
+# ---------------------------------------------------------------------------
+# Comparison check (reports written with fact placeholders): in a sentence
+# like "{{A}} is above {{B}}", A and B must be in comparable units and the
+# order must match the data. Neutral words ("relative to", "vs") only need
+# comparable units. Families group units that can be compared.
+# ---------------------------------------------------------------------------
+[comparisons]
+# "over" is left out: "over three months" is about time, not a comparison
+above = ["above", "higher than", "greater than", "more than", "exceeds", "exceeding"]
+below = ["below", "lower than", "less than", "under", "beneath"]
+neutral = ["relative to", "compared with", "compared to", "versus", "vs", "vs."]
+# unit families a neutral word may set side by side: a P/E "relative to earnings growth" or to bond
+# yields is valuation analysis, a P/E "relative to CPI" (an index level) is not
+analytic_pairs = [["multiple", "rate"]]
+
+[comparisons.unit_families]
+percent = "rate"
+pp = "rate"
+bp = "rate"
+pct = "rate"
+x = "multiple"
+index = "index"
+pts = "index"
+usd = "money"
+bn_usd = "money"
+count = "count"
+ratio = "ratio"
+percentile = "percentile"
+
+# ---------------------------------------------------------------------------
+# Wording checks: statements about where a series sits in its history
+# ("near five-year lows", "elevated") and about its current direction
+# ("spreads are tightening") are compared with the data, whether or not the
+# sentence quotes a number. Sentences with hedges or conditions ("if",
+# "could", "likely", ...) and negated phrases are skipped: scenarios and
+# forecasts are not claims about the data.
+# ---------------------------------------------------------------------------
+[wording]
+# sections whose statements are scenarios or things to watch, not claims about the data (by heading)
+hypothetical_sections = ["scenario", "risk", "monitor", "watch"]
+skip_words = ["if", "could", "may", "might", "would", "should", "unless", "scenario", "assume", "assuming",
+              "expect", "expected", "expects", "forecast", "likely", "will", "potential", "risk", "outlook",
+              "monitor", "watch", "upside", "downside", "until"]
+negations = ["not", "no", "no longer", "isn't", "aren't", "never", "hardly", "rather than", "instead of", "without"]
+
+[wording.history]
+# percentile of the latest value in its fetched history (fact_store *.pctile_*)
+low_max_pctile = 33
+high_min_pctile = 67
+middle_range = [20, 80]
+# history needed to judge these words: at least min_years, and a phrase naming a horizon needs that
+# horizon (FRED's ICE credit spreads have 3 years: "historically tight" is checked, "five-year low" is not)
+min_years = 3
+phrase_years = { "five-year" = 5, "5-year" = 5, "ten-year" = 10, "10-year" = 10, "decade" = 10 }
+low = ["historically low", "historically tight", "near its lows", "near their lows", "near lows", "near the lows",
+       "five-year low", "five-year lows", "5-year low", "5-year lows", "multi-year low", "record low", "near the bottom",
+       "tight relative to history", "tight by historical standards", "compressed", "near historic lows"]
+high = ["historically high", "historically wide", "near its highs", "near their highs", "near highs", "near the highs",
+        "five-year high", "five-year highs", "5-year high", "5-year highs", "multi-year high", "record high",
+        "elevated", "wide relative to history", "wide by historical standards", "near historic highs"]
+middle = ["near the median", "near its median", "near the average", "near its average", "near their average",
+          "around its average", "in line with history", "near the long-term average", "near the long-term median",
+          "near historical norms"]
+
+[wording.trend]
+# Progressive trend words with one clear direction for the series they name. Words whose meaning
+# depends on the subject are left out: a "cooling" labour market means unemployment is rising, and
+# "easing"/"slowing"/"accelerating" usually describe a growth rate. "tightening" depends on the group.
+up = ["rising", "widening", "increasing", "climbing", "steepening", "moving higher", "trending higher", "trending up"]
+down = ["falling", "narrowing", "decreasing", "declining", "flattening", "compressing", "moving lower",
+        "trending lower", "trending down"]
+tightening = { credit_spread = "down", yield = "up" }
+# For price indexes and GDP, trend words describe the growth rate ("inflation is falling"), but the
+# fact store has the level's changes, which are almost always positive; these series are not checked.
+skip_series = ["CPI", "PCE", "GDP"]
+# phrases where a trend word does not describe the series: tighter credit conditions mean wider spreads
+exclude = ["tightening credit conditions", "tightening financial conditions", "credit tightening",
+           "financial tightening", "monetary tightening", "policy tightening", "tightening cycle",
+           "quantitative tightening", "tightening policy", "tightening monetary policy"]
+
+# For price indexes and GDP these words describe the growth rate, so they are checked against the
+# rate, not the level. A word is flagged only if both measures contradict it: the 12-month rate
+# against a period earlier, and the short-term pace (monthly series: the last 3 months annualized
+# against the 12-month rate; quarterly: the latest quarter annualized against the one before).
+[wording.rate_trend]
+series = ["CPI", "PCE", "GDP"]
+down = ["cooling", "easing", "slowing", "decelerating", "deceleration", "moderating", "softening", "disinflation"]
+up = ["accelerating", "acceleration", "re-accelerating", "reaccelerating", "reacceleration", "heating up",
+      "picking up"]
+min_gap = 0.05   # percentage points; smaller differences count as no change
+# "easing" of monetary policy is not inflation easing
+exclude = ["easing policy", "policy easing", "monetary easing", "easing cycle", "easing bias", "quantitative easing",
+           "fed easing", "rate easing", "easing financial conditions", "easing of financial conditions"]
+# the fetched series is headline CPI / PCE; a sentence about another measure is not checked
+other_measures = ["core", "components", "categories", "services inflation", "goods inflation", "wage", "wages"]
+
+# the horizon named nearest to a trend word, in the same clause, picks which change to compare with
+# ("widening over the past month while narrowing over the past 6 months"); default: the latest month
+[wording.trend.horizons]
+# not a bare "year": "10-Year Treasury" names a maturity, not a period
+"past year" = "1y"
+"the year" = "1y"
+"a year" = "1y"
+"one year" = "1y"
+"year over year" = "1y"
+"year-on-year" = "1y"
+"yoy" = "1y"
+"12-month" = "1y"
+"12 months" = "1y"
+"twelve months" = "1y"
+"annual" = "1y"
+"six months" = "6m"
+"6 months" = "6m"
+"6-month" = "6m"
+"six-month" = "6m"
+"quarter" = "3m"
+"three months" = "3m"
+"3 months" = "3m"
+"3-month" = "3m"
+"three-month" = "3m"
+"month" = "1m"
+"1 month" = "1m"
+"one month" = "1m"
+"week" = "1w"
+
+# names a sentence may use for a series (matched as whole words); a sentence is checked only if it
+# clearly points to one series (by a fact it quotes or by one of these names)
+[wording.series_names]
+HY_OAS = ["high yield", "high-yield spread", "high-yield spreads", "hy spread", "hy spreads", "hy oas", "junk bond spreads"]
+IG_OAS = ["investment grade", "investment-grade spread", "investment-grade spreads", "ig spread", "ig spreads", "ig oas"]
+UST10Y = ["10-year yield", "10-year treasury", "10y yield", "ten-year yield"]
+UST2Y = ["2-year yield", "2-year treasury", "2y yield", "two-year yield"]
+CURVE_10Y2Y = ["yield curve", "curve", "2s10s", "10s2s"]
+FEDFUNDS = ["fed funds", "federal funds", "policy rate"]
+MORTGAGE30 = ["mortgage rate", "mortgage rates"]
+CPI = ["cpi", "inflation", "consumer prices"]
+PCE = ["pce"]
+UNRATE = ["unemployment", "jobless rate"]
+SAHM = ["sahm"]
+GDP = ["gdp", "real gdp"]
+SP500 = ["s&p 500", "equity market", "stock market"]
+VIX = ["vix", "volatility"]
+WTI = ["oil", "wti", "crude"]

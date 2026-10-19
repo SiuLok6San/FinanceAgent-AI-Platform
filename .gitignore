@@ -209,5 +209,6 @@ __marimo__/
 # Pipeline logs (tracebacks, run metadata)
 logs/
 
-# Original code checked out by eval/run_eval.py
+# Old versions checked out by eval/run_eval.py
 eval/.original/
+eval/.versions/

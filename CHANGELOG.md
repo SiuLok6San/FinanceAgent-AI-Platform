@@ -1,5 +1,64 @@
 # Changelog
 
+## Oct 2026 — v3: grounded by construction (`v3-grounded` branch)
+
+Changed
+- The LLM agents no longer type numbers. Every fetched or derived value gets a fact ID (`HY_OAS.latest`,
+  `HY_OAS.chg_1m`, `HY_OAS.pctile_5y`, `HY_OAS_minus_IG_OAS`, `JPM.pe_ttm`, ...); the Analyst, Reasoner and
+  Writer write `{{ID}}`, `{{S#: quoted number}}` or `{{assume: ...}}`, and `render.py` inserts the exact value
+  and its citation. The free-text Writer and the KEY DATA prompt block are gone.
+- The Planner returns JSON (topics + FRED series from a catalog), checked in code, with the rule-based router as
+  fallback.
+- 5–10 years of history per series, so reports can say where today's value sits in its range.
+
+Added
+- Direction check: a change described with the wrong word ("narrowed" next to a widening) is flagged and sent
+  back to the Writer. It also runs on free-text reports, so all versions can be compared.
+- Quoted web numbers must appear in the text of the source they name.
+- Comparison check: "A is above B" between two facts is checked against their values, and a comparison
+  between different units (a P/E multiple against an index level) is flagged.
+- Wording checks: history words ("near five-year lows", "tight relative to history") are checked against the
+  fact's percentile in the fetched window, and trend words ("widening", "rising") against its recent change.
+  Like the direction and comparison checks, their findings go back to the Writer in the feedback loop.
+- Growth-rate wording: "inflation is cooling" or "growth is slowing" is checked against the rate, not the
+  index level: the 12-month rate against a period earlier and the recent annualized pace (new facts
+  `CPI.pct_1y_prev`, `CPI.ann_3m`, `GDP.ann_growth_1q_prev`). It is flagged only when both disagree with the
+  word. "Inflation fell from {{CPI.pct_1y_prev}} to {{CPI.pct_1y}}" is judged by the two rates.
+- A number labelled "(assumption)" that is written the same way in a source the line cites counts as an open
+  issue (it is that source's figure). A revision could otherwise clear typed numbers by relabelling them; the
+  feedback says to quote such numbers as `{{S#: …}}`.
+- UI: hover any number to see the fact it came from; colours mark data, quotes, assumptions and typed numbers;
+  lines with no checked figure are shown in italics as interpretation (the model's reading, not checked); the
+  Planner's choices and the full fact table are shown.
+- Evaluation of original, v2 and v3 on 20 development questions, 10 held-out questions (frozen before v3 was
+  built) and 10 fresh questions (frozen later, never run before the final runs), and a hand review of every
+  wording finding the Writer received in the final run (`eval/FEEDBACK_REVIEW.md`).
+- Tags `v1.0-course` and `v2.0-validation` mark the earlier versions.
+
+Fixed
+- The feedback loop could introduce errors: a typed number matched to the data by coincidence was sent back
+  as a direction error or with a suggested fact ID ("above the Fed's 2% target" became "above the Fed's
+  3.75% target"). In placeholder reports only inserted facts are direction- and citation-checked, hedged
+  clauses are skipped, and a typed number gets "use its ID if it is data, {{assume: …}} if it is a target or
+  estimate".
+- A number counts as being in a web source's text only if the source shows it at the precision the report
+  writes it ("0.8 pp" no longer matches the "1" of a section heading). This applies to quotes and to scoring.
+- Percentile, min, max and average facts are labelled by the history actually fetched: FRED serves only 3
+  years of the ICE credit spreads, which were labelled "5y". History wording needs at least 3 years of data,
+  and a phrase naming a horizon ("five-year lows") needs that horizon.
+- The hosted Ollama free tier allows one request at a time: an HTTP 429 now waits for the server's
+  `Retry-After`, and evaluation runs go one question at a time.
+- An LLM call may take up to 300 s (was 180 s): long revision calls timed out on every attempt. Each failed
+  attempt is logged.
+
+Fixed after the final run (found by reading its reports; scoring only, the run's revisions are unchanged)
+- In the final run, 13 of the 30 wording findings sent to the Writer were false alarms, and the revision made
+  four correct statements wrong ("annualized growth fell from +2.5% to +2.2%" became "rose"). Causes removed:
+  quarterly rates quoted with the previous quarter are judged by the two rates; a trend word's subject is the
+  series named next to it; scenario, risk and monitoring sections and table rows are skipped; "tightening
+  credit conditions" is not spread tightening; with no period named, the month and the quarter must agree;
+  "10-Year" is not a period; a change is not compared with a level; "P/E relative to growth" is allowed.
+
 ## Oct 2026 — public demo
 
 - Public site on Streamlit Community Cloud: <https://financeagent-ai-platform.streamlit.app>. It opens on the 20

@@ -1,0 +1,2181 @@
+{
+  "id": "F09",
+  "set": "fresh",
+  "category": "portfolio",
+  "question": "Should a portfolio reduce equity risk when the VIX is low?",
+  "ticker": null,
+  "expected_tags": [
+    "portfolio",
+    "equity"
+  ],
+  "pipeline": "v2",
+  "run_utc": "2026-10-18T22:27:21+00:00",
+  "elapsed_sec": 46.2,
+  "router_tags": [
+    "portfolio",
+    "equity"
+  ],
+  "tags": [
+    "portfolio",
+    "equity"
+  ],
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**1. Executive Summary**  \n- Current VIX = 16.46 (2026‑10‑15) [S1].  \n- VIX below 15 is considered a low‑volatility, risk‑on environment [S4].  \n- Low VIX signals market optimism but can precede sudden volatility spikes [S2], [S4].  \n- A modest tactical reduction of equity exposure when VIX < 15 can protect against volatility surges while preserving long‑term upside (assumption).  \n- Transaction costs and timing risk must be managed; core equity allocation should remain in place.  \n\n**2. Core Analysis**  \n\n*Macro / Market Context*  \n- No macro‑economic data fetched; qualitative sources note that rising rates can compress equity valuations and heighten volatility expectations [S4].  \n\n*VIX Interpretation*  \n- VIX 0–15 is commonly viewed as low‑volatility, risk‑on environment [S4].  \n- Historical evidence shows that low VIX can precede sharp volatility spikes (“VIX spike” phenomenon) [S2].  \n\n*Credit / Alternative View*  \n- No credit‑spread data fetched; qualitative commentary suggests IG spreads tighten during low‑VIX periods, offering higher yields without significant credit risk increase [S4].  \n- No data on high‑yield spreads fetched; risk‑on sentiment may still expose HY to sudden widening.  \n\n**3. Scenarios**  \n\n- **Base** – No VIX trigger; maintain current equity allocation (assumption).  \n- **Upside** – VIX < 15; reduce equity weight by 10–15 % (tactical overlay) (assumption) [S4].  \n- **Downside** – VIX > 15; increase equity weight by 10–15 % (assumption) [S4].  \n\n**4. Key Risks & Monitoring**  \n\n- **VIX‑Spike Risk** – Low VIX can be followed by sudden volatility surges; monitor VIX trend and option‑implied skew.  \n- **Transaction Costs** – Frequent tactical adjustments erode returns; set a minimum holding period for overlay trades.  \n- **Mis‑timing** – Over‑reduction may under‑expose during prolonged low‑volatility periods; use a core‑plus‑overlay framework.  \n- **Macro‑Shock** – Rising rates or inflation can override VIX signals; track Fed policy statements and CPI releases.  \n\n**5. Portfolio / Decision Implications**  \n\n- **Core Allocation** – Keep 60–70 % equity exposure to capture long‑term growth (assumption).  \n- **Tactical Overlay** – Apply a 10–15 % equity reduction when VIX < 15, funded by IG bond or cash buffer (assumption) [S4].  \n- **Rebalancing Rules** – Reassess overlay only when VIX crosses the threshold and remains for at least one week; avoid daily adjustments.  \n- **Credit Strategy** – Increase IG weighting during low‑VIX periods to capture tightening spreads; monitor HY spreads for widening signals.  \n\n**6. Conclusion**  \n\nA portfolio can prudently reduce equity risk when the VIX is low, but the adjustment should be modest, rule‑based, and part of a broader risk‑management framework. The VIX alone is insufficient; it must be corroborated by macro indicators and credit conditions. Implementing a core‑plus‑overlay approach with clear thresholds and cost controls offers the best balance between protecting against volatility spikes and preserving long‑term equity upside.",
+  "report_template": null,
+  "draft_report_text": "**1. Executive Summary**  \n- Current VIX = 16.46 (2026‑10‑15) – slightly above the 15‑point “optimism” threshold [S1].  \n- Low VIX signals market optimism but does not guarantee sustained calm; spikes can follow low levels [S2], [S4].  \n- A modest tactical reduction (10–15 %) of equity exposure when VIX < 15 can protect against sudden volatility surges while preserving long‑term upside.  \n- Transaction costs and timing risk must be managed; a core equity allocation should remain in place.  \n\n**2. Core Analysis**  \n\n*Macro / Market Context*  \n- No macro‑economic data were fetched for this period; qualitative sources note that rising rates can compress equity valuations and heighten volatility expectations [S4].  \n\n*VIX Interpretation*  \n- VIX 0–15 is commonly viewed as a low‑volatility, risk‑on environment [S4].  \n- Historical evidence shows that low VIX can precede sharp volatility spikes (“VIX spike” phenomenon) [S2].  \n\n*Credit / Alternative View*  \n- No credit‑spread data were fetched; qualitative commentary suggests IG spreads tighten during low‑VIX periods, offering higher yields without significant credit risk increase [S4].  \n- No data on high‑yield spreads were fetched; risk‑on sentiment may still expose HY to sudden widening.  \n\n**3. Scenarios**  \n\n| Scenario | Trigger | Action | Expected Outcome (qualitative) |\n|----------|---------|--------|--------------------------------|\n| **Base** | No VIX trigger | Maintain current equity allocation | Stable long‑term equity exposure; potential drawdown if volatility spikes |\n| **Upside** | VIX < 15 | Reduce equity weight by 10–15 % (tactical overlay) | Lower exposure to sudden volatility; modest drag on upside if low‑VIX persists |\n| **Downside** | VIX > 15 | Increase equity weight by 10–15 % | Capture higher upside; higher risk of drawdown if volatility spikes |\n\n**4. Key Risks & Monitoring**  \n\n- **VIX‑Spike Risk**: Low VIX can be followed by sudden volatility surges; monitor VIX trend and option‑implied skew.  \n- **Transaction Costs**: Frequent tactical adjustments erode returns; set a minimum holding period for overlay trades.  \n- **Mis‑timing**: Over‑reduction may under‑expose during prolonged low‑volatility periods; use a core‑plus‑overlay framework.  \n- **Macro‑Shock**: Rising rates or inflation can override VIX signals; track Fed policy statements and CPI releases.  \n\n**5. Portfolio / Decision Implications**  \n\n- **Core Allocation**: Keep 60–70 % equity exposure to capture long‑term growth.  \n- **Tactical Overlay**: Apply a 10–15 % equity reduction when VIX < 15, funded by IG bond or cash buffer.  \n- **Rebalancing Rules**: Reassess overlay only when VIX crosses the threshold and remains for at least one week; avoid daily adjustments.  \n- **Credit Strategy**: Increase IG weighting during low‑VIX periods to capture tightening spreads; monitor HY spreads for widening signals.  \n\n**6. Conclusion**  \n\nA portfolio can prudently reduce equity risk when the VIX is low, but the adjustment should be modest, rule‑based, and part of a broader risk‑management framework. The VIX alone is insufficient; it must be corroborated by macro indicators and credit conditions. Implementing a core‑plus‑overlay approach with clear thresholds and cost controls offers the best balance between protecting against volatility spikes and preserving long‑term equity upside.",
+  "draft_report_template": null,
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"10\" in: \"- A modest tactical reduction (10–15 %) of equity exposure when VIX < 15 can protect against sudden volatility surges while preserving long‑term upside.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n2. \"15 %\" in: \"- A modest tactical reduction (10–15 %) of equity exposure when VIX < 15 can protect against sudden volatility surges while preserving long‑term upside.\" — this number appears in source [S4]; cite it in that sentence.\n3. \"10\" in: \"| **Upside** | VIX < 15 | Reduce equity weight by 10–15 % (tactical overlay) | Lower exposure to sudden volatility; modest drag on upside if low‑VIX persists |\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n4. \"15 %\" in: \"| **Upside** | VIX < 15 | Reduce equity weight by 10–15 % (tactical overlay) | Lower exposure to sudden volatility; modest drag on upside if low‑VIX persists |\" — this number appears in source [S4]; cite it in that sentence.\n5. \"10\" in: \"| **Downside** | VIX > 15 | Increase equity weight by 10–15 % | Capture higher upside; higher risk of drawdown if volatility spikes |\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n6. \"15 %\" in: \"| **Downside** | VIX > 15 | Increase equity weight by 10–15 % | Capture higher upside; higher risk of drawdown if volatility spikes |\" — this number appears in source [S4]; cite it in that sentence.\n7. \"60\" in: \"- **Core Allocation**: Keep 60–70 % equity exposure to capture long‑term growth.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n8. \"70 %\" in: \"- **Core Allocation**: Keep 60–70 % equity exposure to capture long‑term growth.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n9. \"10\" in: \"- **Tactical Overlay**: Apply a 10–15 % equity reduction when VIX < 15, funded by IG bond or cash buffer.\" — not in KEY DATA or any source; replace it with the KEY DATA value and its [S#], remove it, or mark it \"(assumption)\" if it is your own assumption.\n10. \"15 %\" in: \"- **Tactical Overlay**: Apply a 10–15 % equity reduction when VIX < 15, funded by IG bond or cash buffer.\" — this number appears in source [S4]; cite it in that sentence.\n11. Add a citation to: \"- A modest tactical reduction (10–15 %) of equity exposure when VIX < 15 can protect against sudden volatility surges while preserving long‑term upside.\" — its figures 15 come from [S1].\n12. Add a citation to: \"| Scenario | Trigger | Action | Expected Outcome (qualitative) |\n|----------|---------|--------|--------------------------------|\n| **Base** | No VIX trigger | \" — its figures 15, 15 come from [S1].\n13. Add a citation to: \"- **Tactical Overlay**: Apply a 10–15 % equity reduction when VIX < 15, funded by IG bond or cash buffer.\" — its figures 15 come from [S1].",
+        "open_issues_before": 13,
+        "summary_before": "9 of 19 figures verified against source data (8 exact, 1 derived); 10 flagged (4 of them appear in a fetched web/news snippet). 3 paragraph(s) state figures without a citation.",
+        "accepted": true,
+        "open_issues_after": 1,
+        "summary_after": "9 of 17 figures verified against source data (8 exact, 1 derived); 8 flagged (3 of them appear in a fetched web/news snippet; 8 labelled as assumptions). 1 paragraph(s) state figures without a citation.",
+        "revised_report_text": "**1. Executive Summary**  \n- Current VIX = 16.46 (2026‑10‑15) [S1].  \n- VIX below 15 is considered a low‑volatility, risk‑on environment [S4].  \n- Low VIX signals market optimism but can precede sudden volatility spikes [S2], [S4].  \n- A modest tactical reduction of equity exposure when VIX < 15 can protect against volatility surges while preserving long‑term upside (assumption).  \n- Transaction costs and timing risk must be managed; core equity allocation should remain in place.  \n\n**2. Core Analysis**  \n\n*Macro / Market Context*  \n- No macro‑economic data fetched; qualitative sources note that rising rates can compress equity valuations and heighten volatility expectations [S4].  \n\n*VIX Interpretation*  \n- VIX 0–15 is commonly viewed as low‑volatility, risk‑on environment [S4].  \n- Historical evidence shows that low VIX can precede sharp volatility spikes (“VIX spike” phenomenon) [S2].  \n\n*Credit / Alternative View*  \n- No credit‑spread data fetched; qualitative commentary suggests IG spreads tighten during low‑VIX periods, offering higher yields without significant credit risk increase [S4].  \n- No data on high‑yield spreads fetched; risk‑on sentiment may still expose HY to sudden widening.  \n\n**3. Scenarios**  \n\n- **Base** – No VIX trigger; maintain current equity allocation (assumption).  \n- **Upside** – VIX < 15; reduce equity weight by 10–15 % (tactical overlay) (assumption) [S4].  \n- **Downside** – VIX > 15; increase equity weight by 10–15 % (assumption) [S4].  \n\n**4. Key Risks & Monitoring**  \n\n- **VIX‑Spike Risk** – Low VIX can be followed by sudden volatility surges; monitor VIX trend and option‑implied skew.  \n- **Transaction Costs** – Frequent tactical adjustments erode returns; set a minimum holding period for overlay trades.  \n- **Mis‑timing** – Over‑reduction may under‑expose during prolonged low‑volatility periods; use a core‑plus‑overlay framework.  \n- **Macro‑Shock** – Rising rates or inflation can override VIX signals; track Fed policy statements and CPI releases.  \n\n**5. Portfolio / Decision Implications**  \n\n- **Core Allocation** – Keep 60–70 % equity exposure to capture long‑term growth (assumption).  \n- **Tactical Overlay** – Apply a 10–15 % equity reduction when VIX < 15, funded by IG bond or cash buffer (assumption) [S4].  \n- **Rebalancing Rules** – Reassess overlay only when VIX crosses the threshold and remains for at least one week; avoid daily adjustments.  \n- **Credit Strategy** – Increase IG weighting during low‑VIX periods to capture tightening spreads; monitor HY spreads for widening signals.  \n\n**6. Conclusion**  \n\nA portfolio can prudently reduce equity risk when the VIX is low, but the adjustment should be modest, rule‑based, and part of a broader risk‑management framework. The VIX alone is insufficient; it must be corroborated by macro indicators and credit conditions. Implementing a core‑plus‑overlay approach with clear thresholds and cost controls offers the best balance between protecting against volatility spikes and preserving long‑term equity upside."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FRED series VIXCLS: CBOE Volatility Index (VIX)",
+      "url": "https://fred.stlouisfed.org/series/VIXCLS",
+      "source": "FRED",
+      "snippet": "Daily series in Index; latest observation 16.46 on 2026-10-15.",
+      "id": "S1"
+    },
+    {
+      "title": "Stock Market Volatility | Risk, Beta, & Cboe VIX | Britannica Money",
+      "url": "https://www.britannica.com/money/stock-market-volatility",
+      "source": "web (Tavily)",
+      "snippet": "Cboe Volatility Index (VIX). Financial media channels frequently mention the VIX. It's an important gauge of market volatility because it measures the implied volatility of SPX options over a 30-day horizon. If the VIX is low, it suggests investors are confident about the stock market. If the VIX is high, it means inve",
+      "id": "S2"
+    },
+    {
+      "title": "5 Low Beta, High-Yield Stocks for Your Low-Risk Income Portfolio",
+      "url": "https://www.marketbeat.com/originals/5-low-beta-high-yield-stocks-for-your-low-risk-income-portfolio",
+      "source": "web (Tavily)",
+      "snippet": "The risk to the market is mounting, and with it, volatility. The VIX is up nearly 50% in the last month and heading higher, which means the S&P 500 could be heading lower. Based on the outlook for persistent inflation and higher-for-longer interest rates, the S&P 500 could be in for a volatile few years, which raises t",
+      "id": "S3"
+    },
+    {
+      "title": "Understanding VIX or Volatility Index",
+      "url": "https://www.td.com/ca/en/investing/direct-investing/articles/understanding-vix",
+      "source": "web (Tavily)",
+      "snippet": "This knowledge can be used to make informed investment decisions. Typically, when the price of VIX is:  0-15:This can indicate a certain amount of optimism in the market as well as very low volatility.  15-25: This can indicate that there is a certain amount of volatility, but nothing extreme.  25-30: This can indicate",
+      "id": "S4"
+    },
+    {
+      "title": "Is UnitedHealth Group (UNH) the Best Low Risk Stock to Buy In 2025?",
+      "url": "https://finance.yahoo.com/news/unitedhealth-group-unh-best-low-211142701.html",
+      "source": "web (Tavily)",
+      "snippet": "of the broad market. An equity beta below one means that the stock does not respond as much as the broad market to different events, such as macroeconomic developments, monetary policy changes, etc. When a stock with low risk (low beta) is introduced into a portfolio, the overall expected risk of the portfolio is signi",
+      "id": "S5"
+    },
+    {
+      "title": "Alternatives can add diversity, reduce risk in any investor portfolio",
+      "url": "https://www.cnbc.com/2014/10/29/alternatives-can-add-diversity-reduce-risk-in-any-investor-portfolio.html",
+      "source": "web (Tavily)",
+      "snippet": "Butowsky: I am a huge proponent of always having a portfolio that is prepared to handle different economic and market conditions. With alternatives, the risk isn't necessarily investment performance but ... investor performance. Most seasoned investors know that a properly managed portfolio should always have some inve",
+      "id": "S6"
+    },
+    {
+      "title": "Low Risk Investors: Buy These 2 ETFs for an Ultra-Safe Investment Portfolio",
+      "url": "https://ca.finance.yahoo.com/news/low-risk-investors-buy-2-211900695.html",
+      "source": "web (Tavily)",
+      "snippet": "Title: Low Risk Investors: Buy These 2 ETFs for an Ultra-Safe Investment Portfolio # Low Risk Investors: Buy These 2 ETFs for an Ultra-Safe Investment Portfolio. Investors with a low risk tolerance, a shorter time horizon, or more modest investment objectives should favour preservation of capital over growth. For these",
+      "id": "S7"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S4"
+  ],
+  "tables": [
+    {
+      "title": "FRED: CBOE Volatility Index (VIX) (VIXCLS)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "VIXCLS",
+      "frequency": "daily",
+      "units": "Index",
+      "last_date": "2026-10-15",
+      "topics": [
+        "equity",
+        "portfolio"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/VIXCLS",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-03",
+          16.65
+        ],
+        [
+          "2025-10-06",
+          16.37
+        ],
+        [
+          "2025-10-07",
+          17.24
+        ],
+        [
+          "2025-10-08",
+          16.3
+        ],
+        [
+          "2025-10-09",
+          16.43
+        ],
+        [
+          "2025-10-10",
+          21.66
+        ],
+        [
+          "2025-10-13",
+          19.03
+        ],
+        [
+          "2025-10-14",
+          20.81
+        ],
+        [
+          "2025-10-15",
+          20.64
+        ],
+        [
+          "2025-10-16",
+          25.31
+        ],
+        [
+          "2025-10-17",
+          20.78
+        ],
+        [
+          "2025-10-20",
+          18.23
+        ],
+        [
+          "2025-10-21",
+          17.87
+        ],
+        [
+          "2025-10-22",
+          18.6
+        ],
+        [
+          "2025-10-23",
+          17.3
+        ],
+        [
+          "2025-10-24",
+          16.37
+        ],
+        [
+          "2025-10-27",
+          15.79
+        ],
+        [
+          "2025-10-28",
+          16.42
+        ],
+        [
+          "2025-10-29",
+          16.92
+        ],
+        [
+          "2025-10-30",
+          16.91
+        ],
+        [
+          "2025-10-31",
+          17.44
+        ],
+        [
+          "2025-11-03",
+          17.17
+        ],
+        [
+          "2025-11-04",
+          19.0
+        ],
+        [
+          "2025-11-05",
+          18.01
+        ],
+        [
+          "2025-11-06",
+          19.5
+        ],
+        [
+          "2025-11-07",
+          19.08
+        ],
+        [
+          "2025-11-10",
+          17.6
+        ],
+        [
+          "2025-11-11",
+          17.28
+        ],
+        [
+          "2025-11-12",
+          17.51
+        ],
+        [
+          "2025-11-13",
+          20.0
+        ],
+        [
+          "2025-11-14",
+          19.83
+        ],
+        [
+          "2025-11-17",
+          22.38
+        ],
+        [
+          "2025-11-18",
+          24.69
+        ],
+        [
+          "2025-11-19",
+          23.66
+        ],
+        [
+          "2025-11-20",
+          26.42
+        ],
+        [
+          "2025-11-21",
+          23.43
+        ],
+        [
+          "2025-11-24",
+          20.52
+        ],
+        [
+          "2025-11-25",
+          18.56
+        ],
+        [
+          "2025-11-26",
+          17.19
+        ],
+        [
+          "2025-11-27",
+          17.21
+        ],
+        [
+          "2025-11-28",
+          16.35
+        ],
+        [
+          "2025-12-01",
+          17.24
+        ],
+        [
+          "2025-12-02",
+          16.59
+        ],
+        [
+          "2025-12-03",
+          16.08
+        ],
+        [
+          "2025-12-04",
+          15.78
+        ],
+        [
+          "2025-12-05",
+          15.41
+        ],
+        [
+          "2025-12-08",
+          16.66
+        ],
+        [
+          "2025-12-09",
+          16.93
+        ],
+        [
+          "2025-12-10",
+          15.77
+        ],
+        [
+          "2025-12-11",
+          14.85
+        ],
+        [
+          "2025-12-12",
+          15.74
+        ],
+        [
+          "2025-12-15",
+          16.5
+        ],
+        [
+          "2025-12-16",
+          16.48
+        ],
+        [
+          "2025-12-17",
+          17.62
+        ],
+        [
+          "2025-12-18",
+          16.87
+        ],
+        [
+          "2025-12-19",
+          14.91
+        ],
+        [
+          "2025-12-22",
+          14.08
+        ],
+        [
+          "2025-12-23",
+          14.0
+        ],
+        [
+          "2025-12-24",
+          13.47
+        ],
+        [
+          "2025-12-26",
+          13.6
+        ],
+        [
+          "2025-12-29",
+          14.2
+        ],
+        [
+          "2025-12-30",
+          14.33
+        ],
+        [
+          "2025-12-31",
+          14.95
+        ],
+        [
+          "2026-01-02",
+          14.51
+        ],
+        [
+          "2026-01-05",
+          14.9
+        ],
+        [
+          "2026-01-06",
+          14.75
+        ],
+        [
+          "2026-01-07",
+          15.38
+        ],
+        [
+          "2026-01-08",
+          15.45
+        ],
+        [
+          "2026-01-09",
+          14.49
+        ],
+        [
+          "2026-01-12",
+          15.12
+        ],
+        [
+          "2026-01-13",
+          15.98
+        ],
+        [
+          "2026-01-14",
+          16.75
+        ],
+        [
+          "2026-01-15",
+          15.84
+        ],
+        [
+          "2026-01-16",
+          15.86
+        ],
+        [
+          "2026-01-19",
+          18.84
+        ],
+        [
+          "2026-01-20",
+          20.09
+        ],
+        [
+          "2026-01-21",
+          16.9
+        ],
+        [
+          "2026-01-22",
+          15.64
+        ],
+        [
+          "2026-01-23",
+          16.09
+        ],
+        [
+          "2026-01-26",
+          16.15
+        ],
+        [
+          "2026-01-27",
+          16.35
+        ],
+        [
+          "2026-01-28",
+          16.35
+        ],
+        [
+          "2026-01-29",
+          16.88
+        ],
+        [
+          "2026-01-30",
+          17.44
+        ],
+        [
+          "2026-02-02",
+          16.34
+        ],
+        [
+          "2026-02-03",
+          18.0
+        ],
+        [
+          "2026-02-04",
+          18.64
+        ],
+        [
+          "2026-02-05",
+          21.77
+        ],
+        [
+          "2026-02-06",
+          17.76
+        ],
+        [
+          "2026-02-09",
+          17.36
+        ],
+        [
+          "2026-02-10",
+          17.79
+        ],
+        [
+          "2026-02-11",
+          17.65
+        ],
+        [
+          "2026-02-12",
+          20.82
+        ],
+        [
+          "2026-02-13",
+          20.6
+        ],
+        [
+          "2026-02-16",
+          21.2
+        ],
+        [
+          "2026-02-17",
+          20.29
+        ],
+        [
+          "2026-02-18",
+          19.62
+        ],
+        [
+          "2026-02-19",
+          20.23
+        ],
+        [
+          "2026-02-20",
+          19.09
+        ],
+        [
+          "2026-02-23",
+          21.01
+        ],
+        [
+          "2026-02-24",
+          19.55
+        ],
+        [
+          "2026-02-25",
+          17.93
+        ],
+        [
+          "2026-02-26",
+          18.63
+        ],
+        [
+          "2026-02-27",
+          19.86
+        ],
+        [
+          "2026-03-02",
+          21.44
+        ],
+        [
+          "2026-03-03",
+          23.57
+        ],
+        [
+          "2026-03-04",
+          21.15
+        ],
+        [
+          "2026-03-05",
+          23.75
+        ],
+        [
+          "2026-03-06",
+          29.49
+        ],
+        [
+          "2026-03-09",
+          25.5
+        ],
+        [
+          "2026-03-10",
+          24.93
+        ],
+        [
+          "2026-03-11",
+          24.23
+        ],
+        [
+          "2026-03-12",
+          27.29
+        ],
+        [
+          "2026-03-13",
+          27.19
+        ],
+        [
+          "2026-03-16",
+          23.51
+        ],
+        [
+          "2026-03-17",
+          22.37
+        ],
+        [
+          "2026-03-18",
+          25.09
+        ],
+        [
+          "2026-03-19",
+          24.06
+        ],
+        [
+          "2026-03-20",
+          26.78
+        ],
+        [
+          "2026-03-23",
+          26.15
+        ],
+        [
+          "2026-03-24",
+          26.95
+        ],
+        [
+          "2026-03-25",
+          25.33
+        ],
+        [
+          "2026-03-26",
+          27.44
+        ],
+        [
+          "2026-03-27",
+          31.05
+        ],
+        [
+          "2026-03-30",
+          30.61
+        ],
+        [
+          "2026-03-31",
+          25.25
+        ],
+        [
+          "2026-04-01",
+          24.54
+        ],
+        [
+          "2026-04-02",
+          23.87
+        ],
+        [
+          "2026-04-06",
+          24.17
+        ],
+        [
+          "2026-04-07",
+          25.78
+        ],
+        [
+          "2026-04-08",
+          21.04
+        ],
+        [
+          "2026-04-09",
+          19.49
+        ],
+        [
+          "2026-04-10",
+          19.23
+        ],
+        [
+          "2026-04-13",
+          19.12
+        ],
+        [
+          "2026-04-14",
+          18.36
+        ],
+        [
+          "2026-04-15",
+          18.17
+        ],
+        [
+          "2026-04-16",
+          17.94
+        ],
+        [
+          "2026-04-17",
+          17.48
+        ],
+        [
+          "2026-04-20",
+          18.87
+        ],
+        [
+          "2026-04-21",
+          19.5
+        ],
+        [
+          "2026-04-22",
+          18.92
+        ],
+        [
+          "2026-04-23",
+          19.31
+        ],
+        [
+          "2026-04-24",
+          18.71
+        ],
+        [
+          "2026-04-27",
+          18.02
+        ],
+        [
+          "2026-04-28",
+          17.83
+        ],
+        [
+          "2026-04-29",
+          18.81
+        ],
+        [
+          "2026-04-30",
+          16.89
+        ],
+        [
+          "2026-05-01",
+          16.99
+        ],
+        [
+          "2026-05-04",
+          18.29
+        ],
+        [
+          "2026-05-05",
+          17.38
+        ],
+        [
+          "2026-05-06",
+          17.39
+        ],
+        [
+          "2026-05-07",
+          17.08
+        ],
+        [
+          "2026-05-08",
+          17.19
+        ],
+        [
+          "2026-05-11",
+          18.38
+        ],
+        [
+          "2026-05-12",
+          17.99
+        ],
+        [
+          "2026-05-13",
+          17.87
+        ],
+        [
+          "2026-05-14",
+          17.26
+        ],
+        [
+          "2026-05-15",
+          18.43
+        ],
+        [
+          "2026-05-18",
+          17.82
+        ],
+        [
+          "2026-05-19",
+          18.06
+        ],
+        [
+          "2026-05-20",
+          17.44
+        ],
+        [
+          "2026-05-21",
+          16.76
+        ],
+        [
+          "2026-05-22",
+          16.7
+        ],
+        [
+          "2026-05-25",
+          16.59
+        ],
+        [
+          "2026-05-26",
+          17.01
+        ],
+        [
+          "2026-05-27",
+          16.29
+        ],
+        [
+          "2026-05-28",
+          15.74
+        ],
+        [
+          "2026-05-29",
+          15.32
+        ],
+        [
+          "2026-06-01",
+          16.05
+        ],
+        [
+          "2026-06-02",
+          15.77
+        ],
+        [
+          "2026-06-03",
+          16.06
+        ],
+        [
+          "2026-06-04",
+          15.4
+        ],
+        [
+          "2026-06-05",
+          21.51
+        ],
+        [
+          "2026-06-08",
+          18.92
+        ],
+        [
+          "2026-06-09",
+          19.87
+        ],
+        [
+          "2026-06-10",
+          22.22
+        ],
+        [
+          "2026-06-11",
+          19.44
+        ],
+        [
+          "2026-06-12",
+          17.68
+        ],
+        [
+          "2026-06-15",
+          16.2
+        ],
+        [
+          "2026-06-16",
+          16.41
+        ],
+        [
+          "2026-06-17",
+          18.44
+        ],
+        [
+          "2026-06-18",
+          16.4
+        ],
+        [
+          "2026-06-19",
+          16.78
+        ],
+        [
+          "2026-06-22",
+          17.28
+        ],
+        [
+          "2026-06-23",
+          19.49
+        ],
+        [
+          "2026-06-24",
+          18.63
+        ],
+        [
+          "2026-06-25",
+          18.89
+        ],
+        [
+          "2026-06-26",
+          18.41
+        ],
+        [
+          "2026-06-29",
+          17.65
+        ],
+        [
+          "2026-06-30",
+          16.45
+        ],
+        [
+          "2026-07-01",
+          16.59
+        ],
+        [
+          "2026-07-02",
+          16.15
+        ],
+        [
+          "2026-07-03",
+          15.81
+        ],
+        [
+          "2026-07-06",
+          15.57
+        ],
+        [
+          "2026-07-07",
+          16.13
+        ],
+        [
+          "2026-07-08",
+          16.9
+        ],
+        [
+          "2026-07-09",
+          15.84
+        ],
+        [
+          "2026-07-10",
+          15.03
+        ],
+        [
+          "2026-07-13",
+          17.16
+        ],
+        [
+          "2026-07-14",
+          16.5
+        ],
+        [
+          "2026-07-15",
+          15.67
+        ],
+        [
+          "2026-07-16",
+          16.73
+        ],
+        [
+          "2026-07-17",
+          18.77
+        ],
+        [
+          "2026-07-20",
+          18.65
+        ],
+        [
+          "2026-07-21",
+          17.05
+        ],
+        [
+          "2026-07-22",
+          16.64
+        ],
+        [
+          "2026-07-23",
+          18.7
+        ],
+        [
+          "2026-07-24",
+          18.58
+        ],
+        [
+          "2026-07-27",
+          18.67
+        ],
+        [
+          "2026-07-28",
+          18.21
+        ],
+        [
+          "2026-07-29",
+          20.66
+        ],
+        [
+          "2026-07-30",
+          17.09
+        ],
+        [
+          "2026-07-31",
+          15.99
+        ],
+        [
+          "2026-08-03",
+          15.86
+        ],
+        [
+          "2026-08-04",
+          16.5
+        ],
+        [
+          "2026-08-05",
+          15.81
+        ],
+        [
+          "2026-08-06",
+          15.15
+        ],
+        [
+          "2026-08-07",
+          14.9
+        ],
+        [
+          "2026-08-10",
+          15.46
+        ],
+        [
+          "2026-08-11",
+          15.28
+        ],
+        [
+          "2026-08-12",
+          14.55
+        ],
+        [
+          "2026-08-13",
+          14.63
+        ],
+        [
+          "2026-08-14",
+          14.25
+        ],
+        [
+          "2026-08-17",
+          15.19
+        ],
+        [
+          "2026-08-18",
+          15.84
+        ],
+        [
+          "2026-08-19",
+          14.89
+        ],
+        [
+          "2026-08-20",
+          16.01
+        ],
+        [
+          "2026-08-21",
+          15.13
+        ],
+        [
+          "2026-08-24",
+          15.85
+        ],
+        [
+          "2026-08-25",
+          15.45
+        ],
+        [
+          "2026-08-26",
+          15.21
+        ],
+        [
+          "2026-08-27",
+          14.51
+        ],
+        [
+          "2026-08-28",
+          14.43
+        ],
+        [
+          "2026-08-31",
+          14.92
+        ],
+        [
+          "2026-09-01",
+          16.34
+        ],
+        [
+          "2026-09-02",
+          15.2
+        ],
+        [
+          "2026-09-03",
+          14.32
+        ],
+        [
+          "2026-09-04",
+          14.53
+        ],
+        [
+          "2026-09-07",
+          15.3
+        ],
+        [
+          "2026-09-08",
+          15.72
+        ],
+        [
+          "2026-09-09",
+          16.46
+        ],
+        [
+          "2026-09-10",
+          17.84
+        ],
+        [
+          "2026-09-11",
+          15.84
+        ],
+        [
+          "2026-09-14",
+          17.1
+        ],
+        [
+          "2026-09-15",
+          17.2
+        ],
+        [
+          "2026-09-16",
+          17.71
+        ],
+        [
+          "2026-09-17",
+          15.44
+        ],
+        [
+          "2026-09-18",
+          14.81
+        ],
+        [
+          "2026-09-21",
+          14.87
+        ],
+        [
+          "2026-09-22",
+          14.21
+        ],
+        [
+          "2026-09-23",
+          15.18
+        ],
+        [
+          "2026-09-24",
+          15.67
+        ],
+        [
+          "2026-09-25",
+          14.87
+        ],
+        [
+          "2026-09-28",
+          16.07
+        ],
+        [
+          "2026-09-29",
+          16.04
+        ],
+        [
+          "2026-09-30",
+          16.34
+        ],
+        [
+          "2026-10-01",
+          16.39
+        ],
+        [
+          "2026-10-02",
+          15.31
+        ],
+        [
+          "2026-10-05",
+          15.52
+        ],
+        [
+          "2026-10-06",
+          15.01
+        ],
+        [
+          "2026-10-07",
+          15.08
+        ],
+        [
+          "2026-10-08",
+          15.41
+        ],
+        [
+          "2026-10-09",
+          14.84
+        ],
+        [
+          "2026-10-12",
+          15.21
+        ],
+        [
+          "2026-10-13",
+          15.27
+        ],
+        [
+          "2026-10-14",
+          16.87
+        ],
+        [
+          "2026-10-15",
+          16.46
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "CBOE Volatility Index (VIX) (VIXCLS)",
+      "type": "line",
+      "x": [
+        "2025-10-03",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-13",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-11",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-27",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-19",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-25",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-03",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        16.65,
+        16.37,
+        17.24,
+        16.3,
+        16.43,
+        21.66,
+        19.03,
+        20.81,
+        20.64,
+        25.31,
+        20.78,
+        18.23,
+        17.87,
+        18.6,
+        17.3,
+        16.37,
+        15.79,
+        16.42,
+        16.92,
+        16.91,
+        17.44,
+        17.17,
+        19.0,
+        18.01,
+        19.5,
+        19.08,
+        17.6,
+        17.28,
+        17.51,
+        20.0,
+        19.83,
+        22.38,
+        24.69,
+        23.66,
+        26.42,
+        23.43,
+        20.52,
+        18.56,
+        17.19,
+        17.21,
+        16.35,
+        17.24,
+        16.59,
+        16.08,
+        15.78,
+        15.41,
+        16.66,
+        16.93,
+        15.77,
+        14.85,
+        15.74,
+        16.5,
+        16.48,
+        17.62,
+        16.87,
+        14.91,
+        14.08,
+        14.0,
+        13.47,
+        13.6,
+        14.2,
+        14.33,
+        14.95,
+        14.51,
+        14.9,
+        14.75,
+        15.38,
+        15.45,
+        14.49,
+        15.12,
+        15.98,
+        16.75,
+        15.84,
+        15.86,
+        18.84,
+        20.09,
+        16.9,
+        15.64,
+        16.09,
+        16.15,
+        16.35,
+        16.35,
+        16.88,
+        17.44,
+        16.34,
+        18.0,
+        18.64,
+        21.77,
+        17.76,
+        17.36,
+        17.79,
+        17.65,
+        20.82,
+        20.6,
+        21.2,
+        20.29,
+        19.62,
+        20.23,
+        19.09,
+        21.01,
+        19.55,
+        17.93,
+        18.63,
+        19.86,
+        21.44,
+        23.57,
+        21.15,
+        23.75,
+        29.49,
+        25.5,
+        24.93,
+        24.23,
+        27.29,
+        27.19,
+        23.51,
+        22.37,
+        25.09,
+        24.06,
+        26.78,
+        26.15,
+        26.95,
+        25.33,
+        27.44,
+        31.05,
+        30.61,
+        25.25,
+        24.54,
+        23.87,
+        24.17,
+        25.78,
+        21.04,
+        19.49,
+        19.23,
+        19.12,
+        18.36,
+        18.17,
+        17.94,
+        17.48,
+        18.87,
+        19.5,
+        18.92,
+        19.31,
+        18.71,
+        18.02,
+        17.83,
+        18.81,
+        16.89,
+        16.99,
+        18.29,
+        17.38,
+        17.39,
+        17.08,
+        17.19,
+        18.38,
+        17.99,
+        17.87,
+        17.26,
+        18.43,
+        17.82,
+        18.06,
+        17.44,
+        16.76,
+        16.7,
+        16.59,
+        17.01,
+        16.29,
+        15.74,
+        15.32,
+        16.05,
+        15.77,
+        16.06,
+        15.4,
+        21.51,
+        18.92,
+        19.87,
+        22.22,
+        19.44,
+        17.68,
+        16.2,
+        16.41,
+        18.44,
+        16.4,
+        16.78,
+        17.28,
+        19.49,
+        18.63,
+        18.89,
+        18.41,
+        17.65,
+        16.45,
+        16.59,
+        16.15,
+        15.81,
+        15.57,
+        16.13,
+        16.9,
+        15.84,
+        15.03,
+        17.16,
+        16.5,
+        15.67,
+        16.73,
+        18.77,
+        18.65,
+        17.05,
+        16.64,
+        18.7,
+        18.58,
+        18.67,
+        18.21,
+        20.66,
+        17.09,
+        15.99,
+        15.86,
+        16.5,
+        15.81,
+        15.15,
+        14.9,
+        15.46,
+        15.28,
+        14.55,
+        14.63,
+        14.25,
+        15.19,
+        15.84,
+        14.89,
+        16.01,
+        15.13,
+        15.85,
+        15.45,
+        15.21,
+        14.51,
+        14.43,
+        14.92,
+        16.34,
+        15.2,
+        14.32,
+        14.53,
+        15.3,
+        15.72,
+        16.46,
+        17.84,
+        15.84,
+        17.1,
+        17.2,
+        17.71,
+        15.44,
+        14.81,
+        14.87,
+        14.21,
+        15.18,
+        15.67,
+        14.87,
+        16.07,
+        16.04,
+        16.34,
+        16.39,
+        15.31,
+        15.52,
+        15.01,
+        15.08,
+        15.41,
+        14.84,
+        15.21,
+        15.27,
+        16.87,
+        16.46
+      ],
+      "y_label": "Index"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "VIXCLS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": null,
+  "validation": {
+    "counts": {
+      "figures": 17,
+      "verified": 8,
+      "derived": 1,
+      "unverified": 8
+    },
+    "figures": [
+      {
+        "text": "16.46",
+        "value": 16.46,
+        "unit": "",
+        "tolerance": 0.0050000010000000004,
+        "start": 43,
+        "end": 48,
+        "status": "verified",
+        "matched": "VIXCLS on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Current VIX = 16.46 (2026‑10‑15) [S1]."
+      },
+      {
+        "text": "2026‑10‑15",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 50,
+        "end": 60,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "- Current VIX = 16.46 (2026‑10‑15) [S1]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 82,
+        "end": 84,
+        "status": "verified",
+        "matched": "VIXCLS on 2026-10-06",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- VIX below 15 is considered a low‑volatility, risk‑on environment [S4]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 294,
+        "end": 296,
+        "status": "verified",
+        "matched": "VIXCLS on 2026-10-06",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- A modest tactical reduction of equity exposure when VIX < 15 can protect against volatility surges while preserving long‑term upside (assumption)."
+      },
+      {
+        "text": "0",
+        "value": 0.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 722,
+        "end": 723,
+        "status": "derived",
+        "matched": "VIXCLS % change 2026-10-14 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- VIX 0–15 is commonly viewed as low‑volatility, risk‑on environment [S4]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 724,
+        "end": 726,
+        "status": "verified",
+        "matched": "VIXCLS on 2026-10-06",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- VIX 0–15 is commonly viewed as low‑volatility, risk‑on environment [S4]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1337,
+        "end": 1339,
+        "status": "verified",
+        "matched": "VIXCLS on 2026-10-06",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Upside** – VIX < 15; reduce equity weight by 10–15 % (tactical overlay) (assumption) [S4]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1365,
+        "end": 1367,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Upside** – VIX < 15; reduce equity weight by 10–15 % (tactical overlay) (assumption) [S4]."
+      },
+      {
+        "text": "15 %",
+        "value": 15.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1368,
+        "end": 1372,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Upside** – VIX < 15; reduce equity weight by 10–15 % (tactical overlay) (assumption) [S4]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1436,
+        "end": 1438,
+        "status": "verified",
+        "matched": "VIXCLS on 2026-10-06",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Downside** – VIX > 15; increase equity weight by 10–15 % (assumption) [S4]."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1466,
+        "end": 1468,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Downside** – VIX > 15; increase equity weight by 10–15 % (assumption) [S4]."
+      },
+      {
+        "text": "15 %",
+        "value": 15.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1469,
+        "end": 1473,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Downside** – VIX > 15; increase equity weight by 10–15 % (assumption) [S4]."
+      },
+      {
+        "text": "60",
+        "value": 60.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2095,
+        "end": 2097,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Core Allocation** – Keep 60–70 % equity exposure to capture long‑term growth (assumption)."
+      },
+      {
+        "text": "70 %",
+        "value": 70.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2098,
+        "end": 2102,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [],
+        "context": "- **Core Allocation** – Keep 60–70 % equity exposure to capture long‑term growth (assumption)."
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2196,
+        "end": 2198,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Tactical Overlay** – Apply a 10–15 % equity reduction when VIX < 15, funded by IG bond or cash buffer (assumption) [S4]."
+      },
+      {
+        "text": "15 %",
+        "value": 15.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2199,
+        "end": 2203,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": true,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Tactical Overlay** – Apply a 10–15 % equity reduction when VIX < 15, funded by IG bond or cash buffer (assumption) [S4]."
+      },
+      {
+        "text": "15",
+        "value": 15.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2232,
+        "end": 2234,
+        "status": "verified",
+        "matched": "VIXCLS on 2026-10-06",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S4"
+        ],
+        "context": "- **Tactical Overlay** – Apply a 10–15 % equity reduction when VIX < 15, funded by IG bond or cash buffer (assumption) [S4]."
+      }
+    ],
+    "citations": {
+      "markers": 11,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "- A modest tactical reduction of equity exposure when VIX < 15 can protect against volatility surges while preserving long‑term upside (assumption).",
+          "figures": [
+            "15"
+          ],
+          "sources": [
+            "S1"
+          ]
+        }
+      ],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: CBOE Volatility Index (VIX) (VIXCLS)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7"
+    ],
+    "open_issues": 1,
+    "summary": "9 of 17 figures verified against source data (8 exact, 1 derived); 8 flagged (3 of them appear in a fetched web/news snippet; 8 labelled as assumptions). 1 paragraph(s) state figures without a citation."
+  },
+  "run_meta": {
+    "run_id": "20261018-182635-4f55b4",
+    "timestamp": "2026-10-18T22:26:35+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}

@@ -1,0 +1,2652 @@
+{
+  "id": "F07",
+  "set": "fresh",
+  "category": "equity",
+  "question": "Is Coca-Cola's dividend yield attractive compared with Treasury yields?",
+  "ticker": "KO",
+  "expected_tags": [
+    "equity",
+    "rates"
+  ],
+  "pipeline": "v2",
+  "run_utc": "2026-10-18T22:25:34+00:00",
+  "elapsed_sec": 71.5,
+  "router_tags": [
+    "rates"
+  ],
+  "tags": [
+    "rates"
+  ],
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Coca‑Cola’s current dividend yield is 3.142 %【S5].  \n- The 10‑year U.S. Treasury constant‑maturity yield is 5.1 %【S1].  \n- KO’s yield is ~1.96 percentage points lower than Treasury yields.  \n- KO’s equity beta (0.2846) is far below Treasury’s implied beta (~1), indicating lower volatility.  \n- After‑tax yield for a typical investor (22 % marginal tax rate, assumption) is ≈ 2.45 %【S5].  \n- Therefore, KO is not an income‑premium play relative to Treasuries but offers stability and lower risk.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Current U.S. monetary policy has pushed 10‑yr Treasury yields to ~5 %【S1].  \n- Rising rates compress dividend yields; KO’s yield is relatively stable but below Treasury levels.\n\n*Sector*  \n- Consumer‑staple sector (Beverages) is defensive; KO’s dividend history shows 62 consecutive increases【S16].  \n- Dividend sustainability is strong, but yield remains below Treasury benchmarks.\n\n*Credit*  \n- KO is investment‑grade; credit risk is negligible compared with Treasuries (risk‑free).  \n- KO’s beta of 0.2846【S5] indicates lower systematic risk.\n\n*Portfolio*  \n- Nominal spread: KO – Treasury ≈ –1.96 %.  \n- After‑tax spread (assumption): KO ≈ 2.45 % vs. Treasury 5.1 % (tax‑free).  \n- Risk‑adjusted: KO’s lower beta can improve portfolio Sharpe ratio when combined with higher‑yield assets.\n\n---\n\n**Scenarios**\n\n| Scenario | Assumptions | Impact on Spread | Implication |\n|----------|-------------|------------------|-------------|\n| **Base** | Current yields unchanged | KO lower by 1.96 pp | Treasuries preferred for pure income |\n| **Upside** | Treasury yields rise (e.g., +0.5 pp) | Spread widens | KO becomes relatively more attractive for risk‑averse investors |\n| **Downside** | KO raises dividend (+0.5 pp) or Treasury yields fall (–0.5 pp) | Spread narrows or reverses | KO could become competitive for income seekers |\n\n*All scenario numbers are illustrative; actual outcomes depend on market dynamics.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Dividend Sustainability** – KO’s payout ratio and earnings growth must remain robust; a cut would widen the spread further.  \n- **Interest‑Rate Volatility** – Sharp Treasury yield changes can alter the relative attractiveness.  \n- **Tax Policy Changes** – Alterations to dividend taxation could affect after‑tax yields.  \n- **Credit Events** – Although unlikely, any downgrade would affect KO’s risk profile.  \n- **Macro‑Economic Shocks** – Inflation or recession could impact both dividend payouts and Treasury yields.\n\n*Monitoring:*  \n- Quarterly dividend announcements (KO).  \n- Fed policy statements and Treasury yield releases.  \n- Tax legislation updates.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Income‑Focused Investors** – Prefer Treasuries for higher nominal and after‑tax yields.  \n- **Risk‑Adjusted Allocation** – KO can be added to diversify away from pure Treasury exposure, improving volatility metrics.  \n- **Strategic Mix** – Combine KO with higher‑yield equities or short‑term Treasuries to balance income and risk.  \n- **Tax‑Sensitive Strategies** – In tax‑advantaged accounts, KO’s dividend may be more attractive; in taxable accounts, Treasuries dominate.\n\n---\n\n**Conclusion**\n\nCoca‑Cola’s dividend yield of 3.142 %【S5] is not competitive against the current 10‑year Treasury yield of 5.1 %【S1]. Even after accounting for a typical 22 % marginal tax rate (assumption), KO’s after‑tax yield (~2.45 %) remains below Treasury’s tax‑free return. The equity’s lower beta offers a risk‑adjusted benefit, but for investors prioritizing income, Treasuries provide a superior yield profile. KO remains a defensively attractive holding for stability and credit quality, but not an income‑premium play relative to Treasury securities.",
+  "report_template": null,
+  "draft_report_text": "**Executive Summary**  \n- Coca‑Cola’s current dividend yield is 3.142 %【S5].  \n- The 10‑year U.S. Treasury constant‑maturity yield is 5.1 %【S1].  \n- KO’s yield is ~1.96 percentage points lower than Treasury yields.  \n- KO’s equity beta (0.2846) is far below Treasury’s implied beta (~1), indicating lower volatility.  \n- After‑tax yield for a typical investor (22 % marginal tax rate, assumption) is ≈ 2.45 %【S5].  \n- Therefore, KO is not an income‑premium play relative to Treasuries but offers stability and lower risk.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Current U.S. monetary policy has pushed 10‑yr Treasury yields to ~5 %【S1].  \n- Rising rates compress dividend yields; KO’s yield is relatively stable but below Treasury levels.\n\n*Sector*  \n- Consumer‑staple sector (Beverages) is defensive; KO’s dividend history shows 62 consecutive increases【S16].  \n- Dividend sustainability is strong, but yield remains below Treasury benchmarks.\n\n*Credit*  \n- KO is investment‑grade; credit risk is negligible compared with Treasuries (risk‑free).  \n- KO’s beta of 0.2846【S5] indicates lower systematic risk.\n\n*Portfolio*  \n- Nominal spread: KO – Treasury ≈ –1.96 %.  \n- After‑tax spread (assumption): KO ≈ 2.45 % vs. Treasury 5.1 % (tax‑free).  \n- Risk‑adjusted: KO’s lower beta can improve portfolio Sharpe ratio when combined with higher‑yield assets.\n\n---\n\n**Scenarios**\n\n| Scenario | Assumptions | Impact on Spread | Implication |\n|----------|-------------|------------------|-------------|\n| **Base** | Current yields unchanged | KO lower by 1.96 pp | Treasuries preferred for pure income |\n| **Upside** | Treasury yields rise (e.g., +0.5 pp) | Spread widens | KO becomes relatively more attractive for risk‑averse investors |\n| **Downside** | KO raises dividend (+0.5 pp) or Treasury yields fall (–0.5 pp) | Spread narrows or reverses | KO could become competitive for income seekers |\n\n*All scenario numbers are illustrative; actual outcomes depend on market dynamics.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Dividend Sustainability** – KO’s payout ratio and earnings growth must remain robust; a cut would widen the spread further.  \n- **Interest‑Rate Volatility** – Sharp Treasury yield changes can alter the relative attractiveness.  \n- **Tax Policy Changes** – Alterations to dividend taxation could affect after‑tax yields.  \n- **Credit Events** – Although unlikely, any downgrade would affect KO’s risk profile.  \n- **Macro‑Economic Shocks** – Inflation or recession could impact both dividend payouts and Treasury yields.\n\n*Monitoring:*  \n- Quarterly dividend announcements (KO).  \n- Fed policy statements and Treasury yield releases.  \n- Tax legislation updates.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Income‑Focused Investors** – Prefer Treasuries for higher nominal and after‑tax yields.  \n- **Risk‑Adjusted Allocation** – KO can be added to diversify away from pure Treasury exposure, improving volatility metrics.  \n- **Strategic Mix** – Combine KO with higher‑yield equities or short‑term Treasuries to balance income and risk.  \n- **Tax‑Sensitive Strategies** – In tax‑advantaged accounts, KO’s dividend may be more attractive; in taxable accounts, Treasuries dominate.\n\n---\n\n**Conclusion**\n\nCoca‑Cola’s dividend yield of 3.142 %【S5] is not competitive against the current 10‑year Treasury yield of 5.1 %【S1]. Even after accounting for a typical 22 % marginal tax rate (assumption), KO’s after‑tax yield (~2.45 %) remains below Treasury’s tax‑free return. The equity’s lower beta offers a risk‑adjusted benefit, but for investors prioritizing income, Treasuries provide a superior yield profile. KO remains a defensively attractive holding for stability and credit quality, but not an income‑premium play relative to Treasury securities.",
+  "draft_report_template": null,
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"1.96 percentage points\" in: \"- KO’s yield is ~1.96 percentage points lower than Treasury yields.\" — this number appears in source [S15]; cite it in that sentence.\n2. \"–1.96 %\" in: \"- Nominal spread: KO – Treasury ≈ –1.96 %.\" — this number appears in source [S15]; cite it in that sentence.\n3. \"1.96 pp\" in: \"| **Base** | Current yields unchanged | KO lower by 1.96 pp | Treasuries preferred for pure income |\" — this number appears in source [S15]; cite it in that sentence.\n4. Add a citation to: \"- KO’s equity beta (0.2846) is far below Treasury’s implied beta (~1), indicating lower volatility.\" — its figures 0.2846, 1 come from [S1], [S5].\n5. Add a citation to: \"- After‑tax spread (assumption): KO ≈ 2.45 % vs. Treasury 5.1 % (tax‑free).\" — its figures 5.1 % come from [S1].\n6. Add a citation to: \"| Scenario | Assumptions | Impact on Spread | Implication |\n|----------|-------------|------------------|-------------|\n| **Base** | Current yields unchanged | \" — its figures +0.5 pp, +0.5 pp, –0.5 pp come from [S1].",
+        "open_issues_before": 6,
+        "summary_before": "12 of 21 figures verified against source data (8 exact, 4 derived); 9 flagged (7 of them appear in a fetched web/news snippet; 5 labelled as assumptions). 3 paragraph(s) state figures without a citation.",
+        "accepted": false,
+        "open_issues_after": 8,
+        "summary_after": "14 of 23 figures verified against source data (10 exact, 4 derived); 9 flagged (7 of them appear in a fetched web/news snippet; 5 labelled as assumptions). 4 paragraph(s) state figures without a citation. 1 paragraph(s) cite a different source than the data.",
+        "revised_report_text": "**Executive Summary**  \n- Coca‑Cola’s current dividend yield is 3.142 %【S5].  \n- The 10‑year U.S. Treasury constant‑maturity yield is 5.1 %【S1].  \n- KO’s yield is ~1.96 percentage points lower than Treasury yields.  \n- KO’s equity beta (0.2846) is far below the implied Treasury beta (~1)【S5].  \n- After‑tax yield for a typical investor (22 % marginal tax rate, assumption) is ≈ 2.45 %【S5].  \n- Therefore, KO is not an income‑premium play relative to Treasuries but offers stability and lower risk.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Current U.S. monetary policy has pushed 10‑yr Treasury yields to ~5 %【S1].  \n- Rising rates compress dividend yields; KO’s yield is relatively stable but below Treasury levels.\n\n*Sector*  \n- Consumer‑staple sector (Beverages) is defensive; KO’s dividend history shows 62 consecutive increases【S16].  \n- Dividend sustainability is strong, but yield remains below Treasury benchmarks.\n\n*Credit*  \n- KO is investment‑grade; credit risk is negligible compared with Treasuries (risk‑free).  \n- KO’s beta of 0.2846【S5] indicates lower systematic risk.\n\n*Portfolio*  \n- Nominal spread: KO – Treasury ≈ –1.96 % (derived from 3.142 % vs. 5.1 %).  \n- After‑tax spread (assumption): KO ≈ 2.45 % vs. Treasury 5.1 % (tax‑free).  \n- Risk‑adjusted: KO’s lower beta can improve portfolio Sharpe ratio when combined with higher‑yield assets.\n\n---\n\n**Scenarios**\n\n- **Base** – Current yields unchanged.  \n  - KO lower by ~1.96 pp.  \n  - Treasuries preferred for pure income.\n\n- **Upside** – Treasury yields rise (e.g., +0.5 pp).  \n  - Spread widens.  \n  - KO becomes relatively more attractive for risk‑averse investors.\n\n- **Downside** – KO raises dividend (+0.5 pp) or Treasury yields fall (–0.5 pp).  \n  - Spread narrows or reverses.  \n  - KO could become competitive for income seekers.\n\n(All scenario numbers are illustrative assumptions.)\n\n---\n\n**Key Risks & Monitoring**\n\n- **Dividend Sustainability** – KO’s payout ratio and earnings growth must remain robust; a cut would widen the spread further.  \n- **Interest‑Rate Volatility** – Sharp Treasury yield changes can alter the relative attractiveness.  \n- **Tax Policy Changes** – Alterations to dividend taxation could affect after‑tax yields.  \n- **Credit Events** – Although unlikely, any downgrade would affect KO’s risk profile.  \n- **Macro‑Economic Shocks** – Inflation or recession could impact both dividend payouts and Treasury yields.\n\n*Monitoring:*  \n- Quarterly dividend announcements (KO).  \n- Fed policy statements and Treasury yield releases.  \n- Tax legislation updates.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Income‑Focused Investors** – Prefer Treasuries for higher nominal and after‑tax yields.  \n- **Risk‑Adjusted Allocation** – KO can be added to diversify away from pure Treasury exposure, improving volatility metrics.  \n- **Strategic Mix** – Combine KO with higher‑yield equities or short‑term Treasuries to balance income and risk.  \n- **Tax‑Sensitive Strategies** – In tax‑advantaged accounts, KO’s dividend may be more attractive; in taxable accounts, Treasuries dominate.\n\n---\n\n**Conclusion**\n\nCoca‑Cola’s dividend yield of 3.142 %【S5] is not competitive against the current 10‑year Treasury yield of 5.1 %【S1]. Even after accounting for a typical 22 % marginal tax rate (assumption), KO’s after‑tax yield (~2.45 %) remains below Treasury’s tax‑free return. The equity’s lower beta offers a risk‑adjusted benefit, but for investors prioritizing income, Treasuries provide a superior yield profile. KO remains a defensively attractive holding for stability and credit quality, but not an income‑premium play relative to Treasury securities."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FRED series DGS10: 10-Year Treasury Constant Maturity Yield",
+      "url": "https://fred.stlouisfed.org/series/DGS10",
+      "source": "FRED",
+      "snippet": "Daily series in Percent; latest observation 5.1 on 2026-10-15.",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub company profile: KO",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub quote: KO",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "Quote as of 2026-10-16.",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub recommendation trends: KO",
+      "url": "https://finnhub.io/docs/api/recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Finnhub basic financials: KO",
+      "url": "https://finnhub.io/docs/api/company-basic-financials",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S5"
+    },
+    {
+      "title": "Coca-Cola Yields 2.3% and Nike Yields 4.4%. Here's Why Only 1 of These High-Yield Dividend Stocks Is a Buy This October.",
+      "url": "https://finnhub.io/api/news?id=9d2f4fcfaca53c99775ac5d6335f6eee5d06290c7b87eb84cdbfde8bc1da8081",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-18: Investors must weigh the pros and cons before making a selection.",
+      "id": "S6"
+    },
+    {
+      "title": "Sydney Sweeney Drops Second Nude Betting Ad as Powerade Fires Back",
+      "url": "https://finnhub.io/api/news?id=7196a4c6512cbc5850de12c12dde368d14a948e2e21c3cfdb20ca0653bfae973",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-18: Powerade’s “Never Just Sports” campaign responds to Novig’s Sydney Sweeney-led advertising. Novig claims first-time depositors increased by more than 218% around its campaign launch. The ...",
+      "id": "S7"
+    },
+    {
+      "title": "Coca-Cola Stock Is Up 39% in a Year. Here’s What’s Driving the Rally",
+      "url": "https://finnhub.io/api/news?id=feae6a8327e5f3ee8c8203d9ef1004cdb58189647bf848756a226e5ad42bf3f0",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-18: Key TakeawaysCoca-Cola stock is up 39% over the past year to a $94 close on October 16, after KFC picked Coke as its beverage partner for 3,718 US restaurants. The Street’s $95 mean target sits only 1% above the close.",
+      "id": "S8"
+    },
+    {
+      "title": "Yum! Brands (YUM) Resets KFC U.S. Drinks With A New 2027 Beverage Deal",
+      "url": "https://finnhub.io/api/news?id=946dbddd36c03372c872922fa1ae4d4b4ce9199ce84240f130df12ef332a0e84",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-18: Yum! Brands (NYSE:YUM) unit KFC U.S. plans to shift its fountain beverage supplier to The Coca-Cola Company starting in 2027. The agreement will introduce Coca-Cola beverages across KFC restaurants in the United States as part of the chain'",
+      "id": "S9"
+    },
+    {
+      "title": "In 1918, Milton Hershey Quietly Put About $60 Million In Stock Into A Trust. Over 100 Years Later, That Trust Still Exists And Holds About $23.6 Billion In Assets. Wealthy Donors Still Use A Similar Strategy, And The Legal Work To Set One Up Starts At A Few Thousand Dollars",
+      "url": "https://finnhub.io/api/news?id=f46826d92814f67f6093beab22199f6eff61c7b0e11730550f1f3e2df92d9c65",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-17: A childless candy maker secretly handed his fortune to orphans in 1918, and the legal structure he chose still controls one of America's biggest snack companies today. Wealthy donors quietly use a version of the same playbook, but the fine ",
+      "id": "S10"
+    },
+    {
+      "title": "When the Stock Market Gets Dangerous, These 6 Investments Have a History of Holding Up",
+      "url": "https://finnhub.io/api/news?id=c3bb8900b1fbc403ac7002346e83167ebd87153a0b81791527a07965c14cc25b",
+      "source": "Finnhub news (Yahoo)",
+      "snippet": "2026-10-17: These companies generate resilient revenues, which help make their stocks less volatile during market downturns.",
+      "id": "S11"
+    },
+    {
+      "title": "Thinking About Buying 10-Year Treasury Notes Yielding 5.3% Instead of Dividend Stocks Like Coca-Cola? Consider These 3 Factors First. | The Motley Fool",
+      "url": "https://www.fool.com/investing/2026/10/03/thinking-about-buying-10-year-treasury-notes-yield",
+      "source": "web (Tavily)",
+      "snippet": "The biggest mistake investors make when comparing Treasury notes to dividend stocks is assuming yields are stagnant. If yields continue to rise, existing 10-year Treasury notes will lose value because newly issued bonds have higher yields, making existing Treasuries less attractive. If your sole objective is to hold th",
+      "id": "S12"
+    },
+    {
+      "title": "Coca-Cola Looks Like A Safety Trade When Treasuries Yield 5%, Yet I Need 3% Before I Add | Seeking Alpha",
+      "url": "https://seekingalpha.com/article/4951754-coca-cola-looks-like-a-safety-trade-when-treasuries-yield-5-percent-yet-i-need-3-percent-before-i-add",
+      "source": "web (Tavily)",
+      "snippet": "## Investing Groups  ## Portfolios  ## Find & Compare  # Coca-Cola Looks Like A Safety Trade When Treasuries Yield 5%, Yet I Need 3% Before I Add  ## Summary  Money on the edge   PM Images/DigitalVision via Getty Images  Money on the edge  PM Images/DigitalVision via Getty Images  I love The Coca-Cola Company (KO) as i",
+      "id": "S13"
+    },
+    {
+      "title": "4 Reasons to Buy Coca-Cola Stock Like There's No Tomorrow",
+      "url": "https://finance.yahoo.com/news/4-reasons-buy-coca-cola-093500733.html",
+      "source": "web (Tavily)",
+      "snippet": "A higher relative dividend yield combined with an attractive valuation makes a powerful combination. It means investors can sit back and confidently collect dividends, while patiently waiting for the stock price to increase over time due to profit growth and multiple expansion.  That creates a compelling total return o",
+      "id": "S14"
+    },
+    {
+      "title": "What Makes Coca-Cola More Attractive Than PepsiCo?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/makes-coca-cola-more-attractive-163500257.html",
+      "source": "web (Tavily)",
+      "snippet": "Title: What Makes Coca-Cola More Attractive Than PepsiCo? 2. Best High-Yield Savings. When it comes to **Coca-Cola** (NYSE: KO) or **PepsiCo** (NASDAQ: PEP) as investments, I chose PepsiCo. However, there's a very good case for buying Coca-Cola. If you are trying to decide between these two consumer staples giants, her",
+      "id": "S15"
+    },
+    {
+      "title": "Where Will Coca-Cola’s Dividend Be in 1 Year?",
+      "url": "https://ca.finance.yahoo.com/news/where-coca-cola-dividend-1-000000039.html",
+      "source": "web (Tavily)",
+      "snippet": "Coca-Cola isn't just any company; it's a dividend powerhouse. Having increased its payouts for 62 consecutive years, it now offers a robust yield of 3.10%.  Here, I'll share my predictions for where Coca-Cola's dividend might be in a year, alongside some historical data to show how its investors have fared over time.  ",
+      "id": "S16"
+    },
+    {
+      "title": "Dividends :: The Coca-Cola Company (KO)",
+      "url": "https://investors.coca-colacompany.com/stock-info/dividends",
+      "source": "web (Tavily)",
+      "snippet": "results to differ materially from its historical experience and our present expectations or projections. For more information please see the risks discussed in our periodic reports filed with the Securities and Exchange Commission. [...] The Coca-Cola Company IR Overview  # Dividends  ### Stock Information [...] This w",
+      "id": "S17"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S5",
+    "S16"
+  ],
+  "tables": [
+    {
+      "title": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "DGS10",
+      "frequency": "daily",
+      "units": "Percent",
+      "last_date": "2026-10-15",
+      "topics": [
+        "rates"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/DGS10",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2025-10-03",
+          4.13
+        ],
+        [
+          "2025-10-06",
+          4.18
+        ],
+        [
+          "2025-10-07",
+          4.14
+        ],
+        [
+          "2025-10-08",
+          4.13
+        ],
+        [
+          "2025-10-09",
+          4.14
+        ],
+        [
+          "2025-10-10",
+          4.05
+        ],
+        [
+          "2025-10-14",
+          4.03
+        ],
+        [
+          "2025-10-15",
+          4.05
+        ],
+        [
+          "2025-10-16",
+          3.99
+        ],
+        [
+          "2025-10-17",
+          4.02
+        ],
+        [
+          "2025-10-20",
+          4.0
+        ],
+        [
+          "2025-10-21",
+          3.98
+        ],
+        [
+          "2025-10-22",
+          3.97
+        ],
+        [
+          "2025-10-23",
+          4.01
+        ],
+        [
+          "2025-10-24",
+          4.02
+        ],
+        [
+          "2025-10-27",
+          4.01
+        ],
+        [
+          "2025-10-28",
+          3.99
+        ],
+        [
+          "2025-10-29",
+          4.08
+        ],
+        [
+          "2025-10-30",
+          4.11
+        ],
+        [
+          "2025-10-31",
+          4.11
+        ],
+        [
+          "2025-11-03",
+          4.13
+        ],
+        [
+          "2025-11-04",
+          4.1
+        ],
+        [
+          "2025-11-05",
+          4.17
+        ],
+        [
+          "2025-11-06",
+          4.11
+        ],
+        [
+          "2025-11-07",
+          4.11
+        ],
+        [
+          "2025-11-10",
+          4.13
+        ],
+        [
+          "2025-11-12",
+          4.08
+        ],
+        [
+          "2025-11-13",
+          4.11
+        ],
+        [
+          "2025-11-14",
+          4.14
+        ],
+        [
+          "2025-11-17",
+          4.13
+        ],
+        [
+          "2025-11-18",
+          4.12
+        ],
+        [
+          "2025-11-19",
+          4.13
+        ],
+        [
+          "2025-11-20",
+          4.1
+        ],
+        [
+          "2025-11-21",
+          4.06
+        ],
+        [
+          "2025-11-24",
+          4.04
+        ],
+        [
+          "2025-11-25",
+          4.01
+        ],
+        [
+          "2025-11-26",
+          4.0
+        ],
+        [
+          "2025-11-28",
+          4.02
+        ],
+        [
+          "2025-12-01",
+          4.09
+        ],
+        [
+          "2025-12-02",
+          4.09
+        ],
+        [
+          "2025-12-03",
+          4.06
+        ],
+        [
+          "2025-12-04",
+          4.11
+        ],
+        [
+          "2025-12-05",
+          4.14
+        ],
+        [
+          "2025-12-08",
+          4.17
+        ],
+        [
+          "2025-12-09",
+          4.18
+        ],
+        [
+          "2025-12-10",
+          4.13
+        ],
+        [
+          "2025-12-11",
+          4.14
+        ],
+        [
+          "2025-12-12",
+          4.19
+        ],
+        [
+          "2025-12-15",
+          4.18
+        ],
+        [
+          "2025-12-16",
+          4.15
+        ],
+        [
+          "2025-12-17",
+          4.16
+        ],
+        [
+          "2025-12-18",
+          4.12
+        ],
+        [
+          "2025-12-19",
+          4.16
+        ],
+        [
+          "2025-12-22",
+          4.17
+        ],
+        [
+          "2025-12-23",
+          4.18
+        ],
+        [
+          "2025-12-24",
+          4.15
+        ],
+        [
+          "2025-12-26",
+          4.14
+        ],
+        [
+          "2025-12-29",
+          4.12
+        ],
+        [
+          "2025-12-30",
+          4.14
+        ],
+        [
+          "2025-12-31",
+          4.18
+        ],
+        [
+          "2026-01-02",
+          4.19
+        ],
+        [
+          "2026-01-05",
+          4.17
+        ],
+        [
+          "2026-01-06",
+          4.18
+        ],
+        [
+          "2026-01-07",
+          4.15
+        ],
+        [
+          "2026-01-08",
+          4.19
+        ],
+        [
+          "2026-01-09",
+          4.18
+        ],
+        [
+          "2026-01-12",
+          4.19
+        ],
+        [
+          "2026-01-13",
+          4.18
+        ],
+        [
+          "2026-01-14",
+          4.15
+        ],
+        [
+          "2026-01-15",
+          4.17
+        ],
+        [
+          "2026-01-16",
+          4.24
+        ],
+        [
+          "2026-01-20",
+          4.3
+        ],
+        [
+          "2026-01-21",
+          4.26
+        ],
+        [
+          "2026-01-22",
+          4.26
+        ],
+        [
+          "2026-01-23",
+          4.24
+        ],
+        [
+          "2026-01-26",
+          4.22
+        ],
+        [
+          "2026-01-27",
+          4.24
+        ],
+        [
+          "2026-01-28",
+          4.26
+        ],
+        [
+          "2026-01-29",
+          4.24
+        ],
+        [
+          "2026-01-30",
+          4.26
+        ],
+        [
+          "2026-02-02",
+          4.29
+        ],
+        [
+          "2026-02-03",
+          4.28
+        ],
+        [
+          "2026-02-04",
+          4.29
+        ],
+        [
+          "2026-02-05",
+          4.21
+        ],
+        [
+          "2026-02-06",
+          4.22
+        ],
+        [
+          "2026-02-09",
+          4.22
+        ],
+        [
+          "2026-02-10",
+          4.16
+        ],
+        [
+          "2026-02-11",
+          4.18
+        ],
+        [
+          "2026-02-12",
+          4.09
+        ],
+        [
+          "2026-02-13",
+          4.04
+        ],
+        [
+          "2026-02-17",
+          4.05
+        ],
+        [
+          "2026-02-18",
+          4.09
+        ],
+        [
+          "2026-02-19",
+          4.08
+        ],
+        [
+          "2026-02-20",
+          4.08
+        ],
+        [
+          "2026-02-23",
+          4.03
+        ],
+        [
+          "2026-02-24",
+          4.04
+        ],
+        [
+          "2026-02-25",
+          4.05
+        ],
+        [
+          "2026-02-26",
+          4.02
+        ],
+        [
+          "2026-02-27",
+          3.97
+        ],
+        [
+          "2026-03-02",
+          4.05
+        ],
+        [
+          "2026-03-03",
+          4.06
+        ],
+        [
+          "2026-03-04",
+          4.09
+        ],
+        [
+          "2026-03-05",
+          4.13
+        ],
+        [
+          "2026-03-06",
+          4.15
+        ],
+        [
+          "2026-03-09",
+          4.12
+        ],
+        [
+          "2026-03-10",
+          4.15
+        ],
+        [
+          "2026-03-11",
+          4.21
+        ],
+        [
+          "2026-03-12",
+          4.27
+        ],
+        [
+          "2026-03-13",
+          4.28
+        ],
+        [
+          "2026-03-16",
+          4.23
+        ],
+        [
+          "2026-03-17",
+          4.2
+        ],
+        [
+          "2026-03-18",
+          4.26
+        ],
+        [
+          "2026-03-19",
+          4.25
+        ],
+        [
+          "2026-03-20",
+          4.39
+        ],
+        [
+          "2026-03-23",
+          4.34
+        ],
+        [
+          "2026-03-24",
+          4.39
+        ],
+        [
+          "2026-03-25",
+          4.33
+        ],
+        [
+          "2026-03-26",
+          4.42
+        ],
+        [
+          "2026-03-27",
+          4.44
+        ],
+        [
+          "2026-03-30",
+          4.35
+        ],
+        [
+          "2026-03-31",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.33
+        ],
+        [
+          "2026-04-02",
+          4.31
+        ],
+        [
+          "2026-04-03",
+          4.35
+        ],
+        [
+          "2026-04-06",
+          4.34
+        ],
+        [
+          "2026-04-07",
+          4.33
+        ],
+        [
+          "2026-04-08",
+          4.29
+        ],
+        [
+          "2026-04-09",
+          4.29
+        ],
+        [
+          "2026-04-10",
+          4.31
+        ],
+        [
+          "2026-04-13",
+          4.3
+        ],
+        [
+          "2026-04-14",
+          4.26
+        ],
+        [
+          "2026-04-15",
+          4.29
+        ],
+        [
+          "2026-04-16",
+          4.32
+        ],
+        [
+          "2026-04-17",
+          4.26
+        ],
+        [
+          "2026-04-20",
+          4.26
+        ],
+        [
+          "2026-04-21",
+          4.3
+        ],
+        [
+          "2026-04-22",
+          4.3
+        ],
+        [
+          "2026-04-23",
+          4.34
+        ],
+        [
+          "2026-04-24",
+          4.31
+        ],
+        [
+          "2026-04-27",
+          4.35
+        ],
+        [
+          "2026-04-28",
+          4.36
+        ],
+        [
+          "2026-04-29",
+          4.42
+        ],
+        [
+          "2026-04-30",
+          4.4
+        ],
+        [
+          "2026-05-01",
+          4.39
+        ],
+        [
+          "2026-05-04",
+          4.45
+        ],
+        [
+          "2026-05-05",
+          4.43
+        ],
+        [
+          "2026-05-06",
+          4.36
+        ],
+        [
+          "2026-05-07",
+          4.41
+        ],
+        [
+          "2026-05-08",
+          4.38
+        ],
+        [
+          "2026-05-11",
+          4.42
+        ],
+        [
+          "2026-05-12",
+          4.46
+        ],
+        [
+          "2026-05-13",
+          4.46
+        ],
+        [
+          "2026-05-14",
+          4.47
+        ],
+        [
+          "2026-05-15",
+          4.59
+        ],
+        [
+          "2026-05-18",
+          4.61
+        ],
+        [
+          "2026-05-19",
+          4.67
+        ],
+        [
+          "2026-05-20",
+          4.57
+        ],
+        [
+          "2026-05-21",
+          4.57
+        ],
+        [
+          "2026-05-22",
+          4.56
+        ],
+        [
+          "2026-05-26",
+          4.5
+        ],
+        [
+          "2026-05-27",
+          4.48
+        ],
+        [
+          "2026-05-28",
+          4.45
+        ],
+        [
+          "2026-05-29",
+          4.45
+        ],
+        [
+          "2026-06-01",
+          4.47
+        ],
+        [
+          "2026-06-02",
+          4.46
+        ],
+        [
+          "2026-06-03",
+          4.49
+        ],
+        [
+          "2026-06-04",
+          4.47
+        ],
+        [
+          "2026-06-05",
+          4.55
+        ],
+        [
+          "2026-06-08",
+          4.56
+        ],
+        [
+          "2026-06-09",
+          4.53
+        ],
+        [
+          "2026-06-10",
+          4.55
+        ],
+        [
+          "2026-06-11",
+          4.45
+        ],
+        [
+          "2026-06-12",
+          4.48
+        ],
+        [
+          "2026-06-15",
+          4.47
+        ],
+        [
+          "2026-06-16",
+          4.43
+        ],
+        [
+          "2026-06-17",
+          4.49
+        ],
+        [
+          "2026-06-18",
+          4.46
+        ],
+        [
+          "2026-06-22",
+          4.51
+        ],
+        [
+          "2026-06-23",
+          4.5
+        ],
+        [
+          "2026-06-24",
+          4.41
+        ],
+        [
+          "2026-06-25",
+          4.4
+        ],
+        [
+          "2026-06-26",
+          4.38
+        ],
+        [
+          "2026-06-29",
+          4.38
+        ],
+        [
+          "2026-06-30",
+          4.44
+        ],
+        [
+          "2026-07-01",
+          4.48
+        ],
+        [
+          "2026-07-02",
+          4.49
+        ],
+        [
+          "2026-07-06",
+          4.48
+        ],
+        [
+          "2026-07-07",
+          4.55
+        ],
+        [
+          "2026-07-08",
+          4.56
+        ],
+        [
+          "2026-07-09",
+          4.54
+        ],
+        [
+          "2026-07-10",
+          4.56
+        ],
+        [
+          "2026-07-13",
+          4.62
+        ],
+        [
+          "2026-07-14",
+          4.58
+        ],
+        [
+          "2026-07-15",
+          4.55
+        ],
+        [
+          "2026-07-16",
+          4.57
+        ],
+        [
+          "2026-07-17",
+          4.55
+        ],
+        [
+          "2026-07-20",
+          4.6
+        ],
+        [
+          "2026-07-21",
+          4.63
+        ],
+        [
+          "2026-07-22",
+          4.67
+        ],
+        [
+          "2026-07-23",
+          4.71
+        ],
+        [
+          "2026-07-24",
+          4.69
+        ],
+        [
+          "2026-07-27",
+          4.65
+        ],
+        [
+          "2026-07-28",
+          4.61
+        ],
+        [
+          "2026-07-29",
+          4.67
+        ],
+        [
+          "2026-07-30",
+          4.68
+        ],
+        [
+          "2026-07-31",
+          4.75
+        ],
+        [
+          "2026-08-03",
+          4.7
+        ],
+        [
+          "2026-08-04",
+          4.63
+        ],
+        [
+          "2026-08-05",
+          4.63
+        ],
+        [
+          "2026-08-06",
+          4.69
+        ],
+        [
+          "2026-08-07",
+          4.65
+        ],
+        [
+          "2026-08-10",
+          4.72
+        ],
+        [
+          "2026-08-11",
+          4.7
+        ],
+        [
+          "2026-08-12",
+          4.68
+        ],
+        [
+          "2026-08-13",
+          4.63
+        ],
+        [
+          "2026-08-14",
+          4.68
+        ],
+        [
+          "2026-08-17",
+          4.72
+        ],
+        [
+          "2026-08-18",
+          4.71
+        ],
+        [
+          "2026-08-19",
+          4.65
+        ],
+        [
+          "2026-08-20",
+          4.69
+        ],
+        [
+          "2026-08-21",
+          4.74
+        ],
+        [
+          "2026-08-24",
+          4.7
+        ],
+        [
+          "2026-08-25",
+          4.64
+        ],
+        [
+          "2026-08-26",
+          4.66
+        ],
+        [
+          "2026-08-27",
+          4.67
+        ],
+        [
+          "2026-08-28",
+          4.73
+        ],
+        [
+          "2026-08-31",
+          4.75
+        ],
+        [
+          "2026-09-01",
+          4.79
+        ],
+        [
+          "2026-09-02",
+          4.79
+        ],
+        [
+          "2026-09-03",
+          4.77
+        ],
+        [
+          "2026-09-04",
+          4.78
+        ],
+        [
+          "2026-09-08",
+          4.8
+        ],
+        [
+          "2026-09-09",
+          4.83
+        ],
+        [
+          "2026-09-10",
+          4.95
+        ],
+        [
+          "2026-09-11",
+          4.96
+        ],
+        [
+          "2026-09-14",
+          4.97
+        ],
+        [
+          "2026-09-15",
+          5.0
+        ],
+        [
+          "2026-09-16",
+          5.01
+        ],
+        [
+          "2026-09-17",
+          4.94
+        ],
+        [
+          "2026-09-18",
+          5.01
+        ],
+        [
+          "2026-09-21",
+          4.96
+        ],
+        [
+          "2026-09-22",
+          4.96
+        ],
+        [
+          "2026-09-23",
+          5.11
+        ],
+        [
+          "2026-09-24",
+          5.18
+        ],
+        [
+          "2026-09-25",
+          5.17
+        ],
+        [
+          "2026-09-28",
+          5.24
+        ],
+        [
+          "2026-09-29",
+          5.26
+        ],
+        [
+          "2026-09-30",
+          5.29
+        ],
+        [
+          "2026-10-01",
+          5.24
+        ],
+        [
+          "2026-10-02",
+          5.28
+        ],
+        [
+          "2026-10-05",
+          5.31
+        ],
+        [
+          "2026-10-06",
+          5.27
+        ],
+        [
+          "2026-10-07",
+          5.28
+        ],
+        [
+          "2026-10-08",
+          5.22
+        ],
+        [
+          "2026-10-09",
+          5.24
+        ],
+        [
+          "2026-10-13",
+          5.21
+        ],
+        [
+          "2026-10-14",
+          5.19
+        ],
+        [
+          "2026-10-15",
+          5.1
+        ]
+      ]
+    },
+    {
+      "title": "KO Company Profile",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": null,
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/company-profile2",
+      "ticker": "KO",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "Company",
+          "Coca-Cola Co"
+        ],
+        [
+          "Exchange",
+          "NEW YORK STOCK EXCHANGE, INC."
+        ],
+        [
+          "Industry",
+          "Beverages"
+        ],
+        [
+          "Country",
+          "US"
+        ],
+        [
+          "Currency",
+          "USD"
+        ],
+        [
+          "IPO date",
+          "1950-01-26"
+        ],
+        [
+          "Market capitalization (USD)",
+          404009334961.4479
+        ],
+        [
+          "Shares outstanding",
+          4302550000.0
+        ]
+      ]
+    },
+    {
+      "title": "KO Quote",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": "daily",
+      "units": null,
+      "last_date": "2026-10-16",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/quote",
+      "ticker": "KO",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "Current price",
+          93.9
+        ],
+        [
+          "Change",
+          1.9
+        ],
+        [
+          "Percent change (%)",
+          2.0652
+        ],
+        [
+          "Open",
+          92.99
+        ],
+        [
+          "Day high",
+          93.9
+        ],
+        [
+          "Day low",
+          92.81
+        ],
+        [
+          "Previous close",
+          92.0
+        ]
+      ]
+    },
+    {
+      "title": "KO Analyst Recommendation Trends",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": "monthly",
+      "units": null,
+      "last_date": "2026-09-01",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/recommendation-trends",
+      "ticker": "KO",
+      "columns": [
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "2026-09-01",
+          8,
+          19,
+          8,
+          0,
+          0
+        ],
+        [
+          "2026-08-01",
+          8,
+          19,
+          8,
+          0,
+          0
+        ],
+        [
+          "2026-07-01",
+          9,
+          20,
+          6,
+          0,
+          0
+        ],
+        [
+          "2026-06-01",
+          8,
+          20,
+          6,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "KO Key Financial Metrics",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": null,
+      "topics": [
+        "equity"
+      ],
+      "source_url": "https://finnhub.io/docs/api/company-basic-financials",
+      "ticker": "KO",
+      "columns": [
+        "field",
+        "value"
+      ],
+      "rows": [
+        [
+          "P/E (TTM)",
+          28.2208
+        ],
+        [
+          "P/B (quarterly)",
+          10.0141
+        ],
+        [
+          "P/S (TTM)",
+          8.0594
+        ],
+        [
+          "EPS (TTM)",
+          3.3194
+        ],
+        [
+          "EPS growth TTM YoY (%)",
+          17.61
+        ],
+        [
+          "Revenue growth TTM YoY (%)",
+          6.52
+        ],
+        [
+          "ROE TTM (%)",
+          42.99
+        ],
+        [
+          "Net profit margin TTM (%)",
+          28.56
+        ],
+        [
+          "Dividend yield, indicated annual (%)",
+          3.14154
+        ],
+        [
+          "Beta",
+          0.28457806
+        ],
+        [
+          "52-week high",
+          94.1
+        ],
+        [
+          "52-week low",
+          67.16
+        ],
+        [
+          "52-week price return (%)",
+          38.9259
+        ]
+      ]
+    },
+    {
+      "title": "KO Recent News",
+      "provider": "Finnhub",
+      "kind": "snapshot",
+      "series_id": null,
+      "frequency": null,
+      "units": null,
+      "last_date": "2026-10-18",
+      "topics": [
+        "equity"
+      ],
+      "source_url": "",
+      "ticker": "KO",
+      "columns": [
+        "date",
+        "headline",
+        "publisher",
+        "url"
+      ],
+      "rows": [
+        [
+          "2026-10-18",
+          "Coca-Cola Yields 2.3% and Nike Yields 4.4%. Here's Why Only 1 of These High-Yield Dividend Stocks Is a Buy This October.",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=9d2f4fcfaca53c99775ac5d6335f6eee5d06290c7b87eb84cdbfde8bc1da8081"
+        ],
+        [
+          "2026-10-18",
+          "Sydney Sweeney Drops Second Nude Betting Ad as Powerade Fires Back",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=7196a4c6512cbc5850de12c12dde368d14a948e2e21c3cfdb20ca0653bfae973"
+        ],
+        [
+          "2026-10-18",
+          "Coca-Cola Stock Is Up 39% in a Year. Here’s What’s Driving the Rally",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=feae6a8327e5f3ee8c8203d9ef1004cdb58189647bf848756a226e5ad42bf3f0"
+        ],
+        [
+          "2026-10-18",
+          "Yum! Brands (YUM) Resets KFC U.S. Drinks With A New 2027 Beverage Deal",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=946dbddd36c03372c872922fa1ae4d4b4ce9199ce84240f130df12ef332a0e84"
+        ],
+        [
+          "2026-10-17",
+          "In 1918, Milton Hershey Quietly Put About $60 Million In Stock Into A Trust. Over 100 Years Later, That Trust Still Exists And Holds About $23.6 Billion In Assets. Wealthy Donors Still Use A Similar Strategy, And The Legal Work To Set One Up Starts At A Few Thousand Dollars",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=f46826d92814f67f6093beab22199f6eff61c7b0e11730550f1f3e2df92d9c65"
+        ],
+        [
+          "2026-10-17",
+          "When the Stock Market Gets Dangerous, These 6 Investments Have a History of Holding Up",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=c3bb8900b1fbc403ac7002346e83167ebd87153a0b81791527a07965c14cc25b"
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "10-Year Treasury Constant Maturity Yield (DGS10)",
+      "type": "line",
+      "x": [
+        "2025-10-03",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15"
+      ],
+      "y": [
+        4.13,
+        4.18,
+        4.14,
+        4.13,
+        4.14,
+        4.05,
+        4.03,
+        4.05,
+        3.99,
+        4.02,
+        4.0,
+        3.98,
+        3.97,
+        4.01,
+        4.02,
+        4.01,
+        3.99,
+        4.08,
+        4.11,
+        4.11,
+        4.13,
+        4.1,
+        4.17,
+        4.11,
+        4.11,
+        4.13,
+        4.08,
+        4.11,
+        4.14,
+        4.13,
+        4.12,
+        4.13,
+        4.1,
+        4.06,
+        4.04,
+        4.01,
+        4.0,
+        4.02,
+        4.09,
+        4.09,
+        4.06,
+        4.11,
+        4.14,
+        4.17,
+        4.18,
+        4.13,
+        4.14,
+        4.19,
+        4.18,
+        4.15,
+        4.16,
+        4.12,
+        4.16,
+        4.17,
+        4.18,
+        4.15,
+        4.14,
+        4.12,
+        4.14,
+        4.18,
+        4.19,
+        4.17,
+        4.18,
+        4.15,
+        4.19,
+        4.18,
+        4.19,
+        4.18,
+        4.15,
+        4.17,
+        4.24,
+        4.3,
+        4.26,
+        4.26,
+        4.24,
+        4.22,
+        4.24,
+        4.26,
+        4.24,
+        4.26,
+        4.29,
+        4.28,
+        4.29,
+        4.21,
+        4.22,
+        4.22,
+        4.16,
+        4.18,
+        4.09,
+        4.04,
+        4.05,
+        4.09,
+        4.08,
+        4.08,
+        4.03,
+        4.04,
+        4.05,
+        4.02,
+        3.97,
+        4.05,
+        4.06,
+        4.09,
+        4.13,
+        4.15,
+        4.12,
+        4.15,
+        4.21,
+        4.27,
+        4.28,
+        4.23,
+        4.2,
+        4.26,
+        4.25,
+        4.39,
+        4.34,
+        4.39,
+        4.33,
+        4.42,
+        4.44,
+        4.35,
+        4.3,
+        4.33,
+        4.31,
+        4.35,
+        4.34,
+        4.33,
+        4.29,
+        4.29,
+        4.31,
+        4.3,
+        4.26,
+        4.29,
+        4.32,
+        4.26,
+        4.26,
+        4.3,
+        4.3,
+        4.34,
+        4.31,
+        4.35,
+        4.36,
+        4.42,
+        4.4,
+        4.39,
+        4.45,
+        4.43,
+        4.36,
+        4.41,
+        4.38,
+        4.42,
+        4.46,
+        4.46,
+        4.47,
+        4.59,
+        4.61,
+        4.67,
+        4.57,
+        4.57,
+        4.56,
+        4.5,
+        4.48,
+        4.45,
+        4.45,
+        4.47,
+        4.46,
+        4.49,
+        4.47,
+        4.55,
+        4.56,
+        4.53,
+        4.55,
+        4.45,
+        4.48,
+        4.47,
+        4.43,
+        4.49,
+        4.46,
+        4.51,
+        4.5,
+        4.41,
+        4.4,
+        4.38,
+        4.38,
+        4.44,
+        4.48,
+        4.49,
+        4.48,
+        4.55,
+        4.56,
+        4.54,
+        4.56,
+        4.62,
+        4.58,
+        4.55,
+        4.57,
+        4.55,
+        4.6,
+        4.63,
+        4.67,
+        4.71,
+        4.69,
+        4.65,
+        4.61,
+        4.67,
+        4.68,
+        4.75,
+        4.7,
+        4.63,
+        4.63,
+        4.69,
+        4.65,
+        4.72,
+        4.7,
+        4.68,
+        4.63,
+        4.68,
+        4.72,
+        4.71,
+        4.65,
+        4.69,
+        4.74,
+        4.7,
+        4.64,
+        4.66,
+        4.67,
+        4.73,
+        4.75,
+        4.79,
+        4.79,
+        4.77,
+        4.78,
+        4.8,
+        4.83,
+        4.95,
+        4.96,
+        4.97,
+        5.0,
+        5.01,
+        4.94,
+        5.01,
+        4.96,
+        4.96,
+        5.11,
+        5.18,
+        5.17,
+        5.24,
+        5.26,
+        5.29,
+        5.24,
+        5.28,
+        5.31,
+        5.27,
+        5.28,
+        5.22,
+        5.24,
+        5.21,
+        5.19,
+        5.1
+      ],
+      "y_label": "Percent"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "DGS10",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "profile KO",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "quote KO",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "recommendations KO",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "financials KO",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Finnhub",
+      "item": "news KO",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": null,
+  "validation": {
+    "counts": {
+      "figures": 21,
+      "verified": 8,
+      "derived": 4,
+      "unverified": 9
+    },
+    "figures": [
+      {
+        "text": "3.142 %",
+        "value": 3.142,
+        "unit": "%",
+        "tolerance": 0.000500001,
+        "start": 64,
+        "end": 71,
+        "status": "verified",
+        "matched": "KO Key Financial Metrics: Dividend yield, indicated annual (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S5"
+        ],
+        "context": "- Coca‑Cola’s current dividend yield is 3.142 %【S5]."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 134,
+        "end": 139,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "Treasury constant‑maturity yield is 5.1 %【S1]."
+      },
+      {
+        "text": "1.96 percentage points",
+        "value": 1.96,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 164,
+        "end": 186,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S15",
+        "snippet_ids": [
+          "S15"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "- KO’s yield is ~1.96 percentage points lower than Treasury yields."
+      },
+      {
+        "text": "0.2846",
+        "value": 0.2846,
+        "unit": "",
+        "tolerance": 5.0001000000000005e-05,
+        "start": 237,
+        "end": 243,
+        "status": "verified",
+        "matched": "KO Key Financial Metrics: Beta",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- KO’s equity beta (0.2846) is far below Treasury’s implied beta (~1), indicating lower volatility."
+      },
+      {
+        "text": "1",
+        "value": 1.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 284,
+        "end": 285,
+        "status": "derived",
+        "matched": "DGS10 change 2025-10-10 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "- KO’s equity beta (0.2846) is far below Treasury’s implied beta (~1), indicating lower volatility."
+      },
+      {
+        "text": "22 %",
+        "value": 22.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 361,
+        "end": 365,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S5"
+        ],
+        "context": "- After‑tax yield for a typical investor (22 % marginal tax rate, assumption) is ≈ 2.45 %【S5]."
+      },
+      {
+        "text": "2.45 %",
+        "value": 2.45,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 402,
+        "end": 408,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S15",
+        "snippet_ids": [
+          "S15"
+        ],
+        "assumption": true,
+        "cited": [
+          "S5"
+        ],
+        "context": "- After‑tax yield for a typical investor (22 % marginal tax rate, assumption) is ≈ 2.45 %【S5]."
+      },
+      {
+        "text": "5 %",
+        "value": 5.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 625,
+        "end": 628,
+        "status": "verified",
+        "matched": "DGS10 on 2026-09-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1"
+        ],
+        "context": "monetary policy has pushed 10‑yr Treasury yields to ~5 %【S1]."
+      },
+      {
+        "text": "62",
+        "value": 62.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 827,
+        "end": 829,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S16",
+        "snippet_ids": [
+          "S16"
+        ],
+        "assumption": false,
+        "cited": [
+          "S16"
+        ],
+        "context": "- Consumer‑staple sector (Beverages) is defensive; KO’s dividend history shows 62 consecutive increases【S16]."
+      },
+      {
+        "text": "0.2846",
+        "value": 0.2846,
+        "unit": "",
+        "tolerance": 5.0001000000000005e-05,
+        "start": 1061,
+        "end": 1067,
+        "status": "verified",
+        "matched": "KO Key Financial Metrics: Beta",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S5"
+        ],
+        "context": "- KO’s beta of 0.2846【S5] indicates lower systematic risk."
+      },
+      {
+        "text": "–1.96 %",
+        "value": 1.96,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1154,
+        "end": 1161,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S15",
+        "snippet_ids": [
+          "S15"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "- Nominal spread: KO – Treasury ≈ –1.96 %."
+      },
+      {
+        "text": "2.45 %",
+        "value": 2.45,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1203,
+        "end": 1209,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S15",
+        "snippet_ids": [
+          "S15"
+        ],
+        "assumption": true,
+        "cited": [],
+        "context": "- After‑tax spread (assumption): KO ≈ 2.45 % vs."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1223,
+        "end": 1228,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "Treasury 5.1 % (tax‑free)."
+      },
+      {
+        "text": "1.96 pp",
+        "value": 1.96,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 1544,
+        "end": 1551,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S15",
+        "snippet_ids": [
+          "S15"
+        ],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Base** | Current yields unchanged | KO lower by 1.96 pp | Treasuries preferred for pure income |"
+      },
+      {
+        "text": "+0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1636,
+        "end": 1643,
+        "status": "derived",
+        "matched": "DGS10 change 2026-07-16 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Upside** | Treasury yields rise (e.g., +0.5 pp) | Spread widens | KO becomes relatively more attractive for risk‑averse investors |"
+      },
+      {
+        "text": "+0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1766,
+        "end": 1773,
+        "status": "derived",
+        "matched": "DGS10 change 2026-07-16 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | KO raises dividend (+0.5 pp) or Treasury yields fall (–0.5 pp) | Spread narrows or reverses | KO could become competitive for income seekers |"
+      },
+      {
+        "text": "–0.5 pp",
+        "value": 0.5,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1800,
+        "end": 1807,
+        "status": "derived",
+        "matched": "DGS10 change 2026-07-16 to 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [],
+        "context": "| **Downside** | KO raises dividend (+0.5 pp) or Treasury yields fall (–0.5 pp) | Spread narrows or reverses | KO could become competitive for income seekers |"
+      },
+      {
+        "text": "3.142 %",
+        "value": 3.142,
+        "unit": "%",
+        "tolerance": 0.000500001,
+        "start": 3251,
+        "end": 3258,
+        "status": "verified",
+        "matched": "KO Key Financial Metrics: Dividend yield, indicated annual (%)",
+        "source_id": "S5",
+        "source_ids": [
+          "S5"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S5"
+        ],
+        "context": "Coca‑Cola’s dividend yield of 3.142 %【S5] is not competitive against the current 10‑year Treasury yield of 5.1 %【S1]."
+      },
+      {
+        "text": "5.1 %",
+        "value": 5.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 3328,
+        "end": 3333,
+        "status": "verified",
+        "matched": "DGS10 on 2026-10-15",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "cited": [
+          "S1",
+          "S5"
+        ],
+        "context": "Coca‑Cola’s dividend yield of 3.142 %【S5] is not competitive against the current 10‑year Treasury yield of 5.1 %【S1]."
+      },
+      {
+        "text": "22 %",
+        "value": 22.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 3375,
+        "end": 3379,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S5"
+        ],
+        "context": "Even after accounting for a typical 22 % marginal tax rate (assumption), KO’s after‑tax yield (~2.45 %) remains below Treasury’s tax‑free return."
+      },
+      {
+        "text": "2.45 %",
+        "value": 2.45,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 3435,
+        "end": 3441,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S15",
+        "snippet_ids": [
+          "S15"
+        ],
+        "assumption": true,
+        "cited": [
+          "S1",
+          "S5"
+        ],
+        "context": "Even after accounting for a typical 22 % marginal tax rate (assumption), KO’s after‑tax yield (~2.45 %) remains below Treasury’s tax‑free return."
+      }
+    ],
+    "citations": {
+      "markers": 8,
+      "dangling": [],
+      "uncited_paragraphs": [
+        {
+          "text": "- KO’s equity beta (0.2846) is far below Treasury’s implied beta (~1), indicating lower volatility.",
+          "figures": [
+            "0.2846",
+            "1"
+          ],
+          "sources": [
+            "S1",
+            "S5"
+          ]
+        },
+        {
+          "text": "- After‑tax spread (assumption): KO ≈ 2.45 % vs. Treasury 5.1 % (tax‑free).",
+          "figures": [
+            "5.1 %"
+          ],
+          "sources": [
+            "S1"
+          ]
+        },
+        {
+          "text": "| Scenario | Assumptions | Impact on Spread | Implication |\n|----------|-------------|------------------|-------------|\n| **Base** | Current yields unchanged | KO lower by 1.96 pp | Treasuries preferr",
+          "figures": [
+            "+0.5 pp",
+            "+0.5 pp",
+            "–0.5 pp"
+          ],
+          "sources": [
+            "S1"
+          ]
+        }
+      ],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: 10-Year Treasury Constant Maturity Yield (DGS10)",
+        "last_date": "2026-10-15",
+        "frequency": "daily",
+        "age_days": 3,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "KO Quote",
+        "last_date": "2026-10-16",
+        "frequency": "daily",
+        "age_days": 2,
+        "max_age_days": 7,
+        "status": "ok"
+      },
+      {
+        "table": "KO Analyst Recommendation Trends",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "KO Recent News",
+        "last_date": "2026-10-18",
+        "frequency": null,
+        "age_days": null,
+        "max_age_days": null,
+        "status": "n/a"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17"
+    ],
+    "open_issues": 6,
+    "summary": "12 of 21 figures verified against source data (8 exact, 4 derived); 9 flagged (7 of them appear in a fetched web/news snippet; 5 labelled as assumptions). 3 paragraph(s) state figures without a citation."
+  },
+  "run_meta": {
+    "run_id": "20261018-182422-d8d5bd",
+    "timestamp": "2026-10-18T22:24:22+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 180.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    }
+  }
+}

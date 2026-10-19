@@ -82,6 +82,7 @@ def test_financials_table_is_built_from_metric_endpoint(monkeypatch):
     b = dp.fetch_finnhub_financials("JPM")
     df = b["tables"][0]["data"]
     assert dict(zip(df["field"], df["value"])) == {"P/E (TTM)": 14.2, "EPS (TTM)": 18.5}
+    assert list(df["id"]) == ["pe_ttm", "eps_ttm"] and list(df["unit"]) == ["x", "usd"]
 
 
 def test_profile_converts_market_cap_to_usd(monkeypatch):

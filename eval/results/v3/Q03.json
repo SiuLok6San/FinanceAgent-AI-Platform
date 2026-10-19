@@ -1,0 +1,2835 @@
+{
+  "id": "Q03",
+  "set": "dev",
+  "category": "macro",
+  "question": "How likely is a U.S. recession in the next 12 months based on real GDP growth and labor data?",
+  "ticker": null,
+  "expected_tags": [
+    "macro"
+  ],
+  "pipeline": "v3",
+  "run_utc": "2026-10-19T00:49:42+00:00",
+  "elapsed_sec": 84.9,
+  "router_tags": [
+    "macro"
+  ],
+  "tags": [
+    "macro"
+  ],
+  "plan": {
+    "topics": [
+      "macro"
+    ],
+    "series": [
+      "GDPC1",
+      "UNRATE"
+    ],
+    "steps": [
+      "Retrieve recent quarterly GDP growth rates and compute the trend over the past 12 months.",
+      "Obtain monthly unemployment rates for the same period and analyze the trend and any acceleration in job losses.",
+      "Compare the GDP growth and unemployment trends against historical recession thresholds (e.g., two consecutive negative GDP quarters and rising unemployment) to assess recession likelihood."
+    ],
+    "source": "planner"
+  },
+  "plan_raw": "{\"topics\":[\"macro\"],\"series\":[\"GDP\",\"UNRATE\"],\"steps\":[\"Retrieve recent quarterly GDP growth rates and compute the trend over the past 12 months.\",\"Obtain monthly unemployment rates for the same period and analyze the trend and any acceleration in job losses.\",\"Compare the GDP growth and unemployment trends against historical recession thresholds (e.g., two consecutive negative GDP quarters and rising unemployment) to assess recession likelihood.\"]}",
+  "tier2": {
+    "macro": "recession_probabilities"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Real GDP grew +2.2% [S1] over the past 12 months, a decline from +2.6% a year earlier, indicating a slowdown in the annualized pace.  \n- The most recent quarter expanded by +0.6% [S1] (annualized +2.2%), down from +1.2% (annualized +2.5%) in the prior quarter, so the growth trajectory is flat rather than accelerating.  \n- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.  \n- The New York Fed model assigns a 25.2% [S3] chance of a recession in the next 12 months, while the July WSJ survey estimates a 33% [S4] probability; both figures are below the 40% threshold that typically signals heightened concern.  \n- Current data do not satisfy the classic recession trigger (negative GDP + rising unemployment), implying a moderate but watchful risk profile.  \n\n**Core Analysis – Macro**  \n- **GDP Trend** – 12‑month growth +2.2% [S1] vs. +2.6%; quarterly growth +0.6% (annualized +2.2%) vs. +1.2% (annualized +2.5%).  \n- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.  \n- **Recession Triggers** – No consecutive negative GDP quarters; unemployment is not accelerating.  \n- **Probability Estimates** – New York Fed: 25.2% [S3]; WSJ survey: 33% [S4].  \n\n**Scenarios**  \n- **Base** – Current trajectory continues; recession probability remains 25.2% [S3]–33% [S4].  \n- **Upside** – Further GDP slowdown or a rebound in unemployment (e.g., −0.1 pp [S2] turns positive) pushes probability toward 40–50%.  \n- **Downside** – GDP growth accelerates (e.g., +0.6% [S1] rises above +1.2%) or unemployment falls (e.g., −0.1 pp [S2] turns negative) reduces probability to <20%.  \n\n**Key Risks & Monitoring**  \n- **GDP Revisions** – Late‑quarter revisions could alter the growth trajectory.  \n- **Unemployment Trend** – A shift toward a sustained rise in unemployment would heighten recession risk.  \n- **Inflation & Monetary Policy** – Tightening or easing policy could influence both GDP and labor market dynamics.  \n- **External Shocks** – Geopolitical events or commodity price swings may disrupt current trends.  \n\n**Portfolio / Decision Implications**  \n- **Fixed Income** – Consider reducing duration to mitigate interest‑rate risk if recession probability rises.  \n- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).  \n- **Equity** – Shift weighting toward defensive sectors (utilities, consumer staples).  \n- **Risk Management** – Maintain higher exposure to high‑quality corporate and Treasury securities until probability crosses the 40% threshold.  \n\n**Conclusion**  \nThe U.S. economy shows a slowing growth rate and a tightening but not accelerating labor market. Current recession probability estimates (25.2% [S3]–33% [S4]) are moderate and below the 40% alert level. Continuous monitoring of GDP revisions, unemployment trends, and policy developments is essential to adjust portfolio positioning proactively.",
+  "report_template": "**Executive Summary**  \n- Real GDP grew {{GDP.pct_1y}} over the past 12 months, a decline from {{GDP.pct_1y_prev}} a year earlier, indicating a slowdown in the annualized pace.  \n- The most recent quarter expanded by {{GDP.pct_1q}} (annualized {{GDP.ann_growth_1q}}), down from {{GDP.pct_2q}} (annualized {{GDP.ann_growth_1q_prev}}) in the prior quarter, so the growth trajectory is flat rather than accelerating.  \n- Unemployment is {{UNRATE.latest}} in September 2026, up from {{UNRATE.prev_1m}} in August 2026 and unchanged from {{UNRATE.prev_3m}} in June 2026, but down from {{UNRATE.prev_6m}} in March 2026; the six‑month change is {{UNRATE.chg_6m}} and the year‑on‑year change is {{UNRATE.chg_1y}}.  \n- The New York Fed model assigns a {{S3: 25.2%}} chance of a recession in the next 12 months, while the July WSJ survey estimates a {{S4: 33%}} probability; both figures are below the 40% threshold that typically signals heightened concern.  \n- Current data do not satisfy the classic recession trigger (negative GDP + rising unemployment), implying a moderate but watchful risk profile.  \n\n**Core Analysis – Macro**  \n- **GDP Trend** – 12‑month growth {{GDP.pct_1y}} vs. {{GDP.pct_1y_prev}}; quarterly growth {{GDP.pct_1q}} (annualized {{GDP.ann_growth_1q}}) vs. {{GDP.pct_2q}} (annualized {{GDP.ann_growth_1q_prev}}).  \n- **Labor‑Market Trend** – Unemployment {{UNRATE.latest}} (Sept 2026), up from {{UNRATE.prev_1m}} (Aug 2026), unchanged from {{UNRATE.prev_3m}} (Jun 2026), down from {{UNRATE.prev_6m}} (Mar 2026); six‑month change {{UNRATE.chg_6m}}, year‑on‑year change {{UNRATE.chg_1y}}.  \n- **Recession Triggers** – No consecutive negative GDP quarters; unemployment is not accelerating.  \n- **Probability Estimates** – New York Fed: {{S3: 25.2%}}; WSJ survey: {{S4: 33%}}.  \n\n**Scenarios**  \n- **Base** – Current trajectory continues; recession probability remains {{S3: 25.2%}}–{{S4: 33%}}.  \n- **Upside** – Further GDP slowdown or a rebound in unemployment (e.g., {{UNRATE.chg_6m}} turns positive) pushes probability toward 40–50%.  \n- **Downside** – GDP growth accelerates (e.g., {{GDP.pct_1q}} rises above {{GDP.pct_2q}}) or unemployment falls (e.g., {{UNRATE.chg_6m}} turns negative) reduces probability to <20%.  \n\n**Key Risks & Monitoring**  \n- **GDP Revisions** – Late‑quarter revisions could alter the growth trajectory.  \n- **Unemployment Trend** – A shift toward a sustained rise in unemployment would heighten recession risk.  \n- **Inflation & Monetary Policy** – Tightening or easing policy could influence both GDP and labor market dynamics.  \n- **External Shocks** – Geopolitical events or commodity price swings may disrupt current trends.  \n\n**Portfolio / Decision Implications**  \n- **Fixed Income** – Consider reducing duration to mitigate interest‑rate risk if recession probability rises.  \n- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).  \n- **Equity** – Shift weighting toward defensive sectors (utilities, consumer staples).  \n- **Risk Management** – Maintain higher exposure to high‑quality corporate and Treasury securities until probability crosses the 40% threshold.  \n\n**Conclusion**  \nThe U.S. economy shows a slowing growth rate and a tightening but not accelerating labor market. Current recession probability estimates ({{S3: 25.2%}}–{{S4: 33%}}) are moderate and below the 40% alert level. Continuous monitoring of GDP revisions, unemployment trends, and policy developments is essential to adjust portfolio positioning proactively.",
+  "draft_report_text": "**Executive Summary**  \n- Real GDP grew +2.2% [S1] over the past 12 months, a decline from +2.6% a year earlier, indicating a slowdown in the annualized pace.  \n- The most recent quarter expanded by +0.6% [S1] (annualized +2.2%), down from +1.2% (annualized +2.5%) in the prior quarter, so the growth trajectory is flat rather than accelerating.  \n- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.  \n- The New York Fed model assigns a 25.2% chance of a recession in the next 12 months [S3], while the July WSJ survey estimates a 33% probability [S4]; both figures are below the 40% threshold that typically signals heightened concern.  \n- Current data do not satisfy the classic recession trigger (negative GDP + rising unemployment), implying a moderate but watchful risk profile.\n\n**Core Analysis – Macro**  \n- **GDP Trend** – 12‑month growth +2.2% [S1] vs. +2.6%; quarterly growth +0.6% (annualized +2.2%) vs. +1.2% (annualized +2.5%).  \n- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.  \n- **Recession Triggers** – No consecutive negative GDP quarters; unemployment is not accelerating.  \n- **Probability Estimates** – New York Fed: 25.2% [S3]; WSJ survey: 33% [S4].\n\n**Scenarios**  \n- **Base** – Current trajectory continues; recession probability remains 25–33%.  \n- **Upside** – Further GDP slowdown or a rebound in unemployment (e.g., −0.1 pp [S2] turns positive) pushes probability toward 40–50%.  \n- **Downside** – GDP growth accelerates (e.g., +0.6% [S1] rises above +1.2%) or unemployment falls (e.g., −0.1 pp [S2] turns negative) reduces probability to <20%.\n\n**Key Risks & Monitoring**  \n- **GDP Revisions** – Late‑quarter revisions could alter the growth trajectory.  \n- **Unemployment Trend** – A shift toward a sustained rise in unemployment would heighten recession risk.  \n- **Inflation & Monetary Policy** – Tightening or easing policy could influence both GDP and labor market dynamics.  \n- **External Shocks** – Geopolitical events or commodity price swings may disrupt current trends.\n\n**Portfolio / Decision Implications**  \n- **Fixed Income** – Consider reducing duration to mitigate interest‑rate risk if recession probability rises.  \n- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).  \n- **Equity** – Shift weighting toward defensive sectors (utilities, consumer staples).  \n- **Risk Management** – Maintain higher exposure to high‑quality corporate and Treasury securities until probability crosses the 40% threshold.\n\n**Conclusion**  \nThe U.S. economy shows a slowing growth rate and a tightening but not accelerating labor market. Current recession probability estimates (25–33%) are moderate and below the 40% alert level. Continuous monitoring of GDP revisions, unemployment trends, and policy developments is essential to adjust portfolio positioning proactively.",
+  "draft_report_template": "**Executive Summary**  \n- Real GDP grew {{GDP.pct_1y}} over the past 12 months, a decline from {{GDP.pct_1y_prev}} a year earlier, indicating a slowdown in the annualized pace.  \n- The most recent quarter expanded by {{GDP.pct_1q}} (annualized {{GDP.ann_growth_1q}}), down from {{GDP.pct_2q}} (annualized {{GDP.ann_growth_1q_prev}}) in the prior quarter, so the growth trajectory is flat rather than accelerating.  \n- Unemployment is {{UNRATE.latest}} in September 2026, up from {{UNRATE.prev_1m}} in August 2026 and unchanged from {{UNRATE.prev_3m}} in June 2026, but down from {{UNRATE.prev_6m}} in March 2026; the six‑month change is {{UNRATE.chg_6m}} and the year‑on‑year change is {{UNRATE.chg_1y}}.  \n- The New York Fed model assigns a 25.2% chance of a recession in the next 12 months [S3], while the July WSJ survey estimates a 33% probability [S4]; both figures are below the 40% threshold that typically signals heightened concern.  \n- Current data do not satisfy the classic recession trigger (negative GDP + rising unemployment), implying a moderate but watchful risk profile.\n\n**Core Analysis – Macro**  \n- **GDP Trend** – 12‑month growth {{GDP.pct_1y}} vs. {{GDP.pct_1y_prev}}; quarterly growth {{GDP.pct_1q}} (annualized {{GDP.ann_growth_1q}}) vs. {{GDP.pct_2q}} (annualized {{GDP.ann_growth_1q_prev}}).  \n- **Labor‑Market Trend** – Unemployment {{UNRATE.latest}} (Sept 2026), up from {{UNRATE.prev_1m}} (Aug 2026), unchanged from {{UNRATE.prev_3m}} (Jun 2026), down from {{UNRATE.prev_6m}} (Mar 2026); six‑month change {{UNRATE.chg_6m}}, year‑on‑year change {{UNRATE.chg_1y}}.  \n- **Recession Triggers** – No consecutive negative GDP quarters; unemployment is not accelerating.  \n- **Probability Estimates** – New York Fed: 25.2% [S3]; WSJ survey: 33% [S4].\n\n**Scenarios**  \n- **Base** – Current trajectory continues; recession probability remains 25–33%.  \n- **Upside** – Further GDP slowdown or a rebound in unemployment (e.g., {{UNRATE.chg_6m}} turns positive) pushes probability toward 40–50%.  \n- **Downside** – GDP growth accelerates (e.g., {{GDP.pct_1q}} rises above {{GDP.pct_2q}}) or unemployment falls (e.g., {{UNRATE.chg_6m}} turns negative) reduces probability to <20%.\n\n**Key Risks & Monitoring**  \n- **GDP Revisions** – Late‑quarter revisions could alter the growth trajectory.  \n- **Unemployment Trend** – A shift toward a sustained rise in unemployment would heighten recession risk.  \n- **Inflation & Monetary Policy** – Tightening or easing policy could influence both GDP and labor market dynamics.  \n- **External Shocks** – Geopolitical events or commodity price swings may disrupt current trends.\n\n**Portfolio / Decision Implications**  \n- **Fixed Income** – Consider reducing duration to mitigate interest‑rate risk if recession probability rises.  \n- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).  \n- **Equity** – Shift weighting toward defensive sectors (utilities, consumer staples).  \n- **Risk Management** – Maintain higher exposure to high‑quality corporate and Treasury securities until probability crosses the 40% threshold.\n\n**Conclusion**  \nThe U.S. economy shows a slowing growth rate and a tightening but not accelerating labor market. Current recession probability estimates (25–33%) are moderate and below the 40% alert level. Continuous monitoring of GDP revisions, unemployment trends, and policy developments is essential to adjust portfolio positioning proactively.",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"+0.6% [S1] rises above +1.2%)\" compares with \"above\", but GDP.pct_1q = +0.6% is below GDP.pct_2q = +1.2%; fix or drop the comparison.\n2. \"- The most recent quarter expanded by +0.6% [S1] (annualized +2.2%), down from +1.2% (annualized +2.5%) in the prior quarter, so the growth trajectory is flat r\" says \"down\" (down), but GDP.pct_2q went up; fix the wording.\n3. \"25.2%\" in: \"- The New York Fed model assigns a 25.2% chance of a recession in the next 12 months [S3], while the July WSJ survey estimates a 33% probability [S4]; both figu\" — typed directly; [S3] writes the same number, so if it comes from there quote it as {{S3: 25.2%}}; if it is a target, threshold or your own estimate, write {{assume: …}}.\n4. \"33%\" in: \"- The New York Fed model assigns a 25.2% chance of a recession in the next 12 months [S3], while the July WSJ survey estimates a 33% probability [S4]; both figu\" — typed directly; [S4] writes the same number, so if it comes from there quote it as {{S4: 33%}}; if it is a target, threshold or your own estimate, write {{assume: …}}.\n5. \"40%\" in: \"- The New York Fed model assigns a 25.2% chance of a recession in the next 12 months [S3], while the July WSJ survey estimates a 33% probability [S4]; both figu\" — typed directly; [S3] writes the same number, so if it comes from there quote it as {{S3: 40%}}; if it is a target, threshold or your own estimate, write {{assume: …}}.\n6. \"25.2%\" in: \"- **Probability Estimates** – New York Fed: 25.2% [S3]; WSJ survey: 33% [S4].\" — typed directly; [S3] writes the same number, so if it comes from there quote it as {{S3: 25.2%}}; if it is a target, threshold or your own estimate, write {{assume: …}}.\n7. \"33%\" in: \"- **Probability Estimates** – New York Fed: 25.2% [S3]; WSJ survey: 33% [S4].\" — typed directly; [S4] writes the same number, so if it comes from there quote it as {{S4: 33%}}; if it is a target, threshold or your own estimate, write {{assume: …}}.\n8. \"25\" in: \"- **Base** – Current trajectory continues; recession probability remains 25–33%.\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.\n9. \"33%\" in: \"- **Base** – Current trajectory continues; recession probability remains 25–33%.\" — typed directly; [S4] writes the same number, so if it comes from there quote it as {{S4: 33%}}; if it is a target, threshold or your own estimate, write {{assume: …}}.\n10. \"40\" in: \"- **Upside** – Further GDP slowdown or a rebound in unemployment (e.g., −0.1 pp [S2] turns positive) pushes probability toward 40–50%.\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.\n11. \"50%\" in: \"- **Upside** – Further GDP slowdown or a rebound in unemployment (e.g., −0.1 pp [S2] turns positive) pushes probability toward 40–50%.\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.\n12. \"20%\" in: \"- **Downside** – GDP growth accelerates (e.g., +0.6% [S1] rises above +1.2%) or unemployment falls (e.g., −0.1 pp [S2] turns negative) reduces probability to <2\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.\n13. \"10\" in: \"- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.\n14. \"15%\" in: \"- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.\n15. \"10\" in: \"- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.\n16. \"15%\" in: \"- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.\n17. \"40%\" in: \"- **Risk Management** – Maintain higher exposure to high‑quality corporate and Treasury securities until probability crosses the 40% threshold.\" — typed directly; [S3] writes the same number, so if it comes from there quote it as {{S3: 40%}}; if it is a target, threshold or your own estimate, write {{assume: …}}.\n18. \"25\" in: \"Current recession probability estimates (25–33%) are moderate and below the 40% alert level.\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.\n19. \"33%\" in: \"Current recession probability estimates (25–33%) are moderate and below the 40% alert level.\" — typed directly; [S4] writes the same number, so if it comes from there quote it as {{S4: 33%}}; if it is a target, threshold or your own estimate, write {{assume: …}}.\n20. \"40%\" in: \"Current recession probability estimates (25–33%) are moderate and below the 40% alert level.\" — typed directly; [S3] writes the same number, so if it comes from there quote it as {{S3: 40%}}; if it is a target, threshold or your own estimate, write {{assume: …}}.",
+        "open_issues_before": 20,
+        "summary_before": "40 of 56 figures verified against source data (20 exact, 20 derived); 16 flagged (12 of them appear in a fetched web/news snippet; 2 labelled as assumptions). 28 figure(s) inserted from the fact table, 0 quoted from web sources, 20 typed directly. 1 change figure(s) described in the wrong direction. 1 comparison(s) between facts that do not hold.",
+        "accepted": true,
+        "open_issues_after": 14,
+        "summary_after": "40 of 56 figures verified against source data (20 exact, 20 derived); 16 flagged (12 of them appear in a fetched web/news snippet; 2 labelled as assumptions). 28 figure(s) inserted from the fact table, 6 quoted from web sources, 14 typed directly. 1 change figure(s) described in the wrong direction. 1 comparison(s) between facts that do not hold.",
+        "revised_report_text": "**Executive Summary**  \n- Real GDP grew {{GDP.pct_1y}} over the past 12 months, a decline from {{GDP.pct_1y_prev}} a year earlier, indicating a slowdown in the annualized pace.  \n- The most recent quarter expanded by {{GDP.pct_1q}} (annualized {{GDP.ann_growth_1q}}), down from {{GDP.pct_2q}} (annualized {{GDP.ann_growth_1q_prev}}) in the prior quarter, so the growth trajectory is flat rather than accelerating.  \n- Unemployment is {{UNRATE.latest}} in September 2026, up from {{UNRATE.prev_1m}} in August 2026 and unchanged from {{UNRATE.prev_3m}} in June 2026, but down from {{UNRATE.prev_6m}} in March 2026; the six‑month change is {{UNRATE.chg_6m}} and the year‑on‑year change is {{UNRATE.chg_1y}}.  \n- The New York Fed model assigns a {{S3: 25.2%}} chance of a recession in the next 12 months, while the July WSJ survey estimates a {{S4: 33%}} probability; both figures are below the 40% threshold that typically signals heightened concern.  \n- Current data do not satisfy the classic recession trigger (negative GDP + rising unemployment), implying a moderate but watchful risk profile.  \n\n**Core Analysis – Macro**  \n- **GDP Trend** – 12‑month growth {{GDP.pct_1y}} vs. {{GDP.pct_1y_prev}}; quarterly growth {{GDP.pct_1q}} (annualized {{GDP.ann_growth_1q}}) vs. {{GDP.pct_2q}} (annualized {{GDP.ann_growth_1q_prev}}).  \n- **Labor‑Market Trend** – Unemployment {{UNRATE.latest}} (Sept 2026), up from {{UNRATE.prev_1m}} (Aug 2026), unchanged from {{UNRATE.prev_3m}} (Jun 2026), down from {{UNRATE.prev_6m}} (Mar 2026); six‑month change {{UNRATE.chg_6m}}, year‑on‑year change {{UNRATE.chg_1y}}.  \n- **Recession Triggers** – No consecutive negative GDP quarters; unemployment is not accelerating.  \n- **Probability Estimates** – New York Fed: {{S3: 25.2%}}; WSJ survey: {{S4: 33%}}.  \n\n**Scenarios**  \n- **Base** – Current trajectory continues; recession probability remains {{S3: 25.2%}}–{{S4: 33%}}.  \n- **Upside** – Further GDP slowdown or a rebound in unemployment (e.g., {{UNRATE.chg_6m}} turns positive) pushes probability toward 40–50%.  \n- **Downside** – GDP growth accelerates (e.g., {{GDP.pct_1q}} rises above {{GDP.pct_2q}}) or unemployment falls (e.g., {{UNRATE.chg_6m}} turns negative) reduces probability to <20%.  \n\n**Key Risks & Monitoring**  \n- **GDP Revisions** – Late‑quarter revisions could alter the growth trajectory.  \n- **Unemployment Trend** – A shift toward a sustained rise in unemployment would heighten recession risk.  \n- **Inflation & Monetary Policy** – Tightening or easing policy could influence both GDP and labor market dynamics.  \n- **External Shocks** – Geopolitical events or commodity price swings may disrupt current trends.  \n\n**Portfolio / Decision Implications**  \n- **Fixed Income** – Consider reducing duration to mitigate interest‑rate risk if recession probability rises.  \n- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).  \n- **Equity** – Shift weighting toward defensive sectors (utilities, consumer staples).  \n- **Risk Management** – Maintain higher exposure to high‑quality corporate and Treasury securities until probability crosses the 40% threshold.  \n\n**Conclusion**  \nThe U.S. economy shows a slowing growth rate and a tightening but not accelerating labor market. Current recession probability estimates ({{S3: 25.2%}}–{{S4: 33%}}) are moderate and below the 40% alert level. Continuous monitoring of GDP revisions, unemployment trends, and policy developments is essential to adjust portfolio positioning proactively."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FRED series GDPC1: Real Gross Domestic Product",
+      "url": "https://fred.stlouisfed.org/series/GDPC1",
+      "source": "FRED",
+      "snippet": "Quarterly series in Billions of Chained 2017 Dollars; latest observation 24408 on 2026-04-01.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series UNRATE: Unemployment Rate",
+      "url": "https://fred.stlouisfed.org/series/UNRATE",
+      "source": "FRED",
+      "snippet": "Monthly series in Percent; latest observation 4.2 on 2026-09-01.",
+      "id": "S2"
+    },
+    {
+      "title": "Estimating the probability of a recession | The Real Economy Blog",
+      "url": "https://realeconomy.rsmus.com/estimating-the-probability-of-a-recession",
+      "source": "web (Tavily)",
+      "snippet": "An alternative model run by the New York Federal Reserve suggests there is a 25.2% probability of a recession over the next twelve months; we do not get concerned until that model rises above 40%. The U.S. economy, barring an issue with liquidity, an error on the policy front or a large exogenous shock, should continue",
+      "id": "S3"
+    },
+    {
+      "title": "Economy Statement for the Treasury Borrowing Advisory Committee | U.S. Department of the Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/sb0208",
+      "source": "web (Tavily)",
+      "snippet": "The Wall Street Journal’s quarterly survey of economists provides recession probability estimates.  In the July survey, economists assessed a 33 percent chance of a recession in the next twelve months, down from the 45 percent chance indicated in the April survey.  In addition to revising up their growth projections, e",
+      "id": "S4"
+    },
+    {
+      "title": "How will we know when a recession is coming? | Brookings",
+      "url": "https://www.brookings.edu/articles/how-will-we-know-when-a-recession-is-coming",
+      "source": "web (Tavily)",
+      "snippet": "The first row shows that when the unemployment rate is below its previous 12-month low, there is virtually no chance a recession has started, and the odds of one in the next 12 months are quite low (10 percent), but even when the unemployment rate has not been rising, the odds of a recession within two years is still r",
+      "id": "S5"
+    },
+    {
+      "title": "Third Quarter 2025 Survey of Professional Forecasters",
+      "url": "https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/spf-q3-2025",
+      "source": "web (Tavily)",
+      "snippet": "The forecasters have revised downward the chance of a contraction in real GDP in the last two quarters of 2025. For the current quarter, the forecasters predict a 22.8 percent chance of negative growth, down from 36.1 percent in the survey of three months ago. As the table below shows, the forecasters are keeping mostl",
+      "id": "S6"
+    },
+    {
+      "title": "Outlook-at-Risk: Real GDP Growth, Unemployment, and Inflation - FEDERAL RESERVE BANK of NEW YORK",
+      "url": "https://www.newyorkfed.org/research/policy/outlook-at-risk",
+      "source": "web (Tavily)",
+      "snippet": "that there is an estimated 10 percent probability of future growth being less than or equal to it. To give a specific example, in the second chart in this blog post, the shaded area represents the probability that average real GDP growth over the next four quarters is below -0.1 percent, which, in November 2019, was as",
+      "id": "S7"
+    },
+    {
+      "title": "Economic Forecast for the US Economy",
+      "url": "https://www.conference-board.org/research/us-forecast",
+      "source": "web (Tavily)",
+      "snippet": "### Report  Image 55: Global LEI Report Image 56 ##### Global LEI Report September 30, 2026  ### Database  Image 57: Recession & Growth Trackers Image 58 ##### Recession & Growth Trackers September 30, 2026  ### Brief  Image 59: August PCE Portends Further Hikes Remain Likely Image 60 ##### August PCE Portends Further ",
+      "id": "S8"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Real Gross Domestic Product (GDPC1)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "GDPC1",
+      "frequency": "quarterly",
+      "units": "Billions of Chained 2017 Dollars",
+      "last_date": "2026-04-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/GDPC1",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2016-04-01",
+          19062.709
+        ],
+        [
+          "2016-07-01",
+          19197.938
+        ],
+        [
+          "2016-10-01",
+          19304.352
+        ],
+        [
+          "2017-01-01",
+          19398.343
+        ],
+        [
+          "2017-04-01",
+          19506.949
+        ],
+        [
+          "2017-07-01",
+          19660.766
+        ],
+        [
+          "2017-10-01",
+          19882.352
+        ],
+        [
+          "2018-01-01",
+          20044.077
+        ],
+        [
+          "2018-04-01",
+          20150.476
+        ],
+        [
+          "2018-07-01",
+          20276.154
+        ],
+        [
+          "2018-10-01",
+          20304.874
+        ],
+        [
+          "2019-01-01",
+          20431.641
+        ],
+        [
+          "2019-04-01",
+          20602.275
+        ],
+        [
+          "2019-07-01",
+          20843.322
+        ],
+        [
+          "2019-10-01",
+          20985.448
+        ],
+        [
+          "2020-01-01",
+          20709.212
+        ],
+        [
+          "2020-04-01",
+          19077.992
+        ],
+        [
+          "2020-07-01",
+          20558.879
+        ],
+        [
+          "2020-10-01",
+          20791.917
+        ],
+        [
+          "2021-01-01",
+          21106.619
+        ],
+        [
+          "2021-04-01",
+          21474.077
+        ],
+        [
+          "2021-07-01",
+          21641.672
+        ],
+        [
+          "2021-10-01",
+          22001.64
+        ],
+        [
+          "2022-01-01",
+          21945.682
+        ],
+        [
+          "2022-04-01",
+          21976.292
+        ],
+        [
+          "2022-07-01",
+          22124.384
+        ],
+        [
+          "2022-10-01",
+          22272.546
+        ],
+        [
+          "2023-01-01",
+          22456.938
+        ],
+        [
+          "2023-04-01",
+          22577.556
+        ],
+        [
+          "2023-07-01",
+          22828.796
+        ],
+        [
+          "2023-10-01",
+          23033.25
+        ],
+        [
+          "2024-01-01",
+          23115.975
+        ],
+        [
+          "2024-04-01",
+          23320.074
+        ],
+        [
+          "2024-07-01",
+          23501.76
+        ],
+        [
+          "2024-10-01",
+          23641.759
+        ],
+        [
+          "2025-01-01",
+          23650.213
+        ],
+        [
+          "2025-04-01",
+          23884.563
+        ],
+        [
+          "2025-07-01",
+          24112.966
+        ],
+        [
+          "2025-10-01",
+          24125.479
+        ],
+        [
+          "2026-01-01",
+          24274.383
+        ],
+        [
+          "2026-04-01",
+          24408.011
+        ]
+      ]
+    },
+    {
+      "title": "FRED: Unemployment Rate (UNRATE)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "UNRATE",
+      "frequency": "monthly",
+      "units": "Percent",
+      "last_date": "2026-09-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/UNRATE",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2016-09-01",
+          5.0
+        ],
+        [
+          "2016-10-01",
+          4.9
+        ],
+        [
+          "2016-11-01",
+          4.7
+        ],
+        [
+          "2016-12-01",
+          4.7
+        ],
+        [
+          "2017-01-01",
+          4.7
+        ],
+        [
+          "2017-02-01",
+          4.6
+        ],
+        [
+          "2017-03-01",
+          4.4
+        ],
+        [
+          "2017-04-01",
+          4.4
+        ],
+        [
+          "2017-05-01",
+          4.4
+        ],
+        [
+          "2017-06-01",
+          4.3
+        ],
+        [
+          "2017-07-01",
+          4.3
+        ],
+        [
+          "2017-08-01",
+          4.4
+        ],
+        [
+          "2017-09-01",
+          4.3
+        ],
+        [
+          "2017-10-01",
+          4.2
+        ],
+        [
+          "2017-11-01",
+          4.2
+        ],
+        [
+          "2017-12-01",
+          4.1
+        ],
+        [
+          "2018-01-01",
+          4.0
+        ],
+        [
+          "2018-02-01",
+          4.1
+        ],
+        [
+          "2018-03-01",
+          4.0
+        ],
+        [
+          "2018-04-01",
+          4.0
+        ],
+        [
+          "2018-05-01",
+          3.8
+        ],
+        [
+          "2018-06-01",
+          4.0
+        ],
+        [
+          "2018-07-01",
+          3.8
+        ],
+        [
+          "2018-08-01",
+          3.8
+        ],
+        [
+          "2018-09-01",
+          3.7
+        ],
+        [
+          "2018-10-01",
+          3.8
+        ],
+        [
+          "2018-11-01",
+          3.8
+        ],
+        [
+          "2018-12-01",
+          3.9
+        ],
+        [
+          "2019-01-01",
+          4.0
+        ],
+        [
+          "2019-02-01",
+          3.8
+        ],
+        [
+          "2019-03-01",
+          3.8
+        ],
+        [
+          "2019-04-01",
+          3.7
+        ],
+        [
+          "2019-05-01",
+          3.6
+        ],
+        [
+          "2019-06-01",
+          3.6
+        ],
+        [
+          "2019-07-01",
+          3.7
+        ],
+        [
+          "2019-08-01",
+          3.6
+        ],
+        [
+          "2019-09-01",
+          3.5
+        ],
+        [
+          "2019-10-01",
+          3.6
+        ],
+        [
+          "2019-11-01",
+          3.6
+        ],
+        [
+          "2019-12-01",
+          3.6
+        ],
+        [
+          "2020-01-01",
+          3.6
+        ],
+        [
+          "2020-02-01",
+          3.5
+        ],
+        [
+          "2020-03-01",
+          4.4
+        ],
+        [
+          "2020-04-01",
+          14.8
+        ],
+        [
+          "2020-05-01",
+          13.2
+        ],
+        [
+          "2020-06-01",
+          11.0
+        ],
+        [
+          "2020-07-01",
+          10.2
+        ],
+        [
+          "2020-08-01",
+          8.4
+        ],
+        [
+          "2020-09-01",
+          7.8
+        ],
+        [
+          "2020-10-01",
+          6.9
+        ],
+        [
+          "2020-11-01",
+          6.7
+        ],
+        [
+          "2020-12-01",
+          6.7
+        ],
+        [
+          "2021-01-01",
+          6.4
+        ],
+        [
+          "2021-02-01",
+          6.2
+        ],
+        [
+          "2021-03-01",
+          6.1
+        ],
+        [
+          "2021-04-01",
+          6.1
+        ],
+        [
+          "2021-05-01",
+          5.8
+        ],
+        [
+          "2021-06-01",
+          5.9
+        ],
+        [
+          "2021-07-01",
+          5.4
+        ],
+        [
+          "2021-08-01",
+          5.1
+        ],
+        [
+          "2021-09-01",
+          4.7
+        ],
+        [
+          "2021-10-01",
+          4.5
+        ],
+        [
+          "2021-11-01",
+          4.1
+        ],
+        [
+          "2021-12-01",
+          3.9
+        ],
+        [
+          "2022-01-01",
+          4.0
+        ],
+        [
+          "2022-02-01",
+          3.9
+        ],
+        [
+          "2022-03-01",
+          3.7
+        ],
+        [
+          "2022-04-01",
+          3.7
+        ],
+        [
+          "2022-05-01",
+          3.6
+        ],
+        [
+          "2022-06-01",
+          3.6
+        ],
+        [
+          "2022-07-01",
+          3.5
+        ],
+        [
+          "2022-08-01",
+          3.6
+        ],
+        [
+          "2022-09-01",
+          3.5
+        ],
+        [
+          "2022-10-01",
+          3.6
+        ],
+        [
+          "2022-11-01",
+          3.6
+        ],
+        [
+          "2022-12-01",
+          3.5
+        ],
+        [
+          "2023-01-01",
+          3.5
+        ],
+        [
+          "2023-02-01",
+          3.6
+        ],
+        [
+          "2023-03-01",
+          3.5
+        ],
+        [
+          "2023-04-01",
+          3.4
+        ],
+        [
+          "2023-05-01",
+          3.6
+        ],
+        [
+          "2023-06-01",
+          3.6
+        ],
+        [
+          "2023-07-01",
+          3.5
+        ],
+        [
+          "2023-08-01",
+          3.7
+        ],
+        [
+          "2023-09-01",
+          3.7
+        ],
+        [
+          "2023-10-01",
+          3.9
+        ],
+        [
+          "2023-11-01",
+          3.7
+        ],
+        [
+          "2023-12-01",
+          3.8
+        ],
+        [
+          "2024-01-01",
+          3.7
+        ],
+        [
+          "2024-02-01",
+          3.9
+        ],
+        [
+          "2024-03-01",
+          3.9
+        ],
+        [
+          "2024-04-01",
+          3.9
+        ],
+        [
+          "2024-05-01",
+          3.9
+        ],
+        [
+          "2024-06-01",
+          4.1
+        ],
+        [
+          "2024-07-01",
+          4.2
+        ],
+        [
+          "2024-08-01",
+          4.2
+        ],
+        [
+          "2024-09-01",
+          4.1
+        ],
+        [
+          "2024-10-01",
+          4.1
+        ],
+        [
+          "2024-11-01",
+          4.2
+        ],
+        [
+          "2024-12-01",
+          4.1
+        ],
+        [
+          "2025-01-01",
+          4.0
+        ],
+        [
+          "2025-02-01",
+          4.2
+        ],
+        [
+          "2025-03-01",
+          4.2
+        ],
+        [
+          "2025-04-01",
+          4.2
+        ],
+        [
+          "2025-05-01",
+          4.3
+        ],
+        [
+          "2025-06-01",
+          4.1
+        ],
+        [
+          "2025-07-01",
+          4.3
+        ],
+        [
+          "2025-08-01",
+          4.3
+        ],
+        [
+          "2025-09-01",
+          4.4
+        ],
+        [
+          "2025-11-01",
+          4.5
+        ],
+        [
+          "2025-12-01",
+          4.4
+        ],
+        [
+          "2026-01-01",
+          4.3
+        ],
+        [
+          "2026-02-01",
+          4.4
+        ],
+        [
+          "2026-03-01",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.3
+        ],
+        [
+          "2026-05-01",
+          4.3
+        ],
+        [
+          "2026-06-01",
+          4.2
+        ],
+        [
+          "2026-07-01",
+          4.1
+        ],
+        [
+          "2026-08-01",
+          4.1
+        ],
+        [
+          "2026-09-01",
+          4.2
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Real Gross Domestic Product (GDPC1)",
+      "type": "line",
+      "x": [
+        "2016-04-01",
+        "2016-07-01",
+        "2016-10-01",
+        "2017-01-01",
+        "2017-04-01",
+        "2017-07-01",
+        "2017-10-01",
+        "2018-01-01",
+        "2018-04-01",
+        "2018-07-01",
+        "2018-10-01",
+        "2019-01-01",
+        "2019-04-01",
+        "2019-07-01",
+        "2019-10-01",
+        "2020-01-01",
+        "2020-04-01",
+        "2020-07-01",
+        "2020-10-01",
+        "2021-01-01",
+        "2021-04-01",
+        "2021-07-01",
+        "2021-10-01",
+        "2022-01-01",
+        "2022-04-01",
+        "2022-07-01",
+        "2022-10-01",
+        "2023-01-01",
+        "2023-04-01",
+        "2023-07-01",
+        "2023-10-01",
+        "2024-01-01",
+        "2024-04-01",
+        "2024-07-01",
+        "2024-10-01",
+        "2025-01-01",
+        "2025-04-01",
+        "2025-07-01",
+        "2025-10-01",
+        "2026-01-01",
+        "2026-04-01"
+      ],
+      "y": [
+        19062.709,
+        19197.938,
+        19304.352,
+        19398.343,
+        19506.949,
+        19660.766,
+        19882.352,
+        20044.077,
+        20150.476,
+        20276.154,
+        20304.874,
+        20431.641,
+        20602.275,
+        20843.322,
+        20985.448,
+        20709.212,
+        19077.992,
+        20558.879,
+        20791.917,
+        21106.619,
+        21474.077,
+        21641.672,
+        22001.64,
+        21945.682,
+        21976.292,
+        22124.384,
+        22272.546,
+        22456.938,
+        22577.556,
+        22828.796,
+        23033.25,
+        23115.975,
+        23320.074,
+        23501.76,
+        23641.759,
+        23650.213,
+        23884.563,
+        24112.966,
+        24125.479,
+        24274.383,
+        24408.011
+      ],
+      "y_label": "Billions of Chained 2017 Dollars"
+    },
+    {
+      "title": "Unemployment Rate (UNRATE)",
+      "type": "line",
+      "x": [
+        "2016-09-01",
+        "2016-10-01",
+        "2016-11-01",
+        "2016-12-01",
+        "2017-01-01",
+        "2017-02-01",
+        "2017-03-01",
+        "2017-04-01",
+        "2017-05-01",
+        "2017-06-01",
+        "2017-07-01",
+        "2017-08-01",
+        "2017-09-01",
+        "2017-10-01",
+        "2017-11-01",
+        "2017-12-01",
+        "2018-01-01",
+        "2018-02-01",
+        "2018-03-01",
+        "2018-04-01",
+        "2018-05-01",
+        "2018-06-01",
+        "2018-07-01",
+        "2018-08-01",
+        "2018-09-01",
+        "2018-10-01",
+        "2018-11-01",
+        "2018-12-01",
+        "2019-01-01",
+        "2019-02-01",
+        "2019-03-01",
+        "2019-04-01",
+        "2019-05-01",
+        "2019-06-01",
+        "2019-07-01",
+        "2019-08-01",
+        "2019-09-01",
+        "2019-10-01",
+        "2019-11-01",
+        "2019-12-01",
+        "2020-01-01",
+        "2020-02-01",
+        "2020-03-01",
+        "2020-04-01",
+        "2020-05-01",
+        "2020-06-01",
+        "2020-07-01",
+        "2020-08-01",
+        "2020-09-01",
+        "2020-10-01",
+        "2020-11-01",
+        "2020-12-01",
+        "2021-01-01",
+        "2021-02-01",
+        "2021-03-01",
+        "2021-04-01",
+        "2021-05-01",
+        "2021-06-01",
+        "2021-07-01",
+        "2021-08-01",
+        "2021-09-01",
+        "2021-10-01",
+        "2021-11-01",
+        "2021-12-01",
+        "2022-01-01",
+        "2022-02-01",
+        "2022-03-01",
+        "2022-04-01",
+        "2022-05-01",
+        "2022-06-01",
+        "2022-07-01",
+        "2022-08-01",
+        "2022-09-01",
+        "2022-10-01",
+        "2022-11-01",
+        "2022-12-01",
+        "2023-01-01",
+        "2023-02-01",
+        "2023-03-01",
+        "2023-04-01",
+        "2023-05-01",
+        "2023-06-01",
+        "2023-07-01",
+        "2023-08-01",
+        "2023-09-01",
+        "2023-10-01",
+        "2023-11-01",
+        "2023-12-01",
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        5.0,
+        4.9,
+        4.7,
+        4.7,
+        4.7,
+        4.6,
+        4.4,
+        4.4,
+        4.4,
+        4.3,
+        4.3,
+        4.4,
+        4.3,
+        4.2,
+        4.2,
+        4.1,
+        4.0,
+        4.1,
+        4.0,
+        4.0,
+        3.8,
+        4.0,
+        3.8,
+        3.8,
+        3.7,
+        3.8,
+        3.8,
+        3.9,
+        4.0,
+        3.8,
+        3.8,
+        3.7,
+        3.6,
+        3.6,
+        3.7,
+        3.6,
+        3.5,
+        3.6,
+        3.6,
+        3.6,
+        3.6,
+        3.5,
+        4.4,
+        14.8,
+        13.2,
+        11.0,
+        10.2,
+        8.4,
+        7.8,
+        6.9,
+        6.7,
+        6.7,
+        6.4,
+        6.2,
+        6.1,
+        6.1,
+        5.8,
+        5.9,
+        5.4,
+        5.1,
+        4.7,
+        4.5,
+        4.1,
+        3.9,
+        4.0,
+        3.9,
+        3.7,
+        3.7,
+        3.6,
+        3.6,
+        3.5,
+        3.6,
+        3.5,
+        3.6,
+        3.6,
+        3.5,
+        3.5,
+        3.6,
+        3.5,
+        3.4,
+        3.6,
+        3.6,
+        3.5,
+        3.7,
+        3.7,
+        3.9,
+        3.7,
+        3.8,
+        3.7,
+        3.9,
+        3.9,
+        3.9,
+        3.9,
+        4.1,
+        4.2,
+        4.2,
+        4.1,
+        4.1,
+        4.2,
+        4.1,
+        4.0,
+        4.2,
+        4.2,
+        4.2,
+        4.3,
+        4.1,
+        4.3,
+        4.3,
+        4.4,
+        4.5,
+        4.4,
+        4.3,
+        4.4,
+        4.3,
+        4.3,
+        4.3,
+        4.2,
+        4.1,
+        4.1,
+        4.2
+      ],
+      "y_label": "Percent"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "GDPC1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "UNRATE",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": {
+    "analyst": "**Macro – Recession likelihood over the next 12 months**\n\n- **GDP trend**  \n  - 12‑month real GDP growth is {{GDP.pct_1y}} versus {{GDP.pct_1y_prev}} a year earlier, indicating a slowdown in the annualized pace.  \n  - The most recent quarter grew {{GDP.pct_1q}} (annualized {{GDP.ann_growth_1q}}) compared with {{GDP.pct_2q}} (annualized {{GDP.ann_growth_1q_prev}}) in the prior quarter, so the growth trajectory is flat rather than accelerating.  [S1]\n\n- **Labor‑market trend**  \n  - The unemployment rate is 4.2% in September 2026, up from 4.1% in August 2026 and 4.2% in June 2026, but down from 4.3% in March 2026.  \n  - Over the past six months the rate has fallen by −0.1 pp, and over the past year it has fallen by −0.2 pp, so the labor market is still tightening rather than loosening.  [S2]\n\n- **Recession thresholds**  \n  - Two consecutive negative GDP quarters: none (both the latest and prior quarters are positive).  \n  - Rising unemployment: the rate is not accelerating; it has actually eased over the past six months.  \n  - Therefore the classic recession trigger (negative GDP + rising unemployment) is not met at present.  [S1][S2]\n\n- **Probabilistic outlook**  \n  - The New York Fed model assigns a 25.2 % chance of a recession in the next 12 months.  \n  - The July WSJ survey of economists estimates a 33 % probability.  \n  - These figures are below the 40 % threshold that typically signals heightened concern.  [S3][S4]\n\n**Credit & Portfolio implications (qualitative)**  \n\n- **Investment‑grade (IG) bonds** – If the recession probability were to rise above 30 %, IG spreads would likely widen modestly as investors demand higher risk‑free compensation.  \n- **High‑yield (HY) bonds** – HY spreads would be more sensitive; a 10‑15 % increase in recession risk could push spreads up by 50–70 bp.  {{assume: 10-15%}}  \n- **Portfolio strategy** –  \n  - Increase allocation to defensive sectors (utilities, consumer staples).  \n  - Consider reducing duration on the fixed‑income side to mitigate interest‑rate risk.  \n  - Maintain a higher weighting in high‑quality corporate and Treasury securities until the recession probability crosses the 40 % mark.  \n\n**Bottom line** – Current GDP and labor‑market data do not satisfy the traditional recession trigger, and probability estimates remain below the 40 % threshold.  The risk of a recession in the next 12 months is moderate (≈25–33 %) but warrants monitoring of GDP revisions and unemployment trends, as well as a cautious stance on credit spreads and duration.",
+    "reasoner": "- 12‑month real GDP growth is {{GDP.pct_1y}} versus {{GDP.pct_1y_prev}} a year earlier, indicating a slowdown in the annualized pace.  \n- The most recent quarter grew {{GDP.pct_1q}} (annualized {{GDP.ann_growth_1q}}) compared with {{GDP.pct_2q}} (annualized {{GDP.ann_growth_1q_prev}}) in the prior quarter, so the growth trajectory is slowing rather than accelerating.  \n- The unemployment rate is {{UNRATE.latest}} in September 2026, up from {{UNRATE.prev_1m}} in August 2026, unchanged from {{UNRATE.prev_3m}} in June 2026, but down from {{UNRATE.prev_6m}} in March 2026.  \n- Over the past six months the rate has fallen by {{UNRATE.chg_6m}}, and over the past year it has fallen by {{UNRATE.chg_1y}}, so the labor market is still tightening rather than loosening.  \n- Two consecutive negative GDP quarters: none (both the latest and prior quarters are positive).  \n- Rising unemployment: the rate is not accelerating; it has actually eased over the past six months.  \n- Therefore the classic recession trigger (negative GDP + rising unemployment) is not met at present.  \n- The New York Fed model assigns a 25.2 % chance of a recession in the next 12 months.  \n- The July WSJ survey of economists estimates a 33 % probability.  \n- These figures are below the 40 % threshold that typically signals heightened concern.  \n- Investment‑grade (IG) bonds – If the recession probability were to rise above 30 %, IG spreads would likely widen modestly as investors demand higher risk‑free compensation.  \n- High‑yield (HY) bonds – HY spreads would be more sensitive; a 10‑15 % increase in recession risk could push spreads up by 50–70 bp. {{assume: 10-15%}}  \n- Portfolio strategy – Increase allocation to defensive sectors (utilities, consumer staples). Consider reducing duration on the fixed‑income side to mitigate interest‑rate risk. Maintain a higher weighting in high‑quality corporate and Treasury securities until the recession probability crosses the 40 % mark.  \n- Bottom line – Current GDP and labor‑market data do not satisfy the traditional recession trigger, and probability estimates remain below the 40 % threshold. The risk of a recession in the next 12 months is moderate (≈25–33 %) but warrants monitoring of GDP revisions and unemployment trends, as well as a cautious stance on credit spreads and duration."
+  },
+  "validation": {
+    "counts": {
+      "figures": 56,
+      "verified": 20,
+      "derived": 20,
+      "unverified": 16
+    },
+    "figures": [
+      {
+        "text": "+2.2%",
+        "value": 2.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 40,
+        "end": 45,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change since 2025 Q2",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Real GDP grew +2.2% [S1] over the past 12 months, a decline from +2.6% a year earlier, indicating a slowdown in the annualized pace.",
+        "origin": "fact",
+        "fact_id": "GDP.pct_1y",
+        "change_sign": 1
+      },
+      {
+        "text": "+2.6%",
+        "value": 2.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 91,
+        "end": 96,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change over the 12 months to 2026 Q1",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Real GDP grew +2.2% [S1] over the past 12 months, a decline from +2.6% a year earlier, indicating a slowdown in the annualized pace.",
+        "origin": "fact",
+        "fact_id": "GDP.pct_1y_prev",
+        "change_sign": null
+      },
+      {
+        "text": "+0.6%",
+        "value": 0.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 199,
+        "end": 204,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change since 2026 Q1",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- The most recent quarter expanded by +0.6% [S1] (annualized +2.2%), down from +1.2% (annualized +2.5%) in the prior quarter, so the growth trajectory is flat rather than accelerating.",
+        "origin": "fact",
+        "fact_id": "GDP.pct_1q",
+        "change_sign": 1
+      },
+      {
+        "text": "+2.2%",
+        "value": 2.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 222,
+        "end": 227,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: annualized growth over the latest quarter",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- The most recent quarter expanded by +0.6% [S1] (annualized +2.2%), down from +1.2% (annualized +2.5%) in the prior quarter, so the growth trajectory is flat rather than accelerating.",
+        "origin": "fact",
+        "fact_id": "GDP.ann_growth_1q",
+        "change_sign": 1
+      },
+      {
+        "text": "+1.2%",
+        "value": 1.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 240,
+        "end": 245,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change since 2025 Q4",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- The most recent quarter expanded by +0.6% [S1] (annualized +2.2%), down from +1.2% (annualized +2.5%) in the prior quarter, so the growth trajectory is flat rather than accelerating.",
+        "origin": "fact",
+        "fact_id": "GDP.pct_2q",
+        "change_sign": 1
+      },
+      {
+        "text": "+2.5%",
+        "value": 2.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 258,
+        "end": 263,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: annualized growth over the quarter to 2026 Q1",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- The most recent quarter expanded by +0.6% [S1] (annualized +2.2%), down from +1.2% (annualized +2.5%) in the prior quarter, so the growth trajectory is flat rather than accelerating.",
+        "origin": "fact",
+        "fact_id": "GDP.ann_growth_1q_prev",
+        "change_sign": null
+      },
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 366,
+        "end": 370,
+        "status": "verified",
+        "matched": "Unemployment Rate, latest (September 2026)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.latest",
+        "change_sign": null
+      },
+      {
+        "text": "September 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 379,
+        "end": 393,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "4.1%",
+        "value": 4.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 403,
+        "end": 407,
+        "status": "verified",
+        "matched": "Unemployment Rate in August 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.prev_1m",
+        "change_sign": null
+      },
+      {
+        "text": "August 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 411,
+        "end": 422,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 442,
+        "end": 446,
+        "status": "verified",
+        "matched": "Unemployment Rate in June 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.prev_3m",
+        "change_sign": null
+      },
+      {
+        "text": "June 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 450,
+        "end": 459,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "4.3%",
+        "value": 4.3,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 475,
+        "end": 479,
+        "status": "verified",
+        "matched": "Unemployment Rate in March 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.prev_6m",
+        "change_sign": null
+      },
+      {
+        "text": "March 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 483,
+        "end": 493,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "−0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 519,
+        "end": 526,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since March 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_6m",
+        "change_sign": -1
+      },
+      {
+        "text": "−0.2 pp",
+        "value": 0.2,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 558,
+        "end": 565,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since September 2025",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment is 4.2% [S2] in September 2026, up from 4.1% in August 2026 and unchanged from 4.2% in June 2026, but down from 4.3% in March 2026; the six‑month change is −0.1 pp and the year‑on‑year change is −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1y",
+        "change_sign": -1
+      },
+      {
+        "text": "25.2%",
+        "value": 25.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 604,
+        "end": 609,
+        "status": "unverified",
+        "matched": "quoted from S3",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- The New York Fed model assigns a 25.2% [S3] chance of a recession in the next 12 months, while the July WSJ survey estimates a 33% [S4] probability; both figures are below the 40% threshold that typically signals heightened concern.",
+        "origin": "quote",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "33%",
+        "value": 33.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 698,
+        "end": 701,
+        "status": "unverified",
+        "matched": "quoted from S4",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- The New York Fed model assigns a 25.2% [S3] chance of a recession in the next 12 months, while the July WSJ survey estimates a 33% [S4] probability; both figures are below the 40% threshold that typically signals heightened concern.",
+        "origin": "quote",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "40%",
+        "value": 40.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 747,
+        "end": 750,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "written_in": [
+          "S3"
+        ],
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- The New York Fed model assigns a 25.2% [S3] chance of a recession in the next 12 months, while the July WSJ survey estimates a 33% [S4] probability; both figures are below the 40% threshold that typically signals heightened concern.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "+2.2%",
+        "value": 2.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1016,
+        "end": 1021,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change since 2025 Q2",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- **GDP Trend** – 12‑month growth +2.2% [S1] vs.",
+        "origin": "fact",
+        "fact_id": "GDP.pct_1y",
+        "change_sign": 1
+      },
+      {
+        "text": "+2.6%",
+        "value": 2.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1031,
+        "end": 1036,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change over the 12 months to 2026 Q1",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "+2.6%; quarterly growth +0.6% (annualized +2.2%) vs.",
+        "origin": "fact",
+        "fact_id": "GDP.pct_1y_prev",
+        "change_sign": null
+      },
+      {
+        "text": "+0.6%",
+        "value": 0.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1055,
+        "end": 1060,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change since 2026 Q1",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "+2.6%; quarterly growth +0.6% (annualized +2.2%) vs.",
+        "origin": "fact",
+        "fact_id": "GDP.pct_1q",
+        "change_sign": 1
+      },
+      {
+        "text": "+2.2%",
+        "value": 2.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1073,
+        "end": 1078,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: annualized growth over the latest quarter",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "+2.6%; quarterly growth +0.6% (annualized +2.2%) vs.",
+        "origin": "fact",
+        "fact_id": "GDP.ann_growth_1q",
+        "change_sign": 1
+      },
+      {
+        "text": "+1.2%",
+        "value": 1.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1084,
+        "end": 1089,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change since 2025 Q4",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "+1.2% (annualized +2.5%).",
+        "origin": "fact",
+        "fact_id": "GDP.pct_2q",
+        "change_sign": 1
+      },
+      {
+        "text": "+2.5%",
+        "value": 2.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1102,
+        "end": 1107,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: annualized growth over the quarter to 2026 Q1",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "+1.2% (annualized +2.5%).",
+        "origin": "fact",
+        "fact_id": "GDP.ann_growth_1q_prev",
+        "change_sign": null
+      },
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1152,
+        "end": 1156,
+        "status": "verified",
+        "matched": "Unemployment Rate, latest (September 2026)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.latest",
+        "change_sign": null
+      },
+      {
+        "text": "Sept 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 1163,
+        "end": 1172,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "4.1%",
+        "value": 4.1,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1183,
+        "end": 1187,
+        "status": "verified",
+        "matched": "Unemployment Rate in August 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.prev_1m",
+        "change_sign": null
+      },
+      {
+        "text": "Aug 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 1189,
+        "end": 1197,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1215,
+        "end": 1219,
+        "status": "verified",
+        "matched": "Unemployment Rate in June 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.prev_3m",
+        "change_sign": null
+      },
+      {
+        "text": "Jun 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 1221,
+        "end": 1229,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "4.3%",
+        "value": 4.3,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1242,
+        "end": 1246,
+        "status": "verified",
+        "matched": "Unemployment Rate in March 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.prev_6m",
+        "change_sign": null
+      },
+      {
+        "text": "Mar 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 1248,
+        "end": 1256,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "−0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1276,
+        "end": 1283,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since March 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_6m",
+        "change_sign": -1
+      },
+      {
+        "text": "−0.2 pp",
+        "value": 0.2,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1305,
+        "end": 1312,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since September 2025",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Labor‑Market Trend** – Unemployment 4.2% [S2] (Sept 2026), up from 4.1% (Aug 2026), unchanged from 4.2% (Jun 2026), down from 4.3% (Mar 2026); six‑month change −0.1 pp, year‑on‑year change −0.2 pp.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1y",
+        "change_sign": -1
+      },
+      {
+        "text": "25.2%",
+        "value": 25.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1461,
+        "end": 1466,
+        "status": "unverified",
+        "matched": "quoted from S3",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- **Probability Estimates** – New York Fed: 25.2% [S3]; WSJ survey: 33% [S4].",
+        "origin": "quote",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "33%",
+        "value": 33.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1485,
+        "end": 1488,
+        "status": "unverified",
+        "matched": "quoted from S4",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- **Probability Estimates** – New York Fed: 25.2% [S3]; WSJ survey: 33% [S4].",
+        "origin": "quote",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "25.2%",
+        "value": 25.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1587,
+        "end": 1592,
+        "status": "unverified",
+        "matched": "quoted from S3",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- **Base** – Current trajectory continues; recession probability remains 25.2% [S3]–33% [S4].",
+        "origin": "quote",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "–33%",
+        "value": 33.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1597,
+        "end": 1601,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": false,
+        "written_in": [
+          "S4"
+        ],
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "- **Base** – Current trajectory continues; recession probability remains 25.2% [S3]–33% [S4].",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "−0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1682,
+        "end": 1689,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since March 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Upside** – Further GDP slowdown or a rebound in unemployment (e.g., −0.1 pp [S2] turns positive) pushes probability toward 40–50%.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_6m",
+        "change_sign": -1
+      },
+      {
+        "text": "40",
+        "value": 40.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 1737,
+        "end": 1739,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Upside** – Further GDP slowdown or a rebound in unemployment (e.g., −0.1 pp [S2] turns positive) pushes probability toward 40–50%.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "50%",
+        "value": 50.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1740,
+        "end": 1743,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Upside** – Further GDP slowdown or a rebound in unemployment (e.g., −0.1 pp [S2] turns positive) pushes probability toward 40–50%.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "+0.6%",
+        "value": 0.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1794,
+        "end": 1799,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change since 2026 Q1",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- **Downside** – GDP growth accelerates (e.g., +0.6% [S1] rises above +1.2%) or unemployment falls (e.g., −0.1 pp [S2] turns negative) reduces probability to <20%.",
+        "origin": "fact",
+        "fact_id": "GDP.pct_1q",
+        "change_sign": 1
+      },
+      {
+        "text": "+1.2%",
+        "value": 1.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1817,
+        "end": 1822,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change since 2025 Q4",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- **Downside** – GDP growth accelerates (e.g., +0.6% [S1] rises above +1.2%) or unemployment falls (e.g., −0.1 pp [S2] turns negative) reduces probability to <20%.",
+        "origin": "fact",
+        "fact_id": "GDP.pct_2q",
+        "change_sign": 1
+      },
+      {
+        "text": "−0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1853,
+        "end": 1860,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since March 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- **Downside** – GDP growth accelerates (e.g., +0.6% [S1] rises above +1.2%) or unemployment falls (e.g., −0.1 pp [S2] turns negative) reduces probability to <20%.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_6m",
+        "change_sign": -1
+      },
+      {
+        "text": "20%",
+        "value": 20.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 1906,
+        "end": 1909,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "- **Downside** – GDP growth accelerates (e.g., +0.6% [S1] rises above +1.2%) or unemployment falls (e.g., −0.1 pp [S2] turns negative) reduces probability to <20%.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "50",
+        "value": 50.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2574,
+        "end": 2576,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "written_in": [],
+        "cited": [],
+        "context": "- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "70 bp",
+        "value": 70.0,
+        "unit": "bp",
+        "tolerance": 0.500000001,
+        "start": 2577,
+        "end": 2582,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "written_in": [],
+        "cited": [],
+        "context": "- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2611,
+        "end": 2613,
+        "status": "verified",
+        "matched": "UNRATE on 2020-07-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [],
+        "context": "- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "15%",
+        "value": 15.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2614,
+        "end": 2617,
+        "status": "verified",
+        "matched": "UNRATE on 2020-04-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [],
+        "context": "- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "10",
+        "value": 10.0,
+        "unit": "",
+        "tolerance": 0.500000001,
+        "start": 2627,
+        "end": 2629,
+        "status": "verified",
+        "matched": "UNRATE on 2020-07-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [],
+        "context": "- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "15%",
+        "value": 15.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2630,
+        "end": 2633,
+        "status": "verified",
+        "matched": "UNRATE on 2020-04-01",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": false,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [],
+        "context": "- **Credit** – IG spreads may widen modestly; HY spreads could widen 50–70 bp if probability increases by 10–15% (assume: 10-15%).",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "40%",
+        "value": 40.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 2856,
+        "end": 2859,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "written_in": [
+          "S3"
+        ],
+        "cited": [],
+        "context": "- **Risk Management** – Maintain higher exposure to high‑quality corporate and Treasury securities until probability crosses the 40% threshold.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "25.2%",
+        "value": 25.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 3029,
+        "end": 3034,
+        "status": "unverified",
+        "matched": "quoted from S3",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "Current recession probability estimates (25.2% [S3]–33% [S4]) are moderate and below the 40% alert level.",
+        "origin": "quote",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "–33%",
+        "value": 33.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 3039,
+        "end": 3043,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S4",
+        "snippet_ids": [
+          "S4"
+        ],
+        "assumption": false,
+        "written_in": [
+          "S4"
+        ],
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "Current recession probability estimates (25.2% [S3]–33% [S4]) are moderate and below the 40% alert level.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "40%",
+        "value": 40.0,
+        "unit": "%",
+        "tolerance": 0.500000001,
+        "start": 3077,
+        "end": 3080,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": "S3",
+        "snippet_ids": [
+          "S3"
+        ],
+        "assumption": false,
+        "written_in": [
+          "S3"
+        ],
+        "cited": [
+          "S3",
+          "S4"
+        ],
+        "context": "Current recession probability estimates (25.2% [S3]–33% [S4]) are moderate and below the 40% alert level.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      }
+    ],
+    "citations": {
+      "markers": 16,
+      "dangling": [],
+      "uncited_paragraphs": [],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: Real Gross Domestic Product (GDPC1)",
+        "last_date": "2026-04-01",
+        "frequency": "quarterly",
+        "age_days": 110,
+        "max_age_days": 135,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: Unemployment Rate (UNRATE)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "directions": [
+      {
+        "figure": "+1.2%",
+        "says": "down",
+        "data": "up",
+        "word": "down",
+        "fact": "GDP.pct_2q",
+        "context": "- The most recent quarter expanded by +0.6% [S1] (annualized +2.2%), down from +1.2% (annualized +2.5%) in the prior quarter, so the growth trajectory is flat rather than accelerating."
+      }
+    ],
+    "comparisons": [
+      {
+        "kind": "order",
+        "word": "above",
+        "a": "GDP.pct_1q",
+        "b": "GDP.pct_2q",
+        "context": "+0.6% [S1] rises above +1.2%)",
+        "detail": "GDP.pct_1q = +0.6% is below GDP.pct_2q = +1.2%"
+      }
+    ],
+    "wording": {
+      "history": [],
+      "trend": [],
+      "rate": []
+    },
+    "lines": [
+      {
+        "start": 24,
+        "end": 161,
+        "kind": "data"
+      },
+      {
+        "start": 161,
+        "end": 348,
+        "kind": "data"
+      },
+      {
+        "start": 348,
+        "end": 569,
+        "kind": "data"
+      },
+      {
+        "start": 569,
+        "end": 806,
+        "kind": "data"
+      },
+      {
+        "start": 806,
+        "end": 953,
+        "kind": "interpretation"
+      },
+      {
+        "start": 954,
+        "end": 982,
+        "kind": "interpretation"
+      },
+      {
+        "start": 982,
+        "end": 1112,
+        "kind": "data"
+      },
+      {
+        "start": 1112,
+        "end": 1316,
+        "kind": "data"
+      },
+      {
+        "start": 1316,
+        "end": 1417,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1417,
+        "end": 1497,
+        "kind": "data"
+      },
+      {
+        "start": 1514,
+        "end": 1610,
+        "kind": "data"
+      },
+      {
+        "start": 1610,
+        "end": 1747,
+        "kind": "data"
+      },
+      {
+        "start": 1747,
+        "end": 1913,
+        "kind": "data"
+      },
+      {
+        "start": 1914,
+        "end": 1943,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1943,
+        "end": 2025,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2025,
+        "end": 2133,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2133,
+        "end": 2251,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2251,
+        "end": 2351,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2352,
+        "end": 2392,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2392,
+        "end": 2505,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2505,
+        "end": 2638,
+        "kind": "data"
+      },
+      {
+        "start": 2638,
+        "end": 2727,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2727,
+        "end": 2873,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2874,
+        "end": 3236,
+        "kind": "data"
+      }
+    ],
+    "placeholders": true,
+    "unknown_facts": [],
+    "open_issues": 14,
+    "summary": "40 of 56 figures verified against source data (20 exact, 20 derived); 16 flagged (12 of them appear in a fetched web/news snippet; 2 labelled as assumptions). 28 figure(s) inserted from the fact table, 6 quoted from web sources, 14 typed directly. 1 change figure(s) described in the wrong direction. 1 comparison(s) between facts that do not hold."
+  },
+  "run_meta": {
+    "run_id": "20261018-204817-2b4a95",
+    "timestamp": "2026-10-19T00:48:17+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 300.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    },
+    "pipeline": "v3"
+  }
+}

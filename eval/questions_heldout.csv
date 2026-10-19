@@ -1,0 +1,11 @@
+id,category,question,ticker,expected_tags
+H01,macro,Is core PCE inflation moving toward the Fed's 2% goal?,,macro
+H02,macro,Are there signs that the U.S. job market is cooling?,,macro
+H03,rates,How steep is the Treasury curve between 2-year and 10-year maturities today?,,rates
+H04,rates,Where are 30-year mortgage rates relative to a year ago?,,rates
+H05,credit,Is the gap between junk-bond and investment-grade spreads unusually narrow?,,credit
+H06,credit,Has credit risk in corporate bonds risen since the summer?,,credit
+H07,equity,Is Microsoft expensive relative to its earnings growth?,MSFT,equity
+H08,equity,What is the analyst consensus on Bank of America shares?,BAC,equity
+H09,portfolio,How should an investor position a bond portfolio if the yield curve keeps steepening?,,portfolio;rates
+H10,portfolio,Should a balanced portfolio add oil exposure as an inflation hedge?,,portfolio;macro
