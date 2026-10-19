@@ -1,0 +1,1557 @@
+{
+  "id": "Q01",
+  "set": "dev",
+  "category": "macro",
+  "question": "Is U.S. inflation cooling? What does the latest CPI data show about the trend over the past year?",
+  "ticker": null,
+  "expected_tags": [
+    "macro"
+  ],
+  "pipeline": "v3",
+  "run_utc": "2026-10-19T00:47:39+00:00",
+  "elapsed_sec": 264.2,
+  "router_tags": [
+    "macro"
+  ],
+  "tags": [
+    "macro"
+  ],
+  "plan": {
+    "topics": [
+      "macro"
+    ],
+    "series": [
+      "CPIAUCSL"
+    ],
+    "steps": [
+      "1. Retrieve the most recent CPI data for the current month and the same month from the previous year to calculate the year‑over‑year change.",
+      "2. Examine the month‑over‑month CPI change to assess short‑term momentum and compare it to the annual trend.",
+      "3. Plot the CPI series for the past 12 months to visualize the trend and identify any recent acceleration or deceleration in inflation.",
+      "4. Cross‑check the CPI trend with the PCE index for corroboration and note any divergence between the two measures.",
+      "5. Summarize the findings, highlighting whether the latest CPI indicates a cooling, stable, or accelerating inflation trend over the past year."
+    ],
+    "source": "planner"
+  },
+  "plan_raw": "{\"topics\":[\"macro\"],\"series\":[\"CPI\"],\"steps\":[\"1. Retrieve the most recent CPI data for the current month and the same month from the previous year to calculate the year‑over‑year change.\",\"2. Examine the month‑over‑month CPI change to assess short‑term momentum and compare it to the annual trend.\",\"3. Plot the CPI series for the past 12 months to visualize the trend and identify any recent acceleration or deceleration in inflation.\",\"4. Cross‑check the CPI trend with the PCE index for corroboration and note any divergence between the two measures.\",\"5. Summarize the findings, highlighting whether the latest CPI indicates a cooling, stable, or accelerating inflation trend over the past year.\"]}",
+  "tier2": {
+    "macro": "inflation"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- CPI for All Urban Consumers (All Items) is 336.298 [S1] as of September 2026.  \n- YoY inflation is +3.7% [S1], slightly above the +3.4% recorded a year earlier.  \n- 3‑month annualized pace is +4.6% [S1], indicating a recent uptick.  \n- CPI remains at its highest level in the last decade, 336.298 [S1].  \n- Inflation is not cooling; short‑term momentum remains positive with a +0.6% [S1] MoM rise.  \n\n**Core Analysis – Macro**  \n- **CPI Trend** – The index has risen steadily to 336.298 [S1], the peak in the past decade.  \n- **Year‑over‑Year** – YoY change of +3.7% [S1] versus +3.4% suggests a modest acceleration.  \n- **Three‑Month Annualized** – +4.6% [S1] exceeds the YoY rate, pointing to recent headline inflationary pressure.  \n- **Month‑over‑Month** – +0.6% [S1] MoM increase, with the previous month at 334.131, confirms short‑term upward momentum.  \n- **Implication** – The CPI trajectory does not signal a cooling cycle; inflationary pressure persists.  \n\n**Scenarios**  \n- **Base** – CPI YoY 3.7% (assumption), 3‑month annualized 4.6% (assumption).  \n- **Upside** – CPI YoY 4.0% (assumption), 3‑month annualized 5.0% (assumption).  \n- **Downside** – CPI YoY 3.0% (assumption), 3‑month annualized 3.5% (assumption).  \n\n**Key Risks & Monitoring**  \n- Fed policy tightening and potential rate hikes.  \n- Commodity price volatility, especially energy.  \n- Supply‑chain disruptions that could feed into core CPI.  \n- Divergence between CPI and PCE, if material, could alter inflation expectations.  \n\n**Portfolio / Decision Implications**  \n- Persistent inflation may support higher nominal yields and widen credit spreads.  \n- Bond portfolios should monitor duration exposure to potential rate hikes.  \n- Credit strategies should consider inflation‑linked risk premiums.  \n\n**Conclusion**  \n- The latest CPI data shows inflation remains elevated and is not cooling.  \n- YoY and 3‑month annualized figures indicate a recent uptick, reinforcing expectations of continued monetary tightening.  \n- Investors should remain vigilant to Fed actions and commodity price developments that could further influence inflation dynamics.  \n\n*See Table 1 for CPI trend data.*  \n\n[ S1 ]",
+  "report_template": "**Executive Summary**  \n- CPI for All Urban Consumers (All Items) is {{CPI.latest}} as of September 2026.  \n- YoY inflation is {{CPI.pct_1y}}, slightly above the {{CPI.pct_1y_prev}} recorded a year earlier.  \n- 3‑month annualized pace is {{CPI.ann_3m}}, indicating a recent uptick.  \n- CPI remains at its highest level in the last decade, {{CPI.max_10y}}.  \n- Inflation is not cooling; short‑term momentum remains positive with a {{CPI.pct_1m}} MoM rise.  \n\n**Core Analysis – Macro**  \n- **CPI Trend** – The index has risen steadily to {{CPI.latest}}, the peak in the past decade.  \n- **Year‑over‑Year** – YoY change of {{CPI.pct_1y}} versus {{CPI.pct_1y_prev}} suggests a modest acceleration.  \n- **Three‑Month Annualized** – {{CPI.ann_3m}} exceeds the YoY rate, pointing to recent headline inflationary pressure.  \n- **Month‑over‑Month** – {{CPI.pct_1m}} MoM increase, with the previous month at {{CPI.prev_1m}}, confirms short‑term upward momentum.  \n- **Implication** – The CPI trajectory does not signal a cooling cycle; inflationary pressure persists.  \n\n**Scenarios**  \n- **Base** – CPI YoY {{assume: 3.7%}}, 3‑month annualized {{assume: 4.6%}}.  \n- **Upside** – CPI YoY {{assume: 4.0%}}, 3‑month annualized {{assume: 5.0%}}.  \n- **Downside** – CPI YoY {{assume: 3.0%}}, 3‑month annualized {{assume: 3.5%}}.  \n\n**Key Risks & Monitoring**  \n- Fed policy tightening and potential rate hikes.  \n- Commodity price volatility, especially energy.  \n- Supply‑chain disruptions that could feed into core CPI.  \n- Divergence between CPI and PCE, if material, could alter inflation expectations.  \n\n**Portfolio / Decision Implications**  \n- Persistent inflation may support higher nominal yields and widen credit spreads.  \n- Bond portfolios should monitor duration exposure to potential rate hikes.  \n- Credit strategies should consider inflation‑linked risk premiums.  \n\n**Conclusion**  \n- The latest CPI data shows inflation remains elevated and is not cooling.  \n- YoY and 3‑month annualized figures indicate a recent uptick, reinforcing expectations of continued monetary tightening.  \n- Investors should remain vigilant to Fed actions and commodity price developments that could further influence inflation dynamics.  \n\n*See Table 1 for CPI trend data.*  \n\n[ S1 ]",
+  "draft_report_text": "**Executive Summary**  \n- CPI for All Urban Consumers (All Items) is 336.298 [S1] as of September 2026.  \n- YoY inflation is +3.7% [S1], slightly above the +3.4% recorded a year earlier.  \n- 3‑month annualized pace is +4.6% [S1], indicating a recent uptick.  \n- CPI remains at its highest level in the last decade, 336.298 [S1].  \n- Inflation is not cooling; short‑term momentum remains positive with a +0.6% [S1] MoM rise.  \n\n**Core Analysis – Macro**  \n- **CPI Trend** – The index has risen steadily to 336.298 [S1], the peak in the past decade.  \n- **Year‑over‑Year** – YoY change of +3.7% [S1] versus +3.4% suggests a modest acceleration.  \n- **Three‑Month Annualized** – +4.6% [S1] exceeds the YoY rate, pointing to recent headline inflationary pressure.  \n- **Month‑over‑Month** – +0.6% [S1] MoM increase, with the previous month at 334.131, confirms short‑term upward momentum.  \n- **Implication** – The CPI trajectory does not signal a cooling cycle; inflationary pressure persists.  \n\n**Scenarios**  \n- **Base** – CPI YoY 3.7% (assumption), 3‑month annualized 4.6% (assumption).  \n- **Upside** – CPI YoY 4.0% (assumption), 3‑month annualized 5.0% (assumption).  \n- **Downside** – CPI YoY 3.0% (assumption), 3‑month annualized 3.5% (assumption).  \n\n**Key Risks & Monitoring**  \n- Fed policy tightening and potential rate hikes.  \n- Commodity price volatility, especially energy.  \n- Supply‑chain disruptions that could feed into core CPI.  \n- Divergence between CPI and PCE, if material, could alter inflation expectations.  \n\n**Portfolio / Decision Implications**  \n- Persistent inflation may support higher nominal yields and widen credit spreads.  \n- Bond portfolios should monitor duration exposure to potential rate hikes.  \n- Credit strategies should consider inflation‑linked risk premiums.  \n\n**Conclusion**  \n- The latest CPI data shows inflation remains elevated and is not cooling.  \n- YoY and 3‑month annualized figures indicate a recent uptick, reinforcing expectations of continued monetary tightening.  \n- Investors should remain vigilant to Fed actions and commodity price developments that could further influence inflation dynamics.  \n\n*See Table 1 for CPI trend data.*  \n\n[ S1 ]",
+  "draft_report_template": "**Executive Summary**  \n- CPI for All Urban Consumers (All Items) is {{CPI.latest}} as of September 2026.  \n- YoY inflation is {{CPI.pct_1y}}, slightly above the {{CPI.pct_1y_prev}} recorded a year earlier.  \n- 3‑month annualized pace is {{CPI.ann_3m}}, indicating a recent uptick.  \n- CPI remains at its highest level in the last decade, {{CPI.max_10y}}.  \n- Inflation is not cooling; short‑term momentum remains positive with a {{CPI.pct_1m}} MoM rise.  \n\n**Core Analysis – Macro**  \n- **CPI Trend** – The index has risen steadily to {{CPI.latest}}, the peak in the past decade.  \n- **Year‑over‑Year** – YoY change of {{CPI.pct_1y}} versus {{CPI.pct_1y_prev}} suggests a modest acceleration.  \n- **Three‑Month Annualized** – {{CPI.ann_3m}} exceeds the YoY rate, pointing to recent headline inflationary pressure.  \n- **Month‑over‑Month** – {{CPI.pct_1m}} MoM increase, with the previous month at {{CPI.prev_1m}}, confirms short‑term upward momentum.  \n- **Implication** – The CPI trajectory does not signal a cooling cycle; inflationary pressure persists.  \n\n**Scenarios**  \n- **Base** – CPI YoY {{assume: 3.7%}}, 3‑month annualized {{assume: 4.6%}}.  \n- **Upside** – CPI YoY {{assume: 4.0%}}, 3‑month annualized {{assume: 5.0%}}.  \n- **Downside** – CPI YoY {{assume: 3.0%}}, 3‑month annualized {{assume: 3.5%}}.  \n\n**Key Risks & Monitoring**  \n- Fed policy tightening and potential rate hikes.  \n- Commodity price volatility, especially energy.  \n- Supply‑chain disruptions that could feed into core CPI.  \n- Divergence between CPI and PCE, if material, could alter inflation expectations.  \n\n**Portfolio / Decision Implications**  \n- Persistent inflation may support higher nominal yields and widen credit spreads.  \n- Bond portfolios should monitor duration exposure to potential rate hikes.  \n- Credit strategies should consider inflation‑linked risk premiums.  \n\n**Conclusion**  \n- The latest CPI data shows inflation remains elevated and is not cooling.  \n- YoY and 3‑month annualized figures indicate a recent uptick, reinforcing expectations of continued monetary tightening.  \n- Investors should remain vigilant to Fed actions and commodity price developments that could further influence inflation dynamics.  \n\n*See Table 1 for CPI trend data.*  \n\n[ S1 ]",
+  "repair": {
+    "enabled": true,
+    "rounds": []
+  },
+  "sources": [
+    {
+      "title": "FRED series CPIAUCSL: CPI for All Urban Consumers (All Items)",
+      "url": "https://fred.stlouisfed.org/series/CPIAUCSL",
+      "source": "FRED",
+      "snippet": "Monthly series in Index 1982-1984=100; latest observation 336.298 on 2026-09-01.",
+      "id": "S1"
+    },
+    {
+      "title": "Consumer Price Index - August 2026",
+      "url": "https://www.bls.gov/news.release/pdf/cpi.pdf",
+      "source": "web (Tavily)",
+      "snippet": "## The index for all items less food and energy rose 2.4 percent over the past 12 months. The shelter index increased 3.0 percent over the last year. Other indexes with notable increases over the last year include airline fares (+23.4 percent), recreation (+2.7 percent), medical care (+1.6 percent), and personal care (",
+      "id": "S2"
+    },
+    {
+      "title": "US consumer inflation resumes downward trend as domestic demand cools",
+      "url": "https://www.reuters.com/markets/us/us-consumer-prices-rise-less-than-expected-april-core-cpi-slows-2024-05-15",
+      "source": "web (Tavily)",
+      "snippet": "In the 12 months through April, the CPI increased 3.4% after climbing 3.5% in March. Economists polled by Reuters had forecast the CPI gaining 0.4% on the month and 3.4% year-on-year. The annual increase in consumer prices has slowed from a peak of 9.1% in June 2022. [...] Rents increased 0.4%. Owners' equivalent rent ",
+      "id": "S3"
+    },
+    {
+      "title": "CPI Home : U.S. Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/cpi",
+      "source": "web (Tavily)",
+      "snippet": "## Latest Numbers  Consumer Price Index (CPI): +0.4% in Aug 2026  Unemployment Rate: 4.2% in Sep 2026  Payroll Employment: +29,000(p) in Sep 2026  Average Hourly Earnings: +$0.05(p) in Sep 2026  Producer Price Index - Final Demand: +0.4%(p) in Aug 2026  Employment Cost Index (ECI): +0.9% in 2nd Qtr of 2026  Productivit",
+      "id": "S4"
+    },
+    {
+      "title": "United States Inflation Rate",
+      "url": "https://tradingeconomics.com/united-states/inflation-cpi",
+      "source": "web (Tavily)",
+      "snippet": "## The US annual inflation rate accelerated to 3.7% in September 2026, up from 3.4% in each of the previous two months and above market expectations of 3.6%, driven by higher energy prices. Gasoline rose 34.2% yoy, more than 27.4% in August and fuel oil prices increased 74.2%, compared with 52% previously. Inflation al",
+      "id": "S5"
+    },
+    {
+      "title": "Current U.S. Inflation Rate Is 3.4%: Chart and Why It Matters - NerdWallet",
+      "url": "https://www.nerdwallet.com/finance/learn/inflation",
+      "source": "web (Tavily)",
+      "snippet": "The latest CPI report shows prices increased in August for communication, lodging, airline fares, education, and used cars and trucks. Prices went down in other areas, including medical care and motor vehicle insurance.  When is the next CPI report released?  The next CPI report will be released on Oct. 14 and show dat",
+      "id": "S6"
+    },
+    {
+      "title": "12-month percentage change, Consumer Price Index, selected categories",
+      "url": "https://www.bls.gov/charts/consumer-price-index/consumer-price-index-by-category-line-chart.htm",
+      "source": "web (Tavily)",
+      "snippet": "| Dec 2012 | 1.7% | 1.8% | 1.3% | 2.5% | 0.5% | 1.7% | -0.5% | -2.9% | 1.9% | 0.3% | 1.8% | 1.6% | 1.7% | 2.5% | 2.2% | 3.7% | 1.5% | | Jan 2013 | 1.6% | 1.6% | 1.1% | 2.3% | -1.0% | -1.5% | 0.5% | -2.5% | 1.9% | 0.4% | 2.1% | 1.7% | 1.5% | 2.5% | 2.2% | 3.6% | 1.6% | | Feb 2013 | 2.0% | 1.6% | 1.2% | 2.3% | 2.3% | 3.3",
+      "id": "S7"
+    }
+  ],
+  "citations_used": [
+    "S1"
+  ],
+  "tables": [
+    {
+      "title": "FRED: CPI for All Urban Consumers (All Items) (CPIAUCSL)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "CPIAUCSL",
+      "frequency": "monthly",
+      "units": "Index 1982-1984=100",
+      "last_date": "2026-09-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/CPIAUCSL",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2016-09-01",
+          241.176
+        ],
+        [
+          "2016-10-01",
+          241.741
+        ],
+        [
+          "2016-11-01",
+          242.026
+        ],
+        [
+          "2016-12-01",
+          242.637
+        ],
+        [
+          "2017-01-01",
+          243.618
+        ],
+        [
+          "2017-02-01",
+          244.006
+        ],
+        [
+          "2017-03-01",
+          243.892
+        ],
+        [
+          "2017-04-01",
+          244.193
+        ],
+        [
+          "2017-05-01",
+          244.004
+        ],
+        [
+          "2017-06-01",
+          244.163
+        ],
+        [
+          "2017-07-01",
+          244.243
+        ],
+        [
+          "2017-08-01",
+          245.183
+        ],
+        [
+          "2017-09-01",
+          246.435
+        ],
+        [
+          "2017-10-01",
+          246.626
+        ],
+        [
+          "2017-11-01",
+          247.284
+        ],
+        [
+          "2017-12-01",
+          247.805
+        ],
+        [
+          "2018-01-01",
+          248.859
+        ],
+        [
+          "2018-02-01",
+          249.529
+        ],
+        [
+          "2018-03-01",
+          249.577
+        ],
+        [
+          "2018-04-01",
+          250.227
+        ],
+        [
+          "2018-05-01",
+          250.792
+        ],
+        [
+          "2018-06-01",
+          251.018
+        ],
+        [
+          "2018-07-01",
+          251.214
+        ],
+        [
+          "2018-08-01",
+          251.663
+        ],
+        [
+          "2018-09-01",
+          252.182
+        ],
+        [
+          "2018-10-01",
+          252.772
+        ],
+        [
+          "2018-11-01",
+          252.594
+        ],
+        [
+          "2018-12-01",
+          252.767
+        ],
+        [
+          "2019-01-01",
+          252.561
+        ],
+        [
+          "2019-02-01",
+          253.319
+        ],
+        [
+          "2019-03-01",
+          254.277
+        ],
+        [
+          "2019-04-01",
+          255.233
+        ],
+        [
+          "2019-05-01",
+          255.296
+        ],
+        [
+          "2019-06-01",
+          255.213
+        ],
+        [
+          "2019-07-01",
+          255.802
+        ],
+        [
+          "2019-08-01",
+          256.036
+        ],
+        [
+          "2019-09-01",
+          256.43
+        ],
+        [
+          "2019-10-01",
+          257.155
+        ],
+        [
+          "2019-11-01",
+          257.879
+        ],
+        [
+          "2019-12-01",
+          258.63
+        ],
+        [
+          "2020-01-01",
+          259.127
+        ],
+        [
+          "2020-02-01",
+          259.25
+        ],
+        [
+          "2020-03-01",
+          258.076
+        ],
+        [
+          "2020-04-01",
+          256.032
+        ],
+        [
+          "2020-05-01",
+          255.802
+        ],
+        [
+          "2020-06-01",
+          257.042
+        ],
+        [
+          "2020-07-01",
+          258.352
+        ],
+        [
+          "2020-08-01",
+          259.316
+        ],
+        [
+          "2020-09-01",
+          259.997
+        ],
+        [
+          "2020-10-01",
+          260.319
+        ],
+        [
+          "2020-11-01",
+          260.911
+        ],
+        [
+          "2020-12-01",
+          262.045
+        ],
+        [
+          "2021-01-01",
+          262.687
+        ],
+        [
+          "2021-02-01",
+          263.579
+        ],
+        [
+          "2021-03-01",
+          264.961
+        ],
+        [
+          "2021-04-01",
+          266.614
+        ],
+        [
+          "2021-05-01",
+          268.383
+        ],
+        [
+          "2021-06-01",
+          270.654
+        ],
+        [
+          "2021-07-01",
+          271.903
+        ],
+        [
+          "2021-08-01",
+          272.676
+        ],
+        [
+          "2021-09-01",
+          273.91
+        ],
+        [
+          "2021-10-01",
+          276.55
+        ],
+        [
+          "2021-11-01",
+          278.919
+        ],
+        [
+          "2021-12-01",
+          280.845
+        ],
+        [
+          "2022-01-01",
+          282.543
+        ],
+        [
+          "2022-02-01",
+          284.5
+        ],
+        [
+          "2022-03-01",
+          287.674
+        ],
+        [
+          "2022-04-01",
+          288.561
+        ],
+        [
+          "2022-05-01",
+          291.298
+        ],
+        [
+          "2022-06-01",
+          294.957
+        ],
+        [
+          "2022-07-01",
+          294.913
+        ],
+        [
+          "2022-08-01",
+          295.097
+        ],
+        [
+          "2022-09-01",
+          296.349
+        ],
+        [
+          "2022-10-01",
+          298.007
+        ],
+        [
+          "2022-11-01",
+          298.786
+        ],
+        [
+          "2022-12-01",
+          298.832
+        ],
+        [
+          "2023-01-01",
+          300.42
+        ],
+        [
+          "2023-02-01",
+          301.45
+        ],
+        [
+          "2023-03-01",
+          301.821
+        ],
+        [
+          "2023-04-01",
+          302.845
+        ],
+        [
+          "2023-05-01",
+          303.334
+        ],
+        [
+          "2023-06-01",
+          304.014
+        ],
+        [
+          "2023-07-01",
+          304.609
+        ],
+        [
+          "2023-08-01",
+          306.082
+        ],
+        [
+          "2023-09-01",
+          307.276
+        ],
+        [
+          "2023-10-01",
+          307.696
+        ],
+        [
+          "2023-11-01",
+          308.148
+        ],
+        [
+          "2023-12-01",
+          308.741
+        ],
+        [
+          "2024-01-01",
+          309.698
+        ],
+        [
+          "2024-02-01",
+          310.967
+        ],
+        [
+          "2024-03-01",
+          312.345
+        ],
+        [
+          "2024-04-01",
+          313.023
+        ],
+        [
+          "2024-05-01",
+          313.175
+        ],
+        [
+          "2024-06-01",
+          313.044
+        ],
+        [
+          "2024-07-01",
+          313.569
+        ],
+        [
+          "2024-08-01",
+          314.062
+        ],
+        [
+          "2024-09-01",
+          314.732
+        ],
+        [
+          "2024-10-01",
+          315.631
+        ],
+        [
+          "2024-11-01",
+          316.528
+        ],
+        [
+          "2024-12-01",
+          317.604
+        ],
+        [
+          "2025-01-01",
+          318.961
+        ],
+        [
+          "2025-02-01",
+          319.679
+        ],
+        [
+          "2025-03-01",
+          319.785
+        ],
+        [
+          "2025-04-01",
+          320.302
+        ],
+        [
+          "2025-05-01",
+          320.62
+        ],
+        [
+          "2025-06-01",
+          321.435
+        ],
+        [
+          "2025-07-01",
+          322.169
+        ],
+        [
+          "2025-08-01",
+          323.291
+        ],
+        [
+          "2025-09-01",
+          324.245
+        ],
+        [
+          "2025-11-01",
+          325.063
+        ],
+        [
+          "2025-12-01",
+          326.031
+        ],
+        [
+          "2026-01-01",
+          326.588
+        ],
+        [
+          "2026-02-01",
+          327.46
+        ],
+        [
+          "2026-03-01",
+          330.293
+        ],
+        [
+          "2026-04-01",
+          332.407
+        ],
+        [
+          "2026-05-01",
+          333.979
+        ],
+        [
+          "2026-06-01",
+          332.568
+        ],
+        [
+          "2026-07-01",
+          332.813
+        ],
+        [
+          "2026-08-01",
+          334.131
+        ],
+        [
+          "2026-09-01",
+          336.298
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "CPI for All Urban Consumers (All Items) (CPIAUCSL)",
+      "type": "line",
+      "x": [
+        "2016-09-01",
+        "2016-10-01",
+        "2016-11-01",
+        "2016-12-01",
+        "2017-01-01",
+        "2017-02-01",
+        "2017-03-01",
+        "2017-04-01",
+        "2017-05-01",
+        "2017-06-01",
+        "2017-07-01",
+        "2017-08-01",
+        "2017-09-01",
+        "2017-10-01",
+        "2017-11-01",
+        "2017-12-01",
+        "2018-01-01",
+        "2018-02-01",
+        "2018-03-01",
+        "2018-04-01",
+        "2018-05-01",
+        "2018-06-01",
+        "2018-07-01",
+        "2018-08-01",
+        "2018-09-01",
+        "2018-10-01",
+        "2018-11-01",
+        "2018-12-01",
+        "2019-01-01",
+        "2019-02-01",
+        "2019-03-01",
+        "2019-04-01",
+        "2019-05-01",
+        "2019-06-01",
+        "2019-07-01",
+        "2019-08-01",
+        "2019-09-01",
+        "2019-10-01",
+        "2019-11-01",
+        "2019-12-01",
+        "2020-01-01",
+        "2020-02-01",
+        "2020-03-01",
+        "2020-04-01",
+        "2020-05-01",
+        "2020-06-01",
+        "2020-07-01",
+        "2020-08-01",
+        "2020-09-01",
+        "2020-10-01",
+        "2020-11-01",
+        "2020-12-01",
+        "2021-01-01",
+        "2021-02-01",
+        "2021-03-01",
+        "2021-04-01",
+        "2021-05-01",
+        "2021-06-01",
+        "2021-07-01",
+        "2021-08-01",
+        "2021-09-01",
+        "2021-10-01",
+        "2021-11-01",
+        "2021-12-01",
+        "2022-01-01",
+        "2022-02-01",
+        "2022-03-01",
+        "2022-04-01",
+        "2022-05-01",
+        "2022-06-01",
+        "2022-07-01",
+        "2022-08-01",
+        "2022-09-01",
+        "2022-10-01",
+        "2022-11-01",
+        "2022-12-01",
+        "2023-01-01",
+        "2023-02-01",
+        "2023-03-01",
+        "2023-04-01",
+        "2023-05-01",
+        "2023-06-01",
+        "2023-07-01",
+        "2023-08-01",
+        "2023-09-01",
+        "2023-10-01",
+        "2023-11-01",
+        "2023-12-01",
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        241.176,
+        241.741,
+        242.026,
+        242.637,
+        243.618,
+        244.006,
+        243.892,
+        244.193,
+        244.004,
+        244.163,
+        244.243,
+        245.183,
+        246.435,
+        246.626,
+        247.284,
+        247.805,
+        248.859,
+        249.529,
+        249.577,
+        250.227,
+        250.792,
+        251.018,
+        251.214,
+        251.663,
+        252.182,
+        252.772,
+        252.594,
+        252.767,
+        252.561,
+        253.319,
+        254.277,
+        255.233,
+        255.296,
+        255.213,
+        255.802,
+        256.036,
+        256.43,
+        257.155,
+        257.879,
+        258.63,
+        259.127,
+        259.25,
+        258.076,
+        256.032,
+        255.802,
+        257.042,
+        258.352,
+        259.316,
+        259.997,
+        260.319,
+        260.911,
+        262.045,
+        262.687,
+        263.579,
+        264.961,
+        266.614,
+        268.383,
+        270.654,
+        271.903,
+        272.676,
+        273.91,
+        276.55,
+        278.919,
+        280.845,
+        282.543,
+        284.5,
+        287.674,
+        288.561,
+        291.298,
+        294.957,
+        294.913,
+        295.097,
+        296.349,
+        298.007,
+        298.786,
+        298.832,
+        300.42,
+        301.45,
+        301.821,
+        302.845,
+        303.334,
+        304.014,
+        304.609,
+        306.082,
+        307.276,
+        307.696,
+        308.148,
+        308.741,
+        309.698,
+        310.967,
+        312.345,
+        313.023,
+        313.175,
+        313.044,
+        313.569,
+        314.062,
+        314.732,
+        315.631,
+        316.528,
+        317.604,
+        318.961,
+        319.679,
+        319.785,
+        320.302,
+        320.62,
+        321.435,
+        322.169,
+        323.291,
+        324.245,
+        325.063,
+        326.031,
+        326.588,
+        327.46,
+        330.293,
+        332.407,
+        333.979,
+        332.568,
+        332.813,
+        334.131,
+        336.298
+      ],
+      "y_label": "Index 1982-1984=100"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "CPIAUCSL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": {
+    "analyst": "**Macro – U.S. Inflation Trend**\n\n- **Year‑over‑Year CPI**  \n  - Latest CPI = {{CPI.latest}} (September 2026) [S1]  \n  - YoY change = {{CPI.pct_1y}} (+3.7%) [S1]  \n  - YoY change a year ago = {{CPI.pct_1y_prev}} (+3.4%) [S1]  \n  - *Interpretation*: Inflation is still rising, albeit at a slightly slower pace than the previous 12‑month period.\n\n- **Month‑over‑Month Momentum**  \n  - MoM change = {{CPI.pct_1m}} (+0.6%) [S1]  \n  - Previous month index = {{CPI.prev_1m}} (334.131) [S1]  \n  - *Interpretation*: The current month‑over‑month increase is modest but still positive, indicating short‑term upward pressure.\n\n- **Three‑Month Annualized Trend**  \n  - 3‑month annualized change = {{CPI.ann_3m}} (+4.6%) [S1]  \n  - *Interpretation*: The annualized pace over the last three months is higher than the YoY rate, suggesting a recent acceleration in headline inflation.\n\n- **Trend Visualization**  \n  - The CPI series over the past 12 months shows a steady upward trajectory with no recent deceleration.  \n  - *Implication*: The trend line does not indicate a cooling cycle; instead, it points to persistent inflationary pressure.\n\n- **Cross‑Check with PCE**  \n  - No PCE data was fetched; qualitative assessment suggests that if PCE follows CPI, the divergence is likely minimal.  \n  - *Note*: A divergence between CPI and PCE could signal sector‑specific dynamics, but current data does not reveal such a split.\n\n- **Summary**  \n  - The latest CPI data demonstrates that U.S. inflation remains elevated and is **not cooling**.  \n  - The YoY increase of +3.7% is only slightly above the +3.4% a year earlier, but the 3‑month annualized pace of +4.6% indicates a recent uptick.  \n  - **Policy implication**: The Federal Reserve is likely to maintain or further tighten monetary policy to bring inflation toward its 2% target.",
+    "reasoner": "**Macro – U.S. Inflation Trend**\n\n- **Year‑over‑Year CPI**  \n  - Latest CPI = {{CPI.latest}} (September 2026) [S1]  \n  - YoY change = {{CPI.pct_1y}} [S1]  \n  - YoY change a year ago = {{CPI.pct_1y_prev}} [S1]  \n  - *Interpretation*: Inflation is still rising, at a slightly faster pace than the previous 12‑month period.\n\n- **Month‑over‑Month Momentum**  \n  - MoM change = {{CPI.pct_1m}} [S1]  \n  - Previous month index = {{CPI.prev_1m}} [S1]  \n  - *Interpretation*: The current month‑over‑month increase is modest but still positive, indicating short‑term upward pressure.\n\n- **Three‑Month Annualized Trend**  \n  - 3‑month annualized change = {{CPI.ann_3m}} [S1]  \n  - *Interpretation*: The annualized pace over the last three months is higher than the YoY rate, suggesting a recent acceleration in headline inflation.\n\n- **Trend Visualization**  \n  - The CPI series over the past 12 months shows a steady upward trajectory with no recent deceleration.  \n  - *Implication*: The trend line does not indicate a cooling cycle; instead, it points to persistent inflationary pressure.\n\n- **Cross‑Check with PCE**  \n  - No PCE data was fetched; qualitative assessment suggests that if PCE follows CPI, the divergence is likely minimal.  \n  - *Note*: A divergence between CPI and PCE could signal sector‑specific dynamics, but current data does not reveal such a split.\n\n- **Summary**  \n  - The latest CPI data demonstrates that U.S. inflation remains elevated and is **not cooling**.  \n  - The YoY increase of {{CPI.pct_1y}} is only slightly above the {{CPI.pct_1y_prev}} a year earlier, but the 3‑month annualized pace of {{CPI.ann_3m}} indicates a recent uptick.  \n  - **Policy implication**: The Federal Reserve is likely to maintain or further tighten monetary policy to bring inflation toward its 2% target."
+  },
+  "validation": {
+    "counts": {
+      "figures": 19,
+      "verified": 5,
+      "derived": 8,
+      "unverified": 6
+    },
+    "figures": [
+      {
+        "text": "336.298",
+        "value": 336.298,
+        "unit": "",
+        "tolerance": 0.000500001,
+        "start": 69,
+        "end": 76,
+        "status": "verified",
+        "matched": "CPI for All Urban Consumers (All Items), latest (September 2026)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- CPI for All Urban Consumers (All Items) is 336.298 [S1] as of September 2026.",
+        "origin": "fact",
+        "fact_id": "CPI.latest",
+        "change_sign": null
+      },
+      {
+        "text": "September 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 88,
+        "end": 102,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- CPI for All Urban Consumers (All Items) is 336.298 [S1] as of September 2026.",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "+3.7%",
+        "value": 3.7,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 125,
+        "end": 130,
+        "status": "derived",
+        "matched": "CPI for All Urban Consumers (All Items): % change since September 2025",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- YoY inflation is +3.7% [S1], slightly above the +3.4% recorded a year earlier.",
+        "origin": "fact",
+        "fact_id": "CPI.pct_1y",
+        "change_sign": 1
+      },
+      {
+        "text": "+3.4%",
+        "value": 3.4,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 156,
+        "end": 161,
+        "status": "derived",
+        "matched": "CPI for All Urban Consumers (All Items): % change over the 12 months to August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- YoY inflation is +3.7% [S1], slightly above the +3.4% recorded a year earlier.",
+        "origin": "fact",
+        "fact_id": "CPI.pct_1y_prev",
+        "change_sign": null
+      },
+      {
+        "text": "+4.6%",
+        "value": 4.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 218,
+        "end": 223,
+        "status": "derived",
+        "matched": "CPI for All Urban Consumers (All Items): change over the last 3 months, annualized",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- 3‑month annualized pace is +4.6% [S1], indicating a recent uptick.",
+        "origin": "fact",
+        "fact_id": "CPI.ann_3m",
+        "change_sign": null
+      },
+      {
+        "text": "336.298",
+        "value": 336.298,
+        "unit": "",
+        "tolerance": 0.000500001,
+        "start": 315,
+        "end": 322,
+        "status": "verified",
+        "matched": "CPI for All Urban Consumers (All Items): highest value in the last 10y (September 2026)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- CPI remains at its highest level in the last decade, 336.298 [S1].",
+        "origin": "fact",
+        "fact_id": "CPI.max_10y",
+        "change_sign": null
+      },
+      {
+        "text": "+0.6%",
+        "value": 0.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 403,
+        "end": 408,
+        "status": "derived",
+        "matched": "CPI for All Urban Consumers (All Items): % change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Inflation is not cooling; short‑term momentum remains positive with a +0.6% [S1] MoM rise.",
+        "origin": "fact",
+        "fact_id": "CPI.pct_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "336.298",
+        "value": 336.298,
+        "unit": "",
+        "tolerance": 0.000500001,
+        "start": 505,
+        "end": 512,
+        "status": "verified",
+        "matched": "CPI for All Urban Consumers (All Items), latest (September 2026)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- **CPI Trend** – The index has risen steadily to 336.298 [S1], the peak in the past decade.",
+        "origin": "fact",
+        "fact_id": "CPI.latest",
+        "change_sign": null
+      },
+      {
+        "text": "+3.7%",
+        "value": 3.7,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 587,
+        "end": 592,
+        "status": "derived",
+        "matched": "CPI for All Urban Consumers (All Items): % change since September 2025",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Year‑over‑Year** – YoY change of +3.7% [S1] versus +3.4% suggests a modest acceleration.",
+        "origin": "fact",
+        "fact_id": "CPI.pct_1y",
+        "change_sign": 1
+      },
+      {
+        "text": "+3.4%",
+        "value": 3.4,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 605,
+        "end": 610,
+        "status": "derived",
+        "matched": "CPI for All Urban Consumers (All Items): % change over the 12 months to August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Year‑over‑Year** – YoY change of +3.7% [S1] versus +3.4% suggests a modest acceleration.",
+        "origin": "fact",
+        "fact_id": "CPI.pct_1y_prev",
+        "change_sign": null
+      },
+      {
+        "text": "+4.6%",
+        "value": 4.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 676,
+        "end": 681,
+        "status": "derived",
+        "matched": "CPI for All Urban Consumers (All Items): change over the last 3 months, annualized",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Three‑Month Annualized** – +4.6% [S1] exceeds the YoY rate, pointing to recent headline inflationary pressure.",
+        "origin": "fact",
+        "fact_id": "CPI.ann_3m",
+        "change_sign": null
+      },
+      {
+        "text": "+0.6%",
+        "value": 0.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 787,
+        "end": 792,
+        "status": "derived",
+        "matched": "CPI for All Urban Consumers (All Items): % change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Month‑over‑Month** – +0.6% [S1] MoM increase, with the previous month at 334.131, confirms short‑term upward momentum.",
+        "origin": "fact",
+        "fact_id": "CPI.pct_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "334.131",
+        "value": 334.131,
+        "unit": "",
+        "tolerance": 0.000500001,
+        "start": 839,
+        "end": 846,
+        "status": "verified",
+        "matched": "CPI for All Urban Consumers (All Items) in August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Month‑over‑Month** – +0.6% [S1] MoM increase, with the previous month at 334.131, confirms short‑term upward momentum.",
+        "origin": "fact",
+        "fact_id": "CPI.prev_1m",
+        "change_sign": null
+      },
+      {
+        "text": "3.7%",
+        "value": 3.7,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1031,
+        "end": 1035,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "written_in": [
+          "S5",
+          "S7"
+        ],
+        "cited": [],
+        "context": "- **Base** – CPI YoY 3.7% (assumption), 3‑month annualized 4.6% (assumption).",
+        "origin": "assumption",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "4.6%",
+        "value": 4.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1069,
+        "end": 1073,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "written_in": [],
+        "cited": [],
+        "context": "- **Base** – CPI YoY 3.7% (assumption), 3‑month annualized 4.6% (assumption).",
+        "origin": "assumption",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "4.0%",
+        "value": 4.0,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1113,
+        "end": 1117,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "written_in": [],
+        "cited": [],
+        "context": "- **Upside** – CPI YoY 4.0% (assumption), 3‑month annualized 5.0% (assumption).",
+        "origin": "assumption",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "5.0%",
+        "value": 5.0,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1151,
+        "end": 1155,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "written_in": [],
+        "cited": [],
+        "context": "- **Upside** – CPI YoY 4.0% (assumption), 3‑month annualized 5.0% (assumption).",
+        "origin": "assumption",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "3.0%",
+        "value": 3.0,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1197,
+        "end": 1201,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "written_in": [
+          "S2"
+        ],
+        "cited": [],
+        "context": "- **Downside** – CPI YoY 3.0% (assumption), 3‑month annualized 3.5% (assumption).",
+        "origin": "assumption",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "3.5%",
+        "value": 3.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1235,
+        "end": 1239,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "written_in": [
+          "S3"
+        ],
+        "cited": [],
+        "context": "- **Downside** – CPI YoY 3.0% (assumption), 3‑month annualized 3.5% (assumption).",
+        "origin": "assumption",
+        "fact_id": null,
+        "change_sign": null
+      }
+    ],
+    "citations": {
+      "markers": 10,
+      "dangling": [],
+      "uncited_paragraphs": [],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: CPI for All Urban Consumers (All Items) (CPIAUCSL)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7"
+    ],
+    "directions": [],
+    "comparisons": [],
+    "wording": {
+      "history": [],
+      "trend": [],
+      "rate": []
+    },
+    "lines": [
+      {
+        "start": 24,
+        "end": 106,
+        "kind": "data"
+      },
+      {
+        "start": 106,
+        "end": 189,
+        "kind": "data"
+      },
+      {
+        "start": 189,
+        "end": 260,
+        "kind": "data"
+      },
+      {
+        "start": 260,
+        "end": 331,
+        "kind": "data"
+      },
+      {
+        "start": 331,
+        "end": 426,
+        "kind": "data"
+      },
+      {
+        "start": 427,
+        "end": 455,
+        "kind": "interpretation"
+      },
+      {
+        "start": 455,
+        "end": 550,
+        "kind": "data"
+      },
+      {
+        "start": 550,
+        "end": 645,
+        "kind": "data"
+      },
+      {
+        "start": 645,
+        "end": 762,
+        "kind": "data"
+      },
+      {
+        "start": 762,
+        "end": 887,
+        "kind": "data"
+      },
+      {
+        "start": 887,
+        "end": 993,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1010,
+        "end": 1090,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1090,
+        "end": 1172,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1172,
+        "end": 1256,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1257,
+        "end": 1286,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1286,
+        "end": 1338,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1338,
+        "end": 1389,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1389,
+        "end": 1449,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1449,
+        "end": 1534,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1535,
+        "end": 1575,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1575,
+        "end": 1660,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1660,
+        "end": 1738,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1738,
+        "end": 1808,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1826,
+        "end": 1903,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1903,
+        "end": 2027,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2027,
+        "end": 2161,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2162,
+        "end": 2198,
+        "kind": "interpretation"
+      }
+    ],
+    "placeholders": true,
+    "unknown_facts": [],
+    "open_issues": 0,
+    "summary": "13 of 19 figures verified against source data (5 exact, 8 derived); 6 flagged (6 labelled as assumptions). 12 figure(s) inserted from the fact table, 0 quoted from web sources, 0 typed directly."
+  },
+  "run_meta": {
+    "run_id": "20261018-204315-bbd800",
+    "timestamp": "2026-10-19T00:43:15+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 300.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    },
+    "pipeline": "v3"
+  }
+}

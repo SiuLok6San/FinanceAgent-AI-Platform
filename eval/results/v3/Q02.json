@@ -1,0 +1,1577 @@
+{
+  "id": "Q02",
+  "set": "dev",
+  "category": "macro",
+  "question": "What does the current unemployment rate say about the strength of the U.S. labor market?",
+  "ticker": null,
+  "expected_tags": [
+    "macro"
+  ],
+  "pipeline": "v3",
+  "run_utc": "2026-10-19T00:48:15+00:00",
+  "elapsed_sec": 34.0,
+  "router_tags": [
+    "macro"
+  ],
+  "tags": [
+    "macro"
+  ],
+  "plan": {
+    "topics": [
+      "macro"
+    ],
+    "series": [
+      "UNRATE"
+    ],
+    "steps": [
+      "Retrieve the most recent monthly unemployment rate from the UNRATE series.",
+      "Compare the current rate to the historical average and to the 5‑year moving average to assess relative strength.",
+      "Examine the trend over the past 12 months to determine if the rate is accelerating or decelerating.",
+      "Interpret the findings in the context of labor market slack and potential wage growth implications."
+    ],
+    "source": "planner"
+  },
+  "plan_raw": "{\"topics\":[\"macro\"],\"series\":[\"UNRATE\"],\"steps\":[\"Retrieve the most recent monthly unemployment rate from the UNRATE series.\",\"Compare the current rate to the historical average and to the 5‑year moving average to assess relative strength.\",\"Examine the trend over the past 12 months to determine if the rate is accelerating or decelerating.\",\"Interpret the findings in the context of labor market slack and potential wage growth implications.\"]}",
+  "tier2": {
+    "macro": "labor_market"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Unemployment at 4.2% [S1] (September 2026) [S1].  \n+0.1 pp [S1] rise from August, but −0.2 pp decline over the past year [S1].  \n- Rate below the 10‑year average 4.5% [S1] and near the 10‑year low 3.4% [S1].  \n- Slack constrained (63rd percentile of 10‑year range) → wage‑inflation pressure likely [S6].  \n- Policy context: robust labor market but slowing improvement warrants close monitoring [S4].\n\n**Core Analysis**  \n\n*Macro – Labor Market*  \n- Current level: 4.2% [S1] (September 2026) [S1].  \n- 1‑month change: +0.1 pp [S1].  \n- 12‑month change: −0.2 pp [S1].  \n- 10‑year comparison: below 4.5% [S1], near 3.4% [S1].  \n- Slack: 63rd percentile of 10‑year range [S1].  \n- Wage dynamics: low slack supports upward pressure on wages [S6].  \n- Inflationary risk: potential if productivity does not offset wage growth [S6].  \n- Policy context: robust labor market but slowing improvement signals need for careful monitoring [S4].  \n\n*Sector* – No data fetched.  \n*Credit* – No data fetched.  \n*Portfolio* – No data fetched.  \n\n**Scenarios**  \n\n- **Base** – Unemployment remains near 4.2% [S1] with +0.1 pp rise; wage growth moderate; inflationary pressure contained.  \n- **Upside** – Unemployment falls by −0.2 pp [S1] or more; slack eases further; wage growth accelerates; potential for higher inflation.  \n- **Downside** – Unemployment rises by +0.1 pp [S1] or more; slack expands; wage growth slows; inflationary pressure eases.  \n\n**Key Risks & Monitoring**  \n- Rapid rise in unemployment beyond +0.1 pp [S1].  \n- Unexpected spike in wage growth exceeding productivity gains [S6].  \n- Inflationary expectations shifting upward [S6].  \n- Policy tightening or easing affecting labor demand [S4].  \n- Data revisions to unemployment series [S1].  \n\n**Portfolio / Decision Implications**  \n- Maintain exposure to sectors sensitive to labor costs (e.g., retail, hospitality).  \n- Consider hedging wage‑inflation risk via commodity or inflation‑linked instruments.  \n- Monitor unemployment trend and wage data for timing of policy shifts.  \n- Adjust credit risk models to reflect potential tightening of labor‑market slack.  \n\n**Conclusion**  \n- Current unemployment at 4.2% [S1] signals a tight labor market with constrained slack.  \n- Slowing pace of improvement suggests vigilance for future labor‑market shifts.  \n- Strategic positioning should account for potential wage‑inflation dynamics and policy responses.  \n\n*See Table 1 for unemployment rate trend.*",
+  "report_template": "**Executive Summary**  \n- Unemployment at {{UNRATE.latest}} (September 2026) [S1].  \n- {{UNRATE.chg_1m}} rise from August, but {{UNRATE.chg_1y}} decline over the past year [S1].  \n- Rate below the 10‑year average {{UNRATE.avg_10y}} and near the 10‑year low {{UNRATE.min_10y}} [S1].  \n- Slack constrained (63rd percentile of 10‑year range) → wage‑inflation pressure likely [S6].  \n- Policy context: robust labor market but slowing improvement warrants close monitoring [S4].\n\n**Core Analysis**  \n\n*Macro – Labor Market*  \n- Current level: {{UNRATE.latest}} (September 2026) [S1].  \n- 1‑month change: {{UNRATE.chg_1m}} [S1].  \n- 12‑month change: {{UNRATE.chg_1y}} [S1].  \n- 10‑year comparison: below {{UNRATE.avg_10y}}, near {{UNRATE.min_10y}} [S1].  \n- Slack: 63rd percentile of 10‑year range [S1].  \n- Wage dynamics: low slack supports upward pressure on wages [S6].  \n- Inflationary risk: potential if productivity does not offset wage growth [S6].  \n- Policy context: robust labor market but slowing improvement signals need for careful monitoring [S4].  \n\n*Sector* – No data fetched.  \n*Credit* – No data fetched.  \n*Portfolio* – No data fetched.  \n\n**Scenarios**  \n\n- **Base** – Unemployment remains near {{UNRATE.latest}} with {{UNRATE.chg_1m}} rise; wage growth moderate; inflationary pressure contained.  \n- **Upside** – Unemployment falls by {{UNRATE.chg_1y}} or more; slack eases further; wage growth accelerates; potential for higher inflation.  \n- **Downside** – Unemployment rises by {{UNRATE.chg_1m}} or more; slack expands; wage growth slows; inflationary pressure eases.  \n\n**Key Risks & Monitoring**  \n- Rapid rise in unemployment beyond {{UNRATE.chg_1m}} [S1].  \n- Unexpected spike in wage growth exceeding productivity gains [S6].  \n- Inflationary expectations shifting upward [S6].  \n- Policy tightening or easing affecting labor demand [S4].  \n- Data revisions to unemployment series [S1].  \n\n**Portfolio / Decision Implications**  \n- Maintain exposure to sectors sensitive to labor costs (e.g., retail, hospitality).  \n- Consider hedging wage‑inflation risk via commodity or inflation‑linked instruments.  \n- Monitor unemployment trend and wage data for timing of policy shifts.  \n- Adjust credit risk models to reflect potential tightening of labor‑market slack.  \n\n**Conclusion**  \n- Current unemployment at {{UNRATE.latest}} signals a tight labor market with constrained slack.  \n- Slowing pace of improvement suggests vigilance for future labor‑market shifts.  \n- Strategic positioning should account for potential wage‑inflation dynamics and policy responses.  \n\n*See Table 1 for unemployment rate trend.*",
+  "draft_report_text": "**Executive Summary**  \n- Unemployment at 4.2% [S1] (September 2026) [S1].  \n+0.1 pp [S1] rise from August, but −0.2 pp decline over the past year [S1].  \n- Rate below the 10‑year average 4.5% [S1] and near the 10‑year low 3.4% [S1].  \n- Slack constrained (63rd percentile of 10‑year range) → wage‑inflation pressure likely [S6].  \n- Policy context: robust labor market but slowing improvement warrants close monitoring [S4].\n\n**Core Analysis**  \n\n*Macro – Labor Market*  \n- Current level: 4.2% [S1] (September 2026) [S1].  \n- 1‑month change: +0.1 pp [S1].  \n- 12‑month change: −0.2 pp [S1].  \n- 10‑year comparison: below 4.5% [S1], near 3.4% [S1].  \n- Slack: 63rd percentile of 10‑year range [S1].  \n- Wage dynamics: low slack supports upward pressure on wages [S6].  \n- Inflationary risk: potential if productivity does not offset wage growth [S6].  \n- Policy context: robust labor market but slowing improvement signals need for careful monitoring [S4].  \n\n*Sector* – No data fetched.  \n*Credit* – No data fetched.  \n*Portfolio* – No data fetched.  \n\n**Scenarios**  \n\n- **Base** – Unemployment remains near 4.2% [S1] with +0.1 pp rise; wage growth moderate; inflationary pressure contained.  \n- **Upside** – Unemployment falls by −0.2 pp [S1] or more; slack eases further; wage growth accelerates; potential for higher inflation.  \n- **Downside** – Unemployment rises by +0.1 pp [S1] or more; slack expands; wage growth slows; inflationary pressure eases.  \n\n**Key Risks & Monitoring**  \n- Rapid rise in unemployment beyond +0.1 pp [S1].  \n- Unexpected spike in wage growth exceeding productivity gains [S6].  \n- Inflationary expectations shifting upward [S6].  \n- Policy tightening or easing affecting labor demand [S4].  \n- Data revisions to unemployment series [S1].  \n\n**Portfolio / Decision Implications**  \n- Maintain exposure to sectors sensitive to labor costs (e.g., retail, hospitality).  \n- Consider hedging wage‑inflation risk via commodity or inflation‑linked instruments.  \n- Monitor unemployment trend and wage data for timing of policy shifts.  \n- Adjust credit risk models to reflect potential tightening of labor‑market slack.  \n\n**Conclusion**  \n- Current unemployment at 4.2% [S1] signals a tight labor market with constrained slack.  \n- Slowing pace of improvement suggests vigilance for future labor‑market shifts.  \n- Strategic positioning should account for potential wage‑inflation dynamics and policy responses.  \n\n*See Table 1 for unemployment rate trend.*",
+  "draft_report_template": "**Executive Summary**  \n- Unemployment at {{UNRATE.latest}} (September 2026) [S1].  \n- {{UNRATE.chg_1m}} rise from August, but {{UNRATE.chg_1y}} decline over the past year [S1].  \n- Rate below the 10‑year average {{UNRATE.avg_10y}} and near the 10‑year low {{UNRATE.min_10y}} [S1].  \n- Slack constrained (63rd percentile of 10‑year range) → wage‑inflation pressure likely [S6].  \n- Policy context: robust labor market but slowing improvement warrants close monitoring [S4].\n\n**Core Analysis**  \n\n*Macro – Labor Market*  \n- Current level: {{UNRATE.latest}} (September 2026) [S1].  \n- 1‑month change: {{UNRATE.chg_1m}} [S1].  \n- 12‑month change: {{UNRATE.chg_1y}} [S1].  \n- 10‑year comparison: below {{UNRATE.avg_10y}}, near {{UNRATE.min_10y}} [S1].  \n- Slack: 63rd percentile of 10‑year range [S1].  \n- Wage dynamics: low slack supports upward pressure on wages [S6].  \n- Inflationary risk: potential if productivity does not offset wage growth [S6].  \n- Policy context: robust labor market but slowing improvement signals need for careful monitoring [S4].  \n\n*Sector* – No data fetched.  \n*Credit* – No data fetched.  \n*Portfolio* – No data fetched.  \n\n**Scenarios**  \n\n- **Base** – Unemployment remains near {{UNRATE.latest}} with {{UNRATE.chg_1m}} rise; wage growth moderate; inflationary pressure contained.  \n- **Upside** – Unemployment falls by {{UNRATE.chg_1y}} or more; slack eases further; wage growth accelerates; potential for higher inflation.  \n- **Downside** – Unemployment rises by {{UNRATE.chg_1m}} or more; slack expands; wage growth slows; inflationary pressure eases.  \n\n**Key Risks & Monitoring**  \n- Rapid rise in unemployment beyond {{UNRATE.chg_1m}} [S1].  \n- Unexpected spike in wage growth exceeding productivity gains [S6].  \n- Inflationary expectations shifting upward [S6].  \n- Policy tightening or easing affecting labor demand [S4].  \n- Data revisions to unemployment series [S1].  \n\n**Portfolio / Decision Implications**  \n- Maintain exposure to sectors sensitive to labor costs (e.g., retail, hospitality).  \n- Consider hedging wage‑inflation risk via commodity or inflation‑linked instruments.  \n- Monitor unemployment trend and wage data for timing of policy shifts.  \n- Adjust credit risk models to reflect potential tightening of labor‑market slack.  \n\n**Conclusion**  \n- Current unemployment at {{UNRATE.latest}} signals a tight labor market with constrained slack.  \n- Slowing pace of improvement suggests vigilance for future labor‑market shifts.  \n- Strategic positioning should account for potential wage‑inflation dynamics and policy responses.  \n\n*See Table 1 for unemployment rate trend.*",
+  "repair": {
+    "enabled": true,
+    "rounds": []
+  },
+  "sources": [
+    {
+      "title": "FRED series UNRATE: Unemployment Rate",
+      "url": "https://fred.stlouisfed.org/series/UNRATE",
+      "source": "FRED",
+      "snippet": "Monthly series in Percent; latest observation 4.2 on 2026-09-01.",
+      "id": "S1"
+    },
+    {
+      "title": "Current Unemployment Rate and Other Jobs Report Findings - NerdWallet",
+      "url": "https://www.nerdwallet.com/finance/learn/jobs-report-unemployment-rate",
+      "source": "web (Tavily)",
+      "snippet": "Why it matters: The weekly jobless claims, or initial claims, are the number of unemployment insurance claims filed in the past week. They provide an indicator of the strength — or weakness — of the labor market.  Learn more about this week's jobless claimsLearn more about this week's jobless claims  Jobless claims wer",
+      "id": "S2"
+    },
+    {
+      "title": "What is the unemployment rate in the US right now? | USAFacts",
+      "url": "https://usafacts.org/answers/what-is-the-unemployment-rate/country/united-states",
+      "source": "web (Tavily)",
+      "snippet": "About  # What is the unemployment rate in the US right now?  Refreshed monthly  Unemployment was at 4.2% in September 2026. That's a 0.1 percentage point increase from the prior month. The unemployment rate is the percentage of people in the labor force who are actively looking for work but not currently employed. It's",
+      "id": "S3"
+    },
+    {
+      "title": "May’s Headline Jobs Numbers Mask Underlying Labor Market Slack - Center for American Progress",
+      "url": "https://www.americanprogress.org/article/mays-headline-jobs-numbers-mask-underlying-labor-market-slack",
+      "source": "web (Tavily)",
+      "snippet": "Today, the U.S. Bureau of Labor Statistics (BLS) released its Employment Situation report for May 2026, showing that 172,000 jobs were added to the U.S. economy while the unemployment rate stayed the same at 4.3 percent. This increase in jobs came in well above expectations following two months of positive job growth a",
+      "id": "S4"
+    },
+    {
+      "title": "United States Unemployment Rate",
+      "url": "https://tradingeconomics.com/united-states/unemployment-rate",
+      "source": "web (Tavily)",
+      "snippet": "## The US unemployment rate remained unchanged at 4.1% in August 2026, in line with market expectations. The number of unemployed increased by 115,000 to 7.03 million, while total employment surged by 569,000 to 162.75 million. The labor force expanded by 683,000 to 169.78 million, lifting the labor force participation",
+      "id": "S5"
+    },
+    {
+      "title": "Job Market’s Effect on the Economy | U.S. Bank",
+      "url": "https://www.usbank.com/investing/financial-perspectives/market-news/effect-of-job-market-on-the-economy.html",
+      "source": "web (Tavily)",
+      "snippet": "The U.S. Bureau of Labor Statistics tracks the unemployment rate every month, giving us a clear view of the nation’s economic health. A lower unemployment rate usually means the economy is strong. This rate draws close attention because it shows how many people are actively seeking work. However, it doesn’t count those",
+      "id": "S6"
+    },
+    {
+      "title": "What is driving the cooling of the US labour market?",
+      "url": "https://www.caixabankresearch.com/en/economics-markets/labour-market-demographics/what-driving-cooling-us-labour-market",
+      "source": "web (Tavily)",
+      "snippet": "In fact, other indicators suggest that the labour market is still in good health and that the cooling we are witnessing is due to a normalisation. For instance, the layoffs rate remains stable at around 1.0%, without any significant increases, and applications for unemployment benefits have not grown at a worrying pace",
+      "id": "S7"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S4",
+    "S6"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Unemployment Rate (UNRATE)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "UNRATE",
+      "frequency": "monthly",
+      "units": "Percent",
+      "last_date": "2026-09-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/UNRATE",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2016-09-01",
+          5.0
+        ],
+        [
+          "2016-10-01",
+          4.9
+        ],
+        [
+          "2016-11-01",
+          4.7
+        ],
+        [
+          "2016-12-01",
+          4.7
+        ],
+        [
+          "2017-01-01",
+          4.7
+        ],
+        [
+          "2017-02-01",
+          4.6
+        ],
+        [
+          "2017-03-01",
+          4.4
+        ],
+        [
+          "2017-04-01",
+          4.4
+        ],
+        [
+          "2017-05-01",
+          4.4
+        ],
+        [
+          "2017-06-01",
+          4.3
+        ],
+        [
+          "2017-07-01",
+          4.3
+        ],
+        [
+          "2017-08-01",
+          4.4
+        ],
+        [
+          "2017-09-01",
+          4.3
+        ],
+        [
+          "2017-10-01",
+          4.2
+        ],
+        [
+          "2017-11-01",
+          4.2
+        ],
+        [
+          "2017-12-01",
+          4.1
+        ],
+        [
+          "2018-01-01",
+          4.0
+        ],
+        [
+          "2018-02-01",
+          4.1
+        ],
+        [
+          "2018-03-01",
+          4.0
+        ],
+        [
+          "2018-04-01",
+          4.0
+        ],
+        [
+          "2018-05-01",
+          3.8
+        ],
+        [
+          "2018-06-01",
+          4.0
+        ],
+        [
+          "2018-07-01",
+          3.8
+        ],
+        [
+          "2018-08-01",
+          3.8
+        ],
+        [
+          "2018-09-01",
+          3.7
+        ],
+        [
+          "2018-10-01",
+          3.8
+        ],
+        [
+          "2018-11-01",
+          3.8
+        ],
+        [
+          "2018-12-01",
+          3.9
+        ],
+        [
+          "2019-01-01",
+          4.0
+        ],
+        [
+          "2019-02-01",
+          3.8
+        ],
+        [
+          "2019-03-01",
+          3.8
+        ],
+        [
+          "2019-04-01",
+          3.7
+        ],
+        [
+          "2019-05-01",
+          3.6
+        ],
+        [
+          "2019-06-01",
+          3.6
+        ],
+        [
+          "2019-07-01",
+          3.7
+        ],
+        [
+          "2019-08-01",
+          3.6
+        ],
+        [
+          "2019-09-01",
+          3.5
+        ],
+        [
+          "2019-10-01",
+          3.6
+        ],
+        [
+          "2019-11-01",
+          3.6
+        ],
+        [
+          "2019-12-01",
+          3.6
+        ],
+        [
+          "2020-01-01",
+          3.6
+        ],
+        [
+          "2020-02-01",
+          3.5
+        ],
+        [
+          "2020-03-01",
+          4.4
+        ],
+        [
+          "2020-04-01",
+          14.8
+        ],
+        [
+          "2020-05-01",
+          13.2
+        ],
+        [
+          "2020-06-01",
+          11.0
+        ],
+        [
+          "2020-07-01",
+          10.2
+        ],
+        [
+          "2020-08-01",
+          8.4
+        ],
+        [
+          "2020-09-01",
+          7.8
+        ],
+        [
+          "2020-10-01",
+          6.9
+        ],
+        [
+          "2020-11-01",
+          6.7
+        ],
+        [
+          "2020-12-01",
+          6.7
+        ],
+        [
+          "2021-01-01",
+          6.4
+        ],
+        [
+          "2021-02-01",
+          6.2
+        ],
+        [
+          "2021-03-01",
+          6.1
+        ],
+        [
+          "2021-04-01",
+          6.1
+        ],
+        [
+          "2021-05-01",
+          5.8
+        ],
+        [
+          "2021-06-01",
+          5.9
+        ],
+        [
+          "2021-07-01",
+          5.4
+        ],
+        [
+          "2021-08-01",
+          5.1
+        ],
+        [
+          "2021-09-01",
+          4.7
+        ],
+        [
+          "2021-10-01",
+          4.5
+        ],
+        [
+          "2021-11-01",
+          4.1
+        ],
+        [
+          "2021-12-01",
+          3.9
+        ],
+        [
+          "2022-01-01",
+          4.0
+        ],
+        [
+          "2022-02-01",
+          3.9
+        ],
+        [
+          "2022-03-01",
+          3.7
+        ],
+        [
+          "2022-04-01",
+          3.7
+        ],
+        [
+          "2022-05-01",
+          3.6
+        ],
+        [
+          "2022-06-01",
+          3.6
+        ],
+        [
+          "2022-07-01",
+          3.5
+        ],
+        [
+          "2022-08-01",
+          3.6
+        ],
+        [
+          "2022-09-01",
+          3.5
+        ],
+        [
+          "2022-10-01",
+          3.6
+        ],
+        [
+          "2022-11-01",
+          3.6
+        ],
+        [
+          "2022-12-01",
+          3.5
+        ],
+        [
+          "2023-01-01",
+          3.5
+        ],
+        [
+          "2023-02-01",
+          3.6
+        ],
+        [
+          "2023-03-01",
+          3.5
+        ],
+        [
+          "2023-04-01",
+          3.4
+        ],
+        [
+          "2023-05-01",
+          3.6
+        ],
+        [
+          "2023-06-01",
+          3.6
+        ],
+        [
+          "2023-07-01",
+          3.5
+        ],
+        [
+          "2023-08-01",
+          3.7
+        ],
+        [
+          "2023-09-01",
+          3.7
+        ],
+        [
+          "2023-10-01",
+          3.9
+        ],
+        [
+          "2023-11-01",
+          3.7
+        ],
+        [
+          "2023-12-01",
+          3.8
+        ],
+        [
+          "2024-01-01",
+          3.7
+        ],
+        [
+          "2024-02-01",
+          3.9
+        ],
+        [
+          "2024-03-01",
+          3.9
+        ],
+        [
+          "2024-04-01",
+          3.9
+        ],
+        [
+          "2024-05-01",
+          3.9
+        ],
+        [
+          "2024-06-01",
+          4.1
+        ],
+        [
+          "2024-07-01",
+          4.2
+        ],
+        [
+          "2024-08-01",
+          4.2
+        ],
+        [
+          "2024-09-01",
+          4.1
+        ],
+        [
+          "2024-10-01",
+          4.1
+        ],
+        [
+          "2024-11-01",
+          4.2
+        ],
+        [
+          "2024-12-01",
+          4.1
+        ],
+        [
+          "2025-01-01",
+          4.0
+        ],
+        [
+          "2025-02-01",
+          4.2
+        ],
+        [
+          "2025-03-01",
+          4.2
+        ],
+        [
+          "2025-04-01",
+          4.2
+        ],
+        [
+          "2025-05-01",
+          4.3
+        ],
+        [
+          "2025-06-01",
+          4.1
+        ],
+        [
+          "2025-07-01",
+          4.3
+        ],
+        [
+          "2025-08-01",
+          4.3
+        ],
+        [
+          "2025-09-01",
+          4.4
+        ],
+        [
+          "2025-11-01",
+          4.5
+        ],
+        [
+          "2025-12-01",
+          4.4
+        ],
+        [
+          "2026-01-01",
+          4.3
+        ],
+        [
+          "2026-02-01",
+          4.4
+        ],
+        [
+          "2026-03-01",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.3
+        ],
+        [
+          "2026-05-01",
+          4.3
+        ],
+        [
+          "2026-06-01",
+          4.2
+        ],
+        [
+          "2026-07-01",
+          4.1
+        ],
+        [
+          "2026-08-01",
+          4.1
+        ],
+        [
+          "2026-09-01",
+          4.2
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Unemployment Rate (UNRATE)",
+      "type": "line",
+      "x": [
+        "2016-09-01",
+        "2016-10-01",
+        "2016-11-01",
+        "2016-12-01",
+        "2017-01-01",
+        "2017-02-01",
+        "2017-03-01",
+        "2017-04-01",
+        "2017-05-01",
+        "2017-06-01",
+        "2017-07-01",
+        "2017-08-01",
+        "2017-09-01",
+        "2017-10-01",
+        "2017-11-01",
+        "2017-12-01",
+        "2018-01-01",
+        "2018-02-01",
+        "2018-03-01",
+        "2018-04-01",
+        "2018-05-01",
+        "2018-06-01",
+        "2018-07-01",
+        "2018-08-01",
+        "2018-09-01",
+        "2018-10-01",
+        "2018-11-01",
+        "2018-12-01",
+        "2019-01-01",
+        "2019-02-01",
+        "2019-03-01",
+        "2019-04-01",
+        "2019-05-01",
+        "2019-06-01",
+        "2019-07-01",
+        "2019-08-01",
+        "2019-09-01",
+        "2019-10-01",
+        "2019-11-01",
+        "2019-12-01",
+        "2020-01-01",
+        "2020-02-01",
+        "2020-03-01",
+        "2020-04-01",
+        "2020-05-01",
+        "2020-06-01",
+        "2020-07-01",
+        "2020-08-01",
+        "2020-09-01",
+        "2020-10-01",
+        "2020-11-01",
+        "2020-12-01",
+        "2021-01-01",
+        "2021-02-01",
+        "2021-03-01",
+        "2021-04-01",
+        "2021-05-01",
+        "2021-06-01",
+        "2021-07-01",
+        "2021-08-01",
+        "2021-09-01",
+        "2021-10-01",
+        "2021-11-01",
+        "2021-12-01",
+        "2022-01-01",
+        "2022-02-01",
+        "2022-03-01",
+        "2022-04-01",
+        "2022-05-01",
+        "2022-06-01",
+        "2022-07-01",
+        "2022-08-01",
+        "2022-09-01",
+        "2022-10-01",
+        "2022-11-01",
+        "2022-12-01",
+        "2023-01-01",
+        "2023-02-01",
+        "2023-03-01",
+        "2023-04-01",
+        "2023-05-01",
+        "2023-06-01",
+        "2023-07-01",
+        "2023-08-01",
+        "2023-09-01",
+        "2023-10-01",
+        "2023-11-01",
+        "2023-12-01",
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        5.0,
+        4.9,
+        4.7,
+        4.7,
+        4.7,
+        4.6,
+        4.4,
+        4.4,
+        4.4,
+        4.3,
+        4.3,
+        4.4,
+        4.3,
+        4.2,
+        4.2,
+        4.1,
+        4.0,
+        4.1,
+        4.0,
+        4.0,
+        3.8,
+        4.0,
+        3.8,
+        3.8,
+        3.7,
+        3.8,
+        3.8,
+        3.9,
+        4.0,
+        3.8,
+        3.8,
+        3.7,
+        3.6,
+        3.6,
+        3.7,
+        3.6,
+        3.5,
+        3.6,
+        3.6,
+        3.6,
+        3.6,
+        3.5,
+        4.4,
+        14.8,
+        13.2,
+        11.0,
+        10.2,
+        8.4,
+        7.8,
+        6.9,
+        6.7,
+        6.7,
+        6.4,
+        6.2,
+        6.1,
+        6.1,
+        5.8,
+        5.9,
+        5.4,
+        5.1,
+        4.7,
+        4.5,
+        4.1,
+        3.9,
+        4.0,
+        3.9,
+        3.7,
+        3.7,
+        3.6,
+        3.6,
+        3.5,
+        3.6,
+        3.5,
+        3.6,
+        3.6,
+        3.5,
+        3.5,
+        3.6,
+        3.5,
+        3.4,
+        3.6,
+        3.6,
+        3.5,
+        3.7,
+        3.7,
+        3.9,
+        3.7,
+        3.8,
+        3.7,
+        3.9,
+        3.9,
+        3.9,
+        3.9,
+        4.1,
+        4.2,
+        4.2,
+        4.1,
+        4.1,
+        4.2,
+        4.1,
+        4.0,
+        4.2,
+        4.2,
+        4.2,
+        4.3,
+        4.1,
+        4.3,
+        4.3,
+        4.4,
+        4.5,
+        4.4,
+        4.3,
+        4.4,
+        4.3,
+        4.3,
+        4.3,
+        4.2,
+        4.1,
+        4.1,
+        4.2
+      ],
+      "y_label": "Percent"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "UNRATE",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": {
+    "analyst": "**Macro – U.S. Labor Market Outlook**\n\n- **Current level** – Unemployment is at {{UNRATE.latest}} (September 2026)【[S1]】, a 0.1‑pp rise from August【[S1]】.  \n- **Historical comparison** – This sits below the 10‑year average of {{UNRATE.avg_10y}} and near the 10‑year low of {{UNRATE.min_10y}}【[S1]】, indicating a relatively tight labor market.  \n- **12‑month trend** – The rate fell by {{UNRATE.chg_1y}} over the past year【[S1]】, showing a deceleration in the decline (i.e., the unemployment rate is easing more slowly).  \n- **Labor‑market slack** – With the rate near the 10‑year low and a modest 12‑month improvement, slack is constrained; employers may face tighter hiring conditions.  \n- **Wage‑growth implications** – Low slack typically supports upward pressure on wages, which could feed into inflationary expectations if not offset by productivity gains.  \n- **Policy context** – The current unemployment trajectory suggests the labor market remains robust, but the slowing pace of improvement may signal the need for careful monitoring of future job creation and wage dynamics.",
+    "reasoner": "- **Current level** – Unemployment is at {{UNRATE.latest}} (September 2026)【[S1]】, a {{UNRATE.chg_1m}} rise from August【[S1]】.  \n- **Historical comparison** – This sits below the 10‑year average of {{UNRATE.avg_10y}} and near the 10‑year low of {{UNRATE.min_10y}}【[S1]】, indicating a relatively tight labor market.  \n- **12‑month trend** – The rate fell by {{UNRATE.chg_1y}} over the past year【[S1]】, indicating a modest improvement.  \n- **Labor‑market slack** – With the rate near the 10‑year low and a modest 12‑month improvement, slack is constrained; employers may face tighter hiring conditions.  \n- **Wage‑growth implications** – Low slack typically supports upward pressure on wages, which could feed into inflationary expectations if not offset by productivity gains.  \n- **Policy context** – The current unemployment trajectory suggests the labor market remains robust, but the modest improvement may signal the need for careful monitoring of future job creation and wage dynamics."
+  },
+  "validation": {
+    "counts": {
+      "figures": 18,
+      "verified": 10,
+      "derived": 8,
+      "unverified": 0
+    },
+    "figures": [
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 42,
+        "end": 46,
+        "status": "verified",
+        "matched": "Unemployment Rate, latest (September 2026)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Unemployment at 4.2% [S1] (September 2026) [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.latest",
+        "change_sign": null
+      },
+      {
+        "text": "September 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 53,
+        "end": 67,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Unemployment at 4.2% [S1] (September 2026) [S1].",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 77,
+        "end": 84,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "+0.1 pp [S1] rise from August, but −0.2 pp decline over the past year [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "−0.2 pp",
+        "value": 0.2,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 112,
+        "end": 119,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since September 2025",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "+0.1 pp [S1] rise from August, but −0.2 pp decline over the past year [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1y",
+        "change_sign": -1
+      },
+      {
+        "text": "4.5%",
+        "value": 4.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 188,
+        "end": 192,
+        "status": "verified",
+        "matched": "Unemployment Rate: average over the last 10y",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Rate below the 10‑year average 4.5% [S1] and near the 10‑year low 3.4% [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.avg_10y",
+        "change_sign": null
+      },
+      {
+        "text": "3.4%",
+        "value": 3.4,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 223,
+        "end": 227,
+        "status": "verified",
+        "matched": "Unemployment Rate: lowest value in the last 10y (April 2023)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Rate below the 10‑year average 4.5% [S1] and near the 10‑year low 3.4% [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.min_10y",
+        "change_sign": null
+      },
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 490,
+        "end": 494,
+        "status": "verified",
+        "matched": "Unemployment Rate, latest (September 2026)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Current level: 4.2% [S1] (September 2026) [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.latest",
+        "change_sign": null
+      },
+      {
+        "text": "September 2026",
+        "value": 0.0,
+        "unit": "date",
+        "tolerance": 0.0,
+        "start": 501,
+        "end": 515,
+        "status": "verified",
+        "matched": "observation / as-of date in fetched data",
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Current level: 4.2% [S1] (September 2026) [S1].",
+        "origin": "free",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 543,
+        "end": 550,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- 1‑month change: +0.1 pp [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "−0.2 pp",
+        "value": 0.2,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 578,
+        "end": 585,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since September 2025",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- 12‑month change: −0.2 pp [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1y",
+        "change_sign": -1
+      },
+      {
+        "text": "4.5%",
+        "value": 4.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 622,
+        "end": 626,
+        "status": "verified",
+        "matched": "Unemployment Rate: average over the last 10y",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- 10‑year comparison: below 4.5% [S1], near 3.4% [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.avg_10y",
+        "change_sign": null
+      },
+      {
+        "text": "3.4%",
+        "value": 3.4,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 638,
+        "end": 642,
+        "status": "verified",
+        "matched": "Unemployment Rate: lowest value in the last 10y (April 2023)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- 10‑year comparison: below 4.5% [S1], near 3.4% [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.min_10y",
+        "change_sign": null
+      },
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1110,
+        "end": 1114,
+        "status": "verified",
+        "matched": "Unemployment Rate, latest (September 2026)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Base** – Unemployment remains near 4.2% [S1] with +0.1 pp rise; wage growth moderate; inflationary pressure contained.",
+        "origin": "fact",
+        "fact_id": "UNRATE.latest",
+        "change_sign": null
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1125,
+        "end": 1132,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Base** – Unemployment remains near 4.2% [S1] with +0.1 pp rise; wage growth moderate; inflationary pressure contained.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "−0.2 pp",
+        "value": 0.2,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1233,
+        "end": 1240,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since September 2025",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Upside** – Unemployment falls by −0.2 pp [S1] or more; slack eases further; wage growth accelerates; potential for higher inflation.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1y",
+        "change_sign": -1
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1374,
+        "end": 1381,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- **Downside** – Unemployment rises by +0.1 pp [S1] or more; slack expands; wage growth slows; inflationary pressure eases.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1527,
+        "end": 1534,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Rapid rise in unemployment beyond +0.1 pp [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2194,
+        "end": 2198,
+        "status": "verified",
+        "matched": "Unemployment Rate, latest (September 2026)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Current unemployment at 4.2% [S1] signals a tight labor market with constrained slack.",
+        "origin": "fact",
+        "fact_id": "UNRATE.latest",
+        "change_sign": null
+      }
+    ],
+    "citations": {
+      "markers": 27,
+      "dangling": [],
+      "uncited_paragraphs": [],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: Unemployment Rate (UNRATE)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7"
+    ],
+    "directions": [],
+    "comparisons": [],
+    "wording": {
+      "history": [],
+      "trend": [],
+      "rate": []
+    },
+    "lines": [
+      {
+        "start": 24,
+        "end": 77,
+        "kind": "data"
+      },
+      {
+        "start": 77,
+        "end": 155,
+        "kind": "data"
+      },
+      {
+        "start": 155,
+        "end": 236,
+        "kind": "data"
+      },
+      {
+        "start": 236,
+        "end": 332,
+        "kind": "interpretation"
+      },
+      {
+        "start": 332,
+        "end": 426,
+        "kind": "interpretation"
+      },
+      {
+        "start": 448,
+        "end": 473,
+        "kind": "interpretation"
+      },
+      {
+        "start": 473,
+        "end": 525,
+        "kind": "data"
+      },
+      {
+        "start": 525,
+        "end": 559,
+        "kind": "data"
+      },
+      {
+        "start": 559,
+        "end": 594,
+        "kind": "data"
+      },
+      {
+        "start": 594,
+        "end": 651,
+        "kind": "data"
+      },
+      {
+        "start": 651,
+        "end": 701,
+        "kind": "interpretation"
+      },
+      {
+        "start": 701,
+        "end": 770,
+        "kind": "interpretation"
+      },
+      {
+        "start": 770,
+        "end": 853,
+        "kind": "interpretation"
+      },
+      {
+        "start": 853,
+        "end": 959,
+        "kind": "interpretation"
+      },
+      {
+        "start": 960,
+        "end": 1053,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1071,
+        "end": 1196,
+        "kind": "data"
+      },
+      {
+        "start": 1196,
+        "end": 1335,
+        "kind": "data"
+      },
+      {
+        "start": 1335,
+        "end": 1461,
+        "kind": "data"
+      },
+      {
+        "start": 1462,
+        "end": 1491,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1491,
+        "end": 1543,
+        "kind": "data"
+      },
+      {
+        "start": 1543,
+        "end": 1614,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1614,
+        "end": 1666,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1666,
+        "end": 1727,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1727,
+        "end": 1775,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1776,
+        "end": 1816,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1816,
+        "end": 1903,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1903,
+        "end": 1991,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1991,
+        "end": 2065,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2065,
+        "end": 2150,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2168,
+        "end": 2259,
+        "kind": "data"
+      },
+      {
+        "start": 2259,
+        "end": 2342,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2342,
+        "end": 2443,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2444,
+        "end": 2486,
+        "kind": "interpretation"
+      }
+    ],
+    "placeholders": true,
+    "unknown_facts": [],
+    "open_issues": 0,
+    "summary": "18 of 18 figures verified against source data (10 exact, 8 derived); 0 flagged. 16 figure(s) inserted from the fact table, 0 quoted from web sources, 0 typed directly."
+  },
+  "run_meta": {
+    "run_id": "20261018-204741-ffd5dd",
+    "timestamp": "2026-10-19T00:47:41+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 300.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    },
+    "pipeline": "v3"
+  }
+}

@@ -1,0 +1,2671 @@
+{
+  "id": "F02",
+  "set": "fresh",
+  "category": "macro",
+  "question": "Does the Sahm rule indicator point to a recession right now?",
+  "ticker": null,
+  "expected_tags": [
+    "macro"
+  ],
+  "pipeline": "v3",
+  "run_utc": "2026-10-19T01:31:51+00:00",
+  "elapsed_sec": 93.5,
+  "router_tags": [
+    "macro"
+  ],
+  "tags": [
+    "macro"
+  ],
+  "plan": {
+    "topics": [
+      "macro"
+    ],
+    "series": [
+      "SAHMREALTIME",
+      "UNRATE",
+      "GDPC1"
+    ],
+    "steps": [
+      "1. Pull the most recent monthly value of the Sahm Rule Recession Indicator (SAHM) from the data catalog. 2. Verify the threshold: a value above 0 indicates a recessionary signal. 3. Compare the latest SAHM reading with the preceding month’s value to check for a sustained rise above zero. 4. Cross‑check with complementary macro data—look at the latest unemployment rate (UNRATE) and the most recent GDP growth figure—to confirm whether the recession signal aligns with other economic indicators. 5. Summarize whether the current SAHM reading, in light of the other data, points to a recession at this time."
+    ],
+    "source": "planner"
+  },
+  "plan_raw": "{\"topics\":[\"macro\"],\"series\":[\"SAHM\",\"UNRATE\",\"GDP\"],\"steps\":[\"1. Pull the most recent monthly value of the Sahm Rule Recession Indicator (SAHM) from the data catalog. 2. Verify the threshold: a value above 0 indicates a recessionary signal. 3. Compare the latest SAHM reading with the preceding month’s value to check for a sustained rise above zero. 4. Cross‑check with complementary macro data—look at the latest unemployment rate (UNRATE) and the most recent GDP growth figure—to confirm whether the recession signal aligns with other economic indicators. 5. Summarize whether the current SAHM reading, in light of the other data, points to a recession at this time.\"]}",
+  "tier2": {
+    "macro": "recession_probabilities"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Sahm Rule indicator is 0.00% [S7], exactly at the 0.00% (assumption) threshold that signals a recession.  \n- Unemployment rate is 4.2% [S2] and has risen +0.1 pp [S2] from the previous month.  \n- Real GDP is $24.41 trillion [S3] with quarterly growth +0.6% [S3] and an annualized pace of +2.2% [S3].  \n- Current data do not trigger the Sahm Rule; the economy remains in expansionary territory.  \n- A modest uptick in unemployment and a slight slowdown in GDP growth are the primary monitoring points.  \n\n**Core Analysis – Macro**  \n- **Sahm Rule**: 0.00% [S7] sits at the 0.00% (assumption) threshold; the month‑over‑month change is +0.07 pp [S7] from -0.07% [S7].  \n- **Unemployment**: 4.2% [S2] with a recent rise of +0.1 pp [S2]; still below the 10‑year low of 3.4% [S2].  \n- **GDP**: $24.41 trillion [S3] with a quarterly increase of +0.6% [S3] and an annualized growth of +2.2% [S3].  \n- **Recession Signal**: Because the Sahm Rule is at, not above, the threshold and GDP growth remains positive, the indicator does not signal an ongoing recession.  \n\n**Scenarios**  \n- **Base**: Sahm Rule remains at threshold; unemployment continues to rise modestly; GDP growth stays positive but may decelerate.  \n- **Upside**: A further rise in unemployment pushes the Sahm Rule above 0.00% (assumption), triggering a recession signal; GDP growth could turn negative.  \n- **Downside**: Unemployment stabilizes or falls; GDP growth accelerates beyond +2.2% [S3], reinforcing expansion.  \n\n**Key Risks & Monitoring**  \n- **Unemployment Momentum**: A sustained rise beyond +0.1 pp [S2] could elevate the Sahm Rule.  \n- **GDP Deceleration**: A decline in quarterly growth below +0.6% [S3] would weaken the expansion narrative.  \n- **External Shocks**: Commodity price swings or geopolitical events could alter labor market dynamics.  \n\n**Portfolio / Decision Implications**  \n- **Defensive Tilt**: Consider increasing exposure to high‑quality bonds and defensive equities to hedge against potential recessionary pressure.  \n- **Liquidity**: Maintain a higher cash buffer to capitalize on opportunistic buying if the Sahm Rule triggers.  \n- **Sector Allocation**: Reduce cyclical exposure; increase allocation to utilities, consumer staples, and healthcare.  \n\n**Conclusion**  \nThe Sahm Rule indicator is at the recession threshold but has not yet crossed it; unemployment is rising yet remains moderate, and GDP growth is still positive. Current macro conditions suggest the economy is in a fragile expansion. Vigilant monitoring of unemployment trends and GDP performance will be essential to adjust portfolio positioning in response to any shift toward recessionary dynamics.",
+  "report_template": "**Executive Summary**  \n- Sahm Rule indicator is {{SAHM.latest}} [S7], exactly at the {{assume: 0.00%}} threshold that signals a recession.  \n- Unemployment rate is {{UNRATE.latest}} [S2] and has risen {{UNRATE.chg_1m}} [S2] from the previous month.  \n- Real GDP is {{GDP.latest}} [S3] with quarterly growth {{GDP.pct_1q}} [S3] and an annualized pace of {{GDP.ann_growth_1q}} [S3].  \n- Current data do not trigger the Sahm Rule; the economy remains in expansionary territory.  \n- A modest uptick in unemployment and a slight slowdown in GDP growth are the primary monitoring points.  \n\n**Core Analysis – Macro**  \n- **Sahm Rule**: {{SAHM.latest}} [S7] sits at the {{assume: 0.00%}} threshold; the month‑over‑month change is {{SAHM.chg_1m}} [S7] from {{SAHM.prev_1m}} [S7].  \n- **Unemployment**: {{UNRATE.latest}} [S2] with a recent rise of {{UNRATE.chg_1m}} [S2]; still below the 10‑year low of {{UNRATE.min_10y}} [S2].  \n- **GDP**: {{GDP.latest}} [S3] with a quarterly increase of {{GDP.pct_1q}} [S3] and an annualized growth of {{GDP.ann_growth_1q}} [S3].  \n- **Recession Signal**: Because the Sahm Rule is at, not above, the threshold and GDP growth remains positive, the indicator does not signal an ongoing recession.  \n\n**Scenarios**  \n- **Base**: Sahm Rule remains at threshold; unemployment continues to rise modestly; GDP growth stays positive but may decelerate.  \n- **Upside**: A further rise in unemployment pushes the Sahm Rule above {{assume: 0.00%}}, triggering a recession signal; GDP growth could turn negative.  \n- **Downside**: Unemployment stabilizes or falls; GDP growth accelerates beyond {{GDP.ann_growth_1q}} [S3], reinforcing expansion.  \n\n**Key Risks & Monitoring**  \n- **Unemployment Momentum**: A sustained rise beyond {{UNRATE.chg_1m}} [S2] could elevate the Sahm Rule.  \n- **GDP Deceleration**: A decline in quarterly growth below {{GDP.pct_1q}} [S3] would weaken the expansion narrative.  \n- **External Shocks**: Commodity price swings or geopolitical events could alter labor market dynamics.  \n\n**Portfolio / Decision Implications**  \n- **Defensive Tilt**: Consider increasing exposure to high‑quality bonds and defensive equities to hedge against potential recessionary pressure.  \n- **Liquidity**: Maintain a higher cash buffer to capitalize on opportunistic buying if the Sahm Rule triggers.  \n- **Sector Allocation**: Reduce cyclical exposure; increase allocation to utilities, consumer staples, and healthcare.  \n\n**Conclusion**  \nThe Sahm Rule indicator is at the recession threshold but has not yet crossed it; unemployment is rising yet remains moderate, and GDP growth is still positive. Current macro conditions suggest the economy is in a fragile expansion. Vigilant monitoring of unemployment trends and GDP performance will be essential to adjust portfolio positioning in response to any shift toward recessionary dynamics.",
+  "draft_report_text": "**Executive Summary**  \n- Sahm Rule indicator is 0.00% [S7], exactly at the 0.00 % threshold that signals a recession.  \n- Unemployment rate is 4.2% [S2] and has risen +0.1 pp [S2] from the previous month.  \n- Real GDP is $24.41 trillion [S3] with quarterly growth +0.6% [S3] and an annualized pace of +2.2% [S3].  \n- Current data do not trigger the Sahm Rule; the economy remains in expansionary territory.  \n- A modest uptick in unemployment and a slight slowdown in GDP growth are the primary monitoring points.\n\n**Core Analysis – Macro**  \n- **Sahm Rule**: 0.00% [S7] sits at the 0.00 % threshold; the month‑over‑month change is +0.07 pp [S7] from -0.07% [S7].  \n- **Unemployment**: 4.2% [S2] with a recent rise of +0.1 pp [S2]; still below the 10‑year low of 3.4% [S2].  \n- **GDP**: $24.41 trillion [S3] with a quarterly increase of +0.6% [S3] and an annualized growth of +2.2% [S3].  \n- **Recession Signal**: Because the Sahm Rule is at, not above, the threshold and GDP growth remains positive, the indicator does not signal an ongoing recession.\n\n**Scenarios**  \n- **Base**: Sahm Rule remains at threshold; unemployment continues to rise modestly; GDP growth stays positive but may decelerate.  \n- **Upside**: A further rise in unemployment pushes the Sahm Rule above 0.00 %, triggering a recession signal; GDP growth could turn negative.  \n- **Downside**: Unemployment stabilizes or falls; GDP growth accelerates beyond +2.2% [S3], reinforcing expansion.\n\n**Key Risks & Monitoring**  \n- **Unemployment Momentum**: A sustained rise beyond +0.1 pp [S2] could elevate the Sahm Rule.  \n- **GDP Deceleration**: A decline in quarterly growth below +0.6% [S3] would weaken the expansion narrative.  \n- **External Shocks**: Commodity price swings or geopolitical events could alter labor market dynamics.\n\n**Portfolio / Decision Implications**  \n- **Defensive Tilt**: Consider increasing exposure to high‑quality bonds and defensive equities to hedge against potential recessionary pressure.  \n- **Liquidity**: Maintain a higher cash buffer to capitalize on opportunistic buying if the Sahm Rule triggers.  \n- **Sector Allocation**: Reduce cyclical exposure; increase allocation to utilities, consumer staples, and healthcare.\n\n**Conclusion**  \nThe Sahm Rule indicator is at the recession threshold but has not yet crossed it; unemployment is rising yet remains moderate, and GDP growth is still positive. Current macro conditions suggest the economy is in a fragile expansion. Vigilant monitoring of unemployment trends and GDP performance will be essential to adjust portfolio positioning in response to any shift toward recessionary dynamics.",
+  "draft_report_template": "**Executive Summary**  \n- Sahm Rule indicator is {{SAHM.latest}} [S7], exactly at the 0.00 % threshold that signals a recession.  \n- Unemployment rate is {{UNRATE.latest}} [S2] and has risen {{UNRATE.chg_1m}} [S2] from the previous month.  \n- Real GDP is {{GDP.latest}} [S3] with quarterly growth {{GDP.pct_1q}} [S3] and an annualized pace of {{GDP.ann_growth_1q}} [S3].  \n- Current data do not trigger the Sahm Rule; the economy remains in expansionary territory.  \n- A modest uptick in unemployment and a slight slowdown in GDP growth are the primary monitoring points.\n\n**Core Analysis – Macro**  \n- **Sahm Rule**: {{SAHM.latest}} [S7] sits at the 0.00 % threshold; the month‑over‑month change is {{SAHM.chg_1m}} [S7] from {{SAHM.prev_1m}} [S7].  \n- **Unemployment**: {{UNRATE.latest}} [S2] with a recent rise of {{UNRATE.chg_1m}} [S2]; still below the 10‑year low of {{UNRATE.min_10y}} [S2].  \n- **GDP**: {{GDP.latest}} [S3] with a quarterly increase of {{GDP.pct_1q}} [S3] and an annualized growth of {{GDP.ann_growth_1q}} [S3].  \n- **Recession Signal**: Because the Sahm Rule is at, not above, the threshold and GDP growth remains positive, the indicator does not signal an ongoing recession.\n\n**Scenarios**  \n- **Base**: Sahm Rule remains at threshold; unemployment continues to rise modestly; GDP growth stays positive but may decelerate.  \n- **Upside**: A further rise in unemployment pushes the Sahm Rule above 0.00 %, triggering a recession signal; GDP growth could turn negative.  \n- **Downside**: Unemployment stabilizes or falls; GDP growth accelerates beyond {{GDP.ann_growth_1q}} [S3], reinforcing expansion.\n\n**Key Risks & Monitoring**  \n- **Unemployment Momentum**: A sustained rise beyond {{UNRATE.chg_1m}} [S2] could elevate the Sahm Rule.  \n- **GDP Deceleration**: A decline in quarterly growth below {{GDP.pct_1q}} [S3] would weaken the expansion narrative.  \n- **External Shocks**: Commodity price swings or geopolitical events could alter labor market dynamics.\n\n**Portfolio / Decision Implications**  \n- **Defensive Tilt**: Consider increasing exposure to high‑quality bonds and defensive equities to hedge against potential recessionary pressure.  \n- **Liquidity**: Maintain a higher cash buffer to capitalize on opportunistic buying if the Sahm Rule triggers.  \n- **Sector Allocation**: Reduce cyclical exposure; increase allocation to utilities, consumer staples, and healthcare.\n\n**Conclusion**  \nThe Sahm Rule indicator is at the recession threshold but has not yet crossed it; unemployment is rising yet remains moderate, and GDP growth is still positive. Current macro conditions suggest the economy is in a fragile expansion. Vigilant monitoring of unemployment trends and GDP performance will be essential to adjust portfolio positioning in response to any shift toward recessionary dynamics.",
+  "repair": {
+    "enabled": true,
+    "rounds": [
+      {
+        "feedback": "VALIDATION FEEDBACK (deterministic checks of your draft against the fetched data):\n1. \"0.00 %\" in: \"- Sahm Rule indicator is 0.00% [S7], exactly at the 0.00 % threshold that signals a recession.\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.\n2. \"0.00 %\" in: \"- **Sahm Rule**: 0.00% [S7] sits at the 0.00 % threshold; the month‑over‑month change is +0.07 pp [S7] from -0.07% [S7].\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.\n3. \"0.00 %\" in: \"- **Upside**: A further rise in unemployment pushes the Sahm Rule above 0.00 %, triggering a recession signal; GDP growth could turn negative.\" — typed directly; if it is a value from the data, write its {{ID}} from the FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; otherwise remove it.",
+        "open_issues_before": 3,
+        "summary_before": "21 of 21 figures verified against source data (11 exact, 10 derived); 0 flagged. 18 figure(s) inserted from the fact table, 0 quoted from web sources, 3 typed directly.",
+        "accepted": true,
+        "open_issues_after": 0,
+        "summary_after": "18 of 21 figures verified against source data (8 exact, 10 derived); 3 flagged (3 labelled as assumptions). 18 figure(s) inserted from the fact table, 0 quoted from web sources, 0 typed directly.",
+        "revised_report_text": "**Executive Summary**  \n- Sahm Rule indicator is {{SAHM.latest}} [S7], exactly at the {{assume: 0.00%}} threshold that signals a recession.  \n- Unemployment rate is {{UNRATE.latest}} [S2] and has risen {{UNRATE.chg_1m}} [S2] from the previous month.  \n- Real GDP is {{GDP.latest}} [S3] with quarterly growth {{GDP.pct_1q}} [S3] and an annualized pace of {{GDP.ann_growth_1q}} [S3].  \n- Current data do not trigger the Sahm Rule; the economy remains in expansionary territory.  \n- A modest uptick in unemployment and a slight slowdown in GDP growth are the primary monitoring points.  \n\n**Core Analysis – Macro**  \n- **Sahm Rule**: {{SAHM.latest}} [S7] sits at the {{assume: 0.00%}} threshold; the month‑over‑month change is {{SAHM.chg_1m}} [S7] from {{SAHM.prev_1m}} [S7].  \n- **Unemployment**: {{UNRATE.latest}} [S2] with a recent rise of {{UNRATE.chg_1m}} [S2]; still below the 10‑year low of {{UNRATE.min_10y}} [S2].  \n- **GDP**: {{GDP.latest}} [S3] with a quarterly increase of {{GDP.pct_1q}} [S3] and an annualized growth of {{GDP.ann_growth_1q}} [S3].  \n- **Recession Signal**: Because the Sahm Rule is at, not above, the threshold and GDP growth remains positive, the indicator does not signal an ongoing recession.  \n\n**Scenarios**  \n- **Base**: Sahm Rule remains at threshold; unemployment continues to rise modestly; GDP growth stays positive but may decelerate.  \n- **Upside**: A further rise in unemployment pushes the Sahm Rule above {{assume: 0.00%}}, triggering a recession signal; GDP growth could turn negative.  \n- **Downside**: Unemployment stabilizes or falls; GDP growth accelerates beyond {{GDP.ann_growth_1q}} [S3], reinforcing expansion.  \n\n**Key Risks & Monitoring**  \n- **Unemployment Momentum**: A sustained rise beyond {{UNRATE.chg_1m}} [S2] could elevate the Sahm Rule.  \n- **GDP Deceleration**: A decline in quarterly growth below {{GDP.pct_1q}} [S3] would weaken the expansion narrative.  \n- **External Shocks**: Commodity price swings or geopolitical events could alter labor market dynamics.  \n\n**Portfolio / Decision Implications**  \n- **Defensive Tilt**: Consider increasing exposure to high‑quality bonds and defensive equities to hedge against potential recessionary pressure.  \n- **Liquidity**: Maintain a higher cash buffer to capitalize on opportunistic buying if the Sahm Rule triggers.  \n- **Sector Allocation**: Reduce cyclical exposure; increase allocation to utilities, consumer staples, and healthcare.  \n\n**Conclusion**  \nThe Sahm Rule indicator is at the recession threshold but has not yet crossed it; unemployment is rising yet remains moderate, and GDP growth is still positive. Current macro conditions suggest the economy is in a fragile expansion. Vigilant monitoring of unemployment trends and GDP performance will be essential to adjust portfolio positioning in response to any shift toward recessionary dynamics."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "FRED series SAHMREALTIME: Real-time Sahm Rule Recession Indicator",
+      "url": "https://fred.stlouisfed.org/series/SAHMREALTIME",
+      "source": "FRED",
+      "snippet": "Monthly series in Percentage Points; latest observation 0 on 2026-09-01.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series UNRATE: Unemployment Rate",
+      "url": "https://fred.stlouisfed.org/series/UNRATE",
+      "source": "FRED",
+      "snippet": "Monthly series in Percent; latest observation 4.2 on 2026-09-01.",
+      "id": "S2"
+    },
+    {
+      "title": "FRED series GDPC1: Real Gross Domestic Product",
+      "url": "https://fred.stlouisfed.org/series/GDPC1",
+      "source": "FRED",
+      "snippet": "Quarterly series in Billions of Chained 2017 Dollars; latest observation 24408 on 2026-04-01.",
+      "id": "S3"
+    },
+    {
+      "title": "Sahm Rule Recession Indicator | Current Market Valuation",
+      "url": "https://www.currentmarketvaluation.com/models/sahm-rule.php",
+      "source": "web (Tavily)",
+      "snippet": "Most recently, (as of May 31, 2026) US unemployment is at 4.3%, with a three-month average of 4.30. This is 0.13% above its low for the previous 12 months. Therefore, the Sahm Rule indicates a Normal risk that we are currently in a recession.  The chart below shows the Sahm Rule indicator over time, as well as each sub",
+      "id": "S4"
+    },
+    {
+      "title": "Sahm rule - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sahm_rule",
+      "source": "web (Tavily)",
+      "snippet": "In macroeconomics, the Sahm rule, or Sahm rule recession indicator, is a heuristic measure by the United States' Federal Reserve for determining when an economy has entered a recession. It is useful in real-time evaluation of the business cycle and relies on monthly unemployment data from the Bureau of Labor Statistics",
+      "id": "S5"
+    },
+    {
+      "title": "Works like a Sahm: Recession indicators and the Sahm rule",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0165176524003628",
+      "source": "web (Tavily)",
+      "snippet": "Even if unintentional, the Sahm rule is now being used as a recession predictor, thus how well it performs in such a role has become an important question. In this paper we ask if the Sahm rule indeed predicts or indicates recessions as implied by Economic commentators (Krugman, 2023, Summers, 2022). We begin with a si",
+      "id": "S6"
+    },
+    {
+      "title": "Real-time Sahm Rule Recession Indicator (SAHMREALTIME) | FRED | St. Louis Fed",
+      "url": "https://fred.stlouisfed.org/series/SAHMREALTIME",
+      "source": "web (Tavily)",
+      "snippet": "Sahm Recession Indicator signals the start of a recession when the three-month moving average of the national unemployment rate (U3) rises by 0.50 percentage points or more relative to the minimum of the three-month averages from the previous 12 months. [...] Sahm Recession Indicator signals the start of a recession wh",
+      "id": "S7"
+    },
+    {
+      "title": "Sahm-thing more on the Sahm rule - by Claudia Sahm",
+      "url": "https://stayathomemacro.substack.com/p/sahm-thing-more-on-the-sahm-rule",
+      "source": "web (Tavily)",
+      "snippet": "The Sahm rule is a recession indicator, not a recession forecast. Applied to historical data, as it was available in real-time, it has been triggered early in every recession since 1970. It had only two false positives since 1959—when the rule hit 0.50 or more, but the economy was not a recession. [...] That would almo",
+      "id": "S8"
+    },
+    {
+      "title": "What we learned about recession indicators, rules, and triggers after the pandemic | The Budget Lab",
+      "url": "https://budgetlab.yale.edu/research/what-we-learned-about-recession-indicators-rules-and-triggers-after-pandemic",
+      "source": "web (Tavily)",
+      "snippet": "Early each month, the Bureau of Labor Statistics reports the national unemployment rate as of just a few weeks prior. The Sahm Indicator is a function of the three-month trailing average of the seasonally adjusted unemployment rate: starting with that current value, subtract the lowest three-month average from the prev",
+      "id": "S9"
+    }
+  ],
+  "citations_used": [
+    "S2",
+    "S3",
+    "S7"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "SAHMREALTIME",
+      "frequency": "monthly",
+      "units": "Percentage Points",
+      "last_date": "2026-09-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/SAHMREALTIME",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2016-09-01",
+          0.1
+        ],
+        [
+          "2016-10-01",
+          0.1
+        ],
+        [
+          "2016-11-01",
+          0.0
+        ],
+        [
+          "2016-12-01",
+          -0.07
+        ],
+        [
+          "2017-01-01",
+          0.0
+        ],
+        [
+          "2017-02-01",
+          0.03
+        ],
+        [
+          "2017-03-01",
+          -0.03
+        ],
+        [
+          "2017-04-01",
+          -0.13
+        ],
+        [
+          "2017-05-01",
+          -0.13
+        ],
+        [
+          "2017-06-01",
+          -0.03
+        ],
+        [
+          "2017-07-01",
+          -0.03
+        ],
+        [
+          "2017-08-01",
+          0.03
+        ],
+        [
+          "2017-09-01",
+          -0.03
+        ],
+        [
+          "2017-10-01",
+          -0.07
+        ],
+        [
+          "2017-11-01",
+          -0.1
+        ],
+        [
+          "2017-12-01",
+          -0.03
+        ],
+        [
+          "2018-01-01",
+          0.0
+        ],
+        [
+          "2018-02-01",
+          0.0
+        ],
+        [
+          "2018-03-01",
+          0.0
+        ],
+        [
+          "2018-04-01",
+          -0.07
+        ],
+        [
+          "2018-05-01",
+          -0.1
+        ],
+        [
+          "2018-06-01",
+          -0.03
+        ],
+        [
+          "2018-07-01",
+          0.0
+        ],
+        [
+          "2018-08-01",
+          0.03
+        ],
+        [
+          "2018-09-01",
+          -0.07
+        ],
+        [
+          "2018-10-01",
+          -0.07
+        ],
+        [
+          "2018-11-01",
+          -0.07
+        ],
+        [
+          "2018-12-01",
+          0.07
+        ],
+        [
+          "2019-01-01",
+          0.13
+        ],
+        [
+          "2019-02-01",
+          0.17
+        ],
+        [
+          "2019-03-01",
+          0.13
+        ],
+        [
+          "2019-04-01",
+          0.0
+        ],
+        [
+          "2019-05-01",
+          -0.07
+        ],
+        [
+          "2019-06-01",
+          -0.03
+        ],
+        [
+          "2019-07-01",
+          0.03
+        ],
+        [
+          "2019-08-01",
+          0.07
+        ],
+        [
+          "2019-09-01",
+          0.0
+        ],
+        [
+          "2019-10-01",
+          -0.03
+        ],
+        [
+          "2019-11-01",
+          -0.07
+        ],
+        [
+          "2019-12-01",
+          0.0
+        ],
+        [
+          "2020-01-01",
+          0.0
+        ],
+        [
+          "2020-02-01",
+          0.0
+        ],
+        [
+          "2020-03-01",
+          0.3
+        ],
+        [
+          "2020-04-01",
+          4.0
+        ],
+        [
+          "2020-05-01",
+          7.27
+        ],
+        [
+          "2020-06-01",
+          9.5
+        ],
+        [
+          "2020-07-01",
+          8.0
+        ],
+        [
+          "2020-08-01",
+          6.37
+        ],
+        [
+          "2020-09-01",
+          5.3
+        ],
+        [
+          "2020-10-01",
+          4.2
+        ],
+        [
+          "2020-11-01",
+          3.63
+        ],
+        [
+          "2020-12-01",
+          3.23
+        ],
+        [
+          "2021-01-01",
+          3.03
+        ],
+        [
+          "2021-02-01",
+          2.87
+        ],
+        [
+          "2021-03-01",
+          2.33
+        ],
+        [
+          "2021-04-01",
+          -0.07
+        ],
+        [
+          "2021-05-01",
+          -0.13
+        ],
+        [
+          "2021-06-01",
+          -0.03
+        ],
+        [
+          "2021-07-01",
+          -0.23
+        ],
+        [
+          "2021-08-01",
+          -0.2
+        ],
+        [
+          "2021-09-01",
+          -0.37
+        ],
+        [
+          "2021-10-01",
+          -0.27
+        ],
+        [
+          "2021-11-01",
+          -0.33
+        ],
+        [
+          "2021-12-01",
+          -0.27
+        ],
+        [
+          "2022-01-01",
+          -0.2
+        ],
+        [
+          "2022-02-01",
+          -0.13
+        ],
+        [
+          "2022-03-01",
+          -0.1
+        ],
+        [
+          "2022-04-01",
+          -0.13
+        ],
+        [
+          "2022-05-01",
+          -0.07
+        ],
+        [
+          "2022-06-01",
+          0.0
+        ],
+        [
+          "2022-07-01",
+          -0.03
+        ],
+        [
+          "2022-08-01",
+          0.03
+        ],
+        [
+          "2022-09-01",
+          0.0
+        ],
+        [
+          "2022-10-01",
+          0.07
+        ],
+        [
+          "2022-11-01",
+          0.07
+        ],
+        [
+          "2022-12-01",
+          0.03
+        ],
+        [
+          "2023-01-01",
+          -0.07
+        ],
+        [
+          "2023-02-01",
+          0.0
+        ],
+        [
+          "2023-03-01",
+          0.0
+        ],
+        [
+          "2023-04-01",
+          0.0
+        ],
+        [
+          "2023-05-01",
+          0.03
+        ],
+        [
+          "2023-06-01",
+          0.07
+        ],
+        [
+          "2023-07-01",
+          0.1
+        ],
+        [
+          "2023-08-01",
+          0.13
+        ],
+        [
+          "2023-09-01",
+          0.2
+        ],
+        [
+          "2023-10-01",
+          0.33
+        ],
+        [
+          "2023-11-01",
+          0.3
+        ],
+        [
+          "2023-12-01",
+          0.23
+        ],
+        [
+          "2024-01-01",
+          0.2
+        ],
+        [
+          "2024-02-01",
+          0.27
+        ],
+        [
+          "2024-03-01",
+          0.3
+        ],
+        [
+          "2024-04-01",
+          0.37
+        ],
+        [
+          "2024-05-01",
+          0.37
+        ],
+        [
+          "2024-06-01",
+          0.43
+        ],
+        [
+          "2024-07-01",
+          0.53
+        ],
+        [
+          "2024-08-01",
+          0.57
+        ],
+        [
+          "2024-09-01",
+          0.5
+        ],
+        [
+          "2024-10-01",
+          0.43
+        ],
+        [
+          "2024-11-01",
+          0.43
+        ],
+        [
+          "2024-12-01",
+          0.4
+        ],
+        [
+          "2025-01-01",
+          0.37
+        ],
+        [
+          "2025-02-01",
+          0.27
+        ],
+        [
+          "2025-03-01",
+          0.27
+        ],
+        [
+          "2025-04-01",
+          0.27
+        ],
+        [
+          "2025-05-01",
+          0.27
+        ],
+        [
+          "2025-06-01",
+          0.17
+        ],
+        [
+          "2025-07-01",
+          0.1
+        ],
+        [
+          "2025-08-01",
+          0.13
+        ],
+        [
+          "2025-09-01",
+          0.23
+        ],
+        [
+          "2025-11-01",
+          0.43
+        ],
+        [
+          "2025-12-01",
+          0.35
+        ],
+        [
+          "2026-01-01",
+          0.3
+        ],
+        [
+          "2026-02-01",
+          0.27
+        ],
+        [
+          "2026-03-01",
+          0.2
+        ],
+        [
+          "2026-04-01",
+          0.13
+        ],
+        [
+          "2026-05-01",
+          0.1
+        ],
+        [
+          "2026-06-01",
+          0.07
+        ],
+        [
+          "2026-07-01",
+          -0.03
+        ],
+        [
+          "2026-08-01",
+          -0.07
+        ],
+        [
+          "2026-09-01",
+          0.0
+        ]
+      ]
+    },
+    {
+      "title": "FRED: Unemployment Rate (UNRATE)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "UNRATE",
+      "frequency": "monthly",
+      "units": "Percent",
+      "last_date": "2026-09-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/UNRATE",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2016-09-01",
+          5.0
+        ],
+        [
+          "2016-10-01",
+          4.9
+        ],
+        [
+          "2016-11-01",
+          4.7
+        ],
+        [
+          "2016-12-01",
+          4.7
+        ],
+        [
+          "2017-01-01",
+          4.7
+        ],
+        [
+          "2017-02-01",
+          4.6
+        ],
+        [
+          "2017-03-01",
+          4.4
+        ],
+        [
+          "2017-04-01",
+          4.4
+        ],
+        [
+          "2017-05-01",
+          4.4
+        ],
+        [
+          "2017-06-01",
+          4.3
+        ],
+        [
+          "2017-07-01",
+          4.3
+        ],
+        [
+          "2017-08-01",
+          4.4
+        ],
+        [
+          "2017-09-01",
+          4.3
+        ],
+        [
+          "2017-10-01",
+          4.2
+        ],
+        [
+          "2017-11-01",
+          4.2
+        ],
+        [
+          "2017-12-01",
+          4.1
+        ],
+        [
+          "2018-01-01",
+          4.0
+        ],
+        [
+          "2018-02-01",
+          4.1
+        ],
+        [
+          "2018-03-01",
+          4.0
+        ],
+        [
+          "2018-04-01",
+          4.0
+        ],
+        [
+          "2018-05-01",
+          3.8
+        ],
+        [
+          "2018-06-01",
+          4.0
+        ],
+        [
+          "2018-07-01",
+          3.8
+        ],
+        [
+          "2018-08-01",
+          3.8
+        ],
+        [
+          "2018-09-01",
+          3.7
+        ],
+        [
+          "2018-10-01",
+          3.8
+        ],
+        [
+          "2018-11-01",
+          3.8
+        ],
+        [
+          "2018-12-01",
+          3.9
+        ],
+        [
+          "2019-01-01",
+          4.0
+        ],
+        [
+          "2019-02-01",
+          3.8
+        ],
+        [
+          "2019-03-01",
+          3.8
+        ],
+        [
+          "2019-04-01",
+          3.7
+        ],
+        [
+          "2019-05-01",
+          3.6
+        ],
+        [
+          "2019-06-01",
+          3.6
+        ],
+        [
+          "2019-07-01",
+          3.7
+        ],
+        [
+          "2019-08-01",
+          3.6
+        ],
+        [
+          "2019-09-01",
+          3.5
+        ],
+        [
+          "2019-10-01",
+          3.6
+        ],
+        [
+          "2019-11-01",
+          3.6
+        ],
+        [
+          "2019-12-01",
+          3.6
+        ],
+        [
+          "2020-01-01",
+          3.6
+        ],
+        [
+          "2020-02-01",
+          3.5
+        ],
+        [
+          "2020-03-01",
+          4.4
+        ],
+        [
+          "2020-04-01",
+          14.8
+        ],
+        [
+          "2020-05-01",
+          13.2
+        ],
+        [
+          "2020-06-01",
+          11.0
+        ],
+        [
+          "2020-07-01",
+          10.2
+        ],
+        [
+          "2020-08-01",
+          8.4
+        ],
+        [
+          "2020-09-01",
+          7.8
+        ],
+        [
+          "2020-10-01",
+          6.9
+        ],
+        [
+          "2020-11-01",
+          6.7
+        ],
+        [
+          "2020-12-01",
+          6.7
+        ],
+        [
+          "2021-01-01",
+          6.4
+        ],
+        [
+          "2021-02-01",
+          6.2
+        ],
+        [
+          "2021-03-01",
+          6.1
+        ],
+        [
+          "2021-04-01",
+          6.1
+        ],
+        [
+          "2021-05-01",
+          5.8
+        ],
+        [
+          "2021-06-01",
+          5.9
+        ],
+        [
+          "2021-07-01",
+          5.4
+        ],
+        [
+          "2021-08-01",
+          5.1
+        ],
+        [
+          "2021-09-01",
+          4.7
+        ],
+        [
+          "2021-10-01",
+          4.5
+        ],
+        [
+          "2021-11-01",
+          4.1
+        ],
+        [
+          "2021-12-01",
+          3.9
+        ],
+        [
+          "2022-01-01",
+          4.0
+        ],
+        [
+          "2022-02-01",
+          3.9
+        ],
+        [
+          "2022-03-01",
+          3.7
+        ],
+        [
+          "2022-04-01",
+          3.7
+        ],
+        [
+          "2022-05-01",
+          3.6
+        ],
+        [
+          "2022-06-01",
+          3.6
+        ],
+        [
+          "2022-07-01",
+          3.5
+        ],
+        [
+          "2022-08-01",
+          3.6
+        ],
+        [
+          "2022-09-01",
+          3.5
+        ],
+        [
+          "2022-10-01",
+          3.6
+        ],
+        [
+          "2022-11-01",
+          3.6
+        ],
+        [
+          "2022-12-01",
+          3.5
+        ],
+        [
+          "2023-01-01",
+          3.5
+        ],
+        [
+          "2023-02-01",
+          3.6
+        ],
+        [
+          "2023-03-01",
+          3.5
+        ],
+        [
+          "2023-04-01",
+          3.4
+        ],
+        [
+          "2023-05-01",
+          3.6
+        ],
+        [
+          "2023-06-01",
+          3.6
+        ],
+        [
+          "2023-07-01",
+          3.5
+        ],
+        [
+          "2023-08-01",
+          3.7
+        ],
+        [
+          "2023-09-01",
+          3.7
+        ],
+        [
+          "2023-10-01",
+          3.9
+        ],
+        [
+          "2023-11-01",
+          3.7
+        ],
+        [
+          "2023-12-01",
+          3.8
+        ],
+        [
+          "2024-01-01",
+          3.7
+        ],
+        [
+          "2024-02-01",
+          3.9
+        ],
+        [
+          "2024-03-01",
+          3.9
+        ],
+        [
+          "2024-04-01",
+          3.9
+        ],
+        [
+          "2024-05-01",
+          3.9
+        ],
+        [
+          "2024-06-01",
+          4.1
+        ],
+        [
+          "2024-07-01",
+          4.2
+        ],
+        [
+          "2024-08-01",
+          4.2
+        ],
+        [
+          "2024-09-01",
+          4.1
+        ],
+        [
+          "2024-10-01",
+          4.1
+        ],
+        [
+          "2024-11-01",
+          4.2
+        ],
+        [
+          "2024-12-01",
+          4.1
+        ],
+        [
+          "2025-01-01",
+          4.0
+        ],
+        [
+          "2025-02-01",
+          4.2
+        ],
+        [
+          "2025-03-01",
+          4.2
+        ],
+        [
+          "2025-04-01",
+          4.2
+        ],
+        [
+          "2025-05-01",
+          4.3
+        ],
+        [
+          "2025-06-01",
+          4.1
+        ],
+        [
+          "2025-07-01",
+          4.3
+        ],
+        [
+          "2025-08-01",
+          4.3
+        ],
+        [
+          "2025-09-01",
+          4.4
+        ],
+        [
+          "2025-11-01",
+          4.5
+        ],
+        [
+          "2025-12-01",
+          4.4
+        ],
+        [
+          "2026-01-01",
+          4.3
+        ],
+        [
+          "2026-02-01",
+          4.4
+        ],
+        [
+          "2026-03-01",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.3
+        ],
+        [
+          "2026-05-01",
+          4.3
+        ],
+        [
+          "2026-06-01",
+          4.2
+        ],
+        [
+          "2026-07-01",
+          4.1
+        ],
+        [
+          "2026-08-01",
+          4.1
+        ],
+        [
+          "2026-09-01",
+          4.2
+        ]
+      ]
+    },
+    {
+      "title": "FRED: Real Gross Domestic Product (GDPC1)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "GDPC1",
+      "frequency": "quarterly",
+      "units": "Billions of Chained 2017 Dollars",
+      "last_date": "2026-04-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/GDPC1",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2016-04-01",
+          19062.709
+        ],
+        [
+          "2016-07-01",
+          19197.938
+        ],
+        [
+          "2016-10-01",
+          19304.352
+        ],
+        [
+          "2017-01-01",
+          19398.343
+        ],
+        [
+          "2017-04-01",
+          19506.949
+        ],
+        [
+          "2017-07-01",
+          19660.766
+        ],
+        [
+          "2017-10-01",
+          19882.352
+        ],
+        [
+          "2018-01-01",
+          20044.077
+        ],
+        [
+          "2018-04-01",
+          20150.476
+        ],
+        [
+          "2018-07-01",
+          20276.154
+        ],
+        [
+          "2018-10-01",
+          20304.874
+        ],
+        [
+          "2019-01-01",
+          20431.641
+        ],
+        [
+          "2019-04-01",
+          20602.275
+        ],
+        [
+          "2019-07-01",
+          20843.322
+        ],
+        [
+          "2019-10-01",
+          20985.448
+        ],
+        [
+          "2020-01-01",
+          20709.212
+        ],
+        [
+          "2020-04-01",
+          19077.992
+        ],
+        [
+          "2020-07-01",
+          20558.879
+        ],
+        [
+          "2020-10-01",
+          20791.917
+        ],
+        [
+          "2021-01-01",
+          21106.619
+        ],
+        [
+          "2021-04-01",
+          21474.077
+        ],
+        [
+          "2021-07-01",
+          21641.672
+        ],
+        [
+          "2021-10-01",
+          22001.64
+        ],
+        [
+          "2022-01-01",
+          21945.682
+        ],
+        [
+          "2022-04-01",
+          21976.292
+        ],
+        [
+          "2022-07-01",
+          22124.384
+        ],
+        [
+          "2022-10-01",
+          22272.546
+        ],
+        [
+          "2023-01-01",
+          22456.938
+        ],
+        [
+          "2023-04-01",
+          22577.556
+        ],
+        [
+          "2023-07-01",
+          22828.796
+        ],
+        [
+          "2023-10-01",
+          23033.25
+        ],
+        [
+          "2024-01-01",
+          23115.975
+        ],
+        [
+          "2024-04-01",
+          23320.074
+        ],
+        [
+          "2024-07-01",
+          23501.76
+        ],
+        [
+          "2024-10-01",
+          23641.759
+        ],
+        [
+          "2025-01-01",
+          23650.213
+        ],
+        [
+          "2025-04-01",
+          23884.563
+        ],
+        [
+          "2025-07-01",
+          24112.966
+        ],
+        [
+          "2025-10-01",
+          24125.479
+        ],
+        [
+          "2026-01-01",
+          24274.383
+        ],
+        [
+          "2026-04-01",
+          24408.011
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+      "type": "line",
+      "x": [
+        "2016-09-01",
+        "2016-10-01",
+        "2016-11-01",
+        "2016-12-01",
+        "2017-01-01",
+        "2017-02-01",
+        "2017-03-01",
+        "2017-04-01",
+        "2017-05-01",
+        "2017-06-01",
+        "2017-07-01",
+        "2017-08-01",
+        "2017-09-01",
+        "2017-10-01",
+        "2017-11-01",
+        "2017-12-01",
+        "2018-01-01",
+        "2018-02-01",
+        "2018-03-01",
+        "2018-04-01",
+        "2018-05-01",
+        "2018-06-01",
+        "2018-07-01",
+        "2018-08-01",
+        "2018-09-01",
+        "2018-10-01",
+        "2018-11-01",
+        "2018-12-01",
+        "2019-01-01",
+        "2019-02-01",
+        "2019-03-01",
+        "2019-04-01",
+        "2019-05-01",
+        "2019-06-01",
+        "2019-07-01",
+        "2019-08-01",
+        "2019-09-01",
+        "2019-10-01",
+        "2019-11-01",
+        "2019-12-01",
+        "2020-01-01",
+        "2020-02-01",
+        "2020-03-01",
+        "2020-04-01",
+        "2020-05-01",
+        "2020-06-01",
+        "2020-07-01",
+        "2020-08-01",
+        "2020-09-01",
+        "2020-10-01",
+        "2020-11-01",
+        "2020-12-01",
+        "2021-01-01",
+        "2021-02-01",
+        "2021-03-01",
+        "2021-04-01",
+        "2021-05-01",
+        "2021-06-01",
+        "2021-07-01",
+        "2021-08-01",
+        "2021-09-01",
+        "2021-10-01",
+        "2021-11-01",
+        "2021-12-01",
+        "2022-01-01",
+        "2022-02-01",
+        "2022-03-01",
+        "2022-04-01",
+        "2022-05-01",
+        "2022-06-01",
+        "2022-07-01",
+        "2022-08-01",
+        "2022-09-01",
+        "2022-10-01",
+        "2022-11-01",
+        "2022-12-01",
+        "2023-01-01",
+        "2023-02-01",
+        "2023-03-01",
+        "2023-04-01",
+        "2023-05-01",
+        "2023-06-01",
+        "2023-07-01",
+        "2023-08-01",
+        "2023-09-01",
+        "2023-10-01",
+        "2023-11-01",
+        "2023-12-01",
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        0.1,
+        0.1,
+        0.0,
+        -0.07,
+        0.0,
+        0.03,
+        -0.03,
+        -0.13,
+        -0.13,
+        -0.03,
+        -0.03,
+        0.03,
+        -0.03,
+        -0.07,
+        -0.1,
+        -0.03,
+        0.0,
+        0.0,
+        0.0,
+        -0.07,
+        -0.1,
+        -0.03,
+        0.0,
+        0.03,
+        -0.07,
+        -0.07,
+        -0.07,
+        0.07,
+        0.13,
+        0.17,
+        0.13,
+        0.0,
+        -0.07,
+        -0.03,
+        0.03,
+        0.07,
+        0.0,
+        -0.03,
+        -0.07,
+        0.0,
+        0.0,
+        0.0,
+        0.3,
+        4.0,
+        7.27,
+        9.5,
+        8.0,
+        6.37,
+        5.3,
+        4.2,
+        3.63,
+        3.23,
+        3.03,
+        2.87,
+        2.33,
+        -0.07,
+        -0.13,
+        -0.03,
+        -0.23,
+        -0.2,
+        -0.37,
+        -0.27,
+        -0.33,
+        -0.27,
+        -0.2,
+        -0.13,
+        -0.1,
+        -0.13,
+        -0.07,
+        0.0,
+        -0.03,
+        0.03,
+        0.0,
+        0.07,
+        0.07,
+        0.03,
+        -0.07,
+        0.0,
+        0.0,
+        0.0,
+        0.03,
+        0.07,
+        0.1,
+        0.13,
+        0.2,
+        0.33,
+        0.3,
+        0.23,
+        0.2,
+        0.27,
+        0.3,
+        0.37,
+        0.37,
+        0.43,
+        0.53,
+        0.57,
+        0.5,
+        0.43,
+        0.43,
+        0.4,
+        0.37,
+        0.27,
+        0.27,
+        0.27,
+        0.27,
+        0.17,
+        0.1,
+        0.13,
+        0.23,
+        0.43,
+        0.35,
+        0.3,
+        0.27,
+        0.2,
+        0.13,
+        0.1,
+        0.07,
+        -0.03,
+        -0.07,
+        0.0
+      ],
+      "y_label": "Percentage Points"
+    },
+    {
+      "title": "Unemployment Rate (UNRATE)",
+      "type": "line",
+      "x": [
+        "2016-09-01",
+        "2016-10-01",
+        "2016-11-01",
+        "2016-12-01",
+        "2017-01-01",
+        "2017-02-01",
+        "2017-03-01",
+        "2017-04-01",
+        "2017-05-01",
+        "2017-06-01",
+        "2017-07-01",
+        "2017-08-01",
+        "2017-09-01",
+        "2017-10-01",
+        "2017-11-01",
+        "2017-12-01",
+        "2018-01-01",
+        "2018-02-01",
+        "2018-03-01",
+        "2018-04-01",
+        "2018-05-01",
+        "2018-06-01",
+        "2018-07-01",
+        "2018-08-01",
+        "2018-09-01",
+        "2018-10-01",
+        "2018-11-01",
+        "2018-12-01",
+        "2019-01-01",
+        "2019-02-01",
+        "2019-03-01",
+        "2019-04-01",
+        "2019-05-01",
+        "2019-06-01",
+        "2019-07-01",
+        "2019-08-01",
+        "2019-09-01",
+        "2019-10-01",
+        "2019-11-01",
+        "2019-12-01",
+        "2020-01-01",
+        "2020-02-01",
+        "2020-03-01",
+        "2020-04-01",
+        "2020-05-01",
+        "2020-06-01",
+        "2020-07-01",
+        "2020-08-01",
+        "2020-09-01",
+        "2020-10-01",
+        "2020-11-01",
+        "2020-12-01",
+        "2021-01-01",
+        "2021-02-01",
+        "2021-03-01",
+        "2021-04-01",
+        "2021-05-01",
+        "2021-06-01",
+        "2021-07-01",
+        "2021-08-01",
+        "2021-09-01",
+        "2021-10-01",
+        "2021-11-01",
+        "2021-12-01",
+        "2022-01-01",
+        "2022-02-01",
+        "2022-03-01",
+        "2022-04-01",
+        "2022-05-01",
+        "2022-06-01",
+        "2022-07-01",
+        "2022-08-01",
+        "2022-09-01",
+        "2022-10-01",
+        "2022-11-01",
+        "2022-12-01",
+        "2023-01-01",
+        "2023-02-01",
+        "2023-03-01",
+        "2023-04-01",
+        "2023-05-01",
+        "2023-06-01",
+        "2023-07-01",
+        "2023-08-01",
+        "2023-09-01",
+        "2023-10-01",
+        "2023-11-01",
+        "2023-12-01",
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        5.0,
+        4.9,
+        4.7,
+        4.7,
+        4.7,
+        4.6,
+        4.4,
+        4.4,
+        4.4,
+        4.3,
+        4.3,
+        4.4,
+        4.3,
+        4.2,
+        4.2,
+        4.1,
+        4.0,
+        4.1,
+        4.0,
+        4.0,
+        3.8,
+        4.0,
+        3.8,
+        3.8,
+        3.7,
+        3.8,
+        3.8,
+        3.9,
+        4.0,
+        3.8,
+        3.8,
+        3.7,
+        3.6,
+        3.6,
+        3.7,
+        3.6,
+        3.5,
+        3.6,
+        3.6,
+        3.6,
+        3.6,
+        3.5,
+        4.4,
+        14.8,
+        13.2,
+        11.0,
+        10.2,
+        8.4,
+        7.8,
+        6.9,
+        6.7,
+        6.7,
+        6.4,
+        6.2,
+        6.1,
+        6.1,
+        5.8,
+        5.9,
+        5.4,
+        5.1,
+        4.7,
+        4.5,
+        4.1,
+        3.9,
+        4.0,
+        3.9,
+        3.7,
+        3.7,
+        3.6,
+        3.6,
+        3.5,
+        3.6,
+        3.5,
+        3.6,
+        3.6,
+        3.5,
+        3.5,
+        3.6,
+        3.5,
+        3.4,
+        3.6,
+        3.6,
+        3.5,
+        3.7,
+        3.7,
+        3.9,
+        3.7,
+        3.8,
+        3.7,
+        3.9,
+        3.9,
+        3.9,
+        3.9,
+        4.1,
+        4.2,
+        4.2,
+        4.1,
+        4.1,
+        4.2,
+        4.1,
+        4.0,
+        4.2,
+        4.2,
+        4.2,
+        4.3,
+        4.1,
+        4.3,
+        4.3,
+        4.4,
+        4.5,
+        4.4,
+        4.3,
+        4.4,
+        4.3,
+        4.3,
+        4.3,
+        4.2,
+        4.1,
+        4.1,
+        4.2
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "Real Gross Domestic Product (GDPC1)",
+      "type": "line",
+      "x": [
+        "2016-04-01",
+        "2016-07-01",
+        "2016-10-01",
+        "2017-01-01",
+        "2017-04-01",
+        "2017-07-01",
+        "2017-10-01",
+        "2018-01-01",
+        "2018-04-01",
+        "2018-07-01",
+        "2018-10-01",
+        "2019-01-01",
+        "2019-04-01",
+        "2019-07-01",
+        "2019-10-01",
+        "2020-01-01",
+        "2020-04-01",
+        "2020-07-01",
+        "2020-10-01",
+        "2021-01-01",
+        "2021-04-01",
+        "2021-07-01",
+        "2021-10-01",
+        "2022-01-01",
+        "2022-04-01",
+        "2022-07-01",
+        "2022-10-01",
+        "2023-01-01",
+        "2023-04-01",
+        "2023-07-01",
+        "2023-10-01",
+        "2024-01-01",
+        "2024-04-01",
+        "2024-07-01",
+        "2024-10-01",
+        "2025-01-01",
+        "2025-04-01",
+        "2025-07-01",
+        "2025-10-01",
+        "2026-01-01",
+        "2026-04-01"
+      ],
+      "y": [
+        19062.709,
+        19197.938,
+        19304.352,
+        19398.343,
+        19506.949,
+        19660.766,
+        19882.352,
+        20044.077,
+        20150.476,
+        20276.154,
+        20304.874,
+        20431.641,
+        20602.275,
+        20843.322,
+        20985.448,
+        20709.212,
+        19077.992,
+        20558.879,
+        20791.917,
+        21106.619,
+        21474.077,
+        21641.672,
+        22001.64,
+        21945.682,
+        21976.292,
+        22124.384,
+        22272.546,
+        22456.938,
+        22577.556,
+        22828.796,
+        23033.25,
+        23115.975,
+        23320.074,
+        23501.76,
+        23641.759,
+        23650.213,
+        23884.563,
+        24112.966,
+        24125.479,
+        24274.383,
+        24408.011
+      ],
+      "y_label": "Billions of Chained 2017 Dollars"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "SAHMREALTIME",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "UNRATE",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "GDPC1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": {
+    "analyst": "**Macro Assessment – Sahm Rule Recession Indicator**\n\n- **Latest SAHM reading**: {{SAHM.latest}} = 0.00%【S7】 – sits exactly at the 0.00% threshold that signals a recession.  \n- **Month‑over‑month trend**: {{SAHM.chg_1m}} = +0.07 pp, but the preceding month was {{SAHM.prev_1m}} = -0.07%【S7】 – no sustained rise above zero.  \n- **Unemployment context**: {{UNRATE.latest}} = 4.2%【S2】, up {{UNRATE.chg_1m}} = +0.1 pp from August【S2】 – unemployment is climbing, but still below the 10‑year low of {{UNRATE.min_10y}} = 3.4%【S2】.  \n- **GDP backdrop**: {{GDP.latest}} = $24.41 trillion【S3】, with quarterly growth {{GDP.pct_1q}} = +0.6% and annualized growth {{GDP.ann_growth_1q}} = +2.2%【S3】 – the economy is expanding.  \n- **Recession signal**: Because the SAHM indicator is at the threshold and not above it, and GDP growth remains positive while unemployment is still moderate, the current data do **not** point to an ongoing recession.  \n\n**Implication**: The economy shows a mild uptick in unemployment but remains in growth territory; the Sahm Rule does not yet trigger a recessionary warning.",
+    "reasoner": "- Latest SAHM reading: {{SAHM.latest}} = 0.00%【S7】 – the indicator is at the 0.00% threshold used in the Sahm rule but not above it.  \n- Month‑over‑month trend: SAHM rose by {{SAHM.chg_1m}} from {{SAHM.prev_1m}} = -0.07%【S7】 – a rise but not sustained above zero.  \n- Unemployment context: {{UNRATE.latest}} = 4.2%【S2】, up {{UNRATE.chg_1m}} = +0.1 pp from August【S2】 – unemployment is climbing and is above the 10‑year low of {{UNRATE.min_10y}} = 3.4%【S2】.  \n- GDP backdrop: {{GDP.latest}} = $24.41 trillion【S3】, with quarterly growth {{GDP.pct_1q}} = +0.6% and annualized growth {{GDP.ann_growth_1q}} = +2.2%【S3】 – the economy is expanding.  \n- Recession signal: Because the SAHM indicator is at the threshold and not above it, and GDP growth remains positive while unemployment is still moderate, the current data do not point to an ongoing recession."
+  },
+  "validation": {
+    "counts": {
+      "figures": 21,
+      "verified": 8,
+      "derived": 10,
+      "unverified": 3
+    },
+    "figures": [
+      {
+        "text": "0.00%",
+        "value": 0.0,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 49,
+        "end": 54,
+        "status": "verified",
+        "matched": "Real-time Sahm Rule Recession Indicator, latest (September 2026)",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S7"
+        ],
+        "context": "- Sahm Rule indicator is 0.00% [S7], exactly at the 0.00% (assumption) threshold that signals a recession.",
+        "origin": "fact",
+        "fact_id": "SAHM.latest",
+        "change_sign": null
+      },
+      {
+        "text": "0.00%",
+        "value": 0.0,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 76,
+        "end": 81,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "written_in": [],
+        "cited": [
+          "S7"
+        ],
+        "context": "- Sahm Rule indicator is 0.00% [S7], exactly at the 0.00% (assumption) threshold that signals a recession.",
+        "origin": "assumption",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 156,
+        "end": 160,
+        "status": "verified",
+        "matched": "Unemployment Rate, latest (September 2026)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment rate is 4.2% [S2] and has risen +0.1 pp [S2] from the previous month.",
+        "origin": "fact",
+        "fact_id": "UNRATE.latest",
+        "change_sign": null
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 180,
+        "end": 187,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Unemployment rate is 4.2% [S2] and has risen +0.1 pp [S2] from the previous month.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "$24.41 trillion",
+        "value": 24410000000000.0,
+        "unit": "$",
+        "tolerance": 5000000000.0,
+        "start": 234,
+        "end": 249,
+        "status": "verified",
+        "matched": "Real Gross Domestic Product, latest (2026 Q2)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3"
+        ],
+        "context": "- Real GDP is $24.41 trillion [S3] with quarterly growth +0.6% [S3] and an annualized pace of +2.2% [S3].",
+        "origin": "fact",
+        "fact_id": "GDP.latest",
+        "change_sign": null
+      },
+      {
+        "text": "+0.6%",
+        "value": 0.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 277,
+        "end": 282,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change since 2026 Q1",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3"
+        ],
+        "context": "- Real GDP is $24.41 trillion [S3] with quarterly growth +0.6% [S3] and an annualized pace of +2.2% [S3].",
+        "origin": "fact",
+        "fact_id": "GDP.pct_1q",
+        "change_sign": 1
+      },
+      {
+        "text": "+2.2%",
+        "value": 2.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 314,
+        "end": 319,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: annualized growth over the latest quarter",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3"
+        ],
+        "context": "- Real GDP is $24.41 trillion [S3] with quarterly growth +0.6% [S3] and an annualized pace of +2.2% [S3].",
+        "origin": "fact",
+        "fact_id": "GDP.ann_growth_1q",
+        "change_sign": 1
+      },
+      {
+        "text": "0.00%",
+        "value": 0.0,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 575,
+        "end": 580,
+        "status": "verified",
+        "matched": "Real-time Sahm Rule Recession Indicator, latest (September 2026)",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S7"
+        ],
+        "context": "- **Sahm Rule**: 0.00% [S7] sits at the 0.00% (assumption) threshold; the month‑over‑month change is +0.07 pp [S7] from -0.07% [S7].",
+        "origin": "fact",
+        "fact_id": "SAHM.latest",
+        "change_sign": null
+      },
+      {
+        "text": "0.00%",
+        "value": 0.0,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 598,
+        "end": 603,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "written_in": [],
+        "cited": [
+          "S7"
+        ],
+        "context": "- **Sahm Rule**: 0.00% [S7] sits at the 0.00% (assumption) threshold; the month‑over‑month change is +0.07 pp [S7] from -0.07% [S7].",
+        "origin": "assumption",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "+0.07 pp",
+        "value": 0.07,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 659,
+        "end": 667,
+        "status": "derived",
+        "matched": "Real-time Sahm Rule Recession Indicator: change since August 2026",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S7"
+        ],
+        "context": "- **Sahm Rule**: 0.00% [S7] sits at the 0.00% (assumption) threshold; the month‑over‑month change is +0.07 pp [S7] from -0.07% [S7].",
+        "origin": "fact",
+        "fact_id": "SAHM.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "-0.07%",
+        "value": 0.07,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 678,
+        "end": 684,
+        "status": "verified",
+        "matched": "Real-time Sahm Rule Recession Indicator in August 2026",
+        "source_id": "S7",
+        "source_ids": [
+          "S7"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S7"
+        ],
+        "context": "- **Sahm Rule**: 0.00% [S7] sits at the 0.00% (assumption) threshold; the month‑over‑month change is +0.07 pp [S7] from -0.07% [S7].",
+        "origin": "fact",
+        "fact_id": "SAHM.prev_1m",
+        "change_sign": null
+      },
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 713,
+        "end": 717,
+        "status": "verified",
+        "matched": "Unemployment Rate, latest (September 2026)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Unemployment**: 4.2% [S2] with a recent rise of +0.1 pp [S2]; still below the 10‑year low of 3.4% [S2].",
+        "origin": "fact",
+        "fact_id": "UNRATE.latest",
+        "change_sign": null
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 745,
+        "end": 752,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Unemployment**: 4.2% [S2] with a recent rise of +0.1 pp [S2]; still below the 10‑year low of 3.4% [S2].",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "3.4%",
+        "value": 3.4,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 790,
+        "end": 794,
+        "status": "verified",
+        "matched": "Unemployment Rate: lowest value in the last 10y (April 2023)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Unemployment**: 4.2% [S2] with a recent rise of +0.1 pp [S2]; still below the 10‑year low of 3.4% [S2].",
+        "origin": "fact",
+        "fact_id": "UNRATE.min_10y",
+        "change_sign": null
+      },
+      {
+        "text": "$24.41 trillion",
+        "value": 24410000000000.0,
+        "unit": "$",
+        "tolerance": 5000000000.0,
+        "start": 814,
+        "end": 829,
+        "status": "verified",
+        "matched": "Real Gross Domestic Product, latest (2026 Q2)",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3"
+        ],
+        "context": "- **GDP**: $24.41 trillion [S3] with a quarterly increase of +0.6% [S3] and an annualized growth of +2.2% [S3].",
+        "origin": "fact",
+        "fact_id": "GDP.latest",
+        "change_sign": null
+      },
+      {
+        "text": "+0.6%",
+        "value": 0.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 864,
+        "end": 869,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change since 2026 Q1",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3"
+        ],
+        "context": "- **GDP**: $24.41 trillion [S3] with a quarterly increase of +0.6% [S3] and an annualized growth of +2.2% [S3].",
+        "origin": "fact",
+        "fact_id": "GDP.pct_1q",
+        "change_sign": 1
+      },
+      {
+        "text": "+2.2%",
+        "value": 2.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 903,
+        "end": 908,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: annualized growth over the latest quarter",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3"
+        ],
+        "context": "- **GDP**: $24.41 trillion [S3] with a quarterly increase of +0.6% [S3] and an annualized growth of +2.2% [S3].",
+        "origin": "fact",
+        "fact_id": "GDP.ann_growth_1q",
+        "change_sign": 1
+      },
+      {
+        "text": "0.00%",
+        "value": 0.0,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1304,
+        "end": 1309,
+        "status": "unverified",
+        "matched": null,
+        "source_id": null,
+        "source_ids": [],
+        "topic_match": null,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": true,
+        "written_in": [],
+        "cited": [],
+        "context": "- **Upside**: A further rise in unemployment pushes the Sahm Rule above 0.00% (assumption), triggering a recession signal; GDP growth could turn negative.",
+        "origin": "assumption",
+        "fact_id": null,
+        "change_sign": null
+      },
+      {
+        "text": "+2.2%",
+        "value": 2.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1469,
+        "end": 1474,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: annualized growth over the latest quarter",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3"
+        ],
+        "context": "- **Downside**: Unemployment stabilizes or falls; GDP growth accelerates beyond +2.2% [S3], reinforcing expansion.",
+        "origin": "fact",
+        "fact_id": "GDP.ann_growth_1q",
+        "change_sign": 1
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1589,
+        "end": 1596,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- **Unemployment Momentum**: A sustained rise beyond +0.1 pp [S2] could elevate the Sahm Rule.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "+0.6%",
+        "value": 0.6,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 1693,
+        "end": 1698,
+        "status": "derived",
+        "matched": "Real Gross Domestic Product: % change since 2026 Q1",
+        "source_id": "S3",
+        "source_ids": [
+          "S3"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S3"
+        ],
+        "context": "- **GDP Deceleration**: A decline in quarterly growth below +0.6% [S3] would weaken the expansion narrative.",
+        "origin": "fact",
+        "fact_id": "GDP.pct_1q",
+        "change_sign": 1
+      }
+    ],
+    "citations": {
+      "markers": 18,
+      "dangling": [],
+      "uncited_paragraphs": [],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: Unemployment Rate (UNRATE)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: Real Gross Domestic Product (GDPC1)",
+        "last_date": "2026-04-01",
+        "frequency": "quarterly",
+        "age_days": 110,
+        "max_age_days": 135,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+    ],
+    "directions": [],
+    "comparisons": [],
+    "wording": {
+      "history": [],
+      "trend": [],
+      "rate": []
+    },
+    "lines": [
+      {
+        "start": 24,
+        "end": 133,
+        "kind": "data"
+      },
+      {
+        "start": 133,
+        "end": 220,
+        "kind": "data"
+      },
+      {
+        "start": 220,
+        "end": 328,
+        "kind": "data"
+      },
+      {
+        "start": 328,
+        "end": 422,
+        "kind": "interpretation"
+      },
+      {
+        "start": 422,
+        "end": 529,
+        "kind": "interpretation"
+      },
+      {
+        "start": 530,
+        "end": 558,
+        "kind": "interpretation"
+      },
+      {
+        "start": 558,
+        "end": 693,
+        "kind": "data"
+      },
+      {
+        "start": 693,
+        "end": 803,
+        "kind": "data"
+      },
+      {
+        "start": 803,
+        "end": 917,
+        "kind": "data"
+      },
+      {
+        "start": 917,
+        "end": 1082,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1099,
+        "end": 1232,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1232,
+        "end": 1389,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1389,
+        "end": 1506,
+        "kind": "data"
+      },
+      {
+        "start": 1507,
+        "end": 1536,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1536,
+        "end": 1633,
+        "kind": "data"
+      },
+      {
+        "start": 1633,
+        "end": 1744,
+        "kind": "data"
+      },
+      {
+        "start": 1744,
+        "end": 1850,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1851,
+        "end": 1891,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1891,
+        "end": 2039,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2039,
+        "end": 2153,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2153,
+        "end": 2274,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2275,
+        "end": 2692,
+        "kind": "interpretation"
+      }
+    ],
+    "placeholders": true,
+    "unknown_facts": [],
+    "open_issues": 0,
+    "summary": "18 of 21 figures verified against source data (8 exact, 10 derived); 3 flagged (3 labelled as assumptions). 18 figure(s) inserted from the fact table, 0 quoted from web sources, 0 typed directly."
+  },
+  "run_meta": {
+    "run_id": "20261018-213018-4c2e82",
+    "timestamp": "2026-10-19T01:30:18+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 300.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    },
+    "pipeline": "v3"
+  }
+}

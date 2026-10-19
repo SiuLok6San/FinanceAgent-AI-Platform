@@ -1,0 +1,2480 @@
+{
+  "id": "H02",
+  "set": "heldout",
+  "category": "macro",
+  "question": "Are there signs that the U.S. job market is cooling?",
+  "ticker": null,
+  "expected_tags": [
+    "macro"
+  ],
+  "pipeline": "v3",
+  "run_utc": "2026-10-19T01:48:14+00:00",
+  "elapsed_sec": 106.7,
+  "router_tags": [
+    "macro"
+  ],
+  "tags": [
+    "macro"
+  ],
+  "plan": {
+    "topics": [
+      "macro"
+    ],
+    "series": [
+      "UNRATE",
+      "SAHMREALTIME"
+    ],
+    "steps": [
+      "1. Pull the latest monthly Unemployment Rate (UNRATE) data to examine recent changes in joblessness.",
+      "2. Retrieve the most recent monthly Sahm Rule Recession Indicator (SAHM) to assess whether the unemployment rate has crossed the 0.5% threshold that signals a recessionary labor market.",
+      "3. Plot both series over the past 12–18 months to visually inspect upward trends or spikes.",
+      "4. Compare the unemployment trend to recent CPI/PCE inflation data (optional) to contextualize any cooling in the job market relative to price pressures."
+    ],
+    "source": "planner"
+  },
+  "plan_raw": "{\"topics\":[\"macro\"],\"series\":[\"UNRATE\",\"SAHM\"],\"steps\":[\"1. Pull the latest monthly Unemployment Rate (UNRATE) data to examine recent changes in joblessness.\",\"2. Retrieve the most recent monthly Sahm Rule Recession Indicator (SAHM) to assess whether the unemployment rate has crossed the 0.5% threshold that signals a recessionary labor market.\",\"3. Plot both series over the past 12–18 months to visually inspect upward trends or spikes.\",\"4. Compare the unemployment trend to recent CPI/PCE inflation data (optional) to contextualize any cooling in the job market relative to price pressures.\"]}",
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Unemployment rate stands at 4.2% [S1], up +0.1 pp from the prior month and unchanged from three months ago [S1].  \n- Real‑time Sahm Rule indicator is 0.00% [S2], showing a gradual decline over the past year [S2].  \n- Labor market exhibits mild cooling but remains comfortably above recessionary thresholds.  \n- Inflation context is uncertain; no CPI/PCE data were fetched.  \n- Credit spreads and equity sector dynamics are expected to adjust modestly.\n\n---\n\n**Core Analysis – Macro**  \n\n- **Unemployment Rate**  \n  - Latest reading: 4.2% [S1].  \n  - Monthly change: +0.1 pp [S1]; unchanged from three months ago.  \n  - Six‑month change: −0.1 pp [S1]; year‑on‑year change: −0.2 pp [S1].  \n  - Position in 10‑year range: 63rd percentile [S1]; below 10‑year average 4.5% and above 10‑year low 3.4% [S1].  \n\n- **Sahm Rule Recession Indicator**  \n  - Latest value: 0.00% [S2].  \n  - Monthly change: +0.07 pp [S2]; three‑month change: −0.07 pp; six‑month change: −0.20 pp; year‑on‑year change: −0.23 pp [S2].  \n  - Position in 10‑year range: 46th percentile [S2]; below 10‑year average 0.56% and above 10‑year low -0.37% [S2].  \n\n- **Trend Assessment**  \n  - Unemployment rate largely flat over the last three months; modest +0.1 pp [S1] rise in the most recent month and −0.1 pp decline over the past six months.  \n  - Sahm indicator shows a gradual downward drift, indicating the labor market is not approaching recessionary territory.  \n  - Overall, data point to a **mild cooling** rather than a sharp contraction.  \n\n- **Inflation Context (qualitative)**  \n  - No CPI/PCE data fetched; qualitative assessment suggests that if headline inflation remains elevated, the modest cooling could help ease price pressures.  \n  - A slower labor market may support a gradual easing of monetary policy, but current indicators still fall short of recessionary thresholds.  \n\n- **See Table 1 for unemployment rate trend and Table 2 for Sahm Rule indicator trend.**\n\n---\n\n**Scenarios**  \n\n| Scenario | Key Assumptions | Expected Labor Market Path | Credit & Equity Implications |\n|----------|-----------------|---------------------------|------------------------------|\n| **Base** | Current trend continues | Unemployment remains at 4.2% [S1]; Sahm indicator near 0.00% [S2] | IG spreads tighten slightly; HY spreads stable; consumer staples gain modestly; high‑growth tech neutral |\n| **Upside** | Labor market improves | Unemployment falls by −0.1 pp [S1]; Sahm indicator declines further | IG spreads tighten; HY spreads narrow; equities in labor‑cost‑sensitive sectors rise |\n| **Downside** | Labor market weakens | Unemployment rises by +0.1 pp [S1]; Sahm indicator rises | IG spreads widen; HY spreads widen; equities in labor‑cost‑sensitive sectors decline |\n\n---\n\n**Key Risks & Monitoring**  \n\n- Unexpected rise in unemployment beyond +0.1 pp [S1].  \n- Sahm indicator crossing recessionary threshold.  \n- Persistent inflationary pressures.  \n- Fed policy shifts in response to labor market dynamics.  \n\n---\n\n**Portfolio / Decision Implications**  \n\n- **IG Credit** – Slight tightening of spreads; monitor default‑risk perception.  \n- **HY Credit** – Potential modest widening if risk sentiment shifts; keep exposure balanced.  \n- **Equities** – Consumer staples may see modest upside; high‑growth tech could face headwinds if wage growth slows further.  \n\n---\n\n**Conclusion**  \nThe U.S. labor market shows signs of **softening**: unemployment is marginally higher than a few months ago but lower than a year ago, and the Sahm Rule remains comfortably below recessionary thresholds. The cooling is gradual and unlikely to trigger immediate policy shifts, but it may influence credit spreads and sector‑specific equity dynamics. Continued monitoring of unemployment, the Sahm indicator, and inflation will be essential to adjust portfolio positions accordingly.",
+  "report_template": "**Executive Summary**  \n- Unemployment rate stands at {{UNRATE.latest}}, up {{UNRATE.chg_1m}} from the prior month and unchanged from three months ago [S1].  \n- Real‑time Sahm Rule indicator is {{SAHM.latest}}, showing a gradual decline over the past year [S2].  \n- Labor market exhibits mild cooling but remains comfortably above recessionary thresholds.  \n- Inflation context is uncertain; no CPI/PCE data were fetched.  \n- Credit spreads and equity sector dynamics are expected to adjust modestly.\n\n---\n\n**Core Analysis – Macro**  \n\n- **Unemployment Rate**  \n  - Latest reading: {{UNRATE.latest}} [S1].  \n  - Monthly change: {{UNRATE.chg_1m}}; unchanged from three months ago.  \n  - Six‑month change: {{UNRATE.chg_6m}}; year‑on‑year change: {{UNRATE.chg_1y}} [S1].  \n  - Position in 10‑year range: {{UNRATE.pctile_10y}} percentile; below 10‑year average {{UNRATE.avg_10y}} and above 10‑year low {{UNRATE.min_10y}} [S1].  \n\n- **Sahm Rule Recession Indicator**  \n  - Latest value: {{SAHM.latest}} [S2].  \n  - Monthly change: {{SAHM.chg_1m}}; three‑month change: {{SAHM.chg_3m}}; six‑month change: {{SAHM.chg_6m}}; year‑on‑year change: {{SAHM.chg_1y}} [S2].  \n  - Position in 10‑year range: {{SAHM.pctile_10y}} percentile; below 10‑year average {{SAHM.avg_10y}} and above 10‑year low {{SAHM.min_10y}} [S2].  \n\n- **Trend Assessment**  \n  - Unemployment rate largely flat over the last three months; modest {{UNRATE.chg_1m}} rise in the most recent month and {{UNRATE.chg_6m}} decline over the past six months.  \n  - Sahm indicator shows a gradual downward drift, indicating the labor market is not approaching recessionary territory.  \n  - Overall, data point to a **mild cooling** rather than a sharp contraction.  \n\n- **Inflation Context (qualitative)**  \n  - No CPI/PCE data fetched; qualitative assessment suggests that if headline inflation remains elevated, the modest cooling could help ease price pressures.  \n  - A slower labor market may support a gradual easing of monetary policy, but current indicators still fall short of recessionary thresholds.  \n\n- **See Table 1 for unemployment rate trend and Table 2 for Sahm Rule indicator trend.**\n\n---\n\n**Scenarios**  \n\n| Scenario | Key Assumptions | Expected Labor Market Path | Credit & Equity Implications |\n|----------|-----------------|---------------------------|------------------------------|\n| **Base** | Current trend continues | Unemployment remains at {{UNRATE.latest}}; Sahm indicator near {{SAHM.latest}} | IG spreads tighten slightly; HY spreads stable; consumer staples gain modestly; high‑growth tech neutral |\n| **Upside** | Labor market improves | Unemployment falls by {{UNRATE.chg_6m}}; Sahm indicator declines further | IG spreads tighten; HY spreads narrow; equities in labor‑cost‑sensitive sectors rise |\n| **Downside** | Labor market weakens | Unemployment rises by {{UNRATE.chg_1m}}; Sahm indicator rises | IG spreads widen; HY spreads widen; equities in labor‑cost‑sensitive sectors decline |\n\n---\n\n**Key Risks & Monitoring**  \n\n- Unexpected rise in unemployment beyond {{UNRATE.chg_1m}}.  \n- Sahm indicator crossing recessionary threshold.  \n- Persistent inflationary pressures.  \n- Fed policy shifts in response to labor market dynamics.  \n\n---\n\n**Portfolio / Decision Implications**  \n\n- **IG Credit** – Slight tightening of spreads; monitor default‑risk perception.  \n- **HY Credit** – Potential modest widening if risk sentiment shifts; keep exposure balanced.  \n- **Equities** – Consumer staples may see modest upside; high‑growth tech could face headwinds if wage growth slows further.  \n\n---\n\n**Conclusion**  \nThe U.S. labor market shows signs of **softening**: unemployment is marginally higher than a few months ago but lower than a year ago, and the Sahm Rule remains comfortably below recessionary thresholds. The cooling is gradual and unlikely to trigger immediate policy shifts, but it may influence credit spreads and sector‑specific equity dynamics. Continued monitoring of unemployment, the Sahm indicator, and inflation will be essential to adjust portfolio positions accordingly.",
+  "draft_report_text": "**Executive Summary**  \n- Unemployment rate stands at 4.2% [S1], up +0.1 pp from the prior month and unchanged from three months ago [S1].  \n- Real‑time Sahm Rule indicator is 0.00% [S2], showing a gradual decline over the past year [S2].  \n- Labor market exhibits mild cooling but remains comfortably above recessionary thresholds.  \n- Inflation context is uncertain; no CPI/PCE data were fetched.  \n- Credit spreads and equity sector dynamics are expected to adjust modestly.\n\n---\n\n**Core Analysis – Macro**  \n\n- **Unemployment Rate**  \n  - Latest reading: 4.2% [S1].  \n  - Monthly change: +0.1 pp [S1]; unchanged from three months ago.  \n  - Six‑month change: −0.1 pp [S1]; year‑on‑year change: −0.2 pp [S1].  \n  - Position in 10‑year range: 63rd percentile [S1]; below 10‑year average 4.5% and above 10‑year low 3.4% [S1].  \n\n- **Sahm Rule Recession Indicator**  \n  - Latest value: 0.00% [S2].  \n  - Monthly change: +0.07 pp [S2]; three‑month change: −0.07 pp; six‑month change: −0.20 pp; year‑on‑year change: −0.23 pp [S2].  \n  - Position in 10‑year range: 46th percentile [S2]; below 10‑year average 0.56% and above 10‑year low -0.37% [S2].  \n\n- **Trend Assessment**  \n  - Unemployment rate largely flat over the last three months; modest +0.1 pp [S1] rise in the most recent month and −0.1 pp decline over the past six months.  \n  - Sahm indicator shows a gradual downward drift, indicating the labor market is not approaching recessionary territory.  \n  - Overall, data point to a **mild cooling** rather than a sharp contraction.  \n\n- **Inflation Context (qualitative)**  \n  - No CPI/PCE data fetched; qualitative assessment suggests that if headline inflation remains elevated, the modest cooling could help ease price pressures.  \n  - A slower labor market may support a gradual easing of monetary policy, but current indicators still fall short of recessionary thresholds.  \n\n- **See Table 1 for unemployment rate trend and Table 2 for Sahm Rule indicator trend.**\n\n---\n\n**Scenarios**  \n\n| Scenario | Key Assumptions | Expected Labor Market Path | Credit & Equity Implications |\n|----------|-----------------|---------------------------|------------------------------|\n| **Base** | Current trend continues | Unemployment remains at 4.2% [S1]; Sahm indicator near 0.00% [S2] | IG spreads tighten slightly; HY spreads stable; consumer staples gain modestly; high‑growth tech neutral |\n| **Upside** | Labor market improves | Unemployment falls by −0.1 pp [S1]; Sahm indicator declines further | IG spreads tighten; HY spreads narrow; equities in labor‑cost‑sensitive sectors rise |\n| **Downside** | Labor market weakens | Unemployment rises by +0.1 pp [S1]; Sahm indicator rises | IG spreads widen; HY spreads widen; equities in labor‑cost‑sensitive sectors decline |\n\n---\n\n**Key Risks & Monitoring**  \n\n- Unexpected rise in unemployment beyond +0.1 pp [S1].  \n- Sahm indicator crossing recessionary threshold.  \n- Persistent inflationary pressures.  \n- Fed policy shifts in response to labor market dynamics.  \n\n---\n\n**Portfolio / Decision Implications**  \n\n- **IG Credit** – Slight tightening of spreads; monitor default‑risk perception.  \n- **HY Credit** – Potential modest widening if risk sentiment shifts; keep exposure balanced.  \n- **Equities** – Consumer staples may see modest upside; high‑growth tech could face headwinds if wage growth slows further.  \n\n---\n\n**Conclusion**  \nThe U.S. labor market shows signs of **softening**: unemployment is marginally higher than a few months ago but lower than a year ago, and the Sahm Rule remains comfortably below recessionary thresholds. The cooling is gradual and unlikely to trigger immediate policy shifts, but it may influence credit spreads and sector‑specific equity dynamics. Continued monitoring of unemployment, the Sahm indicator, and inflation will be essential to adjust portfolio positions accordingly.",
+  "draft_report_template": "**Executive Summary**  \n- Unemployment rate stands at {{UNRATE.latest}}, up {{UNRATE.chg_1m}} from the prior month and unchanged from three months ago [S1].  \n- Real‑time Sahm Rule indicator is {{SAHM.latest}}, showing a gradual decline over the past year [S2].  \n- Labor market exhibits mild cooling but remains comfortably above recessionary thresholds.  \n- Inflation context is uncertain; no CPI/PCE data were fetched.  \n- Credit spreads and equity sector dynamics are expected to adjust modestly.\n\n---\n\n**Core Analysis – Macro**  \n\n- **Unemployment Rate**  \n  - Latest reading: {{UNRATE.latest}} [S1].  \n  - Monthly change: {{UNRATE.chg_1m}}; unchanged from three months ago.  \n  - Six‑month change: {{UNRATE.chg_6m}}; year‑on‑year change: {{UNRATE.chg_1y}} [S1].  \n  - Position in 10‑year range: {{UNRATE.pctile_10y}} percentile; below 10‑year average {{UNRATE.avg_10y}} and above 10‑year low {{UNRATE.min_10y}} [S1].  \n\n- **Sahm Rule Recession Indicator**  \n  - Latest value: {{SAHM.latest}} [S2].  \n  - Monthly change: {{SAHM.chg_1m}}; three‑month change: {{SAHM.chg_3m}}; six‑month change: {{SAHM.chg_6m}}; year‑on‑year change: {{SAHM.chg_1y}} [S2].  \n  - Position in 10‑year range: {{SAHM.pctile_10y}} percentile; below 10‑year average {{SAHM.avg_10y}} and above 10‑year low {{SAHM.min_10y}} [S2].  \n\n- **Trend Assessment**  \n  - Unemployment rate largely flat over the last three months; modest {{UNRATE.chg_1m}} rise in the most recent month and {{UNRATE.chg_6m}} decline over the past six months.  \n  - Sahm indicator shows a gradual downward drift, indicating the labor market is not approaching recessionary territory.  \n  - Overall, data point to a **mild cooling** rather than a sharp contraction.  \n\n- **Inflation Context (qualitative)**  \n  - No CPI/PCE data fetched; qualitative assessment suggests that if headline inflation remains elevated, the modest cooling could help ease price pressures.  \n  - A slower labor market may support a gradual easing of monetary policy, but current indicators still fall short of recessionary thresholds.  \n\n- **See Table 1 for unemployment rate trend and Table 2 for Sahm Rule indicator trend.**\n\n---\n\n**Scenarios**  \n\n| Scenario | Key Assumptions | Expected Labor Market Path | Credit & Equity Implications |\n|----------|-----------------|---------------------------|------------------------------|\n| **Base** | Current trend continues | Unemployment remains at {{UNRATE.latest}}; Sahm indicator near {{SAHM.latest}} | IG spreads tighten slightly; HY spreads stable; consumer staples gain modestly; high‑growth tech neutral |\n| **Upside** | Labor market improves | Unemployment falls by {{UNRATE.chg_6m}}; Sahm indicator declines further | IG spreads tighten; HY spreads narrow; equities in labor‑cost‑sensitive sectors rise |\n| **Downside** | Labor market weakens | Unemployment rises by {{UNRATE.chg_1m}}; Sahm indicator rises | IG spreads widen; HY spreads widen; equities in labor‑cost‑sensitive sectors decline |\n\n---\n\n**Key Risks & Monitoring**  \n\n- Unexpected rise in unemployment beyond {{UNRATE.chg_1m}}.  \n- Sahm indicator crossing recessionary threshold.  \n- Persistent inflationary pressures.  \n- Fed policy shifts in response to labor market dynamics.  \n\n---\n\n**Portfolio / Decision Implications**  \n\n- **IG Credit** – Slight tightening of spreads; monitor default‑risk perception.  \n- **HY Credit** – Potential modest widening if risk sentiment shifts; keep exposure balanced.  \n- **Equities** – Consumer staples may see modest upside; high‑growth tech could face headwinds if wage growth slows further.  \n\n---\n\n**Conclusion**  \nThe U.S. labor market shows signs of **softening**: unemployment is marginally higher than a few months ago but lower than a year ago, and the Sahm Rule remains comfortably below recessionary thresholds. The cooling is gradual and unlikely to trigger immediate policy shifts, but it may influence credit spreads and sector‑specific equity dynamics. Continued monitoring of unemployment, the Sahm indicator, and inflation will be essential to adjust portfolio positions accordingly.",
+  "repair": {
+    "enabled": true,
+    "rounds": []
+  },
+  "sources": [
+    {
+      "title": "FRED series UNRATE: Unemployment Rate",
+      "url": "https://fred.stlouisfed.org/series/UNRATE",
+      "source": "FRED",
+      "snippet": "Monthly series in Percent; latest observation 4.2 on 2026-09-01.",
+      "id": "S1"
+    },
+    {
+      "title": "FRED series SAHMREALTIME: Real-time Sahm Rule Recession Indicator",
+      "url": "https://fred.stlouisfed.org/series/SAHMREALTIME",
+      "source": "FRED",
+      "snippet": "Monthly series in Percentage Points; latest observation 0 on 2026-09-01.",
+      "id": "S2"
+    },
+    {
+      "title": "US Job Market Shows Signs of Cooling, But Resilience Remains in Key Sectors | PARWCC",
+      "url": "https://parwcc.com/us-job-market-shows-signs-of-cooling-but-resilience-remains-in-key-sectors",
+      "source": "web (Tavily)",
+      "snippet": "Sign In  Speak to an Advisor  Sign In  Join  # US Job Market Shows Signs of Cooling, But Resilience Remains in Key Sectors  | stephanie | Blog, Business Development  The U.S. labor market showed mixed signals in March, as job openings fell to their lowest level since 2024 while hiring remained steady, and layoffs staye",
+      "id": "S3"
+    },
+    {
+      "title": "Jobs report reveals cooling labor market and 'uneven economy,' analyst says",
+      "url": "https://www.youtube.com/watch?v=MoOn71IxldU",
+      "source": "web (Tavily)",
+      "snippet": "### Description 32,966 views Posted: 2025-12-16 The U.S. labor market is showing further signs of cooling, as the latest jobs report indicates that unemployment has risen to its highest level in four years. There was some good news as payrolls climbed by 64,000 new jobs last month. The delayed report was due to the six",
+      "id": "S4"
+    },
+    {
+      "title": "Jobs report reveals cooling labor market and 'uneven economy,' analyst says | PBS News",
+      "url": "https://www.pbs.org/newshour/show/jobs-report-reveals-cooling-labor-market-and-uneven-economy-analyst-says",
+      "source": "web (Tavily)",
+      "snippet": "The U.S. labor market is showing further signs of cooling, as the latest jobs report shows unemployment rising to 4.6 percent. That's the highest level in the last four years. There was some good news, as payrolls climbed by 64,000 new jobs last month, better than forecast, but the report also showed a net loss of 105,",
+      "id": "S5"
+    },
+    {
+      "title": "America's job market is cooling, and the youngest workers are feeling it most",
+      "url": "https://finance.yahoo.com/news/americas-job-market-is-cooling-and-the-youngest-workers-are-feeling-it-most-120003303.html",
+      "source": "web (Tavily)",
+      "snippet": "1. Crypto     Crypto 2. AI     AI  Yahoo Finance  # America's job market is cooling, and the youngest workers are feeling it most  Alexandra Canal  Alexandra Canal  · Senior Reporter  4 min read   ADEN.SW  The US labor market is showing clearer signs of softening. [...] That risk was underscored by a recent New York Fe",
+      "id": "S6"
+    },
+    {
+      "title": "What is driving the cooling of the US labour market?",
+      "url": "https://www.caixabankresearch.com/en/economics-markets/labour-market-demographics/what-driving-cooling-us-labour-market",
+      "source": "web (Tavily)",
+      "snippet": "In fact, other indicators suggest that the labour market is still in good health and that the cooling we are witnessing is due to a normalisation. For instance, the layoffs rate remains stable at around 1.0%, without any significant increases, and applications for unemployment benefits have not grown at a worrying pace",
+      "id": "S7"
+    },
+    {
+      "title": "Job Market’s Effect on the Economy | U.S. Bank",
+      "url": "https://www.usbank.com/investing/financial-perspectives/market-news/effect-of-job-market-on-the-economy.html",
+      "source": "web (Tavily)",
+      "snippet": "## Labor market signals guide Federal Reserve interest rate policy  The Federal Reserve considers maximum employment and stable prices when setting short-term interest rate policy. September’s moderate hiring, 4.2% unemployment rate, and limited layoffs show a labor market that is cooling without broad job losses. That",
+      "id": "S8"
+    }
+  ],
+  "citations_used": [
+    "S1",
+    "S2"
+  ],
+  "tables": [
+    {
+      "title": "FRED: Unemployment Rate (UNRATE)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "UNRATE",
+      "frequency": "monthly",
+      "units": "Percent",
+      "last_date": "2026-09-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/UNRATE",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2016-09-01",
+          5.0
+        ],
+        [
+          "2016-10-01",
+          4.9
+        ],
+        [
+          "2016-11-01",
+          4.7
+        ],
+        [
+          "2016-12-01",
+          4.7
+        ],
+        [
+          "2017-01-01",
+          4.7
+        ],
+        [
+          "2017-02-01",
+          4.6
+        ],
+        [
+          "2017-03-01",
+          4.4
+        ],
+        [
+          "2017-04-01",
+          4.4
+        ],
+        [
+          "2017-05-01",
+          4.4
+        ],
+        [
+          "2017-06-01",
+          4.3
+        ],
+        [
+          "2017-07-01",
+          4.3
+        ],
+        [
+          "2017-08-01",
+          4.4
+        ],
+        [
+          "2017-09-01",
+          4.3
+        ],
+        [
+          "2017-10-01",
+          4.2
+        ],
+        [
+          "2017-11-01",
+          4.2
+        ],
+        [
+          "2017-12-01",
+          4.1
+        ],
+        [
+          "2018-01-01",
+          4.0
+        ],
+        [
+          "2018-02-01",
+          4.1
+        ],
+        [
+          "2018-03-01",
+          4.0
+        ],
+        [
+          "2018-04-01",
+          4.0
+        ],
+        [
+          "2018-05-01",
+          3.8
+        ],
+        [
+          "2018-06-01",
+          4.0
+        ],
+        [
+          "2018-07-01",
+          3.8
+        ],
+        [
+          "2018-08-01",
+          3.8
+        ],
+        [
+          "2018-09-01",
+          3.7
+        ],
+        [
+          "2018-10-01",
+          3.8
+        ],
+        [
+          "2018-11-01",
+          3.8
+        ],
+        [
+          "2018-12-01",
+          3.9
+        ],
+        [
+          "2019-01-01",
+          4.0
+        ],
+        [
+          "2019-02-01",
+          3.8
+        ],
+        [
+          "2019-03-01",
+          3.8
+        ],
+        [
+          "2019-04-01",
+          3.7
+        ],
+        [
+          "2019-05-01",
+          3.6
+        ],
+        [
+          "2019-06-01",
+          3.6
+        ],
+        [
+          "2019-07-01",
+          3.7
+        ],
+        [
+          "2019-08-01",
+          3.6
+        ],
+        [
+          "2019-09-01",
+          3.5
+        ],
+        [
+          "2019-10-01",
+          3.6
+        ],
+        [
+          "2019-11-01",
+          3.6
+        ],
+        [
+          "2019-12-01",
+          3.6
+        ],
+        [
+          "2020-01-01",
+          3.6
+        ],
+        [
+          "2020-02-01",
+          3.5
+        ],
+        [
+          "2020-03-01",
+          4.4
+        ],
+        [
+          "2020-04-01",
+          14.8
+        ],
+        [
+          "2020-05-01",
+          13.2
+        ],
+        [
+          "2020-06-01",
+          11.0
+        ],
+        [
+          "2020-07-01",
+          10.2
+        ],
+        [
+          "2020-08-01",
+          8.4
+        ],
+        [
+          "2020-09-01",
+          7.8
+        ],
+        [
+          "2020-10-01",
+          6.9
+        ],
+        [
+          "2020-11-01",
+          6.7
+        ],
+        [
+          "2020-12-01",
+          6.7
+        ],
+        [
+          "2021-01-01",
+          6.4
+        ],
+        [
+          "2021-02-01",
+          6.2
+        ],
+        [
+          "2021-03-01",
+          6.1
+        ],
+        [
+          "2021-04-01",
+          6.1
+        ],
+        [
+          "2021-05-01",
+          5.8
+        ],
+        [
+          "2021-06-01",
+          5.9
+        ],
+        [
+          "2021-07-01",
+          5.4
+        ],
+        [
+          "2021-08-01",
+          5.1
+        ],
+        [
+          "2021-09-01",
+          4.7
+        ],
+        [
+          "2021-10-01",
+          4.5
+        ],
+        [
+          "2021-11-01",
+          4.1
+        ],
+        [
+          "2021-12-01",
+          3.9
+        ],
+        [
+          "2022-01-01",
+          4.0
+        ],
+        [
+          "2022-02-01",
+          3.9
+        ],
+        [
+          "2022-03-01",
+          3.7
+        ],
+        [
+          "2022-04-01",
+          3.7
+        ],
+        [
+          "2022-05-01",
+          3.6
+        ],
+        [
+          "2022-06-01",
+          3.6
+        ],
+        [
+          "2022-07-01",
+          3.5
+        ],
+        [
+          "2022-08-01",
+          3.6
+        ],
+        [
+          "2022-09-01",
+          3.5
+        ],
+        [
+          "2022-10-01",
+          3.6
+        ],
+        [
+          "2022-11-01",
+          3.6
+        ],
+        [
+          "2022-12-01",
+          3.5
+        ],
+        [
+          "2023-01-01",
+          3.5
+        ],
+        [
+          "2023-02-01",
+          3.6
+        ],
+        [
+          "2023-03-01",
+          3.5
+        ],
+        [
+          "2023-04-01",
+          3.4
+        ],
+        [
+          "2023-05-01",
+          3.6
+        ],
+        [
+          "2023-06-01",
+          3.6
+        ],
+        [
+          "2023-07-01",
+          3.5
+        ],
+        [
+          "2023-08-01",
+          3.7
+        ],
+        [
+          "2023-09-01",
+          3.7
+        ],
+        [
+          "2023-10-01",
+          3.9
+        ],
+        [
+          "2023-11-01",
+          3.7
+        ],
+        [
+          "2023-12-01",
+          3.8
+        ],
+        [
+          "2024-01-01",
+          3.7
+        ],
+        [
+          "2024-02-01",
+          3.9
+        ],
+        [
+          "2024-03-01",
+          3.9
+        ],
+        [
+          "2024-04-01",
+          3.9
+        ],
+        [
+          "2024-05-01",
+          3.9
+        ],
+        [
+          "2024-06-01",
+          4.1
+        ],
+        [
+          "2024-07-01",
+          4.2
+        ],
+        [
+          "2024-08-01",
+          4.2
+        ],
+        [
+          "2024-09-01",
+          4.1
+        ],
+        [
+          "2024-10-01",
+          4.1
+        ],
+        [
+          "2024-11-01",
+          4.2
+        ],
+        [
+          "2024-12-01",
+          4.1
+        ],
+        [
+          "2025-01-01",
+          4.0
+        ],
+        [
+          "2025-02-01",
+          4.2
+        ],
+        [
+          "2025-03-01",
+          4.2
+        ],
+        [
+          "2025-04-01",
+          4.2
+        ],
+        [
+          "2025-05-01",
+          4.3
+        ],
+        [
+          "2025-06-01",
+          4.1
+        ],
+        [
+          "2025-07-01",
+          4.3
+        ],
+        [
+          "2025-08-01",
+          4.3
+        ],
+        [
+          "2025-09-01",
+          4.4
+        ],
+        [
+          "2025-11-01",
+          4.5
+        ],
+        [
+          "2025-12-01",
+          4.4
+        ],
+        [
+          "2026-01-01",
+          4.3
+        ],
+        [
+          "2026-02-01",
+          4.4
+        ],
+        [
+          "2026-03-01",
+          4.3
+        ],
+        [
+          "2026-04-01",
+          4.3
+        ],
+        [
+          "2026-05-01",
+          4.3
+        ],
+        [
+          "2026-06-01",
+          4.2
+        ],
+        [
+          "2026-07-01",
+          4.1
+        ],
+        [
+          "2026-08-01",
+          4.1
+        ],
+        [
+          "2026-09-01",
+          4.2
+        ]
+      ]
+    },
+    {
+      "title": "FRED: Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+      "provider": "FRED",
+      "kind": "timeseries",
+      "series_id": "SAHMREALTIME",
+      "frequency": "monthly",
+      "units": "Percentage Points",
+      "last_date": "2026-09-01",
+      "topics": [
+        "macro"
+      ],
+      "source_url": "https://fred.stlouisfed.org/series/SAHMREALTIME",
+      "columns": [
+        "date",
+        "value"
+      ],
+      "rows": [
+        [
+          "2016-09-01",
+          0.1
+        ],
+        [
+          "2016-10-01",
+          0.1
+        ],
+        [
+          "2016-11-01",
+          0.0
+        ],
+        [
+          "2016-12-01",
+          -0.07
+        ],
+        [
+          "2017-01-01",
+          0.0
+        ],
+        [
+          "2017-02-01",
+          0.03
+        ],
+        [
+          "2017-03-01",
+          -0.03
+        ],
+        [
+          "2017-04-01",
+          -0.13
+        ],
+        [
+          "2017-05-01",
+          -0.13
+        ],
+        [
+          "2017-06-01",
+          -0.03
+        ],
+        [
+          "2017-07-01",
+          -0.03
+        ],
+        [
+          "2017-08-01",
+          0.03
+        ],
+        [
+          "2017-09-01",
+          -0.03
+        ],
+        [
+          "2017-10-01",
+          -0.07
+        ],
+        [
+          "2017-11-01",
+          -0.1
+        ],
+        [
+          "2017-12-01",
+          -0.03
+        ],
+        [
+          "2018-01-01",
+          0.0
+        ],
+        [
+          "2018-02-01",
+          0.0
+        ],
+        [
+          "2018-03-01",
+          0.0
+        ],
+        [
+          "2018-04-01",
+          -0.07
+        ],
+        [
+          "2018-05-01",
+          -0.1
+        ],
+        [
+          "2018-06-01",
+          -0.03
+        ],
+        [
+          "2018-07-01",
+          0.0
+        ],
+        [
+          "2018-08-01",
+          0.03
+        ],
+        [
+          "2018-09-01",
+          -0.07
+        ],
+        [
+          "2018-10-01",
+          -0.07
+        ],
+        [
+          "2018-11-01",
+          -0.07
+        ],
+        [
+          "2018-12-01",
+          0.07
+        ],
+        [
+          "2019-01-01",
+          0.13
+        ],
+        [
+          "2019-02-01",
+          0.17
+        ],
+        [
+          "2019-03-01",
+          0.13
+        ],
+        [
+          "2019-04-01",
+          0.0
+        ],
+        [
+          "2019-05-01",
+          -0.07
+        ],
+        [
+          "2019-06-01",
+          -0.03
+        ],
+        [
+          "2019-07-01",
+          0.03
+        ],
+        [
+          "2019-08-01",
+          0.07
+        ],
+        [
+          "2019-09-01",
+          0.0
+        ],
+        [
+          "2019-10-01",
+          -0.03
+        ],
+        [
+          "2019-11-01",
+          -0.07
+        ],
+        [
+          "2019-12-01",
+          0.0
+        ],
+        [
+          "2020-01-01",
+          0.0
+        ],
+        [
+          "2020-02-01",
+          0.0
+        ],
+        [
+          "2020-03-01",
+          0.3
+        ],
+        [
+          "2020-04-01",
+          4.0
+        ],
+        [
+          "2020-05-01",
+          7.27
+        ],
+        [
+          "2020-06-01",
+          9.5
+        ],
+        [
+          "2020-07-01",
+          8.0
+        ],
+        [
+          "2020-08-01",
+          6.37
+        ],
+        [
+          "2020-09-01",
+          5.3
+        ],
+        [
+          "2020-10-01",
+          4.2
+        ],
+        [
+          "2020-11-01",
+          3.63
+        ],
+        [
+          "2020-12-01",
+          3.23
+        ],
+        [
+          "2021-01-01",
+          3.03
+        ],
+        [
+          "2021-02-01",
+          2.87
+        ],
+        [
+          "2021-03-01",
+          2.33
+        ],
+        [
+          "2021-04-01",
+          -0.07
+        ],
+        [
+          "2021-05-01",
+          -0.13
+        ],
+        [
+          "2021-06-01",
+          -0.03
+        ],
+        [
+          "2021-07-01",
+          -0.23
+        ],
+        [
+          "2021-08-01",
+          -0.2
+        ],
+        [
+          "2021-09-01",
+          -0.37
+        ],
+        [
+          "2021-10-01",
+          -0.27
+        ],
+        [
+          "2021-11-01",
+          -0.33
+        ],
+        [
+          "2021-12-01",
+          -0.27
+        ],
+        [
+          "2022-01-01",
+          -0.2
+        ],
+        [
+          "2022-02-01",
+          -0.13
+        ],
+        [
+          "2022-03-01",
+          -0.1
+        ],
+        [
+          "2022-04-01",
+          -0.13
+        ],
+        [
+          "2022-05-01",
+          -0.07
+        ],
+        [
+          "2022-06-01",
+          0.0
+        ],
+        [
+          "2022-07-01",
+          -0.03
+        ],
+        [
+          "2022-08-01",
+          0.03
+        ],
+        [
+          "2022-09-01",
+          0.0
+        ],
+        [
+          "2022-10-01",
+          0.07
+        ],
+        [
+          "2022-11-01",
+          0.07
+        ],
+        [
+          "2022-12-01",
+          0.03
+        ],
+        [
+          "2023-01-01",
+          -0.07
+        ],
+        [
+          "2023-02-01",
+          0.0
+        ],
+        [
+          "2023-03-01",
+          0.0
+        ],
+        [
+          "2023-04-01",
+          0.0
+        ],
+        [
+          "2023-05-01",
+          0.03
+        ],
+        [
+          "2023-06-01",
+          0.07
+        ],
+        [
+          "2023-07-01",
+          0.1
+        ],
+        [
+          "2023-08-01",
+          0.13
+        ],
+        [
+          "2023-09-01",
+          0.2
+        ],
+        [
+          "2023-10-01",
+          0.33
+        ],
+        [
+          "2023-11-01",
+          0.3
+        ],
+        [
+          "2023-12-01",
+          0.23
+        ],
+        [
+          "2024-01-01",
+          0.2
+        ],
+        [
+          "2024-02-01",
+          0.27
+        ],
+        [
+          "2024-03-01",
+          0.3
+        ],
+        [
+          "2024-04-01",
+          0.37
+        ],
+        [
+          "2024-05-01",
+          0.37
+        ],
+        [
+          "2024-06-01",
+          0.43
+        ],
+        [
+          "2024-07-01",
+          0.53
+        ],
+        [
+          "2024-08-01",
+          0.57
+        ],
+        [
+          "2024-09-01",
+          0.5
+        ],
+        [
+          "2024-10-01",
+          0.43
+        ],
+        [
+          "2024-11-01",
+          0.43
+        ],
+        [
+          "2024-12-01",
+          0.4
+        ],
+        [
+          "2025-01-01",
+          0.37
+        ],
+        [
+          "2025-02-01",
+          0.27
+        ],
+        [
+          "2025-03-01",
+          0.27
+        ],
+        [
+          "2025-04-01",
+          0.27
+        ],
+        [
+          "2025-05-01",
+          0.27
+        ],
+        [
+          "2025-06-01",
+          0.17
+        ],
+        [
+          "2025-07-01",
+          0.1
+        ],
+        [
+          "2025-08-01",
+          0.13
+        ],
+        [
+          "2025-09-01",
+          0.23
+        ],
+        [
+          "2025-11-01",
+          0.43
+        ],
+        [
+          "2025-12-01",
+          0.35
+        ],
+        [
+          "2026-01-01",
+          0.3
+        ],
+        [
+          "2026-02-01",
+          0.27
+        ],
+        [
+          "2026-03-01",
+          0.2
+        ],
+        [
+          "2026-04-01",
+          0.13
+        ],
+        [
+          "2026-05-01",
+          0.1
+        ],
+        [
+          "2026-06-01",
+          0.07
+        ],
+        [
+          "2026-07-01",
+          -0.03
+        ],
+        [
+          "2026-08-01",
+          -0.07
+        ],
+        [
+          "2026-09-01",
+          0.0
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "title": "Unemployment Rate (UNRATE)",
+      "type": "line",
+      "x": [
+        "2016-09-01",
+        "2016-10-01",
+        "2016-11-01",
+        "2016-12-01",
+        "2017-01-01",
+        "2017-02-01",
+        "2017-03-01",
+        "2017-04-01",
+        "2017-05-01",
+        "2017-06-01",
+        "2017-07-01",
+        "2017-08-01",
+        "2017-09-01",
+        "2017-10-01",
+        "2017-11-01",
+        "2017-12-01",
+        "2018-01-01",
+        "2018-02-01",
+        "2018-03-01",
+        "2018-04-01",
+        "2018-05-01",
+        "2018-06-01",
+        "2018-07-01",
+        "2018-08-01",
+        "2018-09-01",
+        "2018-10-01",
+        "2018-11-01",
+        "2018-12-01",
+        "2019-01-01",
+        "2019-02-01",
+        "2019-03-01",
+        "2019-04-01",
+        "2019-05-01",
+        "2019-06-01",
+        "2019-07-01",
+        "2019-08-01",
+        "2019-09-01",
+        "2019-10-01",
+        "2019-11-01",
+        "2019-12-01",
+        "2020-01-01",
+        "2020-02-01",
+        "2020-03-01",
+        "2020-04-01",
+        "2020-05-01",
+        "2020-06-01",
+        "2020-07-01",
+        "2020-08-01",
+        "2020-09-01",
+        "2020-10-01",
+        "2020-11-01",
+        "2020-12-01",
+        "2021-01-01",
+        "2021-02-01",
+        "2021-03-01",
+        "2021-04-01",
+        "2021-05-01",
+        "2021-06-01",
+        "2021-07-01",
+        "2021-08-01",
+        "2021-09-01",
+        "2021-10-01",
+        "2021-11-01",
+        "2021-12-01",
+        "2022-01-01",
+        "2022-02-01",
+        "2022-03-01",
+        "2022-04-01",
+        "2022-05-01",
+        "2022-06-01",
+        "2022-07-01",
+        "2022-08-01",
+        "2022-09-01",
+        "2022-10-01",
+        "2022-11-01",
+        "2022-12-01",
+        "2023-01-01",
+        "2023-02-01",
+        "2023-03-01",
+        "2023-04-01",
+        "2023-05-01",
+        "2023-06-01",
+        "2023-07-01",
+        "2023-08-01",
+        "2023-09-01",
+        "2023-10-01",
+        "2023-11-01",
+        "2023-12-01",
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        5.0,
+        4.9,
+        4.7,
+        4.7,
+        4.7,
+        4.6,
+        4.4,
+        4.4,
+        4.4,
+        4.3,
+        4.3,
+        4.4,
+        4.3,
+        4.2,
+        4.2,
+        4.1,
+        4.0,
+        4.1,
+        4.0,
+        4.0,
+        3.8,
+        4.0,
+        3.8,
+        3.8,
+        3.7,
+        3.8,
+        3.8,
+        3.9,
+        4.0,
+        3.8,
+        3.8,
+        3.7,
+        3.6,
+        3.6,
+        3.7,
+        3.6,
+        3.5,
+        3.6,
+        3.6,
+        3.6,
+        3.6,
+        3.5,
+        4.4,
+        14.8,
+        13.2,
+        11.0,
+        10.2,
+        8.4,
+        7.8,
+        6.9,
+        6.7,
+        6.7,
+        6.4,
+        6.2,
+        6.1,
+        6.1,
+        5.8,
+        5.9,
+        5.4,
+        5.1,
+        4.7,
+        4.5,
+        4.1,
+        3.9,
+        4.0,
+        3.9,
+        3.7,
+        3.7,
+        3.6,
+        3.6,
+        3.5,
+        3.6,
+        3.5,
+        3.6,
+        3.6,
+        3.5,
+        3.5,
+        3.6,
+        3.5,
+        3.4,
+        3.6,
+        3.6,
+        3.5,
+        3.7,
+        3.7,
+        3.9,
+        3.7,
+        3.8,
+        3.7,
+        3.9,
+        3.9,
+        3.9,
+        3.9,
+        4.1,
+        4.2,
+        4.2,
+        4.1,
+        4.1,
+        4.2,
+        4.1,
+        4.0,
+        4.2,
+        4.2,
+        4.2,
+        4.3,
+        4.1,
+        4.3,
+        4.3,
+        4.4,
+        4.5,
+        4.4,
+        4.3,
+        4.4,
+        4.3,
+        4.3,
+        4.3,
+        4.2,
+        4.1,
+        4.1,
+        4.2
+      ],
+      "y_label": "Percent"
+    },
+    {
+      "title": "Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+      "type": "line",
+      "x": [
+        "2016-09-01",
+        "2016-10-01",
+        "2016-11-01",
+        "2016-12-01",
+        "2017-01-01",
+        "2017-02-01",
+        "2017-03-01",
+        "2017-04-01",
+        "2017-05-01",
+        "2017-06-01",
+        "2017-07-01",
+        "2017-08-01",
+        "2017-09-01",
+        "2017-10-01",
+        "2017-11-01",
+        "2017-12-01",
+        "2018-01-01",
+        "2018-02-01",
+        "2018-03-01",
+        "2018-04-01",
+        "2018-05-01",
+        "2018-06-01",
+        "2018-07-01",
+        "2018-08-01",
+        "2018-09-01",
+        "2018-10-01",
+        "2018-11-01",
+        "2018-12-01",
+        "2019-01-01",
+        "2019-02-01",
+        "2019-03-01",
+        "2019-04-01",
+        "2019-05-01",
+        "2019-06-01",
+        "2019-07-01",
+        "2019-08-01",
+        "2019-09-01",
+        "2019-10-01",
+        "2019-11-01",
+        "2019-12-01",
+        "2020-01-01",
+        "2020-02-01",
+        "2020-03-01",
+        "2020-04-01",
+        "2020-05-01",
+        "2020-06-01",
+        "2020-07-01",
+        "2020-08-01",
+        "2020-09-01",
+        "2020-10-01",
+        "2020-11-01",
+        "2020-12-01",
+        "2021-01-01",
+        "2021-02-01",
+        "2021-03-01",
+        "2021-04-01",
+        "2021-05-01",
+        "2021-06-01",
+        "2021-07-01",
+        "2021-08-01",
+        "2021-09-01",
+        "2021-10-01",
+        "2021-11-01",
+        "2021-12-01",
+        "2022-01-01",
+        "2022-02-01",
+        "2022-03-01",
+        "2022-04-01",
+        "2022-05-01",
+        "2022-06-01",
+        "2022-07-01",
+        "2022-08-01",
+        "2022-09-01",
+        "2022-10-01",
+        "2022-11-01",
+        "2022-12-01",
+        "2023-01-01",
+        "2023-02-01",
+        "2023-03-01",
+        "2023-04-01",
+        "2023-05-01",
+        "2023-06-01",
+        "2023-07-01",
+        "2023-08-01",
+        "2023-09-01",
+        "2023-10-01",
+        "2023-11-01",
+        "2023-12-01",
+        "2024-01-01",
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2024-06-01",
+        "2024-07-01",
+        "2024-08-01",
+        "2024-09-01",
+        "2024-10-01",
+        "2024-11-01",
+        "2024-12-01",
+        "2025-01-01",
+        "2025-02-01",
+        "2025-03-01",
+        "2025-04-01",
+        "2025-05-01",
+        "2025-06-01",
+        "2025-07-01",
+        "2025-08-01",
+        "2025-09-01",
+        "2025-11-01",
+        "2025-12-01",
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01",
+        "2026-08-01",
+        "2026-09-01"
+      ],
+      "y": [
+        0.1,
+        0.1,
+        0.0,
+        -0.07,
+        0.0,
+        0.03,
+        -0.03,
+        -0.13,
+        -0.13,
+        -0.03,
+        -0.03,
+        0.03,
+        -0.03,
+        -0.07,
+        -0.1,
+        -0.03,
+        0.0,
+        0.0,
+        0.0,
+        -0.07,
+        -0.1,
+        -0.03,
+        0.0,
+        0.03,
+        -0.07,
+        -0.07,
+        -0.07,
+        0.07,
+        0.13,
+        0.17,
+        0.13,
+        0.0,
+        -0.07,
+        -0.03,
+        0.03,
+        0.07,
+        0.0,
+        -0.03,
+        -0.07,
+        0.0,
+        0.0,
+        0.0,
+        0.3,
+        4.0,
+        7.27,
+        9.5,
+        8.0,
+        6.37,
+        5.3,
+        4.2,
+        3.63,
+        3.23,
+        3.03,
+        2.87,
+        2.33,
+        -0.07,
+        -0.13,
+        -0.03,
+        -0.23,
+        -0.2,
+        -0.37,
+        -0.27,
+        -0.33,
+        -0.27,
+        -0.2,
+        -0.13,
+        -0.1,
+        -0.13,
+        -0.07,
+        0.0,
+        -0.03,
+        0.03,
+        0.0,
+        0.07,
+        0.07,
+        0.03,
+        -0.07,
+        0.0,
+        0.0,
+        0.0,
+        0.03,
+        0.07,
+        0.1,
+        0.13,
+        0.2,
+        0.33,
+        0.3,
+        0.23,
+        0.2,
+        0.27,
+        0.3,
+        0.37,
+        0.37,
+        0.43,
+        0.53,
+        0.57,
+        0.5,
+        0.43,
+        0.43,
+        0.4,
+        0.37,
+        0.27,
+        0.27,
+        0.27,
+        0.27,
+        0.17,
+        0.1,
+        0.13,
+        0.23,
+        0.43,
+        0.35,
+        0.3,
+        0.27,
+        0.2,
+        0.13,
+        0.1,
+        0.07,
+        -0.03,
+        -0.07,
+        0.0
+      ],
+      "y_label": "Percentage Points"
+    }
+  ],
+  "data_status": [
+    {
+      "provider": "FRED",
+      "item": "UNRATE",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "FRED",
+      "item": "SAHMREALTIME",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "provider": "Tavily",
+      "item": "web search",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "agent_outputs": {
+    "analyst": "**Macro – U.S. Job Market Cooling?**\n\n- **Unemployment Rate**  \n  - Latest reading is {{UNRATE.latest}} (Sept 2026) – up {{UNRATE.chg_1m}} from {{UNRATE.prev_1m}} and unchanged from {{UNRATE.prev_3m}} [S1].  \n  - Over the past 6 months the rate fell {{UNRATE.chg_6m}} to {{UNRATE.latest}}, and a year ago it was {{UNRATE.prev_1y}} – a decline of {{UNRATE.chg_1y}} [S1].  \n  - The current level sits at the 63rd percentile of the last decade, below the 10‑year average of {{UNRATE.avg_10y}} but above the 10‑year low of {{UNRATE.min_10y}} [S1].\n\n- **Sahm Rule Recession Indicator**  \n  - The real‑time indicator is {{SAHM.latest}} (Sept 2026), well below the 0.5 % threshold that signals a recessionary labor market [S2].  \n  - It rose {{SAHM.chg_1m}} from {{SAHM.prev_1m}} but fell {{SAHM.chg_3m}} from {{SAHM.prev_3m}}, {{SAHM.chg_6m}} from {{SAHM.prev_6m}}, and {{SAHM.chg_1y}} from {{SAHM.prev_1y}} – a net decline of {{SAHM.chg_1y}} over the past year [S2].  \n  - The indicator is at the 46th percentile of its 10‑year range, below the 10‑year average of {{SAHM.avg_10y}} and above the 10‑year low of {{SAHM.min_10y}} [S2].\n\n- **Trend Assessment**  \n  - The unemployment rate has been largely flat over the last three months, with a modest 0.1 pp rise in the most recent month and a 0.1 pp decline over the past six months.  \n  - The Sahm indicator shows a gradual downward drift, suggesting the labor market is not approaching recessionary territory.  \n  - Overall, the data point to a **mild cooling** rather than a sharp contraction.\n\n- **Inflation Context (qualitative)**  \n  - No CPI/PCE data were fetched; however, if headline inflation remains elevated, the modest cooling could help ease price pressures.  \n  - A slower labor market may support a gradual easing of monetary policy, but the current indicators still fall short of the recessionary threshold.\n\n- **Portfolio Implications**  \n  - **IG Credit** – Slight cooling may tighten IG spreads marginally as default risk perception improves, but the impact is expected to be modest.  \n  - **HY Credit** – HY spreads could widen modestly if risk sentiment shifts, but the absence of a recessionary signal keeps the outlook relatively stable.  \n  - **Equities** – Sectors sensitive to labor costs (e.g., consumer staples) may see modest upside, while high‑growth tech could face headwinds if wage growth slows further.\n\n**Conclusion** – The U.S. job market shows **softening signs**: unemployment is marginally higher than a few months ago but lower than a year ago, and the Sahm Rule remains comfortably below the recessionary threshold. The cooling is gradual and unlikely to trigger immediate policy shifts, but it may influence credit spreads and sector‑specific equity dynamics.",
+    "reasoner": "**Macro – U.S. Job Market Cooling?**\n\n- **Unemployment Rate**  \n  - Latest reading is {{UNRATE.latest}} (Sept 2026) – up {{UNRATE.chg_1m}} from {{UNRATE.prev_1m}} and unchanged from {{UNRATE.prev_3m}} [S1].  \n  - Over the past 6 months the rate fell {{UNRATE.chg_6m}} to {{UNRATE.latest}}, and a year ago it was {{UNRATE.prev_1y}} – a decline of {{UNRATE.chg_1y}} [S1].  \n  - The current level sits at the 63rd percentile of the last decade, below the 10‑year average of {{UNRATE.avg_10y}} but above the 10‑year low of {{UNRATE.min_10y}} [S1].\n\n- **Sahm Rule Recession Indicator**  \n  - The real‑time indicator is {{SAHM.latest}} (Sept 2026), well below the 0.5 % threshold that signals a recessionary labor market [S2].  \n  - It rose {{SAHM.chg_1m}} from {{SAHM.prev_1m}} but fell {{SAHM.chg_3m}} from {{SAHM.prev_3m}}, {{SAHM.chg_6m}} from {{SAHM.prev_6m}}, and {{SAHM.chg_1y}} from {{SAHM.prev_1y}} – a net decline of {{SAHM.chg_1y}} over the past year [S2].  \n  - The indicator is at the 46th percentile of its 10‑year range, below the 10‑year average of {{SAHM.avg_10y}} and above the 10‑year low of {{SAHM.min_10y}} [S2].\n\n- **Trend Assessment**  \n  - The unemployment rate has been largely flat over the last three months, with a modest {{UNRATE.chg_1m}} rise in the most recent month and a {{UNRATE.chg_6m}} decline over the past six months.  \n  - The Sahm indicator shows a gradual downward drift, suggesting the labor market is not approaching recessionary territory.  \n  - Overall, the data point to a **mild cooling** rather than a sharp contraction.\n\n- **Inflation Context (qualitative)**  \n  - No CPI/PCE data were fetched; however, if headline inflation remains elevated, the modest cooling could help ease price pressures.  \n  - A slower labor market may support a gradual easing of monetary policy, but the current indicators still fall short of the recessionary threshold.\n\n- **Portfolio Implications**  \n  - **IG Credit** – Slight cooling may tighten IG spreads marginally as default risk perception improves, but the impact is expected to be modest.  \n  - **HY Credit** – HY spreads could widen modestly if risk sentiment shifts, but the absence of a recessionary signal keeps the outlook relatively stable.  \n  - **Equities** – Sectors sensitive to labor costs (e.g., consumer staples) may see modest upside, while high‑growth tech could face headwinds if wage growth slows further.\n\n**Conclusion** – The U.S. job market shows **softening signs**: unemployment is marginally higher than a few months ago but lower than a year ago, and the Sahm Rule remains comfortably below the recessionary threshold. The cooling is gradual and unlikely to trigger immediate policy shifts, but it may influence credit spreads and sector‑specific equity dynamics."
+  },
+  "validation": {
+    "counts": {
+      "figures": 23,
+      "verified": 10,
+      "derived": 13,
+      "unverified": 0
+    },
+    "figures": [
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 54,
+        "end": 58,
+        "status": "verified",
+        "matched": "Unemployment Rate, latest (September 2026)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Unemployment rate stands at 4.2% [S1], up +0.1 pp from the prior month and unchanged from three months ago [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.latest",
+        "change_sign": null
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 68,
+        "end": 75,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Unemployment rate stands at 4.2% [S1], up +0.1 pp from the prior month and unchanged from three months ago [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "0.00%",
+        "value": 0.0,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 176,
+        "end": 181,
+        "status": "verified",
+        "matched": "Real-time Sahm Rule Recession Indicator, latest (September 2026)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Real‑time Sahm Rule indicator is 0.00% [S2], showing a gradual decline over the past year [S2].",
+        "origin": "fact",
+        "fact_id": "SAHM.latest",
+        "change_sign": null
+      },
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 559,
+        "end": 563,
+        "status": "verified",
+        "matched": "Unemployment Rate, latest (September 2026)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Latest reading: 4.2% [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.latest",
+        "change_sign": null
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 592,
+        "end": 599,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Monthly change: +0.1 pp [S1]; unchanged from three months ago.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "−0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 663,
+        "end": 670,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since March 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Six‑month change: −0.1 pp [S1]; year‑on‑year change: −0.2 pp [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_6m",
+        "change_sign": -1
+      },
+      {
+        "text": "−0.2 pp",
+        "value": 0.2,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 698,
+        "end": 705,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since September 2025",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Six‑month change: −0.1 pp [S1]; year‑on‑year change: −0.2 pp [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1y",
+        "change_sign": -1
+      },
+      {
+        "text": "4.5%",
+        "value": 4.5,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 789,
+        "end": 793,
+        "status": "verified",
+        "matched": "Unemployment Rate: average over the last 10y",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Position in 10‑year range: 63rd percentile [S1]; below 10‑year average 4.5% and above 10‑year low 3.4% [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.avg_10y",
+        "change_sign": null
+      },
+      {
+        "text": "3.4%",
+        "value": 3.4,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 816,
+        "end": 820,
+        "status": "verified",
+        "matched": "Unemployment Rate: lowest value in the last 10y (April 2023)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Position in 10‑year range: 63rd percentile [S1]; below 10‑year average 4.5% and above 10‑year low 3.4% [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.min_10y",
+        "change_sign": null
+      },
+      {
+        "text": "0.00%",
+        "value": 0.0,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 886,
+        "end": 891,
+        "status": "verified",
+        "matched": "Real-time Sahm Rule Recession Indicator, latest (September 2026)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Latest value: 0.00% [S2].",
+        "origin": "fact",
+        "fact_id": "SAHM.latest",
+        "change_sign": null
+      },
+      {
+        "text": "+0.07 pp",
+        "value": 0.07,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 920,
+        "end": 928,
+        "status": "derived",
+        "matched": "Real-time Sahm Rule Recession Indicator: change since August 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Monthly change: +0.07 pp [S2]; three‑month change: −0.07 pp; six‑month change: −0.20 pp; year‑on‑year change: −0.23 pp [S2].",
+        "origin": "fact",
+        "fact_id": "SAHM.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "−0.07 pp",
+        "value": 0.07,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 955,
+        "end": 963,
+        "status": "derived",
+        "matched": "Real-time Sahm Rule Recession Indicator: change since June 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Monthly change: +0.07 pp [S2]; three‑month change: −0.07 pp; six‑month change: −0.20 pp; year‑on‑year change: −0.23 pp [S2].",
+        "origin": "fact",
+        "fact_id": "SAHM.chg_3m",
+        "change_sign": -1
+      },
+      {
+        "text": "−0.20 pp",
+        "value": 0.2,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 983,
+        "end": 991,
+        "status": "derived",
+        "matched": "Real-time Sahm Rule Recession Indicator: change since March 2026",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Monthly change: +0.07 pp [S2]; three‑month change: −0.07 pp; six‑month change: −0.20 pp; year‑on‑year change: −0.23 pp [S2].",
+        "origin": "fact",
+        "fact_id": "SAHM.chg_6m",
+        "change_sign": -1
+      },
+      {
+        "text": "−0.23 pp",
+        "value": 0.23,
+        "unit": "pp",
+        "tolerance": 0.0050000010000000004,
+        "start": 1014,
+        "end": 1022,
+        "status": "derived",
+        "matched": "Real-time Sahm Rule Recession Indicator: change since September 2025",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Monthly change: +0.07 pp [S2]; three‑month change: −0.07 pp; six‑month change: −0.20 pp; year‑on‑year change: −0.23 pp [S2].",
+        "origin": "fact",
+        "fact_id": "SAHM.chg_1y",
+        "change_sign": -1
+      },
+      {
+        "text": "0.56%",
+        "value": 0.56,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1106,
+        "end": 1111,
+        "status": "verified",
+        "matched": "Real-time Sahm Rule Recession Indicator: average over the last 10y",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Position in 10‑year range: 46th percentile [S2]; below 10‑year average 0.56% and above 10‑year low -0.37% [S2].",
+        "origin": "fact",
+        "fact_id": "SAHM.avg_10y",
+        "change_sign": null
+      },
+      {
+        "text": "-0.37%",
+        "value": 0.37,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 1134,
+        "end": 1140,
+        "status": "verified",
+        "matched": "Real-time Sahm Rule Recession Indicator: lowest value in the last 10y (September 2021)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S2"
+        ],
+        "context": "- Position in 10‑year range: 46th percentile [S2]; below 10‑year average 0.56% and above 10‑year low -0.37% [S2].",
+        "origin": "fact",
+        "fact_id": "SAHM.min_10y",
+        "change_sign": null
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1245,
+        "end": 1252,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Unemployment rate largely flat over the last three months; modest +0.1 pp [S1] rise in the most recent month and −0.1 pp decline over the past six months.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "−0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 1292,
+        "end": 1299,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since March 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Unemployment rate largely flat over the last three months; modest +0.1 pp [S1] rise in the most recent month and −0.1 pp decline over the past six months.",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_6m",
+        "change_sign": -1
+      },
+      {
+        "text": "4.2%",
+        "value": 4.2,
+        "unit": "%",
+        "tolerance": 0.050000001,
+        "start": 2244,
+        "end": 2248,
+        "status": "verified",
+        "matched": "Unemployment Rate, latest (September 2026)",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "| **Base** | Current trend continues | Unemployment remains at 4.2% [S1]; Sahm indicator near 0.00% [S2] | IG spreads tighten slightly; HY spreads stable; consumer staples gain modestly; high‑growth tech neutral |",
+        "origin": "fact",
+        "fact_id": "UNRATE.latest",
+        "change_sign": null
+      },
+      {
+        "text": "0.00%",
+        "value": 0.0,
+        "unit": "%",
+        "tolerance": 0.0050000010000000004,
+        "start": 2275,
+        "end": 2280,
+        "status": "verified",
+        "matched": "Real-time Sahm Rule Recession Indicator, latest (September 2026)",
+        "source_id": "S2",
+        "source_ids": [
+          "S2"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "| **Base** | Current trend continues | Unemployment remains at 4.2% [S1]; Sahm indicator near 0.00% [S2] | IG spreads tighten slightly; HY spreads stable; consumer staples gain modestly; high‑growth tech neutral |",
+        "origin": "fact",
+        "fact_id": "SAHM.latest",
+        "change_sign": null
+      },
+      {
+        "text": "−0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2456,
+        "end": 2463,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since March 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "| **Upside** | Labor market improves | Unemployment falls by −0.1 pp [S1]; Sahm indicator declines further | IG spreads tighten; HY spreads narrow; equities in labor‑cost‑sensitive sectors rise |",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_6m",
+        "change_sign": -1
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2653,
+        "end": 2660,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1",
+          "S2"
+        ],
+        "context": "| **Downside** | Labor market weakens | Unemployment rises by +0.1 pp [S1]; Sahm indicator rises | IG spreads widen; HY spreads widen; equities in labor‑cost‑sensitive sectors decline |",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      },
+      {
+        "text": "+0.1 pp",
+        "value": 0.1,
+        "unit": "pp",
+        "tolerance": 0.050000001,
+        "start": 2854,
+        "end": 2861,
+        "status": "derived",
+        "matched": "Unemployment Rate: change since August 2026",
+        "source_id": "S1",
+        "source_ids": [
+          "S1"
+        ],
+        "topic_match": true,
+        "in_source_text": null,
+        "snippet_ids": [],
+        "assumption": false,
+        "written_in": [],
+        "cited": [
+          "S1"
+        ],
+        "context": "- Unexpected rise in unemployment beyond +0.1 pp [S1].",
+        "origin": "fact",
+        "fact_id": "UNRATE.chg_1m",
+        "change_sign": 1
+      }
+    ],
+    "citations": {
+      "markers": 21,
+      "dangling": [],
+      "uncited_paragraphs": [],
+      "source_mismatches": []
+    },
+    "freshness": [
+      {
+        "table": "FRED: Unemployment Rate (UNRATE)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      },
+      {
+        "table": "FRED: Real-time Sahm Rule Recession Indicator (SAHMREALTIME)",
+        "last_date": "2026-09-01",
+        "frequency": "monthly",
+        "age_days": 18,
+        "max_age_days": 60,
+        "status": "ok"
+      }
+    ],
+    "no_data": {
+      "topics_without_data": [],
+      "issue": false
+    },
+    "data_status": [],
+    "valid_source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "directions": [],
+    "comparisons": [],
+    "wording": {
+      "history": [],
+      "trend": [],
+      "rate": []
+    },
+    "lines": [
+      {
+        "start": 24,
+        "end": 141,
+        "kind": "data"
+      },
+      {
+        "start": 141,
+        "end": 241,
+        "kind": "data"
+      },
+      {
+        "start": 241,
+        "end": 335,
+        "kind": "interpretation"
+      },
+      {
+        "start": 335,
+        "end": 401,
+        "kind": "interpretation"
+      },
+      {
+        "start": 401,
+        "end": 478,
+        "kind": "interpretation"
+      },
+      {
+        "start": 484,
+        "end": 512,
+        "kind": "interpretation"
+      },
+      {
+        "start": 539,
+        "end": 572,
+        "kind": "data"
+      },
+      {
+        "start": 572,
+        "end": 641,
+        "kind": "data"
+      },
+      {
+        "start": 641,
+        "end": 714,
+        "kind": "data"
+      },
+      {
+        "start": 714,
+        "end": 829,
+        "kind": "data"
+      },
+      {
+        "start": 830,
+        "end": 868,
+        "kind": "interpretation"
+      },
+      {
+        "start": 868,
+        "end": 900,
+        "kind": "data"
+      },
+      {
+        "start": 900,
+        "end": 1031,
+        "kind": "data"
+      },
+      {
+        "start": 1031,
+        "end": 1149,
+        "kind": "data"
+      },
+      {
+        "start": 1175,
+        "end": 1336,
+        "kind": "data"
+      },
+      {
+        "start": 1336,
+        "end": 1460,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1460,
+        "end": 1541,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1542,
+        "end": 1582,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1582,
+        "end": 1742,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1742,
+        "end": 1887,
+        "kind": "interpretation"
+      },
+      {
+        "start": 1888,
+        "end": 1977,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2000,
+        "end": 2777,
+        "kind": "data"
+      },
+      {
+        "start": 2783,
+        "end": 2812,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2813,
+        "end": 2870,
+        "kind": "data"
+      },
+      {
+        "start": 2870,
+        "end": 2922,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2922,
+        "end": 2961,
+        "kind": "interpretation"
+      },
+      {
+        "start": 2961,
+        "end": 3021,
+        "kind": "interpretation"
+      },
+      {
+        "start": 3027,
+        "end": 3067,
+        "kind": "interpretation"
+      },
+      {
+        "start": 3068,
+        "end": 3151,
+        "kind": "interpretation"
+      },
+      {
+        "start": 3151,
+        "end": 3247,
+        "kind": "interpretation"
+      },
+      {
+        "start": 3247,
+        "end": 3374,
+        "kind": "interpretation"
+      },
+      {
+        "start": 3380,
+        "end": 3878,
+        "kind": "interpretation"
+      }
+    ],
+    "placeholders": true,
+    "unknown_facts": [],
+    "open_issues": 0,
+    "summary": "23 of 23 figures verified against source data (10 exact, 13 derived); 0 flagged. 23 figure(s) inserted from the fact table, 0 quoted from web sources, 0 typed directly."
+  },
+  "run_meta": {
+    "run_id": "20261018-214627-b99a12",
+    "timestamp": "2026-10-19T01:46:27+00:00",
+    "model": "gpt-oss:20b",
+    "api_base": "https://ollama.com",
+    "provider": "ollama-api",
+    "seed": 42,
+    "num_ctx": 16384,
+    "timeout_sec": 300.0,
+    "temperatures": {
+      "planner": 0.1,
+      "analyst": 0.15,
+      "reasoner": 0.15,
+      "writer": 0.15
+    },
+    "repair": {
+      "enabled": true,
+      "max_rounds": 1,
+      "min_length_ratio": 0.5
+    },
+    "pipeline": "v3"
+  }
+}
