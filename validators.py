@@ -163,7 +163,7 @@ class Figure:
     in_source_text: Optional[str] = None  # S# of a snippet that contains the same number
     snippet_ids: Tuple[str, ...] = ()     # every snippet that contains the same number
     assumption: bool = False              # the report labels this number as its own assumption
-    written_in: Tuple[str, ...] = ()      # labelled assumptions: snippets with the same number and unit, as written
+    written_in: Tuple[str, ...] = ()      # snippets with the same number and unit, as written
     cited: Tuple[str, ...] = ()           # citation ids in the same bullet / paragraph
     context: str = ""
     origin: str = "free"                  # "fact" (inserted from {{ID}}), "assumption" ({{assume: …}}) or "free" (typed)
@@ -360,8 +360,7 @@ def check_numeric_grounding(
             fig.snippet_ids = _in_snippets(fig, snippet_figures)
             fig.in_source_text = fig.snippet_ids[0] if fig.snippet_ids else None
             fig.assumption = _is_assumption(report, fig)
-            if _labelled_assumption(report, fig):
-                fig.written_in = _written_in(fig, snippet_figures)
+            fig.written_in = _written_in(fig, snippet_figures)
         figures.append(fig)
     return figures
 
@@ -425,7 +424,13 @@ def _in_snippet(fig: Figure, snippet_figs: List[Figure]) -> bool:
                for sf in snippet_figs)
 
 
-def check_citations(report: str, sources: List[Dict[str, Any]], figures: List[Figure]) -> Dict[str, Any]:
+def check_citations(report: str, sources: List[Dict[str, Any]], figures: List[Figure],
+                    placeholders: bool = False) -> Dict[str, Any]:
+    """Every [S#] exists; paragraphs with figures from the data cite them, and cite the right source.
+
+    With placeholders the renderer cites inserted facts, and typed numbers are open issues of their own,
+    so a typed number that matches the data by value does not ask for a citation.
+    """
     markers = parse_citation_markers(report)
     snippet_figs = {s["id"]: [f for f in extract_figures(s.get("snippet") or "") if f.unit != "date"] for s in sources}
     uncited, mismatched = [], []
@@ -434,7 +439,8 @@ def check_citations(report: str, sources: List[Dict[str, Any]], figures: List[Fi
         for f in figures:
             if a <= f.start < b:
                 f.cited = tuple(sorted(cited, key=lambda i: int(i[1:])))
-        grounded = [f for f in figures if a <= f.start < b and f.status in ("verified", "derived") and f.unit != "date"]
+        grounded = [f for f in figures if a <= f.start < b and f.status in ("verified", "derived") and f.unit != "date"
+                    and (not placeholders or f.origin == "fact")]
         if not grounded:
             continue
         snippet = report[a:b].strip()[:200]
@@ -520,21 +526,29 @@ def check_no_data(report: str, tags: List[str], tables: List[Dict[str, Any]], fi
 _CLAUSE_END = re.compile(r"[.!?,](?=\s|$)|[;\n|]")
 
 
-def check_directions(report: str, figures: List[Figure]) -> List[Dict[str, Any]]:
-    """Change figures next to a word saying the opposite ("rose" next to a fall), or with the wrong sign."""
+def check_directions(report: str, figures: List[Figure], placeholders: bool = False) -> List[Dict[str, Any]]:
+    """Change figures next to a word saying the opposite ("rose" next to a fall), or with the wrong sign.
+
+    With placeholders only facts inserted from the fact table are checked: a typed number matched to
+    the data by value ("20 bp" against a -0.2 pp unemployment change) is a coincidence as often as not,
+    and sending it back to the writer turned a correct "spreads could widen" into "narrow".
+    """
     cfg = _cfg()["directions"]
     words = {w: 1 for w in cfg["up"]} | {w: -1 for w in cfg["down"]}
     pattern = re.compile(r"\b(" + "|".join(sorted(map(re.escape, words), key=len, reverse=True)) + r")\b", re.I)
+    hedge = _phrase_pattern(cfg["skip_words"])
     errors = []
     signed = lambda g: -g.value if g.text[:1] in "-\u2212" else g.value  # noqa: E731
     for f in figures:
-        if not f.change_sign:
+        if not f.change_sign or (placeholders and f.origin != "fact"):
             continue
         # clause around the figure: stop at sentence ends (not decimal points), ";", line breaks and table cells
         cuts = [m.end() for m in _CLAUSE_END.finditer(report, 0, f.start)]
         a = max([0, f.start - cfg["window_chars"]] + cuts[-1:])
         nxt = _CLAUSE_END.search(report, f.end)
         b = min(nxt.start() if nxt else len(report), f.end + cfg["window_chars"])
+        if hedge.search(report, a, b):
+            continue
         change_sign, written_sign = f.change_sign, {"+": 1, "-": -1, "\u2212": -1}.get(f.text[:1])
         if (f.fact_id or "").endswith(".pct_1y"):
             # "inflation fell from {{CPI.pct_1y_prev}} to {{CPI.pct_1y}}": the word describes the rate
@@ -804,7 +818,7 @@ def validate_report(
     then numbers typed directly by the model ("free" numbers) are open issues too.
     """
     figures = check_numeric_grounding(report, question, tables, sources, refs)
-    citations = check_citations(report, sources, figures)
+    citations = check_citations(report, sources, figures, placeholders=refs is not None)
     counts = {k: sum(f.status == k for f in figures) for k in ("verified", "derived", "unverified")}
     result = {
         "counts": {"figures": len(figures), **counts},
@@ -814,7 +828,7 @@ def validate_report(
         "no_data": check_no_data(report, tags, tables, figures),
         "data_status": [s for s in (data_status or []) if not s.get("ok")],
         "valid_source_ids": [s["id"] for s in sources],
-        "directions": check_directions(report, figures),
+        "directions": check_directions(report, figures, placeholders=refs is not None),
         "comparisons": check_comparisons(report, refs),
         "wording": check_wording(report, refs, build_fact_store(tables)),
         "lines": classify_lines(report, figures),
@@ -904,16 +918,16 @@ def feedback_for_writer(v: Dict[str, Any], max_items: int = 25) -> str:
         elif f.get("origin") == "quote":
             items.append(f"{where} — quoted from a source whose text does not contain it; fix the number or "
                          "the source, or drop it.")
-        elif ph and f["snippet_ids"]:
-            sid = f["snippet_ids"][0]
-            items.append(f"{where} — typed directly; it appears in the text of [{sid}], so quote it as "
-                         f"{{{{{sid}: {f['text']}}}}}. Use {{{{assume: …}}}} only for your own estimates.")
-        elif ph and f["status"] != "unverified":
-            items.append(f"{where} — typed directly; it matches \"{f['matched']}\", so write the matching "
-                         "{{ID}} from the FACT TABLE.")
+        elif ph and f.get("written_in"):
+            sid = f["written_in"][0]
+            items.append(f"{where} — typed directly; [{sid}] writes the same number, so if it comes from there "
+                         f"quote it as {{{{{sid}: {f['text']}}}}}; if it is a target, threshold or your own estimate, "
+                         "write {{assume: …}}.")
         elif ph:
-            items.append(f"{where} — typed directly and not in the FACT TABLE or any source text; remove it, or "
-                         "write it as {{assume: …}} only if it is your own estimate.")
+            # a value match is not named: "2% target" matches some old policy-rate reading by coincidence
+            items.append(f"{where} — typed directly; if it is a value from the data, write its {{{{ID}}}} from the "
+                         "FACT TABLE; if it is a target, threshold or your own estimate, write {{assume: …}}; "
+                         "otherwise remove it.")
         elif f["snippet_ids"]:
             items.append(f"{where} — this number appears in source [{f['snippet_ids'][0]}]; cite it in that sentence.")
         elif f["unit"] == "date":

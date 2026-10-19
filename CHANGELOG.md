@@ -35,6 +35,11 @@ Added
 - Tags `v1.0-course` and `v2.0-validation` mark the earlier versions.
 
 Fixed
+- The feedback loop could introduce errors: a typed number matched to the data by coincidence was sent back
+  as a direction error or with a suggested fact ID ("above the Fed's 2% target" became "above the Fed's
+  3.75% target"). In placeholder reports only inserted facts are direction- and citation-checked, hedged
+  clauses are skipped, and a typed number gets "use its ID if it is data, {{assume: …}} if it is a target or
+  estimate".
 - A number counts as being in a web source's text only if the source shows it at the precision the report
   writes it ("0.8 pp" no longer matches the "1" of a section heading). This applies to quotes and to scoring.
 - Percentile, min, max and average facts are labelled by the history actually fetched: FRED serves only 3

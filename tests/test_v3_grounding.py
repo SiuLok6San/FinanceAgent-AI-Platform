@@ -70,11 +70,11 @@ def test_placeholder_figures_are_grounded_exactly_and_typed_numbers_are_issues()
     assert figs["3.23%"]["origin"] == "fact" and figs["3.23%"]["status"] == "verified"
     assert figs["3.23%"]["fact_id"] == "HY_OAS.latest"
     assert figs["0.84%"]["origin"] == "free" and figs["0.84%"]["status"] == "verified"
-    # typed directly (even though correct) and uncited -> 2 open issues in placeholder mode
-    assert res["open_issues"] == 2
+    # typed directly (even though correct) -> an open issue; it does not also ask for a citation
+    assert res["open_issues"] == 1 and res["citations"]["uncited_paragraphs"] == []
     assert "2 figure(s) inserted from the fact table, 0 quoted from web sources, 1 typed directly." in res["summary"]
     fb = v.feedback_for_writer(res)
-    assert '"0.84%"' in fb and "so write the matching {{ID}}" in fb
+    assert '"0.84%"' in fb and "if it is a value from the data, write its {{ID}}" in fb and "IG OAS" not in fb.split("—")[1]
 
 
 def test_assumption_label_on_a_number_from_a_cited_source_is_an_issue():
@@ -91,7 +91,7 @@ def test_assumption_label_on_a_number_from_a_cited_source_is_an_issue():
     assert "1 of those labels on a number from a source the line cites" in res["summary"]
     fb = v.feedback_for_writer(res)
     assert "labelled as an assumption, but it is in the text of [S5]" in fb and "{{S5: 25.2%}}" in fb
-    assert "it appears in the text of [S5], so quote it as {{S5: 25.2%}}" in fb
+    assert "[S5] writes the same number, so if it comes from there quote it as {{S5: 25.2%}}" in fb
 
 
 def test_a_quote_must_match_the_source_at_the_precision_written():
@@ -281,6 +281,17 @@ def test_direction_of_a_rate_quoted_with_its_earlier_value():
     assert [(d["word"], d["data"]) for d in wrong["directions"]] == [("fell", "up")]
     down = dict(CPI_UP, data=CPI_UP["data"].assign(value=[300.0, 301.0] + [303.0] * 9 + [308.0, 310.5, 311.0]))
     assert _validate_with([down], "- Inflation fell from {{CPI.pct_1y_prev}} to {{CPI.pct_1y}}.\n")["directions"] == []
+
+
+def test_direction_check_with_placeholders_ignores_typed_numbers_and_hedges():
+    # "6 bp" typed: matches IG's -6 bp month by value; free text is checked, placeholder reports are not
+    free = v.validate_report("- IG spreads widened 6 bp this month.\n", "q", TABLES, SOURCES, ["credit"],
+                             today=date(2026, 10, 17))
+    assert [d["word"] for d in free["directions"]] == ["widened"]
+    typed = _validate("- HY is {{HY_OAS.latest}}.\n- IG spreads widened 6 bp this month.\n")
+    assert typed["directions"] == []
+    hedged = _validate("- HY spreads could narrow by {{HY_OAS.chg_1y}} if defaults rise.\n")
+    assert hedged["directions"] == []
 
 
 def test_history_wording_skips_negations_and_scenarios():

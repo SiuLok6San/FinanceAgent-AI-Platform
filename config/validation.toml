@@ -74,6 +74,9 @@ patterns = ["\\(assumption\\)", "\\bassum(e|ed|es|ing|ption|ptions)\\b", "\\bhyp
 # ---------------------------------------------------------------------------
 [directions]
 window_chars = 60
+# a hedged or conditional clause ("spreads could widen 20 bp if ...") describes a scenario, not the data
+skip_words = ["if", "could", "may", "might", "would", "should", "unless", "scenario", "assume", "assuming",
+              "expect", "expected", "expects", "forecast", "likely", "will", "potential", "monitor", "watch"]
 up = [
     "rose", "rise", "rises", "rising", "risen", "increase", "increased", "increases", "increasing",
     "up", "higher", "widened", "widening", "widen", "widens", "climbed", "climbing", "gained", "jumped",
