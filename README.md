@@ -2,9 +2,9 @@
 
 [![tests](https://github.com/SiuLok6San/FinanceAgent-AI-Platform/actions/workflows/tests.yml/badge.svg)](https://github.com/SiuLok6San/FinanceAgent-AI-Platform/actions/workflows/tests.yml)
 
-A multi-agent research assistant that answers investor questions with live FRED, Finnhub and Tavily data — and checks every number and citation in its own reports with a deterministic validation layer.
+A multi-agent research assistant that answers investor questions on macro, rates, credit, equities and portfolios with live FRED, Finnhub and Tavily data. The LLM agents never type a number: they refer to fact IDs, code inserts each value with its source, and a deterministic validator checks the wording around the numbers against the data before the report is shown.
 
-**Live demo: [financeagent-ai-platform.streamlit.app](https://financeagent-ai-platform.streamlit.app)** — browse the 20 saved evaluation runs (real outputs, no API calls). Live analysis is turned off on the public site; run it locally with your own keys (see *How to run*).
+**Live demo: [financeagent-ai-platform.streamlit.app](https://financeagent-ai-platform.streamlit.app)**: browse the 40 saved evaluation runs (real outputs, no API calls). Live analysis is off on the public site; run it locally with your own keys (see *How to run*).
 
 ## Context
 
@@ -12,7 +12,10 @@ A multi-agent research assistant that answers investor questions with live FRED,
 - **Roles in this repository**
   - **Yuechen** ([@SiuLok6San](https://github.com/SiuLok6San)): designed the multi-agent pipeline (Planner → Researcher → Analyst → Reasoner → Writer) and the two-tier, rule-based routing across macro, rates, credit, equity and portfolio questions; integrated a locally hosted Llama 3 model (via Ollama) with live data from FRED, Finnhub and Tavily, and built the Streamlit interface using AI coding tools; defined the institutional-style report format with source citations and a review step for weak claims; presented the solution and its business use cases to Boosted.ai stakeholders.
   - **Yuqing** ([@yuqingtao1103](https://github.com/yuqingtao1103)): built the data layer that connects the analysis to external market-data APIs; presented the final findings and recommendations to Boosted.ai stakeholders.
-- **Revised in Oct 2026** to add a deterministic validation layer, an evaluation set with before/after results, real example reports, dependency cleanup and better error handling. See the [CHANGELOG](CHANGELOG.md).
+- **Versions** (git tags; nothing in the history was rewritten):
+  - `v1.0-course`: the code as submitted in Dec 2025.
+  - `v2.0-validation` (Oct 2026): a deterministic validator on the model's free-text reports, plus one feedback round.
+  - v3 (this version, Oct 2026): grounded by construction. See the [CHANGELOG](CHANGELOG.md).
 
 ## How it works
 
@@ -20,67 +23,85 @@ A multi-agent research assistant that answers investor questions with live FRED,
  Question (+ optional ticker)
         │
         ▼
- Router (rule-based) ──► topic tags: macro / rates / credit / equity / portfolio (+ tier-2 detail)
+ Planner (LLM) ─────── JSON: topics + FRED series from a fixed catalog; checked in code,
+        │              rule-based router as fallback
+        ▼
+ Researcher (code) ─── FRED (5–10 years of history), Finnhub, Tavily → tables + sources [S1], [S2] …
         │
         ▼
- Planner ──► Researcher ──► Analyst ──► Reasoner ──► Writer ──► Validator ──► Streamlit UI
-  (LLM)      (no LLM:         (LLM)       (LLM)        (LLM)      (no LLM)
-             FRED, Finnhub,                              ▲            │
-             Tavily)                                     └────────────┘
-                                          feedback: one revision, kept only if the
-                                          validator finds fewer open issues
+ Fact store (code) ─── every value gets an ID:  HY_OAS.latest    = 3.23% [S2]
+        │                                       HY_OAS.chg_1m    = +53 bp [S2]
+        │                                       HY_OAS.pctile_3y = 75th percentile [S2]
+        ▼
+ Analyst → Reasoner → Writer (LLM) ─── write {{HY_OAS.latest}}, {{S5: 25.2%}} or {{assume: 10–15%}},
+        │                               never a bare number
+        ▼
+ Renderer (code) ───── inserts the exact value and its citation
+        │
+        ▼
+ Validator (code) ──── open issues ──► Writer revises once; kept only if open issues go down
+        │
+        ▼
+ Streamlit UI ──────── hover a number to see its fact; lines without data are marked as interpretation
 ```
 
-- **Routing is rule-based, not learned.** `router.py` and `router_tier2.py` match whole-word keywords from [`config/routing.toml`](config/routing.toml) (hyphens and plurals handled, with a few exclude phrases such as "unemployment rate" for the rates tag). It is fast, transparent and testable, and it misclassifies unusual phrasings (see Results).
-- **Researcher (no LLM).** Picks FRED series from keywords in the question ([`config/data_sources.toml`](config/data_sources.toml): policy rate, Treasury yields and curve, mortgage rate, HY and IG credit spreads, CPI, PCE, unemployment, Sahm rule, real GDP, S&P 500, VIX, WTI), pulls Finnhub quote / profile / key metrics / analyst trends / news when a ticker is given, and runs a Tavily web search. Every source gets an id `[S1]`, `[S2]`, …, and missing API keys or failed calls are recorded instead of crashing.
-- **Analyst → Reasoner → Writer (LLM).** Each agent gets a *KEY DATA* block with the fetched values, recent changes and their source ids, plus the list of routed topics with no data. The Reasoner removes claims not supported by that data; the Writer produces the report (executive summary, analysis, scenarios, risks, implications) with `[S#]` citations.
-- **Validator (no LLM).** [`validators.py`](validators.py) checks the final text:
-  1. **Numeric grounding** — every number (%, bp, $, multiples, dates used as values) is *verified* (matches a fetched value within the rounding its digits imply, with unit conversion such as 0.0425 = 4.25% or 25 bp = 0.25 pp), *derived* (a change, % change, annualized growth or spread computed from fetched values) or *unverified*.
-  2. **Citation integrity** — `[S#]` markers must point to a fetched source; paragraphs with grounded figures must cite something; a citation should point to the source the figure came from.
-  3. **Data freshness** — the latest observation of each series against what its frequency allows (e.g. a monthly series more than 60 days old).
-  4. **No-data honesty** — routed topics with no fetched data must be disclosed and must not carry unverified figures.
+**Why placeholders.** In v2 the model typed numbers and the validator guessed which fetched value each one matched, so a coarse number could match by coincidence ("12×" matched a count of 12 hold ratings). In v3 the link from number to data is exact. Any number the model still types stands out and counts as an open issue.
 
-  **Feedback loop.** The findings go back to the Writer as concrete instructions (replace or remove a figure that is not in the data or mark it "(assumption)", cite the web source a figure came from, add the `[S#]` of the data behind an uncited paragraph, disclose a topic with no data). The validator, not the LLM, decides whether the revision is better: it is kept only if it has strictly fewer open issues. The first draft, its validation and the feedback are stored with the report and shown in the UI.
+**What the validator checks** ([`validators.py`](validators.py), thresholds in [`config/validation.toml`](config/validation.toml)):
 
-  The validator itself never deletes content (a revision is the Writer's, and the draft is kept): the report gets a one-line summary on top — for the credit example below, *"27 of 37 figures verified against source data (14 exact, 13 derived); 10 flagged (10 labelled as assumptions)."* — and the UI highlights flagged figures in a Validation panel.
+1. **Grounding.** Every number is a fact from the data, a quote (it must appear in the text of the source it names), a labelled assumption, or typed by the model (an open issue). A number labelled "(assumption)" that is written the same way in a source the line cites is that source's figure, so it is an open issue too.
+2. **Direction.** "Spreads narrowed" next to a change of +53 bp.
+3. **Comparisons.** "Above its five-year average" against the two values, and comparisons between different units (a P/E multiple against an index level).
+4. **Wording against history and trend.** "Near five-year lows" against the value's percentile; "widening" against its recent change; "inflation is cooling" against the 12-month rate a month earlier and the recent annualized pace. Scenario, risk and monitoring sections are skipped: they describe what could happen.
+5. **Citations, freshness and no-data honesty.** Every citation exists and figures are cited; each series is as recent as its frequency allows; a topic with no data is disclosed.
+
+Each report line is then labelled **data** (it states a checked figure) or **interpretation** (no figure from the data: the model's reading, which the validator cannot check). The UI shows interpretation lines in italics.
+
+**What it cannot check.** Whether the reasoning is right ("rate cuts will compress IG spreads") or whether an investment conclusion follows. The validator makes sure the numbers and the words describing them match the data; the rest is labelled, not verified.
 
 ## Results
 
-Both pipelines were run on 20 investor questions (4 each on macro, rates, credit, equity and portfolio) on 2026-10-18 with `gpt-oss:20b` through the hosted Ollama API, and the same validator scored everything. "Original" is the Dec 2025 code, run unchanged from its git commit except for the LLM connection. The two "Revised" columns come from the same run: the Writer's first draft, and the report kept after one round of validator feedback. Full tables, per-question results and caveats: [`eval/RESULTS.md`](eval/RESULTS.md).
+All three versions answered the same 40 investor questions with `gpt-oss:20b` on the hosted Ollama API (original and v2 on 2026-10-18, v3 on 2026-10-19, UTC), and the same current validator scored every report. The main comparison is the 10 **fresh** questions: frozen before the final runs and never run on any version before. Full tables (held-out and development sets too), per-question results and caveats: [`eval/RESULTS.md`](eval/RESULTS.md); how the runs were made: [`eval/NOTES.md`](eval/NOTES.md).
 
-| | Original (Dec 2025) | Revised, first draft | Revised, after feedback loop |
-|---|---|---|---|
-| Routing: exact match of expected topic tags (rule-based) | 12/20 | 17/20 ¹ | 17/20 ¹ |
-| Reports with any fetched data table | 9/20 | 20/20 | 20/20 |
-| Numbers in reports traceable to fetched data (exact or derived) | 46/527 (9%) | 320/527 (61%) | 329/514 (64%) |
-| Paragraphs stating grounded figures without a citation | 19 | 60 | 26 |
-| Reports with a no-data honesty issue | 13/20 | 1/20 | 1/20 |
-| Open issues the validator asks the Writer to fix | 509 | 169 | 69 |
-| Dangling citations | 0 | 0 | 0 |
+**Fresh questions (10)**
 
-¹ The router fixes were written after the questions were drafted, so this is optimistic.
+| | Original (Dec 2025) | v2 | v3 first draft | v3 final |
+|---|---|---|---|---|
+| Reports with any fetched data | 5/10 | 10/10 | 10/10 | 10/10 |
+| Numbers traceable to fetched data | 12/198 (6%) | 130/205 (63%) | 154/212 (73%) | 138/208 (66%) |
+| Numbers labelled as the writer's assumption | 0% | 27% | 24% | 34% |
+| **Untraceable numbers** (not in the data, not in a fetched source text, not labelled) | 130/198 (66%) | 7/205 (3%) | 7/212 (3%) | 0/208 (0%) |
+| Numbers typed by the model instead of inserted | all | all | 28 | 0 |
+| "(assumption)" on a number from the source the line cites | 0 | 9 | 0 | 0 |
+| Change figures described in the wrong direction | 0 | 2 | 1 | 3 ¹ |
+| Paragraphs with figures but no citation / citing the wrong source | 6 / 3 | 12 / 1 | 0 / 0 | 0 / 0 |
+| Reports with a no-data honesty issue | 7/10 | 0/10 | 0/10 | 0/10 |
+
+¹ All three are in one report (F01) and were introduced by the feedback loop; see below.
+
+On the held-out and development questions the pattern is the same. Untraceable numbers in final reports: original 81% and 71%, v2 2% and 2%, v3 0% and 0%. Traceable numbers: 7% and 9%, 70% and 65%, 78% and 73%.
+
+**Routing** (exact expected topic set, fresh / held-out / dev): original keyword rules 5/10, 4/10, 12/20; current keyword rules 8/10, 8/10, 17/20; v3 Planner (LLM) 8/10, 4/10, 11/20. The current rules were fixed after seeing the development questions.
 
 What this shows, and what it does not:
 
-- Run on the original outputs, the validator found only 9% of numbers traceable to fetched data. The causes were in the code: the original agents never saw the data they fetched (only table titles reached the Writer), and no credit data was fetched for "high-yield" or "IG vs HY" questions. The revised pipeline fixes both; its first drafts reach 61% (the evaluation does not separate the effect of each change).
-- The feedback loop cut open issues from 169 to 69 and uncited paragraphs from 60 to 26. The validator kept 16 of 20 revisions and rejected 4 that were not strictly better. It mostly fixes attribution: traceable numbers moved only from 61% to 64%, while 124 numbers are now labelled as the writer's own assumptions (counted separately, still unverified).
-- "Traceable" is a lower bar than "correct": a coarse number can match by coincidence. In Q04, "a credit spread buffer of at least 50 bp (assumption)" matched a 2024 value of the Sahm-rule indicator (0.50); 95 of the 329 traceable numbers are written without decimals.
+- **Most of the gain is from original to v2.** The original agents never saw the data they fetched (only table titles reached the Writer), and no credit data was fetched for "high-yield" or "IG vs HY" questions.
+- **v3's gain over v2 is bookkeeping, not judgment.** Every number in a final v3 report is inserted from the data, quoted from a source or labelled as an assumption, and every citation is right. v2 still had 2–3% untraceable numbers and 12–42 citation problems per question set.
+- **A third of v3's numbers on fresh questions are labelled assumptions** (34%, v2 27%). The feedback loop turned typed numbers into labels: on fresh questions, 28 typed numbers went to 0 and assumptions from 50 to 70. A label discloses a number; it does not verify it. The only check on labels is that they do not hide a number from the source the line cites. "Traceable" falls from first draft to final (73% → 66%) because the draft count includes typed numbers that only matched a fetched value; in the final, every traceable number is an inserted fact.
+- **The wording checks are the weak part.** In the final run the Writer received 30 direction, comparison and wording findings. Read against the data, 9 were real, 13 were false alarms and 8 were unclear ([`eval/FEEDBACK_REVIEW.md`](eval/FEEDBACK_REVIEW.md)). The revision fixed 6 of the real ones. After false alarms it also made four correct statements wrong: "annualized growth fell from +2.5% to +2.2%" became "rose". The causes were removed after the run, and the current validator flags those errors (the "3" above). Those fixes were made after reading these reports, so they are not independently tested.
+- **The LLM Planner routes no better than the keyword rules** it falls back on.
 
-Example reports (real runs, unedited model output, with the first draft, the feedback it received and every figure's check): [macro](examples/Q01-macro.md) · [credit](examples/Q09-credit.md) · [equity](examples/Q13-equity.md).
+Example reports (real runs, unedited model output, with the first draft, the feedback and every figure's source): [macro](examples/Q01-macro.md) · [credit](examples/Q09-credit.md) · [equity](examples/Q13-equity.md).
 
 ## Screenshots
 
-A credit question ("Are high-yield corporate bond spreads tight relative to history?") run in the app with live data on 2026-10-18. The first three screenshots are from the version before the feedback loop; the fourth is from the current version:
+The credit question Q09 in the app, from a saved run. Numbers from the data have a dotted underline (hover shows the fact ID and its source); grey marks the writer's assumptions; lines with no figure from the data are in italics. The third bullet shows what the validator misses: "+239 bp" is the level of the HY–IG spread, not how much it widened (+47 bp over the month).
 
-![Report with validation summary](examples/screenshots/1-report-with-validation-summary.jpg)
+![Q09 report: inserted numbers, citations, interpretation in italics](examples/screenshots/v3-1-report.jpg)
 
-![Validation panel: each figure and the data it matched](examples/screenshots/2-validation-panel.jpg)
+The validation panel for a fresh question (F01). The three flagged sentences were right in the first draft ("fell from +2.5% to +2.2%"); a false alarm in the feedback loop made the Writer change them, and the current validator flags the result.
 
-![Fetched FRED tables and chart](examples/screenshots/3-data-tables-and-chart.jpg)
-
-In the second screenshot, "3.5%" (the report's 10-year Treasury yield) matched an earlier value of the high-yield spread: no Treasury data was fetched for this question, so this is a coincidental match of the kind described under Limitations.
-
-![Feedback loop: the first draft's validation, and the revision that was kept](examples/screenshots/4-feedback-loop-summary.jpg)
+![F01 validation panel: direction errors introduced by the feedback loop](examples/screenshots/v3-2-validation-panel.jpg)
 
 ## How to run
 
@@ -97,13 +118,13 @@ cp .env.example .env
 
 Fill in `.env` (it is gitignored). Free keys: [FRED](https://fredaccount.stlouisfed.org/apikeys), [Finnhub](https://finnhub.io/register), [Tavily](https://app.tavily.com). Then choose how to run the LLM:
 
-- **Local Ollama** — install [Ollama](https://ollama.com), then pull the model and point `.env` at it (`LLM_API_BASE=http://localhost:11434`, `LLM_MODEL_NAME=llama3`, `OLLAMA_API_KEY` empty):
+- **Local Ollama**: install [Ollama](https://ollama.com), pull a model and point `.env` at it (`LLM_API_BASE=http://localhost:11434`, `LLM_MODEL_NAME=llama3`, `OLLAMA_API_KEY` empty):
 
   ```bash
   ollama pull llama3
   ```
 
-- **Hosted Ollama API** — create a key at [ollama.com/settings/keys](https://ollama.com/settings/keys) and set `LLM_API_BASE=https://ollama.com`, `OLLAMA_API_KEY=...` and a hosted model such as `LLM_MODEL_NAME=gpt-oss:20b`.
+- **Hosted Ollama API**: create a key at [ollama.com/settings/keys](https://ollama.com/settings/keys) and set `LLM_API_BASE=https://ollama.com`, `OLLAMA_API_KEY=...` and a hosted model such as `LLM_MODEL_NAME=gpt-oss:20b`. The free tier serves one request at a time.
 
 Start the app:
 
@@ -111,7 +132,7 @@ Start the app:
 streamlit run app.py
 ```
 
-The app opens on **Example runs** (the saved evaluation outputs, no API calls); switch to **Live analysis** to run the pipeline. To deploy it (e.g. Streamlit Community Cloud), put the same keys in the app's secrets and also set `APP_PASSWORD`: live runs then need that password, so visitors cannot spend your API quota. Without an LLM endpoint configured, a deployment shows only the example runs.
+The app opens on **Example runs** (saved evaluation outputs, no API calls); switch to **Live analysis** to run the pipeline. To deploy it (e.g. Streamlit Community Cloud), put the same keys in the app's secrets and also set `APP_PASSWORD`: live runs then need that password, so visitors cannot spend your API quota. Without an LLM endpoint configured, a deployment shows only the example runs.
 
 Run the tests (no API keys or LLM needed; everything external is mocked):
 
@@ -120,42 +141,58 @@ pip install -r requirements-dev.txt
 pytest
 ```
 
-Reproduce the evaluation (needs all keys; takes a while and uses API quota):
+Reproduce the evaluation (needs all keys, uses API quota, and takes hours on the hosted free tier; run one at a time):
 
 ```bash
-python eval/run_eval.py --pipeline original
-python eval/run_eval.py --pipeline revised
+python eval/run_eval.py --pipeline v3 --set all
+```
+
+```bash
+python eval/run_eval.py --pipeline v2 --set all
+```
+
+```bash
+python eval/run_eval.py --pipeline original --set all
+```
+
+```bash
 python eval/score.py
 ```
 
 ## Limitations
 
-- **The LLM can still misread data.** The validator checks that a number exists in the fetched data, not that the reasoning around it is right. A coarse number ("4%", "12×") can match an unrelated value by coincidence; the Validation panel shows which series each figure matched and whether it is on the sentence's topic.
-- **Keyword routing can misclassify unusual questions**, e.g. "stocks and bonds fall together" is tagged rates and equity as well as portfolio.
-- **Free API limits.** Finnhub (60 calls/min), Tavily (monthly credits) and the hosted Ollama API all have free-tier limits; FRED requires a free key.
-- **Not reproducible run to run on the hosted API.** The seed is sent, but in our test the hosted Ollama API returned different outputs for the same prompt and seed, so saved outputs in `eval/results/` are the record.
-- **Assumption labels are a policy choice.** A number the report marks "(assumption)" stays unverified but is not counted as an open issue; a writer could over-label to pass the checks, so the count is reported separately.
-- **Small evaluation.** 20 questions written by the authors; they also served as the development set for the router fixes, and several validator fixes were made after reading real outputs (listed in `eval/RESULTS.md`).
+- **Reasoning is not checked.** The validator checks numbers and the words that describe them (direction, comparisons, position in history, trend). Causal claims, scenario logic and investment conclusions are labelled as interpretation, not verified. An LLM critic could flag doubtful reasoning, but measuring whether its flags are right needs examples labelled by someone with finance expertise; it has not been built.
+- **The feedback loop can make a report worse.** The checks it relies on have false alarms (13 of 30 findings in the final run), and the Writer follows them: four correct statements became wrong. A revision is kept when the validator counts fewer open issues, so a revision that fixes several real issues while introducing a new one, or that follows a false alarm, is still kept.
+- **The model can misread what a fact means.** The numbers are inserted correctly but described wrongly: "+3.4% recorded a year earlier" for the 12-month rate a month earlier (Q01), "+1.2% in the prior quarter" for the change over two quarters (Q03), and "widening the spread by +239 bp" for the spread's level (Q09; spreads between two series are displayed with a sign, which invites this). No check reads the meaning of a fact.
+- **The wording checks are phrase lists.** Direction, comparison, history and trend checks match configured phrases ([`config/validation.toml`](config/validation.toml)). A contradiction phrased differently passes, and a phrase used in an unusual sense can be flagged. They were tuned on the development reports, and after the final run on all 40 v3 reports.
+- **Assumption labels are a policy choice.** A number labelled as the writer's assumption is not checked, except that it must not be a number from a source the line cites. One final report calls 0.00% "the threshold that signals a recession" for the Sahm rule (it is 0.50 points); as an assumption, it passes.
+- **Keyword fallback routing.** When the Planner's output is unusable, the rule-based router decides, and it misclassifies unusual phrasings.
+- **Not reproducible run to run.** The seed is sent, but in our test the hosted Ollama API returned different outputs for the same prompt and seed; the saved outputs in `eval/results/` are the record.
+- **Small evaluation.** 10 fresh, 10 held-out and 20 development questions written by the authors, one model (`gpt-oss:20b`), and live data that change every day. Two held-out questions were once used in a smoke test ([`eval/NOTES.md`](eval/NOTES.md)).
+- **Free API limits.** The hosted Ollama free tier serves one request at a time; Finnhub allows 60 calls/min; Tavily has monthly credits.
 - **Not investment advice.** This is a course project for research and education.
 
 ## Project structure
 
 ```
 FinanceAgent-AI-Platform/
-├── app.py                 # Streamlit UI (report, Validation panel, tables, charts, sources)
-├── agents.py              # Pipeline: Planner → Researcher → Analyst → Reasoner → Writer → Validator
-├── answer_builder.py      # Writer prompt, source ids, citation parsing
-├── validators.py          # Deterministic validation layer
-├── facts.py               # Fetched tables → numeric facts and the KEY DATA prompt block
-├── router.py              # Tier-1 rule-based routing
+├── app.py                 # Streamlit UI: report with hover-to-source numbers, validation panel, tables, charts
+├── demo.py                # Saved evaluation runs for the example mode (no API calls)
+├── agents.py              # Pipeline: Planner → Researcher → Analyst → Reasoner → Writer → Validator (+ revision)
+├── answer_builder.py      # Writer and revision prompts, source ids, citation parsing
+├── fact_store.py          # Fetched tables → fact IDs (levels, changes, percentiles, spreads, company metrics)
+├── render.py              # {{ID}} / {{S#: …}} / {{assume: …}} placeholders → values and citations
+├── validators.py          # Deterministic checks and the feedback for the Writer
+├── facts.py               # Value matching for free-text reports (used to score original and v2)
+├── router.py              # Tier-1 rule-based routing (Planner fallback)
 ├── router_tier2.py        # Tier-2 rule-based specialization
 ├── data_providers.py      # FRED / Finnhub / Tavily bundles with source metadata and status
 ├── tools.py               # Low-level HTTP clients for the three APIs
-├── llm.py                 # Ollama /api/chat client (local or hosted)
+├── llm.py                 # Ollama /api/chat client (local or hosted): time limit, retries, 429 handling
 ├── settings.py            # Loads .env and config/*.toml
 ├── config/                # Routing rules, data sources, validation thresholds, LLM settings
-├── eval/                  # Questions, run/score scripts, RESULTS.md, saved outputs
-├── examples/              # Real reports from the revised pipeline + screenshots
+├── eval/                  # Question sets, run / score scripts, RESULTS.md, NOTES.md, saved outputs
+├── examples/              # Real v3 reports + screenshots
 ├── tests/                 # pytest suite
 ├── docs/                  # Revision spec
 ├── requirements.txt       # Runtime dependencies (pinned)
