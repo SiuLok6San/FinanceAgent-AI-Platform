@@ -1,0 +1,90 @@
+{
+  "id": "F09",
+  "set": "fresh",
+  "category": "portfolio",
+  "question": "Should a portfolio reduce equity risk when the VIX is low?",
+  "ticker": null,
+  "expected_tags": [
+    "portfolio",
+    "equity"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T22:33:50+00:00",
+  "elapsed_sec": 37.3,
+  "router_tags": [
+    "portfolio",
+    "equity"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**FINANCE REPORT – VIX‑Based Equity Risk Management**  \n*Prepared for B17 Institutional Research – Tier‑2 General Finance*  \n\n---\n\n### 1. Executive Summary  \n- **Low VIX ≠ Low Equity Risk** – Academic studies (S1, S2) show that a low VIX signals lower implied volatility and therefore a *higher* risk‑taking stance, not a need to cut equity exposure.  \n- **High VIX Triggers Equity Contraction** – Conventional wisdom (S3) and many portfolio‑management frameworks recommend reducing equity allocation during high‑volatility periods to protect downside.  \n- **Mixed Practitioner Views** – Some “smart‑money” strategies (S4) trim stocks when VIX is very low to buy volatility, but this is an exception rather than the rule.  \n- **Recommended Approach** – Adopt a volatility‑targeting overlay that preserves equity upside while hedging downside, rather than using VIX alone as a trigger to cut equity risk.\n\n---\n\n### 2. Core Analysis  \n\n#### Macro Context  \n- **Monetary Policy & Liquidity** – Low VIX often coincides with accommodative policy and high market liquidity, which suppress implied volatility but do not eliminate systematic risk.  \n- **Growth Expectations** – Investor optimism inflates equity valuations; the VIX reflects perceived downside, not fundamental risk.\n\n#### Sector Dynamics  \n- **Growth‑Heavy Sectors** – In low‑VIX environments, technology, consumer discretionary, and other growth sectors tend to outperform due to higher risk‑premium expectations.  \n- **Defensive Sectors** – May under‑perform when VIX is low because risk‑averse investors still hold equities.\n\n#### Credit Landscape  \n- **Investment‑Grade (IG)** – Spreads tend to tighten when VIX is low, making IG bonds more attractive relative to equities.  \n- **High‑Yield (HY)** – Spreads may widen modestly; liquidity risk remains a concern.\n\n#### Portfolio‑Management Evidence  \n- **VIX‑Managed Strategies** – S1 and S2 demonstrate that increasing equity exposure when VIX is low and reducing it when VIX is high yields more stable risk‑adjusted returns.  \n- **Traditional Hedging** – S3 notes that portfolio managers typically reduce equity exposure during high‑volatility periods to manage downside.\n\n---\n\n### 3. Scenarios  \n\n| Scenario | VIX Trigger | Equity Allocation | Expected Outcome | Key Source |\n|----------|-------------|-------------------|------------------|------------|\n| **Base** | None | Maintain current allocation | Baseline risk‑return profile | — |\n| **Upside** | VIX < 15 | Increase equity exposure (e.g., +10 %) | Higher upside potential; risk‑adjusted return improves if volatility remains low | S1, S2 |\n| **Downside** | VIX > 25 | Reduce equity exposure (e.g., −20 %) | Protects against sharp market declines; may under‑perform if VIX spikes are short‑lived | S3 |\n\n*Note: No tables are included; scenario logic is described in text.*\n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **VIX Misinterpretation** – Treating VIX as a return predictor can lead to sub‑optimal allocation.  \n- **Regime Shifts** – Sudden changes in monetary policy or macro fundamentals can alter the relationship between VIX and equity risk.  \n- **Liquidity Risk** – Low VIX periods can coincide with high liquidity; a sudden liquidity crunch may invalidate the low‑risk assumption.  \n- **Model & Implementation Risk** – Volatility‑targeting or VIX‑based overlays require accurate data feeds and robust risk controls.  \n- **Behavioral Bias** – Overreliance on VIX may ignore other risk signals (e.g., credit spreads, macro indicators).\n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Avoid Cutting Equity Solely on Low VIX** – Instead, maintain or modestly increase equity exposure when VIX is low, following evidence from S1 and S2.  \n- **Implement Volatility‑Targeting** – Adjust portfolio leverage to keep realized volatility around a 10–12 % annualized target; use VIX as a *guide* rather than a hard trigger.  \n- **Overlay VIX Futures/Options** – Sell VIX futures when VIX > 20 to hedge; buy when VIX < 10 to protect upside, as suggested by S6.  \n- **Credit Tilt** – Add a 10–15 % IG bond allocation during low‑VIX periods to capture tightening spreads without adding significant equity risk.  \n- **Monitor Macro & Credit Indicators** – Keep an eye on policy rates, IG/HY spreads, and liquidity metrics to adjust the overlay dynamically.\n\n---\n\n### 6. Conclusion  \n\n- **Low VIX should not prompt a reduction in equity risk**; academic evidence (S1, S2) indicates that equity exposure should *increase* when implied volatility is low.  \n- **High VIX remains the primary signal for equity contraction** to protect downside, consistent with conventional portfolio‑management practice (S3).  \n- **A nuanced, volatility‑targeting approach** that preserves equity upside while hedging downside offers the most robust risk‑adjusted performance.  \n- **Practitioners should treat VIX as one of several risk gauges**, integrating macro, sector, and credit signals to inform allocation decisions.  \n\n---",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "VIX-managed portfolios",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1057521924002850",
+      "source": "web",
+      "snippet": "## Abstract  We propose a simple portfolio management strategy that gauges the leverage based on the observed implied volatility index (VIX). The strategy involves taking less risk when the cumulative previous-month VIX is high and more whe",
+      "id": "S1"
+    },
+    {
+      "title": "VIX-managed portfolios",
+      "url": "https://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2024-Lisbon/papers/EFMA%202024_stage-6443_question-Full%20Paper_id-25.pdf",
+      "source": "web",
+      "snippet": "by M Bozovic · Cited by 17 — The strategy involves taking less risk when the cumulative previous-month VIX is high and more when it is low. We show that the strategy yields more stable",
+      "id": "S2"
+    },
+    {
+      "title": "Understanding the VIX: What Every Investor Should Know ...",
+      "url": "https://www.thrivent.com/insights/investing/understanding-the-vix-what-every-investor-should-know-about-the-volatility-index",
+      "source": "web",
+      "snippet": "Portfolio managers might reduce equity exposure during high-volatility periods to manage downside risk. Hedging against market swings.",
+      "id": "S3"
+    },
+    {
+      "title": "How Smart Money Uses the VIX to Beat Market Panic",
+      "url": "https://equityarmorinvestments.com/how-smart-money-uses-the-vix-to-beat-market-panic",
+      "source": "web",
+      "snippet": "When VIX is low (below 15), flip the script – raise cash by trimming stock positions and buy volatility. You're essentially buying insurance",
+      "id": "S4"
+    },
+    {
+      "title": "How do you adjust your trading strategy for a low-VIX ...",
+      "url": "https://www.reddit.com/r/thetagang/comments/wo79m6/how_do_you_adjust_your_trading_strategy_for_a",
+      "source": "web",
+      "snippet": "Looking at the VIX index, it has had extended periods at very low levels. Obviously this means reduced premiums - selling closer to the money may help,",
+      "id": "S5"
+    },
+    {
+      "title": "Trading the VIX | Charles Schwab",
+      "url": "https://www.schwab.com/learn/story/trading-vix-strategies-fear-index",
+      "source": "web",
+      "snippet": "Loading navigation  # Trading the VIX: Strategies for the Fear Index  Some traders use products tied to the VIX to hedge their portfolios against market declines or speculate on shifts in volatility. But trading the VIX carries significant ",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

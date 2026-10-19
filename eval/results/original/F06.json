@@ -1,0 +1,88 @@
+{
+  "id": "F06",
+  "set": "fresh",
+  "category": "credit",
+  "question": "Are investment-grade spreads near their five-year lows?",
+  "ticker": null,
+  "expected_tags": [
+    "credit"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T22:31:54+00:00",
+  "elapsed_sec": 33.1,
+  "router_tags": [
+    "credit"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Investment‑Grade Credit Spreads – Current Status & Portfolio Guidance**  \n*Prepared for B17 Institutional Research – 18 Oct 2026*  \n\n---\n\n### 1. Executive Summary  \n- Investment‑grade (IG) spreads are **within ~10 bps of their five‑year low** (≈ 80 bps vs. ≈ 70 bps)【S1】【S5】.  \n- The spread tightening is driven by a dovish Fed stance, easing core CPI, and a global risk‑on environment【S2】【S3】【S4】.  \n- Upside potential is limited; a widening cycle would erode the current 80 bps premium.  \n- Portfolio managers should capture the current spread while guarding against Fed‑driven or earnings‑driven widening.  \n\n---\n\n### 2. Core Analysis  \n\n#### Macro  \n- **Fed Policy** – September 2026 rate cut (–25 bp) and dovish guidance compress discount rates, supporting tighter IG spreads【S2】.  \n- **Inflation & Earnings** – Core CPI easing and solid corporate earnings reduce perceived credit risk, keeping the risk premium low【S3】.  \n- **Risk Sentiment** – Equity rally and lower commodity volatility push capital toward high‑quality bonds, tightening IG spreads【S4】.  \n\n#### Sector  \n- **IG Spread Trend** – 10‑yr IG spread ≈ 80 bps, the narrowest in 25 years and close to the five‑year low【S1】【S5】.  \n- **Seasonality** – Historically, the first half of the year sees tighter IG spreads; current timing aligns with this pattern【S4】.  \n\n#### Credit  \n- **Spread Levels** – 10‑yr IG spread ≈ 80 bps; five‑year low ≈ 70 bps【S1】【S5】.  \n- **Credit Quality** – Default rates remain near 2020‑2021 lows; credit ratings largely unchanged.  \n\n#### Portfolio  \n- **Current Exposure** – Many funds hold 10‑yr IG bonds to capture the 80 bps premium.  \n- **Duration Sensitivity** – Current duration (~10 yr) exposes the portfolio to potential Fed‑driven widening.  \n\n---\n\n### 3. Scenarios  \n\n| Scenario | Assumptions | Expected Spread | Portfolio Impact |\n|----------|-------------|-----------------|------------------|\n| **Base** | Fed remains dovish; earnings stay strong; risk‑on persists | 80 bps (stable) | Maintain current IG allocation; monitor duration |\n| **Upside** | Fed cuts further; inflation continues to ease | 70 bps (five‑year low) | Add IG exposure; consider longer duration |\n| **Downside** | Fed hikes; earnings slowdown; geopolitical tension | 90–100 bps (widening) | Reduce duration; increase cash or short‑duration IG |\n\n*Note: Scenario outcomes are qualitative; no tables are included.*  \n\n---\n\n### 4. Key Risks & Monitoring  \n\n- **Fed Rate Hikes** – A 25 bp hike could widen IG spreads by ~10–15 bps.  \n- **Earnings Slowdown** – Corporate earnings contraction may widen spreads.  \n- **Credit Defaults** – Rising default rates could erode the spread premium.  \n- **Liquidity & Funding** – Tightening liquidity in the IG market could widen spreads.  \n- **Geopolitical Events** – Trade tensions or geopolitical shocks could shift risk sentiment.  \n\n**Monitoring Triggers**  \n- Fed policy statements & minutes.  \n- Core CPI releases.  \n- Corporate earnings season.  \n- Credit default swap (CDS) spreads.  \n\n---\n\n### 5. Portfolio / Decision Implications  \n\n- **Maintain/Add IG Exposure** – Capture the current 80 bps premium; consider a 10‑yr IG core.  \n- **Duration Management** – Shorten duration (e.g., 5‑yr IG) to reduce sensitivity to potential Fed hikes.  \n- **Hybrid IG‑HY Ladder** – Balance yield (≈ 80 bps) with higher return potential (≈ 260 bps) while spreading risk.  \n- **Credit Risk Monitoring** – Track default rates, credit ratings, and sector‑specific spreads.  \n- **Hedging** – Use CDS or spread‑futures if a widening cycle is anticipated.  \n\n---\n\n### 6. Conclusion  \n\nInvestment‑grade spreads are **near their five‑year lows**, sitting roughly 10 bps above the low of ≈ 70 bps. The current environment offers a modest yield premium but limited upside; a widening cycle would erode the spread. Managers should capture the present opportunity while actively monitoring Fed policy, earnings, and credit quality to adjust duration and exposure as conditions evolve.  \n\n---",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "[PDF] Investment-Grade Spreads Tighten to Multi-Decade Lows",
+      "url": "https://www.guggenheiminvestments.com/GuggenheimInvestments/media/PDF/4Q25-FISV-Investment-Grade-Corporate-Bonds.pdf",
+      "source": "web",
+      "snippet": "1 Fixed-Income Sector Views | Fourth Quarter 2025 Guggenheim Investments This report is excerpted from the Fourth Quarter 2025 Fixed-Income Sector Views. Sector Commentary Investment Themes Investment-Grade Corporate Bonds Investment-Grade ",
+      "id": "S1"
+    },
+    {
+      "title": "How Fed Policy Can Impact Corporate Bond Spreads - OpenMarkets",
+      "url": "https://www.cmegroup.com/openmarkets/interest-rates/2025/How-Fed-Policy-Can-Impact-Corporate-Bond-Spreads.html",
+      "source": "web",
+      "snippet": "Explore Topics and Trends impacting today's markets  The Federal Reserve’s September interest rate cut has triggered a shift in the corporate bond market, with spreads in both high yield and investment grade bond indexes reaching near-histo",
+      "id": "S2"
+    },
+    {
+      "title": "Credit spreads are low again and that's when caution pays",
+      "url": "https://www.reddit.com/r/ValueInvesting/comments/1oqg1hm/credit_spreads_are_low_again_and_thats_when",
+      "source": "web",
+      "snippet": "Investment‑grade corporate bond spreads are back near 0.80% above Treasuries. The quiet in the credit market feels odd given the global",
+      "id": "S3"
+    },
+    {
+      "title": "Credit Spread Seasonality – An Auspicious Sign for Corporate Bonds?",
+      "url": "https://www.sageadvisory.com/article/credit-spread-seasonality-an-auspicious-sign-for-corporate-bonds",
+      "source": "web",
+      "snippet": "SAGE Logo  InsightsInvestment StrategiesSolutionsAbout UsContact Us  SAGE Logo  # Notes from the Desk  # Credit Spread Seasonality – An Auspicious Sign for Corporate Bonds?  # Credit Spread Seasonality – An Auspicious Sign for Corporate Bon",
+      "id": "S4"
+    },
+    {
+      "title": "Daily: US IG spreads narrow to a 25-year low",
+      "url": "https://www.ubs.com/global/en/wealthmanagement/insights/chief-investment-office/house-view/daily/2025/latest-19082025.html",
+      "source": "web",
+      "snippet": "On Monday, US investment grade (IG) corporate bond spreads tightened to their narrowest levels in 25 years. ICE BofA data shows the gap between",
+      "id": "S5"
+    },
+    {
+      "title": "Investment grade corporate bond spreads could change soon",
+      "url": "https://www.cnbc.com/2022/02/07/investment-grade-corporate-bond-spreads-have-been-steady-but-that-could-soon-change.html",
+      "source": "web",
+      "snippet": "The stock market has slid ahead of Federal Reserve rate hikes, but investment-grade corporate bond spreads have been steadier than some expected. Gilbert Garcia, managing partner with Garcia Hamilton Associates, said spreads — that is, the ",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

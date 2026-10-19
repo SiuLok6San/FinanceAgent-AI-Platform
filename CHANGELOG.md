@@ -26,12 +26,13 @@ Added
   word. "Inflation fell from {{CPI.pct_1y_prev}} to {{CPI.pct_1y}}" is judged by the two rates.
 - A number labelled "(assumption)" that is written the same way in a source the line cites counts as an open
   issue (it is that source's figure). A revision could otherwise clear typed numbers by relabelling them; the
-  feedback now says to quote such numbers as `{{S#: …}}` and names the fact a typed number matches.
+  feedback says to quote such numbers as `{{S#: …}}`.
 - UI: hover any number to see the fact it came from; colours mark data, quotes, assumptions and typed numbers;
   lines with no checked figure are shown in italics as interpretation (the model's reading, not checked); the
   Planner's choices and the full fact table are shown.
 - Evaluation of original, v2 and v3 on 20 development questions, 10 held-out questions (frozen before v3 was
-  built) and 10 fresh questions (frozen later, never run before the final runs).
+  built) and 10 fresh questions (frozen later, never run before the final runs), and a hand review of every
+  wording finding the Writer received in the final run (`eval/FEEDBACK_REVIEW.md`).
 - Tags `v1.0-course` and `v2.0-validation` mark the earlier versions.
 
 Fixed
@@ -49,6 +50,14 @@ Fixed
   `Retry-After`, and evaluation runs go one question at a time.
 - An LLM call may take up to 300 s (was 180 s): long revision calls timed out on every attempt. Each failed
   attempt is logged.
+
+Fixed after the final run (found by reading its reports; scoring only, the run's revisions are unchanged)
+- In the final run, 13 of the 30 wording findings sent to the Writer were false alarms, and the revision made
+  four correct statements wrong ("annualized growth fell from +2.5% to +2.2%" became "rose"). Causes removed:
+  quarterly rates quoted with the previous quarter are judged by the two rates; a trend word's subject is the
+  series named next to it; scenario, risk and monitoring sections and table rows are skipped; "tightening
+  credit conditions" is not spread tightening; with no period named, the month and the quarter must agree;
+  "10-Year" is not a period; a change is not compared with a level; "P/E relative to growth" is allowed.
 
 ## Oct 2026 — public demo
 

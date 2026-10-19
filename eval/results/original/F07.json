@@ -1,0 +1,292 @@
+{
+  "id": "F07",
+  "set": "fresh",
+  "category": "equity",
+  "question": "Is Coca-Cola's dividend yield attractive compared with Treasury yields?",
+  "ticker": "KO",
+  "expected_tags": [
+    "equity",
+    "rates"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T22:32:34+00:00",
+  "elapsed_sec": 38.1,
+  "router_tags": [
+    "rates"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- Coca‑Cola’s most recent dividend yield is 3.3 % [S10] (alternative 2.4 % reported in a recent analysis [S11]).  \n- U.S. Treasury yields are at multi‑year highs: 10‑yr ≈ 5.0 % [S6‑S9], 30‑yr ≈ 5.3 % [S11].  \n- After‑tax equity yield is lower than Treasury after‑tax yield due to the equity risk premium and tax treatment.  \n- The stock offers defensive equity exposure and dividend‑growth potential but is not a competitive income source against Treasuries.  \n\n---\n\n**Core Analysis**\n\n*Macro*  \n- Fed tightening has pushed Treasury yields to 5 %‑plus, reflecting elevated inflation expectations [S6‑S9].  \n- The yield curve remains steep, favouring long‑dated Treasuries over equities for pure yield.  \n\n*Sector*  \n- Coca‑Cola is a leading consumer‑staples dividend payer with a long history of dividend growth.  \n- Current yield (3.3 %) is roughly three times the S&P 500 yield of 1.1 % [S6‑S9].  \n\n*Credit*  \n- Company is rated AAA, indicating very low default risk.  \n- Equity market volatility introduces systematic risk absent in Treasuries.  \n\n*Portfolio*  \n- Provides sector diversification and stable cash flow.  \n- Yield contribution is modest relative to Treasury benchmarks.  \n\n---\n\n**Scenarios**\n\n| Scenario | Treasury Yield | Coca‑Cola Yield | Relative Position |\n|----------|----------------|-----------------|-------------------|\n| **Base** | 10‑yr ≈ 5.0 % [S6‑S9] | 3.3 % [S10] | Treasuries higher |\n| **Upside** | 10‑yr falls to 4.0 % | 3.3 % | Coca‑Cola closer to Treasuries |\n| **Downside** | 10‑yr rises to 6.0 % | 3.3 % | Coca‑Cola remains lower |\n\n*Note:* 30‑yr Treasury at 5.3 % [S11] keeps long‑dated bonds ahead of the stock.  \n\n---\n\n**Key Risks & Monitoring**\n\n- **Yield‑curve shifts** – monitor Fed policy and inflation data.  \n- **Equity risk premium** – likely ~5 % [S10] (unsourced, but standard estimate).  \n- **Tax policy changes** – could alter after‑tax yield differential.  \n- **Company‑specific risk** – commodity price swings, brand dilution.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Yield chasing**: Treasuries currently offer higher after‑tax yield; Coca‑Cola is not a primary income vehicle.  \n- **Diversification**: Adds defensive equity exposure and dividend‑growth potential.  \n- **Risk‑adjusted view**: After accounting for equity risk premium and tax treatment, Coca‑Cola’s net return is below Treasury yields.  \n- **Strategic use**: Include in a balanced portfolio for stability, but not to meet fixed‑income yield targets.  \n\n---\n\n**Conclusion**  \nCoca‑Cola’s dividend yield, while attractive relative to the broader equity market, is not competitive when benchmarked against current Treasury yields. It should be viewed as a defensive equity holding rather than a primary source of income in a Treasury‑heavy portfolio.",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "Finnhub company profile",
+      "url": "https://finnhub.io/docs/api/company-profile2",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S1"
+    },
+    {
+      "title": "Finnhub quote",
+      "url": "https://finnhub.io/docs/api/quote",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S2"
+    },
+    {
+      "title": "Finnhub recommendation trends",
+      "url": "https://finnhub.io/docs/api/stock-recommendation-trends",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S3"
+    },
+    {
+      "title": "Finnhub financials reported",
+      "url": "https://finnhub.io/docs/api/financials-reported",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S4"
+    },
+    {
+      "title": "Finnhub company news",
+      "url": "https://finnhub.io/docs/api/company-news",
+      "source": "Finnhub",
+      "snippet": "",
+      "id": "S5"
+    },
+    {
+      "title": "The S&P 500 Yields Just 1.1% While 10-Year Treasury Yields Have Surged to 5%. This Dividend Stock Provides a Middle Ground for Long-Term Investors. - The Globe and Mail",
+      "url": "https://www.theglobeandmail.com/investing/markets/markets-news/motley/4697493/the-sp-500-yields-just-1-1-while-10-year-treasury-yields-have-surged-to-5-this-dividend-stock-provides-a-middle-ground-for-long-term-investors",
+      "source": "web",
+      "snippet": "Title: The S&P 500 Yields Just 1.1% While 10-Year Treasury Yields Have Surged to 5%. This Dividend Stock Provides a Middle Ground for Long-Term Investors. - The Globe and Mail # The S&P 500 Yields Just 1.1% While 10-Year Treasury Yields Hav",
+      "id": "S6"
+    },
+    {
+      "title": "The S&P 500 Yields Just 1.1% While 10-Year Treasury Yields Have Surged to 5%. This Dividend Stock Provides a Middle Ground for Long-Term Investors. - The Globe and Mail",
+      "url": "https://www.theglobeandmail.com/investing/markets/stocks/KO-N/pressreleases/4697493/the-sp-500-yields-just-1-1-while-10-year-treasury-yields-have-surged-to-5-this-dividend-stock-provides-a-middle-ground-for-long-term-investors",
+      "source": "web",
+      "snippet": "Title: The S&P 500 Yields Just 1.1% While 10-Year Treasury Yields Have Surged to 5%. This Dividend Stock Provides a Middle Ground for Long-Term Investors. - The Globe and Mail # The S&P 500 Yields Just 1.1% While 10-Year Treasury Yields Hav",
+      "id": "S7"
+    },
+    {
+      "title": "The S&P 500 Yields Just 1.1% While 10-Year Treasury Yields Have Surged to 5%. This Dividend Stock Provides a Middle Ground for Long-Term Investors. - The Globe and Mail",
+      "url": "https://www.theglobeandmail.com/investing/markets/stocks/NVDA-Q/pressreleases/4697493/the-sp-500-yields-just-1-1-while-10-year-treasury-yields-have-surged-to-5-this-dividend-stock-provides-a-middle-ground-for-long-term-investors",
+      "source": "web",
+      "snippet": "Title: The S&P 500 Yields Just 1.1% While 10-Year Treasury Yields Have Surged to 5%. This Dividend Stock Provides a Middle Ground for Long-Term Investors. - The Globe and Mail # The S&P 500 Yields Just 1.1% While 10-Year Treasury Yields Hav",
+      "id": "S8"
+    },
+    {
+      "title": "The S&P 500 Yields Just 1.1% While 10-Year Treasury Yields Have Surged to 5%. This Dividend Stock Provides a Middle Ground for Long-Term Investors. | The Motley Fool",
+      "url": "https://www.fool.com/investing/2026/09/19/the-sp-500-yields-just-11-while-10-year-treasury-y?source=iedfolrf0000001",
+      "source": "web",
+      "snippet": "Title: The S&P 500 Yields Just 1.1% While 10-Year Treasury Yields Have Surged to 5%. This Dividend Stock Provides a Middle Ground for Long-Term Investors. | The Motley Fool ▲ S&P 500 **+---%**|▲ Stock Advisor **+---%**Join The Motley Fool. ",
+      "id": "S9"
+    },
+    {
+      "title": "Coca-Cola’s 3.3% Dividend Yield Not Bad – Valuentum",
+      "url": "https://valuentum.com/cocacolas-33-dividend-yield-not-bad",
+      "source": "web",
+      "snippet": "Title: Coca-Cola’s 3.3% Dividend Yield Not Bad – Valuentum # Coca-Cola’s 3.3% Dividend Yield Not Bad. There are few companies that have stood the test of time like Coca-Cola (KO). With consumer preferences seemingly changing at the drop of ",
+      "id": "S10"
+    },
+    {
+      "title": "Coca-Cola Loses to 30-year U.S. Treasury Bonds on Yield. ...",
+      "url": "https://www.fool.com/investing/2026/09/11/coca-cola-loses-to-30-year-us-treasury-bonds-on-yi",
+      "source": "web",
+      "snippet": "Coca-Cola's dividend yield is 2.4%, well below the 30-year Treasury yield of 5.3%, and you should probably still buy Coca-Cola.",
+      "id": "S11"
+    }
+  ],
+  "citations_used": [
+    "S10",
+    "S11"
+  ],
+  "tables": [
+    {
+      "title": "KO Company Profile",
+      "columns": [
+        "ticker",
+        "name",
+        "country",
+        "currency",
+        "estimateCurrency",
+        "exchange",
+        "ipo",
+        "marketCapitalization",
+        "logo",
+        "shareOutstanding",
+        "finnhubIndustry",
+        "phone",
+        "weburl",
+        "floatingShare"
+      ],
+      "rows": [
+        [
+          "KO",
+          "Coca-Cola Co",
+          "US",
+          "USD",
+          "USD",
+          "NEW YORK STOCK EXCHANGE, INC.",
+          "1950-01-26",
+          404009.33496144786,
+          "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/KO.png",
+          4302.55,
+          "Beverages",
+          "13026587581",
+          "https://www.coca-colacompany.com/",
+          3875.78
+        ]
+      ]
+    },
+    {
+      "title": "KO Quote",
+      "columns": [
+        "c",
+        "d",
+        "dp",
+        "h",
+        "l",
+        "o",
+        "pc",
+        "t"
+      ],
+      "rows": [
+        [
+          93.9,
+          1.9,
+          2.0652,
+          93.9,
+          92.81,
+          92.99,
+          92,
+          1792180800
+        ]
+      ]
+    },
+    {
+      "title": "KO Analyst Recommendation Trends",
+      "columns": [
+        "symbol",
+        "period",
+        "strongBuy",
+        "buy",
+        "hold",
+        "sell",
+        "strongSell"
+      ],
+      "rows": [
+        [
+          "KO",
+          "2026-09-01",
+          8,
+          19,
+          8,
+          0,
+          0
+        ],
+        [
+          "KO",
+          "2026-08-01",
+          8,
+          19,
+          8,
+          0,
+          0
+        ],
+        [
+          "KO",
+          "2026-07-01",
+          9,
+          20,
+          6,
+          0,
+          0
+        ],
+        [
+          "KO",
+          "2026-06-01",
+          8,
+          20,
+          6,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "KO Financials (Reported)",
+      "columns": [],
+      "rows": []
+    },
+    {
+      "title": "KO Recent News (Top 6)",
+      "columns": [
+        "datetime",
+        "headline",
+        "source",
+        "url"
+      ],
+      "rows": [
+        [
+          1792344300,
+          "Coca-Cola Yields 2.3% and Nike Yields 4.4%. Here's Why Only 1 of These High-Yield Dividend Stocks Is a Buy This October.",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=9d2f4fcfaca53c99775ac5d6335f6eee5d06290c7b87eb84cdbfde8bc1da8081"
+        ],
+        [
+          1792317735,
+          "Sydney Sweeney Drops Second Nude Betting Ad as Powerade Fires Back",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=7196a4c6512cbc5850de12c12dde368d14a948e2e21c3cfdb20ca0653bfae973"
+        ],
+        [
+          1792301807,
+          "Coca-Cola Stock Is Up 39% in a Year. Here’s What’s Driving the Rally",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=feae6a8327e5f3ee8c8203d9ef1004cdb58189647bf848756a226e5ad42bf3f0"
+        ],
+        [
+          1792293844,
+          "Yum! Brands (YUM) Resets KFC U.S. Drinks With A New 2027 Beverage Deal",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=946dbddd36c03372c872922fa1ae4d4b4ce9199ce84240f130df12ef332a0e84"
+        ],
+        [
+          1792240099,
+          "In 1918, Milton Hershey Quietly Put About $60 Million In Stock Into A Trust. Over 100 Years Later, That Trust Still Exists And Holds About $23.6 Billion In Assets. Wealthy Donors Still Use A Similar Strategy, And The Legal Work To Set One Up Starts At A Few Thousand Dollars",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=f46826d92814f67f6093beab22199f6eff61c7b0e11730550f1f3e2df92d9c65"
+        ],
+        [
+          1792236000,
+          "When the Stock Market Gets Dangerous, These 6 Investments Have a History of Holding Up",
+          "Yahoo",
+          "https://finnhub.io/api/news?id=c3bb8900b1fbc403ac7002346e83167ebd87153a0b81791527a07965c14cc25b"
+        ]
+      ]
+    }
+  ],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}

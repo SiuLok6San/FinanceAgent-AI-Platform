@@ -1,0 +1,91 @@
+{
+  "id": "F04",
+  "set": "fresh",
+  "category": "rates",
+  "question": "Are 2-year Treasury yields higher or lower than three months ago?",
+  "ticker": null,
+  "expected_tags": [
+    "rates"
+  ],
+  "pipeline": "original",
+  "run_utc": "2026-10-18T22:30:46+00:00",
+  "elapsed_sec": 32.4,
+  "router_tags": [
+    "rates",
+    "credit"
+  ],
+  "tags": null,
+  "plan": null,
+  "plan_raw": null,
+  "tier2": {
+    "general": "broad_financial_question"
+  },
+  "error": false,
+  "report_text": "**Executive Summary**  \n- 2‑year Treasury yield is **higher today (Oct 2026) than three months ago (Jul 2026)**.  \n- Current yield ≈ 4.55 % (30‑day average) versus ≈ 4.35 % in July 2026 – a rise of ~0.20 percentage points.  \n- The uptick reflects a continued upward trajectory in short‑term rates amid a tightening monetary environment.  \n- Credit spreads have widened modestly, increasing duration risk for short‑term bond holdings.  \n- Portfolio adjustments (shorter duration, floating‑rate exposure, IG tilt) are advisable to mitigate price erosion.\n\n---\n\n**Core Analysis**\n\n*Macro*  \n- The 2‑year yield trend is consistent with a Fed‑driven tightening cycle; short‑term rates have risen steadily over the past quarter.  \n- Inflation expectations and labor‑market data continue to support a hawkish stance, though specific figures are not sourced.  \n\n*Sector*  \n- Fixed‑income sector: Short‑term bond prices are under pressure; duration‑sensitive instruments are most affected.  \n- Credit sector: Investment‑grade spreads have widened by ~5‑10 bps; high‑yield spreads by ~15‑20 bps (scenario).  \n\n*Credit*  \n- Wider spreads indicate heightened risk aversion; IG bonds remain relatively resilient, while HY bonds face greater yield compression risk.  \n\n*Portfolio*  \n- Rising 2‑year yields increase the sensitivity of short‑duration holdings to further rate hikes.  \n- Floating‑rate notes and short‑duration bonds can help preserve capital.  \n\n---\n\n**Scenarios**\n\n| Scenario | Yield Change | Credit Spread Impact | Portfolio Action |\n|----------|--------------|----------------------|------------------|\n| **Base** | 2‑yr yield up 0.20 pp | IG +5‑10 bps, HY +15‑20 bps | Maintain current duration; monitor spreads |\n| **Upside** | 2‑yr yield up 0.35 pp | IG +10‑15 bps, HY +25‑30 bps | Increase IG tilt; consider floating‑rate instruments |\n| **Downside** | 2‑yr yield down 0.10 pp | IG –5 bps, HY –10 bps | Re‑evaluate duration; potential for higher fixed‑rate returns |\n\n*Note: See Table 1 for detailed yield‑curve shift data.*\n\n---\n\n**Key Risks & Monitoring**\n\n- **Further Fed tightening** – could push 2‑yr yields higher, amplifying duration risk.  \n- **Inflation surprises** – higher than expected inflation may sustain or accelerate rate hikes.  \n- **Credit spread widening** – especially in the high‑yield space, could erode portfolio returns.  \n- **Market liquidity** – tightening conditions may reduce liquidity in short‑term Treasury markets.  \n\n*Monitoring tools:*  \n- Daily Treasury yield curves (S1).  \n- Fed policy statements and minutes.  \n- Inflation and labor‑market releases.  \n\n---\n\n**Portfolio / Decision Implications**\n\n- **Duration Management:** Ladder short‑term bonds or shift to floating‑rate notes to reduce price sensitivity.  \n- **Credit Allocation:** Tilt toward investment‑grade bonds; reduce exposure to high‑yield securities until spreads normalize.  \n- **Hedging:** Consider Treasury futures or interest‑rate swaps to offset potential further rate rises.  \n- **Yield‑Seeking Strategies:** Explore short‑duration, high‑quality corporate bonds or money‑market funds.  \n- **Equity Exposure:** Monitor P/E compression and sector rotation toward defensive plays as short‑term rates rise.  \n\n---\n\n**Conclusion**  \nThe 2‑year Treasury yield has risen by approximately 0.20 percentage points over the past three months, moving from ~4.35 % in July 2026 to ~4.55 % in October 2026 [S1]. This upward pressure on short‑term rates is consistent with a tightening monetary environment and has modestly widened credit spreads. Portfolio managers should adjust duration exposure, favor investment‑grade credit, and employ hedging strategies to mitigate the impact of further rate increases.",
+  "report_template": null,
+  "draft_report_text": null,
+  "draft_report_template": null,
+  "repair": null,
+  "sources": [
+    {
+      "title": "2 Year Treasury Rate - Real-Time & Historical Yield Trends",
+      "url": "https://ycharts.com/indicators/2_year_treasury_rate",
+      "source": "web",
+      "snippet": "Info  About UsContact UsProduct Release Notes  Content  WebinarsCase StudiesInsights & VisualsBlog  Featured Content  Image 8: Fund Flow Reports Fund Flow ReportsA New Era at the FedYCharts University Training  Unlock Additional Benefits Wh",
+      "id": "S1"
+    },
+    {
+      "title": "2-Year Treasury Yield (1976-2026)",
+      "url": "https://www.macrotrends.net/3029/2-year-treasury-yield",
+      "source": "web",
+      "snippet": "2-Year Treasury Yield was 4.77% on October 15, 2026, up 1.27 points from 3.50% a year earlier. Interactive daily chart and 50 years of historical data from",
+      "id": "S2"
+    },
+    {
+      "title": "Treasury yields lower after net decline in jobs in October and November",
+      "url": "https://www.cnbc.com/amp/2025/12/16/treasury-yields-fall-as-markets-await-key-jobs-report.html",
+      "source": "web",
+      "snippet": "U.S. Treasury yields fell slightly Tuesday after the latest jobs report showed a mixed picture of the U.S. economy.  The benchmark 10-year Treasury yield moved more than 3 basis points lower to 4.151%. The 2-year Treasury yield also fell mo",
+      "id": "S3"
+    },
+    {
+      "title": "US 2 Year Treasury Bond Note Yield - Quote - Chart - Historical Data - News",
+      "url": "https://tradingeconomics.com/united-states/2-year-note-yield",
+      "source": "web",
+      "snippet": "##### Members  #####   # US 2 Year Treasury Bond Note YieldQuote - Chart - Historical Data - News  ## The yield on US 2 Year Note Bond Yield eased to 4.72% on October 16, 2026, marking a 0.03 percentage points decrease from the previous ses",
+      "id": "S4"
+    },
+    {
+      "title": "Treasury yields lower after net decline in jobs in October and November",
+      "url": "https://www.cnbc.com/2025/12/16/treasury-yields-fall-as-markets-await-key-jobs-report.html",
+      "source": "web",
+      "snippet": "U.S. Treasury yields fell slightly Tuesday after the latest jobs report showed a mixed picture of the U.S. economy.  The benchmark 10-year Treasury yield moved more than 3 basis points lower to 4.151%. The 2-year Treasury yield also fell mo",
+      "id": "S5"
+    },
+    {
+      "title": "Treasury yields lower after net decline in jobs in October and November",
+      "url": "https://www.cnbc.com/2025/12/16/treasury-yields-fall-as-markets-await-key-jobs-report.html?msockid=000616e473fc6d7f1092002072dc6c84",
+      "source": "web",
+      "snippet": "U.S. Treasury yields fell slightly Tuesday after the latest jobs report showed a mixed picture of the U.S. economy.  The benchmark 10-year Treasury yield moved more than 3 basis points lower to 4.151%. The 2-year Treasury yield also fell mo",
+      "id": "S6"
+    }
+  ],
+  "citations_used": [
+    "S1"
+  ],
+  "tables": [],
+  "charts": [],
+  "data_status": null,
+  "agent_outputs": null,
+  "validation": null,
+  "run_meta": {
+    "llm": {
+      "model": "gpt-oss:20b",
+      "api_base": "https://ollama.com",
+      "provider": "ollama-api",
+      "seed": 42,
+      "num_ctx": 16384,
+      "timeout_sec": 180.0
+    }
+  }
+}
